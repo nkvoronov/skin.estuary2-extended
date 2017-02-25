@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary2-extended" version="1.9.11.009" name="Estuary v2 Extended" provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON">
+<addon id="skin.estuary2-extended" version="1.9.12.010" name="Estuary v2 Extended" provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
         <import addon="script.pvr.favourites" version="2.0.0"/>
@@ -39,9 +39,9 @@
 		<summary lang="lt_LT">Estuary v2 Extended teminė išvaizda, kurią sukūrė phil65 ir Piers. (Numatytoji Kodi teminė išvaizda)</summary>
 		<summary lang="lv_LV">Estuary v2 Extended apvalks no phil65. (Kodi noklusējuma apvalks)</summary>
 		<summary lang="ms_MY">Kulit Estuary v2 Extended oleh phil65 dan rakan-rakan. (Kulit lalai Kodi)</summary>
-		<summary lang="nb_NO">Esturay-drakt av phil65 og Piers. (Kodis forvalgte drakt)</summary>
+		<summary lang="nb_NO">Estuary v2 Extended-drakt av phil65 og Piers. (Kodis forvalgte drakt)</summary>
 		<summary lang="nl_NL">Estuary v2 Extended skin door phil65 en Piers. (Kodi's standaardskin)</summary>
-		<summary lang="pl_PL">Skóra Eustary autorstwa phil65 i Piers. (Domyślna skóra Kodi)</summary>
+		<summary lang="pl_PL">Skóra Estuary v2 Extended autorstwa phil65 i Piers. (Domyślna skóra Kodi)</summary>
 		<summary lang="pt_BR">Skin Estuary v2 Extended por phil65 e Piers. (Skin padrão do Kodi)</summary>
 		<summary lang="pt_PT">Visual Estuary v2 Extended de phil65 e Piers. (Visual por omissão do Kodi)</summary>
 		<summary lang="ro_RO">Tema Estuary v2 Extended de phil65 și Piers. (Tema implicită pentru Kodi)</summary>
@@ -55,7 +55,7 @@
 		<summary lang="tr_TR">Estuary v2 Extended dış görünümü. phil65 (Kodi'nin varsayılan dış görünümü)</summary>
 		<summary lang="uk_UA">Обкладинка Estuary v2 Extended від phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="zh_CN">phil65 和 Piers 开发的 Estuary v2 Extended 皮肤（Kodi 的默认皮肤）</summary>
-		<summary lang="zh_TW">phil65與Piers 製作的Estuary佈景主題（Kodi的預設佈景主題）</summary>
+		<summary lang="zh_TW">phil65與Piers 製作的Estuary v2 Extended佈景主題（Kodi的預設佈景主題）</summary>
 		<description lang="af_ZA">Estuary v2 Extended is die bestek oortreksel vir Kodi 17.0 en op. Dit poog om maklik te wees vir eerste keer Kodi gebruikers om te verstaan en te gebruik.</description>
 		<description lang="bg_BG">Estuary v2 Extended е стандартният облик на Kodi 17 и по-новите версии. Целта е да се улеснят хората които се сблъскват за първи път с Kodi.</description>
 		<description lang="ca_ES">Estuary v2 Extended és l'aparença predeterminada de Kodi 17.0 i posteriors. Per als usuaris per primera vegada de Kodi, intenta ser fàcil d'entendre i d'utilitzar.</description>
@@ -78,12 +78,12 @@
 		<description lang="hu_HU">Az Estuary v2 Extended az alapértelmezett felszín a 17.0 és újabb Kodi kiadásokban.  Megpróbál könnyen kezelhető és használható lenni, az újonc Kodi felhasználóknak is.</description>
 		<description lang="it_IT">Estuary v2 Extended è la skin predefinita di Kodi 17.0 e successivi. Cerca di essere facile da capire e usare per i nuovi utenti di Kodi.</description>
 		<description lang="ja_JP">Estuary v2 Extended は Kodi 17.0 およびそれ以上のバージョンで標準のスキンです。ユーザが初めて Kodi に触れる際にわかりやすく使えるようにしてあります。</description>
-		<description lang="ko_KR">Estuary는 Kodi 17.0이상의 기본 스킨입니다. 처음 Kodi를 접하는 사용자가 쉽게 이해하고 사용할 수 있도록 만들었습니다.</description>
+		<description lang="ko_KR">Estuary v2 Extended는 Kodi 17.0이상의 기본 스킨입니다. 처음 Kodi를 접하는 사용자가 쉽게 이해하고 사용할 수 있도록 만들었습니다.</description>
 		<description lang="lt_LT">Estuary v2 Extended yra numatytoji Kodi 17.0 ir aukštesnių versijų teminė išvaizda. Jos tikslas yra būti lengvai perprantama naujiems Kodi vartotojams.</description>
 		<description lang="ms_MY">Estuary v2 Extended ialah kulit lalai untuk Kodi 17.0 dan ke atas. Kulit yang mudah digunakan buat pengguna Kodi kali pertama untuk memahami dan menggunakannya.</description>
 		<description lang="nb_NO">Estuary v2 Extended er forvalgt drakt til Kodi 17.0 og nyere. Det tar mål av seg å være en enkel drakt for førstegangsbrukere av Kodi, slik at det er til å forstå og kan brukes.</description>
 		<description lang="nl_NL">Estuary v2 Extended is de standaardskin voor Kodi 17.0 en hoger. Het tracht eenvoudig te begrijpen en te gebruiken te zijn voor beginnende Kodi-gebruikers.</description>
-		<description lang="pl_PL">Eustary jest domyślną skórą Kodi dla wersji 17.0 i późniejszych. Jest próbą łatwego wprowadzenia początkujących użytkowników w funkcje Kodi.</description>
+		<description lang="pl_PL">Estuary v2 Extended jest domyślną skórą Kodi dla wersji 17.0 i późniejszych. Jest próbą łatwego wprowadzenia początkujących użytkowników w funkcje Kodi.</description>
 		<description lang="pt_BR">Estuary v2 Extended é a skin padrão para o Kodi 17.0 e acima. Objetiva ser fácil para usuários que iniciam no Kodi pela primeira vez, facilitando aprendizagem de uso do mesmo.</description>
 		<description lang="pt_PT">O Estuary v2 Extended é o visual por omissão para o Kodi 17.0 e posteriores. Tenta ser simples para os utilizadores menos experientes do Kodi compreenderem e usarem.</description>
 		<description lang="ro_RO">Estuary v2 Extended este tema implicită pentru Kodi 17.0 și versiunile ulterioare. Încearcă să fie ușor de înțeles și folosit pentru utilizatorii care folosesc Kodi pentru prima dată.</description>
@@ -97,7 +97,7 @@
 		<description lang="tr_TR">Estuary v2 Extended Kodi 17.0 ve yukarısı için varsayılan dış görünümdür. İlk kez Kodi kullananlar için anlaşılması ve kullanımı kolaydır.</description>
 		<description lang="uk_UA">Estuary v2 Extended є стандартною обкладинкою Kodi 17.0 і подальших версій. Її основна ідея — простота використання для нових користувачів Kodi.</description>
 		<description lang="zh_CN">Estuary v2 Extended 是 Kodi 17.0 的默认皮肤。它力求使首次使用 Kodi 的用户易于上手。</description>
-		<description lang="zh_TW">Estuary是Kodi 17.0開始搭載的預設佈景主題。主要在讓第一次使用 Kodi 的使用者可以簡單地上手。</description>
+		<description lang="zh_TW">Estuary v2 Extended是Kodi 17.0開始搭載的預設佈景主題。主要在讓第一次使用 Kodi 的使用者可以簡單地上手。</description>
 		<disclaimer lang="af_ZA">Estuary v2 Extended is die bestek oortreksel vir Kodi, verwydering mag probleme veroorsaak</disclaimer>
 		<disclaimer lang="bg_BG">Estuary v2 Extended е стандартният облик на Kodi. Премахването му може да предизвика проблеми</disclaimer>
 		<disclaimer lang="ca_ES">Estuary v2 Extended és l'aparença predeterminada de Kodi, si s'elimina pot causar problemes.</disclaimer>
@@ -125,7 +125,7 @@
 		<disclaimer lang="ms_MY">Estuary v2 Extended ialah kulit lalai Kodi, mengubahnya boleh menimbulkan isu.</disclaimer>
 		<disclaimer lang="nb_NO">Estuary v2 Extended er forvalgt drakt for Kodi, dersom du fjerner det kan det forårsake problemer.</disclaimer>
 		<disclaimer lang="nl_NL">Estuary v2 Extended is de standaardskin voor Kodi, het verwijderen van Estuary v2 Extended kan leiden tot problemen.</disclaimer>
-		<disclaimer lang="pl_PL">Eustary jest domyślną skórą Kodi, usunięciejej może powodować problemy</disclaimer>
+		<disclaimer lang="pl_PL">Estuary v2 Extended jest domyślną skórą Kodi, usunięciejej może powodować problemy</disclaimer>
 		<disclaimer lang="pt_BR">Estuary v2 Extended é a skin padrão para o Kodi, removendo-a pode causar problemas</disclaimer>
 		<disclaimer lang="pt_PT">O Estuary v2 Extended é o visual por omissão do Kodi; se o remover, poderá ter alguns problemas</disclaimer>
 		<disclaimer lang="ro_RO">Estuary v2 Extended este tema implicită pentru Kodi, eliminarea ei poate cauza probleme</disclaimer>
