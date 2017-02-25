@@ -223,9 +223,14 @@
 		<value condition="Control.HasFocus(703)">$LOCALIZE[24013]</value>
 		<value condition="Control.HasFocus(5000)">$LOCALIZE[10004]</value>
 	</variable>
+    <!-- SkinSettings Help Text -->
 	<variable name="SkinSettingsHelpTextVar">
 		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>
-		<value condition="Container(9000).HasFocus(2)">$LOCALIZE[31130]</value>
+        <value condition="Container(9000).HasFocus(2)">$LOCALIZE[43040]</value>
+		<value condition="Container(9000).HasFocus(3)">$LOCALIZE[31130]</value>
+        <value condition="Container(9000).HasFocus(4)">$LOCALIZE[43041]</value>
+		<value condition="Container(9000).HasFocus(5)">$LOCALIZE[43042]</value>
+        <value condition="Container(9000).HasFocus(6)">$LOCALIZE[43044]</value>
 	</variable>
 	<variable name="DSPManagerHelpTextVar">
 		<value condition="Control.HasFocus(20)">$INFO[Container(20).ListItem.Property(Description)]</value>
@@ -428,4 +433,29 @@
 		<value condition="String.IsEqual(Skin.String(background_overlay),0)">$LOCALIZE[231]</value>
 		<value>$INFO[Skin.String(background_overlay),$LOCALIZE[467] ]</value>
 	</variable>
+    <!-- HomeFanart Name -->
+    <variable name="HomeFanartNameVar">
+        <value condition="!String.IsEmpty(Skin.String(HomeFanart.name))">$INFO[Skin.String(HomeFanart.name)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- WeatherFanart Name -->
+    <variable name="WeatherFanartNameVar">
+        <value condition="!String.IsEmpty(Skin.String(WeatherFanart.name))">$INFO[Skin.String(WeatherFanart.name)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- WeatherIcons Name -->
+    <variable name="WeatherIconsNameVar">
+        <value condition="!String.IsEmpty(Skin.String(WeatherIcons.name))">$INFO[Skin.String(WeatherIcons.name)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- LanguageFlags Name -->
+    <variable name="LanguageFlagsNameVar">
+        <value condition="!String.IsEmpty(Skin.String(LanguageFlags.name))">$INFO[Skin.String(LanguageFlags.name)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- StudiosImages Name -->
+    <variable name="StudiosImagesNameVar">
+        <value condition="!String.IsEmpty(Skin.String(StudiosImages.name))">$INFO[Skin.String(StudiosImages.name)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
 </includes>

@@ -543,3 +543,173 @@ msgstr "Флаги сведений"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "Цифровая клавиатура"
+
+# EXTENDED ADDED VALUE
+
+msgctxt "#43000"
+msgid "Options"
+msgstr "Параметры"
+
+msgctxt "#43001"
+msgid "User widgets"
+msgstr "Виджеты пользователя"
+
+msgctxt "#43009"
+msgid "Enable FullScreen Clock"
+msgstr "Показывать часы в полноэкранном режиме"
+
+msgctxt "#43010"
+msgid "Enable SlideShow Info"
+msgstr "Показывать информацию в слайдшоу"
+
+msgctxt "#43011"
+msgid "Show stats"
+msgstr "Показывать статистику"
+
+msgctxt "#43012"
+msgid "Show studios logos"
+msgstr "Показывать студийные лого"
+
+msgctxt "#43013"
+msgid "Choose studios logos"
+msgstr "Выбрать студийное лого"
+
+msgctxt "#43014"
+msgid "Choose flags country"
+msgstr "Выбрать флаги стран"
+
+msgctxt "#43015"
+msgid "Choose weather icons"
+msgstr "Выбрать иконки погоды"
+
+msgctxt "#43017"
+msgid "Enable user list of add-ons"
+msgstr "Разрешить пользовательский список дополнений"
+
+msgctxt "#43018"
+msgid "Enable user list of TV and radio channels"
+msgstr "Разрешить пользовательский список тв и радио каналов"
+
+msgctxt "#43019"
+msgid "Debug infos"
+msgstr "Отладочная иформация"
+
+msgctxt "#43021"
+msgid "User list of add-ons"
+msgstr "Пользовательский список дополнений"
+
+msgctxt "#43022"
+msgid "User list of TV and radio channels"
+msgstr "Пользовательский список тв и радио каналов"
+
+msgctxt "#43023"
+msgid "Choose background pattern"
+msgstr "Выберите шаблон фона"
+
+msgctxt "#43024"
+msgid "Choose home fanart pack"
+msgstr "Выбрать фанарт пакет"
+
+msgctxt "#43025"
+msgid "Choose weather fanart pack"
+msgstr "Выбрать фанарт пакет для погоды"
+
+msgctxt "#43040"
+msgid "Advanced options"
+msgstr "Дополнительные параметры"
+
+msgctxt "#43041"
+msgid "User widgets options"
+msgstr "Параметры виджетов пользователя"
+
+msgctxt "#43042"
+msgid "Background options"
+msgstr "Параметры фона"
+
+msgctxt "#43044"
+msgid "Reset skin options"
+msgstr "Сброс параметров обложки"
+
+msgctxt "#43045"
+msgid "Artwork Downloader"
+msgstr "Загрузить иллюстрации"
+
+msgctxt "#43060"
+msgid "Timer rules"
+msgstr "Правила таймера"
+
+msgctxt "#43061"
+msgid "Hide disabled"
+msgstr "Скрыть запрещенные"
+
+msgctxt "#43090"
+msgid "Most watched music videos"
+msgstr "Самые просматриваемые муз. видео"
+
+msgctxt "#43091"
+msgid "Random music videos"
+msgstr "Случайные муз. видео"
+
+msgctxt "#43092"
+msgid "Unwatched music videos"
+msgstr "Непросмотренные муз. видео"
+
+msgctxt "#43200"
+msgid "Big posters"
+msgstr "Большие постеры"
+
+msgctxt "#43201"
+msgid "Clear Logos"
+msgstr "Логотип 1"
+
+msgctxt "#43202"
+msgid "Clear Arts"
+msgstr "Логотип 2"
+
+msgctxt "#43210"
+msgid "Aired"
+msgstr "В эфире"
+
+msgctxt "#43220"
+msgid "Watch it Later"
+msgstr "Посмотреть позже"
+
+msgctxt "#43230"
+msgid "Hardware"
+msgstr "Оборудование"
+
+msgctxt "#43240"
+msgid "Channel"
+msgstr "Канал"
+
+msgctxt "#43241"
+msgid "Favorites TV Channels"
+msgstr "Избранные ТВ каналы"
+
+msgctxt "#43242"
+msgid "Favorites Radio Channels"
+msgstr "Избранные Радио каналы"
+
+msgctxt "#43250"
+msgid "Apply"
+msgstr "Применить"
+
+msgctxt "#43251"
+msgid "Apply immediately"
+msgstr "Применить сразу"
+
+msgctxt "#43252"
+msgid "Input oversampling"
+msgstr "Вх. передискретизация"
+
+msgctxt "#43253"
+msgid "Preprocessing"
+msgstr "Пред. обработка"
+
+msgctxt "#43254"
+msgid "Output oversampling"
+msgstr "Вы. передискретизация"
+
+msgctxt "#43255"
+msgid "reload skin button"
+msgstr "кнопку обновления обложки"

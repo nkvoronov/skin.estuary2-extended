@@ -39,6 +39,20 @@
 				<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 				<bordersize>4</bordersize>
 			</control>
+            <!-- <control type="label">
+                <description>Clock label</description>
+                <left>1100</left>
+                <top>25</top>
+                <width>800</width>
+                <height>25</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <label>$INFO[System.Time]</label>
+                <visible>Skin.HasSetting(full_screen_clock) + ![Player.ShowInfo | Window.IsActive(musicosd)]</visible>
+            </control> -->
 			<control type="group">
 				<top>-30</top>
 				<visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !Window.IsActive(playerprocessinfo)</visible>

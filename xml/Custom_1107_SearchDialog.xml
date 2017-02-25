@@ -22,6 +22,7 @@
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick condition="System.hasAddon(script.globalsearch)">RunScript(script.globalsearch)</onclick>
 						<onclick condition="!System.hasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
+                        <visible>Skin.HasSetting(enable_globalsearch)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31145]</label>

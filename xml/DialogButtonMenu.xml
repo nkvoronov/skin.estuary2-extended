@@ -77,6 +77,12 @@
 						<onclick>InhibitIdleShutdown(false)</onclick>
 						<visible>System.HasShutdown + System.IsInhibit</visible>
 					</item>
+                    <item>
+                        <label>$LOCALIZE[20183]</label>
+                        <onclick>ReloadSkin()</onclick>
+                        <onclick condition="Skin.HasSetting(enable_skin_debug)">Skin.ToggleDebug</onclick>
+                        <visible>!Skin.HasSetting(hide_reload_skin_button)</visible>
+                    </item>
 				</content>
 			</control>
 		</control>
