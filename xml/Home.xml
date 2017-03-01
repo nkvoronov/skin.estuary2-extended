@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>9000</defaultcontrol>
+	<defaultcontrol>9000</defaultcontrol>	
+    <!-- -->
+    <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
-	<controls>
+    <controls>
 		<control type="button" id="20000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
@@ -29,17 +31,6 @@
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<imagepath background="true" colordiffuse="bg_overlay">$VAR[HomeFanartVar]</imagepath>
 			<visible>!Player.HasMedia</visible>
-		</control>
-		<!-- StatBar -->
-		<control type="label">
-			<left>0</left>
-			<top>15</top>
-			<width>1920</width>
-			<align>center</align>
-			<label>$VAR[InfoBarStatsVar]</label>
-			<font>font10</font>
-			<visible>!Window.IsVisible(extendedprogressdialog)</visible>
-			<visible>Skin.HasSetting(enable_home_stats)</visible>				
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>			
@@ -74,6 +65,17 @@
 					<height>36</height>
 					<texture>icons/logo-text.png</texture>
 				</control>
+                <!-- StatBar -->
+                <control type="label">
+                    <left>410</left>
+                    <top>-15</top>
+                    <width>700</width>
+                    <align>left</align>
+                    <label>$VAR[InfoBarStatsVar]</label>
+                    <font>font12</font>
+                    <visible>!Window.IsVisible(extendedprogressdialog)</visible>
+                    <visible>Skin.HasSetting(enable_home_stats)</visible>				
+                </control>
 			</control>
 			<!-- RSS -->
 			<control type="rss">

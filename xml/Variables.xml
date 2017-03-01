@@ -145,12 +145,18 @@
 		<value>$INFO[ListItem.Genre,[COLOR button_focus]$LOCALIZE[515]: [/COLOR],[CR]]</value>
 	</variable>
 	<variable name="WidgetGenreIconVar">
-		<value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
+        <value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.coloured/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.png]</value>
+        <value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.filmstrip/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.filmstrip/,.png]</value>
+        <value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.grey/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.grey/,.png]</value>
+        <value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.poster/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.poster/,.png]</value>
+        <value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.white/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.white/,.png]</value>
+		<value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.transparent/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
 		<value>DefaultGenre.png</value>
 	</variable>
 	<variable name="WidgetStudioIconVar">
-		<value condition="System.HasAddon(resource.images.studios.white)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
-		<value>DefaultStudio.png</value>
+        <value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
+		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
+		<value>DefaultStudios.png</value>
 	</variable>
 	<variable name="AddonsLabel2Var">
 		<value condition="ListItem.Property(addon.downloading)">$INFO[ListItem.Property(addon.status)]</value>
@@ -469,6 +475,11 @@
     <!-- StudiosImages Name -->
     <variable name="StudiosImagesNameVar">
         <value condition="!String.IsEmpty(Skin.String(StudiosImages.name))">$INFO[Skin.String(StudiosImages.name)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- MovieGenreIcons Name -->
+    <variable name="MovieGenreIconsNameVar">
+        <value condition="!String.IsEmpty(Skin.String(MovieGenreIcons.name))">$INFO[Skin.String(MovieGenreIcons.name)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
 </includes>

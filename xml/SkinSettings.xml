@@ -134,24 +134,15 @@
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
-                <control type="radiobutton" id="205">
-                    <description>Show studio logos</description>                    
-                    <include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[43012]</label>
-                    <onclick>Skin.ToggleSetting(show_studiologos)</onclick>
-                    <selected>Skin.HasSetting(show_studiologos)</selected>                    
-                    <visible>System.HasAddon(script.image.resource.select)</visible>
-                </control>
-				<control type="button" id="206">
+				<control type="button" id="205">
                     <description>Studios images</description>					
 					<include>DefaultSettingButton</include>
-                    <label>- $LOCALIZE[43013]</label>
+                    <label>$LOCALIZE[43013]</label>
 					<label2>$VAR[StudiosImagesNameVar]</label2>
                     <onclick>RunScript(script.image.resource.select,property=StudiosImages&amp;type=resource.images.studios)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
-                    <visible>Skin.HasSetting(show_studiologos)</visible>
 				</control>
-                <control type="button" id="207">
+                <control type="button" id="206">
                     <description>Language Flags</description>					
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43014]</label>
@@ -159,7 +150,7 @@
 					<onclick>RunScript(script.image.resource.select,property=LanguageFlags&amp;type=resource.images.languageflags)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
-                <control type="button" id="208">
+                <control type="button" id="207">
                     <description>Weather icons</description>					
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43015]</label>
@@ -167,19 +158,19 @@
 					<onclick>RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
-                <control type="image" id="209">
+                <control type="image" id="208">
                     <description>Separator image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
-                <control type="radiobutton" id="210">
+                <control type="radiobutton" id="209">
                     <description>Enable custom list addons</description>					
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43017]</label>
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
 				</control>
-                <control type="radiobutton" id="211">
+                <control type="radiobutton" id="210">
                     <description>Enable custom list channels</description>					
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43018]</label>
@@ -439,10 +430,10 @@
 				</control>
 				<control type="button" id="505">
 					<label>$LOCALIZE[31149]</label>
-					<label2>$INFO[Skin.String(MovieGenreFanart.Name)]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
+					<label2>$VAR[MovieGenreIconsNameVar]</label2>
+					<include>DefaultSettingButton</include>					
+					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
+                    <onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 				</control>
 			</control>
             <!-- Reset -->

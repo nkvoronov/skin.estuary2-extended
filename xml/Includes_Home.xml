@@ -295,6 +295,7 @@
 		<param name="addon_submenu">false</param>
 		<param name="pvr_type">TV</param>
 		<param name="visible">true</param>
+        <param name="fallback_image">DefaultFolder.png</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -330,7 +331,7 @@
 							<left>62</left>
 							<width>200</width>
 							<height>$PARAM[icon_height]</height>
-							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
+							<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="textbox">
@@ -375,7 +376,7 @@
 							<left>62</left>
 							<width>200</width>
 							<height>$PARAM[icon_height]</height>
-							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
+							<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="textbox">
