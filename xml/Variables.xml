@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<!-- Stats bar -->
+	<variable name="InfoBarStatsVar">
+        <!-- Videos -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),video)">[B][COLOR button_focus]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR button_focus]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR button_focus]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]</value>
+        <!-- Movies -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),movies)">[B][COLOR button_focus]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR button_focus]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(Movies.Watched)]  [B][COLOR button_focus]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Movies.UnWatched)]</value>
+        <!-- TVShows -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),tvshows)">[B][COLOR button_focus]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR button_focus]$LOCALIZE[20360]: [/COLOR][/B]$INFO[Window.Property(Episodes.Count)]  [B][COLOR button_focus]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Episodes.UnWatched)]</value>
+        <!-- MusicVideos -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),musicvideos)">[B][COLOR button_focus]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]  [B][COLOR button_focus]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Watched)]  [B][COLOR button_focus]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.UnWatched)]</value>
+        <!-- Music -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),music)">[B][COLOR button_focus]$LOCALIZE[132]: [/COLOR][/B]$INFO[Window.Property(Music.AlbumsCount)]  [B][COLOR button_focus]$LOCALIZE[133]: [/COLOR][/B]$INFO[Window.Property(Music.ArtistsCount)]  [B][COLOR button_focus]$LOCALIZE[134]: [/COLOR][/B]$INFO[Window.Property(Music.SongsCount)]</value>
+        <!-- PVR -->
+        <value condition="String.IsEqual(Container(9000).ListItem.Property(id),livetv) | String.IsEqual(Container(9000).ListItem.Property(id),radio)">[B][COLOR button_focus]$LOCALIZE[19019]: [/COLOR][/B] $INFO[Pvr.BackendChannels]</value>
+	</variable>
 	<variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">windows/pvr/timer.png</value>
@@ -76,7 +91,9 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="IconWallThumbVar">
-		<value condition="String.IsEqual(listitem.dbtype,studio) + System.HasAddon(resource.images.moviegenreicons.transparent)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
+        <value condition="Container.Content(studios) + String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
+		<value condition="Container.Content(studios) + String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>        
+        <value condition="Container.Content(countries) + String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.png]</value>
 		<value condition="!String.isempty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
