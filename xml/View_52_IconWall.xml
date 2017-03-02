@@ -19,7 +19,7 @@
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content() | Container.Content(tags) | Container.Content(years) | Container.Content(roles) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(playlists) | Container.Content(unknown)</visible>
 				<viewtype label="31099">icon</viewtype>
-				<itemlayout height="280" width="440" condition="Container.Content() | Container.Content(tags) | Container.Content(playlists) | [Container.Content(studios) + !String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + !String.IsEmpty(Skin.String(LanguageFlags.path))]">
+				<itemlayout height="280" width="440" condition="Container.Content() | Container.Content(tags) | Container.Content(playlists) | [Container.Content(studios) + !String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + !String.IsEmpty(Skin.String(LanguageFlags.path))] | [Container.Content(genres) + Window.IsActive(videos) + !String.IsEmpty(Skin.String(MovieGenreIcons.path))] | [Container.Content(genres) + Window.IsActive(music) + !String.IsEmpty(Skin.String(MusicGenreIcons.path))]">
 					<control type="group">
 						<top>150</top>
 						<control type="image">
@@ -54,10 +54,30 @@
 							<top>20</top>
 							<width>160</width>
 							<height>130</height>
+							<texture fallback="DefaultGenre.png">$VAR[IconWallThumbVar]</texture>
+							<aspectratio>keep</aspectratio>
+							<align>center</align>
+                            <visible>Container.Content(genres) + Window.IsActive(videos)</visible>
+						</control>
+						<control type="image">
+							<left>120</left>
+							<top>20</top>
+							<width>160</width>
+							<height>130</height>
+							<texture fallback="DefaultMusicGenres.png">$VAR[IconWallThumbVar]</texture>
+							<aspectratio>keep</aspectratio>
+							<align>center</align>
+                            <visible>Container.Content(genres) + Window.IsActive(music)</visible>
+						</control>
+						<control type="image">
+							<left>120</left>
+							<top>20</top>
+							<width>160</width>
+							<height>130</height>
 							<texture fallback="DefaultFolder.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>![Container.Content(studios) | Container.Content(countries)]</visible>
+                            <visible>![Container.Content(studios) | Container.Content(countries) | Container.Content(genres)]</visible>
 						</control>
 						<control type="image">
 							<left>20</left>
@@ -78,7 +98,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="280" width="440" condition="Container.Content() | Container.Content(tags) | Container.Content(playlists) | [Container.Content(studios) + !String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + !String.IsEmpty(Skin.String(LanguageFlags.path))]">
+				<focusedlayout height="280" width="440" condition="Container.Content() | Container.Content(tags) | Container.Content(playlists) | [Container.Content(studios) + !String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + !String.IsEmpty(Skin.String(LanguageFlags.path))] | [Container.Content(genres) + Window.IsActive(videos) + !String.IsEmpty(Skin.String(MovieGenreIcons.path))] | [Container.Content(genres) + Window.IsActive(music) + !String.IsEmpty(Skin.String(MusicGenreIcons.path))]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation type="Focus">
@@ -127,10 +147,30 @@
 							<top>20</top>
 							<width>160</width>
 							<height>130</height>
+							<texture fallback="DefaultGenre.png">$VAR[IconWallThumbVar]</texture>
+							<aspectratio>keep</aspectratio>
+							<align>center</align>
+                            <visible>Container.Content(genres) + Window.IsActive(videos)</visible>
+						</control>
+						<control type="image">
+							<left>120</left>
+							<top>20</top>
+							<width>160</width>
+							<height>130</height>
+							<texture fallback="DefaultMusicGenres.png">$VAR[IconWallThumbVar]</texture>
+							<aspectratio>keep</aspectratio>
+							<align>center</align>
+                            <visible>Container.Content(genres) + Window.IsActive(music)</visible>
+						</control>
+						<control type="image">
+							<left>120</left>
+							<top>20</top>
+							<width>160</width>
+							<height>130</height>
 							<texture fallback="DefaultFolder.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>![Container.Content(studios) | Container.Content(countries)]</visible>
+                            <visible>![Container.Content(studios) | Container.Content(countries) | Container.Content(genres)]</visible>
 						</control>
 						<control type="image">
 							<left>20</left>
@@ -151,7 +191,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout height="181" width="348" condition="Container.Content(genres) | Container.Content(years) | Container.Content(roles) | [Container.Content(studios) + String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + String.IsEmpty(Skin.String(LanguageFlags.path))]">
+				<itemlayout height="181" width="348" condition="Container.Content(years) | Container.Content(roles) | [Container.Content(studios) + String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + String.IsEmpty(Skin.String(LanguageFlags.path))] | [Container.Content(genres) + Window.IsActive(videos) + String.IsEmpty(Skin.String(MovieGenreIcons.path))] | [Container.Content(genres) + Window.IsActive(music) + String.IsEmpty(Skin.String(MusicGenreIcons.path))]">
 					<control type="group">
 						<top>120</top>
 						<control type="image">
@@ -172,7 +212,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="181" width="348" condition="Container.Content(genres) | Container.Content(years) | Container.Content(roles) | [Container.Content(studios) + String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + String.IsEmpty(Skin.String(LanguageFlags.path))]">
+				<focusedlayout height="181" width="348" condition="Container.Content(years) | Container.Content(roles) | [Container.Content(studios) + String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + String.IsEmpty(Skin.String(LanguageFlags.path))] | [Container.Content(genres) + Window.IsActive(videos) + String.IsEmpty(Skin.String(MovieGenreIcons.path))] | [Container.Content(genres) + Window.IsActive(music) + String.IsEmpty(Skin.String(MusicGenreIcons.path))]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<top>120</top>
