@@ -151,14 +151,14 @@
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
 				<control type="button" id="207">
-					<label>$LOCALIZE[31149]</label>
+					<label>$LOCALIZE[43012]</label>
 					<label2>$VAR[MovieGenreIconsNameVar]</label2>
 					<include>DefaultSettingButton</include>					
 					<onclick>RunScript(script.image.resource.select,property=MovieGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
 				<control type="button" id="208">
-					<label>$LOCALIZE[31149](Music)</label>
+					<label>$LOCALIZE[43016]</label>
 					<label2>$VAR[MusicGenreIconsNameVar]</label2>
 					<include>DefaultSettingButton</include>					
 					<onclick>RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
@@ -209,7 +209,7 @@
                 <control type="radiobutton" id="215">
                     <description>Hide ReloadSkin Button</description>					
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[31133] $LOCALIZE[43255]</label>
+                    <label>$LOCALIZE[43255]</label>
 					<onclick>Skin.ToggleSetting(hide_reload_skin_button)</onclick>
 					<selected>Skin.HasSetting(hide_reload_skin_button)</selected>
 				</control>

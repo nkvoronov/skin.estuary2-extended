@@ -563,8 +563,8 @@ msgid "Show stats"
 msgstr "Показувати статистику"
 
 msgctxt "#43012"
-msgid "Show studios logos"
-msgstr "Показувати студійні лого"
+msgid "Choose movie genre icons"
+msgstr "Вибрати іконки жанрів для фільмів"
 
 msgctxt "#43013"
 msgid "Choose studios logos"
@@ -577,6 +577,10 @@ msgstr "Вибрати прапори країн"
 msgctxt "#43015"
 msgid "Choose weather icons"
 msgstr "Вибрати іконки погоди"
+
+msgctxt "#43016"
+msgid "Choose music genre icons"
+msgstr "Вибрати іконки жанрів для музики"
 
 msgctxt "#43017"
 msgid "Enable user list of add-ons"
@@ -707,6 +711,6 @@ msgid "Output oversampling"
 msgstr "Ви. передискретизація"
 
 msgctxt "#43255"
-msgid "reload skin button"
-msgstr "кнопку оновлення обкладинки"
+msgid "Hide reload skin button"
+msgstr "Скрити кнопку оновлення обкладинки"
 
