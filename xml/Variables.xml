@@ -314,26 +314,38 @@
 	<variable name="HomeFanartVar">
 		<value condition="Skin.HasSetting(no_fanart)"></value>
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
+		<!-- Movies -->
 		<value condition="!String.IsEmpty(Container(5100).ListItem.Art(fanart)) + Control.HasFocus(5100)">$INFO[Container(5100).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(5200).ListItem.Art(fanart)) + Control.HasFocus(5200)">$INFO[Container(5200).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(5300).ListItem.Art(fanart)) + Control.HasFocus(5300)">$INFO[Container(5300).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(5400).ListItem.Art(fanart)) + Control.HasFocus(5400)">$INFO[Container(5400).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(5600).ListItem.Art(fanart)) + Control.HasFocus(5600)">$INFO[Container(5600).ListItem.Art(fanart)]</value>
+		<!-- TVShows -->
 		<value condition="!String.IsEmpty(Container(6100).ListItem.Art(fanart)) + Control.HasFocus(6100)">$INFO[Container(6100).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(6200).ListItem.Art(fanart)) + Control.HasFocus(6200)">$INFO[Container(6200).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(6300).ListItem.Art(fanart)) + Control.HasFocus(6300)">$INFO[Container(6300).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(6400).ListItem.Art(fanart)) + Control.HasFocus(6400)">$INFO[Container(6400).ListItem.Art(fanart)]</value>
+		<!-- Music -->
 		<value condition="!String.IsEmpty(Container(7100).ListItem.Art(fanart)) + Control.HasFocus(7100)">$INFO[Container(7100).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(7200).ListItem.Art(fanart)) + Control.HasFocus(7200)">$INFO[Container(7200).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(7300).ListItem.Art(fanart)) + Control.HasFocus(7300)">$INFO[Container(7300).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(7400).ListItem.Art(fanart)) + Control.HasFocus(7400)">$INFO[Container(7400).ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container(8100).ListItem.Art(fanart)) + Control.HasFocus(8100)">$INFO[Container(8100).ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container(8200).ListItem.Art(fanart)) + Control.HasFocus(8200)">$INFO[Container(8200).ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container(8300).ListItem.Art(fanart)) + Control.HasFocus(8300)">$INFO[Container(8300).ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container(8400).ListItem.Art(fanart)) + Control.HasFocus(8400)">$INFO[Container(8400).ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container(8500).ListItem.Art(fanart)) + Control.HasFocus(8500)">$INFO[Container(8500).ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container(15100).ListItem.Property(FanartCode)) + Control.HasFocus(15100)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15100).ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Container(15200).ListItem.Property(FanartCode)) + Control.HasFocus(15200)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15200).ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
+		<!-- Addons -->
+		<value condition="!String.IsEmpty(Container(8100).ListItem.Art(fanart)) + Control.HasFocus(8100) + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)]">$INFO[Container(8100).ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Container(8100).ListItem.Property(AddonFanart)) + Control.HasFocus(8100) + Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)">$INFO[Container(8100).ListItem.Property(AddonFanart)]</value>
+		<value condition="!String.IsEmpty(Container(8200).ListItem.Art(fanart)) + Control.HasFocus(8200) + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)]">$INFO[Container(8200).ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Container(8200).ListItem.Property(AddonFanart)) + Control.HasFocus(8200) + Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)">$INFO[Container(8200).ListItem.Property(AddonFanart)]</value>
+		<value condition="!String.IsEmpty(Container(8300).ListItem.Art(fanart)) + Control.HasFocus(8300) + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_programs)]">$INFO[Container(8300).ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Container(8300).ListItem.Property(AddonFanart)) + Control.HasFocus(8300) + Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_programs)">$INFO[Container(8300).ListItem.Property(AddonFanart)]</value>		
+		<value condition="!String.IsEmpty(Container(8400).ListItem.Art(fanart)) + Control.HasFocus(8400) + System.Platform.Android + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_apps)]">$INFO[Container(8400).ListItem.Art(fanart)]</value>		
+		<value condition="!String.IsEmpty(Container(8500).ListItem.Art(fanart)) + Control.HasFocus(8500) + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)]">$INFO[Container(8500).ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Container(8500).ListItem.Property(AddonFanart)) + Control.HasFocus(8400) + Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)">$INFO[Container(8500).ListItem.Property(AddonFanart)]</value>		
+		<!-- Weather -->
+		<value condition="!String.IsEmpty(Container(15100).ListItem.Property(FanartCode)) + Control.HasFocus(15100) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15100).ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
+		<value condition="!String.IsEmpty(Container(15200).ListItem.Property(FanartCode)) + Control.HasFocus(15200) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15200).ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
+        <value condition="!String.IsEmpty(Container(15100).ListItem.Property(FanartCode)) + Control.HasFocus(15100) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15100).ListItem.Property(FanartCode)]</value>
+		<value condition="!String.IsEmpty(Container(15200).ListItem.Property(FanartCode)) + Control.HasFocus(15200) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15200).ListItem.Property(FanartCode)]</value>		
+		<!-- Global -->
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(804)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]favorites$INFO[Skin.String(HomeFanart.ext)]</value>
