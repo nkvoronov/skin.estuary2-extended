@@ -55,7 +55,7 @@
 						<param name="widget_header" value="$LOCALIZE[135]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="5500"/>
-						<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
+						<param name="icon" value="$VAR[WidgetMovieGenreIconVar]"/>
 						<param name="icon_height" value="70"/>
                         <param name="fallback_image" value="DefaultGenre.png"/>
 					</include>
@@ -114,7 +114,7 @@
 						<param name="widget_header" value="$LOCALIZE[135]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="6400"/>
-						<param name="icon" value="$VAR[WidgetGenreIconVar]"/>
+						<param name="icon" value="$VAR[WidgetMovieGenreIconVar]"/>
 						<param name="icon_height" value="70"/>
                         <param name="fallback_image" value="DefaultGenre.png"/>
 					</include>
