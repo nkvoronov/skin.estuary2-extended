@@ -562,7 +562,7 @@
 							<width>100%</width>
 							<texture border="21">dialogs/dialog-bg.png</texture>
 						</control>
-                        <include name="WeatherIcons">
+                        <include content="WeatherIcons">
                             <param name="left" value="900" />
                             <param name="top" value="30" />
                             <param name="width" value="150" />

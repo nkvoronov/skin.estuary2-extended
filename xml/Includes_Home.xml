@@ -640,7 +640,7 @@
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
-                        <include name="WeatherIcons">
+                        <include content="WeatherIcons">
                             <param name="left" value="60" />
                             <param name="top" value="108" />
                             <param name="width" value="130" />
@@ -701,7 +701,7 @@
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
-                        <include name="WeatherIcons">
+                        <include content="WeatherIcons">
                             <param name="left" value="60" />
                             <param name="top" value="108" />
                             <param name="width" value="130" />
