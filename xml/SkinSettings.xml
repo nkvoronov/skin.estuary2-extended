@@ -151,16 +151,18 @@
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
 				<control type="button" id="207">
+				    <description>Movie genre icons</description>					
+					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43012]</label>
 					<label2>$VAR[MovieGenreIconsNameVar]</label2>
-					<include>DefaultSettingButton</include>					
 					<onclick>RunScript(script.image.resource.select,property=MovieGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
 				<control type="button" id="208">
-					<label>$LOCALIZE[43016]</label>
-					<label2>$VAR[MusicGenreIconsNameVar]</label2>
-					<include>DefaultSettingButton</include>					
+				    <description>Music genre icons</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[43033]</label>
+					<label2>$VAR[MusicGenreIconsNameVar]</label2>					
 					<onclick>RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
