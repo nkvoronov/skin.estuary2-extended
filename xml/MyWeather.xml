@@ -126,7 +126,7 @@
 					<width>630</width>
 				</control>
 				<include content="WeatherIcons">
-					<param name="left" value="1100" />
+					<param name="left" value="1130" />
 					<param name="top" value="150" />
 					<param name="width" value="150" />
 					<param name="height" value="150" />
