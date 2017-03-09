@@ -123,6 +123,11 @@
         <value condition="Container.Content(studios) + String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/) + String.IsEqual(Skin.String(StudiosImages.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.jpg]</value>                
         <value condition="Container.Content(countries) + String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/) + String.IsEqual(Skin.String(LanguageFlags.ext),.png)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.png]</value>
         <value condition="Container.Content(countries) + String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/) + String.IsEqual(Skin.String(LanguageFlags.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.jpg]</value>
+		<!-- -->
+		<!-- <value condition="Container.Content(genres) + Window.IsActive(videos) + !String.IsEmpty(Skin.String(MovieGenreIcons.path))">$INFO[Skin.String(MovieGenreIcons.path)]$INFO[ListItem.Label]$INFO[Skin.String(MovieGenreIcons.ext)]</value>
+		<value condition="Container.Content(genres) + !Window.IsActive(videos) + !String.IsEmpty(Skin.String(MusicGenreIcons.path))">$INFO[Skin.String(MusicGenreIcons.path)]$INFO[ListItem.Label]$INFO[Skin.String(MusicGenreIcons.ext)]</value>
+		<value condition="Container.Content(studios) + !String.IsEmpty(Skin.String(StudiosImages.path))">$INFO[Skin.String(StudiosImages.path)]$INFO[ListItem.Label]$INFO[Skin.String(StudiosImages.ext)]</value>
+		<value condition="Container.Content(countries) + !String.IsEmpty(Skin.String(LanguageFlags.path))">$INFO[Skin.String(LanguageFlags.path)]$INFO[ListItem.Label]$INFO[Skin.String(LanguageFlags.ext)]</value> -->
 		<value condition="!String.isempty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
@@ -193,6 +198,8 @@
         <value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.xzener-flat/) + String.IsEqual(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-flat/,.jpg]</value>
 		<value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.xzener-reflection/) + String.IsEqual(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-reflection/,.png]</value>
         <value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.xzener-reflection/) + String.IsEqual(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-reflection/,.jpg]</value>
+		<!-- -->
+		<!-- <value condition="!String.IsEmpty(Skin.String(MovieGenreIcons.path))">$INFO[Skin.String(MovieGenreIcons.path)]$INFO[ListItem.Label]$INFO[Skin.String(MovieGenreIcons.ext)]</value> -->
 		<value>DefaultGenre.png</value>
 	</variable>
 	<!-- WidgetMusicGenreIconVar -->
@@ -203,14 +210,18 @@
         <value condition="String.IsEqual(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.poster/) + String.IsEqual(Skin.String(MusicGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.poster/,.jpg]</value>
         <value condition="String.IsEqual(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.text/) + String.IsEqual(Skin.String(MusicGenreIcons),.png)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.text/,.png]</value>
         <value condition="String.IsEqual(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.text/) + String.IsEqual(Skin.String(MusicGenreIcons),.jpg)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.text/,.jpg]</value>
+		<!-- -->
+		<!-- <value condition="!String.IsEmpty(Skin.String(MusicGenreIcons.path))">$INFO[Skin.String(MusicGenreIcons.path)]$INFO[ListItem.Label]$INFO[Skin.String(MusicGenreIcons.ext)]</value> -->
 		<value>DefaultMusicGenres.png</value>
 	</variable>
 	<!-- WidgetStudioIconVar -->
 	<variable name="WidgetStudioIconVar">
         <value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/) + String.IsEqual(Skin.String(StudiosImages.ext),.png)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
         <value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/) + String.IsEqual(Skin.String(StudiosImages.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.jpg]</value>
-		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/) + String.IsEqual(Skin.String(StudiosImages.ext),.png)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
-        <value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/) + String.IsEqual(Skin.String(StudiosImages.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.jpg]</value>
+		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/) + String.IsEqual(Skin.String(StudiosImages.ext),.png)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>        
+		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/) + String.IsEqual(Skin.String(StudiosImages.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.jpg]</value>
+		<!-- -->
+		<!-- <value condition="!String.IsEmpty(Skin.String(StudiosImages.path))">$INFO[Skin.String(StudiosImages.path)]$INFO[ListItem.Label]$INFO[Skin.String(StudiosImages.ext)]</value> -->
 		<value>DefaultStudios.png</value>
 	</variable>
 	<variable name="AddonsLabel2Var">

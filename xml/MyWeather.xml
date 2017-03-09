@@ -118,13 +118,21 @@
 					<label>$INFO[Weather.Temperature]</label>
 				</control>
 				<control type="label">
-					<right>400</right>
+					<right>300</right>
 					<top>164</top>
 					<align>right</align>
 					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I][CR]$INFO[Weather.Conditions]</label>
 					<font>font14</font>
 					<width>630</width>
 				</control>
+				<include content="WeatherIcons">
+					<param name="left" value="1100" />
+					<param name="top" value="150" />
+					<param name="width" value="150" />
+					<param name="height" value="150" />
+					<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
+					<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
+				</include>
 				<control type="grouplist">
 					<top>154</top>
 					<left>90</left>
