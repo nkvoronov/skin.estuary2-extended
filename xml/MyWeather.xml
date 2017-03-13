@@ -125,20 +125,12 @@
 					<font>font14</font>
 					<width>630</width>
 				</control>
-				<include content="WeatherIcons">
-					<param name="left" value="1130" />
-					<param name="top" value="150" />
-					<param name="width" value="150" />
-					<param name="height" value="150" />
-					<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
-					<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
-				</include>
 				<control type="grouplist">
 					<top>154</top>
 					<left>90</left>
-					<right>800</right>
-					<align>justify</align>
 					<orientation>horizontal</orientation>
+					<align>left</align>
+					<itemgap>-65</itemgap>
 					<include content="WeatherIcon">
 						<param name="label" value="Window(weather).Property(Current.Wind)" />
 						<param name="texture" value="icons/weather/wind.png" />
@@ -163,6 +155,14 @@
 						<param name="label" value="Window(weather).Property(Today.Sunset)" />
 						<param name="texture" value="icons/weather/sunset.png" />
 						<param name="header" value="$LOCALIZE[403]" />
+					</include>
+					<include content="WeatherIcons">
+						<param name="left" value="0" />
+						<param name="top" value="-15" />
+						<param name="width" value="150" />
+						<param name="height" value="150" />
+						<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
+						<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
 					</include>
 				</control>
 			</control>
