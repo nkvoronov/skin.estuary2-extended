@@ -42,6 +42,7 @@
 				<control type="label">
 					<top>60</top>
 					<label>$VAR[OSDSubLabelVar]</label>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<height>100</height>
 					<left>0</left>
