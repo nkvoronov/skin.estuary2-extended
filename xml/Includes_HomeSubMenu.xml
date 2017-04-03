@@ -615,8 +615,8 @@
 								<param name="header" value="403" />
 							</include>
 							<include content="WeatherIcons">
-								<param name="left" value="20" />
-								<param name="top" value="-15" />
+								<param name="left" value="0" />
+								<param name="top" value="-10" />
 								<param name="width" value="150" />
 								<param name="height" value="150" />
 								<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
