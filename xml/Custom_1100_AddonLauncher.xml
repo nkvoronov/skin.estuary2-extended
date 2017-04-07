@@ -287,7 +287,7 @@
 					<aligny>center</aligny>
 					<align>center</align>
 					<font>font32_title</font>
-					<label>$VAR[AddonCountLabel]</label>
+					<label>$VAR[AddonCountLabelVar]</label>
 					<shadowcolor>text_shadow</shadowcolor>
 				</control>
 			</control>

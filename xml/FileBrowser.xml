@@ -206,7 +206,7 @@
 				<aligny>bottom</aligny>
 				<textcolor>grey</textcolor>
 				<font>font12</font>
-				<label>$VAR[FileBrowserSelectLabel]</label>
+				<label>$VAR[FileBrowserSelectLabelVar]</label>
 			</control>
 		</control>
 		<include content="UpDownArrows">
