@@ -104,13 +104,13 @@
 	</variable>
     <!-- Select Label -->
 	<variable name="SelectLabelVar">
-		<value condition="Control.IsVisible(3)">[COLOR=button_focus]$INFO[Container(3).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR=button_focus]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR]</value>
-		<value>[COLOR=button_focus]$INFO[Container(6).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR=button_focus]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR]</value>
+		<value condition="Control.IsVisible(3)">[COLOR button_focus]$INFO[Container(3).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR button_focus]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR]</value>
+		<value>[COLOR button_focus]$INFO[Container(6).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR button_focus]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR]</value>
 	</variable>
     <!-- FileBrowser Select Label -->
 	<variable name="FileBrowserSelectLabelVar">
-		<value condition="Control.IsVisible(450)">[COLOR=button_focus]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR=button_focus]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
-		<value>[COLOR=button_focus]$INFO[Container(451).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR=button_focus]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR]</value>
+		<value condition="Control.IsVisible(450)">[COLOR button_focus]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR button_focus]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
+		<value>[COLOR button_focus]$INFO[Container(451).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR button_focus]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR]</value>
 	</variable>
     <!-- Addons Label2 -->
 	<variable name="AddonsLabel2Var">
@@ -185,6 +185,7 @@
         <value condition="Control.HasFocus(602) + Player.Paused">$LOCALIZE[208]</value>
         <value condition="Control.HasFocus(602)">$LOCALIZE[36045]</value>
         <value condition="Control.HasFocus(603)">$LOCALIZE[36044]</value>
+        <value condition="Control.HasFocus(605)">$LOCALIZE[209]</value>
 		<value condition="Control.HasFocus(87) + [Player.Rewinding | Player.Forwarding]">$LOCALIZE[31050]</value>
 		<value condition="Control.HasFocus(70011)">$LOCALIZE[20060]</value>
 		<value condition="Control.HasFocus(700)">$LOCALIZE[298]</value>
@@ -253,13 +254,13 @@
 		<value condition="VideoPlayer.Content(episodes)">$LOCALIZE[20373]$INFO[VideoPlayer.Season,: , / ]$LOCALIZE[20359]$INFO[VideoPlayer.Episode,: ]</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Year]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]</value>
-		<value condition="Player.HasAudio">[COLOR grey]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, (,) ]</value>
+		<value condition="Player.HasAudio">[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR] ]</value>
 	</variable>
     <!-- Player Label 3 -->
 	<variable name="PlayerLabel3Var">
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Genre]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,: ][COLOR grey]$INFO[Player.Title][/COLOR]</value>
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,. ][COLOR white]$INFO[Player.Title][/COLOR]</value>
 	</variable>
     <!-- Addon News -->
 	<variable name="AddonNewsVar">
@@ -322,7 +323,7 @@
 		<value condition="Container.Content(genres) + !Window.IsActive(videos) + !String.IsEmpty(Skin.String(MusicGenreIcons.path))">$INFO[Skin.String(MusicGenreIcons.path)]$INFO[ListItem.Label]$INFO[Skin.String(MusicGenreIcons.ext)]</value>
 		<value condition="Container.Content(studios) + !String.IsEmpty(Skin.String(StudiosImages.path))">$INFO[Skin.String(StudiosImages.path)]$INFO[ListItem.Label]$INFO[Skin.String(StudiosImages.ext)]</value>
 		<value condition="Container.Content(countries) + !String.IsEmpty(Skin.String(LanguageFlags.path))">$INFO[Skin.String(LanguageFlags.path)]$INFO[ListItem.Label]$INFO[Skin.String(LanguageFlags.ext)]</value> -->
-		<value condition="!String.isempty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+        <value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<!-- 53 Shift View Thumb -->
@@ -334,7 +335,7 @@
 	</variable>
     <!-- 54 Info Wall View Thumb -->
 	<variable name="InfoWallThumbVar">
-		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
+        <value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
     <!-- 501 Banner View Image -->
@@ -362,7 +363,7 @@
 		<value>$INFO[ListItem.Art(tvshow.banner)]</value>
 	</variable>
     <!-- Poster -->
-	<variable name="PosterVar">
+    <variable name="PosterVar">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBackPoster.png</value>
 		<value condition="!String.IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(Container.Art(tvshow.poster)) + Container.Content(episodes)">$INFO[Container.Art(tvshow.poster)]</value>
@@ -585,7 +586,7 @@
 		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
 	</variable>
     <!-- Player Controls Repeat Image -->
-    <variable name="PlayerControlsRepeatImageVar">
+	<variable name="PlayerControlsRepeatImageVar">
 		<value condition="Playlist.IsRepeatOne">osd/fullscreen/buttons/repeat-one.png</value>
 		<value condition="Playlist.IsRepeat">osd/fullscreen/buttons/repeat-all.png</value>
 		<value>osd/fullscreen/buttons/repeat-off.png</value>
@@ -619,7 +620,7 @@
 		<value condition="Integer.IsGreater(ListItem.Playcount,0)">$INFO[ListItem.Overlay]</value>
 	</variable>
     <!-- PVR Status Image -->    
-	<variable name="PVRStatusImageVar">
+    <variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">windows/pvr/timer.png</value>
 	</variable>
@@ -631,14 +632,19 @@
     <!-- Addons List Icon -->
 	<variable name="AddonsListIconVar">
 		<value condition="!String.IsEmpty(ListItem.AddonBroken)">icons/addonstatus/disable.png</value>
-		<value condition="ListItem.Property(addon.orphaned)">icons/addonstatus/orphan.png</value>
-		<value condition="ListItem.Property(addon.downloading)">icons/addonstatus/install.png</value>
-		<value condition="ListItem.Property(addon.isinstalled) + !ListItem.Property(addon.isenabled) + Window.IsActive(addonbrowser)">icons/addonstatus/disable.png</value>
-		<value condition="ListItem.Property(addon.hasupdate)">icons/addonstatus/update.png</value>
-		<value condition="ListItem.Property(addon.isinstalled)">OverlayWatched.png</value>
+		<value condition="ListItem.Property(Addon.Orphaned)">icons/addonstatus/orphan.png</value>
+		<value condition="ListItem.Property(Addon.Downloading)">icons/addonstatus/install.png</value>
+		<value condition="ListItem.Property(Addon.Isinstalled) + !ListItem.Property(addon.isenabled) + Window.IsActive(addonbrowser)">icons/addonstatus/disable.png</value>
+		<value condition="ListItem.Property(Addon.Hasupdate)">icons/addonstatus/update.png</value>
+		<value condition="ListItem.Property(Addon.Isinstalled)">OverlayWatched.png</value>
 		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
 	</variable>
     <!-- Resolution Flag -->
+	<variable name="ResolutionFlagVar">
+		<value condition="ListItem.IsStereoscopic">flags/videoresolution/3D.png</value>
+		<value condition="Integer.IsGreater(ListItem.VideoResolution,1080)">flags/videoresolution/4K.png</value>
+		<value>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</value>
+	</variable>
 	<variable name="InfoListPathVar">
 		<value condition="String.IsEmpty(Container.PluginName)">$INFO[ListItem.FolderPath]</value>
 		<value></value>

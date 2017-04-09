@@ -31,7 +31,8 @@
 					<top>435</top>
 					<width>1050</width>
 					<height>365</height>
-					<label>$INFO[ListItem.AddonSummary,[B],[/B][CR]]$INFO[ListItem.AddonDescription][CR]$VAR[AddonNewsVar,[I][CR][CR],[/I]]</label>
+                    <label>$INFO[ListItem.AddonSummary,[B],[/B][CR]][COLOR white]$INFO[ListItem.AddonDescription][/COLOR][COLOR white][CR][/COLOR]$VAR[AddonNewsVar,[CR][CR]]</label>
+                    <textcolor>button_focus</textcolor>
 					<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 				</control>
 				<control type="group">
@@ -242,13 +243,15 @@
 					<control type="label">
 						<width>470</width>
 						<height>40</height>
-						<label>$INFO[ListItem.AddonSize,[COLOR button_focus]$LOCALIZE[22031]:[/COLOR] ,[CR]]</label>
+						<label>$INFO[ListItem.AddonSize,$LOCALIZE[22031]:[COLOR white] ,[/COLOR][CR] ]</label>
+                        <textcolor>button_focus</textcolor>
 						<visible>!String.IsEmpty(ListItem.AddonSize)</visible>
 					</control>
 					<control type="label">
 						<width>470</width>
 						<height>40</height>
-						<label>$INFO[ListItem.AddonOrigin,[COLOR button_focus]$LOCALIZE[31150]:[/COLOR] ]</label>
+						<label>$INFO[ListItem.AddonOrigin,$LOCALIZE[31150]:[COLOR white] ,[/COLOR] ]</label>
+                        <textcolor>button_focus</textcolor>
 						<visible>!String.IsEmpty(ListItem.AddonOrigin)</visible>
 					</control>
 				</control>
@@ -267,8 +270,8 @@
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
 			<include content="InfoDialogTopBarInfo">
-				<param name="main_label" value="$INFO[ListItem.AddonName]" />
-				<param name="sub_label" value="$INFO[ListItem.AddonVersion,[COLOR grey],[/COLOR]]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ]" />
+                <param name="main_label" value="[COLOR white]$INFO[ListItem.AddonName][/COLOR]" />
+                <param name="sub_label" value="$INFO[ListItem.AddonVersion][COLOR white]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ][/COLOR]" />
 			</include>
 		</control>
 	</controls>

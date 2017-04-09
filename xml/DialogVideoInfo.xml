@@ -14,7 +14,7 @@
 				<top>150</top>
 				<left>66</left>
 				<include>OpenClose_Left</include>
-				<control type="image">
+                <control type="image">
 					<top>-16</top>
 					<left>-16</left>
 					<width>566</width>
@@ -395,7 +395,6 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]" />
 					</include>
 					<include content="InfoDialogButton">
-
 						<param name="id" value="441" />
 						<param name="icon" value="icons/infodialogs/cinema.png" />
 						<param name="onclick_1" value="RunScript(script.cinemavision,dbtype=$INFO[ListItem.DBType],dbid=$INFO[ListItem.DBID])" />
@@ -410,7 +409,6 @@
 						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
 						<param name="visible" value="System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)" />
 					</include>
-
 					<control type="group" id="400">
 						<width>262</width>
 						<visible>Control.IsEnabled(7) | !String.IsEmpty(ListItem.UserRating)</visible>
@@ -458,7 +456,7 @@
 						<param name="id" value="13" />
 						<param name="icon" value="icons/infodialogs/director.png" />
 						<param name="label" value="$LOCALIZE[31123]" />
-						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />                                                                                                             
+						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="102" />
