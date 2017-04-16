@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="InfoWallPictureLayout">
+	<include name="WallPictureLayout">
 		<param name="focused">false</param>
 		<definition>
 			<control type="image">
 				<top>-10</top>
-				<width>376</width>
-				<height>380</height>
+				<width>360</width>
+				<height>350</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<top>-14</top>
-				<left>-4</left>
-				<width>384</width>
-				<height>388</height>
+				<top>-10</top>
+				<width>360</width>
+				<height>350</height>
 				<texture colordiffuse="button_focus">colors/grey.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
@@ -25,15 +24,57 @@
 			<control type="image">
 				<left>20</left>
 				<top>10</top>
-				<width>336</width>
-				<height>300</height>
+				<width>320</width>
+				<height>270</height>
 				<texture border="2" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
 				<left>20</left>
-				<top>318</top>
-				<width>338</width>
+				<top>290</top>
+				<width>320</width>
+				<textoffsetx>20</textoffsetx>
+				<height>20</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</definition>
+	</include>
+	<include name="InfoWallPictureLayout">
+		<param name="focused">false</param>
+		<definition>
+			<control type="image">
+				<top>-10</top>
+				<width>300</width>
+				<height>360</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<top>-10</top>
+				<width>300</width>
+				<height>360</height>
+				<texture colordiffuse="button_focus">colors/grey.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<visible>$PARAM[focused]</visible>
+				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+			</control>
+			<control type="image">
+				<left>20</left>
+				<top>10</top>
+				<width>260</width>
+				<height>280</height>
+				<texture border="2" background="true">$VAR[InfoWallThumbVar]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<left>20</left>
+				<top>300</top>
+				<width>260</width>
 				<textoffsetx>20</textoffsetx>
 				<height>20</height>
 				<align>center</align>
@@ -370,7 +411,7 @@
 				<left>490</left>
 				<top>0</top>
 				<right>15</right>
-				<height>100%</height>
+				<height>98%</height>
 				<onleft>9000</onleft>
 				<onright>531</onright>
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">54</onup>
@@ -442,14 +483,14 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="400" width="378" condition="Container.Content(images)">
+				<itemlayout height="360" width="300" condition="Container.Content(images)">
 					<control type="group">
 						<left>0</left>
 						<top>150</top>
 						<include>InfoWallPictureLayout</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="400" width="378" condition="Container.Content(images)">
+				<focusedlayout height="360" width="300" condition="Container.Content(images)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>0</left>

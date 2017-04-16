@@ -183,7 +183,8 @@
 					<bottom>117</bottom>
 					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>$VAR[ListBoxInfoVar]</label>
-					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
+                    <textcolor>button_focus</textcolor>
+					<visible>!Container.Content() | !String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<control type="group">
 					<left>20</left>
@@ -211,7 +212,7 @@
 						<label>$LOCALIZE[19055]</label>
 						<visible>!ListItem.IsParentFolder</visible>
 						<visible>!Integer.IsGreater(Container(42000).NumItems,0) + !Integer.IsGreater(Container(43000).NumItems,0)</visible>
-						<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
+						<visible>!Container.Content() | !String.IsEmpty(ListItem.Plot)</visible>
 					</control>
 					<control type="group">
 						<left>20</left>
@@ -223,7 +224,7 @@
 							<param name="width" value="540" />
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="descending" />
-							<param name="item_label" value="$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]" />
+							<param name="item_label" value="$INFO[ListItem.Year,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]" />
 							<param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
 						</include>
 						<include content="InfoList">
@@ -232,7 +233,7 @@
 							<param name="width" value="540" />
 							<param name="sortby" value="track" />
 							<param name="sortorder" value="ascending" />
-							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]" />
+							<param name="item_label" value="$INFO[ListItem.Duration,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]" />
 							<param name="visible" value="String.IsEqual(ListItem.DBType,album)" />
 						</include>
 					</control>

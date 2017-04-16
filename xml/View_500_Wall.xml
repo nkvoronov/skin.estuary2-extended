@@ -11,7 +11,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>98%</width>
-				<height>100%</height>
+				<height>98%</height>
 				<onleft>9000</onleft>
 				<onright>531</onright>
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">500</onup>
@@ -60,21 +60,21 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="425" width="442" condition="Container.Content(images)">
+                <itemlayout height="360" width="350" condition="Container.Content(images)">
 					<control type="group">
 						<left>40</left>
 						<top>150</top>
-						<include>InfoWallPictureLayout</include>
+						<include>WallPictureLayout</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="425" width="442" condition="Container.Content(images)">
+                <focusedlayout height="360" width="350" condition="Container.Content(images)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,330">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,330">UnFocus</animation>
 						<left>40</left>
 						<top>150</top>
-						<include content="InfoWallPictureLayout">
+						<include content="WallPictureLayout">
 							<param name="focused" value="true" />
 						</include>
 					</control>

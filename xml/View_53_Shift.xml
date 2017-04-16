@@ -149,23 +149,25 @@
 					<orientation>horizontal</orientation>
 					<visible>ListItem.IsCollection</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<focusedlayout height="40" width="628">
+					<focusedlayout height="40" width="940">
 						<control type="label">
 							<textoffsetx>10</textoffsetx>
 							<height>40</height>
-							<width>628</width>
+							<width>940</width>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Title]</label>
+							<label>$INFO[ListItem.Year,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Title][/COLOR]</label>
+                            <textcolor>button_focus</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
-					<itemlayout height="40" width="628">
+					<itemlayout height="40" width="940">
 						<control type="label">
 							<textoffsetx>10</textoffsetx>
 							<height>40</height>
-							<width>628</width>
+							<width>940</width>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Title]</label>
+							<label>$INFO[ListItem.Year,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Title][/COLOR]</label>
+                            <textcolor>button_focus</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</itemlayout>
@@ -184,6 +186,7 @@
 				<right>30</right>
 				<height>163</height>
 				<label>$PARAM[textbox_content]</label>
+                <textcolor>button_focus</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
 		</control>

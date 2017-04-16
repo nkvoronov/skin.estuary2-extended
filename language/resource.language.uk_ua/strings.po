@@ -318,7 +318,7 @@ msgstr "Значки"
 
 msgctxt "#31100"
 msgid "Shift"
-msgstr "Shift"
+msgstr "Сдвиг"
 
 msgctxt "#31101"
 msgid "InfoWall"

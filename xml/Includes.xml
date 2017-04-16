@@ -112,7 +112,7 @@
 		</definition>
 	</include>
 	<include name="InfoList">
-		<param name="item_label">$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]</param>
+		<param name="item_label">$INFO[ListItem.Year,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
 		<param name="item_height">40</param>
 		<param name="bottom">100</param>
@@ -136,6 +136,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
+                        <textcolor>button_focus</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
@@ -147,6 +148,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
+                        <textcolor>button_focus</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>

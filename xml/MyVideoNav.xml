@@ -49,7 +49,8 @@
 						<width>525</width>
 						<bottom>100</bottom>
 						<visible>!ListItem.IsCollection</visible>
-						<label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
+						<label>$INFO[ListItem.Genre,,[CR][CR]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][COLOR white]$INFO[ListItem.Plot][/COLOR][CR][CR]</label>
+                        <textcolor>button_focus</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">

@@ -98,11 +98,21 @@
 					<control type="label">
 						<left>695</left>
 						<top>400</top>
-						<right>50</right>
+						<width>950</width>
 						<height>40</height>
-						<label>$INFO[ListItem.Label]$VAR[ListSubLabelVar]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<font>font45_title</font>
 						<shadowcolor>text_shadow</shadowcolor>
+					</control>
+					<control type="label">
+						<top>400</top>
+						<right>150</right>
+						<height>40</height>
+						<label>$VAR[ListSubLabelVar]</label>
+						<font>font45_title</font>
+						<textcolor>button_focus</textcolor>
+						<shadowcolor>text_shadow</shadowcolor>
+						<align>right</align>
 					</control>
 					<control type="textbox">
 						<left>645</left>
@@ -110,7 +120,8 @@
 						<height>250</height>
 						<right>115</right>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$INFO[ListItem.Plot]</label>
+                        <label>$INFO[ListItem.Tagline,[I],[/I][CR]][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+                        <textcolor>button_focus</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>!ListItem.IsCollection</visible>
 					</control>
