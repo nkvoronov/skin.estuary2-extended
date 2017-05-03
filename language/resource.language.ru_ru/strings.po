@@ -1,6 +1,6 @@
 # Kodi Media Center language file
-# Addon Name: Estuary v2 Extended
-# Addon id: skin.estuary2-extended
+# Addon Name: Estuary v2 Extended Shortcuts
+# Addon id: skin.estuary2-extended-s
 # Addon Provider: phil65, Ichabod Fletchman, YLLOW_DRAGON
 msgid ""
 msgstr ""
@@ -221,8 +221,8 @@ msgid "Automatic Login on startup"
 msgstr "Автоматическая авторизация при запуске"
 
 msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Элементы главного меню"
+msgid "Main menu"
+msgstr "Главное меню"
 
 msgctxt "#31062"
 msgid "Choose weather fanart pack"
@@ -554,6 +554,34 @@ msgctxt "#43001"
 msgid "User widgets"
 msgstr "Виджеты пользователя"
 
+msgctxt "#43002"
+msgid "Colors"
+msgstr "Цвета"
+
+msgctxt "#43003"
+msgid "Enable splash screen (photo, video or music)"
+msgstr "Разрешить заставку (фото, видео или музыка)"
+
+msgctxt "#43004"
+msgid "Path:"
+msgstr "Путь:"
+
+msgctxt "#43005"
+msgid "Duration (sec)"
+msgstr "Длительность (сек)"
+
+msgctxt "#43006"
+msgid "Enable Smart Shortcuts Playlists"
+msgstr "Разрешить Смарт Ярлыки для плейлистов"
+
+msgctxt "#43007"
+msgid "Enable Smart Shortcuts Favorites"
+msgstr "Разрешить Смарт Ярлыки для избранного"
+
+msgctxt "#43008"
+msgid "Enable Animated Posters"
+msgstr "Разрешить анимированные постеры"
+
 msgctxt "#43009"
 msgid "Enable FullScreen Clock"
 msgstr "Показывать часы в полноэкранном режиме"
@@ -582,6 +610,10 @@ msgctxt "#43015"
 msgid "Choose weather icons"
 msgstr "Выбрать иконки погоды"
 
+msgctxt "#43016"
+msgid "Busy spinner"
+msgstr "Индикатор занятости"
+
 msgctxt "#43017"
 msgid "Enable user list of add-ons"
 msgstr "Разрешить пользовательский список дополнений"
@@ -593,6 +625,10 @@ msgstr "Разрешить пользовательский список тв и
 msgctxt "#43019"
 msgid "Debug infos"
 msgstr "Отладочная иформация"
+
+msgctxt "#43020"
+msgid "Customize power menu"
+msgstr "Настройка меню питания"
 
 msgctxt "#43021"
 msgid "User list of add-ons"
@@ -614,6 +650,34 @@ msgctxt "#43025"
 msgid "Choose weather fanart pack"
 msgstr "Выбрать фанарт пакет для погоды"
 
+msgctxt "#43026"
+msgid "Color Primary Background"
+msgstr "Цвет фона"
+
+msgctxt "#43027"
+msgid "Color Secondary Background"
+msgstr "Цвет шаблона фона"
+
+msgctxt "#43028"
+msgid "Main Color"
+msgstr "Основной цвет"
+
+msgctxt "#43029"
+msgid "Backup Skin Settings"
+msgstr "Резервная копия настроек обложки"
+
+msgctxt "#43030"
+msgid "Create"
+msgstr "Создать"
+
+msgctxt "#43031"
+msgid "Restory"
+msgstr "Восстановить"
+
+msgctxt "#43032"
+msgid "Widget Limit Items"
+msgstr "Виджеты лимит элементов"
+
 msgctxt "#43033"
 msgid "Choose music genre icons"
 msgstr "Выбрать иконки жанров для музыки"
@@ -630,6 +694,10 @@ msgctxt "#43042"
 msgid "Background options"
 msgstr "Параметры фона"
 
+msgctxt "#43043"
+msgid "Colors skin options"
+msgstr "Параметры цветов"
+
 msgctxt "#43044"
 msgid "Reset skin options"
 msgstr "Сброс параметров обложки"
@@ -638,6 +706,46 @@ msgctxt "#43045"
 msgid "Artwork Downloader"
 msgstr "Загрузить иллюстрации"
 
+msgctxt "#43050"
+msgid "Picture Add-On"
+msgstr "Фото дополнение"
+
+msgctxt "#43051"
+msgid "TV Channel"
+msgstr "ТВ каналы"
+
+msgctxt "#43052"
+msgid "Radio Channel"
+msgstr "Радио каналы"
+
+msgctxt "#43053"
+msgid "Video Add-On"
+msgstr "Видео дополнение"
+
+msgctxt "#43054"
+msgid "Video Source"
+msgstr "Видео источник"
+
+msgctxt "#43055"
+msgid "Music Source"
+msgstr "Музыкальный источник"
+
+msgctxt "#43056"
+msgid "Music Add-On"
+msgstr "Дополнение музыки"
+
+msgctxt "#43057"
+msgid "Program"
+msgstr "Программа"
+
+msgctxt "#43058"
+msgid "Video Playlist"
+msgstr "Видео плейлист"
+
+msgctxt "#43059"
+msgid "Music Playlist"
+msgstr "Музыкальный плейлист"
+
 msgctxt "#43060"
 msgid "Timer rules"
 msgstr "Правила таймера"
@@ -645,6 +753,42 @@ msgstr "Правила таймера"
 msgctxt "#43061"
 msgid "Hide disabled"
 msgstr "Скрыть запрещенные"
+
+msgctxt "#43070"
+msgid "Set type of widgets"
+msgstr "Выберите тип виджетов"
+
+msgctxt "#43071"
+msgid "Disable"
+msgstr "Запретить"
+
+msgctxt "#43072"
+msgid "Enable"
+msgstr "Разрешить"
+
+msgctxt "#43081"
+msgid "Weather widgets"
+msgstr "Виджеты погоды"
+
+msgctxt "#43082"
+msgid "LiveTV widgets"
+msgstr "Виджеты ТВ"
+
+msgctxt "#43083"
+msgid "Radio widgets"
+msgstr "Виджеты радио"
+
+msgctxt "#43084"
+msgid "Addons widgets"
+msgstr "Виджеты дополнений"
+
+msgctxt "#43085"
+msgid "SystemInfo widget"
+msgstr "Виджет системной информации"
+
+msgctxt "#43086"
+msgid "Media widgets"
+msgstr "Медиа виджеты"
 
 msgctxt "#43090"
 msgid "Most watched music videos"
@@ -657,6 +801,14 @@ msgstr "Случайные муз. видео"
 msgctxt "#43092"
 msgid "Unwatched music videos"
 msgstr "Непросмотренные муз. видео"
+
+msgctxt "#43100"
+msgid "Smart Shortcuts"
+msgstr "Смарт Ярлыки"
+
+msgctxt "#43101"
+msgid "Smart Widgets"
+msgstr "Смарт Виджеты"
 
 msgctxt "#43200"
 msgid "Big posters"
@@ -698,22 +850,3 @@ msgctxt "#43250"
 msgid "Apply"
 msgstr "Применить"
 
-msgctxt "#43251"
-msgid "Apply immediately"
-msgstr "Применить сразу"
-
-msgctxt "#43252"
-msgid "Input oversampling"
-msgstr "Вх. передискретизация"
-
-msgctxt "#43253"
-msgid "Preprocessing"
-msgstr "Пред. обработка"
-
-msgctxt "#43254"
-msgid "Output oversampling"
-msgstr "Вы. передискретизация"
-
-msgctxt "#43255"
-msgid "Hide reload skin button"
-msgstr "Скрыть кнопку обновления обложки"

@@ -158,7 +158,18 @@
     <backgrounddefault labelID="power">special://skin/extras/home-images/power.jpg</backgrounddefault>    
     <backgrounddefault labelID="favourite">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
     <backgrounddefault labelID="filemanager">special://skin/extras/home-images/filemanager.jpg</backgrounddefault>
-    <backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>    
+    <backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>
+    <!-- Context Menu -->
+    <contextmenu>
+        <enableon>211</enableon>
+        <item control="303">$ADDON[script.skinshortcuts 32002]</item>
+        <item control="304">$ADDON[script.skinshortcuts 32003]</item>
+        <item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),False)">$LOCALIZE[43071]</item>
+        <item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)">$LOCALIZE[43072]</item>
+        <item control="301">$ADDON[script.skinshortcuts 32000]</item>
+        <item control="302">$ADDON[script.skinshortcuts 32001]</item>
+        <item control="308">$ADDON[script.skinshortcuts 32028]</item>
+    </contextmenu>    
     <!-- Menus Groupings -->
     <groupings>
         <shortcut label="43100" type="" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>        

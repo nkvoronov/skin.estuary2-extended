@@ -1,6 +1,6 @@
 # Kodi Media Center language file
-# Addon Name: Estuary v2 Extended
-# Addon id: skin.estuary2-extended
+# Addon Name: Estuary v2 Extended Shortcuts
+# Addon id: skin.estuary2-extended-s
 # Addon Provider: phil65, Ichabod Fletchman, YLLOW_DRAGON
 msgid ""
 msgstr ""
@@ -294,7 +294,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31061"
-msgid "Main menu items"
+msgid "Main menu"
 msgstr ""
 
 #: /xml/SkinSettings.xml
@@ -736,6 +736,34 @@ msgctxt "#43001"
 msgid "User widgets"
 msgstr ""
 
+msgctxt "#43002"
+msgid "Colors"
+msgstr ""
+
+msgctxt "#43003"
+msgid "Enable splash screen (photo, video or music)"
+msgstr ""
+
+msgctxt "#43004"
+msgid "Path:"
+msgstr ""
+
+msgctxt "#43005"
+msgid "Duration (sec)"
+msgstr ""
+
+msgctxt "#43006"
+msgid "Enable Smart Shortcuts Playlists"
+msgstr ""
+
+msgctxt "#43007"
+msgid "Enable Smart Shortcuts Favorites"
+msgstr ""
+
+msgctxt "#43008"
+msgid "Enable Animated Posters"
+msgstr ""
+
 msgctxt "#43009"
 msgid "Enable FullScreen Clock"
 msgstr ""
@@ -764,6 +792,10 @@ msgctxt "#43015"
 msgid "Choose weather icons"
 msgstr ""
 
+msgctxt "#43016"
+msgid "Busy spinner"
+msgstr ""
+
 msgctxt "#43017"
 msgid "Enable user list of add-ons"
 msgstr ""
@@ -774,6 +806,10 @@ msgstr ""
 
 msgctxt "#43019"
 msgid "Debug infos"
+msgstr ""
+
+msgctxt "#43020"
+msgid "Customize power menu"
 msgstr ""
 
 msgctxt "#43021"
@@ -796,6 +832,34 @@ msgctxt "#43025"
 msgid "Choose weather fanart pack"
 msgstr ""
 
+msgctxt "#43026"
+msgid "Color Primary Background"
+msgstr ""
+
+msgctxt "#43027"
+msgid "Color Secondary Background"
+msgstr ""
+
+msgctxt "#43028"
+msgid "Main Color"
+msgstr ""
+
+msgctxt "#43029"
+msgid "Backup Skin Settings"
+msgstr ""
+
+msgctxt "#43030"
+msgid "Create"
+msgstr ""
+
+msgctxt "#43031"
+msgid "Restory"
+msgstr ""
+
+msgctxt "#43032"
+msgid "Widget Limit Items"
+msgstr ""
+
 msgctxt "#43033"
 msgid "Choose music genre icons"
 msgstr ""
@@ -812,6 +876,10 @@ msgctxt "#43042"
 msgid "Background options"
 msgstr ""
 
+msgctxt "#43043"
+msgid "Colors skin options"
+msgstr ""
+
 msgctxt "#43044"
 msgid "Reset skin options"
 msgstr ""
@@ -820,12 +888,88 @@ msgctxt "#43045"
 msgid "Artwork Downloader"
 msgstr ""
 
+msgctxt "#43050"
+msgid "Picture Add-On"
+msgstr ""
+
+msgctxt "#43051"
+msgid "TV Channel"
+msgstr ""
+
+msgctxt "#43052"
+msgid "Radio Channel"
+msgstr ""
+
+msgctxt "#43053"
+msgid "Video Add-On"
+msgstr ""
+
+msgctxt "#43054"
+msgid "Video Source"
+msgstr ""
+
+msgctxt "#43055"
+msgid "Music Source"
+msgstr ""
+
+msgctxt "#43056"
+msgid "Music Add-On"
+msgstr ""
+
+msgctxt "#43057"
+msgid "Program"
+msgstr ""
+
+msgctxt "#43058"
+msgid "Video Playlist"
+msgstr ""
+
+msgctxt "#43059"
+msgid "Music Playlist"
+msgstr ""
+
 msgctxt "#43060"
 msgid "Timer rules"
 msgstr ""
 
 msgctxt "#43061"
 msgid "Hide disabled"
+msgstr ""
+
+msgctxt "43070"
+msgid "Set type of widgets"
+msgstr ""
+
+msgctxt "#43071"
+msgid "Disable"
+msgstr ""
+
+msgctxt "#43072"
+msgid "Enable"
+msgstr ""
+
+msgctxt "#43081"
+msgid "Weather widgets"
+msgstr ""
+
+msgctxt "#43082"
+msgid "LiveTV widgets"
+msgstr ""
+
+msgctxt "#43083"
+msgid "Radio widgets"
+msgstr ""
+
+msgctxt "#43084"
+msgid "Addons widgets"
+msgstr ""
+
+msgctxt "#43085"
+msgid "SystemInfo widget"
+msgstr ""
+
+msgctxt "#43086"
+msgid "Media widgets"
 msgstr ""
 
 msgctxt "#43090"
@@ -838,6 +982,14 @@ msgstr ""
 
 msgctxt "#43092"
 msgid "Unwatched music videos"
+msgstr ""
+
+msgctxt "#43100"
+msgid "Smart Shortcuts"
+msgstr ""
+
+msgctxt "#43101"
+msgid "Smart Widgets"
 msgstr ""
 
 msgctxt "#43200"
@@ -880,22 +1032,3 @@ msgctxt "#43250"
 msgid "Apply"
 msgstr ""
 
-msgctxt "#43251"
-msgid "Apply immediately"
-msgstr ""
-
-msgctxt "#43252"
-msgid "Input oversampling"
-msgstr ""
-
-msgctxt "#43253"
-msgid "Preprocessing"
-msgstr ""
-
-msgctxt "#43254"
-msgid "Output oversampling"
-msgstr ""
-
-msgctxt "#43255"
-msgid "Hide reload skin button"
-msgstr ""
