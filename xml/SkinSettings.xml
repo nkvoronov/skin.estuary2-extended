@@ -133,22 +133,20 @@
 				</control>
                 <control type="label" id="114">
                     <description>Skin Shortcuts Label</description>
-                    <width>1256</width>
                     <include>DefaultSettingLabel</include>
-                   <label>$LOCALIZE[24000] Skin Shortcuts</label>
+                    <label>$LOCALIZE[24000] Skin Shortcuts</label>
                 </control>
                 <control type="button" id="115">
-                    <description>Settings Skin Shortcuts</description>					
-					<width>1256</width>
+                    <description>Settings Skin Shortcuts</description>
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[24020]</label>
                     <onclick>Addon.OpenSettings(script.skinshortcuts)</onclick>
 					<enable>System.HasAddon(script.skinshortcuts)</enable>
 				</control>
                 <control type="label" id="116">
-                    <description> Skin Helper Service Label</description>
+                    <description>Skin Helper Service Label</description>
                     <include>DefaultSettingLabel</include>
-                   <label>$LOCALIZE[24000] Skin Helper Service</label>
+                    <label>$LOCALIZE[24000] Skin Helper Service</label>
                 </control>
                 <control type="button" id="117">
                     <description>Settings Skin Helper Service Art Utils</description>					

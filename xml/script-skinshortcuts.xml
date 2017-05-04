@@ -318,22 +318,22 @@
                 <!-- Add Button -->
                 <include content="IconButton">
                     <param name="control_id" value="301" />
-                    <param name="icon" value="add.png" />
+                    <param name="icon" value="shortcuts/add.png" />
                 </include>
                 <!-- Delete Button -->
                 <include content="IconButton">
                     <param name="control_id" value="302" />
-                    <param name="icon" value="delete.png" />
+                    <param name="icon" value="shortcuts/delete.png" />
                 </include>                
                 <!-- Up Button -->
                 <include content="IconButton">
                     <param name="control_id" value="303" />
-                    <param name="icon" value="up.png" />
+                    <param name="icon" value="shortcuts/up.png" />
                 </include>
                 <!-- Down Button -->
                 <include content="IconButton">
                     <param name="control_id" value="304" />
-                    <param name="icon" value="down.png" />
+                    <param name="icon" value="shortcuts/down.png" />
                 </include>
             </control>
 		</control>

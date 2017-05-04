@@ -37,6 +37,12 @@
         <action>ActivateWindow(music,special://musicplaylists/,return)</action>
     </shortcut>
     <shortcut>
+        <label>24001</label>
+        <label2>2</label2>
+        <icon>special://skin/extras/icons/music.png</icon>
+        <action>ActivateWindow(music,addons://sources/audio/,return)</action>
+    </shortcut>
+    <shortcut>
         <label>10516</label>
         <label2>2</label2>
         <icon>special://skin/extras/icons/media.png</icon>
