@@ -596,7 +596,7 @@
 				</control>
 				<control type="group">
 					<left>462</left>
-					<include content="ImageWidget">
+					<include content="Widget-Image">
 						<param name="text_label" value="$LOCALIZE[31153]" />
 						<param name="button_label" value="$LOCALIZE[31144]" />
 						<param name="button_onclick" value="$PARAM[imagewidget_onclick]"/>

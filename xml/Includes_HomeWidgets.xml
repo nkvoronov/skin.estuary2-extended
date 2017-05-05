@@ -1,98 +1,153 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <includes>    
     <!-- WeatherWidget 100 -->
-    <include name="include-WeatherWidget">   
+    <include name="include-WeatherWidget">
         <control type="group" id="$PARAM[control_id]102">
             <description>Weather info</description>
-            <height>380</height>
-            <visible>!IsEmpty(Weather.plugin)</visible>
+            <left>68</left>
+            <right>70</right>
+            <top>102</top>
+            <height>300</height>
+            <visible>!String.IsEmpty(Weather.plugin)</visible>
             <control type="image">
-                <top>2</top>
-                <left>480</left>
-                <width>1360</width>
-                <height>380</height>
-                <texture border="22">dialogs/dialog-bg.png</texture>
-            </control>
-            <include content="WeatherIcons">
-                <param name="left" value="530" />
-                <param name="top" value="20" />
-                <param name="width" value="150" />
-                <param name="height" value="150" />
-                <param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
-                <param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
-            </include>
-            <control type="label">
-                <left>990</left>
-                <top>110</top>
-                <aligny>center</aligny>
-                <height>24</height>
-                <width>800</width>
-                <align>right</align>
-                <font>font14</font>
-                <label>$INFO[Weather.Conditions] - $INFO[Weather.Temperature]</label>
+                <bottom>90</bottom>
+                <width>100%</width>
+                <texture border="21">dialogs/dialog-bg.png</texture>
             </control>
             <control type="label">
-                <left>990</left>
-                <top>50</top>
+                <left>840</left>
+                <top>60</top>
                 <aligny>center</aligny>
                 <height>24</height>
-                <width>800</width>
+                <right>60</right>
                 <align>right</align>
-                <font>font35_title</font>
+                <font>font30_title</font>
                 <label>$INFO[Weather.Location]</label>
             </control>
+            <control type="label">
+                <left>840</left>
+                <top>120</top>
+                <aligny>center</aligny>
+                <height>24</height>
+                <right>60</right>
+                <align>right</align>
+                <font>font14</font>
+                <label>$INFO[Weather.Conditions,, ∙ ]$INFO[Weather.Temperature]</label>
+            </control>
             <control type="grouplist">
-                <top>215</top>
-                <left>540</left>
-                <width>1330</width>
+                <top>50</top>
+                <left>50</left>
+                <right>20</right>
                 <orientation>horizontal</orientation>
-                <align>justify</align>
-                <itemgap>-50</itemgap>
-                <include content="WeatherIcon">
+                <align>left</align>
+                <itemgap>-110</itemgap>
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Current.Wind)" />
                     <param name="texture" value="icons/weather/wind.png" />
                     <param name="header" value="404" />
                 </include>
-                <include content="WeatherIcon">
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Current.Humidity)" />
                     <param name="texture" value="icons/weather/humidity.png" />
                     <param name="header" value="406" />
                 </include>
-                <include content="WeatherIcon">
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Current.Precipitation)" />
                     <param name="texture" value="icons/weather/rain.png" />
                     <param name="header" value="33021" />
                 </include>
-                <include content="WeatherIcon">
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Today.Sunrise)" />
                     <param name="texture" value="icons/weather/sunrise.png" />
                     <param name="header" value="405" />
                 </include>
-                <include content="WeatherIcon">
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Today.Sunset)" />
                     <param name="texture" value="icons/weather/sunset.png" />
                     <param name="header" value="403" />
                 </include>
+                <include content="WeatherIcons">
+                    <param name="left" value="0" />
+                    <param name="top" value="-10" />
+                    <param name="width" value="150" />
+                    <param name="height" value="150" />
+                    <param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
+                    <param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
+                </include>
             </control>
         </control>
-        <include content="Widget-Weather">
-            <param name="content_include" value="HourlyItems" />
-            <param name="onup_id" value="$PARAM[control_id]900" />
-            <param name="list_id" value="$PARAM[control_id]100" />				
-            <param name="ondown_id" value="$PARAM[control_id]101" />
-            <param name="widget_header" value="$LOCALIZE[33036]"/>
-            <param name="visible" value="!String.IsEmpty(Weather.plugin) + !String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
-        </include>
-        <include content="Widget-Weather">
+        <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
             <param name="content_include" value="DailyItems" />
-            <param name="onup_id" value="$PARAM[control_id]100" />
-            <param name="list_id" value="$PARAM[control_id]101" />				
+            <param name="list_id" value="$PARAM[control_id]103" />
             <param name="widget_header" value="$LOCALIZE[31019]"/>
-            <param name="visible" value="!String.IsEmpty(Weather.plugin) + !String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+            <param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+        </include>
+        <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
+            <param name="content_include" value="HourlyItems" />
+            <param name="list_id" value="$PARAM[control_id]104" />
+            <param name="widget_header" value="$LOCALIZE[33036]"/>
+            <param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+        </include>
+        <!-- -->
+        <include content="Widget-Image" condition="String.IsEmpty(Weather.plugin)">
+            <param name="text_label" value="$LOCALIZE[31120]" />
+            <param name="button_label" value="$LOCALIZE[31121]" />
+            <param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
+            <param name="button_id" value="$PARAM[control_id]105"/>
+            <param name="button2_onclick" value=""/>
         </include>
     </include>
+    <!-- Favorites 106 -->
+    <include name="include-FavouritesWidget">    
+        <control type="panel" id="$PARAM[control_id]106">
+            <left>65</left>
+            <top>0</top>
+            <right>0</right>
+            <bottom>0</bottom>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <onup>$PARAM[control_id]106</onup>
+            <ondown>$PARAM[control_id]106</ondown>
+            <onclick>$INFO[ListItem.FileNameAndPath]</onclick>
+            <preloaditems>2</preloaditems>
+            <scrolltime tween="cubic" easing="out">500</scrolltime>
+            <orientation>vertical</orientation>
+            <visible>Integer.IsGreater(Container($PARAM[control_id]106).NumItems,0) | Container($PARAM[control_id]106).IsUpdating</visible>
+            <itemlayout width="330" height="396">
+                <control type="group">
+                    <top>130</top>
+                    <include content="InfoWallMusicLayout">
+                        <param name="fallback_image" value="DefaultFavourites.png" />
+                        <param name="focused" value="false" />
+                    </include>
+                </control>
+            </itemlayout>
+            <focusedlayout width="330" height="396">
+                <control type="group">
+                    <depth>DepthContentPopout</depth>
+                    <top>130</top>
+                    <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="170,320">Focus</animation>
+                    <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="170,320">UnFocus</animation>
+                    <include content="InfoWallMusicLayout">
+                        <param name="fallback_image" value="DefaultFavourites.png" />
+                        <param name="focused" value="true" />
+                    </include>
+                </control>
+            </focusedlayout>
+            <content>favourites://</content>
+        </control>
+        <include content="Widget-Image">
+            <param name="text_label" value="$LOCALIZE[31025]" />
+            <param name="button_label" value="$LOCALIZE[31116]" />
+            <param name="button_onclick" value=""/>
+            <param name="button_id" value="$PARAM[control_id]107"/>
+            <param name="visible" value="!Integer.IsGreater(Container($PARAM[control_id]106).NumItems,0) + !Container($PARAM[control_id]106).IsUpdating"/>
+            <param name="visible_1" value="false"/>
+            <param name="button2_onclick" value=""/>
+        </include>
+    </include>    
     <!-- TVWidget 103 -->
-    <include name="include-TVWidget">           
+<!--     <include name="include-TVWidget">           
         <control type="grouplist">
             <height>218</height>
             <left>478</left>
@@ -149,9 +204,9 @@
             <param name="list_id" value="$PARAM[control_id]104"/>
             <param name="height" value="550"/>
         </include>
-    </include>            
+    </include> -->            
     <!-- RadioWidget 105 -->
-    <include name="include-RadioWidget">
+<!--     <include name="include-RadioWidget">
         <control type="grouplist">
             <height>218</height>
             <left>478</left>
@@ -207,11 +262,11 @@
             <param name="list_id" value="$PARAM[control_id]106"/>
             <param name="height" value="550"/>
         </include>
-    </include>
+    </include> -->
     <!-- AddonsWidget 110 -->
-    <include name="include-AddonsWidget">
+    <!-- <include name="include-AddonsWidget"> -->
         <!-- Video Addons -->
-        <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_video)]" content="Widget-Addons">
+<!--         <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_video)]" content="Widget-Addons">
             <param name="content_path" value="addons://sources/video/"/>
             <param name="widget_header" value="$LOCALIZE[1037]"/>
             <param name="widget_target" value="videos"/>
@@ -227,9 +282,9 @@
             <param name="onup_id" value="$PARAM[control_id]900"/>
             <param name="list_id" value="$PARAM[control_id]110"/>				
             <param name="ondown_id" value="$PARAM[control_id]111"/>
-        </include>
+        </include> -->
         <!-- Audio Addons -->
-        <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_audio)]" content="Widget-Addons">
+<!--         <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_audio)]" content="Widget-Addons">
             <param name="content_path" value="addons://sources/audio"/>
             <param name="widget_header" value="$LOCALIZE[1038]"/>
             <param name="widget_target" value="music"/>
@@ -245,9 +300,9 @@
             <param name="onup_id" value="$PARAM[control_id]110"/>
             <param name="list_id" value="$PARAM[control_id]111"/>				
             <param name="ondown_id" value="$PARAM[control_id]112"/>
-        </include>
+        </include> -->
         <!-- Programs Addons -->
-        <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_programs)]" content="Widget-Addons">
+<!--         <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_programs)]" content="Widget-Addons">
             <param name="content_path" value="addons://sources/executable"/>
             <param name="widget_header" value="$LOCALIZE[1043]"/>
             <param name="widget_target" value="programs"/>
@@ -263,9 +318,9 @@
             <param name="onup_id" value="$PARAM[control_id]111"/>
             <param name="list_id" value="$PARAM[control_id]112"/>				
             <param name="ondown_id" value="$PARAM[control_id]113"/>
-        </include>
+        </include> -->
         <!-- Images Addons -->
-        <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_image)]" content="Widget-Addons">
+<!--         <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_image)]" content="Widget-Addons">
             <param name="content_path" value="addons://sources/image"/>
             <param name="widget_header" value="$LOCALIZE[1039]"/>
             <param name="widget_target" value="pictures"/>
@@ -281,9 +336,9 @@
             <param name="onup_id" value="$PARAM[control_id]112"/>
             <param name="list_id" value="$PARAM[control_id]113"/>				
             <param name="ondown_id" value="$PARAM[control_id]114"/>
-        </include>
+        </include> -->
         <!-- Android Apps -->
-        <include content="Widget-Addons">
+<!--         <include content="Widget-Addons">
             <param name="content_path" value="$VAR[AndroidAppPathVar]"/>
             <param name="widget_header" value="$LOCALIZE[20244]"/>
             <param name="widget_target" value="programs"/>
@@ -293,9 +348,9 @@
             <param name="list_id" value="$PARAM[control_id]114"/>				
             <param name="ondown_id" value="$PARAM[control_id]115"/>
             <param name="visible" value="System.Platform.Android + ![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_apps)]"/>
-        </include>			
+        </include>	 -->		
         <!-- No Addons -->                        
-        <include content="Widget-Image">
+<!--         <include content="Widget-Image">
             <param name="image_path" value="special://skin/extras/home-images/addons.jpg"/>
             <param name="text_label" value="$LOCALIZE[31119]" />
             <param name="button_label" value="$LOCALIZE[31118]" />
@@ -307,18 +362,11 @@
             <param name="button2_onclick" value="False"/>
             <param name="visible_2" value="False"/>
         </include>
-    </include>			
-    <!-- SystemInfoWidget 116 -->
-    <include name="include-SystemInfoWidget">
-        <include content="Widget-SystemInfo">
-            <param name="button_id" value="$PARAM[control_id]116"/>
-            <param name="onup_id" value="$PARAM[control_id]900"/>
-        </include>
-    </include>
+    </include> -->
     <!-- Media Widget 200 -->
-    <include name="include-MediaWidget">
+<!--     <include name="include-MediaWidget"> -->
         <!-- Widget 1 -->
-        <include content="Widget-$PARAM[widget1_type]">
+<!--         <include content="Widget-$PARAM[widget1_type]">
             <param name="widget_num" value="1"/>
             <param name="widget_header" value="$PARAM[widget1_name]"/>
             <param name="widget_target" value="$PARAM[widget1_target]"/>
@@ -326,9 +374,9 @@
             <param name="onup_id" value="$PARAM[control_id]900"/>
             <param name="list_id" value="$PARAM[control_id]200"/>				
             <param name="ondown_id" value="$PARAM[control_id]201"/>		
-        </include>
+        </include> -->
         <!-- Widget 2 -->
-        <include content="Widget-$PARAM[widget2_type]">
+<!--         <include content="Widget-$PARAM[widget2_type]">
             <param name="widget_num" value="2"/>
             <param name="widget_header" value="$PARAM[widget2_name]"/>
             <param name="widget_target" value="$PARAM[widget2_target]"/>
@@ -336,9 +384,9 @@
             <param name="onup_id" value="$PARAM[control_id]200"/>
             <param name="list_id" value="$PARAM[control_id]201"/>				
             <param name="ondown_id" value="$PARAM[control_id]202"/>
-        </include>
+        </include> -->
         <!-- Widget 3 -->
-        <include content="Widget-$PARAM[widget3_type]">
+<!--         <include content="Widget-$PARAM[widget3_type]">
             <param name="widget_num" value="3"/>
             <param name="widget_header" value="$PARAM[widget3_name]"/>
             <param name="widget_target" value="$PARAM[widget3_target]"/>
@@ -346,9 +394,9 @@
             <param name="onup_id" value="$PARAM[control_id]201"/>
             <param name="list_id" value="$PARAM[control_id]202"/>				
             <param name="ondown_id" value="$PARAM[control_id]203"/>
-        </include>
+        </include> -->
         <!-- Widget 4 -->
-        <include content="Widget-$PARAM[widget4_type]">
+<!--         <include content="Widget-$PARAM[widget4_type]">
             <param name="widget_num" value="4"/>
             <param name="widget_header" value="$PARAM[widget4_name]"/>
             <param name="widget_target" value="$PARAM[widget4_target]"/>
@@ -356,9 +404,9 @@
             <param name="onup_id" value="$PARAM[control_id]202"/>
             <param name="list_id" value="$PARAM[control_id]203"/>				
             <param name="ondown_id" value="$PARAM[control_id]204"/>
-        </include>
+        </include> -->
         <!-- Widget 5 -->
-        <include content="Widget-$PARAM[widget5_type]">
+<!--         <include content="Widget-$PARAM[widget5_type]">
             <param name="widget_num" value="5"/>
             <param name="widget_header" value="$PARAM[widget5_name]"/>
             <param name="widget_target" value="$PARAM[widget5_target]"/>
@@ -366,17 +414,17 @@
             <param name="onup_id" value="$PARAM[control_id]203"/>
             <param name="list_id" value="$PARAM[control_id]204"/>				
             <param name="ondown_id" value="$PARAM[control_id]205"/>
-        </include>			
+        </include> -->			
         <!-- Widget 6 -->
-        <include content="Widget-$PARAM[widget6_type]">
+<!--         <include content="Widget-$PARAM[widget6_type]">
             <param name="widget_num" value="6"/>
             <param name="widget_header" value="$PARAM[widget6_name]"/>
             <param name="widget_target" value="$PARAM[widget6_target]"/>
             <param name="content_path" value="$PARAM[widget6_path]"/>
             <param name="onup_id" value="$PARAM[control_id]204"/>
             <param name="list_id" value="$PARAM[control_id]205"/>
-        </include>    
-     </include>
+        </include> -->    
+    <!-- </include> -->
     <!-- None Widget 300 -->
     <include name="include-None">
         <control type="group" id="$PARAM[control_id]300">

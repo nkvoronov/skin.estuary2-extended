@@ -965,7 +965,7 @@ msgid "Addons widgets"
 msgstr ""
 
 msgctxt "#43085"
-msgid "SystemInfo widget"
+msgid "Favorites widget"
 msgstr ""
 
 msgctxt "#43086"

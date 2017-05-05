@@ -20,19 +20,19 @@
     <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
     <controls>
-		<control type="button" id="20000">
+		<control type="button" id="200000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
 			<onclick>noop</onclick>
-			<visible allowhiddenfocus="true">Control.HasFocus(20000)</visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(200000)</visible>
 		</control>
-		<control type="button" id="20001">
+		<control type="button" id="200001">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
 			<onclick>noop</onclick>
-			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(200001)</visible>
 		</control>
 		<include>DefaultBackground</include>
 		<control type="multiimage">

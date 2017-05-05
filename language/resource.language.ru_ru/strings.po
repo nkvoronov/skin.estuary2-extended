@@ -783,8 +783,8 @@ msgid "Addons widgets"
 msgstr "Виджеты дополнений"
 
 msgctxt "#43085"
-msgid "SystemInfo widget"
-msgstr "Виджет системной информации"
+msgid "Favorites widget"
+msgstr "Виджет избранного"
 
 msgctxt "#43086"
 msgid "Media widgets"

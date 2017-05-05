@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="View_51_Poster">
-		<control type="button" id="20000">
+		<control type="button" id="200000">
 			<description>Dummy button to get animations right (hide focusedlayout on animations)</description>
 			<include>HiddenObject</include>
 			<animation effect="fade" delay="500" time="0" start="100" end="0">Visible</animation>
@@ -59,7 +59,7 @@
 								<left>-220</left>
 								<top>18</top>
 								<visible>Container.OnScrollPrevious</visible>
-								<visible>Control.IsVisible(20000)</visible>
+								<visible>Control.IsVisible(200000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
 								<include>InfoWallMovieLayout</include>
 							</control>
@@ -67,7 +67,7 @@
 								<left>-40</left>
 								<top>18</top>
 								<visible>Container.OnScrollNext</visible>
-								<visible>Control.IsVisible(20000)</visible>
+								<visible>Control.IsVisible(200000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
 								<include>InfoWallMovieLayout</include>
 							</control>
