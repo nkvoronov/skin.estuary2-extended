@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+    <shortcut>
+        <label>744</label>
+        <label2>3</label2>
+        <icon>special://skin/extras/icons/files.png</icon>
+        <action>ActivateWindow(videos,sources://video/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>136</label>
+        <label2>3</label2>
+        <icon>special://skin/extras/icons/playlists.png</icon>
+        <action>ActivateWindow(videos,special://videoplaylists/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>24001</label>
+        <label2>3</label2>
+        <icon>special://skin/extras/icons/video-addons.png</icon>
+        <action>ActivateWindow(videos,addons://sources/video/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>653</label>
+        <label2>3</label2>
+        <icon>special://skin/extras/icons/updatelibrary.png</icon>
+        <action>UpdateLibrary(video)</action>
+    </shortcut>
+    <shortcut>
+        <label>20314</label>
+        <label2>342</label2>
+        <icon>special://skin/extras/icons/media.png</icon>
+        <action>ActivateWindow(videos,library://video/,return)</action>
+    </shortcut>
+</shortcuts>

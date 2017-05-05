@@ -5,7 +5,7 @@
     
     <!-- SystemInfoWidget Skin Name and Version-->
     <variable name="NameAndVersionSkinVar">
-        <value>Estuary Extended v2 $INFO[System.AddonVersion(skin.estuary-extended)]</value>
+        <value>Estuary v2 Extended Shortcuts $INFO[System.AddonVersion(skin.estuary2-extended-s)]</value>
     </variable>
     <!-- Stats bar -->
 	<variable name="InfoBarStatsVar">
@@ -449,6 +449,11 @@
 	<variable name="HomeFanartVar">
 		<value condition="Skin.HasSetting(no_fanart)"></value>
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
+        <!-- Weather -->
+		<value condition="!String.IsEmpty(Window(home).Property(fanartvalue)) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(fanartvalue)]$INFO[Skin.String(WeatherFanart.ext)]</value>
+		<value condition="!String.IsEmpty(Window(home).Property(fanartvalue)) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(fanartvalue)]$INFO[Skin.String(WeatherFanart.ext)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(fanartvalue)) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(fanartvalue)]</value>
+		<value condition="!String.IsEmpty(Window(home).Property(fanartvalue)) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(fanartvalue)]</value>
 		<!-- Movies -->
 		<value condition="!String.IsEmpty(Container(5100).ListItem.Art(fanart)) + Control.HasFocus(5100)">$INFO[Container(5100).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(5200).ListItem.Art(fanart)) + Control.HasFocus(5200)">$INFO[Container(5200).ListItem.Art(fanart)]</value>
@@ -474,12 +479,7 @@
 		<value condition="!String.IsEmpty(Container(8300).ListItem.Property(AddonFanart)) + Control.HasFocus(8300) + Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_programs)">$INFO[Container(8300).ListItem.Property(AddonFanart)]</value>		
 		<value condition="!String.IsEmpty(Container(8400).ListItem.Art(fanart)) + Control.HasFocus(8400) + System.Platform.Android + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_apps)]">$INFO[Container(8400).ListItem.Art(fanart)]</value>		
 		<value condition="!String.IsEmpty(Container(8500).ListItem.Art(fanart)) + Control.HasFocus(8500) + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)]">$INFO[Container(8500).ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container(8500).ListItem.Property(AddonFanart)) + Control.HasFocus(8400) + Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)">$INFO[Container(8500).ListItem.Property(AddonFanart)]</value>		
-		<!-- Weather -->
-		<value condition="!String.IsEmpty(Container(15100).ListItem.Property(FanartCode)) + Control.HasFocus(15100) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15100).ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Container(15200).ListItem.Property(FanartCode)) + Control.HasFocus(15200) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15200).ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
-        <value condition="!String.IsEmpty(Container(15100).ListItem.Property(FanartCode)) + Control.HasFocus(15100) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15100).ListItem.Property(FanartCode)]</value>
-		<value condition="!String.IsEmpty(Container(15200).ListItem.Property(FanartCode)) + Control.HasFocus(15200) + !String.IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15200).ListItem.Property(FanartCode)]</value>		
+		<value condition="!String.IsEmpty(Container(8500).ListItem.Property(AddonFanart)) + Control.HasFocus(8400) + Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)">$INFO[Container(8500).ListItem.Property(AddonFanart)]</value>
 		<!-- Global -->
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(804)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
@@ -567,7 +567,8 @@
 		<value condition="Container(9000).HasFocus(3)">$LOCALIZE[31130]</value>
         <value condition="Container(9000).HasFocus(4)">$LOCALIZE[43041]</value>
 		<value condition="Container(9000).HasFocus(5)">$LOCALIZE[43042]</value>
-        <value condition="Container(9000).HasFocus(6)">$LOCALIZE[43044]</value>
+        <value condition="Container(9000).HasFocus(6)">$LOCALIZE[43043]</value>
+        <value condition="Container(9000).HasFocus(7)">$LOCALIZE[43044]</value>
 	</variable>
     <!-- HomeFanart Name -->
     <variable name="HomeFanartNameVar">
@@ -604,11 +605,99 @@
         <value condition="!String.IsEmpty(Skin.String(MusicGenreIcons.name))">$INFO[Skin.String(MusicGenreIcons.name)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
+    <!-- Widget Limit Items -->
+    <variable name="WidgetLimitItemsVar">
+        <value condition="!String.IsEmpty(Skin.String(widget_limititems))">$INFO[Skin.String(widget_limititems)]</value>
+        <value>10</value>
+    </variable>
+    <!-- Duration SplashScreen -->
+    <variable name="DurationSplashScreenNameVar">
+        <value condition="!String.IsEmpty(Skin.String(duration_splashscreen))">$INFO[Skin.String(duration_splashscreen)]</value>
+        <value>5</value>
+    </variable>
     <!-- Background Overlay Type Name -->
-    <variable name="BackgroundOverlayTypeVar">
+    <variable name="BackgroundOverlayTypeNameVar">
+        <value condition="String.IsEmpty(Skin.String(background_overlay))">$LOCALIZE[231]</value>
 		<value condition="String.IsEqual(Skin.String(background_overlay),0)">$LOCALIZE[231]</value>
 		<value>$INFO[Skin.String(background_overlay),$LOCALIZE[467] ]</value>
 	</variable>
+    <!-- PrimaryBackground Color -->
+    <variable name="PrimaryBackgroundColorVar">
+        <value condition="!String.IsEmpty(Skin.String(PrimaryBackgroundColor))">$INFO[Skin.String(PrimaryBackgroundColor)]</value>
+        <value>primary_background</value>
+    </variable>
+    <!-- PrimaryBackground Color Name -->
+    <variable name="PrimaryBackgroundColorNameVar">
+        <value condition="!String.IsEmpty(Skin.String(PrimaryBackgroundColor))">$INFO[Skin.String(PrimaryBackgroundColor)]</value>
+        <value>$LOCALIZE[15109]</value>
+    </variable>
+    <!-- SecondaryBackground Color -->
+    <variable name="SecondaryBackgroundColorVar">
+        <value condition="!String.IsEmpty(Skin.String(SecondaryBackgroundColor))">$INFO[Skin.String(SecondaryBackgroundColor)]</value>
+        <value>secondary_background</value>
+    </variable>
+    <!-- SecondaryBackground Color Name -->
+    <variable name="SecondaryBackgroundColorNameVar">
+        <value condition="!String.IsEmpty(Skin.String(SecondaryBackgroundColor))">$INFO[Skin.String(SecondaryBackgroundColor)]</value>
+        <value>$LOCALIZE[15109]</value>
+    </variable>
+    <!-- Main Color -->
+    <variable name="MainColorVar">
+        <value condition="!String.IsEmpty(Skin.String(MainColor))">$INFO[Skin.String(MainColor)]</value>
+        <value>button_focus</value>
+    </variable>
+    <!-- Main Color Name -->
+    <variable name="MainColorNameVar">
+        <value condition="!String.IsEmpty(Skin.String(MainColor))">$INFO[Skin.String(MainColor)]</value>
+        <value>$LOCALIZE[15109]</value>
+    </variable>
+    <!-- Skin Setting Spinner -->
+    <variable name="SkinSettingSpinnerVar">
+        <value condition="Skin.String(SkinHelper.SpinnerTexture.Path,None)">$LOCALIZE[15109]</value>
+        <value condition="!String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path))">$INFO[Skin.String(SkinHelper.SpinnerTexture.Path)]</value>
+        <value>$LOCALIZE[15109]</value>
+    </variable>    
+    <!-- Widget Type Name -->
+    <variable name="SkinSettingWidgetNameVar">
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>    
+    <!-- Widget Name 1 -->
+    <variable name="WidgetName1Label2Var">
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget1))">$INFO[Container(211).ListItem.Property(widgetName.widget1)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- Widget Name 2 -->
+    <variable name="WidgetName2Label2Var">
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget2))">$INFO[Container(211).ListItem.Property(widgetName.widget2)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- Widget Name 3 -->
+    <variable name="WidgetName3Label2Var">
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget3))">$INFO[Container(211).ListItem.Property(widgetName.widget3)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- Widget Name 4 -->
+    <variable name="WidgetName4Label2Var">
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget4))">$INFO[Container(211).ListItem.Property(widgetName.widget4)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- Widget Name 5 -->
+    <variable name="WidgetName5Label2Var">
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget5))">$INFO[Container(211).ListItem.Property(widgetName.widget5)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- Widget Name 6 -->
+    <variable name="WidgetName6Label2Var">
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget6))">$INFO[Container(211).ListItem.Property(widgetName.widget6)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- SkinShortcuts Title -->
+    <variable name="SkinShortcutsTitleVar">
+        <value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)"> / $ADDON[script.skinshortcuts 32071]</value>
+        <value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)"> / $LOCALIZE[43020]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)"> / $ADDON[script.skinshortcuts 32072]</value>
+    </variable>
     
     <!-- *** Images *** -->
 
