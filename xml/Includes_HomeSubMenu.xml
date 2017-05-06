@@ -3,67 +3,11 @@
     <include name="HomeSubMenu">
 		<control type="group" id="2000">
 			<left>462</left>
-			<animation type="Conditional" condition="Control.IsVisible(200000)" reversible="false">
+			<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
 				<effect type="slide" end="0,20" time="60" tween="sine" />
 				<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
 			</animation>
-			<animation type="Conditional" condition="Control.IsVisible(200001)" reversible="false">
-				<effect type="slide" end="0,-20" time="60" tween="sine" />
-				<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
-			</animation>
-			<include>OpenClose_Right</include>
-            <include>skinshortcuts-template-submenus</include>
-        </control>
-    </include>
-    <!-- -->
-    <include name="HomeSubPanels">
-        <control type="grouplist" id="$PARAM[submain_id]001">
-            <include>WidgetGroupListCommon</include>
-            <!-- Categories -->
-            <include content="WidgetListSubMenu">
-                <param name="submenu_content" value="$PARAM[submenu_content]"/>
-                <param name="widget_header" value="$LOCALIZE[31148]"/>
-                <param name="list_id" value="$PARAM[submain_id]900"/>
-            </include>
-            <include content="$PARAM[widget_content]">
-                <param name="control_id" value="$PARAM[submain_id]" />
-                <!-- -->
-                <param name="widget1_name" value="$PARAM[widget1_name]"/>
-                <param name="widget1_type" value="$PARAM[widget1_type]"/>
-                <param name="widget1_target" value="$PARAM[widget1_target]"/>
-                <param name="widget1_path" value="$PARAM[widget1_path]"/>
-                <param name="widget2_name" value="$PARAM[widget2_name]"/>
-                <param name="widget2_type" value="$PARAM[widget2_type]"/>
-                <param name="widget2_target" value="$PARAM[widget2_target]"/>
-                <param name="widget2_path" value="$PARAM[widget2_path]"/>                    
-                <param name="widget3_name" value="$PARAM[widget3_name]"/>
-                <param name="widget3_type" value="$PARAM[widget3_type]"/>
-                <param name="widget3_target" value="$PARAM[widget3_target]"/>
-                <param name="widget3_path" value="$PARAM[widget3_path]"/>
-                <param name="widget4_name" value="$PARAM[widget4_name]"/>
-                <param name="widget4_type" value="$PARAM[widget4_type]"/>
-                <param name="widget4_target" value="$PARAM[widget4_target]"/>
-                <param name="widget4_path" value="$PARAM[widget4_path]"/>
-                <param name="widget5_name" value="$PARAM[widget5_name]"/>
-                <param name="widget5_type" value="$PARAM[widget5_type]"/>
-                <param name="widget5_target" value="$PARAM[widget5_target]"/>
-                <param name="widget5_path" value="$PARAM[widget5_path]"/>
-                <param name="widget6_name" value="$PARAM[widget6_name]"/>
-                <param name="widget6_type" value="$PARAM[widget6_type]"/>
-                <param name="widget6_target" value="$PARAM[widget6_target]"/>
-                <param name="widget6_path" value="$PARAM[widget6_path]"/>
-            </include>			
-        </control>
-    </include>
-    <!-- -->
-    <include name="HomeSub_Menu">
-		<control type="group" id="2000">
-			<left>462</left>
-			<animation type="Conditional" condition="Control.IsVisible(200000)" reversible="false">
-				<effect type="slide" end="0,20" time="60" tween="sine" />
-				<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
-			</animation>
-			<animation type="Conditional" condition="Control.IsVisible(200001)" reversible="false">
+			<animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
 				<effect type="slide" end="0,-20" time="60" tween="sine" />
 				<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
 			</animation>
@@ -123,7 +67,7 @@
 						<param name="list_id" value="5600"/>
 					</include>
 				</control>
-				<include content="Widget-Image" condition="!Library.HasContent(movies)">
+				<include content="ImageWidget" condition="!Library.HasContent(movies)">
 					<param name="text_label" value="$LOCALIZE[31104]" />
 					<param name="button_label" value="$LOCALIZE[31110]" />
 					<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
@@ -184,7 +128,7 @@
                         <param name="fallback_image" value="DefaultStudios.png"/>
 					</include>
 				</control>
-				<include content="Widget-Image" condition="!Library.HasContent(tvshows)">
+				<include content="ImageWidget" condition="!Library.HasContent(tvshows)">
 					<param name="text_label" value="$LOCALIZE[31104]" />
 					<param name="button_label" value="$LOCALIZE[31110]" />
 					<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
@@ -251,7 +195,7 @@
 						<param name="sortorder" value="descending"/>
 					</include>
 				</control>
-				<include content="Widget-Image" condition="!Library.HasContent(music)">
+				<include content="ImageWidget" condition="!Library.HasContent(music)">
 					<param name="text_label" value="$LOCALIZE[31104]" />
 					<param name="button_label" value="$LOCALIZE[31110]" />
 					<param name="button_onclick" value="ActivateWindow(music,files)"/>
@@ -349,7 +293,7 @@
 					</include>					
 				</control>
 				<!-- No Addons -->
-				<include content="Widget-Image">
+				<include content="ImageWidget">
 					<param name="text_label" value="$LOCALIZE[31119]" />
 					<param name="button_label" value="$LOCALIZE[31118]" />
 					<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
@@ -386,7 +330,7 @@
 						<param name="icon" value="DefaultPlaylist.png"/>
 					</include>
 				</control>
-				<include content="Widget-Image">
+				<include content="ImageWidget">
 					<param name="text_label" value="$LOCALIZE[31105]" />
 					<param name="button_label" value="$LOCALIZE[31110]" />
 					<param name="button_onclick" value="ActivateWindow(videos,root)"/>
@@ -462,7 +406,7 @@
 						<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
 					</include>
 				</control>
-				<include condition="!System.HasPVRAddon" content="Widget-Image">
+				<include condition="!System.HasPVRAddon" content="ImageWidget">
 					<param name="text_label" value="$LOCALIZE[31143]" />
 					<param name="button_label" value="$LOCALIZE[31144]" />
 					<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
@@ -537,7 +481,7 @@
 						<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
 					</include>
 				</control>
-				<include condition="!System.HasPVRAddon" content="Widget-Image">
+				<include condition="!System.HasPVRAddon" content="ImageWidget">
 					<param name="text_label" value="$LOCALIZE[31143]" />
 					<param name="button_label" value="$LOCALIZE[31144]" />
 					<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
@@ -588,7 +532,7 @@
 					</focusedlayout>
 					<content>favourites://</content>
 				</control>
-				<include content="Widget-Image">
+				<include content="ImageWidget">
 					<param name="text_label" value="$LOCALIZE[31025]" />
 					<param name="button_label" value="$LOCALIZE[31116]" />
 					<param name="button_onclick" value=""/>
@@ -598,7 +542,109 @@
 					<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoFavButton)"/>
 				</include>
 			</control>
-
+			<!-- Weather -->
+			<control type="group" id="15000">
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
+				<include content="Visible_Right_Delayed">
+					<param name="id" value="weather"/>
+				</include>
+				<control type="grouplist" id="15001">
+					<include>WidgetGroupListCommon</include>
+					<control type="group" id="16678">
+						<description>Weather info</description>
+						<left>68</left>
+						<right>70</right>
+						<top>102</top>
+						<height>300</height>
+						<visible>!String.IsEmpty(Weather.plugin)</visible>
+						<control type="image">
+							<bottom>90</bottom>
+							<width>100%</width>
+							<texture border="21">dialogs/dialog-bg.png</texture>
+						</control>
+						<control type="label">
+							<left>840</left>
+							<top>60</top>
+							<aligny>center</aligny>
+							<height>24</height>
+							<right>60</right>
+							<align>right</align>
+							<font>font30_title</font>
+							<label>$INFO[Weather.Location]</label>
+						</control>
+						<control type="label">
+							<left>840</left>
+							<top>120</top>
+							<aligny>center</aligny>
+							<height>24</height>
+							<right>60</right>
+							<align>right</align>
+							<font>font14</font>
+							<label>$INFO[Weather.Conditions,, ∙ ]$INFO[Weather.Temperature]</label>
+						</control>
+						<control type="grouplist">
+							<top>50</top>
+							<left>50</left>
+							<right>20</right>
+							<orientation>horizontal</orientation>
+							<align>left</align>
+							<itemgap>-110</itemgap>
+							<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+								<param name="label" value="Window(weather).Property(Current.Wind)" />
+								<param name="texture" value="icons/weather/wind.png" />
+								<param name="header" value="404" />
+							</include>
+							<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+								<param name="label" value="Window(weather).Property(Current.Humidity)" />
+								<param name="texture" value="icons/weather/humidity.png" />
+								<param name="header" value="406" />
+							</include>
+							<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+								<param name="label" value="Window(weather).Property(Current.Precipitation)" />
+								<param name="texture" value="icons/weather/rain.png" />
+								<param name="header" value="33021" />
+							</include>
+							<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+								<param name="label" value="Window(weather).Property(Today.Sunrise)" />
+								<param name="texture" value="icons/weather/sunrise.png" />
+								<param name="header" value="405" />
+							</include>
+							<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
+								<param name="label" value="Window(weather).Property(Today.Sunset)" />
+								<param name="texture" value="icons/weather/sunset.png" />
+								<param name="header" value="403" />
+							</include>
+							<include content="WeatherIcons">
+								<param name="left" value="0" />
+								<param name="top" value="-10" />
+								<param name="width" value="150" />
+								<param name="height" value="150" />
+								<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
+								<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
+							</include>
+						</control>
+					</control>
+					<include content="WeatherWidget" condition="!String.IsEmpty(Weather.Plugin)">
+						<param name="content_include" value="DailyItems" />
+						<param name="list_id" value="15200" />
+						<param name="widget_header" value="$LOCALIZE[31019]"/>
+						<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+					</include>
+					<include content="WeatherWidget" condition="!String.IsEmpty(Weather.Plugin)">
+						<param name="content_include" value="HourlyItems" />
+						<param name="list_id" value="15100" />
+						<param name="widget_header" value="$LOCALIZE[33036]"/>
+						<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+					</include>
+				</control>
+				<include content="ImageWidget" condition="String.IsEmpty(Weather.plugin)">
+					<param name="text_label" value="$LOCALIZE[31120]" />
+					<param name="button_label" value="$LOCALIZE[31121]" />
+					<param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
+					<param name="button_id" value="15300"/>
+					<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoWeatherButton)"/>
+				</include>
+			</control>
 			<!-- MusicVideos -->
 			<control type="group" id="16000">
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),musicvideos)</visible>
@@ -660,7 +706,7 @@
                         <param name="fallback_image" value="DefaultStudios.png"/>
 					</include>
 				</control>
-				<include content="Widget-Image" condition="!Library.HasContent(musicvideos)">
+				<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
 					<param name="text_label" value="$LOCALIZE[31104]" />
 					<param name="button_label" value="$LOCALIZE[31110]" />
 					<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
@@ -690,7 +736,7 @@
 				<include content="Visible_Right_Delayed">
 					<param name="id" value="disc"/>
 				</include>
-				<include content="Widget-Image">
+				<include content="ImageWidget">
 					<param name="text_label" value="$INFO[System.DVDLabel]" />
 					<param name="button_label" value="$LOCALIZE[341]" />
 					<param name="button_onclick" value="PlayDisc"/>
