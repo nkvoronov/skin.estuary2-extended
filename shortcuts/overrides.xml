@@ -59,11 +59,11 @@
 	<propertydefault labelID="movies" property="widgetType.widget1">movies</propertydefault>
 	<propertydefault labelID="movies" property="widgetTarget.widget1">videos</propertydefault>
 	<propertydefault labelID="movies" property="widgetPath.widget1">special://skin/extras/playlists/inprogress_movies.xsp</propertydefault>	
-	<propertydefault labelID="movies" property="widget.widget2">Library</propertydefault>
+	<propertydefault labelID="movies" property="widget.widget2">Playlist</propertydefault>
 	<propertydefault labelID="movies" property="widgetName.widget2">20386</propertydefault>
 	<propertydefault labelID="movies" property="widgetType.widget2">movies</propertydefault>
 	<propertydefault labelID="movies" property="widgetTarget.widget2">videos</propertydefault>
-	<propertydefault labelID="movies" property="widgetPath.widget2">videodb://recentlyaddedmovies</propertydefault>	
+	<propertydefault labelID="movies" property="widgetPath.widget2">special://skin/extras/playlists/recent_unwatched_movies.xsp</propertydefault>	
 	<propertydefault labelID="movies" property="widget.widget3">Playlist</propertydefault>
 	<propertydefault labelID="movies" property="widgetName.widget3">31007</propertydefault>
 	<propertydefault labelID="movies" property="widgetType.widget3">movies</propertydefault>
@@ -74,22 +74,42 @@
 	<propertydefault labelID="movies" property="widgetType.widget4">movies</propertydefault>
 	<propertydefault labelID="movies" property="widgetTarget.widget4">videos</propertydefault>
 	<propertydefault labelID="movies" property="widgetPath.widget4">special://skin/extras/playlists/random_movies.xsp</propertydefault>
+	<propertydefault labelID="movies" property="widget.widget5">Library</propertydefault>
+	<propertydefault labelID="movies" property="widgetName.widget5">135</propertydefault>
+	<propertydefault labelID="movies" property="widgetType.widget5">videos</propertydefault>
+	<propertydefault labelID="movies" property="widgetTarget.widget5">videos</propertydefault>
+	<propertydefault labelID="movies" property="widgetPath.widget5">videodb://movies/genres/</propertydefault>	
+	<propertydefault labelID="movies" property="widget.widget6">Library</propertydefault>
+	<propertydefault labelID="movies" property="widgetName.widget6">31075</propertydefault>
+	<propertydefault labelID="movies" property="widgetType.widget6">movies</propertydefault>
+	<propertydefault labelID="movies" property="widgetTarget.widget6">videos</propertydefault>
+	<propertydefault labelID="movies" property="widgetPath.widget6">videodb://movies/sets/</propertydefault>	
 	<!-- TVShows -->
-	<propertydefault labelID="tvshows" property="widget.widget1">Playlist</propertydefault>
+	<propertydefault labelID="tvshows" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget1">626</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetType.widget1">tvshows</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget1">videos</propertydefault>
-	<propertydefault labelID="tvshows" property="widgetPath.widget1">special://skin/extras/playlists/inprogress_tvshows.xsp</propertydefault>	
-	<propertydefault labelID="tvshows" property="widget.widget2">Library</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetPath.widget1">videodb://inprogresstvshows</propertydefault>	
+	<propertydefault labelID="tvshows" property="widget.widget2">Playlist</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget2">20387</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetType.widget2">episodes</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget2">videos</propertydefault>
-	<propertydefault labelID="tvshows" property="widgetPath.widget2">videodb://recentlyaddedepisodes</propertydefault>	
+	<propertydefault labelID="tvshows" property="widgetPath.widget2">special://skin/extras/playlists/recent_unwatched_episodes.xsp</propertydefault>	
 	<propertydefault labelID="tvshows" property="widget.widget3">Playlist</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget3">31122</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetType.widget3">tvshows</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget3">videos</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetPath.widget3">special://skin/extras/playlists/unwatched_tvshows.xsp</propertydefault>
+	<propertydefault labelID="tvshows" property="widget.widget4">Library</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetName.widget4">135</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetType.widget4">videos</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetTarget.widget4">videos</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetPath.widget4">videodb://tvshows/genres/</propertydefault>
+	<propertydefault labelID="tvshows" property="widget.widget5">Library</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetName.widget5">20388</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetType.widget5">videos</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetTarget.widget5">videos</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetPath.widget5">videodb://tvshows/studios/</propertydefault>
 	<!-- MusicVideos -->
 	<propertydefault labelID="musicvideos" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget1">20390</propertydefault>
@@ -100,17 +120,22 @@
 	<propertydefault labelID="musicvideos" property="widgetName.widget2">43090</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget2">musicvideos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget2">music</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetPath.widget2">special://skin/extras/playlists/mostwatched_musicvideos.xsp</propertydefault>	
+	<propertydefault labelID="musicvideos" property="widgetPath.widget2">special://skin/extras/playlists/unwatched_musicvideos.xsp</propertydefault>	
 	<propertydefault labelID="musicvideos" property="widget.widget3">Playlist</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget3">43091</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetType.widget3">musicvideos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetType.widget3">artists</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget3">music</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetPath.widget3">special://skin/extras/playlists/random_musicvideos.xsp</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetPath.widget3">special://skin/extras/playlists/random_musicvideo_artists.xsp</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget4">Playlist</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget4">43092</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget4">musicvideos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget4">music</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetPath.widget4">special://skin/extras/playlists/unwatched_musicvideos.xsp</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetPath.widget4">special://skin/extras/playlists/random_musicvideos.xsp</propertydefault>
+	<propertydefault labelID="musicvideos" property="widget.widget5">Library</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetName.widget5">20388</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetType.widget5">videos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetTarget.widget5">music</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetPath.widget5">videodb://musicvideos/studios/</propertydefault>
 	<!-- Music -->
 	<propertydefault labelID="music" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="music" property="widgetName.widget1">517</propertydefault>
@@ -121,7 +146,7 @@
 	<propertydefault labelID="music" property="widgetName.widget2">359</propertydefault>
 	<propertydefault labelID="music" property="widgetType.widget2">albums</propertydefault>
 	<propertydefault labelID="music" property="widgetTarget.widget2">music</propertydefault>
-	<propertydefault labelID="music" property="widgetPath.widget2">musicdb://recentlyaddedalbums</propertydefault>
+	<propertydefault labelID="music" property="widgetPath.widget2">musicdb://recentlyaddedalbums/</propertydefault>
 	<propertydefault labelID="music" property="widget.widget3">Playlist</propertydefault>
 	<propertydefault labelID="music" property="widgetName.widget3">31012</propertydefault>
 	<propertydefault labelID="music" property="widgetType.widget3">albums</propertydefault>
@@ -277,7 +302,7 @@
             <shortcut label="562" type="20389" icon="special://skin/extras/icons/years.png">ActivateWindow(videos,videodb://musicvideos/years/,return)</shortcut>
             <shortcut label="133" type="20389" icon="special://skin/extras/icons/artist.png">ActivateWindow(videos,videodb://musicvideos/artists/,return)</shortcut>
             <shortcut label="132" type="20389" icon="special://skin/extras/icons/album.png">ActivateWindow(videos,videodb://musicvideos/albums/,return)</shortcut>            
-            <shortcut label="20348" type="20389" icon="special://skin/extras/icons/director2.png">ActivateWindow(videos,videodb://musicvideos/directors/,return)</shortcut>            
+            <shortcut label="20348" type="20389" icon="special://skin/extras/icons/director2.png">ActivateWindow(videos,videodb://musicvideos/directors/,return)</shortcut>
             <shortcut label="20388" type="20389" icon="special://skin/extras/icons/studios.png">ActivateWindow(videos,videodb://musicvideos/studios/,return)</shortcut>
             <shortcut label="20459" type="20389" icon="special://skin/extras/icons/tags.png">ActivateWindow(videos,videodb://musicvideos/tags/,return)</shortcut>
             <shortcut label="20314" type="20389" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
@@ -289,6 +314,7 @@
             <shortcut label="517" type="2" icon="special://skin/extras/icons/musicrecentlyplayed.png">ActivateWindow(music,musicdb://recentlyplayedalbums/,return)</shortcut>
             <shortcut label="135" type="2" icon="special://skin/extras/icons/musicgenres.png">ActivateWindow(music,musicdb://genres/,return)</shortcut>
             <shortcut label="133" type="2" icon="special://skin/extras/icons/artist.png">ActivateWindow(music,musicdb://artists/,return)</shortcut>
+			<shortcut label="29994" type="2" icon="special://skin/extras/icons/actor.png">ActivateWindow(music,special://artists/role/,return)</shortcut>
             <shortcut label="132" type="2" icon="special://skin/extras/icons/album.png">ActivateWindow(music,musicdb://albums/,return)</shortcut>
             <shortcut label="134" type="2" icon="special://skin/extras/icons/songs.png">ActivateWindow(music,musicdb://songs/,return)</shortcut>
             <shortcut label="271" type="2" icon="special://skin/extras/icons/musictop100.png">ActivateWindow(music,musicdb://top100/,return)</shortcut>

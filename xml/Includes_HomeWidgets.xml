@@ -77,42 +77,34 @@
             </control>
         </control>
         <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
-            <param name="content_include" value="DailyItems" />
-            <param name="list_id" value="$PARAM[control_id]103" />
+            <param name="content_include" value="DailyItems" />            
             <param name="widget_header" value="$LOCALIZE[31019]"/>
             <param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+			<param name="list_id" value="$PARAM[control_id]103" />
         </include>
         <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
-            <param name="content_include" value="HourlyItems" />
-            <param name="list_id" value="$PARAM[control_id]104" />
+            <param name="content_include" value="HourlyItems" />           
             <param name="widget_header" value="$LOCALIZE[33036]"/>
             <param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
-        </include>
-        <!-- -->
-        <include content="Widget-Image" condition="String.IsEmpty(Weather.plugin)">
-            <param name="text_label" value="$LOCALIZE[31120]" />
-            <param name="button_label" value="$LOCALIZE[31121]" />
-            <param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
-            <param name="button_id" value="$PARAM[control_id]105"/>
-            <param name="button2_onclick" value=""/>
+			<param name="list_id" value="$PARAM[control_id]104" />
         </include>
     </include>
-    <!-- Favorites 106 -->
+    <!-- Favorites 110 -->
     <include name="include-FavouritesWidget">    
-        <control type="panel" id="$PARAM[control_id]106">
+        <control type="panel" id="$PARAM[control_id]110">
             <left>65</left>
             <top>0</top>
             <right>0</right>
             <bottom>0</bottom>
             <onleft>9000</onleft>
             <onright>9000</onright>
-            <onup>$PARAM[control_id]106</onup>
-            <ondown>$PARAM[control_id]106</ondown>
+            <onup>$PARAM[control_id]110</onup>
+            <ondown>$PARAM[control_id]110</ondown>
             <onclick>$INFO[ListItem.FileNameAndPath]</onclick>
             <preloaditems>2</preloaditems>
             <scrolltime tween="cubic" easing="out">500</scrolltime>
             <orientation>vertical</orientation>
-            <visible>Integer.IsGreater(Container($PARAM[control_id]106).NumItems,0) | Container($PARAM[control_id]106).IsUpdating</visible>
+            <visible>Integer.IsGreater(Container($PARAM[control_id]110).NumItems,0) | Container($PARAM[control_id]110).IsUpdating</visible>
             <itemlayout width="330" height="396">
                 <control type="group">
                     <top>130</top>
@@ -136,300 +128,266 @@
             </focusedlayout>
             <content>favourites://</content>
         </control>
-        <include content="Widget-Image">
-            <param name="text_label" value="$LOCALIZE[31025]" />
-            <param name="button_label" value="$LOCALIZE[31116]" />
-            <param name="button_onclick" value=""/>
-            <param name="button_id" value="$PARAM[control_id]107"/>
-            <param name="visible" value="!Integer.IsGreater(Container($PARAM[control_id]106).NumItems,0) + !Container($PARAM[control_id]106).IsUpdating"/>
-            <param name="visible_1" value="false"/>
-            <param name="button2_onclick" value=""/>
-        </include>
     </include>    
-    <!-- TVWidget 103 -->
-<!--     <include name="include-TVWidget">           
-        <control type="grouplist">
-            <height>218</height>
-            <left>478</left>
-            <top>36</top>
-            <orientation>horizontal</orientation>
-            <visible>PVR.IsRecording | PVR.HasNonRecordingTimer</visible>
-            <align>right</align>
-            <width>1360</width>
-            <control type="group">
-                <width>680</width>
-                <visible>PVR.IsRecording</visible>
-                <include content="Widget-PVR">
-                    <param name="item_image" value="$INFO[PVR.NowRecordingChannelIcon]" />
-                    <param name="header" value="$LOCALIZE[19158]" />
-                    <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
-                    <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
-                </include>
-            </control>
-            <control type="group">
-                <visible>PVR.HasNonRecordingTimer</visible>
-                <width>680</width>
-                <include content="Widget-PVR">
-                    <param name="item_image" value="$INFO[PVR.NextRecordingChannelIcon]" />
-                    <param name="header" value="$LOCALIZE[19157]" />
-                    <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
-                    <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
-                </include>
-            </control>
-        </control>
-        <include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)]" content="Widget-Channels">
-            <param name="content_path" value="pvr://channels/tv/*"/>
-            <param name="widget_header" value="$LOCALIZE[31016]"/>
-            <param name="widget_target" value="pvr"/>
-            <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]103"/>
-            <param name="ondown_id" value="$PARAM[control_id]104"/>        
-            <param name="height" value="550"/>
-        </include>
-        <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" content="Widget-CustomChannels">
-            <param name="widget_header" value="$LOCALIZE[43241]"/>
-            <param name="widget_target" value="TV"/>
-            <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]103"/>
-            <param name="ondown_id" value="$PARAM[control_id]104"/>            
-            <param name="height" value="550"/>
-        </include>
-        <include content="Widget-Recordings">
-            <param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
-            <param name="sortby" value="date"/>
-            <param name="sortorder" value="descending"/>
-            <param name="widget_header" value="$LOCALIZE[31015]"/>
-            <param name="widget_target" value="pvr"/>
-            <param name="onup_id" value="$PARAM[control_id]103"/>
-            <param name="list_id" value="$PARAM[control_id]104"/>
-            <param name="height" value="550"/>
-        </include>
-    </include> -->            
-    <!-- RadioWidget 105 -->
-<!--     <include name="include-RadioWidget">
-        <control type="grouplist">
-            <height>218</height>
-            <left>478</left>
-            <top>36</top>
-            <orientation>horizontal</orientation>
-            <align>right</align>
-            <width>1360</width>
-            <visible>PVR.IsRecording | PVR.HasNonRecordingTimer</visible>
-            <control type="group">
-                <width>680</width>
-                <visible>PVR.IsRecording</visible>
-                <include content="Widget-PVR">
-                    <param name="icon" value="$INFO[PVR.NowRecordingChannelIcon]" />
-                    <param name="header" value="$LOCALIZE[19158]" />
-                    <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
-                    <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
-                </include>
-            </control>
-            <control type="group">
-                <visible>PVR.HasNonRecordingTimer</visible>
-                <width>680</width>
-                <include content="Widget-PVR">
-                    <param name="icon" value="$INFO[PVR.NextRecordingChannelIcon]" />
-                    <param name="header" value="$LOCALIZE[19157]" />
-                    <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
-                    <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
-                </include>
-            </control>
-        </control>
-        <include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)]" content="Widget-Channels">
-            <param name="content_path" value="pvr://channels/radio/*"/>
-            <param name="widget_header" value="$LOCALIZE[31018]"/>
-            <param name="widget_target" value="files"/>
-            <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]105"/>
-            <param name="ondown_id" value="$PARAM[control_id]106"/>
-            <param name="height" value="550"/>
-        </include>
-        <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" content="Widget-CustomChannels">
-            <param name="widget_header" value="$LOCALIZE[43242]"/>
-            <param name="widget_target" value="Radio"/>
-            <param name="list_id" value="$PARAM[control_id]105"/>
-            <param name="ondown_id" value="$PARAM[control_id]106"/>
-            <param name="height" value="550"/>
-        </include>
-        <include content="Widget-Recordings">
-            <param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
-            <param name="sortby" value="date"/>
-            <param name="sortorder" value="descending"/>
-            <param name="widget_header" value="$LOCALIZE[31015]"/>
-            <param name="widget_target" value="pvr"/>
-            <param name="onup_id" value="$PARAM[control_id]105"/>
-            <param name="list_id" value="$PARAM[control_id]106"/>
-            <param name="height" value="550"/>
-        </include>
-    </include> -->
-    <!-- AddonsWidget 110 -->
-    <!-- <include name="include-AddonsWidget"> -->
-        <!-- Video Addons -->
-<!--         <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_video)]" content="Widget-Addons">
-            <param name="content_path" value="addons://sources/video/"/>
-            <param name="widget_header" value="$LOCALIZE[1037]"/>
-            <param name="widget_target" value="videos"/>
-            <param name="sortby" value="lastused"/>
-            <param name="sortorder" value="descending"/>
-            <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]110"/>				
-            <param name="ondown_id" value="$PARAM[control_id]111"/>
-        </include>
-        <include condition="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_video)" content="Widget-CustomAddons">
-            <param name="widget_header" value="$LOCALIZE[1037]"/>
-            <param name="widget_target" value="Video"/>
-            <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]110"/>				
-            <param name="ondown_id" value="$PARAM[control_id]111"/>
-        </include> -->
-        <!-- Audio Addons -->
-<!--         <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_audio)]" content="Widget-Addons">
-            <param name="content_path" value="addons://sources/audio"/>
-            <param name="widget_header" value="$LOCALIZE[1038]"/>
-            <param name="widget_target" value="music"/>
-            <param name="sortby" value="lastused"/>
-            <param name="sortorder" value="descending"/>
-            <param name="onup_id" value="$PARAM[control_id]110"/>
-            <param name="list_id" value="$PARAM[control_id]111"/>				
-            <param name="ondown_id" value="$PARAM[control_id]112"/>         
-        </include>
-        <include condition="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_audio)" content="Widget-CustomAddons">
-            <param name="widget_header" value="$LOCALIZE[1038]"/>
-            <param name="widget_target" value="Audio"/>
-            <param name="onup_id" value="$PARAM[control_id]110"/>
-            <param name="list_id" value="$PARAM[control_id]111"/>				
-            <param name="ondown_id" value="$PARAM[control_id]112"/>
-        </include> -->
-        <!-- Programs Addons -->
-<!--         <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_programs)]" content="Widget-Addons">
-            <param name="content_path" value="addons://sources/executable"/>
-            <param name="widget_header" value="$LOCALIZE[1043]"/>
-            <param name="widget_target" value="programs"/>
-            <param name="sortby" value="lastused"/>
-            <param name="sortorder" value="descending"/>
-            <param name="onup_id" value="$PARAM[control_id]111"/>
-            <param name="list_id" value="$PARAM[control_id]112"/>				
-            <param name="ondown_id" value="$PARAM[control_id]113"/>
-        </include>
-        <include condition="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_programs)" content="Widget-CustomAddons">
-            <param name="widget_header" value="$LOCALIZE[1043]"/>
-            <param name="widget_target" value="Programs"/>
-            <param name="onup_id" value="$PARAM[control_id]111"/>
-            <param name="list_id" value="$PARAM[control_id]112"/>				
-            <param name="ondown_id" value="$PARAM[control_id]113"/>
-        </include> -->
-        <!-- Images Addons -->
-<!--         <include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_image)]" content="Widget-Addons">
-            <param name="content_path" value="addons://sources/image"/>
-            <param name="widget_header" value="$LOCALIZE[1039]"/>
-            <param name="widget_target" value="pictures"/>
-            <param name="sortby" value="lastused"/>
-            <param name="sortorder" value="descending"/>
-            <param name="onup_id" value="$PARAM[control_id]112"/>
-            <param name="list_id" value="$PARAM[control_id]113"/>				
-            <param name="ondown_id" value="$PARAM[control_id]114"/>
-        </include>
-        <include condition="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_image)" content="Widget-CustomAddons">
-            <param name="widget_header" value="$LOCALIZE[1039]"/>
-            <param name="widget_target" value="Image"/>
-            <param name="onup_id" value="$PARAM[control_id]112"/>
-            <param name="list_id" value="$PARAM[control_id]113"/>				
-            <param name="ondown_id" value="$PARAM[control_id]114"/>
-        </include> -->
-        <!-- Android Apps -->
-<!--         <include content="Widget-Addons">
-            <param name="content_path" value="$VAR[AndroidAppPathVar]"/>
-            <param name="widget_header" value="$LOCALIZE[20244]"/>
-            <param name="widget_target" value="programs"/>
-            <param name="sortby" value="lastused"/>
-            <param name="sortorder" value="descending"/>
-            <param name="onup_id" value="$PARAM[control_id]113"/>
-            <param name="list_id" value="$PARAM[control_id]114"/>				
-            <param name="ondown_id" value="$PARAM[control_id]115"/>
-            <param name="visible" value="System.Platform.Android + ![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_apps)]"/>
-        </include>	 -->		
-        <!-- No Addons -->                        
-<!--         <include content="Widget-Image">
-            <param name="image_path" value="special://skin/extras/home-images/addons.jpg"/>
-            <param name="text_label" value="$LOCALIZE[31119]" />
-            <param name="button_label" value="$LOCALIZE[31118]" />
-            <param name="button_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
-            <param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
-            <param name="onup_id" value="$PARAM[control_id]114"/>
-            <param name="button_id" value="$PARAM[control_id]115"/>				
-            <param name="visible" value="!Integer.IsGreater(Container($PARAM[control_id]110).NumItems,0) + !Integer.IsGreater(Container($PARAM[control_id]111).NumItems,0) + !Integer.IsGreater(Container($PARAM[control_id]112).NumItems,0) + !Integer.IsGreater(Container($PARAM[control_id]113).NumItems,0) + !Integer.IsGreater(Container($PARAM[control_id]114).NumItems,0) + !Skin.HasSetting(enable_custom_list_addons)"/>
-            <param name="button2_onclick" value="False"/>
-            <param name="visible_2" value="False"/>
-        </include>
-    </include> -->
-    <!-- Media Widget 200 -->
-<!--     <include name="include-MediaWidget"> -->
+    <!-- TVWidget 120 -->
+    <include name="include-TVWidget">
+		<control type="grouplist" id="$PARAM[control_id]120">
+			<height>390</height>
+			<left>0</left>
+			<right>0</right>
+			<top>36</top>
+			<orientation>horizontal</orientation>
+			<visible>PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer</visible>
+			<align>center</align>
+			<control type="group">
+				<width>674</width>
+				<visible>PVR.IsRecordingTV</visible>
+				<include content="Widget-PVR">
+					<param name="icon" value="$INFO[PVR.TVNowRecordingChannelIcon]" />
+					<param name="header" value="$LOCALIZE[19158]" />
+					<param name="label1" value="$INFO[PVR.TVNowRecordingDateTime]" />
+					<param name="label2" value="$INFO[PVR.TVNowRecordingTitle][CR][COLOR grey]$INFO[PVR.TVNowRecordingChannel][/COLOR]" />
+				</include>
+			</control>
+			<control type="group">
+				<width>674</width>
+				<visible>PVR.HasNonRecordingTVTimer</visible>
+				<include content="Widget-PVR">
+					<param name="icon" value="$INFO[PVR.TVNextRecordingChannelIcon]" />
+					<param name="header" value="$LOCALIZE[19157]" />
+					<param name="label1" value="$INFO[PVR.TVNextRecordingDateTime]" />
+					<param name="label2" value="$INFO[PVR.TVNextRecordingTitle][CR][COLOR grey]$INFO[PVR.TVNextRecordingChannel][/COLOR]" />
+				</include>
+			</control>
+		</control>
+		<include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)] + System.HasPVRAddon" content="Widget-Channels">
+			<param name="content_path" value="pvr://channels/tv/*?view=lastplayed"/>
+			<param name="sortby" value="lastplayed"/>
+			<param name="sortorder" value="descending"/>
+			<param name="widget_header" value="$LOCALIZE[31016]"/>
+			<param name="widget_target" value="pvr"/>
+			<param name="list_id" value="$PARAM[control_id]121"/>
+		</include>
+		<include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv) + System.HasPVRAddon" content="Widget-CustomChannels">
+			<param name="widget_header" value="$LOCALIZE[43241]"/>
+			<param name="widget_target" value="TV"/>
+			<param name="list_id" value="$PARAM[control_id]121"/>
+		</include>
+		<include condition="System.HasPVRAddon" content="Widget-Channels">
+			<param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
+			<param name="sortby" value="date"/>
+			<param name="sortorder" value="descending"/>
+			<param name="widget_header" value="$LOCALIZE[31015]"/>
+			<param name="widget_target" value="pvr"/>			
+			<param name="label" value="$INFO[ListItem.ChannelName]"/>
+			<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
+			<param name="list_id" value="$PARAM[control_id]122"/>
+		</include>
+    </include>            
+    <!-- RadioWidget 130 -->
+    <include name="include-RadioWidget">
+		<control type="grouplist" id="$PARAM[control_id]130">
+			<height>390</height>
+			<left>25</left>
+			<top>36</top>
+			<orientation>horizontal</orientation>
+			<align>right</align>
+			<width>1360</width>
+			<visible>PVR.IsRecordingRadio | PVR.HasNonRecordingRadioTimer</visible>
+			<control type="group">
+				<width>680</width>
+				<visible>PVR.IsRecordingRadio</visible>
+				<include content="Widget-PVR">
+					<param name="icon" value="$INFO[PVR.RadioNowRecordingChannelIcon]" />
+					<param name="header" value="$LOCALIZE[19158]" />
+					<param name="label1" value="$INFO[PVR.RadioNowRecordingDateTime]" />
+					<param name="label2" value="$INFO[PVR.RadioNowRecordingTitle][CR][COLOR grey]$INFO[PVR.RadioNowRecordingChannel][/COLOR]" />
+				</include>
+			</control>
+			<control type="group">
+				<visible>PVR.HasNonRecordingRadioTimer</visible>
+				<width>680</width>
+				<include content="Widget-PVR">
+					<param name="icon" value="$INFO[PVR.RadioNextRecordingChannelIcon]" />
+					<param name="header" value="$LOCALIZE[19157]" />
+					<param name="label1" value="$INFO[PVR.RadioNextRecordingDateTime]" />
+					<param name="label2" value="$INFO[PVR.RadioNextRecordingTitle][CR][COLOR grey]$INFO[PVR.RadioNextRecordingChannel][/COLOR]" />
+				</include>
+			</control>
+		</control>
+		<include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)] + System.HasPVRAddon" content="Widget-Channels" >
+			<param name="content_path" value="pvr://channels/radio/*?view=lastplayed"/>
+			<param name="sortby" value="lastplayed"/>
+			<param name="sortorder" value="descending"/>
+			<param name="widget_header" value="$LOCALIZE[31018]"/>
+			<param name="widget_target" value="files"/>
+			<param name="list_id" value="$PARAM[control_id]131"/>
+		</include>
+		<include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio) + System.HasPVRAddon" content="Widget-CustomChannels">
+			<param name="widget_header" value="$LOCALIZE[43241]"/>
+			<param name="widget_target" value="Radio"/>
+			<param name="list_id" value="$PARAM[control_id]131"/>
+		</include>
+		<include condition="System.HasPVRAddon" content="Widget-Channels">
+			<param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
+			<param name="sortby" value="date"/>
+			<param name="sortorder" value="descending"/>
+			<param name="widget_header" value="$LOCALIZE[31015]"/>
+			<param name="widget_target" value="pvr"/>			
+			<param name="label" value="$INFO[ListItem.ChannelName]"/>
+			<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
+			<param name="list_id" value="$PARAM[control_id]132"/>
+		</include>
+    </include>
+    <!-- AddonsWidget 140 -->
+    <include name="include-AddonsWidget">
+		<!-- Video Addons -->
+		<include condition="![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)]" content="Widget-Addons">
+			<param name="content_path" value="addons://sources/video/"/>
+			<param name="widget_header" value="$LOCALIZE[1037]"/>
+			<param name="widget_target" value="videos"/>
+			<param name="sortby" value="lastused"/>
+			<param name="sortorder" value="descending"/>			
+			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="list_id" value="$PARAM[control_id]140"/>
+		</include>
+		<include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)" content="Widget-CustomAddons">
+			<param name="widget_header" value="$LOCALIZE[1037]"/>
+			<param name="widget_target" value="Video"/>			                   
+			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="list_id" value="$PARAM[control_id]140"/> 
+		</include>
+		<!-- Audio Addons -->					
+		<include condition="![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)]" content="Widget-Addons">
+			<param name="content_path" value="addons://sources/audio/"/>
+			<param name="widget_header" value="$LOCALIZE[1038]"/>
+			<param name="widget_target" value="music"/>
+			<param name="sortby" value="lastused"/>
+			<param name="sortorder" value="descending"/>			
+			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="list_id" value="$PARAM[control_id]141"/>
+		</include>
+		<include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)" content="Widget-CustomAddons">
+			<param name="widget_header" value="$LOCALIZE[1038]"/>
+			<param name="widget_target" value="Audio"/>			                    
+			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="list_id" value="$PARAM[control_id]141"/>
+		</include>
+		<!-- Programs Addons -->					
+		<include condition="![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_programs)]" content="Widget-Addons">
+			<param name="content_path" value="addons://sources/executable/"/>
+			<param name="widget_header" value="$LOCALIZE[1043]"/>
+			<param name="widget_target" value="programs"/>
+			<param name="sortby" value="lastused"/>
+			<param name="sortorder" value="descending"/>			
+			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="list_id" value="$PARAM[control_id]142"/>
+		</include>
+		<include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_programs)" content="Widget-CustomAddons">
+			<param name="widget_header" value="$LOCALIZE[1043]"/>
+			<param name="widget_target" value="Programs"/>			
+			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="list_id" value="$PARAM[control_id]142"/>
+		</include>
+		<!-- Android Apps -->					
+		<include condition="System.Platform.Android" content="Widget-Addons">
+			<param name="content_path" value="androidapp://sources/apps/"/>
+			<param name="widget_header" value="$LOCALIZE[20244]"/>
+			<param name="widget_target" value="programs"/>
+			<param name="sortby" value="lastused"/>
+			<param name="sortorder" value="descending"/>			
+			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="list_id" value="$PARAM[control_id]143"/>
+		</include>
+		<!-- Images Addons -->
+		<include condition="![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)]" content="Widget-Addons">
+			<param name="content_path" value="addons://sources/image/"/>
+			<param name="widget_header" value="$LOCALIZE[1039]"/>
+			<param name="widget_target" value="pictures"/>
+			<param name="sortby" value="lastused"/>
+			<param name="sortorder" value="descending"/>			
+			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="list_id" value="$PARAM[control_id]144"/>
+		</include>
+		<include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)" content="Widget-CustomAddons">
+			<param name="widget_header" value="$LOCALIZE[1039]"/>
+			<param name="widget_target" value="Image"/>			
+			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="list_id" value="$PARAM[control_id]144"/>
+		</include>
+    </include>
+    <!-- Media Widget 150 -->
+    <include name="include-MediaWidget">
         <!-- Widget 1 -->
-<!--         <include content="Widget-$PARAM[widget1_type]">
+        <include content="Widget-$PARAM[widget1_type]">
             <param name="widget_num" value="1"/>
             <param name="widget_header" value="$PARAM[widget1_name]"/>
             <param name="widget_target" value="$PARAM[widget1_target]"/>
             <param name="content_path" value="$PARAM[widget1_path]"/>            
-            <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]200"/>				
-            <param name="ondown_id" value="$PARAM[control_id]201"/>		
-        </include> -->
+            <param name="list_id" value="$PARAM[control_id]150"/>						
+        </include>
         <!-- Widget 2 -->
-<!--         <include content="Widget-$PARAM[widget2_type]">
+        <include content="Widget-$PARAM[widget2_type]">
             <param name="widget_num" value="2"/>
             <param name="widget_header" value="$PARAM[widget2_name]"/>
             <param name="widget_target" value="$PARAM[widget2_target]"/>
             <param name="content_path" value="$PARAM[widget2_path]"/>
-            <param name="onup_id" value="$PARAM[control_id]200"/>
-            <param name="list_id" value="$PARAM[control_id]201"/>				
-            <param name="ondown_id" value="$PARAM[control_id]202"/>
-        </include> -->
+            <param name="list_id" value="$PARAM[control_id]151"/>				
+        </include>
         <!-- Widget 3 -->
-<!--         <include content="Widget-$PARAM[widget3_type]">
+        <include content="Widget-$PARAM[widget3_type]">
             <param name="widget_num" value="3"/>
             <param name="widget_header" value="$PARAM[widget3_name]"/>
             <param name="widget_target" value="$PARAM[widget3_target]"/>
             <param name="content_path" value="$PARAM[widget3_path]"/>
-            <param name="onup_id" value="$PARAM[control_id]201"/>
-            <param name="list_id" value="$PARAM[control_id]202"/>				
-            <param name="ondown_id" value="$PARAM[control_id]203"/>
-        </include> -->
+            <param name="list_id" value="$PARAM[control_id]152"/>				
+        </include>
         <!-- Widget 4 -->
-<!--         <include content="Widget-$PARAM[widget4_type]">
+        <include content="Widget-$PARAM[widget4_type]">
             <param name="widget_num" value="4"/>
             <param name="widget_header" value="$PARAM[widget4_name]"/>
             <param name="widget_target" value="$PARAM[widget4_target]"/>
             <param name="content_path" value="$PARAM[widget4_path]"/>
-            <param name="onup_id" value="$PARAM[control_id]202"/>
-            <param name="list_id" value="$PARAM[control_id]203"/>				
-            <param name="ondown_id" value="$PARAM[control_id]204"/>
-        </include> -->
+            <param name="list_id" value="$PARAM[control_id]153"/>				
+        </include>
         <!-- Widget 5 -->
-<!--         <include content="Widget-$PARAM[widget5_type]">
+        <include content="Widget-$PARAM[widget5_type]">
             <param name="widget_num" value="5"/>
             <param name="widget_header" value="$PARAM[widget5_name]"/>
             <param name="widget_target" value="$PARAM[widget5_target]"/>
             <param name="content_path" value="$PARAM[widget5_path]"/>
-            <param name="onup_id" value="$PARAM[control_id]203"/>
-            <param name="list_id" value="$PARAM[control_id]204"/>				
-            <param name="ondown_id" value="$PARAM[control_id]205"/>
-        </include> -->			
+            <param name="list_id" value="$PARAM[control_id]154"/>				
+        </include>			
         <!-- Widget 6 -->
-<!--         <include content="Widget-$PARAM[widget6_type]">
+        <include content="Widget-$PARAM[widget6_type]">
             <param name="widget_num" value="6"/>
             <param name="widget_header" value="$PARAM[widget6_name]"/>
             <param name="widget_target" value="$PARAM[widget6_target]"/>
             <param name="content_path" value="$PARAM[widget6_path]"/>
-            <param name="onup_id" value="$PARAM[control_id]204"/>
-            <param name="list_id" value="$PARAM[control_id]205"/>
-        </include> -->    
-    <!-- </include> -->
-    <!-- None Widget 300 -->
+            <param name="list_id" value="$PARAM[control_id]155"/>
+        </include>    
+    </include>
+    <!-- None Widget 160 -->
     <include name="include-None">
-        <control type="group" id="$PARAM[control_id]300">
+        <control type="group" id="$PARAM[control_id]160">
             <onup>$PARAM[control_id]900</onup>
 			<ondown>200001</ondown>
         </control>
-    </include>     
+    </include>
+	<!-- Disc -->
+	<!-- <control type="group" id="21000">
+		<visible>String.IsEqual(Container(9000).ListItem.Property(id),disc)</visible>
+		<include content="Visible_Right_Delayed">
+			<param name="id" value="disc"/>
+		</include>
+		<include content="Widget-Image">
+			<param name="text_label" value="$INFO[System.DVDLabel]" />
+			<param name="button_label" value="$LOCALIZE[341]" />
+			<param name="button_onclick" value="PlayDisc"/>
+			<param name="button_id" value="21100"/>
+			<param name="visible" value="true"/>
+			<param name="button2_label" value="$LOCALIZE[13391]"/>
+			<param name="button2_onclick" value="EjectTray()"/>
+		</include>
+	</control> -->	
 </includes>

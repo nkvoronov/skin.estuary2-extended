@@ -254,8 +254,8 @@
             </item>
         </content>
 	</include>
-    <!-- WidgetListCustomAddons -->
-	<include name="WidgetListCustomAddons">
+    <!-- Widget-CustomAddons -->
+	<include name="Widget-CustomAddons">
 		<param name="sub_label">$INFO[ListItem.Label]</param>
 		<param name="sortby"></param>
 		<param name="visible">True</param>
@@ -276,7 +276,7 @@
 				<top>120</top>
 				<right>0</right>
 				<height>500</height>
-				<include content="WidgetListCommon">
+				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
@@ -302,6 +302,11 @@
 						<animation type="Unfocus">
 							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
 						</animation>
+						<control type="button">
+							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Property(AddonFanart)],home)</onfocus>
+							<texturenofocus></texturenofocus>
+							<texturefocus></texturefocus>
+						</control>
 						<include content="InfoWallMusicLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
@@ -532,8 +537,8 @@
             </item>
         </content>
 	</include>
-    <!-- WidgetListCustomChannels -->
-	<include name="WidgetListCustomChannels">
+    <!-- Widget-CustomChannels -->
+	<include name="Widget-CustomChannels">
 		<param name="item_limit">15</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
@@ -552,7 +557,7 @@
 				<top>120</top>
 				<right>0</right>
 				<height>430</height>
-				<include content="WidgetListCommon">
+				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
