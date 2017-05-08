@@ -45,7 +45,7 @@
 	<!-- Video -->
 	<propertydefault labelID="video" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="video" property="widgetName.widget1">20094</propertydefault>
-	<propertydefault labelID="video" property="widgetType.widget1">videos</propertydefault>
+	<propertydefault labelID="video" property="widgetType.widget1">video</propertydefault>
 	<propertydefault labelID="video" property="widgetTarget.widget1">videos</propertydefault>
 	<propertydefault labelID="video" property="widgetPath.widget1">sources://video</propertydefault>
 	<propertydefault labelID="video" property="widget.widget2">Library</propertydefault>
@@ -76,7 +76,7 @@
 	<propertydefault labelID="movies" property="widgetPath.widget4">special://skin/extras/playlists/random_movies.xsp</propertydefault>
 	<propertydefault labelID="movies" property="widget.widget5">Library</propertydefault>
 	<propertydefault labelID="movies" property="widgetName.widget5">135</propertydefault>
-	<propertydefault labelID="movies" property="widgetType.widget5">videos</propertydefault>
+	<propertydefault labelID="movies" property="widgetType.widget5">video</propertydefault>
 	<propertydefault labelID="movies" property="widgetTarget.widget5">videos</propertydefault>
 	<propertydefault labelID="movies" property="widgetPath.widget5">videodb://movies/genres/</propertydefault>	
 	<propertydefault labelID="movies" property="widget.widget6">Library</propertydefault>
@@ -102,12 +102,12 @@
 	<propertydefault labelID="tvshows" property="widgetPath.widget3">special://skin/extras/playlists/unwatched_tvshows.xsp</propertydefault>
 	<propertydefault labelID="tvshows" property="widget.widget4">Library</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget4">135</propertydefault>
-	<propertydefault labelID="tvshows" property="widgetType.widget4">videos</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetType.widget4">video</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget4">videos</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetPath.widget4">videodb://tvshows/genres/</propertydefault>
 	<propertydefault labelID="tvshows" property="widget.widget5">Library</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget5">20388</propertydefault>
-	<propertydefault labelID="tvshows" property="widgetType.widget5">videos</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetType.widget5">video</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget5">videos</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetPath.widget5">videodb://tvshows/studios/</propertydefault>
 	<!-- MusicVideos -->
@@ -133,7 +133,7 @@
 	<propertydefault labelID="musicvideos" property="widgetPath.widget4">special://skin/extras/playlists/random_musicvideos.xsp</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget5">Library</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget5">20388</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetType.widget5">videos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetType.widget5">video</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget5">music</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget5">videodb://musicvideos/studios/</propertydefault>
 	<!-- Music -->
@@ -332,6 +332,7 @@
             <shortcut label="32055" type="2" icon="special://skin/extras/icons/error.png">CleanLibrary(music)</shortcut>
             <shortcut label="600" type="2" icon="special://skin/extras/icons/cd.png">RipCD()</shortcut>
             <shortcut label="2" type="10004" icon="special://skin/extras/icons/music.png">ActivateWindow(musicsettings)</shortcut>
+            <!-- <content>music</content> -->
             <node label="32040">
                 <content>playlist-audio</content>
             </node>
