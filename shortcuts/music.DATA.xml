@@ -69,8 +69,8 @@
     <shortcut>
         <label>29994</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/actor.png</icon>
-        <action>ActivateWindow(music,special://artists/role/,return)</action>
+        <icon>DefaultMusicRoles.png</icon>
+        <action>ActivateWindow(music,library://music/musicroles/,return)</action>
     </shortcut>	
     <shortcut>
         <label>744</label>

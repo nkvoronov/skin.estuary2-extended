@@ -320,7 +320,6 @@
     <include name="include-MediaWidget">
         <!-- Widget 1 -->
         <include content="Widget-$PARAM[widget1_type]">
-            <param name="widget_num" value="1"/>
             <param name="widget_header" value="$PARAM[widget1_name]"/>
             <param name="widget_target" value="$PARAM[widget1_target]"/>
             <param name="content_path" value="$PARAM[widget1_path]"/>            
@@ -328,7 +327,6 @@
         </include>
         <!-- Widget 2 -->
         <include content="Widget-$PARAM[widget2_type]">
-            <param name="widget_num" value="2"/>
             <param name="widget_header" value="$PARAM[widget2_name]"/>
             <param name="widget_target" value="$PARAM[widget2_target]"/>
             <param name="content_path" value="$PARAM[widget2_path]"/>
@@ -336,7 +334,6 @@
         </include>
         <!-- Widget 3 -->
         <include content="Widget-$PARAM[widget3_type]">
-            <param name="widget_num" value="3"/>
             <param name="widget_header" value="$PARAM[widget3_name]"/>
             <param name="widget_target" value="$PARAM[widget3_target]"/>
             <param name="content_path" value="$PARAM[widget3_path]"/>
@@ -344,7 +341,6 @@
         </include>
         <!-- Widget 4 -->
         <include content="Widget-$PARAM[widget4_type]">
-            <param name="widget_num" value="4"/>
             <param name="widget_header" value="$PARAM[widget4_name]"/>
             <param name="widget_target" value="$PARAM[widget4_target]"/>
             <param name="content_path" value="$PARAM[widget4_path]"/>
@@ -352,7 +348,6 @@
         </include>
         <!-- Widget 5 -->
         <include content="Widget-$PARAM[widget5_type]">
-            <param name="widget_num" value="5"/>
             <param name="widget_header" value="$PARAM[widget5_name]"/>
             <param name="widget_target" value="$PARAM[widget5_target]"/>
             <param name="content_path" value="$PARAM[widget5_path]"/>
@@ -360,7 +355,6 @@
         </include>			
         <!-- Widget 6 -->
         <include content="Widget-$PARAM[widget6_type]">
-            <param name="widget_num" value="6"/>
             <param name="widget_header" value="$PARAM[widget6_name]"/>
             <param name="widget_target" value="$PARAM[widget6_target]"/>
             <param name="content_path" value="$PARAM[widget6_path]"/>

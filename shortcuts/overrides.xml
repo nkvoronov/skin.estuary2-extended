@@ -39,18 +39,18 @@
 	<!-- Pictures -->
 	<propertydefault labelID="pictures" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="pictures" property="widgetName.widget1">20094</propertydefault>
-	<propertydefault labelID="pictures" property="widgetType.widget1">pictures</propertydefault>
+	<propertydefault labelID="pictures" property="widgetType.widget1">source</propertydefault>
 	<propertydefault labelID="pictures" property="widgetTarget.widget1">pictures</propertydefault>
 	<propertydefault labelID="pictures" property="widgetPath.widget1">sources://pictures</propertydefault>
 	<!-- Video -->
 	<propertydefault labelID="video" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="video" property="widgetName.widget1">20094</propertydefault>
-	<propertydefault labelID="video" property="widgetType.widget1">video</propertydefault>
+	<propertydefault labelID="video" property="widgetType.widget1">source</propertydefault>
 	<propertydefault labelID="video" property="widgetTarget.widget1">videos</propertydefault>
 	<propertydefault labelID="video" property="widgetPath.widget1">sources://video</propertydefault>
 	<propertydefault labelID="video" property="widget.widget2">Library</propertydefault>
 	<propertydefault labelID="video" property="widgetName.widget2">136</propertydefault>
-	<propertydefault labelID="video" property="widgetType.widget2">videos</propertydefault>
+	<propertydefault labelID="video" property="widgetType.widget2">playlist</propertydefault>
 	<propertydefault labelID="video" property="widgetTarget.widget2">videos</propertydefault>
 	<propertydefault labelID="video" property="widgetPath.widget2">special://videoplaylists</propertydefault>
 	<!-- Movies -->
@@ -76,7 +76,7 @@
 	<propertydefault labelID="movies" property="widgetPath.widget4">special://skin/extras/playlists/random_movies.xsp</propertydefault>
 	<propertydefault labelID="movies" property="widget.widget5">Library</propertydefault>
 	<propertydefault labelID="movies" property="widgetName.widget5">135</propertydefault>
-	<propertydefault labelID="movies" property="widgetType.widget5">video</propertydefault>
+	<propertydefault labelID="movies" property="widgetType.widget5">moviegenre</propertydefault>
 	<propertydefault labelID="movies" property="widgetTarget.widget5">videos</propertydefault>
 	<propertydefault labelID="movies" property="widgetPath.widget5">videodb://movies/genres/</propertydefault>	
 	<propertydefault labelID="movies" property="widget.widget6">Library</propertydefault>
@@ -102,24 +102,24 @@
 	<propertydefault labelID="tvshows" property="widgetPath.widget3">special://skin/extras/playlists/unwatched_tvshows.xsp</propertydefault>
 	<propertydefault labelID="tvshows" property="widget.widget4">Library</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget4">135</propertydefault>
-	<propertydefault labelID="tvshows" property="widgetType.widget4">video</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetType.widget4">moviegenre</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget4">videos</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetPath.widget4">videodb://tvshows/genres/</propertydefault>
 	<propertydefault labelID="tvshows" property="widget.widget5">Library</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget5">20388</propertydefault>
-	<propertydefault labelID="tvshows" property="widgetType.widget5">video</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetType.widget5">studios</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget5">videos</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetPath.widget5">videodb://tvshows/studios/</propertydefault>
 	<!-- MusicVideos -->
 	<propertydefault labelID="musicvideos" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget1">20390</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget1">musicvideos</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetTarget.widget1">music</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetPath.widget1">videodb://recentlyaddedmusicvideos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetTarget.widget1">videos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetPath.widget1">videodb://recentlyaddedmusicvideos/</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget2">Playlist</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget2">43090</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget2">musicvideos</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetTarget.widget2">music</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetTarget.widget2">videos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget2">special://skin/extras/playlists/unwatched_musicvideos.xsp</propertydefault>	
 	<propertydefault labelID="musicvideos" property="widget.widget3">Playlist</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget3">43091</propertydefault>
@@ -129,12 +129,12 @@
 	<propertydefault labelID="musicvideos" property="widget.widget4">Playlist</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget4">43092</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget4">musicvideos</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetTarget.widget4">music</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetTarget.widget4">videos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget4">special://skin/extras/playlists/random_musicvideos.xsp</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget5">Library</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget5">20388</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetType.widget5">video</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetTarget.widget5">music</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetType.widget5">studios</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetTarget.widget5">videos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget5">videodb://musicvideos/studios/</propertydefault>
 	<!-- Music -->
 	<propertydefault labelID="music" property="widget.widget1">Library</propertydefault>
@@ -194,12 +194,12 @@
         <item control="301">$ADDON[script.skinshortcuts 32000]</item>
         <item control="302">$ADDON[script.skinshortcuts 32001]</item>
         <item control="308">$ADDON[script.skinshortcuts 32028]</item>
-    </contextmenu>    
+    </contextmenu>
     <!-- Menus Groupings -->
     <groupings>
         <shortcut label="43100" type="" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>        
         <!-- Weather -->
-        <node label="8">
+        <node label="8" condition="!String.IsEmpty(Weather.Plugin)">
             <shortcut label="8" type="8" icon="special://skin/extras/icons/weather.png">ActivateWindow(Weather)</shortcut>
             <shortcut label="184" type="8" icon="special://skin/extras/icons/update.png">Weather.Refresh</shortcut>
             <shortcut label="35500" type="8" icon="special://skin/extras/icons/location-previous.png">Weather.LocationPrevious</shortcut>
@@ -266,7 +266,7 @@
             </node>
         </node>
         <!-- Movies -->
-        <node label="342">
+        <node label="342" condition="Library.HasContent(movies)">
             <shortcut label="342" type="342" icon="special://skin/extras/icons/movies2.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
             <shortcut label="20386" type="342" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</shortcut>
             <shortcut label="135" type="342" icon="special://skin/extras/icons/genre.png">ActivateWindow(videos,videodb://movies/genres/,return)</shortcut>
@@ -281,7 +281,7 @@
             <shortcut label="20314" type="342" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://movies/,return)</shortcut>
         </node>
         <!-- TVShows -->
-        <node label="20343">
+        <node label="20343" condition="Library.HasContent(tvshows)">
             <shortcut label="20343" type="20343" icon="special://skin/extras/icons/tvshows.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
             <shortcut label="20387" type="20343" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</shortcut>
             <shortcut label="626" type="20343" icon="special://skin/extras/icons/inprogressshows.png">ActivateWindow(videos,library://video/inprogressshows.xml/,return)</shortcut>
@@ -294,7 +294,7 @@
             <shortcut label="20314" type="20343" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://tvshows/,return)</shortcut>
         </node>
         <!-- MusicVideos -->
-        <node label="20389">
+        <node label="20389" condition="Library.HasContent(musicvideos)">
             <shortcut label="20389" type="20389" icon="special://skin/extras/icons/musicvideos.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
             <shortcut label="20390" type="20389" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</shortcut>
             <shortcut label="135" type="20389" icon="special://skin/extras/icons/genre.png">ActivateWindow(videos,videodb://musicvideos/genres/,return)</shortcut>
@@ -314,7 +314,7 @@
             <shortcut label="517" type="2" icon="special://skin/extras/icons/musicrecentlyplayed.png">ActivateWindow(music,musicdb://recentlyplayedalbums/,return)</shortcut>
             <shortcut label="135" type="2" icon="special://skin/extras/icons/musicgenres.png">ActivateWindow(music,musicdb://genres/,return)</shortcut>
             <shortcut label="133" type="2" icon="special://skin/extras/icons/artist.png">ActivateWindow(music,musicdb://artists/,return)</shortcut>
-			<shortcut label="29994" type="2" icon="special://skin/extras/icons/actor.png">ActivateWindow(music,special://artists/role/,return)</shortcut>
+			<shortcut label="29994" type="2" icon="DefaultMusicRoles.png">ActivateWindow(music,library://music/musicroles/,return)</shortcut>
             <shortcut label="132" type="2" icon="special://skin/extras/icons/album.png">ActivateWindow(music,musicdb://albums/,return)</shortcut>
             <shortcut label="134" type="2" icon="special://skin/extras/icons/songs.png">ActivateWindow(music,musicdb://songs/,return)</shortcut>
             <shortcut label="271" type="2" icon="special://skin/extras/icons/musictop100.png">ActivateWindow(music,musicdb://top100/,return)</shortcut>
@@ -330,9 +330,7 @@
             <shortcut label="589" type="2" icon="special://skin/extras/icons/play.png">PlayerControl(PartyMode)</shortcut>
             <shortcut label="653" type="2" icon="special://skin/extras/icons/updatelibrary.png">UpdateLibrary(music)</shortcut>
             <shortcut label="32055" type="2" icon="special://skin/extras/icons/error.png">CleanLibrary(music)</shortcut>
-            <shortcut label="600" type="2" icon="special://skin/extras/icons/cd.png">RipCD()</shortcut>
             <shortcut label="2" type="10004" icon="special://skin/extras/icons/music.png">ActivateWindow(musicsettings)</shortcut>
-            <!-- <content>music</content> -->
             <node label="32040">
                 <content>playlist-audio</content>
             </node>
@@ -349,6 +347,7 @@
         <node label="446">
             <shortcut label="341" type="446" icon="special://skin/extras/icons/dvd.png">PlayDVD</shortcut>
             <shortcut label="13391" type="446" icon="special://skin/extras/icons/eject.png">EjectTray()</shortcut>
+			<shortcut label="600" type="446" icon="special://skin/extras/icons/cd.png">RipCD()</shortcut>
         </node>
         <!-- Addons -->
         <node label="24001">
@@ -359,7 +358,7 @@
 			<shortcut label="24033" type="24001" icon="special://skin/extras/icons/install_repos.png">ActivateWindow(addonbrowser,addons://repos/,return)</shortcut>
 			<shortcut label="137" type="24001" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(addonbrowser,addons://search/,return)</shortcut>			
             <node label="1043">
-                <shortcut label="10001" type="24001" icon="special://skin/extras/icons/program.png">ActivateWindow(programs,addons://sources/executable/,return)</shortcut>
+                <shortcut label="1043" type="24001" icon="special://skin/extras/icons/program.png">ActivateWindow(programs,addons://sources/executable/,return)</shortcut>
                 <shortcut label="20244" type="24001" icon="special://skin/extras/icons/android.png" condition="System.Platform.Android">ActivateWindow(programs,androidapp://sources/apps,return)</shortcut>
                 <content>addon-program</content>
             </node>
@@ -434,8 +433,16 @@
 		<shortcut label="43086" icon="special://skin/extras/icons/media.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="MediaWidget">MediaWidget</shortcut>
 		<!-- -->
         <shortcut label="43101" icon="DefaultFolder.png" condition="String.IsEmpty(Window(home).Property(WidgetVisibility)) + System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</shortcut>
-        <node label="32030" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <content>video</content>
+		<!-- Pictures -->
+        <node label="1" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="20094" type="1" icon="special://skin/extras/icons/files.png" widget="Library" widgetType="source" widgetTarget="pictures">sources://pictures</shortcut>
+            <content>picturesources</content>
+        </node>
+		<!-- Video -->
+        <node label="3" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">			
+			<shortcut label="20094" type="3" icon="special://skin/extras/icons/files.png" widget="Library" widgetType="source" widgetTarget="videos">sources://video</shortcut>
+			<shortcut label="136" type="3" icon="special://skin/extras/icons/playlists.png" widget="Library" widgetType="playlist" widgetTarget="videos">special://videoplaylists/</shortcut>
+			<shortcut label="1037" type="3" icon="special://skin/extras/icons/video-addons.png" widget="Library" widgetType="video" widgetTarget="videos">addons://sources/video/</shortcut>
             <node label="32040">
                 <content>playlist-video</content>
             </node>
@@ -444,9 +451,47 @@
             </node>
             <node label="32075">
                 <content>videosources</content>
+				<content>upnp-video</content>
             </node>
         </node>
-        <node label="32031" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+		<!-- Movies -->
+        <node label="342" condition="Library.HasContent(movies) + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="342" type="342" icon="special://skin/extras/icons/movies2.png" widget="Library" widgetType="source" widgetTarget="videos">library://video/movies/</shortcut>
+			<shortcut label="20386" type="342" icon="special://skin/extras/icons/recentlyadded.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://recentlyaddedmovies/</shortcut>
+			<shortcut label="135" type="342" icon="special://skin/extras/icons/genre.png" widget="Library" widgetType="moviegenre" widgetTarget="videos">videodb://movies/genres/</shortcut>
+			<shortcut label="562" type="342" icon="special://skin/extras/icons/years.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://movies/years/</shortcut>
+            <shortcut label="344" type="342" icon="special://skin/extras/icons/actor.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://movies/actors/</shortcut>
+            <shortcut label="20348" type="342" icon="special://skin/extras/icons/director2.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://movies/directors/</shortcut>
+            <shortcut label="20388" type="342" icon="special://skin/extras/icons/studios.png" widget="Library" widgetType="studios" widgetTarget="videos">videodb://movies/studios/</shortcut>
+			<shortcut label="20434" type="342" icon="special://skin/extras/icons/sets.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://movies/sets/</shortcut>
+			<shortcut label="20451" type="342" icon="special://skin/extras/icons/country.png" widget="Library" widgetType="country" widgetTarget="videos">videodb://movies/countries/</shortcut>            
+            <shortcut label="20459" type="342" icon="special://skin/extras/icons/tags.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://movies/tags/</shortcut>
+		</node>
+		<!-- TVShows -->
+        <node label="20343" condition="Library.HasContent(tvshows) + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="20343" type="20343" icon="special://skin/extras/icons/tvshows.png" widget="Library" widgetType="source" widgetTarget="videos">library://video/tvshows/</shortcut>
+			<shortcut label="20387" type="20343" icon="special://skin/extras/icons/recentlyadded.png" widget="Library" widgetType="episodes" widgetTarget="videos">videodb://recentlyaddedepisodes/</shortcut>
+            <shortcut label="626" type="20343" icon="special://skin/extras/icons/inprogressshows.png" widget="Library" widgetType="tvshows" widgetTarget="videos">videodb://inprogresstvshows</shortcut>
+			<shortcut label="135" type="20343" icon="special://skin/extras/icons/genre.png" widget="Library" widgetType="moviegenre" widgetTarget="videos">videodb://tvshows/genres/</shortcut>
+            <shortcut label="562" type="20343" icon="special://skin/extras/icons/years.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://tvshows/years/</shortcut>
+            <shortcut label="344" type="20343" icon="special://skin/extras/icons/actor.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://tvshows/actors/</shortcut>
+            <shortcut label="20388" type="20343" icon="special://skin/extras/icons/studios.png" widget="Library" widgetType="studios" widgetTarget="videos">videodb://tvshows/studios/</shortcut>            
+            <shortcut label="20459" type="20343" icon="special://skin/extras/icons/tags.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://tvshows/tags/</shortcut>			
+		</node>
+		<!-- MusicVideos -->
+        <node label="20389" condition="Library.HasContent(musicvideos) + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="20389" type="20389" icon="special://skin/extras/icons/musicvideos.png" widget="Library" widgetType="source" widgetTarget="videos">library://video/musicvideos/</shortcut>
+			<shortcut label="20390" type="20389" icon="special://skin/extras/icons/recentlyadded.png" widget="Library" widgetType="musicvideos" widgetTarget="videos">videodb://recentlyaddedmusicvideos/</shortcut>
+			<shortcut label="135" type="20389" icon="special://skin/extras/icons/genre.png" widget="Library" widgetType="moviegenre" widgetTarget="videos">videodb://musicvideos/genres/</shortcut>
+            <shortcut label="562" type="20389" icon="special://skin/extras/icons/years.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://musicvideos/years/</shortcut>
+            <!-- <shortcut label="133" type="20389" icon="special://skin/extras/icons/artist.png" widget="Library" widgetType="artists" widgetTarget="music">videodb://musicvideos/artists/</shortcut>
+            <shortcut label="132" type="20389" icon="special://skin/extras/icons/album.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://musicvideos/albums/</shortcut> -->            
+            <shortcut label="20348" type="20389" icon="special://skin/extras/icons/director2.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://musicvideos/directors/</shortcut>
+            <shortcut label="20388" type="20389" icon="special://skin/extras/icons/studios.png" widget="Library" widgetType="studios" widgetTarget="videos">videodb://musicvideos/studios/</shortcut>
+            <shortcut label="20459" type="20389" icon="special://skin/extras/icons/tags.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://musicvideos/tags/</shortcut>
+		</node>
+		<!-- Music -->
+        <node label="2" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
             <content>music</content>
             <node label="32040">
                 <content>playlist-audio</content>
@@ -456,29 +501,28 @@
             </node>
             <node label="32075">
                 <content>musicsources</content>
+				<content>upnp-music</content>
             </node>
         </node>
-        <node label="32020" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <content>picturesources</content>
-        </node>
-        <node label="32007" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <node label="32009">
-                <content>addon-program-plugin</content>
+		<!-- Addons -->
+        <node label="24001" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+            <shortcut label="1043" type="24001" icon="special://skin/extras/icons/program.png" widget="Library" widgetType="program" widgetTarget="programs">addons://sources/executable</shortcut>
+            <shortcut label="20244" type="24001" icon="special://skin/extras/icons/program.png" widget="Library" widgetType="program" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps</shortcut>
+            <shortcut label="1037" type="24001" icon="special://skin/extras/icons/video-addons.png" widget="Library" widgetType="video" widgetTarget="videos">addons://sources/video</shortcut>
+            <shortcut label="1038" type="24001" icon="special://skin/extras/icons/music.png" widget="Library" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
+            <shortcut label="1039" type="24001" icon="special://skin/extras/icons/pictures2.png" widget="Library" widgetType="picture" widgetTarget="pictures">addons://sources/image</shortcut>		
+            <node label="1043">
+                <content>addon-program</content>
             </node>
-            <node label="32010">
+            <node label="1037">
                 <content>addon-video</content>
             </node>
-            <node label="32011">
+            <node label="1038">
                 <content>addon-audio</content>
             </node>
-            <node label="32012">
+            <node label="1039">
                 <content>addon-image</content>
             </node>
-            <shortcut label="10001" type="32021" icon="DefaultAddonProgram.png" widget="addon" widgetType="program" widgetTarget="programs">addons://sources/executable</shortcut>
-            <shortcut label="20244" type="32021" icon="DefaultAddonProgram.png" widget="addon" widgetType="program" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps</shortcut>
-            <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png" widget="addon" widgetType="video" widgetTarget="video">addons://sources/video</shortcut>
-            <shortcut label="1038" type="32019" icon="DefaultAddonMusic.png" widget="addon" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
-            <shortcut label="1039" type="32020" icon="DefaultAddonPicture.png" widget="addon" widgetType="picture" widgetTarget="pictures">addons://sources/image</shortcut>
         </node>
     </widget-groupings>    
 </overrides>

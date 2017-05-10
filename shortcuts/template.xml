@@ -32,6 +32,11 @@
         <property name="widget6_path" tag="property" attribute="name|widgetPath.widget6" />
         <!-- property menu item widget types -->
         <!-- widget type 1 -->
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="picture">Pictures</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="video">Videos</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="music">Musics</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="program">Programs</property>		
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="playlist">Playlists</property>		
         <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="movies">Movies</property>
         <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="tvshows">TVShows</property>
         <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="episodes">Episodes</property>
@@ -39,8 +44,16 @@
         <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="albums">Albums</property>
         <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="artists">Artists</property>
         <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="songs">Songs</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="moviegenre">MovieGenres</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="studios">Studios</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="country">Country</property>
         <property name="widget1_type">Other</property>
         <!-- widget type 2 -->
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="picture">Pictures</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="video">Videos</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="music">Musics</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="program">Programs</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="playlist">Playlists</property>		
         <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="movies">Movies</property>
         <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="tvshows">TVShows</property>
         <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="episodes">Episodes</property>
@@ -48,8 +61,16 @@
         <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="albums">Albums</property>
         <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="artists">Artists</property>
         <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="songs">Songs</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="moviegenre">MovieGenres</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="studios">Studios</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="country">Country</property>
         <property name="widget2_type">Other</property>
         <!-- widget type 3 -->
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="picture">Pictures</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="video">Videos</property>		
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="music">Musics</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="program">Programs</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="playlist">Playlists</property>
         <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="movies">Movies</property>
         <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="tvshows">TVShows</property>
         <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="episodes">Episodes</property>
@@ -57,8 +78,16 @@
         <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="albums">Albums</property>
         <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="artists">Artists</property>
         <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="songs">Songs</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="moviegenre">MovieGenres</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="studios">Studios</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="country">Country</property>
         <property name="widget3_type">Other</property>
         <!-- widget type 4 -->
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="picture">Pictures</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="video">Videos</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="music">Musics</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="program">Programs</property>		
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="playlist">Playlists</property>
         <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="movies">Movies</property>
         <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="tvshows">TVShows</property>
         <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="episodes">Episodes</property>
@@ -66,8 +95,16 @@
         <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="albums">Albums</property>
         <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="artists">Artists</property>
         <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="songs">Songs</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="moviegenre">MovieGenres</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="studios">Studios</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="country">Country</property>
         <property name="widget4_type">Other</property>
         <!-- widget type 5 -->
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="picture">Pictures</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="video">Videos</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="music">Musics</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="program">Programs</property>		
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="playlist">Playlists</property>
         <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="movies">Movies</property>
         <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="tvshows">TVShows</property>
         <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="episodes">Episodes</property>
@@ -75,8 +112,16 @@
         <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="albums">Albums</property>
         <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="artists">Artists</property>
         <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="songs">Songs</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="moviegenre">MovieGenres</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="studios">Studios</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="country">Country</property>
         <property name="widget5_type">Other</property>        
          <!-- widget type 6 -->
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="picture">Pictures</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="video">Videos</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="music">Musics</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="program">Programs</property>		
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="playlist">Playlists</property>
         <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="movies">Movies</property>
         <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="tvshows">TVShows</property>
         <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="episodes">Episodes</property>
@@ -84,6 +129,9 @@
         <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="albums">Albums</property>
         <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="artists">Artists</property>
         <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="songs">Songs</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="moviegenre">MovieGenres</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="studios">Studios</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="country">Country</property>
         <property name="widget6_type">Other</property>       
         <controls>
             <control type="group" id="$PYTHON[10+int($SKINSHORTCUTS[id])]000">

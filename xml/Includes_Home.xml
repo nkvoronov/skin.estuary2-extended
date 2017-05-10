@@ -1,5 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<!-- Types Widget-->
+	<include name="Widget-Pictures">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+            <param name="fallback_image" value="DefaultAddon.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>			
+		</include>
+	</include>
+	<include name="Widget-Videos">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="fallback_image" value="DefaultAddon.png"/>	
+            <param name="list_id" value="$PARAM[list_id]"/>
+		</include>
+	</include>
+	<include name="Widget-Musics">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="fallback_image" value="DefaultAddon.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>
+		</include>
+	</include>
+	<include name="Widget-Programs">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="fallback_image" value="DefaultAddon.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>
+		</include>
+	</include>
+	<include name="Widget-Playlists">
+		<include content="Widget-Categories">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="fallback_image" value="DefaultPlaylist.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>			
+		</include>
+	</include>
+	<include name="Widget-Movies">
+		<include content="Widget-Poster">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="fallback_image" value="DefaultMovies.png" />
+            <param name="list_id" value="$PARAM[list_id]"/>
+		</include>
+	</include>
+	<include name="Widget-TVShows">
+		<include content="Widget-Poster">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="fallback_image" value="DefaultTVShows.png" />
+            <param name="list_id" value="$PARAM[list_id]"/>
+		</include>
+	</include>	
+	<include name="Widget-Episodes">
+		<include content="Widget-Thumbs">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="fallback_image" value="DefaultTVShows.png" />
+            <param name="list_id" value="$PARAM[list_id]"/>
+		</include>
+	</include>	
+	<include name="Widget-MusicVideos">
+		<include content="Widget-Thumbs">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="main_label">$INFO[ListItem.Label]</param>
+			<param name="sub_label">$INFO[ListItem.Artist]</param>
+			<param name="thumb_label">$INFO[ListItem.Year]</param>
+			<param name="fallback_image" value="DefaultMusicVideos.png" />
+            <param name="list_id" value="$PARAM[list_id]"/>
+		</include>
+	</include>
+	<include name="Widget-Albums">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+            <param name="fallback_image" value="DefaultMusicAlbums.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>			
+		</include>
+	</include>
+	<include name="Widget-Artists">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+            <param name="fallback_image" value="DefaultMusicArtists.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>			
+		</include>
+	</include>
+	<include name="Widget-Songs">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+            <param name="fallback_image" value="DefaultMusicSongs.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>			
+		</include>
+	</include>	
+	<include name="Widget-MovieGenres">
+		<include content="Widget-Categories">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="icon" value="$VAR[WidgetMovieGenreIconVar]"/>
+			<param name="fallback_image" value="DefaultGenre.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>			
+		</include>
+	</include>
+	<include name="Widget-Studios">
+		<include content="Widget-Categories">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
+			<param name="fallback_image" value="DefaultStudios.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>			
+		</include>
+	</include>
+	<include name="Widget-Country">
+		<include content="Widget-Categories">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="icon" value="$VAR[WidgetCountryIconVar]"/>
+			<param name="fallback_image" value="DefaultCountry.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>			
+		</include>
+	</include>
+	<include name="Widget-Other">
+		<include content="Widget-Categories">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>            
+            <param name="list_id" value="$PARAM[list_id]"/>
+		</include>
+	</include>
+	<!-- Common -->	
 	<include name="WidgetGroup-Common">
 		<orientation>vertical</orientation>
 		<height>100%</height>
@@ -67,68 +218,20 @@
 			</control>
 		</definition>
 	</include>
-	<include name="Widget-Image">
-		<param name="visible">true</param>
-		<param name="visible_1">true</param>
-		<param name="visible_2">true</param>
-		<param name="button2_label">$LOCALIZE[31116]</param>
-		<param name="button2_onclick">true</param>
-		<definition>
-			<control type="group" id="$PARAM[button_id]889">
-				<visible>$PARAM[visible]</visible>
-				<control type="grouplist" id="$PARAM[button_id]577">
-					<orientation>vertical</orientation>
-					<top>0</top>
-					<bottom>0</bottom>
-					<left>50</left>
-					<right>50</right>
-					<align>center</align>
-					<control type="textbox">
-						<width>100%</width>
-						<height min="0" max="300">auto</height>
-						<label>$PARAM[text_label]</label>
-						<align>center</align>
-						<font>font14</font>
-					</control>
-					<control type="grouplist" id="$PARAM[button_id]567">
-						<width>100%</width>
-						<onup>9000</onup>
-						<ondown>9000</ondown>
-						<orientation>horizontal</orientation>
-						<align>center</align>
-						<onleft>9000</onleft>
-						<control type="button" id="$PARAM[button_id]">
-							<width>auto</width>
-							<height>110</height>
-							<label>$PARAM[button_label]</label>
-							<textoffsetx>40</textoffsetx>
-							<onclick>$PARAM[button_onclick]</onclick>
-							<align>center</align>
-							<texturefocus border="23" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texturefocus>
-							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
-							<visible>$PARAM[visible_1]</visible>
-						</control>
-						<control type="button" id="$PARAM[button_id]568">
-							<width>auto</width>
-							<height>110</height>
-							<label>$PARAM[button2_label]</label>
-							<textoffsetx>40</textoffsetx>
-							<onclick>$PARAM[button2_onclick]</onclick>
-							<onclick>SetFocus(9000)</onclick>
-							<align>center</align>
-							<texturefocus border="23" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texturefocus>
-							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
-							<visible>$PARAM[visible_2]</visible>
-						</control>
-					</control>
-				</control>
-			</control>
-		</definition>
-	</include>
 	<include name="Widget-SubMenu">
-		<param name="item_limit">20</param>
+		<include content="Widget-Categories">
+			<param name="submenu" value="true"/>
+            <param name="item_limit" value="20"/>
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="content_path" value="$PARAM[submenu_content]"/>            
+            <param name="list_id" value="$PARAM[list_id]"/>
+		</include>	
+	</include>
+	<include name="Widget-Categories">
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="icon_height">120</param>
+		<param name="submenu">false</param>
 		<param name="visible">true</param>
         <param name="fallback_image">DefaultFolder.png</param>
 		<definition>
@@ -192,6 +295,12 @@
 						<animation type="Unfocus">
 							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
+						<control type="button">
+							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+							<texturenofocus></texturenofocus>
+							<texturefocus></texturefocus>
+						</control>
 						<control type="image">
 							<width>316</width>
 							<height>200</height>
@@ -227,9 +336,281 @@
 						</control>
 					</control>
 				</focusedlayout>
-                <content>
-                    <include>$PARAM[submenu_content]</include>
-				</content>
+				<include condition="!$PARAM[submenu]" content="Widget-Content">
+					<param name="widget_target" value="$PARAM[widget_target]"/>
+					<param name="item_limit" value="$PARAM[item_limit]"/>
+					<param name="content_path" value="$PARAM[content_path]"/>
+				</include>
+				<include condition="$PARAM[submenu]" content="Widget-ContentSubMenu">
+					<param name="content_path" value="$PARAM[content_path]"/>
+				</include>
+			</control>
+		</definition>
+	</include>
+	<include name="Widget-Content">
+		<content target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
+	</include>
+	<include name="Widget-ContentSubMenu">
+		<content>
+            <include>$PARAM[content_path]</include>
+		</content>
+	</include>
+	<include name="Widget-Square">
+		<param name="sub_label">$INFO[ListItem.Label]</param>
+		<param name="sortby"></param>
+		<param name="visible">True</param>
+		<param name="sortorder">ascending</param>
+		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="fallback_image">DefaultFolder.png</param>
+		<definition>
+			<include content="CategoryLabel">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<include content="BusyListSpinner">
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="posy" value="220"/>
+			</include>
+			<control type="panel" id="$PARAM[list_id]">
+				<left>0</left>
+				<top>120</top>
+				<right>0</right>
+				<height>500</height>
+				<include content="Widget-Common">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<itemlayout width="310" height="500">
+					<control type="group">
+						<left>70</left>
+						<include content="InfoWallMusicLayout">
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="single_label" value="$PARAM[single_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="fallback_image" value="$PARAM[fallback_image]" />
+							<param name="focused" value="false" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="310" height="500">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<animation type="Focus">
+							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
+						</animation>
+						<control type="button">
+							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+							<texturenofocus></texturenofocus>
+							<texturefocus></texturefocus>
+						</control>
+						<include content="InfoWallMusicLayout">
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="single_label" value="$PARAM[single_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="fallback_image" value="$PARAM[fallback_image]" />
+							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+			</control>
+		</definition>
+	</include>
+	<include name="Widget-Poster">
+		<param name="visible">True</param>
+		<param name="sortby"></param>
+		<param name="sortorder"></param>
+		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="fallback_image">DefaultFolder.png</param>
+		<definition>
+			<include content="CategoryLabel">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<include content="BusyListSpinner">
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="posy" value="250"/>
+			</include>
+			<control type="panel" id="$PARAM[list_id]">
+				<left>0</left>
+				<top>115</top>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<right>0</right>
+				<height>500</height>
+				<include content="Widget-Common">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<itemlayout width="310" height="486">
+					<control type="group">
+						<left>68</left>
+						<top>10</top>
+						<include content="InfoWallMovieLayout">
+							<param name="fallback_image" value="$PARAM[fallback_image]" />
+							<param name="focused" value="false" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="310" height="486">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>68</left>
+						<top>10</top>
+						<animation type="Focus">
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,130" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
+						</animation>
+						<control type="button">
+							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+							<texturenofocus></texturenofocus>
+							<texturefocus></texturefocus>
+						</control>
+						<include content="InfoWallMovieLayout">
+							<param name="fallback_image" value="$PARAM[fallback_image]" />
+							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+			</control>
+		</definition>
+	</include>
+	<include name="Widget-Thumbs">
+		<param name="main_label">$INFO[ListItem.Title]</param>
+		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
+		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
+		<param name="sortby"></param>
+		<param name="visible">True</param>
+		<param name="sortorder">ascending</param>
+		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="fallback_image">DefaultFolder.png</param>
+		<definition>
+			<include content="CategoryLabel">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<include content="BusyListSpinner">
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="posy" value="200"/>
+			</include>
+			<control type="panel" id="$PARAM[list_id]">
+				<left>0</left>
+				<top>105</top>
+				<right>0</right>
+				<height>410</height>
+				<include content="Widget-Common">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<itemlayout width="310" height="500">
+					<control type="group">
+						<left>70</left>
+						<top>5</top>
+						<include content="InfoWallEpisodeLayout">
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="thumb_label" value="$PARAM[thumb_label]" />
+							<param name="fallback_image" value="$PARAM[fallback_image]" />
+							<param name="focused" value="false" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="310" height="500">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<top>5</top>
+						<animation type="Focus">
+							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="230,120" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="230,120" />
+						</animation>
+						<control type="button">
+							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+							<texturenofocus></texturenofocus>
+							<texturefocus></texturefocus>
+						</control>
+						<include content="InfoWallEpisodeLayout">
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="thumb_label" value="$PARAM[thumb_label]" />
+							<param name="fallback_image" value="$PARAM[fallback_image]" />
+							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+			</control>
+		</definition>
+	</include>	
+	<!-- -->
+	<include name="Widget-Image">
+		<param name="visible">true</param>
+		<param name="visible_1">true</param>
+		<param name="visible_2">true</param>
+		<param name="button2_label">$LOCALIZE[31116]</param>
+		<param name="button2_onclick">true</param>
+		<definition>
+			<control type="group" id="$PARAM[button_id]889">
+				<visible>$PARAM[visible]</visible>
+				<control type="grouplist" id="$PARAM[button_id]577">
+					<orientation>vertical</orientation>
+					<top>0</top>
+					<bottom>0</bottom>
+					<left>50</left>
+					<right>50</right>
+					<align>center</align>
+					<control type="textbox">
+						<width>100%</width>
+						<height min="0" max="300">auto</height>
+						<label>$PARAM[text_label]</label>
+						<align>center</align>
+						<font>font14</font>
+					</control>
+					<control type="grouplist" id="$PARAM[button_id]567">
+						<width>100%</width>
+						<onup>9000</onup>
+						<ondown>9000</ondown>
+						<orientation>horizontal</orientation>
+						<align>center</align>
+						<onleft>9000</onleft>
+						<control type="button" id="$PARAM[button_id]">
+							<width>auto</width>
+							<height>110</height>
+							<label>$PARAM[button_label]</label>
+							<textoffsetx>40</textoffsetx>
+							<onclick>$PARAM[button_onclick]</onclick>
+							<align>center</align>
+							<texturefocus border="23" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texturefocus>
+							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+							<visible>$PARAM[visible_1]</visible>
+						</control>
+						<control type="button" id="$PARAM[button_id]568">
+							<width>auto</width>
+							<height>110</height>
+							<label>$PARAM[button2_label]</label>
+							<textoffsetx>40</textoffsetx>
+							<onclick>$PARAM[button2_onclick]</onclick>
+							<onclick>SetFocus(9000)</onclick>
+							<align>center</align>
+							<texturefocus border="23" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texturefocus>
+							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+							<visible>$PARAM[visible_2]</visible>
+						</control>
+					</control>
+				</control>
 			</control>
 		</definition>
 	</include>	
@@ -852,553 +1233,6 @@
 					</control>
 				</focusedlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-			</control>
-		</definition>
-	</include>
-	<include name="Widget-Movies">
-		<param name="visible">True</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="250"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>115</top>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<right>0</right>
-				<height>500</height>
-				<include content="Widget-Common">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<itemlayout width="310" height="486">
-					<control type="group">
-						<left>68</left>
-						<top>10</top>
-						<include content="InfoWallMovieLayout">
-							<param name="focused" value="false" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="486">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>68</left>
-						<top>10</top>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,130" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
-						</animation>
-						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-							<texturenofocus></texturenofocus>
-							<texturefocus></texturefocus>
-						</control>
-						<include content="InfoWallMovieLayout">
-							<param name="focused" value="true" />
-						</include>
-					</control>
-				</focusedlayout>
-				<content target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-			</control>
-		</definition>
-	</include>
-	<include name="Widget-TVShows">
-		<param name="visible">True</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="250"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>115</top>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<right>0</right>
-				<height>500</height>
-				<include content="Widget-Common">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<itemlayout width="310" height="486">
-					<control type="group">
-						<left>68</left>
-						<top>10</top>
-						<include content="InfoWallMovieLayout">
-							<param name="focused" value="false" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="486">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>68</left>
-						<top>10</top>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,130" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
-						</animation>
-						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-							<texturenofocus></texturenofocus>
-							<texturefocus></texturefocus>
-						</control>
-						<include content="InfoWallMovieLayout">
-							<param name="focused" value="true" />
-						</include>
-					</control>
-				</focusedlayout>
-				<content target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-			</control>
-		</definition>
-	</include>
-	<include name="Widget-Episodes">
-		<param name="main_label">$INFO[ListItem.Title]</param>
-		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
-		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="visible">True</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="200"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>105</top>
-				<right>0</right>
-				<height>410</height>
-				<include content="Widget-Common">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
-					<control type="group">
-						<left>70</left>
-						<top>5</top>
-						<include content="InfoWallEpisodeLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<param name="focused" value="false" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="500">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<top>5</top>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="230,120" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="230,120" />
-						</animation>
-						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-							<texturenofocus></texturenofocus>
-							<texturefocus></texturefocus>
-						</control>
-						<include content="InfoWallEpisodeLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<param name="focused" value="true" />
-						</include>
-					</control>
-				</focusedlayout>
-				<content target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-			</control>
-		</definition>
-	</include>
-	<include name="Widget-MusicVideos">
-		<param name="main_label">$INFO[ListItem.Label]</param>
-		<param name="sub_label">$INFO[ListItem.Artist]</param>
-		<param name="thumb_label">$INFO[ListItem.Year]</param>
-		<param name="visible">True</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="200"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>105</top>
-				<right>0</right>
-				<height>410</height>
-				<include content="Widget-Common">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
-					<control type="group">
-						<left>70</left>
-						<top>5</top>
-						<include content="InfoWallEpisodeLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<param name="focused" value="false" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="500">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<top>5</top>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="230,120" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="230,120" />
-						</animation>
-						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-							<texturenofocus></texturenofocus>
-							<texturefocus></texturefocus>
-						</control>
-						<include content="InfoWallEpisodeLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<param name="focused" value="true" />
-						</include>
-					</control>
-				</focusedlayout>
-				<content target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-			</control>
-		</definition>
-	</include>
-	<include name="Widget-Albums">
-		<param name="sub_label">$INFO[ListItem.Label]</param>
-		<param name="sortby"></param>
-		<param name="visible">True</param>
-		<param name="sortorder">ascending</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="220"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>120</top>
-				<right>0</right>
-				<height>500</height>
-				<include content="Widget-Common">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
-					<control type="group">
-						<left>70</left>
-						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="false" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="500">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
-						</animation>
-						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-							<texturenofocus></texturenofocus>
-							<texturefocus></texturefocus>
-						</control>						
-						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="true" />
-						</include>
-					</control>
-				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-			</control>
-		</definition>
-	</include>
-	<include name="Widget-Artists">
-		<param name="sub_label">$INFO[ListItem.Label]</param>
-		<param name="sortby"></param>
-		<param name="visible">True</param>
-		<param name="sortorder">ascending</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="220"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>120</top>
-				<right>0</right>
-				<height>500</height>
-				<include content="Widget-Common">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
-					<control type="group">
-						<left>70</left>
-						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="false" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="500">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
-						</animation>
-						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-							<texturenofocus></texturenofocus>
-							<texturefocus></texturefocus>
-						</control>						
-						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="true" />
-						</include>
-					</control>
-				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-			</control>
-		</definition>
-	</include>
-	<include name="Widget-Songs">
-		<param name="sub_label">$INFO[ListItem.Label]</param>
-		<param name="sortby"></param>
-		<param name="visible">True</param>
-		<param name="sortorder">ascending</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="220"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>120</top>
-				<right>0</right>
-				<height>500</height>
-				<include content="Widget-Common">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
-					<control type="group">
-						<left>70</left>
-						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="false" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="500">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
-						</animation>
-						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-							<texturenofocus></texturenofocus>
-							<texturefocus></texturefocus>
-						</control>						
-						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="true" />
-						</include>
-					</control>
-				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
-			</control>
-		</definition>
-	</include>	
-	<include name="Widget-Other">
-		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
-		<param name="icon_height">120</param>
-		<param name="visible">true</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="visible" value="$PARAM[visible]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="visible" value="$PARAM[visible]"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>110</top>
-				<right>0</right>
-				<height>290</height>
-				<include content="Widget-Common">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="340">
-					<control type="group">
-						<left>70</left>
-						<control type="image">
-							<width>316</width>
-							<height>200</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<centertop>74</centertop>
-							<left>62</left>
-							<width>200</width>
-							<height>$PARAM[icon_height]</height>
-							<texture fallback="DefaultFolder.png">$VAR[WidgetListTextIconVar]</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="textbox">
-							<left>42</left>
-							<top>106</top>
-							<width>240</width>
-							<height>70</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="340">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="228,70" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
-						</animation>
-						<control type="button">
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-							<texturenofocus></texturenofocus>
-							<texturefocus></texturefocus>
-						</control>
-						<control type="image">
-							<width>316</width>
-							<height>200</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<width>316</width>
-							<height>200</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
-							<bordersize>20</bordersize>
-							<include>Animation_FocusTextureFade</include>
-						</control>
-						<control type="image">
-							<centertop>74</centertop>
-							<left>62</left>
-							<width>200</width>
-							<height>$PARAM[icon_height]</height>
-							<texture fallback="DefaultFolder.png">$VAR[WidgetListTextIconVar]</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="textbox">
-							<left>42</left>
-							<top>106</top>
-							<width>240</width>
-							<height>70</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</control>
-				</focusedlayout>
-                <content target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
