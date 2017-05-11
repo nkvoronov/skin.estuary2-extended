@@ -141,7 +141,7 @@
 	<propertydefault labelID="music" property="widgetName.widget1">517</propertydefault>
 	<propertydefault labelID="music" property="widgetType.widget1">albums</propertydefault>
 	<propertydefault labelID="music" property="widgetTarget.widget1">music</propertydefault>
-	<propertydefault labelID="music" property="widgetPath.widget1">musicdb://recentlyplayedalbums</propertydefault>
+	<propertydefault labelID="music" property="widgetPath.widget1">musicdb://recentlyplayedalbums/</propertydefault>
 	<propertydefault labelID="music" property="widget.widget2">Library</propertydefault>
 	<propertydefault labelID="music" property="widgetName.widget2">359</propertydefault>
 	<propertydefault labelID="music" property="widgetType.widget2">albums</propertydefault>
@@ -484,15 +484,31 @@
 			<shortcut label="20390" type="20389" icon="special://skin/extras/icons/recentlyadded.png" widget="Library" widgetType="musicvideos" widgetTarget="videos">videodb://recentlyaddedmusicvideos/</shortcut>
 			<shortcut label="135" type="20389" icon="special://skin/extras/icons/genre.png" widget="Library" widgetType="moviegenre" widgetTarget="videos">videodb://musicvideos/genres/</shortcut>
             <shortcut label="562" type="20389" icon="special://skin/extras/icons/years.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://musicvideos/years/</shortcut>
-            <!-- <shortcut label="133" type="20389" icon="special://skin/extras/icons/artist.png" widget="Library" widgetType="artists" widgetTarget="music">videodb://musicvideos/artists/</shortcut>
-            <shortcut label="132" type="20389" icon="special://skin/extras/icons/album.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://musicvideos/albums/</shortcut> -->            
+            <shortcut label="133" type="20389" icon="special://skin/extras/icons/artist.png" widget="Library" widgetType="artists" widgetTarget="videos">videodb://musicvideos/artists/</shortcut>
+            <shortcut label="132" type="20389" icon="special://skin/extras/icons/album.png" widget="Library" widgetType="albums" widgetTarget="videos">videodb://musicvideos/albums/</shortcut>           
             <shortcut label="20348" type="20389" icon="special://skin/extras/icons/director2.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://musicvideos/directors/</shortcut>
             <shortcut label="20388" type="20389" icon="special://skin/extras/icons/studios.png" widget="Library" widgetType="studios" widgetTarget="videos">videodb://musicvideos/studios/</shortcut>
             <shortcut label="20459" type="20389" icon="special://skin/extras/icons/tags.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://musicvideos/tags/</shortcut>
 		</node>
 		<!-- Music -->
         <node label="2" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <content>music</content>
+            <shortcut label="10516" type="2" icon="special://skin/extras/icons/media.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://</shortcut>
+            <shortcut label="20094" type="2" icon="special://skin/extras/icons/files.png" widget="Library" widgetType="source" widgetTarget="music">sources://music/</shortcut>
+            <shortcut label="359" type="2" icon="special://skin/extras/icons/musicrecentlyadded.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://recentlyaddedalbums/</shortcut>
+            <shortcut label="517" type="2" icon="special://skin/extras/icons/musicrecentlyplayed.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://recentlyplayedalbums/</shortcut>
+            <shortcut label="135" type="2" icon="special://skin/extras/icons/musicgenres.png" widget="Library" widgetType="musicgenre" widgetTarget="music">musicdb://genres/</shortcut>
+            <shortcut label="133" type="2" icon="special://skin/extras/icons/artist.png" widget="Library" widgetType="artists" widgetTarget="music">music,musicdb://artists/</shortcut>
+			<shortcut label="29994" type="2" icon="DefaultMusicRoles.png" widget="Library" widgetType="source" widgetTarget="music">library://music/musicroles/</shortcut>
+            <shortcut label="132" type="2" icon="special://skin/extras/icons/album.png" widget="Library" widgetType="albums" widgetTarget="music">music,musicdb://albums/</shortcut>
+            <shortcut label="134" type="2" icon="special://skin/extras/icons/songs.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://songs/</shortcut>
+            <shortcut label="271" type="2" icon="special://skin/extras/icons/musictop100.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://top100/</shortcut>
+            <shortcut label="10504" type="2" icon="special://skin/extras/icons/musictop100songs.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://top100/songs/</shortcut>
+            <shortcut label="10505" type="2" icon="special://skin/extras/icons/musictop100albums.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://top100/albums/</shortcut>            
+            <shortcut label="521" type="2" icon="special://skin/extras/icons/musiccompilations.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://compilations</shortcut>
+            <shortcut label="562" type="2" icon="special://skin/extras/icons/years.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://years/</shortcut>
+            <shortcut label="1050" type="2" icon="special://skin/extras/icons/sets.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://singles/</shortcut>            
+            <shortcut label="1038" type="24001" icon="special://skin/extras/icons/music.png" widget="Library" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
+            <shortcut label="136" type="2" icon="special://skin/extras/icons/playlists.png" widget="Library" widgetType="playlist" widgetTarget="music">special://musicplaylists/</shortcut>
             <node label="32040">
                 <content>playlist-audio</content>
             </node>

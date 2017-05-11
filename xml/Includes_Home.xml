@@ -122,6 +122,16 @@
             <param name="list_id" value="$PARAM[list_id]"/>			
 		</include>
 	</include>
+	<include name="Widget-MusicGenres">
+		<include content="Widget-Categories">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+			<param name="icon" value="$VAR[WidgetMusicGenreIconVar]"/>
+			<param name="fallback_image" value="DefaultMusicGenres.png"/>
+            <param name="list_id" value="$PARAM[list_id]"/>			
+		</include>
+	</include>
 	<include name="Widget-Studios">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>

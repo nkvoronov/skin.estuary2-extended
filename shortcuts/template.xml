@@ -45,6 +45,7 @@
         <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="artists">Artists</property>
         <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="songs">Songs</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="moviegenre">MovieGenres</property>
+        <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="musicgenre">MusicGenres</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="studios">Studios</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="country">Country</property>
         <property name="widget1_type">Other</property>
@@ -62,6 +63,7 @@
         <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="artists">Artists</property>
         <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="songs">Songs</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="moviegenre">MovieGenres</property>
+        <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="musicgenre">MusicGenres</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="studios">Studios</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="country">Country</property>
         <property name="widget2_type">Other</property>
@@ -79,6 +81,7 @@
         <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="artists">Artists</property>
         <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="songs">Songs</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="moviegenre">MovieGenres</property>
+        <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="musicgenre">MusicGenres</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="studios">Studios</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="country">Country</property>
         <property name="widget3_type">Other</property>
@@ -96,6 +99,7 @@
         <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="artists">Artists</property>
         <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="songs">Songs</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="moviegenre">MovieGenres</property>
+        <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="musicgenre">MusicGenres</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="studios">Studios</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="country">Country</property>
         <property name="widget4_type">Other</property>
@@ -113,6 +117,7 @@
         <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="artists">Artists</property>
         <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="songs">Songs</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="moviegenre">MovieGenres</property>
+        <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="musicgenre">MusicGenres</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="studios">Studios</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="country">Country</property>
         <property name="widget5_type">Other</property>        
@@ -130,6 +135,7 @@
         <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="artists">Artists</property>
         <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="songs">Songs</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="moviegenre">MovieGenres</property>
+        <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="musicgenre">MusicGenres</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="studios">Studios</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="country">Country</property>
         <property name="widget6_type">Other</property>       
