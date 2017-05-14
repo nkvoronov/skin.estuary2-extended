@@ -72,8 +72,8 @@
         <action>ActivateWindow(videos,library://video/,return)</action>
     </shortcut>
     <shortcut>
-        <label>10134</label>
-        <label2>10134</label2>
+        <label>1036</label>
+        <label2>1036</label2>
         <defaultID>favorites</defaultID>
         <icon>special://skin/extras/icons/favourites2.png</icon>
         <action>ActivateWindow(favourites)</action>

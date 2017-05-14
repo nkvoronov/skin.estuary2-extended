@@ -345,7 +345,7 @@
         </node>
         <!-- DVD -->
         <node label="446">
-            <shortcut label="341" type="446" icon="special://skin/extras/icons/dvd.png">PlayDVD</shortcut>
+            <shortcut label="341" type="446" icon="special://skin/extras/icons/dvd.png">PlayDisc</shortcut>
             <shortcut label="13391" type="446" icon="special://skin/extras/icons/eject.png">EjectTray()</shortcut>
 			<shortcut label="600" type="446" icon="special://skin/extras/icons/cd.png">RipCD()</shortcut>
         </node>
@@ -429,7 +429,7 @@
 		<shortcut label="43082" icon="special://skin/extras/icons/livetv.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="TVWidget">TVWidget</shortcut>
         <shortcut label="43083" icon="special://skin/extras/icons/radio.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="RadioWidget">RadioWidget</shortcut>
 		<shortcut label="43084" icon="special://skin/extras/icons/addons.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="AddonsWidget">AddonsWidget</shortcut>
-		<shortcut label="43085" icon="special://skin/extras/icons/favourites2.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="FavouritesWidget">FavouritesWidget</shortcut>
+		<shortcut label="43085" icon="special://skin/extras/icons/favourites2.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="FavouritesWidget">FavouritesWidget</shortcut>		
 		<shortcut label="43086" icon="special://skin/extras/icons/media.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="MediaWidget">MediaWidget</shortcut>
 		<!-- -->
         <shortcut label="43101" icon="DefaultFolder.png" condition="String.IsEmpty(Window(home).Property(WidgetVisibility)) + System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</shortcut>
@@ -438,6 +438,20 @@
 			<shortcut label="20094" type="1" icon="special://skin/extras/icons/files.png" widget="Library" widgetType="source" widgetTarget="pictures">sources://pictures</shortcut>
             <content>picturesources</content>
         </node>
+		<!-- LiveTV -->
+        <node label="19020" condition="PVR.HasTVChannels + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="31016" type="19020" icon="special://skin/extras/icons/channels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
+            <shortcut label="31015" type="19020" icon="special://skin/extras/icons/recordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
+            <shortcut label="19040" type="19020" icon="special://skin/extras/icons/timers.png" widget="Library" widgetType="tvtimer" widgetTarget="pvr">TVTimers</shortcut>
+			<shortcut label="43241" type="19020" icon="special://skin/extras/icons/channels.png" condition="Skin.HasSetting(enable_custom_list_channels_tv)" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">CustomChannelsTV</shortcut>
+		</node>
+		<!-- Radio -->
+        <node label="19021" condition="PVR.HasRadioChannels + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="31018" type="19021" icon="special://skin/extras/icons/channels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
+            <shortcut label="31015" type="19021" icon="special://skin/extras/icons/recordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
+            <shortcut label="19040" type="19021" icon="special://skin/extras/icons/timers.png" widget="Library" widgetType="radiotimer" widgetTarget="pvr">RadioTimers</shortcut>
+			<shortcut label="43241" type="19020" icon="special://skin/extras/icons/channels.png" condition="Skin.HasSetting(enable_custom_list_channels_radio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
+		</node>
 		<!-- Video -->
         <node label="3" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">			
 			<shortcut label="20094" type="3" icon="special://skin/extras/icons/files.png" widget="Library" widgetType="source" widgetTarget="videos">sources://video</shortcut>
@@ -522,14 +536,17 @@
         </node>
 		<!-- Addons -->
         <node label="24001" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <shortcut label="1043" type="24001" icon="special://skin/extras/icons/program.png" widget="Library" widgetType="program" widgetTarget="programs">addons://sources/executable</shortcut>
-            <shortcut label="20244" type="24001" icon="special://skin/extras/icons/program.png" widget="Library" widgetType="program" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps</shortcut>
-            <shortcut label="1037" type="24001" icon="special://skin/extras/icons/video-addons.png" widget="Library" widgetType="video" widgetTarget="videos">addons://sources/video</shortcut>
-            <shortcut label="1038" type="24001" icon="special://skin/extras/icons/music.png" widget="Library" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
-            <shortcut label="1039" type="24001" icon="special://skin/extras/icons/pictures2.png" widget="Library" widgetType="picture" widgetTarget="pictures">addons://sources/image</shortcut>		
-            <node label="1043">
-                <content>addon-program</content>
-            </node>
+            <shortcut label="1043" type="24001" icon="special://skin/extras/icons/program.png" widget="Library" widgetType="addon" widgetTarget="programs">addons://sources/executable</shortcut>
+            <shortcut label="20244" type="24001" icon="special://skin/extras/icons/program.png" widget="Library" widgetType="addon" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps</shortcut>
+            <shortcut label="1037" type="24001" icon="special://skin/extras/icons/video-addons.png" widget="Library" widgetType="addon" widgetTarget="videos">addons://sources/video</shortcut>
+            <shortcut label="1038" type="24001" icon="special://skin/extras/icons/music.png" widget="Library" widgetType="addon" widgetTarget="music">addons://sources/audio</shortcut>
+            <shortcut label="1039" type="24001" icon="special://skin/extras/icons/pictures2.png" widget="Library" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut>
+			<node label="43021" condition="Skin.HasSetting(enable_custom_list_addons)">
+				<shortcut label="1043" type="24001" icon="special://skin/extras/icons/program.png" condition="Skin.HasSetting(enable_custom_list_addons_programs)" widget="Custom" widgetType="custaddon" widgetTarget="Programs">CustomAddonsPrograms</shortcut>
+				<shortcut label="1037" type="24001" icon="special://skin/extras/icons/video-addons.png" condition="Skin.HasSetting(enable_custom_list_addons_video)" widget="Custom" widgetType="custaddon" widgetTarget="Video">CustomAddonsVideo</shortcut>
+				<shortcut label="1038" type="24001" icon="special://skin/extras/icons/music.png" condition="Skin.HasSetting(enable_custom_list_addons_audio)" widget="Custom" widgetType="custaddon" widgetTarget="Audio">CustomAddonsAudio</shortcut>
+				<shortcut label="1039" type="24001" icon="special://skin/extras/icons/pictures2.png" condition="Skin.HasSetting(enable_custom_list_addons_image)" widget="Custom" widgetType="custaddon" widgetTarget="Image">CustomAddonsImage</shortcut>
+			</node>
             <node label="1037">
                 <content>addon-video</content>
             </node>
@@ -540,5 +557,9 @@
                 <content>addon-image</content>
             </node>
         </node>
+		<!-- Favourites -->
+        <node label="1036" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="1036" type="1036" icon="special://skin/extras/icons/favourites2.png" widget="Library" widgetType="favourites" widgetTarget="">favourites://</shortcut>
+		</node>
     </widget-groupings>    
 </overrides>
