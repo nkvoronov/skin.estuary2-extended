@@ -63,14 +63,14 @@
                             <right>27</right>
                             <top>27</top>
                             <bottom>27</bottom>
-                            <aspectratio>stretch</aspectratio>
+                            <aspectratio>keep</aspectratio>
                             <texture border="20" fallback="DefaultVideo.png">$VAR[ListPosterVar]</texture>
                         </control>
                         <control type="group">
                             <bottom>30</bottom>
                             <visible>!ListItem.IsParentFolder</visible>
-                            <animation effect="fade" start="0" end="80" time="50">Focus</animation>
-                            <animation effect="fade" start="80" end="0" time="50">UnFocus</animation>
+                            <!-- <animation effect="fade" start="0" end="80" time="50">Focus</animation>
+                            <animation effect="fade" start="80" end="0" time="50">UnFocus</animation> -->
                             <control type="image">
                                 <right>50</right>
                                 <bottom>10</bottom>
@@ -100,10 +100,24 @@
                             <right>27</right>
                             <top>27</top>
                             <bottom>27</bottom>
-                            <aspectratio>stretch</aspectratio>
+                            <aspectratio>keep</aspectratio>
                             <texture border="20" fallback="DefaultVideo.png">$VAR[ListPosterVar]</texture>
                         </control>
-                        <control type="image">
+                        <control type="group">
+                            <bottom>30</bottom>
+                            <visible>!ListItem.IsParentFolder</visible>
+                            <!-- <animation effect="fade" start="0" end="80" time="50">Focus</animation>
+                            <animation effect="fade" start="80" end="0" time="50">UnFocus</animation> -->
+                            <control type="image">
+                                <right>50</right>
+                                <bottom>10</bottom>
+                                <width>48</width>
+                                <height>48</height>
+                                <texture>$VAR[ListWatchedIconVar]</texture>
+                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                        <!-- <control type="image">
                             <left>27</left>
                             <bottom>27</bottom>
                             <right>27</right>
@@ -113,15 +127,15 @@
                             <animation effect="fade" start="80" end="0" time="50">UnFocus</animation>
                             <visible>Control.HasFocus($PARAM[id])</visible>
                             <visible>!ListItem.IsParentFolder</visible>
-                        </control>
-                        <control type="group">
+                        </control> -->
+                        <!-- <control type="group">
                             <bottom>30</bottom>
                             <visible>Control.HasFocus($PARAM[id])</visible>
                             <visible>!ListItem.IsParentFolder</visible>
                             <animation effect="fade" start="0" end="80" time="50">Focus</animation>
-                            <animation effect="fade" start="80" end="0" time="50">UnFocus</animation>
+                            <animation effect="fade" start="80" end="0" time="50">UnFocus</animation> -->
                             <!-- Sets -->
-                            <control type="group">
+                            <!-- <control type="group">
                                 <bottom>35</bottom>
                                 <left>80</left>
                                 <width>170</width>
@@ -146,9 +160,9 @@
                                     <selectedcolor>white</selectedcolor>
                                     <label fallback="-">$INFO[ListItem.Year]</label>
                                 </control>
-                            </control>
+                            </control> -->
                             <!-- TotalEpisodes -->
-                            <control type="group">
+                            <!-- <control type="group">
                                 <bottom>35</bottom>
                                 <left>80</left>
                                 <width>170</width>
@@ -174,9 +188,9 @@
                                     <selectedcolor>white</selectedcolor>
                                     <label fallback="-">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
                                 </control>
-                            </control>
+                            </control> -->
                             <!-- Duration -->
-                            <control type="group">
+                            <!-- <control type="group">
                                 <bottom>35</bottom>
                                 <left>80</left>
                                 <width>170</width>
@@ -202,9 +216,9 @@
                                     <selectedcolor>white</selectedcolor>
                                     <label fallback="-">$INFO[ListItem.Duration,, $LOCALIZE[31132]]</label>
                                 </control>
-                            </control>
+                            </control> -->
                             <!-- Year -->
-                            <control type="group">
+                            <!-- <control type="group">
                                 <bottom>35</bottom>
                                 <left>220</left>
                                 <width>70</width>
@@ -230,9 +244,9 @@
                                     <selectedcolor>white</selectedcolor>
                                     <label fallback="-">$INFO[ListItem.Year]</label>
                                 </control>
-                            </control>
+                            </control> -->
                             <!-- Rating -->
-                            <control type="group">
+                            <!-- <control type="group">
                                 <bottom>35</bottom>
                                 <left>344</left>
                                 <width>70</width>
@@ -267,7 +281,7 @@
                                 <texture>$VAR[ListWatchedIconVar]</texture>
                                 <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                             </control>
-                        </control>
+                        </control> -->
                     </control>
                 </focusedlayout>
                 <itemlayout height="700" width="495" condition="Container.Content(artists) | Container.Content(albums)">
@@ -282,7 +296,7 @@
                             <right>27</right>
                             <top>27</top>
                             <height>435</height>
-                            <aspectratio>stretch</aspectratio>
+                            <!-- <aspectratio>stretch</aspectratio> -->
                             <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
                             <visible>Container.Content(artists)</visible>
                         </control>
@@ -291,7 +305,7 @@
                             <right>27</right>
                             <top>27</top>
                             <height>435</height>
-                            <aspectratio>stretch</aspectratio>
+                            <!-- <aspectratio>stretch</aspectratio> -->
                             <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
                             <visible>Container.Content(albums)</visible>
                         </control>
@@ -338,7 +352,7 @@
                             <right>27</right>
                             <top>27</top>
                             <height>435</height>
-                            <aspectratio>stretch</aspectratio>
+                            <!-- <aspectratio>stretch</aspectratio> -->
                             <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
                             <visible>Container.Content(artists)</visible>
                         </control>
@@ -347,7 +361,7 @@
                             <right>27</right>
                             <top>27</top>
                             <height>435</height>
-                            <aspectratio>stretch</aspectratio>
+                            <!-- <aspectratio>stretch</aspectratio> -->
                             <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
                             <visible>Container.Content(albums)</visible>
                         </control>

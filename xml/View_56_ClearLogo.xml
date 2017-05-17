@@ -175,14 +175,14 @@
             <left>-500</left>
             <right>-500</right>
             <height>242</height>
-            <bottom>190</bottom>
+            <bottom>310</bottom>
             <texture border="22">dialogs/dialog-bg.png</texture>
         </control>
         <control type="image">
             <left>766</left>
             <width>390</width>
             <height>242</height>
-            <bottom>190</bottom>
+            <bottom>310</bottom>
             <texture border="40" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture>
         </control>
         <control type="group">
@@ -234,7 +234,7 @@
                 <width>580</width>
                 <height>338</height>
                 <font>font12</font>
-                <label>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
+                <label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
                 <textcolor>button_focus</textcolor>
                 <autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
                 <visible>!ListItem.IsCollection + String.IsEqual(ListItem.DBType,tvshow)</visible>
@@ -247,7 +247,7 @@
                 <width>580</width>
                 <height>365</height>
                 <font>font12</font>
-                <label>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
+                <label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
                 <textcolor>button_focus</textcolor>
                 <autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
                 <visible>!ListItem.IsCollection + !String.IsEqual(ListItem.DBType,tvshow)</visible>
@@ -280,6 +280,7 @@
                 </include>
             </control>
             <control type="group">
+                <visible>false</visible>
                 <visible>!ListItem.IsCollection</visible>
                 <control type="image">
                     <left>1049</left>

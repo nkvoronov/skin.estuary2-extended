@@ -60,7 +60,7 @@
 				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(531)">conditional</animation>
-				<visible>Control.IsVisible(52) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(501) | Control.IsVisible(54)</visible>
+				<visible>Control.IsVisible(52) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(501) | Control.IsVisible(54) | Control.IsVisible(58)</visible>
 			</control>
 			<control type="scrollbar" id="5199">
 				<left>0</left>
@@ -398,6 +398,15 @@
 					<param name="label" value="$INFO[ListItem.Premiered]" />
 				</include>
 			</control>
+            <control type="group">
+				<top>10</top>
+				<width>100</width>
+				<include content="InfoFlag">
+					<param name="visible" value="!String.IsEmpty(ListItem.Rating)" />
+					<param name="icon" value="lists/rating.png" />
+					<param name="label" value="$INFO[ListItem.Rating]" />
+				</include>
+            </control>            
 			<control type="group">
 				<width>115</width>
 				<visible>!String.IsEmpty(ListItem.Duration)</visible>
@@ -421,9 +430,9 @@
 				<param name="texture" value="$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]" />
 				<param name="visible" value="!String.IsEmpty(ListItem.AudioCodec)" />
 			</include>
-			<!-- 			<include content="MediaFlag">
-																						<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]" />
-																					</include> -->
+			<include content="MediaFlag">
+				<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]" />
+			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$VAR[ResolutionFlagVar]" />
 				<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />

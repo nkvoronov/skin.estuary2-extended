@@ -230,6 +230,7 @@
 	</include>
 	<include name="Widget-Favourites">
 		<include content="Widget-Square">
+            <param name="favourites" value="true"/>
 			<param name="widget_header" value=""/>
             <param name="widget_target" value=""/>
             <param name="content_path" value="favourites://"/>
@@ -315,7 +316,7 @@
 		<param name="posy">160</param>
 		<param name="visible">true</param>
 		<definition>
-			<control type="group" id="$PARAM[list_id]599">
+			<control type="group" id="$PARAM[list_id]1">
 				<height>160</height>
 				<left>180</left>
 				<visible>Container($PARAM[list_id]).IsUpdating + !Integer.IsGreater(Container($PARAM[list_id]).NumItems,0)</visible>
@@ -341,7 +342,7 @@
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
 		<definition>
-			<control type="label" id="$PARAM[list_id]666">
+			<control type="label" id="$PARAM[list_id]2">
 				<left>55</left>
 				<top>80</top>
 				<width>900</width>
@@ -490,6 +491,7 @@
 		<param name="sub_label">$INFO[ListItem.Label]</param>
 		<param name="sortby"></param>
 		<param name="custom">false</param>
+        <param name="favourites">false</param>
 		<param name="visible">True</param>
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
@@ -511,6 +513,7 @@
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
+                <onclick condition="$PARAM[favourites]">$INFO[ListItem.FileNameAndPath]</onclick>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<itemlayout width="310" height="500">
@@ -866,9 +869,9 @@
 		<param name="button2_label">$LOCALIZE[31116]</param>
 		<param name="button2_onclick">true</param>
 		<definition>
-			<control type="group" id="$PARAM[button_id]800">
+			<control type="group" id="$PARAM[button_id]0">
 				<visible>$PARAM[visible]</visible>
-				<control type="grouplist" id="$PARAM[button_id]805">
+				<control type="grouplist" id="$PARAM[button_id]1">
 					<orientation>vertical</orientation>
 					<top>0</top>
 					<bottom>0</bottom>
@@ -882,16 +885,15 @@
 						<align>center</align>
 						<font>font14</font>
 					</control>
-					<control type="grouplist" id="$PARAM[button_id]810">
+					<control type="grouplist" id="$PARAM[button_id]2">
 						<width>100%</width>
-						<!-- <onup>$PARAM[button_id]900</onup> -->
 						<onup>9000</onup>
 						<ondown>9000</ondown>
 						<orientation>horizontal</orientation>
 						<align>center</align>
 						<onleft>9000</onleft>
 						<onright>9000</onright>
-						<control type="button" id="$PARAM[button_id]820">
+						<control type="button" id="$PARAM[button_id]3">
 							<width>auto</width>
 							<height>110</height>
 							<label>$PARAM[button_label]</label>
@@ -902,7 +904,7 @@
 							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 							<visible>$PARAM[visible_1]</visible>
 						</control>
-						<control type="button" id="$PARAM[button_id]830">
+						<control type="button" id="$PARAM[button_id]4">
 							<width>auto</width>
 							<height>110</height>
 							<label>$PARAM[button2_label]</label>
