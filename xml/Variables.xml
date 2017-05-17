@@ -465,8 +465,30 @@
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]favorites$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Container(9000).ListItem.Property(id)]$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Container(9000).ListItem.Property(id)]$INFO[Skin.String(HomeFanart.ext)]</value>		
+		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$VAR[HomeMenuTypeVar]$INFO[Skin.String(HomeFanart.ext)]</value>
+        <value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + !String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
 	</variable>
+	<!-- Home Menu Type -->
+    <variable name="HomeMenuTypeVar">
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[8])">weather</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43050])">pictures</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43051])">livetv</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19021]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43052])">radio</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[3]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43053]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43054])">video</value>   
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[342])">movies</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[20343])">tvshows</value>     
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[20389])">musicvideos</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[2]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43055]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43056])">music</value>                
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])">dvd</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43057])">addons</value>        
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[10004])">settings</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13200])">profile</value>      
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13005])">power</value>        
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1036])">favourites</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43058]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43059])">playlists</value>        
+        <value>$INFO[Container(9000).ListItem.Property(defaultID)]</value>
+    </variable>
     <!-- Media Fanart -->
 	<variable name="MediaFanartVar">
 		<value condition="Skin.HasSetting(no_fanart)"></value>
