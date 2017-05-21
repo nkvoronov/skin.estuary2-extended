@@ -93,7 +93,7 @@
 	<variable name="ListLabel2Var">
 		<value condition="String.IsEmpty(Container.PluginName) + Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
-		<value condition="!String.isempty(ListItem.Appearances)">$LOCALIZE[38026]: $INFO[ListItem.Appearances]</value>
+		<value condition="!String.IsEmpty(ListItem.Appearances)">$LOCALIZE[38026]: $INFO[ListItem.Appearances]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
     <!-- Shift Left Text -->
@@ -229,11 +229,6 @@
 		<value condition="Control.HasFocus(21)">$INFO[Container(21).ListItem.Property(Description)]</value>
 		<value>$INFO[Container(9000).ListItem.Label2]</value>
 	</variable>
-    <!-- List SubLabel -->
-	<variable name="ListSubLabelVar">
-		<value condition="ListItem.IsCollection">$INFO[Container(5000).NumItems]</value>
-		<value>$INFO[ListItem.Year]</value>
-	</variable>
     <!-- Video Info Main Label -->
 	<variable name="VideoInfoMainLabelVar">
 		<value condition="!String.IsEmpty(ListItem.Title)">[COLOR white]$INFO[ListItem.Title][/COLOR] $INFO[ListItem.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
@@ -327,18 +322,24 @@
         <value condition="Container.Content(studios) + String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/) + String.IsEqual(Skin.String(StudiosImages.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.jpg]</value>                
         <value condition="Container.Content(countries) + String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/) + String.IsEqual(Skin.String(LanguageFlags.ext),.png)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.png]</value>
         <value condition="Container.Content(countries) + String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/) + String.IsEqual(Skin.String(LanguageFlags.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.jpg]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
+        <value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
         <value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<!-- 53 Shift View Thumb -->
 	<variable name="ShiftThumbVar">
-		<value condition="ListItem.IsParentFolder">DefaultFolderBackSquare.png</value>
-		<value condition="String.IsEmpty(Listitem.Thumb) + [String.IsEqual(listitem.dbtype,album) | String.IsEqual(listitem.dbtype,artist)]">DefaultAudio.png</value>
-		<value condition="ListItem.IsFolder + String.IsEmpty(ListItem.Thumb)">DefaultFolderSquare.png</value>
+		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
+        <value condition="String.IsEmpty(Listitem.Thumb) + Container.Content(artists)">DefaultMusicArtists.png</value>
+		<value condition="String.IsEmpty(Listitem.Thumb) + Container.Content(albums)">DefaultMusicAlbums.png</value>
+		<value condition="String.IsEmpty(ListItem.Thumb) + ListItem.IsFolder">DefaultFolder.png</value>
+        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
+        <value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
     <!-- 54 Info Wall View Thumb -->
 	<variable name="InfoWallThumbVar">
+		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
         <value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
@@ -402,17 +403,33 @@
 	</variable>
     <!-- Poster -->
     <variable name="PosterVar">
-		<value condition="ListItem.IsParentFolder">DefaultFolderBackPoster.png</value>
-		<value condition="!String.IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
-		<value condition="!String.IsEmpty(Container.Art(tvshow.poster)) + Container.Content(episodes)">$INFO[Container.Art(tvshow.poster)]</value>
-		<value condition="!String.IsEmpty(Container.Art(tvshow.poster)) + Container.Content(seasons) + Window.IsActive(movieinformation)">$INFO[Container.Art(tvshow.poster)]</value>
-		<value condition="Container.Content(actors) | Container.Content(directors)">$INFO[Container.ListItem.Art(thumb)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + !String.IsEqual(listitem.dbtype,season)">$INFO[ListItem.Art(tvshow.poster)]</value>
-		<value>$INFO[ListItem.Art(poster)]</value>
+        <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
+        <value condition="!String.IsEmpty(Container(56).ListItem.Art(poster)) + [!String.IsEmpty(Container(56).ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[Container(56).ListItem.Art(animatedposter)]</value>
+        <value condition="!String.IsEmpty(Container(57).ListItem.Art(poster)) + [!String.IsEmpty(Container(57).ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[Container(57).ListItem.Art(animatedposter)]</value>
+        <value condition="!String.IsEmpty(Container(50).ListItem.Art(poster)) + [!String.IsEmpty(Container(50).ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[Container(50).ListItem.Art(animatedposter)]</value>
+        <value condition="!String.IsEmpty(Container(51).ListItem.Art(poster)) + [!String.IsEmpty(Container(51).ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[Container(51).ListItem.Art(animatedposter)]</value>        
+        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
+        <value condition="!String.IsEmpty(Container(51).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(51).ListItem.Art(season.poster)]</value>
+        <value condition="!String.IsEmpty(Container(50).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(50).ListItem.Art(season.poster)]</value>
+        <value condition="!String.IsEmpty(Container(53).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(53).ListItem.Art(season.poster)]</value>
+        <value condition="!String.IsEmpty(Container(54).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(54).ListItem.Art(season.poster)]</value>
+        <value condition="!String.IsEmpty(Container(500).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(500).ListItem.Art(season.poster)]</value>
+        <value condition="!String.IsEmpty(Container(58).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(58).ListItem.Art(season.poster)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[ListItem.Art(season.poster)]</value>
+        <value condition="String.IsEmpty(Container.ListItem.Art(thumb)) + [Container.Content(actors) | Container.Content(directors)]">DefaultActors.png</value>
+        <value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+        <value condition="!String.IsEmpty(Container.Art(artist.thumb))">$INFO[Container.Art(artist.thumb)]</value>
+        <value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
+        <value condition="!String.IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
+		<value>$INFO[ListItem.Icon]</value>
 	</variable>
     <!-- 51 Poster, 58 BigPoster List Poster -->
 	<variable name="ListPosterVar">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
+		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
         <value condition="!String.IsEmpty(ListItem.Icon) + String.IsEqual(ListItem.Label,$LOCALIZE[15102]) + Container.Content(albums)">DefaultMusicAlbums.png</value>
         <value condition="!String.IsEmpty(ListItem.Icon) + String.IsEqual(ListItem.Icon, DefaultMusicSongs.png) + Container.Content(albums)">DefaultMusicAlbums.png</value>
@@ -839,6 +856,7 @@
 	</variable>
     <!-- Info Dialog Poster -->
 	<variable name="InfoDialogPosterVar">
+		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>

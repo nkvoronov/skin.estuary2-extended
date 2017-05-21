@@ -108,7 +108,7 @@
 						<top>400</top>
 						<right>150</right>
 						<height>40</height>
-						<label>$VAR[ListSubLabelVar]</label>
+						<label>$INFO[ListItem.Year]</label>
 						<font>font45_title</font>
 						<textcolor>button_focus</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
@@ -153,6 +153,17 @@
 				<fadetime>200</fadetime>
 				<aspectratio>scale</aspectratio>
 				<texture fallback="DefaultVideo.png" background="true">$VAR[PosterVar]</texture>
+				<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			<control type="image">
+				<left>4</left>
+				<top>4</top>
+				<width>476</width>
+				<height>716</height>
+				<fadetime>200</fadetime>
+				<aspectratio aligny="center">keep</aspectratio>
+				<texture fallback="DefaultVideo.png" background="true">$VAR[PosterVar]</texture>
+				<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 			</control>
 			<control type="image">
 				<left>1</left>
@@ -169,6 +180,44 @@
 				<include content="UserRatingCircle">
 					<param name="animation" value="True" />
 				</include>
+			</control>
+			<control type="group">
+				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
+				<top>668</top>
+				<control type="image">
+					<left>5</left>
+					<top>0</top>
+					<width>474</width>
+					<height>50</height>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>20</top>
+					<width>435</width>
+					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
+					<font>font20_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<align>right</align>
+				</control>
+				<control type="image">
+					<left>446</left>
+					<top>23</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>lists/played-total.png</texture>
+				</control>
+			</control>
+			<control type="progress">
+				<left>4</left>
+				<top>700</top>
+				<width>476</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+				<info>ListItem.PercentPlayed</info>
+				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 			</control>
 		</control>
 	</include>

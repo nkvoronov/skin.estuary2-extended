@@ -38,15 +38,37 @@
 						<top>120</top>
 						<bottom>124</bottom>
 						<fadetime>200</fadetime>
+						<aspectratio>scale</aspectratio>
+						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
+						<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					<control type="image">
+						<depth>DepthContentPopout</depth>
+						<left>38</left>
+						<right>36</right>
+						<top>120</top>
+						<bottom>124</bottom>
+						<fadetime>200</fadetime>
 						<aspectratio aligny="center">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
+						<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 					<control type="group">
 						<left>310</left>
-						<top>936</top>
+						<top>100</top>
 						<include content="UserRatingCircle">
 							<param name="animation" value="True" />
 						</include>
+					</control>
+					<control type="progress">
+						<left>38</left>
+						<top>935</top>
+						<width>560</width>
+						<height>1</height>
+						<texturebg></texturebg>
+						<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+						<info>ListItem.PercentPlayed</info>
+						<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 					</control>
 				</control>
 			</control>
@@ -163,18 +185,41 @@
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
 				<control type="image">
-					<left>30</left>
+					<left>120</left>
 					<top>140</top>
-					<width>530</width>
+					<width>340</width>
 					<height>470</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
+					<aspectratio>scale</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true">$VAR[IconWallThumbVar]</texture>
+					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+				</control>
+				<control type="image">
+					<left>120</left>
+					<!-- <left>30</left> -->
+					<top>140</top>
+					<width>340</width>
+					<!-- <width>530</width> -->
+					<height>470</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true">$VAR[IconWallThumbVar]</texture>
+					<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 				<control type="group">
-					<left>273</left>
-					<top>590</top>
+					<left>268</left>
+					<top>120</top>
 					<include>UserRatingCircle</include>
+				</control>
+				<control type="progress">
+					<left>120</left>
+					<top>590</top>
+					<width>340</width>
+					<height>1</height>
+					<texturebg></texturebg>
+					<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+					<info>ListItem.PercentPlayed</info>
+					<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 				</control>
 				<control type="textbox" id="15500">
 					<left>30</left>

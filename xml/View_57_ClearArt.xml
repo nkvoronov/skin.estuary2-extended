@@ -72,100 +72,88 @@
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <visible>$PARAM[condition]</visible>
                 <itemlayout height="230" width="378">
-                    <control type="group">
-                        <left>0</left>
-                        <right>10</right>
-                        <control type="group">
-                            <centertop>50%</centertop>
-                            <height>260</height>
-                            <width>340</width>
-                            <centerleft>50%</centerleft>
-                            <visible>String.IsEmpty(ListItem.Art(clearart))</visible>
-                            <visible>String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
-                            <control type="image">
-                                <height>100%</height>
-                                <width>100%</width>
-                                <aspectratio align="center" aligny="center">keep</aspectratio>
-                                <texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
-                            </control>
-                            <control type="image">
-                                <centerleft>50%</centerleft>
-                                <bottom>34</bottom>
-                                <height>35</height>
-                                <width>340</width>
-                                <texture>colors/black.png</texture>
-                                <animation condition="true" effect="Fade" start="50" end="50" time="0">Conditional</animation>
-                                <visible>!ListItem.IsParentFolder</visible>
-                            </control>
-                            <control type="label">
-                                <centerleft>50%</centerleft>
-                                <bottom>38</bottom>
-                                <height>30</height>
-                                <width>330</width>
-                                <align>center</align>
-                                <aligny>center</aligny>
-                                <scroll>true</scroll>
-                                <font>font10</font>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                        </control>
-                        <control type="image">
-                            <centertop>50%</centertop>
-                            <height>186</height>
-                            <width>330</width>
-                            <centerleft>50%</centerleft>
-                            <aspectratio align="center" aligny="center">keep</aspectratio>
-                            <texture>$VAR[ClearArtViewVar]</texture>
-                        </control>
-                    </control>
+					<control type="group">
+						<visible>String.IsEmpty(ListItem.Art(clearart))</visible>
+						<visible>String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
+						<control type="image">
+							<top>18</top>
+							<left>13</left>
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+						</control>
+						<control type="image">
+							<top>178</top>
+							<left>13</left>
+							<width>344</width>
+							<height>35</height>							
+							<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<top>181</top>
+							<left>13</left>
+							<width>344</width>
+							<height>30</height>							
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<font>font10</font>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</control>
+					<control type="image">
+						<top>22</top>
+						<left>20</left>
+						<height>186</height>
+						<width>330</width>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$VAR[ClearArtViewVar]</texture>
+					</control>
                 </itemlayout>
                 <focusedlayout height="230" width="378">
-                    <control type="group">
-                        <left>0</left>
-                        <right>10</right>
-                        <control type="group">
-                            <centertop>50%</centertop>
-                            <height>260</height>
-                            <width>340</width>
-                            <centerleft>50%</centerleft>
-                            <visible>String.IsEmpty(ListItem.Art(clearart))</visible>
-                            <visible>String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
-                            <control type="image">
-                                <height>100%</height>
-                                <width>100%</width>
-                                <aspectratio align="center" aligny="center">keep</aspectratio>
-                                <texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
-                            </control>
-                            <control type="image">
-                                <centerleft>50%</centerleft>
-                                <bottom>34</bottom>
-                                <height>35</height>
-                                <width>340</width>
-                                <texture>colors/black.png</texture>
-                                <animation condition="true" effect="Fade" start="50" end="50" time="0">Conditional</animation>
-                                <visible>!ListItem.IsParentFolder</visible>
-                            </control>
-                            <control type="label">
-                                <centerleft>50%</centerleft>
-                                <bottom>38</bottom>
-                                <height>30</height>
-                                <width>330</width>
-                                <align>center</align>
-                                <aligny>center</aligny>
-                                <scroll>true</scroll>
-                                <font>font10</font>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                        </control>
-                        <control type="image">
-                            <centertop>50%</centertop>
-                            <height>186</height>
-                            <width>330</width>
-                            <centerleft>50%</centerleft>
-                            <aspectratio align="center" aligny="center">keep</aspectratio>
-                            <texture>$VAR[ClearArtViewVar]</texture>
-                        </control>
-                    </control>
+					<control type="group">
+						<visible>String.IsEmpty(ListItem.Art(clearart))</visible>
+						<visible>String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
+						<control type="image">
+							<top>18</top>
+							<left>13</left>						
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+						</control>
+						<control type="image">
+							<top>178</top>
+							<left>13</left>
+							<width>344</width>
+							<height>35</height>							
+							<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<top>181</top>
+							<left>13</left>
+							<width>344</width>
+							<height>30</height>							
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<font>font10</font>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</control>
+					<control type="image">
+						<top>22</top>
+						<left>20</left>
+						<height>186</height>
+						<width>330</width>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$VAR[ClearArtViewVar]</texture>
+					</control>
                 </focusedlayout>
             </control>
         </control>
