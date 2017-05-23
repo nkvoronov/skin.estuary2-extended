@@ -2,11 +2,14 @@
 <includes>
 	<include name="PictureLayout">
 		<param name="focused">false</param>
-        <param name="width1">360</param>
-        <param name="height1">350</param>
-        <param name="width2">320</param>
-        <param name="height2">270</param>
-        <param name="top_text">290</param>
+        <param name="width1">320</param>
+        <param name="height1">355</param>
+        <param name="width2">328</param>
+        <param name="height2">363</param>
+		<param name="icon_width">280</param>
+        <param name="icon_height">280</param>
+        <param name="top_text">295</param>
+		<param name="width_text">280</param>
 		<definition>
 			<control type="image">
 				<top>-10</top>
@@ -17,9 +20,10 @@
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<top>-10</top>
-				<width>$PARAM[width1]</width>
-				<height>$PARAM[height1]</height>
+				<top>-14</top>
+				<left>-4</left>
+				<width>$PARAM[width2]</width>
+				<height>$PARAM[height2]</height>
 				<texture colordiffuse="button_focus">colors/grey.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
@@ -29,21 +33,21 @@
 			<control type="image">
 				<left>20</left>
 				<top>10</top>
-				<width>$PARAM[width2]</width>
-				<height>$PARAM[height2]</height>
+				<width>$PARAM[icon_width]</width>
+				<height>$PARAM[icon_height]</height>
 				<texture border="2" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
 				<left>20</left>
 				<top>$PARAM[top_text]</top>
-				<width>$PARAM[width2]</width>
-				<textoffsetx>20</textoffsetx>
+				<width>$PARAM[width_text]</width>
 				<height>20</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12</font>
 				<label>$INFO[ListItem.Label]</label>
+				<autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
 			</control>
 		</definition>
 	</include>
@@ -485,11 +489,14 @@
 						<left>0</left>
 						<top>150</top>
 						<include content="PictureLayout">
-                            <param name="width1" value="300" />
-                            <param name="height1" value="360" />        
-                            <param name="width2" value="260" />
-                            <param name="height2" value="280" />        
-                            <param name="top_text" value="300" />
+							<param name="width1" value="300" />
+							<param name="height1" value="350" />
+							<param name="width2" value="308" />
+							<param name="height2" value="358" />
+							<param name="icon_width" value="260" />
+							<param name="icon_height" value="260" />
+							<param name="top_text" value="285" />
+							<param name="width_text" value="260" />
 						</include>
 					</control>
 				</itemlayout>
@@ -502,11 +509,14 @@
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,330">UnFocus</animation>
 						<include content="PictureLayout">
 							<param name="focused" value="true" />
-                            <param name="width1" value="300" />
-                            <param name="height1" value="360" />        
-                            <param name="width2" value="260" />
-                            <param name="height2" value="280" />        
-                            <param name="top_text" value="300" />
+							<param name="width1" value="300" />
+							<param name="height1" value="350" />
+							<param name="width2" value="308" />
+							<param name="height2" value="358" />
+							<param name="icon_width" value="260" />
+							<param name="icon_height" value="260" />
+							<param name="top_text" value="285" />
+							<param name="width_text" value="260" />
 						</include>
 					</control>
 				</focusedlayout>

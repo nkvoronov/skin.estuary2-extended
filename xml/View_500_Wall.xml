@@ -62,7 +62,7 @@
 				</focusedlayout>
                 <itemlayout height="360" width="350" condition="Container.Content(images)">
 					<control type="group">
-						<left>40</left>
+						<left>35</left>
 						<top>150</top>
 						<include>PictureLayout</include>
 					</control>
@@ -72,7 +72,7 @@
 						<depth>DepthContentPopout</depth>
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,330">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,330">UnFocus</animation>
-						<left>40</left>
+						<left>35</left>
 						<top>150</top>
 						<include content="PictureLayout">
 							<param name="focused" value="true" />
