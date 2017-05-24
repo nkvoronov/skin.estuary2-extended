@@ -24,10 +24,9 @@
     <shortcut>
         <label>427</label>
         <label2>427</label2>
-        <defaultID>disc</defaultID>
+        <defaultID>dvd</defaultID>
         <icon>special://skin/extras/icons/dvd.png</icon>
         <action>PlayDisc</action>
-        <visible>System.HasMediaDVD</visible>
     </shortcut>    
     <shortcut>
         <label>20389</label>
