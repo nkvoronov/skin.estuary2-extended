@@ -449,8 +449,22 @@
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/info.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
-						<param name="onclick_1" value="RunScript(script.extendedinfo,info=openinfodialog)" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]" />
+						<param name="onclick_1" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID],id=$INFO[ListItem.ID])" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DbType,movie)" />
+					</include>
+					<include content="InfoDialogButton">
+						<param name="id" value="101" />
+						<param name="icon" value="icons/infodialogs/info.png" />
+						<param name="label" value="$LOCALIZE[31034]" />
+						<param name="onclick_1" value="RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[ListItem.DBID],id=$INFO[ListItem.ID])" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DbType,tvshow)" />
+					</include>
+					<include content="InfoDialogButton">
+						<param name="id" value="101" />
+						<param name="icon" value="icons/infodialogs/info.png" />
+						<param name="label" value="$LOCALIZE[31034]" />
+						<param name="onclick_1" value="RunScript(script.extendedinfo,info=seasoninfo,tvshow=$INFO[ListItem.TVShowTitle],season=$INFO[ListItem.Season])" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="13" />
