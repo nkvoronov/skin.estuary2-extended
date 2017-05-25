@@ -22,8 +22,8 @@
         <!-- Weather -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)">[B][COLOR button_focus]$LOCALIZE[143][/COLOR][/B] $INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  [B][COLOR button_focus]$LOCALIZE[33030]: [/COLOR][/B]$INFO[Window(weather).Property(Current.Condition)]</value>
 		<!-- PlayDisc -->
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),disc) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])] + System.HasMediaDVD">[B][COLOR button_focus]$LOCALIZE[427]: [/COLOR][/B]$INFO[System.DVDLabel]</value>
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),disc) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])] + !System.HasMediaDVD">[B][COLOR button_focus]$LOCALIZE[427]: [/COLOR][/B]$LOCALIZE[164]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])] + System.HasMediaDVD">[B][COLOR button_focus]$LOCALIZE[427]: [/COLOR][/B]$INFO[System.DVDLabel]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])] + !System.HasMediaDVD">[B][COLOR button_focus]$LOCALIZE[427]: [/COLOR][/B]$LOCALIZE[164]</value>
 		<!-- TV -->
         <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020])">[B][COLOR button_focus]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalTVChannels)]</value>
         <!-- Radio -->

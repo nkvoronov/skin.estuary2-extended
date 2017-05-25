@@ -184,43 +184,61 @@
 					<param name="width" value="654" />
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
-				<control type="image">
-					<left>120</left>
-					<top>140</top>
-					<width>340</width>
-					<height>470</height>
-					<aspectratio>scale</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true">$VAR[IconWallThumbVar]</texture>
-					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
-				</control>
-				<control type="image">
-					<left>120</left>
-					<!-- <left>30</left> -->
-					<top>140</top>
-					<width>340</width>
-					<!-- <width>530</width> -->
-					<height>470</height>
-					<aspectratio aligny="center">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true">$VAR[IconWallThumbVar]</texture>
-					<visible>String.IsEmpty(ListItem.Art(poster))</visible>
-				</control>
-				<control type="group">
-					<left>268</left>
-					<top>120</top>
-					<include>UserRatingCircle</include>
-				</control>
-				<control type="progress">
-					<left>120</left>
-					<top>590</top>
-					<width>340</width>
-					<height>1</height>
-					<texturebg></texturebg>
-					<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-					<info>ListItem.PercentPlayed</info>
-					<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-				</control>
+                <control type="group">
+                    <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+                    <control type="image">
+                        <left>120</left>
+                        <top>140</top>
+                        <width>340</width>
+                        <height>470</height>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>300</fadetime>
+                        <texture background="true">$VAR[IconWallThumbVar]</texture>
+                        <visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+                    </control>
+                    <control type="image">
+                        <left>30</left>
+                        <top>140</top>
+                        <width>530</width>
+                        <height>470</height>
+                        <aspectratio aligny="center">keep</aspectratio>
+                        <fadetime>300</fadetime>
+                        <texture background="true">$VAR[IconWallThumbVar]</texture>
+                        <visible>String.IsEmpty(ListItem.Art(poster))</visible>
+                    </control>
+                    <control type="group">
+                        <left>268</left>
+                        <top>120</top>
+                        <include>UserRatingCircle</include>
+                    </control>
+                    <control type="progress">
+                        <left>120</left>
+                        <top>590</top>
+                        <width>340</width>
+                        <height>1</height>
+                        <texturebg></texturebg>
+                        <midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+                        <info>ListItem.PercentPlayed</info>
+                        <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+                    <control type="image">
+                        <left>30</left>
+                        <top>140</top>
+                        <width>530</width>
+                        <height>470</height>
+                        <aspectratio aligny="center">keep</aspectratio>
+                        <fadetime>300</fadetime>
+                        <texture background="true">$VAR[IconWallThumbVar]</texture>
+                    </control>
+                    <control type="group">
+                        <left>268</left>
+                        <top>120</top>
+                        <include>UserRatingCircle</include>
+                    </control>
+                </control>
 				<control type="textbox" id="15500">
 					<left>30</left>
 					<top>640</top>

@@ -26,7 +26,7 @@
         <label2>427</label2>
         <defaultID>dvd</defaultID>
         <icon>special://skin/extras/icons/dvd.png</icon>
-        <action>PlayDisc</action>
+        <action>PlayDVD</action>
     </shortcut>    
     <shortcut>
         <label>20389</label>

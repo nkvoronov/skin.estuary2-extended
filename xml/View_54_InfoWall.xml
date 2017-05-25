@@ -292,9 +292,9 @@
 					<font>font27</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label] Test</label>
+					<label>$INFO[ListItem.Label]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
-					<!-- <visible>!ListItem.IsParentFolder</visible> -->
+					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<left>$PARAM[noposter_left]</left>

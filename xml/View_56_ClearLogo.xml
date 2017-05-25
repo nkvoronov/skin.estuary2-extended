@@ -204,9 +204,9 @@
                     <param name="noposter_size" value="248" />      
                     <param name="overlays_top" value="330" />
                     <param name="tvshows_items_top" value="360" />
-                    <param name="tvshows_items_width1" value="445" />
-                    <param name="tvshows_items_width2" value="435" />
-                    <param name="tvshows_items_left" value="445" />
+                    <param name="tvshows_items_width1" value="260" />
+                    <param name="tvshows_items_width2" value="250" />
+                    <param name="tvshows_items_left" value="260" />
                     <param name="watchedicon_top" value="378" />
                     <param name="userratingcircle_left" value="134" />
                     <param name="progress_top" value="390" />
@@ -225,8 +225,7 @@
             </control>
             <control type="label">
                 <top>10</top>
-                <left>439</left>
-                <left>449</left>
+                <left>429</left>
                 <right>10</right>
                 <width>580</width>
                 <height>365</height>
@@ -236,8 +235,7 @@
             </control>            
             <control type="textbox">
                 <top>10</top>
-                <left>439</left>
-                <left>449</left>
+                <left>429</left>
                 <right>10</right>
                 <width>580</width>
                 <height>338</height>
@@ -249,8 +247,7 @@
             </control>
             <control type="textbox">
                 <top>10</top>
-                <left>439</left>
-                <left>449</left>
+                <left>429</left>
                 <right>10</right>
                 <width>580</width>
                 <height>365</height>
@@ -262,8 +259,7 @@
             </control>
             <control type="textbox">
                 <top>10</top>
-                <left>439</left>
-                <left>449</left>
+                <left>429</left>
                 <right>10</right>
                 <width>580</width>
                 <height>365</height>
@@ -274,8 +270,7 @@
             </control>
             <control type="group">
                 <top>60</top>
-                <left>439</left>
-                <left>449</left>
+                <left>429</left>
                 <visible>ListItem.IsCollection</visible>
                 <include content="InfoList">
                     <param name="height" value="305" />
@@ -286,28 +281,10 @@
                     <param name="font" value="font12" />
                     <param name="list_id" value="5600" />
                 </include>
-            </control>
-			<!-- <control type="image">
-                <bottom>2</bottom>
-                <left>991</left>
-                <width>48</width>
-                <height>48</height>
-				<texture>$VAR[WallWatchedIconVar]</texture>
-			</control>
-			<control type="progress">
-                <top>408</top>
-                <left>130</left>
-				<width>1700</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.PercentPlayed</info>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-			</control> -->			
+            </control>		
             <control type="label">
                 <bottom>40</bottom>
-                <left>439</left>
-                <left>449</left>
+                <left>429</left>
                 <right>10</right>
                 <width>535</width>
                 <height>30</height>
@@ -319,8 +296,7 @@
             </control>
             <control type="label">
                 <bottom>40</bottom>
-                <left>439</left>
-                <left>449</left>
+                <left>429</left>
                 <right>10</right>
                 <width>535</width>
                 <height>30</height>
@@ -332,8 +308,7 @@
             </control>
             <control type="label">
                 <bottom>10</bottom>
-                <left>439</left>
-                <left>449</left>
+                <left>429</left>
                 <right>10</right>
                 <width>535</width>
                 <height>30</height>

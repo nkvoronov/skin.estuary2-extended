@@ -169,20 +169,16 @@
 	<propertydefault labelID="music" property="widgetPath.widget6">special://skin/extras/playlists/mostplayed_albums.xsp</propertydefault>
     <!-- Default Backgrounds -->
 	<backgrounddefault labelID="weather">special://skin/extras/home-images/weather.jpg</backgrounddefault>
-	<backgrounddefault labelID="picture">special://skin/extras/home-images/pictures.jpg</backgrounddefault>
+	<backgrounddefault labelID="pictures">special://skin/extras/home-images/pictures.jpg</backgrounddefault>
 	<backgrounddefault labelID="livetv">special://skin/extras/home-images/livetv.jpg</backgrounddefault>
 	<backgrounddefault labelID="radio">special://skin/extras/home-images/radio.jpg</backgrounddefault>
-    <backgrounddefault labelID="videos">special://skin/extras/home-images/videos.jpg</backgrounddefault>
+    <backgrounddefault labelID="video">special://skin/extras/home-images/videos.jpg</backgrounddefault>
     <backgrounddefault labelID="movies">special://skin/extras/home-images/movies.jpg</backgrounddefault>
     <backgrounddefault labelID="tvshows">special://skin/extras/home-images/tvshows.jpg</backgrounddefault>
-    <backgrounddefault labelID="musicvideo">special://skin/extras/home-images/musicvideo.jpg</backgrounddefault>
+    <backgrounddefault labelID="musicvideos">special://skin/extras/home-images/musicvideo.jpg</backgrounddefault>
     <backgrounddefault labelID="music">special://skin/extras/home-images/music.jpg</backgrounddefault>    
-    <backgrounddefault labelID="addon">special://skin/extras/home-images/addons.jpg</backgrounddefault>
-    <backgrounddefault labelID="setting">special://skin/extras/home-images/settings.jpg</backgrounddefault>
-	<backgrounddefault labelID="search">special://skin/extras/home-images/search.jpg</backgrounddefault>
-    <backgrounddefault labelID="power">special://skin/extras/home-images/power.jpg</backgrounddefault>    
-    <backgrounddefault labelID="favourites">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
-    <backgrounddefault labelID="filemanager">special://skin/extras/home-images/filemanager.jpg</backgrounddefault>
+    <backgrounddefault labelID="addons">special://skin/extras/home-images/addons.jpg</backgrounddefault>    
+    <backgrounddefault labelID="favorites">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
     <backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>
     <!-- Context Menu -->
     <contextmenu>
@@ -345,7 +341,7 @@
         </node>
         <!-- DVD -->
         <node label="446">
-            <shortcut label="341" type="446" icon="special://skin/extras/icons/dvd.png">PlayDisc</shortcut>
+            <shortcut label="341" type="446" icon="special://skin/extras/icons/dvd.png">PlayDVD</shortcut>
             <shortcut label="13391" type="446" icon="special://skin/extras/icons/eject.png">EjectTray()</shortcut>
 			<shortcut label="600" type="446" icon="special://skin/extras/icons/cd.png">RipCD()</shortcut>
         </node>
