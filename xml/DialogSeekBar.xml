@@ -44,7 +44,7 @@
 					<aligny>center</aligny>
 					<font>font30</font>
 					<wrapmultiline>true</wrapmultiline>
-					<label>[COLOR button_focus]$LOCALIZE[21396]:[CR][/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[21396]:[CR][/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
 					<visible>player.chaptercount</visible>
 				</control>
 				<control type="group">
@@ -77,7 +77,8 @@
 					<wrapmultiline>true</wrapmultiline>
 					<visible>!Window.IsActive(fullscreeninfo)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<label>$INFO[Player.TimeRemaining,[COLOR button_focus]$LOCALIZE[31134]:[CR][/COLOR]]</label>
+					<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134]:[CR][COLOR white],[/COLOR]]</label>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 			</control>
 			<control type="label">
@@ -165,7 +166,7 @@
 				<height>15</height>
 				<info>Player.Progress</info>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
+				<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
 			</control>
 			<control type="slider" id="401">
 				<left>5</left>
@@ -173,8 +174,8 @@
 				<width>100%</width>
 				<height>25</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_bar.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">colors/white.png</textureslidernibfocus>
 				<visible>!VideoPlayer.Content(livetv)</visible>
 			</control>
 		</control>
@@ -214,7 +215,7 @@
 				<width>800</width>
 				<top>190</top>
 				<height>25</height>
-				<label>$INFO[VideoPlayer.NextTitle,[COLOR grey]$LOCALIZE[19031]: [/COLOR], - ][COLOR button_focus]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime: ][/COLOR]</label>
+				<label>$INFO[VideoPlayer.NextTitle,[COLOR grey]$LOCALIZE[19031]: [/COLOR], - ][COLOR $VAR[MainColorVar]]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime: ][/COLOR]</label>
 				<align>right</align>
 				<aligny>center</aligny>
 				<visible>VideoPlayer.HasEpg</visible>

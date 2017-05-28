@@ -70,7 +70,7 @@
 					<aspectratio>keep</aspectratio>
 					<width>56</width>
 					<height>56</height>
-					<texture colordiffuse="button_focus">icons/logo.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
 				</control>
 				<control type="image">
 					<left>40</left>
@@ -105,8 +105,8 @@
 				<font>font12</font>
 				<urlset>1</urlset>
 				<hitrect x="-100" y="0" w="1" h="1" />
-				<titlecolor>button_focus</titlecolor>
-				<textcolor>button_focus</textcolor>
+				<titlecolor>$VAR[MainColorVar]</titlecolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<headlinecolor>FFC0C0C0</headlinecolor>
 			</control>

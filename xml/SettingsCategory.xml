@@ -34,14 +34,14 @@
 				<top>160</top>
 				<right>0</right>
 				<height>2</height>
-				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="image">
 				<left>470</left>
 				<bottom>135</bottom>
 				<right>0</right>
 				<height>2</height>
-				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
 		<control type="button" id="7">
@@ -106,7 +106,7 @@
 				<textoffsetx>40</textoffsetx>
 				<aligny>center</aligny>
 				<font>font37</font>
-				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 				<texturenofocus />
 			</control>
 			<control type="radiobutton" id="20">
@@ -118,7 +118,7 @@
 				<onclick>SettingsLevelChange</onclick>
 				<textoffsetx>100</textoffsetx>
 				<textoffsety>0</textoffsety>
-				<texturefocus colordiffuse="button_focus">colors/white.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorVar]">colors/white.png</texturefocus>
 				<texturenofocus />
 				<radioposx>40</radioposx>
 				<radioposy>0</radioposy>
@@ -163,7 +163,7 @@
 				<height>102</height>
 				<font>font12</font>
 				<align>justify</align>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 		</control>

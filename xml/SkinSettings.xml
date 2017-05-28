@@ -517,7 +517,7 @@
                     <description>Color Secondary Background</description>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43027]</label>
-                    <label2>[COLOR $VAR[SecondaryBackgroundColorVar]]$VAR[PrimaryBackgroundColorNameVar][/COLOR]</label2>
+                    <label2>[COLOR $VAR[SecondaryBackgroundColorVar]]$VAR[SecondaryBackgroundColorVar][/COLOR]</label2>
                     <onclick>RunScript(script.skin.helper.colorpicker,skinstring=SecondaryBackgroundColor)</onclick>
                 </control>
                 <control type="button" id="604">
@@ -598,7 +598,7 @@
 				<top>160</top>
 				<right>0</right>
 				<height>3</height>
-				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>
@@ -606,7 +606,7 @@
 				<bottom>134</bottom>
 				<right>0</right>
 				<height>3</height>
-				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -640,7 +640,7 @@
 					<control type="image">
 						<width>470</width>
 						<height>90</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="label">
@@ -811,7 +811,7 @@
 			<height>100</height>
 			<font>font12</font>
 			<align>justify</align>
-			<textcolor>button_focus</textcolor>
+			<textcolor>$VAR[MainColorVar]</textcolor>
 			<label>$VAR[SkinSettingsHelpTextVar]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 		</control>

@@ -30,7 +30,7 @@
 							<left>0</left>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="label">
@@ -96,7 +96,7 @@
 							<height>110</height>
 							<align>left</align>
 							<aligny>top</aligny>
-							<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+							<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 							<texturenofocus />
 							<radioposx>300</radioposx>
 							<textoffsetx>40</textoffsetx>

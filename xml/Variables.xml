@@ -10,32 +10,32 @@
     <!-- Stats bar -->
 	<variable name="InfoBarStatsVar">
         <!-- Videos -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),video)">[B][COLOR button_focus]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR button_focus]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR button_focus]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),video)">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]</value>
         <!-- Movies -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),movies)">[B][COLOR button_focus]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR button_focus]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(Movies.Watched)]  [B][COLOR button_focus]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Movies.UnWatched)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),movies)">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(Movies.Watched)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Movies.UnWatched)]</value>
         <!-- TVShows -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)">[B][COLOR button_focus]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR button_focus]$LOCALIZE[20360]: [/COLOR][/B]$INFO[Window.Property(Episodes.Count)]  [B][COLOR button_focus]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Episodes.UnWatched)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[20360]: [/COLOR][/B]$INFO[Window.Property(Episodes.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(Episodes.UnWatched)]</value>
         <!-- MusicVideos -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),musicvideos)">[B][COLOR button_focus]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]  [B][COLOR button_focus]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Watched)]  [B][COLOR button_focus]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.UnWatched)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),musicvideos)">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Watched)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.UnWatched)]</value>
         <!-- Music -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),music)">[B][COLOR button_focus]$LOCALIZE[132]: [/COLOR][/B]$INFO[Window.Property(Music.AlbumsCount)]  [B][COLOR button_focus]$LOCALIZE[133]: [/COLOR][/B]$INFO[Window.Property(Music.ArtistsCount)]  [B][COLOR button_focus]$LOCALIZE[134]: [/COLOR][/B]$INFO[Window.Property(Music.SongsCount)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),music)">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[132]: [/COLOR][/B]$INFO[Window.Property(Music.AlbumsCount)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[133]: [/COLOR][/B]$INFO[Window.Property(Music.ArtistsCount)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[134]: [/COLOR][/B]$INFO[Window.Property(Music.SongsCount)]</value>
         <!-- Weather -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)">[B][COLOR button_focus]$LOCALIZE[143][/COLOR][/B] $INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  [B][COLOR button_focus]$LOCALIZE[33030]: [/COLOR][/B]$INFO[Window(weather).Property(Current.Condition)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[143][/COLOR][/B] $INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[33030]: [/COLOR][/B]$INFO[Window(weather).Property(Current.Condition)]</value>
 		<!-- PlayDisc -->
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])] + System.HasMediaDVD">[B][COLOR button_focus]$LOCALIZE[427]: [/COLOR][/B]$INFO[System.DVDLabel]</value>
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])] + !System.HasMediaDVD">[B][COLOR button_focus]$LOCALIZE[427]: [/COLOR][/B]$LOCALIZE[164]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])] + System.HasMediaDVD">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[427]: [/COLOR][/B]$INFO[System.DVDLabel]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])] + !System.HasMediaDVD">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[427]: [/COLOR][/B]$LOCALIZE[164]</value>
 		<!-- TV -->
-        <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020])">[B][COLOR button_focus]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalTVChannels)]</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalTVChannels)]</value>
         <!-- Radio -->
-        <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),radio) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19021])">[B][COLOR button_focus]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalRadioChannels)]</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),radio) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19021])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalRadioChannels)]</value>
 		<!-- Addons -->
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001])]">[B][COLOR button_focus]$LOCALIZE[3]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalVideoAddons)]  [B][COLOR button_focus]$LOCALIZE[2]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalAudioAddons)]  [B][COLOR button_focus]$LOCALIZE[0]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalProgramAddons)]  [B][COLOR button_focus]$LOCALIZE[1]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalPicturesAddons)]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001])]">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[3]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalVideoAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[2]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalAudioAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[0]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalProgramAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[1]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalPicturesAddons)]</value>
 		<!-- Favourites -->
-		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),favorites) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1036])]">[B][COLOR button_focus]$LOCALIZE[1036]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalFavourites)]</value>
+		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),favorites) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1036])]">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[1036]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalFavourites)]</value>
         <!-- Other -->
-		<value condition="!String.Contains(System.CPUTemperature,?) + !String.Contains(System.GPUTemperature,?)">[B][COLOR button_focus]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR button_focus]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR button_focus]GPU: [/COLOR][/B]$INFO[System.GPUTemperature]</value>
-		<value condition="!String.Contains(System.CPUTemperature,?)">[B][COLOR button_focus]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR button_focus]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR button_focus]$LOCALIZE[155]: [/COLOR][/B]$INFO[System.UsedSpacePercent]</value>
-		<value>[B][COLOR button_focus]IP: [/B][/COLOR]$INFO[Network.IPAddress]  [COLOR button_focus][B]RAM: [/B][/COLOR]$INFO[system.memory(used.percent)]  [COLOR button_focus][B]$LOCALIZE[155]: [/B][/COLOR]$INFO[System.UsedSpacePercent]</value>
+		<value condition="!String.Contains(System.CPUTemperature,?) + !String.Contains(System.GPUTemperature,?)">[B][COLOR $VAR[MainColorVar]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR $VAR[MainColorVar]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR $VAR[MainColorVar]]GPU: [/COLOR][/B]$INFO[System.GPUTemperature]</value>
+		<value condition="!String.Contains(System.CPUTemperature,?)">[B][COLOR $VAR[MainColorVar]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR $VAR[MainColorVar]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[155]: [/COLOR][/B]$INFO[System.UsedSpacePercent]</value>
+		<value>[B][COLOR $VAR[MainColorVar]]IP: [/B][/COLOR]$INFO[Network.IPAddress]  [COLOR $VAR[MainColorVar]][B]RAM: [/B][/COLOR]$INFO[system.memory(used.percent)]  [COLOR $VAR[MainColorVar]][B]$LOCALIZE[155]: [/B][/COLOR]$INFO[System.UsedSpacePercent]</value>
 	</variable>
     <!-- Now Playing label -->
 	<variable name="NowPlayingMainlabelVar">
@@ -113,13 +113,13 @@
 	</variable>
     <!-- Select Label -->
 	<variable name="SelectLabelVar">
-		<value condition="Control.IsVisible(3)">[COLOR button_focus]$INFO[Container(3).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR button_focus]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR]</value>
-		<value>[COLOR button_focus]$INFO[Container(6).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR button_focus]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR]</value>
+		<value condition="Control.IsVisible(3)">[COLOR $VAR[MainColorVar]]$INFO[Container(3).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR]</value>
+		<value>[COLOR $VAR[MainColorVar]]$INFO[Container(6).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR]</value>
 	</variable>
     <!-- FileBrowser Select Label -->
 	<variable name="FileBrowserSelectLabelVar">
-		<value condition="Control.IsVisible(450)">[COLOR button_focus]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR button_focus]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
-		<value>[COLOR button_focus]$INFO[Container(451).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR button_focus]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR]</value>
+		<value condition="Control.IsVisible(450)">[COLOR $VAR[MainColorVar]]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
+		<value>[COLOR $VAR[MainColorVar]]$INFO[Container(451).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages][/COLOR]</value>
 	</variable>
     <!-- Addons Label2 -->
 	<variable name="AddonsLabel2Var">
@@ -155,12 +155,12 @@
 	</variable>
     <!-- Repeat Button Colordiffuse -->
 	<variable name="RepeatButtonColordiffuseVar">
-		<value condition="Control.HasFocus(704)">button_focus</value>
+		<value condition="Control.HasFocus(704)">$VAR[MainColorVar]</value>
 		<value>FFFFFFFF</value>
 	</variable>
     <!-- Bottom Bar Page Label -->
 	<variable name="BottomBarPageLabelVar">
-		<value condition="Control.HasFocus(600) | Control.HasFocus(50600) | Control.HasFocus(502600) | Control.HasFocus(5199) | Control.HasFocus(531) | Control.HasFocus(533)">[COLOR button_focus]$INFO[Container.CurrentPage,, / ]$INFO[Container.NumPages][/COLOR]</value>
+		<value condition="Control.HasFocus(600) | Control.HasFocus(50600) | Control.HasFocus(502600) | Control.HasFocus(5199) | Control.HasFocus(531) | Control.HasFocus(533)">[COLOR $VAR[MainColorVar]]$INFO[Container.CurrentPage,, / ]$INFO[Container.NumPages][/COLOR]</value>
 		<value>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</value>
 	</variable>
     <!-- PVR Channel MgrHeader -->
@@ -572,7 +572,7 @@
     <!-- Breadcrumbs Now Playing -->
     <variable name="NowPlayingBreadcrumbsVar">
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title]</value>
-		<value condition="Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, ([COLOR button_focus],[/COLOR])]</value>
+		<value condition="Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
 		<value condition="MusicPartyMode.Enabled">$LOCALIZE[589]</value>
 		<value>$LOCALIZE[31000]...</value>
 	</variable>

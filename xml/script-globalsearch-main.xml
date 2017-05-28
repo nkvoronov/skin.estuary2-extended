@@ -197,7 +197,7 @@
 					<top>1</top>
 					<width>118</width>
 					<height>118</height>
-					<texture colordiffuse="button_focus">buttons/roundbutton-fo.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texture>
 					<visible>Control.HasFocus(198)</visible>
 				</control>
 				<control type="image">
@@ -288,7 +288,7 @@
 									<top>0</top>
 									<width>462</width>
 									<height>95</height>
-									<texture colordiffuse="button_focus">lists/focus.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 								</control>
 								<control type="image">
@@ -296,7 +296,7 @@
 									<top>1</top>
 									<width>95</width>
 									<height>95</height>
-									<texture colordiffuse="button_focus">$INFO[ListItem.Art(thumb)]</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Art(thumb)]</texture>
 									<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 								</control>
 								<control type="image">
@@ -464,7 +464,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -517,7 +517,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -541,7 +541,7 @@
 										<left>1</left>
 										<width>220</width>
 										<height>330</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -550,7 +550,7 @@
 									<width>70</width>
 									<height>330</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -632,8 +632,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -647,8 +647,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -681,7 +681,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(111).NumItems)</xvisible>
 							</control>
@@ -789,7 +789,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -842,7 +842,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -866,7 +866,7 @@
 										<left>1</left>
 										<width>220</width>
 										<height>330</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -875,7 +875,7 @@
 									<width>70</width>
 									<height>330</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -957,8 +957,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -972,8 +972,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -1006,7 +1006,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(121).NumItems)</xvisible>
 							</control>
@@ -1066,7 +1066,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -1119,7 +1119,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -1143,7 +1143,7 @@
 										<left>1</left>
 										<width>220</width>
 										<height>330</height>
-                                        <texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+                                        <texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -1152,7 +1152,7 @@
 									<width>70</width>
 									<height>330</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -1234,8 +1234,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -1249,8 +1249,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -1283,7 +1283,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(131).NumItems)</xvisible>
 							</control>
@@ -1357,7 +1357,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -1425,7 +1425,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -1442,7 +1442,7 @@
 										<top>11</top>
 										<width>380</width>
 										<height>333</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -1451,7 +1451,7 @@
 									<width>70</width>
 									<height>330</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -1533,8 +1533,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -1548,8 +1548,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -1582,7 +1582,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(141).NumItems)</xvisible>
 							</control>
@@ -1704,7 +1704,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -1772,7 +1772,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -1789,7 +1789,7 @@
 										<top>11</top>
 										<width>380</width>
 										<height>333</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -1798,7 +1798,7 @@
 									<width>70</width>
 									<height>330</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -1880,8 +1880,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -1895,8 +1895,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -1929,7 +1929,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(151).NumItems)</xvisible>
 							</control>
@@ -2040,7 +2040,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -2097,7 +2097,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -2114,7 +2114,7 @@
 										<top>11</top>
 										<width>300</width>
 										<height>300</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -2123,7 +2123,7 @@
 									<width>70</width>
 									<height>300</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -2186,8 +2186,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -2201,8 +2201,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -2235,7 +2235,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(161).NumItems)</xvisible>
 							</control>
@@ -2309,7 +2309,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -2377,7 +2377,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -2394,7 +2394,7 @@
 										<top>11</top>
 										<width>300</width>
 										<height>300</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -2403,7 +2403,7 @@
 									<width>70</width>
 									<height>300</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -2466,8 +2466,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -2481,8 +2481,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -2515,7 +2515,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(171).NumItems)</xvisible>
 							</control>
@@ -2589,7 +2589,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -2657,7 +2657,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -2674,7 +2674,7 @@
 										<top>11</top>
 										<width>300</width>
 										<height>300</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -2683,7 +2683,7 @@
 									<width>70</width>
 									<height>300</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -2765,8 +2765,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -2780,8 +2780,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -2814,7 +2814,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(181).NumItems)</xvisible>
 							</control>
@@ -2874,7 +2874,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -2927,7 +2927,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -2951,7 +2951,7 @@
 										<left>1</left>
 										<width>220</width>
 										<height>330</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -2960,7 +2960,7 @@
 									<width>70</width>
 									<height>330</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -3042,8 +3042,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -3057,8 +3057,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -3091,7 +3091,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(211).NumItems)</xvisible>
 							</control>
@@ -3199,7 +3199,7 @@
 										<width>36</width>
 										<height>36</height>
 										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="button_focus">overlays/circle.png</texture>
+										<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 									</control>
 									<control type="label">
 										<top>6</top>
@@ -3252,7 +3252,7 @@
 											<width>36</width>
 											<height>36</height>
 											<aspectratio>keep</aspectratio>
-											<texture colordiffuse="button_focus">overlays/circle.png</texture>
+											<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 										</control>
 										<control type="label">
 											<top>6</top>
@@ -3276,7 +3276,7 @@
 										<left>1</left>
 										<width>220</width>
 										<height>330</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -3285,7 +3285,7 @@
 									<width>70</width>
 									<height>330</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -3367,8 +3367,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -3382,8 +3382,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -3416,7 +3416,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(231).NumItems)</xvisible>
 							</control>
@@ -3575,7 +3575,7 @@
 										<top>11</top>
 										<width>300</width>
 										<height>300</height>
-										<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 									</control>
 								</control>
 								<control type="image">
@@ -3584,7 +3584,7 @@
 									<width>70</width>
 									<height>300</height>
 									<fadetime>300</fadetime>
-									<texture colordiffuse="button_focus">colors/white.png</texture>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 									<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 									<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 								</control>
@@ -3625,8 +3625,8 @@
 								<top>-38</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -3640,8 +3640,8 @@
 								<top>738</top>
 								<width>48</width>
 								<height>24</height>
-								<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-								<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+								<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+								<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 								<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 								<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 								<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -3674,7 +3674,7 @@
 								<width>54</width>
 								<height>44</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">frame/item-count.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">frame/item-count.png</texture>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<xvisible>!IsEmpty(Container(221).NumItems)</xvisible>
 							</control>
@@ -3706,7 +3706,7 @@
 					<aspectratio>keep</aspectratio>
 					<width>56</width>
 					<height>56</height>
-					<texture colordiffuse="button_focus">icons/logo.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
 				</control>
 				<control type="image">
 					<left>40</left>
@@ -3742,7 +3742,7 @@
 				<font>font12</font>
 				<urlset>1</urlset>
 				<hitrect x="-100" y="0" w="1" h="1" />
-				<titlecolor>button_focus</titlecolor>
+				<titlecolor>$VAR[MainColorVar]</titlecolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<headlinecolor>FFC0C0C0</headlinecolor>
 				<visible>!Player.hasMedia</visible>

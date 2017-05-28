@@ -104,7 +104,7 @@
 						<height>40</height>
 						<label>$INFO[ListItem.Year]</label>
 						<font>font45_title</font>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<align>right</align>
 					</control>
@@ -115,7 +115,7 @@
 						<right>115</right>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
                         <label>$INFO[ListItem.Tagline,[I],[/I][CR]][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-                        <textcolor>button_focus</textcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>!ListItem.IsCollection</visible>
 					</control>

@@ -32,7 +32,7 @@
 					<width>1050</width>
 					<height>365</height>
                     <label>$INFO[ListItem.AddonSummary,[B],[/B][CR]][COLOR white]$INFO[ListItem.AddonDescription][/COLOR][COLOR white][CR][/COLOR]$VAR[AddonNewsVar,[CR][CR]]</label>
-                    <textcolor>button_focus</textcolor>
+                    <textcolor>$VAR[MainColorVar]</textcolor>
 					<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 				</control>
 				<control type="group">
@@ -118,7 +118,7 @@
 							<top>16</top>
 							<width>393</width>
 							<height>228</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 						</control>
 					</focusedlayout>
 				</control>
@@ -244,14 +244,14 @@
 						<width>470</width>
 						<height>40</height>
 						<label>$INFO[ListItem.AddonSize,$LOCALIZE[22031]:[COLOR white] ,[/COLOR][CR] ]</label>
-                        <textcolor>button_focus</textcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
 						<visible>!String.IsEmpty(ListItem.AddonSize)</visible>
 					</control>
 					<control type="label">
 						<width>470</width>
 						<height>40</height>
 						<label>$INFO[ListItem.AddonOrigin,$LOCALIZE[31150]:[COLOR white] ,[/COLOR] ]</label>
-                        <textcolor>button_focus</textcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
 						<visible>!String.IsEmpty(ListItem.AddonOrigin)</visible>
 					</control>
 				</control>

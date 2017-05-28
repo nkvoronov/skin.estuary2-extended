@@ -65,7 +65,7 @@
 						<width>1600</width>
 						<height>40</height>
 						<label>[COLOR white]$INFO[MusicPlayer.Artist][/COLOR]</label>
-                        <textcolor>button_focus</textcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
 						<font>font60</font>
 						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
@@ -75,7 +75,7 @@
 						<width>1600</width>
 						<height>40</height>
                         <label>[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</label>
-                        <textcolor>button_focus</textcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
 						<font>font37</font>
 						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
@@ -85,10 +85,9 @@
 						<width>1600</width>
 						<height>40</height>
                         <label>$INFO[MusicPlayer.TrackNumber,,. ][COLOR white]$INFO[MusicPlayer.Title][/COLOR]</label>
-                        <textcolor>button_focus</textcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
 						<font>font45</font>
 						<shadowcolor>black</shadowcolor>
-						<textcolor>button_focus</textcolor>
 						<scroll>true</scroll>
 					</control>
 				</control>

@@ -66,7 +66,7 @@
 						<width>560</width>
 						<height>1</height>
 						<texturebg></texturebg>
-						<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+						<midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
 						<info>ListItem.PercentPlayed</info>
 						<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 					</control>
@@ -97,7 +97,7 @@
 					<right>0</right>
 					<top>0</top>
 					<bottom>0</bottom>
-					<texture colordiffuse="button_focus">lists/focus.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="label">
@@ -136,7 +136,7 @@
 					<centertop>50%</centertop>
 					<width>32</width>
 					<height>32</height>
-					<texture colordiffuse="button_focus">$VAR[ListWatchedIconVar]</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">$VAR[ListWatchedIconVar]</texture>
 					<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 					<animation effect="fade" time="150">VisibleChange</animation>
 					<visible>!Control.HasFocus($PARAM[list_id])</visible>
@@ -217,7 +217,7 @@
                         <width>340</width>
                         <height>1</height>
                         <texturebg></texturebg>
-                        <midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+                        <midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
                         <info>ListItem.PercentPlayed</info>
                         <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
                     </control>
@@ -246,7 +246,7 @@
 					<bottom>117</bottom>
 					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>$VAR[ListBoxInfoVar]</label>
-                    <textcolor>button_focus</textcolor>
+                    <textcolor>$VAR[MainColorVar]</textcolor>
 					<visible>!Container.Content() | !String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<control type="group">

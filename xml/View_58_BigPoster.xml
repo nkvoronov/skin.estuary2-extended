@@ -163,7 +163,7 @@
                                     <height>24</height>
                                     <font>font12</font>
                                     <label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]•[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
-                                    <textcolor>button_focus</textcolor>
+                                    <textcolor>$VAR[MainColorVar]</textcolor>
                                 </control>
                                 <control type="textbox">
                                     <top>365</top>
@@ -172,7 +172,7 @@
                                     <bottom>30</bottom>
                                     <font>font12</font>
                                     <label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
-                                    <textcolor>button_focus</textcolor>
+                                    <textcolor>$VAR[MainColorVar]</textcolor>
                                     <autoscroll>false</autoscroll>                                
                                 </control>
                                 <control type="image">
@@ -210,7 +210,7 @@
                                 <top>-10</top>
                                 <width>485</width>
                                 <height>655</height>
-                                <texture colordiffuse="button_focus">colors/grey.png</texture>
+                                <texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
                                 <bordersize>20</bordersize>
                                 <include>Animation_FocusTextureFade</include>
                             </control>
@@ -243,7 +243,7 @@
                                 <top>-14</top>
                                 <width>493</width>
                                 <height>663</height>
-                                <texture colordiffuse="button_focus">colors/grey.png</texture>
+                                <texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
                                 <bordertexture border="21">overlays/shadow.png</bordertexture>
                                 <bordersize>20</bordersize>
                                 <include>Animation_FocusTextureFade</include>
@@ -285,7 +285,7 @@
                                     <height>24</height>
                                     <font>font12</font>
                                     <label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]•[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
-                                    <textcolor>button_focus</textcolor>
+                                    <textcolor>$VAR[MainColorVar]</textcolor>
                                 </control>
                                 <control type="textbox">
                                     <top>365</top>
@@ -294,7 +294,7 @@
                                     <bottom>30</bottom>
                                     <font>font12</font>
                                     <label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
-                                    <textcolor>button_focus</textcolor>
+                                    <textcolor>$VAR[MainColorVar]</textcolor>
                                     <autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>                                
                                 </control>
                                 <control type="image">
@@ -347,7 +347,7 @@
                             <label>$INFO[ListItem.Artist,[COLOR white][B],[/B][/COLOR][CR]]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
                             <align>center</align>
                             <aligny>center</aligny>
-                            <textcolor>button_focus</textcolor>
+                            <textcolor>$VAR[MainColorVar]</textcolor>
                             <visible>!String.IsEmpty(ListItem.Artist)</visible>
                         </control>
                         <control type="textbox">
@@ -373,7 +373,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture>
+                            <texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texture>
                             <visible>Control.HasFocus($PARAM[id])</visible>
                         </control>
                         <control type="image">
