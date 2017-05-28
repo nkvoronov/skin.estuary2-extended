@@ -82,14 +82,13 @@
 				</control>
                 <!-- StatBar -->
                 <control type="label">
-                    <left>0</left>
+                    <left>-90</left>
                     <top>-15</top>
                     <width>1920</width>
 					<align>center</align>
                     <label>$VAR[InfoBarStatsVar]</label>
                     <font>font12</font>
-                    <visible>!Player.HasMedia</visible>
-					<visible>!Window.IsVisible(extendedprogressdialog)</visible>
+                    <visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
                     <visible>Skin.HasSetting(enable_home_stats)</visible>				
                 </control>
 			</control>

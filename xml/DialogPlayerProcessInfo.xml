@@ -24,7 +24,7 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamServiceName,$LOCALIZE[19099]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamServiceName,$LOCALIZE[19099]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -33,7 +33,7 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamProviderName,$LOCALIZE[19101]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamProviderName,$LOCALIZE[19101]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -42,7 +42,7 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamClient,$LOCALIZE[19012][COLOR white],:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamClient,$LOCALIZE[19012]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -51,7 +51,7 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamDevice,$LOCALIZE[19006]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamDevice,$LOCALIZE[19006]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -60,7 +60,7 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamStatus,$LOCALIZE[19007]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamStatus,$LOCALIZE[19007]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -69,7 +69,7 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamEncryptionName,$LOCALIZE[19015]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamEncryptionName,$LOCALIZE[19015]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -84,7 +84,7 @@
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamBer,$LOCALIZE[19010]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamBer,$LOCALIZE[19010]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -93,7 +93,7 @@
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamUnc,$LOCALIZE[19011]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamUnc,$LOCALIZE[19011]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -102,7 +102,7 @@
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamMux,$LOCALIZE[19100]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamMux,$LOCALIZE[19100]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -111,7 +111,7 @@
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamSignal,$LOCALIZE[19008]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamSignal,$LOCALIZE[19008]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -127,7 +127,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamSNR,$LOCALIZE[19009]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamSNR,$LOCALIZE[19009]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -147,7 +147,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videodecoder),$LOCALIZE[31139]:[COLOR white],[/COLOR] ]$VAR[VideoHWDecoderVar, [COLOR white](,)[/COLOR]]</label>
+					<label>$INFO[Player.Process(videodecoder),$LOCALIZE[31139]: [COLOR white],[/COLOR] ]$VAR[VideoHWDecoderVar, [COLOR white](,)[/COLOR]]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -157,7 +157,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(pixformat),$LOCALIZE[31140]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[Player.Process(pixformat),$LOCALIZE[31140]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -167,7 +167,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(deintmethod),$LOCALIZE[16038]:[COLOR white],[/COLOR] ]</label>
+					<label>$INFO[Player.Process(deintmethod),$LOCALIZE[16038]: [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -187,7 +187,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$LOCALIZE[460]:[COLOR white] $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz][/COLOR]</label>
+					<label>$LOCALIZE[460]: [COLOR white] $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz][/COLOR]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
@@ -196,7 +196,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.Memory(used.percent),$LOCALIZE[31030]:[COLOR white] ,       [/COLOR]]$INFO[System.CpuUsage,$LOCALIZE[13271][COLOR white],[/COLOR] ]</label>
+					<label>$INFO[System.Memory(used.percent),$LOCALIZE[31030]: [COLOR white] ,  [/COLOR]]$INFO[System.CpuUsage,$LOCALIZE[13271] [COLOR white],[/COLOR] ]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>

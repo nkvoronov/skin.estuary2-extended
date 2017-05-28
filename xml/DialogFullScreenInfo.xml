@@ -49,6 +49,7 @@
 						<right>80</right>
 						<height>290</height>
 						<label fallback="416">$VAR[FullScreenInfoTextBoxVar]</label>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<align>justify</align>
 						<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 					</control>

@@ -85,9 +85,9 @@
 	</variable>
     <!-- FullScreen Info Text -->
 	<variable name="FullScreenInfoTextBoxVar">
-		<value condition="Control.HasFocus(5553)">$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</value>
-		<value condition="Control.HasFocus(5555)">$INFO[VideoPlayer.NextTitle,[B],[/B][CR]]$INFO[VideoPlayer.NextPlot]</value>
-		<value>$INFO[VideoPlayer.CastAndRole]</value>
+		<value condition="Control.HasFocus(5553)">$INFO[VideoPlayer.Tagline,[I],[/I][CR]]$INFO[VideoPlayer.Plot,[COLOR white],[/COLOR]]</value>
+		<value condition="Control.HasFocus(5555)">$INFO[VideoPlayer.NextTitle,[B][COLOR white],[/COLOR][/B][CR]]$INFO[VideoPlayer.NextPlot,[COLOR white],[/COLOR]]</value>
+		<value>$INFO[VideoPlayer.CastAndRole,[COLOR white],[/COLOR]]</value>
 	</variable>
     <!-- List Label2 -->
 	<variable name="ListLabel2Var">
@@ -571,10 +571,10 @@
 	</variable>
     <!-- Breadcrumbs Now Playing -->
     <variable name="NowPlayingBreadcrumbsVar">
-		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title]</value>
-		<value condition="Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
-		<value condition="MusicPartyMode.Enabled">$LOCALIZE[589]</value>
-		<value>$LOCALIZE[31000]...</value>
+		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title,[COLOR white],[/COLOR]]</value>
+		<value condition="Window.IsActive(fullscreenvideo)">[COLOR white]$INFO[VideoPlayer.Title][/COLOR]$INFO[VideoPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
+		<value condition="MusicPartyMode.Enabled">[COLOR white]$LOCALIZE[589][/COLOR]</value>
+		<value>[COLOR white]$LOCALIZE[31000] ...[/COLOR]</value>
 	</variable>
     
     <!-- *** Settings *** -->

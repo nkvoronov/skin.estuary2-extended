@@ -245,7 +245,9 @@
             <param name="content_path" value="$PARAM[content_path]"/>
 			<param name="icon" value="$VAR[WidgetMovieGenreIconVar]"/>
 			<param name="fallback_image" value="DefaultGenre.png"/>
-            <param name="list_id" value="$PARAM[list_id]"/>			
+            <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="icon_height" value="105"/>
+			<param name="scale" value="true"/>
 		</include>
 	</include>
 	<include name="Widget-MusicGenres">
@@ -255,7 +257,9 @@
             <param name="content_path" value="$PARAM[content_path]"/>
 			<param name="icon" value="$VAR[WidgetMusicGenreIconVar]"/>
 			<param name="fallback_image" value="DefaultMusicGenres.png"/>
-            <param name="list_id" value="$PARAM[list_id]"/>			
+            <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="icon_height" value="105"/>
+			<param name="scale" value="true"/>
 		</include>
 	</include>
 	<include name="Widget-Studios">
@@ -265,7 +269,9 @@
             <param name="content_path" value="$PARAM[content_path]"/>
 			<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
 			<param name="fallback_image" value="DefaultStudios.png"/>
-            <param name="list_id" value="$PARAM[list_id]"/>			
+            <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="icon_height" value="105"/>
+			<param name="scale" value="true"/>
 		</include>
 	</include>
 	<include name="Widget-Country">
@@ -275,7 +281,9 @@
             <param name="content_path" value="$PARAM[content_path]"/>
 			<param name="icon" value="$VAR[WidgetCountryIconVar]"/>
 			<param name="fallback_image" value="DefaultCountry.png"/>
-            <param name="list_id" value="$PARAM[list_id]"/>			
+            <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="icon_height" value="105"/>
+			<param name="scale" value="true"/>
 		</include>
 	</include>
 	<include name="Widget-Other">
@@ -284,6 +292,8 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>            
             <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="icon_height" value="105"/>
+			<param name="scale" value="true"/>
 		</include>
 	</include>
 	<!-- Common -->	
@@ -369,6 +379,7 @@
 		<param name="icon_height">120</param>
 		<param name="sortby"></param>
 		<param name="custom">false</param>
+		<param name="scale">false</param>
 		<param name="visible">true</param>
 		<param name="sortorder"></param>
         <param name="fallback_image">DefaultFolder.png</param>
@@ -409,6 +420,16 @@
 							<height>$PARAM[icon_height]</height>
 							<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
+							<visible>!$PARAM[scale]</visible>
+						</control>
+						<control type="image">
+							<top>25</top>
+							<left>62</left>
+							<width>200</width>
+							<height>$PARAM[icon_height]</height>
+							<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>$PARAM[scale]</visible>
 						</control>
 						<control type="textbox">
 							<left>42</left>
@@ -460,6 +481,16 @@
 							<height>$PARAM[icon_height]</height>
 							<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
+							<visible>!$PARAM[scale]</visible>
+						</control>
+						<control type="image">
+							<top>25</top>
+							<left>62</left>
+							<width>200</width>
+							<height>$PARAM[icon_height]</height>
+							<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>$PARAM[scale]</visible>
 						</control>
 						<control type="textbox">
 							<left>42</left>

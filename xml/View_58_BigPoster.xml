@@ -152,7 +152,7 @@
                                 <control type="label">
                                     <top>290</top>
                                     <left>30</left>
-                                    <right>30</right>
+                                    <right>80</right>
                                     <height>36</height>
                                     <label>[B]$INFO[ListItem.Title][/B]</label>
                                 </control>
@@ -274,7 +274,7 @@
                                 <control type="label">
                                     <top>290</top>
                                     <left>30</left>
-                                    <right>30</right>
+                                    <right>80</right>
                                     <height>36</height>
                                     <label>[B]$INFO[ListItem.Title][/B]</label>
                                 </control>
