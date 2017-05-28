@@ -158,7 +158,7 @@
 								<height>480</height>
 								<aspectratio aligny="center">keep</aspectratio>
 								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-								<bordersize>20</bordersize>
+								<bordersize>25</bordersize>
 							</control>						
 						</control>
 						<control type="textbox">
@@ -275,7 +275,7 @@
 								<height>480</height>
 								<aspectratio aligny="center">keep</aspectratio>
 								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-								<bordersize>20</bordersize>
+								<bordersize>25</bordersize>
 							</control>
 						</control>
 						<control type="textbox">
