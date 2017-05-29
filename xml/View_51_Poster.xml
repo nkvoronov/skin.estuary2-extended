@@ -133,24 +133,9 @@
             <include content="InfoWallMovieLayout">
                 <param name="poster">$VAR[PosterVar]</param>
                 <param name="focused" value="true" />
-                <param name="width1" value="516" />
-                <param name="height1" value="756" />
-                <param name="width2" value="524" />
-                <param name="height2" value="764" />
-                <param name="textbox_top" value="636" />
-                <param name="textbox_width" value="436" />
-                <param name="noposter_left" value="30" />
-                <param name="noposter_top" value="140" />       
-                <param name="noposter_size" value="476" />      
-                <param name="overlays_top" value="646" />
-                <param name="tvshows_items_top" value="676" />
-                <param name="tvshows_items_width1" value="476" />
-                <param name="tvshows_items_width2" value="465" />
-                <param name="tvshows_items_left" value="476" />
-                <param name="watchedicon_top" value="694" />
-                <param name="userratingcircle_left" value="248" />
-                <param name="progress_top" value="706" />
-                <param name="progress_width" value="516" />                           
+                <param name="width" value="524" />
+                <param name="height" value="764" />
+                <param name="rating_left" value="248" />                           
             </include>
 		</control>
 	</include>

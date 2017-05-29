@@ -43,6 +43,8 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
 			<param name="fallback_image" value="DefaultAddon.png"/>
+			<param name="sortby" value="lastused"/>
+			<param name="sortorder" value="descending"/>
             <param name="list_id" value="$PARAM[list_id]"/>
 		</include>
 	</include>	
@@ -377,10 +379,10 @@
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="icon_height">120</param>
-		<param name="sortby"></param>
 		<param name="custom">false</param>
 		<param name="scale">false</param>
 		<param name="visible">true</param>
+		<param name="sortby"></param>
 		<param name="sortorder"></param>
         <param name="fallback_image">DefaultFolder.png</param>
 		<definition>
@@ -506,8 +508,8 @@
 					</control>
 				</focusedlayout>
 				<include condition="!$PARAM[custom]" content="Widget-Content">
-					<param name="sortby" value=""/>
-					<param name="sortorder" value=""/>
+					<param name="sortby" value="$PARAM[sortby]"/>
+					<param name="sortorder" value="$PARAM[sortorder]"/>
 					<param name="widget_target" value="$PARAM[widget_target]"/>
 					<param name="item_limit" value="$PARAM[item_limit]"/>
 					<param name="content_path" value="$PARAM[content_path]"/>
@@ -520,11 +522,11 @@
 	</include>
 	<include name="Widget-Square">
 		<param name="sub_label">$INFO[ListItem.Label]</param>
-		<param name="sortby"></param>
 		<param name="custom">false</param>
         <param name="favourites">false</param>
 		<param name="visible">True</param>
-		<param name="sortorder">ascending</param>
+		<param name="sortby"></param>
+		<param name="sortorder"></param>
 		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="fallback_image">DefaultFolder.png</param>
 		<definition>
@@ -586,8 +588,8 @@
 					</control>
 				</focusedlayout>
 				<include condition="!$PARAM[custom]" content="Widget-Content">
-					<param name="sortby" value=""/>
-					<param name="sortorder" value=""/>
+					<param name="sortby" value="$PARAM[sortby]"/>
+					<param name="sortorder" value="$PARAM[sortorder]"/>
 					<param name="widget_target" value="$PARAM[widget_target]"/>
 					<param name="item_limit" value="$PARAM[item_limit]"/>
 					<param name="content_path" value="$PARAM[content_path]"/>
@@ -602,6 +604,8 @@
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="custom">false</param>
 		<param name="visible">True</param>
+		<param name="sortby"></param>
+		<param name="sortorder"></param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
 		<param name="label2">$INFO[ListItem.Title]</param>
@@ -739,8 +743,8 @@
 					</control>
 				</focusedlayout>
 				<include condition="!$PARAM[custom]" content="Widget-Content">
-					<param name="sortby" value=""/>
-					<param name="sortorder" value=""/>
+					<param name="sortby" value="$PARAM[sortby]"/>
+					<param name="sortorder" value="$PARAM[sortorder]"/>
 					<param name="widget_target" value="$PARAM[widget_target]"/>
 					<param name="item_limit" value="$PARAM[item_limit]"/>
 					<param name="content_path" value="$PARAM[content_path]"/>

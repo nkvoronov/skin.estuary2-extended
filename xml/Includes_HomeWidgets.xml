@@ -161,9 +161,6 @@
 			<param name="content_path" value="addons://sources/video/"/>
 			<param name="widget_header" value="$LOCALIZE[1037]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="sortby" value="lastused"/>
-			<param name="sortorder" value="descending"/>			
-			<param name="fallback_icon" value="DefaultAddon.png"/>
 			<param name="list_id" value="$PARAM[control_id]140"/>
 		</include>
 		<!-- Video Addons Custom -->
@@ -171,7 +168,6 @@
 			<param name="content_path" value="CustomAddonsVideo"/>
 			<param name="widget_header" value="$LOCALIZE[1037]"/>
 			<param name="widget_target" value="Video"/>
-			<param name="fallback_icon" value="DefaultAddon.png"/>
 			<param name="list_id" value="$PARAM[control_id]140"/> 
 		</include>
 		<!-- Audio Addons -->					
@@ -179,9 +175,6 @@
 			<param name="content_path" value="addons://sources/audio/"/>
 			<param name="widget_header" value="$LOCALIZE[1038]"/>
 			<param name="widget_target" value="music"/>
-			<param name="sortby" value="lastused"/>
-			<param name="sortorder" value="descending"/>			
-			<param name="fallback_icon" value="DefaultAddon.png"/>
 			<param name="list_id" value="$PARAM[control_id]141"/>
 		</include>
 		<!-- Audio Addons Custom -->
@@ -189,7 +182,6 @@
 			<param name="content_path" value="CustomAddonsAudio"/>
 			<param name="widget_header" value="$LOCALIZE[1038]"/>
 			<param name="widget_target" value="Audio"/>
-			<param name="fallback_icon" value="DefaultAddon.png"/>
 			<param name="list_id" value="$PARAM[control_id]141"/>
 		</include>
 		<!-- Programs Addons -->					
@@ -197,9 +189,6 @@
 			<param name="content_path" value="addons://sources/executable/"/>
 			<param name="widget_header" value="$LOCALIZE[1043]"/>
 			<param name="widget_target" value="programs"/>
-			<param name="sortby" value="lastused"/>
-			<param name="sortorder" value="descending"/>			
-			<param name="fallback_icon" value="DefaultAddon.png"/>
 			<param name="list_id" value="$PARAM[control_id]142"/>
 		</include>
 		<!-- Programs Addons Custom -->
@@ -207,17 +196,13 @@
 			<param name="content_path" value="CustomAddonsPrograms"/>
 			<param name="widget_header" value="$LOCALIZE[1043]"/>
 			<param name="widget_target" value="Programs"/>
-			<param name="fallback_icon" value="DefaultAddon.png"/>
 			<param name="list_id" value="$PARAM[control_id]142"/>
 		</include>
 		<!-- Android Apps -->					
 		<include condition="System.Platform.Android" content="Widget-Addons">
 			<param name="content_path" value="androidapp://sources/apps/"/>
 			<param name="widget_header" value="$LOCALIZE[20244]"/>
-			<param name="widget_target" value="programs"/>
-			<param name="sortby" value="lastused"/>
-			<param name="sortorder" value="descending"/>			
-			<param name="fallback_icon" value="DefaultAddon.png"/>
+			<param name="widget_target" value="programs"/>			
 			<param name="list_id" value="$PARAM[control_id]143"/>
 		</include>
 		<!-- Images Addons -->
@@ -225,9 +210,6 @@
 			<param name="content_path" value="addons://sources/image/"/>
 			<param name="widget_header" value="$LOCALIZE[1039]"/>
 			<param name="widget_target" value="pictures"/>
-			<param name="sortby" value="lastused"/>
-			<param name="sortorder" value="descending"/>			
-			<param name="fallback_icon" value="DefaultAddon.png"/>
 			<param name="list_id" value="$PARAM[control_id]144"/>
 		</include>
 		<!-- Images Addons Custom -->
@@ -235,7 +217,6 @@
 			<param name="content_path" value="CustomAddonsImage"/>
 			<param name="widget_header" value="$LOCALIZE[1039]"/>
 			<param name="widget_target" value="Image"/>
-			<param name="fallback_icon" value="DefaultAddon.png"/>
 			<param name="list_id" value="$PARAM[control_id]144"/>
 		</include>
     </include>

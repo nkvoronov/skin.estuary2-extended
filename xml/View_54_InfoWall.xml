@@ -1,56 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- <include name="PictureLayout1">
-		<param name="focused">false</param>
-        <param name="width1">320</param>
-        <param name="height1">355</param>
-        <param name="width2">328</param>
-        <param name="height2">363</param>
-		<param name="icon_width">280</param>
-        <param name="icon_height">280</param>
-        <param name="top_text">295</param>
-		<param name="width_text">280</param>
-		<definition>
-			<control type="image">
-				<top>-10</top>
-				<width>$PARAM[width1]</width>
-				<height>$PARAM[height1]</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-			</control>
-			<control type="image">
-				<top>-14</top>
-				<left>-4</left>
-				<width>$PARAM[width2]</width>
-				<height>$PARAM[height2]</height>
-				<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-				<visible>$PARAM[focused]</visible>
-				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-			</control>
-			<control type="image">
-				<left>20</left>
-				<top>10</top>
-				<width>$PARAM[icon_width]</width>
-				<height>$PARAM[icon_height]</height>
-				<texture border="2" background="true">$VAR[InfoWallThumbVar]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="label">
-				<left>20</left>
-				<top>$PARAM[top_text]</top>
-				<width>$PARAM[width_text]</width>
-				<height>20</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<label>$INFO[ListItem.Label]</label>
-				<autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
-			</control>
-		</definition>
-	</include> -->
 	<include name="PictureLayout">
 		<param name="focused">false</param>
         <param name="width">328</param>
@@ -80,8 +29,8 @@
                 <control type="image">
                     <left>24</left>
                     <right>24</right>
-                    <top>14</top>
-                    <bottom>24</bottom>
+                    <top>24</top>
+                    <bottom>60</bottom>
                     <texture border="2" background="true">$VAR[InfoWallThumbVar]</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
@@ -287,186 +236,17 @@
 	</include>
 	<include name="InfoWallMovieLayout">		
 		<param name="focused">false</param>
-        <param name="border">true</param>
-        <param name="fallback_image">DefaultMovies.png</param>
-        <param name="poster">$VAR[ListPosterVar]</param>
-        <param name="noposter">$INFO[ListItem.Icon]</param>
-        <param name="width1">290</param>
-        <param name="height1">400</param>
-        <param name="width2">298</param>
-        <param name="height2">408</param>
-        <param name="textbox_top">250</param>
-        <param name="textbox_width">242</param>
-        <param name="noposter_left">26</param>
-        <param name="noposter_top">50</param>        
-        <param name="noposter_size">270</param>      
-        <param name="overlays_top">290</param>
-        <param name="tvshows_items_top">320</param>
-        <param name="tvshows_items_width1">250</param>
-        <param name="tvshows_items_width2">244</param>
-        <param name="tvshows_items_left">254</param>
-        <param name="watchedicon_top">338</param>
-        <param name="userratingcircle_left">135</param>
-        <param name="userratingcircle_top">-8</param>
-        <param name="progress_top">350</param>
-        <param name="progress_width">250</param>
-		<definition>
-			<control type="group">
-				<visible>String.IsEmpty(ListItem.Art(poster))</visible>
-				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>$PARAM[width1]</width>
-					<height>$PARAM[height1]</height>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-				</control>
-				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>$PARAM[width1]</width>
-					<height>$PARAM[height1]</height>
-					<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-					<bordersize>20</bordersize>
-					<visible>$PARAM[focused]</visible>
-					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-				</control>
-				<control type="textbox">
-					<left>40</left>
-					<top>$PARAM[textbox_top]</top>
-					<width>$PARAM[textbox_width]</width>
-					<height>120</height>
-					<font>font27</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
-					<visible>!ListItem.IsParentFolder</visible>
-				</control>
-				<control type="image">
-					<left>$PARAM[noposter_left]</left>
-					<top>$PARAM[noposter_top]</top>
-					<width>$PARAM[noposter_size]</width>
-					<height>$PARAM[noposter_size]</height>
-					<texture fallback="$PARAM[fallback_image]" background="true">$PARAM[noposter]</texture>
-					<aspectratio>scale</aspectratio>
-					<bordersize>20</bordersize>
-				</control>
-			</control>
-			<control type="group">
-				<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
-				<control type="image">
-					<left>11</left>
-					<top>-14</top>
-					<width>$PARAM[width2]</width>
-					<height>$PARAM[height2]</height>
-					<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-					<visible>$PARAM[focused]</visible>
-					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-				</control>
-				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>$PARAM[width1]</width>
-					<height>$PARAM[height1]</height>
-					<texture background="true">$PARAM[poster]</texture>
-					<aspectratio>scale</aspectratio>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-                    <visible>$PARAM[border]</visible>
-				</control>
-				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>$PARAM[width1]</width>
-					<height>$PARAM[height1]</height>
-					<texture background="true">$PARAM[poster]</texture>
-					<aspectratio>scale</aspectratio>
-                    <bordersize>20</bordersize>
-					<visible>!$PARAM[border]</visible>
-				</control>
-				<control type="image">
-					<left>35</left>
-					<top>$PARAM[overlays_top]</top>
-					<width>80</width>
-					<height>80</height>
-					<texture>overlays/overlay-bg.png</texture>
-					<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-				</control>
-			</control>
-			<control type="group">
-				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
-				<top>$PARAM[tvshows_items_top]</top>
-				<control type="image">
-					<left>35</left>
-					<top>0</top>
-					<width>$PARAM[tvshows_items_width1]</width>
-					<height>50</height>
-					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
-					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
-				</control>
-				<control type="label">
-					<left>0</left>
-					<top>20</top>
-					<width>$PARAM[tvshows_items_width2]</width>
-					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
-					<font>font20_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
-					<align>right</align>
-				</control>
-				<control type="image">
-					<left>$PARAM[tvshows_items_left]</left>
-					<top>23</top>
-					<width>24</width>
-					<height>24</height>
-					<texture>lists/played-total.png</texture>
-				</control>
-			</control>
-			<control type="image">
-				<left>35</left>
-				<top>$PARAM[watchedicon_top]</top>
-				<width>32</width>
-				<height>32</height>
-				<texture>$VAR[WallWatchedIconVar]</texture>
-			</control>
-			<control type="group">
-				<left>$PARAM[userratingcircle_left]</left>
-				<top>$PARAM[userratingcircle_top]</top>
-				<include>UserRatingCircle</include>
-			</control>
-			<control type="progress">
-				<left>35</left>
-				<top>$PARAM[progress_top]</top>
-				<width>$PARAM[progress_width]</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.PercentPlayed</info>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
-			</control>
-		</definition>
-	</include>
-	<include name="InfoWallMovieLayout1">		
-		<param name="focused">false</param>
         <param name="fallback_image">DefaultMovies.png</param>
         <param name="poster">$VAR[ListPosterVar]</param>
         <param name="noposter">$INFO[ListItem.Icon]</param>
         <param name="width">298</param>
         <param name="height">408</param>
-        
-        <param name="border">true</param>        
-
-        <param name="tvshows_items_top">320</param>
-        <param name="tvshows_items_width1">250</param>
-        <param name="tvshows_items_width2">244</param>
-        <param name="tvshows_items_left">254</param>
-
-        <param name="userratingcircle_left">135</param>
-        <param name="userratingcircle_top">-8</param>
-
+		<param name="rating_left">135</param>        
+        <param name="border">true</param>
+		<param name="tvshows">true</param>
+		<param name="watched">true</param>
+		<param name="rating">true</param>
+		<param name="progress">true</param>
 		<definition>
             <control type="group">
                 <left>15</left>
@@ -555,45 +335,49 @@
                         <height>80</height>
                         <texture>overlays/overlay-bg.png</texture>
                         <visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+						<visible>$PARAM[watched]</visible>
                     </control>
                 </control>
-                <!-- <control type="group">
+                <control type="group">
                     <visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
-                    <top>$PARAM[tvshows_items_top]</top>
+					<visible>$PARAM[tvshows]</visible>
                     <control type="image">
-                        <left>35</left>
-                        <top>0</top>
-                        <width>$PARAM[tvshows_items_width1]</width>
+                        <left>24</left>
+						<right>24</right>
+                        <bottom>24</bottom>
                         <height>50</height>
                         <texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
                         <visible>!String.IsEmpty(ListItem.Art(poster))</visible>
                     </control>
                     <control type="label">
-                        <left>0</left>
-                        <top>20</top>
-                        <width>$PARAM[tvshows_items_width2]</width>
+                        <right>65</right>
+                        <width>244</width>
+						<height>24</height>
+						<bottom>34</bottom>
                         <label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
                         <font>font20_title</font>
                         <shadowcolor>text_shadow</shadowcolor>
                         <align>right</align>
                     </control>
                     <control type="image">
-                        <left>$PARAM[tvshows_items_left]</left>
-                        <top>23</top>
+						<right>32</right>
                         <width>24</width>
                         <height>24</height>
+						<bottom>32</bottom>
                         <texture>lists/played-total.png</texture>
                     </control>
-                </control> -->
+                </control>
                 <control type="image">
                     <left>24</left>
                     <bottom>24</bottom>
                     <width>32</width>
                     <height>32</height>
                     <texture>$VAR[WallWatchedIconVar]</texture>
+					<visible>$PARAM[watched]</visible>
                 </control>
                 <control type="group">
-                    <left>135</left>
+					<visible>$PARAM[rating]</visible>
+					<left>$PARAM[rating_left]</left>
                     <top>4</top>
                     <include>UserRatingCircle</include>
                 </control>
@@ -606,6 +390,7 @@
                     <midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
                     <info>ListItem.PercentPlayed</info>
                     <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+					<visible>$PARAM[progress]</visible>
                 </control>
             </control>
 		</definition>
