@@ -194,8 +194,7 @@
                     <param name="border" value="false" />
                     <param name="poster">$VAR[PosterVar]</param>
                     <param name="width" value="308" />
-                    <param name="height" value="448" />
-                    <param name="rating_left" value="134" />                           
+                    <param name="height" value="448" />                           
                 </include>
             </control>			
             <control type="image">

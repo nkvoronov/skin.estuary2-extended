@@ -43,7 +43,6 @@
                         <include content="InfoWallMovieLayout">
                             <param name="width" value="493" />
                             <param name="height" value="663" />
-							<param name="rating_left" value="227" />
                         </include>
                     </control>
                 </itemlayout>
@@ -54,7 +53,6 @@
                             <param name="focused" value="true" />
                             <param name="width" value="493" />
                             <param name="height" value="663" />
-							<param name="rating_left" value="227" />
                         </include>
                     </control>
                 </focusedlayout>
@@ -209,6 +207,15 @@
                         <control type="group">
                             <visible>!String.IsEmpty(ListItem.Art(thumb))</visible>
                             <control type="image">
+                                <left>15</left>
+                                <top>-10</top>
+                                <width>485</width>
+                                <height>655</height>
+                                <texture>dialogs/dialog-bg-nobo.png</texture>
+                                <bordertexture border="21">overlays/shadow.png</bordertexture>
+                                <bordersize>20</bordersize>
+                            </control>                            
+                            <control type="image">
                                 <left>11</left>
                                 <top>-14</top>
                                 <width>493</width>
@@ -217,15 +224,6 @@
                                 <bordertexture border="21">overlays/shadow.png</bordertexture>
                                 <bordersize>20</bordersize>
                                 <include>Animation_FocusTextureFade</include>
-                            </control>
-                            <control type="image">
-                                <left>15</left>
-                                <top>-10</top>
-                                <width>485</width>
-                                <height>655</height>
-                                <texture>dialogs/dialog-bg-nobo.png</texture>
-                                <bordertexture border="21">overlays/shadow.png</bordertexture>
-                                <bordersize>20</bordersize>
                             </control>
                             <control type="group">
                                 <left>15</left>
@@ -254,8 +252,7 @@
                                     <right>30</right>
                                     <height>24</height>
                                     <font>font12</font>
-                                    <label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]•[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
-                                    <textcolor>$VAR[MainColorVar]</textcolor>
+                                    <label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , • ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
                                 </control>
                                 <control type="textbox">
                                     <top>365</top>
@@ -263,8 +260,7 @@
                                     <right>30</right>
                                     <bottom>30</bottom>
                                     <font>font12</font>
-                                    <label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
-                                    <textcolor>$VAR[MainColorVar]</textcolor>
+                                    <label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot]</label>
                                     <autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>                                
                                 </control>
                                 <control type="image">
@@ -285,106 +281,142 @@
                 </focusedlayout>                
                 <itemlayout height="700" width="495" condition="Container.Content(artists) | Container.Content(albums)">
                     <control type="group">
-                        <control type="image">
-                            <width>495</width>
-                            <height>700</height>
-                            <texture border="22">dialogs/dialog-bg.png</texture>
+                        <top>23</top>
+                        <control type="group">
+                            <control type="image">
+                                <left>15</left>
+                                <top>-10</top>
+                                <width>485</width>
+                                <height>655</height>
+                                <texture>dialogs/dialog-bg-nobo.png</texture>
+                                <bordertexture border="21">overlays/shadow.png</bordertexture>
+                                <bordersize>20</bordersize>
+                            </control>
+                            <control type="group">
+                                <left>15</left>
+                                <top>-10</top>
+                                <width>485</width>
+                                <height>655</height>
+                                <control type="image">
+                                    <left>10</left>
+                                    <right>10</right>
+                                    <top>10</top>
+                                    <height>435</height>
+                                    <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
+                                    <bordersize>20</bordersize>
+                                    <visible>Container.Content(artists)</visible>
+                                </control>
+                                <control type="image">
+                                    <left>10</left>
+                                    <right>10</right>
+                                    <top>10</top>
+                                    <height>435</height>
+                                    <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
+                                    <bordersize>20</bordersize>
+                                    <visible>Container.Content(albums)</visible>
+                                </control>
+                                <control type="textbox">
+                                    <left>20</left>
+                                    <right>20</right>
+                                    <top>460</top>
+                                    <bottom>20</bottom>
+                                    <label>$INFO[ListItem.Artist,[COLOR white][B],[/B][/COLOR][CR]]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <textcolor>$VAR[MainColorVar]</textcolor>
+                                    <visible>!String.IsEmpty(ListItem.Artist)</visible>
+                                </control>
+                                <control type="textbox">
+                                    <left>20</left>
+                                    <right>20</right>
+                                    <top>460</top>
+                                    <bottom>20</bottom>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year)</visible>
+                                </control>
+                            </control>
                         </control>
-                        <control type="image">
-                            <left>27</left>
-                            <right>27</right>
-                            <top>27</top>
-                            <height>435</height>
-                            <!-- <aspectratio>stretch</aspectratio> -->
-                            <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
-                            <visible>Container.Content(artists)</visible>
-                        </control>
-                        <control type="image">
-                            <left>27</left>
-                            <right>27</right>
-                            <top>27</top>
-                            <height>435</height>
-                            <!-- <aspectratio>stretch</aspectratio> -->
-                            <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
-                            <visible>Container.Content(albums)</visible>
-                        </control>
-                        <control type="textbox">
-                            <left>0</left>
-                            <right>20</right>
-                            <width>100%</width>
-                            <top>460</top>
-                            <bottom>20</bottom>
-                            <label>$INFO[ListItem.Artist,[COLOR white][B],[/B][/COLOR][CR]]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                            <textcolor>$VAR[MainColorVar]</textcolor>
-                            <visible>!String.IsEmpty(ListItem.Artist)</visible>
-                        </control>
-                        <control type="textbox">
-                            <left>0</left>
-                            <right>20</right>
-                            <width>100%</width>
-                            <top>460</top>
-                            <bottom>20</bottom>
-                            <label>$INFO[ListItem.Label]</label>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                            <visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year)</visible>
+                        <control type="group">
+                            <left>231</left>
+                            <top>-8</top>
+                            <include>UserRatingCircle</include>
                         </control>
                     </control>
                 </itemlayout>
                 <focusedlayout height="700" width="495" condition="Container.Content(artists) | Container.Content(albums)">
                     <control type="group">
-                        <control type="image">
-                            <width>495</width>
-                            <height>700</height>
-                            <texture border="22">dialogs/dialog-bg.png</texture>
+                        <top>23</top>     
+                        <control type="group">
+                            <control type="image">
+                                <left>15</left>
+                                <top>-10</top>
+                                <width>485</width>
+                                <height>655</height>
+                                <texture>dialogs/dialog-bg-nobo.png</texture>
+                                <bordertexture border="21">overlays/shadow.png</bordertexture>
+                                <bordersize>20</bordersize>
+                            </control>
+                            <control type="image">
+                                <left>11</left>
+                                <top>-14</top>
+                                <width>493</width>
+                                <height>663</height>
+                                <texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+                                <bordertexture border="21">overlays/shadow.png</bordertexture>
+                                <bordersize>20</bordersize>
+                                <include>Animation_FocusTextureFade</include>
+                            </control>
+                            <control type="group">
+                                <left>15</left>
+                                <top>-10</top>
+                                <width>485</width>
+                                <height>655</height>
+                                <control type="image">
+                                    <left>10</left>
+                                    <right>10</right>
+                                    <top>10</top>
+                                    <height>435</height>
+                                    <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
+                                    <bordersize>20</bordersize>
+                                    <visible>Container.Content(artists)</visible>
+                                </control>
+                                <control type="image">
+                                    <left>10</left>
+                                    <right>10</right>
+                                    <top>10</top>
+                                    <height>435</height>
+                                    <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
+                                    <bordersize>20</bordersize>
+                                    <visible>Container.Content(albums)</visible>
+                                </control>
+                                <control type="textbox">
+                                    <left>20</left>
+                                    <right>20</right>
+                                    <top>460</top>
+                                    <bottom>20</bottom>
+                                    <label>$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <visible>!String.IsEmpty(ListItem.Artist)</visible>
+                                </control>
+                                <control type="textbox">
+                                    <left>20</left>
+                                    <right>20</right>
+                                    <top>460</top>
+                                    <bottom>20</bottom>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year)</visible>
+                                </control>
+                            </control>
                         </control>
-                        <control type="image">
-                            <width>495</width>
-                            <height>700</height>
-                            <texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texture>
-                            <visible>Control.HasFocus($PARAM[id])</visible>
-                        </control>
-                        <control type="image">
-                            <left>27</left>
-                            <right>27</right>
-                            <top>27</top>
-                            <height>435</height>
-                            <!-- <aspectratio>stretch</aspectratio> -->
-                            <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
-                            <visible>Container.Content(artists)</visible>
-                        </control>
-                        <control type="image">
-                            <left>27</left>
-                            <right>27</right>
-                            <top>27</top>
-                            <height>435</height>
-                            <!-- <aspectratio>stretch</aspectratio> -->
-                            <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
-                            <visible>Container.Content(albums)</visible>
-                        </control>
-                        <control type="textbox">
-                            <left>0</left>
-                            <right>20</right>
-                            <width>100%</width>
-                            <top>460</top>
-                            <bottom>20</bottom>
-                            <label>$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                            <visible>!String.IsEmpty(ListItem.Artist)</visible>
-                        </control>
-                        <control type="textbox">
-                            <left>0</left>
-                            <right>20</right>
-                            <width>100%</width>
-                            <top>460</top>
-                            <bottom>20</bottom>
-                            <label>$INFO[ListItem.Label]</label>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                            <visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year)</visible>
+                        <control type="group">
+                            <left>231</left>
+                            <top>-8</top>
+                            <include>UserRatingCircle</include>
                         </control>
                     </control>
                 </focusedlayout>

@@ -134,8 +134,7 @@
                 <param name="poster">$VAR[PosterVar]</param>
                 <param name="focused" value="true" />
                 <param name="width" value="524" />
-                <param name="height" value="764" />
-                <param name="rating_left" value="248" />                           
+                <param name="height" value="764" />                           
             </include>
 		</control>
 	</include>

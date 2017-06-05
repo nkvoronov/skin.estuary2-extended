@@ -73,7 +73,7 @@
 								<bordertexture border="21">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
 							</control>
-							<control type="image">
+                            <control type="image">
 								<depth>DepthContentPopout</depth>
 								<left>15</left>
 								<top>90</top>
@@ -87,13 +87,23 @@
 							</control>
 							<control type="image">
 								<left>15</left>
+								<top>90</top>
+								<width>340</width>
+								<height>480</height>
+                                <aspectratio aligny="center">keep</aspectratio>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
+								<bordersize>25</bordersize>
+								<visible>String.IsEmpty(ListItem.Art(poster)) + !ListItem.IsParentFolder</visible>
+							</control>
+							<control type="image">
+								<left>15</left>
 								<top>145</top>
 								<width>340</width>
 								<height>340</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
-								<aspectratio>scale</aspectratio>
+                                <aspectratio>scale</aspectratio>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>								
 								<bordersize>20</bordersize>
-								<visible>String.IsEmpty(ListItem.Art(poster))</visible>
+								<visible>String.IsEmpty(ListItem.Art(poster)) + ListItem.IsParentFolder</visible>
 							</control>
 							<control type="group">
 								<left>163</left>
@@ -190,7 +200,7 @@
 								<bordertexture border="21">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
 							</control>
-							<control type="image">
+                            <control type="image">
 								<depth>DepthContentPopout</depth>
 								<left>15</left>
 								<top>90</top>
@@ -204,13 +214,23 @@
 							</control>
 							<control type="image">
 								<left>15</left>
+								<top>90</top>
+								<width>340</width>
+								<height>480</height>
+                                <aspectratio aligny="center">keep</aspectratio>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
+								<bordersize>25</bordersize>
+								<visible>String.IsEmpty(ListItem.Art(poster)) + !ListItem.IsParentFolder</visible>
+							</control>
+							<control type="image">
+								<left>15</left>
 								<top>145</top>
 								<width>340</width>
 								<height>340</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
-								<aspectratio>scale</aspectratio>
+                                <aspectratio>scale</aspectratio>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>								
 								<bordersize>20</bordersize>
-								<visible>String.IsEmpty(ListItem.Art(poster))</visible>
+								<visible>String.IsEmpty(ListItem.Art(poster)) + ListItem.IsParentFolder</visible>
 							</control>
 							<control type="group">
 								<left>163</left>
