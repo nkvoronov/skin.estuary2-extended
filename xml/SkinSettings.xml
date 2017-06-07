@@ -517,7 +517,7 @@
                     <description>Color Secondary Background</description>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43027]</label>
-                    <label2>[COLOR $VAR[SecondaryBackgroundColorVar]]$VAR[SecondaryBackgroundColorVar][/COLOR]</label2>
+                    <label2>[COLOR $VAR[SecondaryBackgroundColorVar]]$VAR[SecondaryBackgroundColorNameVar][/COLOR]</label2>
                     <onclick>RunScript(script.skin.helper.colorpicker,skinstring=SecondaryBackgroundColor)</onclick>
                 </control>
                 <control type="button" id="604">
