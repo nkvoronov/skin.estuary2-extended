@@ -292,6 +292,11 @@
 	<!-- IconWallThumbVar -->
 	<variable name="IconWallThumbVar">
         <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
+        <value condition="String.IsEmpty(ListItem.Thumb) + Container.Content(artists)">DefaultMusicArtists.png</value>
+        <value condition="String.IsEmpty(ListItem.Thumb) + Container.Content(albums)">DefaultMusicAlbums.png</value>
+        <value condition="String.IsEmpty(ListItem.Thumb) + Container.Content(songs)">DefaultMusicSongs.png</value>
+        <value condition="String.IsEmpty(ListItem.Thumb) + Container.Content(directors)">DefaultDirector.png</value>
+        <value condition="String.IsEmpty(ListItem.Thumb) + Container.Content(playlists)">DefaultPlaylist.png</value>
 	    <value condition="Container.Content(genres) + Window.IsActive(videos) + String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.arctic.zephyr/) + String.IsEqual(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
         <value condition="Container.Content(genres) + Window.IsActive(videos) + String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.arctic.zephyr/) + String.IsEqual(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.jpg]</value>
         <value condition="Container.Content(genres) + Window.IsActive(videos) + String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.coloured/) + String.IsEqual(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.png]</value>
@@ -339,8 +344,13 @@
 	</variable>
     <!-- 54 Info Wall View Thumb -->
 	<variable name="InfoWallThumbVar">
-		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
+        <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
+        <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[15102])">DefaultMusicAlbums.png</value>
+        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
         <value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
+        <value condition="String.IsEmpty(ListItem.Icon) + Container.Content(artists)">DefaultMusicArtists.png</value>
+        <value condition="String.IsEmpty(ListItem.Icon) + Container.Content(albums)">DefaultMusicAlbums.png</value>
+        <value condition="!String.IsEmpty(ListItem.Icon) + String.IsEqual(ListItem.Icon, DefaultMusicSongs.png) + Container.Content(albums)">DefaultMusicAlbums.png</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
     <!-- 501 Banner View Image -->

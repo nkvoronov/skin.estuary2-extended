@@ -439,14 +439,14 @@
 			<shortcut label="31016" type="19020" icon="special://skin/extras/icons/channels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
             <shortcut label="31015" type="19020" icon="special://skin/extras/icons/recordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
             <shortcut label="19040" type="19020" icon="special://skin/extras/icons/timers.png" widget="Library" widgetType="tvtimer" widgetTarget="pvr">TVTimers</shortcut>
-			<shortcut label="43241" type="19020" icon="special://skin/extras/icons/channels.png" condition="Skin.HasSetting(enable_custom_list_channels_tv)" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">CustomChannelsTV</shortcut>
+			<shortcut label="43241" type="19020" icon="special://skin/extras/icons/channels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">CustomChannelsTV</shortcut>
 		</node>
 		<!-- Radio -->
         <node label="19021" condition="PVR.HasRadioChannels + String.IsEmpty(Window(home).Property(WidgetVisibility))">
 			<shortcut label="31018" type="19021" icon="special://skin/extras/icons/channels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
             <shortcut label="31015" type="19021" icon="special://skin/extras/icons/recordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
             <shortcut label="19040" type="19021" icon="special://skin/extras/icons/timers.png" widget="Library" widgetType="radiotimer" widgetTarget="pvr">RadioTimers</shortcut>
-			<shortcut label="43241" type="19020" icon="special://skin/extras/icons/channels.png" condition="Skin.HasSetting(enable_custom_list_channels_radio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
+			<shortcut label="43241" type="19020" icon="special://skin/extras/icons/channels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
 		</node>
 		<!-- Video -->
         <node label="3" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">			
@@ -537,7 +537,7 @@
             <shortcut label="1037" type="24001" icon="special://skin/extras/icons/video-addons.png" widget="Library" widgetType="addon" widgetTarget="videos">addons://sources/video</shortcut>
             <shortcut label="1038" type="24001" icon="special://skin/extras/icons/music.png" widget="Library" widgetType="addon" widgetTarget="music">addons://sources/audio</shortcut>
             <shortcut label="1039" type="24001" icon="special://skin/extras/icons/pictures2.png" widget="Library" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut>
-			<node label="43021" condition="Skin.HasSetting(enable_custom_list_addons)">
+			<node label="43021" condition="Skin.HasSetting(enable_custom_list_addons) + [ Skin.HasSetting(enable_custom_list_addons_programs) | Skin.HasSetting(enable_custom_list_addons_video) | Skin.HasSetting(enable_custom_list_addons_audio) | Skin.HasSetting(enable_custom_list_addons_image) ]">
 				<shortcut label="1043" type="24001" icon="special://skin/extras/icons/program.png" condition="Skin.HasSetting(enable_custom_list_addons_programs)" widget="Custom" widgetType="custaddon" widgetTarget="Programs">CustomAddonsPrograms</shortcut>
 				<shortcut label="1037" type="24001" icon="special://skin/extras/icons/video-addons.png" condition="Skin.HasSetting(enable_custom_list_addons_video)" widget="Custom" widgetType="custaddon" widgetTarget="Video">CustomAddonsVideo</shortcut>
 				<shortcut label="1038" type="24001" icon="special://skin/extras/icons/music.png" condition="Skin.HasSetting(enable_custom_list_addons_audio)" widget="Custom" widgetType="custaddon" widgetTarget="Audio">CustomAddonsAudio</shortcut>

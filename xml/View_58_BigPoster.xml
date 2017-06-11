@@ -90,6 +90,17 @@
                                 <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
                                 <aspectratio>scale</aspectratio>
                                 <bordersize>20</bordersize>
+                                <visible>!ListItem.IsParentFolder</visible>
+                            </control>
+                            <control type="image">
+                                <left>15</left>
+                                <top>-10</top>
+                                <width>485</width>
+                                <height>655</height>
+                                <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <bordersize>20</bordersize>
+                                <visible>ListItem.IsParentFolder</visible>
                             </control>
                         </control> 
                         <control type="group">
@@ -109,18 +120,33 @@
                                 <width>485</width>
                                 <height>655</height>
                                 <control type="image">
-                                    <left>10</left>
-                                    <right>10</right>
-                                    <top>10</top>
+                                    <left>5</left>
+                                    <right>5</right>
+                                    <top>5</top>
                                     <height>300</height>
                                     <aspectratio align="center" aligny="top">scale</aspectratio>
                                     <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
-                                    <bordersize>20</bordersize>
+                                    <bordersize>15</bordersize>
+                                </control>
+                                <control type="image">
+                                    <left>20</left>
+                                    <top>210</top>
+                                    <width>80</width>
+                                    <height>80</height>
+                                    <texture>overlays/overlay-bg.png</texture>
+                                    <visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+                                </control>
+                                <control type="image">
+                                    <left>20</left>
+                                    <top>260</top>
+                                    <height>32</height>
+                                    <width>32</width>
+                                    <texture>$VAR[WallWatchedIconVar]</texture>
                                 </control>
                                 <control type="label">
                                     <top>290</top>
                                     <left>30</left>
-                                    <right>80</right>
+                                    <right>30</right>
                                     <height>36</height>
                                     <label>[B]$INFO[ListItem.Title][/B]</label>
                                 </control>
@@ -142,13 +168,6 @@
                                     <label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
                                     <textcolor>$VAR[MainColorVar]</textcolor>
                                     <autoscroll>false</autoscroll>                                
-                                </control>
-                                <control type="image">
-                                    <right>30</right>
-                                    <top>290</top>
-                                    <height>48</height>
-                                    <width>48</width>
-                                    <texture>$VAR[WallWatchedIconVar]</texture>
                                 </control>
                             </control>
                         </control>
@@ -202,6 +221,17 @@
                                 <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
                                 <aspectratio>scale</aspectratio>
                                 <bordersize>20</bordersize>
+                                <visible>!ListItem.IsParentFolder</visible>
+                            </control>
+                            <control type="image">
+                                <left>15</left>
+                                <top>-10</top>
+                                <width>485</width>
+                                <height>655</height>
+                                <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <bordersize>20</bordersize>
+                                <visible>ListItem.IsParentFolder</visible>
                             </control>
                         </control>                
                         <control type="group">
@@ -231,18 +261,33 @@
                                 <width>485</width>
                                 <height>655</height>
                                 <control type="image">
-                                    <left>10</left>
-                                    <right>10</right>
-                                    <top>10</top>
+                                    <left>5</left>
+                                    <right>5</right>
+                                    <top>5</top>
                                     <height>300</height>
                                     <aspectratio align="center" aligny="top">scale</aspectratio>
                                     <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
-                                    <bordersize>20</bordersize>
+                                    <bordersize>15</bordersize>
+                                </control>
+                                <control type="image">
+                                    <left>20</left>
+                                    <top>210</top>
+                                    <width>80</width>
+                                    <height>80</height>
+                                    <texture>overlays/overlay-bg.png</texture>
+                                    <visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+                                </control>
+                                <control type="image">
+                                    <left>20</left>
+                                    <top>260</top>
+                                    <height>32</height>
+                                    <width>32</width>
+                                    <texture>$VAR[WallWatchedIconVar]</texture>
                                 </control>
                                 <control type="label">
                                     <top>290</top>
                                     <left>30</left>
-                                    <right>80</right>
+                                    <right>30</right>
                                     <height>36</height>
                                     <label>[B]$INFO[ListItem.Title][/B]</label>
                                 </control>
@@ -262,13 +307,6 @@
                                     <font>font12</font>
                                     <label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot]</label>
                                     <autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>                                
-                                </control>
-                                <control type="image">
-                                    <right>30</right>
-                                    <top>290</top>
-                                    <height>48</height>
-                                    <width>48</width>
-                                    <texture>$VAR[WallWatchedIconVar]</texture>
                                 </control>
                             </control>
                         </control>
@@ -298,33 +336,55 @@
                                 <width>485</width>
                                 <height>655</height>
                                 <control type="image">
-                                    <left>10</left>
-                                    <right>10</right>
-                                    <top>10</top>
-                                    <height>435</height>
+                                    <left>5</left>
+                                    <right>5</right>
+                                    <top>5</top>
+                                    <height>475</height>
                                     <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
-                                    <bordersize>20</bordersize>
-                                    <visible>Container.Content(artists)</visible>
+                                    <bordersize>15</bordersize>
+                                    <aspectratio>keep</aspectratio>
+                                    <visible>Container.Content(artists) + !ListItem.IsParentFolder</visible>
                                 </control>
                                 <control type="image">
-                                    <left>10</left>
-                                    <right>10</right>
-                                    <top>10</top>
-                                    <height>435</height>
+                                    <left>5</left>
+                                    <right>5</right>
+                                    <top>5</top>
+                                    <height>475</height>
                                     <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
-                                    <bordersize>20</bordersize>
-                                    <visible>Container.Content(albums)</visible>
+                                    <bordersize>15</bordersize>
+                                    <aspectratio>keep</aspectratio>
+                                    <visible>Container.Content(albums) + !ListItem.IsParentFolder</visible>
+                                </control>
+                                <control type="image">
+                                    <left>5</left>
+                                    <right>5</right>
+                                    <top>5</top>
+                                    <height>655</height>
+                                    <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
+                                    <bordersize>15</bordersize>
+                                    <aspectratio>keep</aspectratio>
+                                    <visible>ListItem.IsParentFolder + [ Container.Content(albums) | Container.Content(artists) ]</visible>
                                 </control>
                                 <control type="textbox">
                                     <left>20</left>
                                     <right>20</right>
                                     <top>460</top>
                                     <bottom>20</bottom>
-                                    <label>$INFO[ListItem.Artist,[COLOR white][B],[/B][/COLOR][CR]]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
+                                    <label>$INFO[ListItem.Artist,[B],[/B]]</label>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <visible>Container.Content(artists)</visible>
+                                </control>
+                                <control type="textbox">
+                                    <left>20</left>
+                                    <right>20</right>
+                                    <top>460</top>
+                                    <bottom>20</bottom>
+                                    <label>$INFO[ListItem.Album,[COLOR white][B],[/B][/COLOR]] $INFO[ListItem.Year,[B][COLOR white]([/COLOR],[COLOR white])[/COLOR][/B]][CR]$INFO[ListItem.Artist,[COLOR white][I],[/I][/COLOR]]</label>
                                     <align>center</align>
                                     <aligny>center</aligny>
                                     <textcolor>$VAR[MainColorVar]</textcolor>
-                                    <visible>!String.IsEmpty(ListItem.Artist)</visible>
+                                    <visible>Container.Content(albums)</visible>
                                 </control>
                                 <control type="textbox">
                                     <left>20</left>
@@ -334,7 +394,7 @@
                                     <label>$INFO[ListItem.Label]</label>
                                     <align>center</align>
                                     <aligny>center</aligny>
-                                    <visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year)</visible>
+                                    <visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year) + !ListItem.IsParentFolder</visible>
                                 </control>
                             </control>
                         </control>
@@ -374,32 +434,54 @@
                                 <width>485</width>
                                 <height>655</height>
                                 <control type="image">
-                                    <left>10</left>
-                                    <right>10</right>
-                                    <top>10</top>
-                                    <height>435</height>
+                                    <left>5</left>
+                                    <right>5</right>
+                                    <top>5</top>
+                                    <height>475</height>
                                     <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
-                                    <bordersize>20</bordersize>
-                                    <visible>Container.Content(artists)</visible>
+                                    <bordersize>15</bordersize>
+                                    <aspectratio>keep</aspectratio>
+                                    <visible>Container.Content(artists) + !ListItem.IsParentFolder</visible>
                                 </control>
                                 <control type="image">
-                                    <left>10</left>
-                                    <right>10</right>
-                                    <top>10</top>
-                                    <height>435</height>
+                                    <left>5</left>
+                                    <right>5</right>
+                                    <top>5</top>
+                                    <height>475</height>
                                     <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
-                                    <bordersize>20</bordersize>
-                                    <visible>Container.Content(albums)</visible>
+                                    <bordersize>15</bordersize>
+                                    <aspectratio>keep</aspectratio>
+                                    <visible>Container.Content(albums) + !ListItem.IsParentFolder</visible>
+                                </control>
+                                <control type="image">
+                                    <left>5</left>
+                                    <right>5</right>
+                                    <top>5</top>
+                                    <height>655</height>
+                                    <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
+                                    <bordersize>15</bordersize>
+                                    <aspectratio>keep</aspectratio>
+                                    <visible>ListItem.IsParentFolder + [ Container.Content(albums) | Container.Content(artists) ]</visible>
                                 </control>
                                 <control type="textbox">
                                     <left>20</left>
                                     <right>20</right>
                                     <top>460</top>
                                     <bottom>20</bottom>
-                                    <label>$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
+                                    <label>$INFO[ListItem.Artist,[B],[/B]]</label>
                                     <align>center</align>
                                     <aligny>center</aligny>
-                                    <visible>!String.IsEmpty(ListItem.Artist)</visible>
+                                    <visible>Container.Content(artists)</visible>
+                                </control>
+                                <control type="textbox">
+                                    <left>20</left>
+                                    <right>20</right>
+                                    <top>460</top>
+                                    <bottom>20</bottom>
+                                    <label>$INFO[ListItem.Album,[B],[/B]] $INFO[ListItem.Year,[B](,)[/B]][CR]$INFO[ListItem.Artist,[I],[/I]]</label>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <visible>Container.Content(albums)</visible>
                                 </control>
                                 <control type="textbox">
                                     <left>20</left>
@@ -409,7 +491,7 @@
                                     <label>$INFO[ListItem.Label]</label>
                                     <align>center</align>
                                     <aligny>center</aligny>
-                                    <visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year)</visible>
+                                    <visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year) + !ListItem.IsParentFolder</visible>
                                 </control>
                             </control>
                         </control>

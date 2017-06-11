@@ -82,6 +82,16 @@
 							<height>194</height>
 							<aspectratio>scale</aspectratio>
 							<texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+                            <visible>!ListItem.IsParentFolder</visible>
+						</control>
+                        <control type="image">
+							<top>18</top>
+							<left>13</left>
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+                            <visible>ListItem.IsParentFolder</visible>
 						</control>
 						<control type="image">
 							<top>178</top>
@@ -124,6 +134,16 @@
 							<height>194</height>
 							<aspectratio>scale</aspectratio>
 							<texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+                            <visible>!ListItem.IsParentFolder</visible>
+						</control>
+                        <control type="image">
+							<top>18</top>
+							<left>13</left>
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+                            <visible>ListItem.IsParentFolder</visible>
 						</control>
 						<control type="image">
 							<top>178</top>
