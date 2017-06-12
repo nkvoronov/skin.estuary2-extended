@@ -72,6 +72,7 @@
 	</variable>
     <!-- Music Info Text -->
 	<variable name="MusicInfoTextboxVar">
+        <!-- <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Property(Artist_Description)) + String.IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]Online[/B][CR][COLOR white],[/COLOR]]</value> -->
 		<value condition="String.IsEqual(ListItem.DbType,song)">$INFO[ListItem.Comment,[B]$LOCALIZE[569][/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="String.IsEqual(ListItem.DbType,album)">$INFO[ListItem.Property(Album_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="String.IsEqual(ListItem.DbType,artist)">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
@@ -106,7 +107,8 @@
 	</variable>
     <!-- Shift Right Text -->
 	<variable name="ShiftRightTextBoxVar">
-        <value condition="Window.IsActive(pictures)">$INFO[ListItem.Size,$LOCALIZE[289]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Date,$LOCALIZE[552]: [COLOR white],[/COLOR][CR]]</value>        
+        <value condition="Window.IsActive(pictures)">$INFO[ListItem.Size,$LOCALIZE[289]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Date,$LOCALIZE[552]: [COLOR white],[/COLOR][CR]]</value>
+        <!-- <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + !Container.Content(movies) + !Container.Content(tvshows)">[COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</value> -->
         <value condition="String.IsEqual(ListItem.DBType,artist)">[COLOR white]$INFO[ListItem.Property(Artist_Description)][/COLOR]</value>
         <value condition="String.IsEqual(ListItem.DBType,album)">[COLOR white]$INFO[ListItem.Property(Album_Description)][/COLOR]</value>                
 		<value>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
@@ -289,7 +291,6 @@
     <!-- *** Views *** -->
 
     <!-- 50 List, 52 Icon Wall View Thumb -->
-	<!-- IconWallThumbVar -->
 	<variable name="IconWallThumbVar">
         <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
         <value condition="String.IsEmpty(ListItem.Thumb) + Container.Content(artists)">DefaultMusicArtists.png</value>
@@ -442,7 +443,7 @@
 		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
         <value condition="!String.IsEmpty(ListItem.Icon) + String.IsEqual(ListItem.Label,$LOCALIZE[15102]) + Container.Content(albums)">DefaultMusicAlbums.png</value>
-        <value condition="!String.IsEmpty(ListItem.Icon) + String.IsEqual(ListItem.Icon, DefaultMusicSongs.png) + Container.Content(albums)">DefaultMusicAlbums.png</value>
+        <value condition="!String.IsEmpty(ListItem.Icon) + String.IsEqual(ListItem.Icon,DefaultMusicSongs.png) + Container.Content(albums)">DefaultMusicAlbums.png</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
     <!-- 56,57 No Clear View -->    
@@ -466,6 +467,9 @@
     <!-- *** Fanarts *** -->
     
     <!-- Global Fanart -->
+	<variable name="GlobalFanartVar">
+		<value condition="Skin.HasSetting(use_custom_bg) + !String.IsEmpty(Skin.String(custom_background))">$INFO[Skin.String(custom_background)]</value>
+	</variable>
     <!-- Addons Fanart -->
 	<variable name="AddonsFanartVar">
 		<value condition="Skin.HasSetting(no_fanart)"></value>

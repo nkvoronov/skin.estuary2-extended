@@ -425,7 +425,7 @@
 							<visible>!$PARAM[scale]</visible>
 						</control>
 						<control type="image">
-							<top>25</top>
+							<top>20</top>
 							<left>62</left>
 							<width>200</width>
 							<height>$PARAM[icon_height]</height>
@@ -443,6 +443,19 @@
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
+                            <visible>!$PARAM[scale]</visible>
+						</control>
+						<control type="textbox">
+							<left>42</left>
+							<top>114</top>
+							<width>240</width>
+							<height>70</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font25_narrow</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+                            <visible>$PARAM[scale]</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -486,7 +499,7 @@
 							<visible>!$PARAM[scale]</visible>
 						</control>
 						<control type="image">
-							<top>25</top>
+							<top>20</top>
 							<left>62</left>
 							<width>200</width>
 							<height>$PARAM[icon_height]</height>
@@ -504,6 +517,19 @@
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
+                            <visible>!$PARAM[scale]</visible>
+						</control>
+						<control type="textbox">
+							<left>42</left>
+							<top>114</top>
+							<width>240</width>
+							<height>70</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font25_narrow</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+                            <visible>$PARAM[scale]</visible>
 						</control>
 					</control>
 				</focusedlayout>

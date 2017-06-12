@@ -111,7 +111,7 @@
 								<include>UserRatingCircle</include>
 							</control>
 							<control type="group">
-								<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
+								<visible>String.IsEqual(ListItem.DBtype,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 								<top>500</top>
 								<control type="image">
 									<left>35</left>
@@ -238,7 +238,7 @@
 								<include>UserRatingCircle</include>
 							</control>
 							<control type="group">
-								<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
+								<visible>String.IsEqual(ListItem.DBtype,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 								<top>500</top>
 								<control type="image">
 									<left>35</left>
