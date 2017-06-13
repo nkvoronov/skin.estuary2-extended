@@ -117,7 +117,7 @@
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget1">videos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget1">videodb://recentlyaddedmusicvideos/</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget2">Playlist</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetName.widget2">43090</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetName.widget2">31151</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget2">musicvideos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget2">videos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget2">special://skin/extras/playlists/unwatched_musicvideos.xsp</propertydefault>	
@@ -127,7 +127,7 @@
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget3">music</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget3">special://skin/extras/playlists/random_musicvideo_artists.xsp</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget4">Playlist</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetName.widget4">43092</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetName.widget4">31152</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget4">musicvideos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget4">videos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget4">special://skin/extras/playlists/random_musicvideos.xsp</propertydefault>

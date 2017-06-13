@@ -70,12 +70,16 @@
 		<value condition="Integer.IsGreater(Container(8000).NumItems,0)">1</value>
 		<value>[COLOR grey]0[/COLOR]</value>
 	</variable>
+    <!-- Music Info Text Artist-->
+	<variable name="MusicInfoTextArtistVar">
+		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[COLOR white][B]...[/B][CR],[/COLOR]]</value>
+    </variable>
     <!-- Music Info Text -->
 	<variable name="MusicInfoTextboxVar">
-        <!-- <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Property(Artist_Description)) + String.IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]Online[/B][CR][COLOR white],[/COLOR]]</value> -->
-		<value condition="String.IsEqual(ListItem.DbType,song)">$INFO[ListItem.Comment,[B]$LOCALIZE[569][/B][CR][COLOR white],[/COLOR]]</value>
-		<value condition="String.IsEqual(ListItem.DbType,album)">$INFO[ListItem.Property(Album_Description),[COLOR white],[/COLOR]]</value>
-		<value condition="String.IsEqual(ListItem.DbType,artist)">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
+        <value condition="String.IsEqual(ListItem.DbType,song) + !String.IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment,[B]$LOCALIZE[569][/B][CR][COLOR white],[/COLOR]]</value>
+		<value condition="String.IsEqual(ListItem.DbType,album) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[COLOR white],[/COLOR]]</value>
+		<value condition="String.IsEqual(ListItem.DbType,artist)">$VAR[MusicInfoTextArtistVar]</value>
 	</variable>
     <!-- Now Playing Sublabel -->
 	<variable name="NowPlayingSublabelVar">
@@ -108,8 +112,7 @@
     <!-- Shift Right Text -->
 	<variable name="ShiftRightTextBoxVar">
         <value condition="Window.IsActive(pictures)">$INFO[ListItem.Size,$LOCALIZE[289]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Date,$LOCALIZE[552]: [COLOR white],[/COLOR][CR]]</value>
-        <!-- <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + !Container.Content(movies) + !Container.Content(tvshows)">[COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</value> -->
-        <value condition="String.IsEqual(ListItem.DBType,artist)">[COLOR white]$INFO[ListItem.Property(Artist_Description)][/COLOR]</value>
+        <value condition="String.IsEqual(ListItem.DBType,artist)">$VAR[MusicInfoTextArtistVar]</value>
         <value condition="String.IsEqual(ListItem.DBType,album)">[COLOR white]$INFO[ListItem.Property(Album_Description)][/COLOR]</value>                
 		<value>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
 	</variable>
@@ -185,7 +188,7 @@
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonDescription,[COLOR white],[/COLOR]]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,video)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]][COLOR white]$INFO[ListItem.Plot][/COLOR]</value>
-		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$VAR[MusicInfoTextArtistVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Tagline,[I],[/I][CR][CR]][COLOR white]$INFO[ListItem.Plot][/COLOR]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567]: [COLOR white],[/COLOR][CR]]</value>
 		<value>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]</value>

@@ -977,11 +977,7 @@ msgid "Most watched music videos"
 msgstr ""
 
 msgctxt "#43091"
-msgid "Random music videos"
-msgstr ""
-
-msgctxt "#43092"
-msgid "Unwatched music videos"
+msgid "Random music videos artists"
 msgstr ""
 
 msgctxt "#43100"

@@ -795,12 +795,8 @@ msgid "Most watched music videos"
 msgstr "Самые просматриваемые муз. видео"
 
 msgctxt "#43091"
-msgid "Random music videos"
-msgstr "Случайные муз. видео"
-
-msgctxt "#43092"
-msgid "Unwatched music videos"
-msgstr "Непросмотренные муз. видео"
+msgid "Random music videos artists"
+msgstr "Случайные муз. видео исполнители"
 
 msgctxt "#43100"
 msgid "Smart Shortcuts"
