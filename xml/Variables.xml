@@ -421,7 +421,7 @@
         <value condition="!String.IsEmpty(Container(56).ListItem.Art(poster)) + [!String.IsEmpty(Container(56).ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[Container(56).ListItem.Art(animatedposter)]</value>
         <value condition="!String.IsEmpty(Container(57).ListItem.Art(poster)) + [!String.IsEmpty(Container(57).ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[Container(57).ListItem.Art(animatedposter)]</value>
         <value condition="!String.IsEmpty(Container(50).ListItem.Art(poster)) + [!String.IsEmpty(Container(50).ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[Container(50).ListItem.Art(animatedposter)]</value>
-        <value condition="!String.IsEmpty(Container(51).ListItem.Art(poster)) + [!String.IsEmpty(Container(51).ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[Container(51).ListItem.Art(animatedposter)]</value>        
+        <value condition="!String.IsEmpty(Container(51).ListItem.Art(poster)) + [!String.IsEmpty(Container(51).ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[Container(51).ListItem.Art(animatedposter)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
         <value condition="!String.IsEmpty(Container(51).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(51).ListItem.Art(season.poster)]</value>
         <value condition="!String.IsEmpty(Container(50).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(50).ListItem.Art(season.poster)]</value>

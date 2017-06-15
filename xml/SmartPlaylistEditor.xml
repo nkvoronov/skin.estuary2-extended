@@ -88,7 +88,7 @@
 				<include content="DefaultSimpleListLayout">
 					<param name="width" value="600" />
 					<param name="list_id" value="10" />
-				</include>          
+				</include>
 			</control>
 			<control type="textbox">
 				<left>740</left>
