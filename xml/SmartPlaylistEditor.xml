@@ -83,7 +83,7 @@
 				<width>600</width>
 				<height>480</height>
 				<onleft>500</onleft>
-				<onright>9001</onright>
+				<onright>9000</onright>
 				<orientation>vertical</orientation>
 				<include content="DefaultSimpleListLayout">
 					<param name="width" value="600" />
@@ -92,7 +92,7 @@
 			</control>
 			<control type="textbox">
 				<left>740</left>
-				<top>620</top>
+				<top>608</top>
 				<width>610</width>
 				<height>348</height>
 				<aligny>top</aligny>
@@ -100,12 +100,33 @@
 				<textcolor>grey</textcolor>
 				<font>font12</font>
 			</control>
-			<control type="grouplist" id="9001">
+			<control type="grouplist" id="9000">
 				<orientation>vertical</orientation>
 				<left>1380</left>
 				<width>1300</width>
 				<itemgap>dialogbuttons_itemgap</itemgap>
 				<top>100</top>
+				<onleft>10</onleft>
+				<onright>9001</onright>
+                <include content="DefaultDialogButton">
+					<param name="id" value="13" />
+					<param name="label" value="$LOCALIZE[15019]" />
+				</include>
+				<include content="DefaultDialogButton">
+					<param name="id" value="14" />
+					<param name="label" value="$LOCALIZE[1210]" />
+				</include>
+                <include content="DefaultDialogButton">
+					<param name="id" value="15" />
+					<param name="label" value="$LOCALIZE[21435]" />
+				</include>
+			</control>
+			<control type="grouplist" id="9001">
+				<orientation>vertical</orientation>
+				<left>1380</left>
+				<width>1300</width>
+				<itemgap>dialogbuttons_itemgap</itemgap>
+				<top>445</top>
 				<onleft>10</onleft>
 				<onright>500</onright>
 				<include content="DefaultDialogButton">

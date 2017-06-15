@@ -87,7 +87,7 @@
 							<left>0</left>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
 						<control type="image">
@@ -95,7 +95,7 @@
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">$INFO[ListItem.Art(thumb)]</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Art(thumb)]</texture>
 							<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 						</control>
 						<control type="image">
@@ -222,7 +222,7 @@
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 					<texturenofocus />
 					<radioposx>39</radioposx>
 					<radioposy>0</radioposy>
@@ -244,7 +244,7 @@
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus border="30" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texturefocus>
+					<texturefocus border="30" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
 					<texturenofocus />
 					<radioposx>35</radioposx>
 					<radioposy>0</radioposy>
@@ -268,7 +268,7 @@
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 					<texturenofocus />
 					<radioposx>40</radioposx>
 					<radioposy>0</radioposy>

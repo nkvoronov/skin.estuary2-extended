@@ -150,7 +150,7 @@
 					<height>240</height>
 					<wrapmultiline>true</wrapmultiline>
 					<label>$VAR[MusicInfoTextboxVar]</label>
-					<textcolor>button_focus</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
                 <!-- List albums or songs -->
 				<control type="panel" id="50">
@@ -175,7 +175,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-                            <textcolor>button_focus</textcolor>
+                            <textcolor>$VAR[MainColorVar]</textcolor>
 							<label>$INFO[ListItem.Label,,.][COLOR white]$INFO[ListItem.Label2][/COLOR]</label>
 						</control>
 					</itemlayout>
@@ -184,7 +184,7 @@
 							<top>-10</top>
 							<width>595</width>
 							<height>100</height>
-							<texture border="21" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -193,7 +193,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-                            <textcolor>button_focus</textcolor>
+                            <textcolor>$VAR[MainColorVar]</textcolor>
 							<label>$INFO[ListItem.Label,,.][COLOR white]$INFO[ListItem.Label2][/COLOR]</label>
 						</control>
 					</focusedlayout>
@@ -211,7 +211,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						    <label>$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
 						</control>
 						<control type="group">
@@ -226,7 +226,7 @@
 								<top>-10</top>
 								<width>595</width>
 								<height>100</height>
-								<texture border="21" colordiffuse="button_focus">buttons/button-fo.png</texture>
+								<texture border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							</control>
 							<control type="label">
 								<left>40</left>
@@ -235,7 +235,7 @@
 								<height>60</height>
 								<font>font12</font>
 								<aligny>center</aligny>
-                                <textcolor>button_focus</textcolor>
+                                <textcolor>$VAR[MainColorVar]</textcolor>
 								<label>$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
 							</control>
 							<control type="group">
@@ -270,7 +270,7 @@
 							<font>font27_narrow</font>
 							<align>center</align>
 							<aligny>center</aligny>
-                            <textcolor>button_focus</textcolor>
+                            <textcolor>$VAR[MainColorVar]</textcolor>
                             <label>$INFO[ListItem.Label2,,[COLOR white] - [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
 						</control>
 						<control type="group">
@@ -308,7 +308,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
-								<textcolor>button_focus</textcolor>
+								<textcolor>$VAR[MainColorVar]</textcolor>
                                 <label>$INFO[ListItem.Label2,,[COLOR white] - [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
 							</control>
 							<control type="group">
@@ -321,7 +321,7 @@
 								<top>6</top>
 								<width>218</width>
 								<height>280</height>
-								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+								<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 								<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
 							</control>
 						</control>

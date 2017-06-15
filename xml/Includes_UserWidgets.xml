@@ -161,160 +161,116 @@
     </include>    
     <!-- ContentAddonsWidgets -->
 	<include name="HomeCustomAddonsItems">
-        <content>
-            <item id="1">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].0.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].0.Name)])</onclick>
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].0.Icon)]</icon>                
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].0.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].0.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].0.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].0.Name))</visible>
-            </item>
-            <item id="2">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].1.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].1.Name)])</onclick>                
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].1.Icon)]</icon>
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].1.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].1.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].1.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].1.Name))</visible>
-            </item>
-            <item id="3">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].2.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].2.Name)])</onclick>
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].2.Icon)]</icon>
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].2.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].2.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].2.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].2.Name))</visible>
-            </item>
-            <item id="4">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].3.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].3.Name)])</onclick>
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].3.Icon)]</icon>
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].3.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].3.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].3.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].3.Name))</visible>
-            </item>
-            <item id="5">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].4.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].4.Name)])</onclick>
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].4.Icon)]</icon>
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].4.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].4.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].4.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].4.Name))</visible>
-            </item>
-            <item id="6">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].5.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].5.Name)])</onclick>
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].5.Icon)]</icon>
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].5.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].5.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].5.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].5.Name))</visible>
-            </item>
-            <item id="7">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].6.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].6.Name)])</onclick>
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].6.Icon)]</icon>
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].6.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].6.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].6.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].6.Name))</visible>
-            </item>
-            <item id="8">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].7.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].7.Name)])</onclick>
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].7.Icon)]</icon>
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].7.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].7.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].7.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].7.Name))</visible>
-            </item>
-            <item id="9">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].8.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].8.Name)])</onclick>
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].8.Icon)]</icon>
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].8.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].8.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].8.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].8.Name))</visible>
-            </item>
-            <item id="10">
-                <label>$INFO[Skin.String(AddonSet$PARAM[id2].9.Label)]</label>
-                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].9.Name)])</onclick>
-                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].9.Icon)]</icon>
-                <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].9.Icon)]</thumb>
-                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].9.Name))]</property>
-                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].9.Name)]/fanart.jpg</property>
-                <visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].9.Name))</visible>
-            </item>
-        </content>
+		<item id="1">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].0.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].0.Name)])</onclick>
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].0.Icon)]</icon>                
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].0.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].0.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].0.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].0.Name))</visible>
+		</item>
+		<item id="2">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].1.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].1.Name)])</onclick>                
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].1.Icon)]</icon>
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].1.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].1.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].1.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].1.Name))</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].2.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].2.Name)])</onclick>
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].2.Icon)]</icon>
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].2.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].2.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].2.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].2.Name))</visible>
+		</item>
+		<item id="4">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].3.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].3.Name)])</onclick>
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].3.Icon)]</icon>
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].3.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].3.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].3.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].3.Name))</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].4.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].4.Name)])</onclick>
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].4.Icon)]</icon>
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].4.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].4.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].4.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].4.Name))</visible>
+		</item>
+		<item id="6">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].5.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].5.Name)])</onclick>
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].5.Icon)]</icon>
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].5.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].5.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].5.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].5.Name))</visible>
+		</item>
+		<item id="7">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].6.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].6.Name)])</onclick>
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].6.Icon)]</icon>
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].6.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].6.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].6.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].6.Name))</visible>
+		</item>
+		<item id="8">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].7.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].7.Name)])</onclick>
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].7.Icon)]</icon>
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].7.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].7.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].7.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].7.Name))</visible>
+		</item>
+		<item id="9">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].8.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].8.Name)])</onclick>
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].8.Icon)]</icon>
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].8.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].8.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].8.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].8.Name))</visible>
+		</item>
+		<item id="10">
+			<label>$INFO[Skin.String(AddonSet$PARAM[id2].9.Label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].9.Name)])</onclick>
+			<icon>$INFO[Skin.String(AddonSet$PARAM[id2].9.Icon)]</icon>
+			<thumb>$INFO[Skin.String(AddonSet$PARAM[id2].9.Icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].9.Name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].9.Name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[id2].9.Name))</visible>
+		</item>
 	</include>
-    <!-- WidgetListCustomAddons -->
-	<include name="WidgetListCustomAddons">
-		<param name="sub_label">$INFO[ListItem.Label]</param>
-		<param name="sortby"></param>
-		<param name="visible">True</param>
-		<param name="sortorder">ascending</param>
-		<param name="widget_limit">15</param>
-		<param name="fallback_icon">DefaultAudio.png</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="220"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>120</top>
-				<right>0</right>
-				<height>500</height>
-				<include content="WidgetListCommon">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
-					<control type="group">
-						<left>70</left>
-						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="false" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="500">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
-						</animation>
-						<include content="InfoWallMusicLayout">
-							<param name="main_label" value="$PARAM[main_label]" />
-							<param name="single_label" value="$PARAM[single_label]" />
-							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="true" />
-						</include>
-					</control>
-				</focusedlayout>
-				<include content="HomeCustomAddonsItems">
-					<param name="id2" value="$PARAM[widget_target]" />
-				</include>
-			</control>
-		</definition>
+	<include name="CustomAddonsVideo">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Video" />
+		</include>
+	</include>
+	<include name="CustomAddonsAudio">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Audio" />
+		</include>
+	</include>
+	<include name="CustomAddonsPrograms">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Programs" />
+		</include>
+	</include>
+	<include name="CustomAddonsImage">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Image" />
+		</include>
 	</include>
     <!-- CustomWidgetsChannelsSettings -->
     <include name="HomeMainCustomWidgetsChannelsSettings">
@@ -429,251 +385,115 @@
     </include>
     <!-- ContentChannelsWidgets -->
 	<include name="HomeCustomChannelsItems">
-        <content>
-            <item id="1">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].0.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].0.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].0.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].0.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].0.ChannelId))</visible>
-            </item>
-            <item id="2">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].1.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].1.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].1.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].1.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].1.ChannelId))</visible>
-            </item>
-            <item id="3">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].2.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].2.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].2.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].2.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].2.ChannelId))</visible>
-            </item>
-            <item id="4">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].3.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].3.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].3.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].3.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].3.ChannelId))</visible>
-            </item>
-            <item id="5">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].4.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].4.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].4.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].4.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].4.ChannelId))</visible>
-            </item>
-            <item id="6">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].5.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].5.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].5.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].5.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].5.ChannelId))</visible>
-            </item>
-            <item id="7">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].6.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].6.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].6.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].6.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].6.ChannelId))</visible>
-            </item>
-            <item id="8">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].7.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].7.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].7.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].7.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].7.ChannelId))</visible>
-            </item>
-            <item id="9">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].8.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].8.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].8.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].8.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].8.ChannelId))</visible>
-            </item>
-            <item id="10">
-                <label>$INFO[Skin.String(Channel$PARAM[id2].9.Label)]</label>
-                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].9.ChannelId)])</onclick>
-                <icon>$INFO[Skin.String(Channel$PARAM[id2].9.Icon)]</icon>
-                <thumb>-</thumb>
-                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.StartTime)]</property>
-                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.EndTime)]</property>
-                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].9.Title)]</property>
-                <visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].9.ChannelId))</visible>
-            </item>
-        </content>
+		<item id="1">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].0.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].0.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].0.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].0.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].0.ChannelId))</visible>
+		</item>
+		<item id="2">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].1.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].1.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].1.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].1.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].1.ChannelId))</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].2.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].2.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].2.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].2.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].2.ChannelId))</visible>
+		</item>
+		<item id="4">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].3.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].3.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].3.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].3.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].3.ChannelId))</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].4.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].4.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].4.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].4.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].4.ChannelId))</visible>
+		</item>
+		<item id="6">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].5.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].5.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].5.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].5.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].5.ChannelId))</visible>
+		</item>
+		<item id="7">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].6.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].6.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].6.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].6.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].6.ChannelId))</visible>
+		</item>
+		<item id="8">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].7.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].7.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].7.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].7.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].7.ChannelId))</visible>
+		</item>
+		<item id="9">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].8.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].8.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].8.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].8.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].8.ChannelId))</visible>
+		</item>
+		<item id="10">
+			<label>$INFO[Skin.String(Channel$PARAM[id2].9.Label)]</label>
+			<onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].9.ChannelId)])</onclick>
+			<icon>$INFO[Skin.String(Channel$PARAM[id2].9.Icon)]</icon>
+			<thumb>-</thumb>
+			<property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.StartTime)]</property>
+			<property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.EndTime)]</property>
+			<property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].9.Title)]</property>
+			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[id2].9.ChannelId))</visible>
+		</item>
 	</include>
-    <!-- WidgetListCustomChannels -->
-	<include name="WidgetListCustomChannels">
-		<param name="item_limit">15</param>
-		<param name="icon">$INFO[ListItem.Icon]</param>
-		<param name="label">$INFO[ListItem.Label]</param>
-		<param name="label2">$INFO[ListItem.Property(Title)]</param>
-		<definition>
-			<include content="CategoryLabel">
-				<param name="label">$PARAM[widget_header]</param>
-				<param name="list_id" value="$PARAM[list_id]"/>
-			</include>
-			<include content="BusyListSpinner">
-				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="200"/>
-			</include>
-			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>120</top>
-				<right>0</right>
-				<height>430</height>
-				<include content="WidgetListCommon">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
-					<control type="group">
-						<left>70</left>
-						<control type="image">
-							<width>319</width>
-							<height>340</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<top>43</top>
-							<left>38</left>
-							<width>245</width>
-							<height>200</height>
-							<texture fallback="DefaultTVShows.png">$PARAM[icon]</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="label">
-							<left>42</left>
-							<top>247</top>
-							<width>245</width>
-							<height>70</height>
-							<label>$PARAM[label]</label>
-							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>top</aligny>
-						</control>
-						<control type="label">
-							<left>42</left>
-							<top>277</top>
-							<width>245</width>
-							<height>65</height>
-							<label>$PARAM[label2]</label>
-							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>top</aligny>
-						</control>
-						<control type="image">
-							<left>260</left>
-							<top>30</top>
-							<width>32</width>
-							<height>32</height>
-							<texture>$VAR[WallWatchedIconVar]</texture>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout width="310" height="500">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,100" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100" />
-						</animation>
-						<control type="image">
-							<width>319</width>
-							<height>340</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<width>319</width>
-							<height>340</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
-							<bordersize>20</bordersize>
-							<include>Animation_FocusTextureFade</include>
-						</control>
-						<control type="image">
-							<top>43</top>
-							<left>38</left>
-							<width>245</width>
-							<height>200</height>
-							<texture fallback="DefaultTVShows.png">$PARAM[icon]</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						<control type="label">
-							<left>42</left>
-							<top>247</top>
-							<width>245</width>
-							<height>70</height>
-							<label>$PARAM[label]</label>
-							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<scroll>true</scroll>
-							<aligny>top</aligny>
-						</control>
-						<control type="label">
-							<left>42</left>
-							<top>277</top>
-							<width>245</width>
-							<height>65</height>
-							<label>$PARAM[label2]</label>
-							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<scroll>true</scroll>
-							<aligny>top</aligny>
-						</control>
-						<control type="image">
-							<left>260</left>
-							<top>30</top>
-							<width>32</width>
-							<height>32</height>
-							<texture>$VAR[WallWatchedIconVar]</texture>
-						</control>
-					</control>
-				</focusedlayout>
-				<include content="HomeCustomChannelsItems">
-                    <param name="id2" value="$PARAM[widget_target]" />
-                </include>
-			</control>
-		</definition>
-	</include>    
+	<include name="CustomChannelsTV">
+		<include content="HomeCustomChannelsItems">
+			<param name="id2" value="TV" />
+		</include>
+	</include>
+	<include name="CustomChannelsRadio">
+		<include content="HomeCustomChannelsItems">
+			<param name="id2" value="Radio" />
+		</include>
+	</include>
 </includes>

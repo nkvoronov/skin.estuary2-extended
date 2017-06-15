@@ -24,7 +24,7 @@
 				<label>$LOCALIZE[35050]</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 			</control>
 			<control type="image">
 				<left>-5</left>
@@ -51,7 +51,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font25_title</font>
-				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 				<texturenofocus />
 			</control>
 			<control type="gamecontroller" id="31">
@@ -74,7 +74,7 @@
 					<label>$LOCALIZE[35059]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 				<control type="image">
 					<top>20</top>
@@ -111,7 +111,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font27</font>
-					<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 					<texturenofocus />
 				</control>
 				<control type="label" id="8">

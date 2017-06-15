@@ -77,7 +77,7 @@
 					<control type="image">
 						<width>430</width>
 						<height>270</height>
-						<texture colordiffuse="button_focus">colors/grey.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
 						<bordersize>20</bordersize>
 						<include>Animation_FocusTextureFade</include>
 					</control>

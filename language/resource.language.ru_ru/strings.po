@@ -221,8 +221,8 @@ msgid "Automatic Login on startup"
 msgstr "Автоматическая авторизация при запуске"
 
 msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Элементы главного меню"
+msgid "Main menu"
+msgstr "Главное меню"
 
 msgctxt "#31062"
 msgid "Choose weather fanart pack"
@@ -651,12 +651,8 @@ msgid "Most watched music videos"
 msgstr "Самые просматриваемые муз. видео"
 
 msgctxt "#43091"
-msgid "Random music videos"
-msgstr "Случайные муз. видео"
-
-msgctxt "#43092"
-msgid "Unwatched music videos"
-msgstr "Непросмотренные муз. видео"
+msgid "Random music videos artists"
+msgstr "Случайные муз. видео исполнители"
 
 msgctxt "#43200"
 msgid "Big posters"
@@ -697,22 +693,6 @@ msgstr "Избранные Радио каналы"
 msgctxt "#43250"
 msgid "Apply"
 msgstr "Применить"
-
-msgctxt "#43251"
-msgid "Apply immediately"
-msgstr "Применить сразу"
-
-msgctxt "#43252"
-msgid "Input oversampling"
-msgstr "Вх. передискретизация"
-
-msgctxt "#43253"
-msgid "Preprocessing"
-msgstr "Пред. обработка"
-
-msgctxt "#43254"
-msgid "Output oversampling"
-msgstr "Вы. передискретизация"
 
 msgctxt "#43255"
 msgid "Hide reload skin button"

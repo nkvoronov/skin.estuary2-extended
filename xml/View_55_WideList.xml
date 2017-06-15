@@ -26,7 +26,7 @@
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus(55)</visible>
 					</control>
 					<control type="label">
@@ -76,7 +76,7 @@
 						<width>80</width>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Year]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(videos) + !Container.Content(musicvideos) + !Container.Content(movies)</visible>
 					</control>
@@ -127,7 +127,7 @@
 				<left>0</left>
 				<right>0</right>
 				<height>80</height>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 				<visible>Control.hasFocus(55)</visible>
 			</control>
 			<control type="label">
@@ -176,7 +176,7 @@
 				<left>0</left>
 				<right>0</right>
 				<height>80</height>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 				<visible>Control.hasFocus(55)</visible>
 			</control>
 			<control type="image">

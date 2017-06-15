@@ -32,8 +32,9 @@
 				<right>400</right>
 				<control type="label">
 					<label>$VAR[NowPlayingBreadcrumbsVar]</label>
-					<font>font45</font>
+					<textcolor>$VAR[MainColorVar]</textcolor>					
 					<shadowcolor>text_shadow</shadowcolor>
+					<font>font45</font>
 					<top>7</top>
 					<height>100</height>
 					<left>0</left>
@@ -42,7 +43,7 @@
 				<control type="label">
 					<top>60</top>
 					<label>$VAR[OSDSubLabelVar]</label>
-                    <textcolor>button_focus</textcolor>
+                    <textcolor>$VAR[MainColorVar]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<height>100</height>
 					<left>0</left>

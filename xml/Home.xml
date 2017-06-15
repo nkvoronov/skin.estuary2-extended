@@ -5,19 +5,19 @@
     <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
     <controls>
-		<control type="button" id="20000">
+		<control type="button" id="200000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
 			<onclick>noop</onclick>
-			<visible allowhiddenfocus="true">Control.HasFocus(20000)</visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(200000)</visible>
 		</control>
-		<control type="button" id="20001">
+		<control type="button" id="200001">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
 			<onclick>noop</onclick>
-			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(200001)</visible>
 		</control>
 		<include>DefaultBackground</include>
 		<control type="multiimage">
@@ -55,7 +55,7 @@
 					<aspectratio>keep</aspectratio>
 					<width>56</width>
 					<height>56</height>
-					<texture colordiffuse="button_focus">icons/logo.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
 				</control>
 				<control type="image">
 					<left>40</left>
@@ -67,14 +67,13 @@
 				</control>
                 <!-- StatBar -->
                 <control type="label">
-                    <left>0</left>
+                    <left>-90</left>
                     <top>-15</top>
                     <width>1920</width>
 					<align>center</align>
                     <label>$VAR[InfoBarStatsVar]</label>
                     <font>font12</font>
-                    <visible>!Player.HasMedia</visible>
-					<visible>!Window.IsVisible(extendedprogressdialog)</visible>
+                    <visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
                     <visible>Skin.HasSetting(enable_home_stats)</visible>				
                 </control>
 			</control>
@@ -90,8 +89,8 @@
 				<font>font12</font>
 				<urlset>1</urlset>
 				<hitrect x="-100" y="0" w="1" h="1" />
-				<titlecolor>button_focus</titlecolor>
-				<textcolor>button_focus</textcolor>
+				<titlecolor>$VAR[MainColorVar]</titlecolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<headlinecolor>FFC0C0C0</headlinecolor>
 			</control>
