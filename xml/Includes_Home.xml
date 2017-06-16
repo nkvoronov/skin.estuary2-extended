@@ -171,6 +171,8 @@
             <param name="content_path" value="$PARAM[content_path]"/>
 			<param name="fallback_image" value="DefaultMovies.png" />
             <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="sortby" value="$PARAM[sortby]"/>
+            <param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-TVShows">
@@ -180,6 +182,8 @@
             <param name="content_path" value="$PARAM[content_path]"/>
 			<param name="fallback_image" value="DefaultTVShows.png" />
             <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="sortby" value="$PARAM[sortby]"/>
+            <param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>	
 	<include name="Widget-Episodes">
@@ -209,7 +213,9 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="fallback_image" value="DefaultMusicAlbums.png"/>
-            <param name="list_id" value="$PARAM[list_id]"/>			
+            <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="sortby" value="$PARAM[sortby]"/>
+            <param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-Artists">
@@ -218,7 +224,9 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="fallback_image" value="DefaultMusicArtists.png"/>
-            <param name="list_id" value="$PARAM[list_id]"/>			
+            <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="sortby" value="$PARAM[sortby]"/>
+            <param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-Songs">
@@ -227,7 +235,9 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="fallback_image" value="DefaultMusicSongs.png"/>
-            <param name="list_id" value="$PARAM[list_id]"/>			
+            <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="sortby" value="$PARAM[sortby]"/>
+            <param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-Favourites">
@@ -368,11 +378,12 @@
 	</include>
 	<include name="Widget-SubMenu">
 		<include content="Widget-Categories">
-			<param name="custom" value="true"/>
+            <param name="custom" value="$PARAM[custom]"/>
             <param name="item_limit" value="20"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="content_path" value="$PARAM[submenu_content]"/>            
             <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="visible" value="$PARAM[visible]"/>
 		</include>	
 	</include>
 	<include name="Widget-Categories">
@@ -384,6 +395,7 @@
 		<param name="visible">true</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
+        <param name="type"></param>
         <param name="fallback_image">DefaultFolder.png</param>
 		<definition>
 			<include content="CategoryLabel">
@@ -542,6 +554,7 @@
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
 					<param name="content_path" value="$PARAM[content_path]"/>
+                    <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>
 		</definition>
@@ -553,6 +566,7 @@
 		<param name="visible">True</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
+        <param name="type"></param>
 		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="fallback_image">DefaultFolder.png</param>
 		<definition>
@@ -622,6 +636,7 @@
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
 					<param name="content_path" value="$PARAM[content_path]"/>
+                    <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>
 		</definition>
@@ -632,6 +647,7 @@
 		<param name="visible">True</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
+        <param name="type"></param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
 		<param name="label2">$INFO[ListItem.Title]</param>
@@ -777,6 +793,7 @@
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
 					<param name="content_path" value="$PARAM[content_path]"/>
+                    <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>
 		</definition>
@@ -786,7 +803,9 @@
 	</include>
 	<include name="Widget-ContentCustom">
 		<content>
-            <include>$PARAM[content_path]</include>
+            <include content="$PARAM[content_path]">
+                <param name="type" value="$PARAM[type]"/>
+            </include>
 		</content>
 	</include>
 	<include name="Widget-Posters">
