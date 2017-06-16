@@ -42,6 +42,7 @@
                     <param name="widget_header" value="$LOCALIZE[31148]"/>
                     <param name="widget_target" value="videos"/>
                     <param name="list_id" value="5900"/>
+                    <param name="visible" value="true"/>
                 </include>
                 <include content="Widget-Movies" condition="Library.HasContent(movies)">
                     <param name="content_path" value="special://skin/extras/playlists/inprogress_movies.xsp"/>
@@ -85,7 +86,7 @@
                 <param name="text_label" value="$LOCALIZE[31104]" />
                 <param name="button_label" value="$LOCALIZE[31110]" />
                 <param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-                <param name="button_id" value="5500"/>
+                <param name="button_id" value="5700"/>
                 <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
             </include>
         </control>
@@ -105,6 +106,7 @@
                     <param name="widget_header" value="$LOCALIZE[31148]"/>
                     <param name="widget_target" value="videos"/>
                     <param name="list_id" value="6900"/>
+                    <param name="visible" value="true"/>
                 </include>
                 <include content="Widget-TVShows" condition="Library.HasContent(tvshows)">
                     <param name="content_path" value="videodb://inprogresstvshows"/>
@@ -143,7 +145,7 @@
                 <param name="text_label" value="$LOCALIZE[31104]" />
                 <param name="button_label" value="$LOCALIZE[31110]" />
                 <param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-                <param name="button_id" value="6400"/>
+                <param name="button_id" value="6600"/>
                 <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
             </include>
         </control>
@@ -163,6 +165,7 @@
                     <param name="widget_header" value="$LOCALIZE[31148]"/>
                     <param name="widget_target" value="music"/>
                     <param name="list_id" value="7900"/>
+                    <param name="visible" value="true"/>
                 </include>
                 <include content="Widget-Albums" condition="Library.HasContent(music)">
                     <param name="content_path" value="musicdb://recentlyplayedalbums"/>
@@ -207,7 +210,7 @@
                 <param name="text_label" value="$LOCALIZE[31104]" />
                 <param name="button_label" value="$LOCALIZE[31110]" />
                 <param name="button_onclick" value="ActivateWindow(music,files)"/>
-                <param name="button_id" value="7600"/>
+                <param name="button_id" value="7700"/>
                 <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicButton)"/>
             </include>
         </control>
@@ -315,10 +318,12 @@
             <control type="grouplist" id="11001">
                 <include>WidgetGroup-Common</include>
                 <include content="Widget-SubMenu">
+                    <param name="custom" value="false"/>
                     <param name="content_path" value="library://video/"/>
                     <param name="widget_header" value="$LOCALIZE[31148]"/>
                     <param name="widget_target" value="videos"/>
                     <param name="list_id" value="11900"/>
+                    <param name="visible" value="true"/>
                 </include>
                 <include content="Widget-Other">
                     <param name="content_path" value="sources://video/"/>
@@ -355,36 +360,37 @@
                 <include content="Widget-TVTimers">
                     <param name="list_id" value="12855"/>
                 </include>
-                <include condition="System.HasPVRAddon" content="Widget-SubMenu" >
+                <include content="Widget-SubMenu" condition="System.HasPVRAddon">
                     <param name="custom" value="true"/>
                     <param name="content_path" value="PVRSubMenuContent"/>
                     <param name="widget_header" value="$LOCALIZE[31148]"/>
                     <param name="list_id" value="11900"/>
                     <param name="type" value="TV"/>
+                    <param name="visible" value="true"/>
                 </include>
                 <include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)] + System.HasPVRAddon" content="Widget-PVRChannels">
                     <param name="content_path" value="pvr://channels/tv/*?view=lastplayed"/>
                     <param name="widget_header" value="$LOCALIZE[31016]"/>
                     <param name="widget_target" value="pvr"/>
-                    <param name="list_id" value="12200"/>
+                    <param name="list_id" value="12100"/>
                 </include>
                 <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv) + System.HasPVRAddon" content="Widget-PVRChannelsCustom">
                     <param name="widget_header" value="$LOCALIZE[43241]"/>
                     <param name="widget_target" value="TV"/>
-                    <param name="list_id" value="12200"/>
+                    <param name="list_id" value="12100"/>
                 </include>
                 <include condition="System.HasPVRAddon" content="Widget-PVRRecordings">
                     <param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
                     <param name="widget_header" value="$LOCALIZE[31015]"/>
                     <param name="widget_target" value="pvr"/>
-                    <param name="list_id" value="12300"/>
+                    <param name="list_id" value="12200"/>
                 </include>
             </control>
             <include condition="!System.HasPVRAddon" content="Widget-Image">
                 <param name="text_label" value="$LOCALIZE[31143]" />
                 <param name="button_label" value="$LOCALIZE[31144]" />
                 <param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
-                <param name="button_id" value="12400"/>
+                <param name="button_id" value="12300"/>
                 <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVButton)"/>
             </include>
         </control>
@@ -401,36 +407,37 @@
                 <include content="Widget-RadioTimers">
                     <param name="list_id" value="13855"/>
                 </include>
-                <include condition="System.HasPVRAddon" content="Widget-SubMenu" >
+                <include content="Widget-SubMenu" condition="System.HasPVRAddon">
                     <param name="custom" value="true"/>
                     <param name="content_path" value="PVRSubMenuContent"/>
                     <param name="widget_header" value="$LOCALIZE[31148]"/>
                     <param name="list_id" value="13900"/>
                     <param name="type" value="Radio"/>
+                    <param name="visible" value="true"/>
                 </include>
                 <include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)] + System.HasPVRAddon" content="Widget-PVRChannels" >
                     <param name="content_path" value="pvr://channels/radio/*?view=lastplayed"/>
                     <param name="widget_header" value="$LOCALIZE[31018]"/>
                     <param name="widget_target" value="files"/>
-                    <param name="list_id" value="13200"/>
+                    <param name="list_id" value="13100"/>
                 </include>
                 <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio) + System.HasPVRAddon" content="Widget-PVRChannelsCustom">
                     <param name="widget_header" value="$LOCALIZE[43241]"/>
                     <param name="widget_target" value="Radio"/>
-                    <param name="list_id" value="13200"/>
+                    <param name="list_id" value="13100"/>
                 </include>
                 <include condition="System.HasPVRAddon" content="Widget-PVRRecordings">
                     <param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
                     <param name="widget_header" value="$LOCALIZE[31015]"/>
                     <param name="widget_target" value="pvr"/>
-                    <param name="list_id" value="13300"/>
+                    <param name="list_id" value="13200"/>
                 </include>
             </control>
             <include condition="!System.HasPVRAddon" content="Widget-Image">
                 <param name="text_label" value="$LOCALIZE[31143]" />
                 <param name="button_label" value="$LOCALIZE[31144]" />
                 <param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
-                <param name="button_id" value="13400"/>
+                <param name="button_id" value="13300"/>
                 <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoRadioButton)"/>
             </include>
         </control>
@@ -483,7 +490,7 @@
                 <param name="text_label" value="$LOCALIZE[31025]" />
                 <param name="button_label" value="$LOCALIZE[31116]" />
                 <param name="button_onclick" value=""/>
-                <param name="button_id" value="5500"/>
+                <param name="button_id" value="14200"/>
                 <param name="visible" value="!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating"/>
                 <param name="visible_1" value="false"/>
                 <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoFavButton)"/>
@@ -605,47 +612,49 @@
             <control type="grouplist" id="16001">
                 <include>WidgetGroup-Common</include>
                 <include content="Widget-SubMenu" condition="Library.HasContent(musicvideos)">
+                    <param name="custom" value="false"/>
                     <param name="content_path" value="library://music/musicvideos/"/>
                     <param name="widget_header" value="$LOCALIZE[31148]"/>
                     <param name="widget_target" value="videos"/>
                     <param name="list_id" value="16900"/>
+                    <param name="visible" value="true"/>
                 </include>
                 <include content="Widget-MusicVideos" condition="Library.HasContent(musicvideos)">
                     <param name="content_path" value="videodb://recentlyaddedmusicvideos/"/>
                     <param name="widget_header" value="$LOCALIZE[20390]"/>
                     <param name="widget_target" value="videos"/>
-                    <param name="list_id" value="16300"/>
+                    <param name="list_id" value="16100"/>
                 </include>
                 <include content="Widget-MusicVideos" condition="Library.HasContent(musicvideos)">
                     <param name="content_path" value="special://skin/extras/playlists/unwatched_musicvideos.xsp"/>
                     <param name="widget_header" value="$LOCALIZE[31151]"/>
                     <param name="widget_target" value="videos"/>
-                    <param name="list_id" value="16400"/>
+                    <param name="list_id" value="16200"/>
                 </include>
                 <include content="Widget-Artists" condition="Library.HasContent(musicvideos)">
                     <param name="content_path" value="special://skin/extras/playlists/random_musicvideo_artists.xsp"/>
                     <param name="widget_header" value="$LOCALIZE[31013]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="16200"/>
+                    <param name="list_id" value="16300"/>
                 </include>
                 <include content="Widget-MusicVideos" condition="Library.HasContent(musicvideos)">
                     <param name="content_path" value="special://skin/extras/playlists/random_musicvideos.xsp"/>
                     <param name="widget_header" value="$LOCALIZE[31152]"/>
                     <param name="widget_target" value="videos"/>
-                    <param name="list_id" value="16500"/>
+                    <param name="list_id" value="16400"/>
                 </include>
                 <include content="Widget-Studios" condition="Library.HasContent(musicvideos)">
                     <param name="content_path" value="videodb://musicvideos/studios/"/>
                     <param name="widget_header" value="$LOCALIZE[20388]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="16600"/>
+                    <param name="list_id" value="16500"/>
                 </include>
             </control>
             <include content="Widget-Image" condition="!Library.HasContent(musicvideos)">
                 <param name="text_label" value="$LOCALIZE[31104]" />
                 <param name="button_label" value="$LOCALIZE[31110]" />
                 <param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-                <param name="button_id" value="16800"/>
+                <param name="button_id" value="16600"/>
                 <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicVideoButton)"/>
             </include>
         </control>

@@ -64,7 +64,7 @@
 				<movement>6</movement>
 				<focusposition>1</focusposition>
                 <onfocus>ClearProperty(listposition,home)</onfocus>
-                <onright>SetFocus($INFO[Container(9000).ListItem.Property(defaultID)])</onright>
+                <onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
                 <onright>2000</onright>                
 				<onup>700</onup>
 				<ondown>700</ondown>
