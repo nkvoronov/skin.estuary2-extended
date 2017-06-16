@@ -395,6 +395,7 @@
 		<param name="visible">true</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
+        <param name="type"></param>
         <param name="fallback_image">DefaultFolder.png</param>
 		<definition>
 			<include content="CategoryLabel">
@@ -482,7 +483,6 @@
 						</animation>
 						<control type="button">
 							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus condition="!$PARAM[custom]">SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
 							<texturenofocus></texturenofocus>
 							<texturefocus></texturefocus>
 						</control>
@@ -553,6 +553,7 @@
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
 					<param name="content_path" value="$PARAM[content_path]"/>
+                    <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>
 		</definition>
@@ -564,6 +565,7 @@
 		<param name="visible">True</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
+        <param name="type"></param>
 		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="fallback_image">DefaultFolder.png</param>
 		<definition>
@@ -611,7 +613,6 @@
 						<control type="button">
 							<onfocus condition="!$PARAM[custom]">SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
 							<onfocus condition="$PARAM[custom]">SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Property(AddonFanart)],home)</onfocus>
-							<onfocus condition="!$PARAM[custom]">SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
 							<texturenofocus></texturenofocus>
 							<texturefocus></texturefocus>
 						</control>
@@ -633,6 +634,7 @@
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
 					<param name="content_path" value="$PARAM[content_path]"/>
+                    <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>
 		</definition>
@@ -643,6 +645,7 @@
 		<param name="visible">True</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
+        <param name="type"></param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
 		<param name="label2">$INFO[ListItem.Title]</param>
@@ -788,6 +791,7 @@
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
 					<param name="content_path" value="$PARAM[content_path]"/>
+                    <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>
 		</definition>
@@ -797,7 +801,9 @@
 	</include>
 	<include name="Widget-ContentCustom">
 		<content>
-            <include>$PARAM[content_path]</include>
+            <include content="$PARAM[content_path]">
+                <param name="type" value="$PARAM[type]"/>
+            </include>
 		</content>
 	</include>
 	<include name="Widget-Posters">
@@ -848,7 +854,6 @@
 						</animation>
 						<control type="button">
 							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
 							<texturenofocus></texturenofocus>
 							<texturefocus></texturefocus>
 						</control>
@@ -916,7 +921,6 @@
 						</animation>
 						<control type="button">
 							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
 							<texturenofocus></texturenofocus>
 							<texturefocus></texturefocus>
 						</control>
@@ -1411,66 +1415,62 @@
 		</control>
 	</include>
 	<include name="AddonSubMenuContent">
-		<content>
-			<item>
-				<label>$LOCALIZE[24998]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
-				<thumb>DefaultAddonsInstalled.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[24043]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
-				<thumb>DefaultAddonsUpdates.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[24004]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://recently_updated/,return)</onclick>
-				<thumb>DefaultAddonsRecentlyUpdated.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[24033]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
-				<thumb>DefaultAddonsRepo.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[137]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
-				<thumb>DefaultAddonsSearch.png</thumb>
-			</item>
-		</content>
+        <item>
+            <label>$LOCALIZE[24998]</label>
+            <onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
+            <thumb>DefaultAddonsInstalled.png</thumb>
+        </item>
+        <item>
+            <label>$LOCALIZE[24043]</label>
+            <onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
+            <thumb>DefaultAddonsUpdates.png</thumb>
+        </item>
+        <item>
+            <label>$LOCALIZE[24004]</label>
+            <onclick>ActivateWindow(addonbrowser,addons://recently_updated/,return)</onclick>
+            <thumb>DefaultAddonsRecentlyUpdated.png</thumb>
+        </item>
+        <item>
+            <label>$LOCALIZE[24033]</label>
+            <onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
+            <thumb>DefaultAddonsRepo.png</thumb>
+        </item>
+        <item>
+            <label>$LOCALIZE[137]</label>
+            <onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
+            <thumb>DefaultAddonsSearch.png</thumb>
+        </item>
 	</include>
 	<include name="PVRSubMenuContent">
-		<content>
-			<item>
-				<label>$LOCALIZE[19019]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Channels)</onclick>
-				<thumb>DefaultAddonPeripheral.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[19069]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Guide)</onclick>
-				<thumb>icons/pvr/epg.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[19017]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Recordings)</onclick>
-				<thumb>icons/pvr/recording.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[19040]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Timers)</onclick>
-				<thumb>icons/pvr/timer.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[19138]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]TimerRules)</onclick>
-				<thumb>icons/pvr/timer-rule.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[137]</label>
-				<onclick>ActivateWindow($PARAM[pvr_type]Search)</onclick>
-				<thumb>DefaultAddonsSearch.png</thumb>
-			</item>
-		</content>
+        <item>
+            <label>$LOCALIZE[19019]</label>
+            <onclick>ActivateWindow($PARAM[pvr_type]Channels)</onclick>
+            <thumb>DefaultAddonPeripheral.png</thumb>
+        </item>
+        <item>
+            <label>$LOCALIZE[19069]</label>
+            <onclick>ActivateWindow($PARAM[pvr_type]Guide)</onclick>
+            <thumb>icons/pvr/epg.png</thumb>
+        </item>
+        <item>
+            <label>$LOCALIZE[19017]</label>
+            <onclick>ActivateWindow($PARAM[pvr_type]Recordings)</onclick>
+            <thumb>icons/pvr/recording.png</thumb>
+        </item>
+        <item>
+            <label>$LOCALIZE[19040]</label>
+            <onclick>ActivateWindow($PARAM[pvr_type]Timers)</onclick>
+            <thumb>icons/pvr/timer.png</thumb>
+        </item>
+        <item>
+            <label>$LOCALIZE[19138]</label>
+            <onclick>ActivateWindow($PARAM[pvr_type]TimerRules)</onclick>
+            <thumb>icons/pvr/timer-rule.png</thumb>
+        </item>
+        <item>
+            <label>$LOCALIZE[137]</label>
+            <onclick>ActivateWindow($PARAM[pvr_type]Search)</onclick>
+            <thumb>DefaultAddonsSearch.png</thumb>
+        </item>
 	</include>
 </includes>

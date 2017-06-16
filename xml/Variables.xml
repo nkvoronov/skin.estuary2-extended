@@ -628,6 +628,10 @@
         <value condition="!String.IsEmpty(Skin.String(MusicGenreIcons.name))">$INFO[Skin.String(MusicGenreIcons.name)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
+    <!-- Widget Limit Items -->
+    <variable name="WidgetLimitItemsVar">
+        <value>20</value>
+    </variable>
     <!-- Background Overlay Type Name -->
     <variable name="BackgroundOverlayTypeNameVar">
         <value condition="String.IsEmpty(Skin.String(background_overlay))">$LOCALIZE[231]</value>
