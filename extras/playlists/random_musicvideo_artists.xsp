@@ -3,5 +3,6 @@
     <name>Random MusicVideos Artists</name>
     <match>all</match>
     <group>artists</group>
+    <limit>20</limit>
     <order direction="ascending">random</order>
 </smartplaylist>
