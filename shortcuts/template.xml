@@ -4,7 +4,6 @@
         <!-- property menu item -->
         <property name="id" tag="mainmenuid" />
         <property name="submenu" tag="property" attribute="name|submenuVisibility" />
-        <property name="defid" tag="property" attribute="name|defaultID" />
         <!-- property menu item widget -->
         <property name="widget" tag="property" attribute="name|widget" />
         <property name="widget">None</property>
@@ -191,7 +190,7 @@
             <control type="group" id="$PYTHON[10+int($SKINSHORTCUTS[id])]000">
                 <skinshortcuts>visibility</skinshortcuts>
                 <include content="Visible_Right_Delayed">
-					<param name="id" value="$SKINSHORTCUTS[defid]"/>
+					<param name="id" value="$SKINSHORTCUTS[id]"/>
 				</include>
                 <include content="HomeSubPanels">
                     <!-- submenu property -->

@@ -381,7 +381,8 @@
             <param name="custom" value="$PARAM[custom]"/>
             <param name="item_limit" value="20"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-            <param name="content_path" value="$PARAM[submenu_content]"/>            
+            <param name="content_path" value="$PARAM[content_path]"/> 
+            <param name="widget_target" value="$PARAM[widget_target]"/>            
             <param name="list_id" value="$PARAM[list_id]"/>
             <param name="visible" value="$PARAM[visible]"/>
 		</include>	
@@ -395,7 +396,7 @@
 		<param name="visible">true</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
-        <param name="type"></param>
+        <param name="type">no</param>
         <param name="fallback_image">DefaultFolder.png</param>
 		<definition>
 			<include content="CategoryLabel">
@@ -545,7 +546,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<include condition="!$PARAM[custom]" content="Widget-Content">
+                <include condition="!$PARAM[custom]" content="Widget-Content">
 					<param name="sortby" value="$PARAM[sortby]"/>
 					<param name="sortorder" value="$PARAM[sortorder]"/>
 					<param name="widget_target" value="$PARAM[widget_target]"/>
@@ -566,7 +567,7 @@
 		<param name="visible">True</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
-        <param name="type"></param>
+        <param name="type">no</param>
 		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="fallback_image">DefaultFolder.png</param>
 		<definition>
@@ -647,7 +648,7 @@
 		<param name="visible">True</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
-        <param name="type"></param>
+        <param name="type">no</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
 		<param name="label2">$INFO[ListItem.Title]</param>

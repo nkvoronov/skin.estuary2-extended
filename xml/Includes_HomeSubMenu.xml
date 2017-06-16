@@ -13,7 +13,7 @@
 			</animation>
 			<include>OpenClose_Right</include>
             <include>skinshortcuts-template-submenus</include>
-        </control>
+		</control>
     </include>
     <!-- -->
     <include name="HomeSubPanels">
@@ -21,7 +21,9 @@
             <include>WidgetGroup-Common</include>
             <!-- Categories -->
             <include content="Widget-SubMenu">
-                <param name="submenu_content" value="$PARAM[submenu_content]"/>
+                <param name="custom" value="true"/>
+                <param name="visible" value="true"/>
+                <param name="content_path" value="$PARAM[submenu_content]"/>
                 <param name="widget_header" value="$LOCALIZE[31148]"/>
                 <param name="list_id" value="$PARAM[submain_id]900"/>
             </include>
