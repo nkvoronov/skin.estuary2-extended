@@ -16,7 +16,9 @@
     <onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
     <onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
 	<!-- -->
-	<onload condition="!String.IsEmpty(Window(home).Property(FanartHomeType))">ClearProperty(FanartHomeType,home)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(fanarthometype))">ClearProperty(fanarthometype,home)</onload>
+    <onload condition="!String.IsEmpty(Window(home).Property(mediaartfanart))">ClearProperty(mediaartfanart,home)</onload>
+    <onload condition="!String.IsEmpty(Window(home).Property(weatherfanartcode))">ClearProperty(weatherfanartcode,home)</onload>
     <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
     <controls>
@@ -44,7 +46,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="bg_overlay">$VAR[HomeFanartVar]</imagepath>
+			<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityThemeValueVar]">$VAR[HomeFanartVar]</imagepath>
 			<visible>!Player.HasMedia</visible>
 		</control>
 		<control type="group">

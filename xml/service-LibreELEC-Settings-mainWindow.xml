@@ -2,7 +2,6 @@
 <window id="3033">
     <defaultcontrol>1000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
-	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
     <controls>
 		<include>DefaultBackground</include>
 		<control type="multiimage">
@@ -14,7 +13,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="bg_overlay">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
+			<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityThemeValueVar]">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
 			<visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
 		</control>
         <control type="group">

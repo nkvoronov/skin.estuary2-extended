@@ -846,3 +846,10 @@ msgctxt "#43250"
 msgid "Apply"
 msgstr "Применить"
 
+msgctxt "#44000"
+msgid "Background opacity"
+msgstr "Прозрачность фона"
+
+msgctxt "#44001"
+msgid "Opacity "
+msgstr "Прозрачность "
