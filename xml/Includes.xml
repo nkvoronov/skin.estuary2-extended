@@ -43,6 +43,7 @@
 	<constant name="list_item_height">80</constant>
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Window.IsActive(MyPlaylist.xml)</expression>
+    <expression name="fanart_visible">Window.IsActive(skinsettings) | Window.IsActive(Custom_1100_AddonLauncher.xml)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -1097,18 +1098,23 @@
 		</control>
 	</include>
 	<include name="DefaultBackground">
+        <param name="multi">false</param>
+		<param name="overlay_background">$VAR[GeneralFanartVar]</param>
 		<definition>
+            <!-- Video -->
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasVideo</visible>
 				<visible>!Slideshow.IsActive</visible>
 			</control>
+            <!-- Visualisation -->
 			<control type="visualisation">
 				<include>FullScreenDimensions</include>
 				<visible>!Slideshow.IsActive</visible>
 				<visible>Player.HasAudio + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + Visualisation.Enabled</visible>
 			</control>
+            <!-- Backgrounds -->
 			<control type="group">
 				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
@@ -1128,8 +1134,18 @@
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[BackgroundOpacityBackgroundValueVar]">$VAR[MediaFanartVar]</texture>
-						<visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
+						<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[overlay_background]</texture>
+                        <visible>!$PARAM[multi]</visible>
+						<visible>!Control.IsVisible(502) | $EXP[infodialog_active] | $EXP[fanart_visible]</visible>
+					</control>
+                    <control type="multiimage" id="32112">
+						<include>FullScreenDimensions</include>
+						<aspectratio>scale</aspectratio>
+						<fadetime>400</fadetime>
+						<animation effect="fade" time="400">VisibleChange</animation>
+						<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[overlay_background]</imagepath>
+                        <visible>$PARAM[multi]</visible>
+						<visible>!Control.IsVisible(502) | $EXP[infodialog_active] | $EXP[fanart_visible]</visible>
 					</control>
 					<control type="image">
 						<left>-3</left>
@@ -1140,8 +1156,8 @@
 						<fadetime>400</fadetime>
 						<include>OpenClose_Left</include>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[BackgroundOpacityBackgroundValueVar]">$VAR[PosterVar]</texture>
-						<visible>!Control.IsVisible(32111)</visible>
+						<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$VAR[PosterVar]</texture>
+						<visible>![Control.IsVisible(32111) | Control.IsVisible(32112)]</visible>
 						<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 					<control type="image">
@@ -1153,8 +1169,8 @@
 						<fadetime>400</fadetime>
 						<include>OpenClose_Left</include>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[BackgroundOpacityBackgroundValueVar]">$VAR[PosterVar]</texture>
-						<visible>!Control.IsVisible(32111)</visible>
+						<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$VAR[PosterVar]</texture>
+						<visible>![Control.IsVisible(32111) | Control.IsVisible(32112)]</visible>
 						<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 				</control>

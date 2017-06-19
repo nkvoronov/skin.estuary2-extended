@@ -2,25 +2,13 @@
 <window>
 	<defaultcontrol>9000</defaultcontrol>
 	<onload>SetProperty(fanarthometype,settings,home)</onload>
-	<backgroundcolor>background</backgroundcolor>
-    <onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
+    <onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>	   
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onunload>
-    <onunload condition="String.IsEmpty(Window(home).Property(skinreload))">ReloadSkin()</onunload>
-    <onunload condition="String.IsEmpty(Window(home).Property(skinreload))">ClearProperty(skinreload,home)</onunload>
+    <backgroundcolor>background</backgroundcolor>
 	<controls>
+        <!-- Background -->
 		<include>DefaultBackground</include>
-		<control type="multiimage">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<fadetime>600</fadetime>
-			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
-			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityThemeValueVar]">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
-			<visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
-		</control>
 		<control type="group" id="10000">
 			<left>470</left>
 			<include>OpenClose_Right</include>
@@ -518,7 +506,6 @@
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44000]</label>
                     <label2>$VAR[BackgroundOpacityValueNameVar]</label2>
-                    <onclick>SetProperty(skinreload,yes,home)</onclick>
                     <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Opacity,header=$LOCALIZE[44000])</onclick>                    
                 </control>
                 <control type="image" id="504">

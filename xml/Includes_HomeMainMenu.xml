@@ -20,21 +20,27 @@
 			<!-- Power button -->
 			<include content="IconButton">
 				<param name="control_id" value="804" />
-				<param name="onclick" value="ActivateWindow(shutdownmenu)" />
+                <param name="onclick" value="SetProperty(fanarthometype,power,home)" />
+                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundPowerVar],home)" />
+				<param name="onclick_3" value="ActivateWindow(shutdownmenu)" />
 				<param name="icon" value="icons/power.png" />
 				<param name="label" value="$LOCALIZE[33060]" />
 			</include>
 			<!-- Settings button -->
 			<include content="IconButton">
 				<param name="control_id" value="802" />
-				<param name="onclick" value="ActivateWindow(settings)" />
+                <param name="onclick" value="SetProperty(fanarthometype,settings,home)" />
+                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)" />
+				<param name="onclick_3" value="ActivateWindow(settings)" />
 				<param name="icon" value="icons/settings.png" />
 				<param name="label" value="$LOCALIZE[21417]" />
 			</include>
 			<!-- Search button -->
 			<include content="IconButton">
 				<param name="control_id" value="801" />
-				<param name="onclick" value="ActivateWindow(1107)" />
+                <param name="onclick" value="SetProperty(fanarthometype,search,home)" />
+                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSearchVar],home)" />
+				<param name="onclick_3" value="ActivateWindow(1107)" />
 				<param name="icon" value="icons/search.png" />
 				<param name="label" value="$LOCALIZE[137]" />
 			</include>

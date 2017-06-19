@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>90010</defaultcontrol>
+    <onload>SetProperty(fanarthometype,settings,home)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-        <include>DefaultBackground</include>
+        <!-- Background -->
+		<include>DefaultBackground</include>
 		<control type="group" id="10000">
 			<left>470</left>
 			<include>OpenClose_Right</include>

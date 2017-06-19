@@ -37,13 +37,14 @@
 			<control type="label" id="230">
 				<font>-</font>
 			</control>
-			<include>DefaultBackground</include>
+			<!-- Background -->
+            <include>DefaultBackground</include>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(111).ListItem.Art(fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(111).ListItem.Art(fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -56,7 +57,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(121).ListItem.Art(fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(121).ListItem.Art(fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -69,7 +70,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(131).ListItem.Property(Fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(131).ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -82,7 +83,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(141).ListItem.Property(Fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(141).ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -95,7 +96,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(151).ListItem.Property(Fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(151).ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -108,7 +109,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(161).ListItem.Property(Fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(161).ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -121,7 +122,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(171).ListItem.Property(Fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(171).ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -134,7 +135,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(181).ListItem.Property(Fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(181).ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -147,7 +148,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(211).ListItem.Property(Fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(211).ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -160,7 +161,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(221).ListItem.Property(Fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(221).ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>
@@ -173,7 +174,7 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>1080</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(231).ListItem.Property(Fanart)]</texture>
+				<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Container(231).ListItem.Property(Fanart)]</texture>
 				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
 				<animation effect="fade" time="400">Visible</animation>

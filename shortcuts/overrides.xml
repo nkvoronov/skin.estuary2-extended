@@ -16,6 +16,7 @@
     <!-- Group override-->
     <groupoverride group="powermenu" disable_groups="" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
     <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</groupoverride>
+    <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</groupoverride>
     <!-- Additionnal Widgets -->
     <widget label="43081" icon="special://skin/extras/icons/weather.png">WeatherWidget</widget>
 	<widget label="43082" icon="special://skin/extras/icons/livetv.png">TVWidget</widget>
