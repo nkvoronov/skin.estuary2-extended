@@ -40,7 +40,6 @@
 		</control>
 		<!-- Background -->
 		<include content="DefaultBackground">
-            <param name="multi" value="Skin.HasSetting(WeatherFanart.multi)" />
 			<param name="overlay_background" value="$VAR[HomeFanartVar]" />
 		</include>
 		<control type="group">

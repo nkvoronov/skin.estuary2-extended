@@ -25,7 +25,6 @@
 		</control>
         <!-- Background -->
 		<include content="DefaultBackground">
-            <param name="multi" value="Skin.HasSetting(WeatherFanart.multi)" />
 			<param name="overlay_background" value="$VAR[WeatherFanartVar]" />
 		</include>
 		<control type="grouplist" id="2000">

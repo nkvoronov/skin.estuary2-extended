@@ -1098,7 +1098,6 @@
 		</control>
 	</include>
 	<include name="DefaultBackground">
-        <param name="multi">false</param>
 		<param name="overlay_background">$VAR[GeneralFanartVar]</param>
 		<definition>
             <!-- Video -->
@@ -1129,22 +1128,12 @@
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
-					<control type="image" id="32111">
-						<include>FullScreenDimensions</include>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[overlay_background]</texture>
-                        <visible>!$PARAM[multi]</visible>
-						<visible>!Control.IsVisible(502) | $EXP[infodialog_active] | $EXP[fanart_visible]</visible>
-					</control>
-                    <control type="multiimage" id="32112">
+                    <control type="multiimage" id="32111">
 						<include>FullScreenDimensions</include>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[overlay_background]</imagepath>
-                        <visible>$PARAM[multi]</visible>
 						<visible>!Control.IsVisible(502) | $EXP[infodialog_active] | $EXP[fanart_visible]</visible>
 					</control>
 					<control type="image">
@@ -1157,7 +1146,7 @@
 						<include>OpenClose_Left</include>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$VAR[PosterVar]</texture>
-						<visible>![Control.IsVisible(32111) | Control.IsVisible(32112)]</visible>
+						<visible>!Control.IsVisible(32111)</visible>
 						<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 					<control type="image">
@@ -1170,7 +1159,7 @@
 						<include>OpenClose_Left</include>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$VAR[PosterVar]</texture>
-						<visible>![Control.IsVisible(32111) | Control.IsVisible(32112)]</visible>
+						<visible>!Control.IsVisible(32111)</visible>
 						<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 				</control>

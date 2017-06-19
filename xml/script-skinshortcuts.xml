@@ -44,13 +44,13 @@
                     <label>$ADDON[script.skinshortcuts 32026]</label>
                     <label2>$INFO[Container(211).ListItem.Icon]</label2>
                 </control>
-                <!-- No implementation ???? -->
                 <control type="button" id="310">
                     <description>Browse for background</description>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32045]</label>
                     <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <enable>!Skin.HasSetting(no_fanart)</enable>
                 </control>
                 <control type="button" id="405">
                     <description>Edit submenu</description>
