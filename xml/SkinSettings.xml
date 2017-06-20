@@ -3,7 +3,7 @@
 	<defaultcontrol>9000</defaultcontrol>
 	<onload>SetProperty(fanarthometype,settings,home)</onload>
     <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
-    <onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>	   
+    <onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>  
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onunload>
     <backgroundcolor>background</backgroundcolor>
 	<controls>
@@ -576,7 +576,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=HomeFanart&amp;type=resource.images.skinbackgrounds)</onclick>
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                    <enable>!Skin.HasSetting(no_fanart)</enable>
+					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
 				<control type="button" id="512">
                     <description>MovieGenre Fanart</description>
