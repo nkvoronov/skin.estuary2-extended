@@ -48,6 +48,10 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Непросмотреные фильмы"
 
+msgctxt "#31108"
+msgid "Use custom global background"
+msgstr "Использовать пользовательский фон"
+
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Загрузить иконки"
@@ -226,7 +230,7 @@ msgstr "Главное меню"
 
 msgctxt "#31062"
 msgid "Choose weather fanart pack"
-msgstr "Выбрать набор фанарта погоды"
+msgstr "Выбрать набор фан-арта погоды"
 
 msgctxt "#31063"
 msgid "Sections"
@@ -438,7 +442,7 @@ msgstr "Основные настройки меню: Настройка гла�
 
 msgctxt "#31131"
 msgid "Choose skin fanart pack"
-msgstr "Выбрать набор фанарта обложки"
+msgstr "Выбрать набор фан-арта обложки"
 
 msgctxt "#31132"
 msgid "min"
@@ -494,7 +498,7 @@ msgstr "Категории"
 
 msgctxt "#31149"
 msgid "Select genre fanart pack"
-msgstr "Выбрать набор фанарта жанров"
+msgstr "Выбрать набор фан-арта жанров"
 
 msgctxt "#31150"
 msgid "Repository"
@@ -522,7 +526,7 @@ msgstr "Нет закладок"
 
 msgctxt "#31156"
 msgid "Choose background pattern"
-msgstr "Выберите фон"
+msgstr "Выберите шаблон фона"
 
 msgctxt "#31157"
 msgid "Edit categories"
@@ -697,3 +701,27 @@ msgstr "Применить"
 msgctxt "#43255"
 msgid "Hide reload skin button"
 msgstr "Скрыть кнопку обновления обложки"
+
+msgctxt "#44000"
+msgid "Background opacity"
+msgstr "Прозрачность фона"
+
+msgctxt "#44001"
+msgid "Opacity "
+msgstr "Прозрачность "
+
+msgctxt "#44002"
+msgid "Choose image path"
+msgstr "Выберите путь к изображению"
+
+msgctxt "#44003"
+msgid "Background for power"
+msgstr "Фон для выключения"
+
+msgctxt "#44004"
+msgid "Background for settings"
+msgstr "Фон для настроек"
+
+msgctxt "#44005"
+msgid "Background for search"
+msgstr "Фон для поиска"

@@ -56,7 +56,9 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr ""
 
-#empty string with id 31008
+msgctxt "#31108"
+msgid "Use custom global background"
+msgstr ""
 
 #: /xml/MyVideoNav.xml
 msgctxt "#31009"
@@ -879,4 +881,28 @@ msgstr ""
 
 msgctxt "#43255"
 msgid "Hide reload skin button"
+msgstr ""
+
+msgctxt "#44000"
+msgid "Background opacity"
+msgstr ""
+
+msgctxt "#44001"
+msgid "Opacity "
+msgstr ""
+
+msgctxt "#44002"
+msgid "Choose image path"
+msgstr ""
+
+msgctxt "#44003"
+msgid "Background for power"
+msgstr ""
+
+msgctxt "#44004"
+msgid "Background for settings"
+msgstr ""
+
+msgctxt "#44005"
+msgid "Background for search"
 msgstr ""
