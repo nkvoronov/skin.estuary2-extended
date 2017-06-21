@@ -26,7 +26,7 @@ msgstr "Пошук"
 
 msgctxt "#31002"
 msgid "Show media fanart as background"
-msgstr "Показувати фанарт медіафайлів на тлі"
+msgstr "Показувати фан-арт медіафайлів на тлі"
 
 msgctxt "#31003"
 msgid "Cinema mode"
@@ -47,6 +47,10 @@ msgstr "Випадкові фільми"
 msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Непереглянуті фільми"
+
+msgctxt "#31108"
+msgid "Use custom global background"
+msgstr "Використовувати фон користувача"
 
 msgctxt "#31009"
 msgid "Download icons"
@@ -112,9 +116,13 @@ msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "Немає обраних. Ви можете додати до цього списку будь-який медіафайл за допомогою контекстного меню."
 
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "Таймшифт"
+
 msgctxt "#31028"
 msgid "Show fanart"
-msgstr "Показувати фанарт"
+msgstr "Показувати фан-арт"
 
 msgctxt "#31029"
 msgid "Last logged in"
@@ -222,7 +230,7 @@ msgstr "Головне меню"
 
 msgctxt "#31062"
 msgid "Choose weather fanart pack"
-msgstr "Вибрати набір фанартів погоди"
+msgstr "Вибрати набір фан-артів погоди"
 
 msgctxt "#31063"
 msgid "Sections"
@@ -382,7 +390,7 @@ msgstr "Змінити розділи медіатеки"
 
 msgctxt "#31118"
 msgid "Enter add-on browser"
-msgstr "Відкрити браузер надбудов"
+msgstr "Відкрити браузер доповнень"
 
 msgctxt "#31119"
 msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
@@ -434,7 +442,7 @@ msgstr "Налаштування головного меню: налаштуйт
 
 msgctxt "#31131"
 msgid "Choose skin fanart pack"
-msgstr "Вибрати набір фанартів обкладинки"
+msgstr "Вибрати набір фан-артів обкладинки"
 
 msgctxt "#31132"
 msgid "min"
@@ -490,7 +498,7 @@ msgstr "Категорії"
 
 msgctxt "#31149"
 msgid "Select genre fanart pack"
-msgstr "Вибрати набір фанартів жанрів"
+msgstr "Вибрати набір фан-артів жанрів"
 
 msgctxt "#31150"
 msgid "Repository"
@@ -518,7 +526,7 @@ msgstr "Немає закладок."
 
 msgctxt "#31156"
 msgid "Choose background pattern"
-msgstr "Вибрати тло"
+msgstr "Виберіть шаблон фону"
 
 msgctxt "#31157"
 msgid "Edit categories"
@@ -604,11 +612,11 @@ msgstr "Виберіть шаблон фону"
 
 msgctxt "#43024"
 msgid "Choose home fanart pack"
-msgstr "Вибрати фанарт пакет"
+msgstr "Вибрати фан-арт пакет"
 
 msgctxt "#43025"
 msgid "Choose weather fanart pack"
-msgstr "Вибрати фанарт пакет для погоди"
+msgstr "Вибрати фан-арт пакет для погоди"
 
 msgctxt "#43033"
 msgid "Choose music genre icons"
@@ -647,8 +655,8 @@ msgid "Most watched music videos"
 msgstr "Саме Популярне муз. відео"
 
 msgctxt "#43091"
-msgid "Random music videos"
-msgstr "Випадкове муз. відео"
+msgid "Random music videos artists"
+msgstr "Випадкові муз. відео виконавці"
 
 msgctxt "#43200"
 msgid "Big posters"
@@ -694,3 +702,66 @@ msgctxt "#43255"
 msgid "Hide reload skin button"
 msgstr "Скрити кнопку оновлення обкладинки"
 
+msgctxt "#44000"
+msgid "Background opacity"
+msgstr "Прозорість фону"
+
+msgctxt "#44001"
+msgid "Opacity "
+msgstr "Прозорість "
+
+msgctxt "#44002"
+msgid "Choose image path"
+msgstr "Виберіть шлях до зображення"
+
+msgctxt "#44003"
+msgid "Background for power"
+msgstr "Фон для виключення"
+
+msgctxt "#44004"
+msgid "Background for settings"
+msgstr "Фон для налаштувань"
+
+msgctxt "#44005"
+msgid "Background for search"
+msgstr "Фон для пошуку"
+
+msgctxt "#44100"
+msgid "Hide time"
+msgstr "Приховати час"
+
+msgctxt "#44101"
+msgid "Notification popup position"
+msgstr "Позиція спливаючих повідомлень"
+
+msgctxt "#44102"
+msgid "Hide notification popup during playback"
+msgstr "Приховати повідомлення при програванні"
+
+msgctxt "#44103"
+msgid "Set notification popup position."
+msgstr "Встановіть позицію спливаючих повідомлень"
+
+msgctxt "#44104"
+msgid "Bottom center"
+msgstr "Внизу по центру"
+
+msgctxt "#44105"
+msgid "Bottom right"
+msgstr "Внизу справа"
+
+msgctxt "#44106"
+msgid "Bottom left"
+msgstr "Внизу зліва"
+
+msgctxt "#44107"
+msgid "Top center"
+msgstr "Вгорі по центру"
+
+msgctxt "#44108"
+msgid "Top right"
+msgstr "Вгорі справа"
+
+msgctxt "#44109"
+msgid "Top left"
+msgstr "Вгорі зліва"

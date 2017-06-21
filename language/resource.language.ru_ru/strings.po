@@ -122,7 +122,7 @@ msgstr "Таймшифт"
 
 msgctxt "#31028"
 msgid "Show fanart"
-msgstr "Показать фанарт"
+msgstr "Показать фан-арт"
 
 msgctxt "#31029"
 msgid "Last logged in"
@@ -612,11 +612,11 @@ msgstr "Выберите шаблон фона"
 
 msgctxt "#43024"
 msgid "Choose home fanart pack"
-msgstr "Выбрать фанарт пакет"
+msgstr "Выбрать фан-арт пакет"
 
 msgctxt "#43025"
 msgid "Choose weather fanart pack"
-msgstr "Выбрать фанарт пакет для погоды"
+msgstr "Выбрать фан-арт пакет для погоды"
 
 msgctxt "#43033"
 msgid "Choose music genre icons"
@@ -725,3 +725,43 @@ msgstr "Фон для настроек"
 msgctxt "#44005"
 msgid "Background for search"
 msgstr "Фон для поиска"
+
+msgctxt "#44100"
+msgid "Hide time"
+msgstr "Скрыть время"
+
+msgctxt "#44101"
+msgid "Notification popup position"
+msgstr "Позиция всплывающих уведомлений"
+
+msgctxt "#44102"
+msgid "Hide notification popup during playback"
+msgstr "Скрыть уведомления при проигрывании"
+
+msgctxt "#44103"
+msgid "Set notification popup position."
+msgstr "Установите позицию всплывающих уведомлений"
+
+msgctxt "#44104"
+msgid "Bottom center"
+msgstr "Внизу по центру"
+
+msgctxt "#44105"
+msgid "Bottom right"
+msgstr "Внизу справа"
+
+msgctxt "#44106"
+msgid "Bottom left"
+msgstr "Внизу слева"
+
+msgctxt "#44107"
+msgid "Top center"
+msgstr "Вверху по центру"
+
+msgctxt "#44108"
+msgid "Top right"
+msgstr "Вверху справа"
+
+msgctxt "#44109"
+msgid "Top left"
+msgstr "Вверху слева"

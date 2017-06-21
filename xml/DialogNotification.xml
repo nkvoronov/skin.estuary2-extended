@@ -4,11 +4,15 @@
 	<controls>
 		<control type="group">
 			<depth>DepthMax</depth>
-			<top>85</top>
-			<right>0</right>
+			<top>930</top>
+			<centerleft>50%</centerleft>
 			<width>640</width>
-			<include>OpenClose_Right</include>
+            <include>Animation_DialogPopupOpenClose</include>
 			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
+            <visible>!Window.IsVisible(Startup.xml) + ![[Window.IsActive(fullscreenvideo) | Window.IsActive(fullscreeninfo) | Window.IsActive(visualisation)] + Skin.HasSetting(hide_popup)]</visible>
+            <animation effect="slide" end="650,0" time="0" condition="String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44105]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44108])">conditional</animation>
+			<animation effect="slide" end="-650,0" time="0" condition="String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44106]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44109])">conditional</animation>
+			<animation effect="slide" end="0,-940" time="0" condition="String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44107]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44108]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44109])">conditional</animation>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>

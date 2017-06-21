@@ -798,6 +798,10 @@ msgctxt "#43025"
 msgid "Choose weather fanart pack"
 msgstr ""
 
+msgctxt "#43032"
+msgid "Widget Limit Items"
+msgstr ""
+
 msgctxt "#43033"
 msgid "Choose music genre icons"
 msgstr ""
@@ -905,4 +909,44 @@ msgstr ""
 
 msgctxt "#44005"
 msgid "Background for search"
+msgstr ""
+
+msgctxt "#44100"
+msgid "Hide time"
+msgstr ""
+
+msgctxt "#44101"
+msgid "Notification popup position"
+msgstr ""
+
+msgctxt "#44102"
+msgid "Hide notification popup during playback"
+msgstr ""
+
+msgctxt "#44103"
+msgid "Set notification popup position."
+msgstr ""
+
+msgctxt "#44104"
+msgid "Bottom center"
+msgstr ""
+
+msgctxt "#44105"
+msgid "Bottom right"
+msgstr ""
+
+msgctxt "#44106"
+msgid "Bottom left"
+msgstr ""
+
+msgctxt "#44107"
+msgid "Top center"
+msgstr ""
+
+msgctxt "#44108"
+msgid "Top right"
+msgstr ""
+
+msgctxt "#44109"
+msgid "Top left"
 msgstr ""

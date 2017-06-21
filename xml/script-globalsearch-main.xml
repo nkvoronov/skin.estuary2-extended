@@ -3586,6 +3586,7 @@
 				<font>font_clock</font>
 				<shadowcolor>22000000</shadowcolor>
 				<label>$INFO[System.Time]</label>
+                <visible>!Skin.HasSetting(hide_date)</visible>
 			</control>
 			<control type="image">
 				<left>0</left>

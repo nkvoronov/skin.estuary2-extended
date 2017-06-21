@@ -1002,6 +1002,7 @@
 						<width>auto</width>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 						<label>$INFO[System.Time]</label>
+                        <visible>!Skin.HasSetting(hide_date)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
