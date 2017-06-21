@@ -505,8 +505,6 @@
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-                <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
 				<itemlayout width="310" height="340">
 					<control type="group">
 						<left>70</left>

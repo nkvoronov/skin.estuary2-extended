@@ -730,6 +730,11 @@
         <value condition="!String.IsEmpty(Skin.String(duration_splashscreen))">$INFO[Skin.String(duration_splashscreen)]</value>
         <value>5</value>
     </variable>
+    <!-- Popup Position Name -->
+    <variable name="SkinSettingPopupPositionNameVar">
+        <value condition="!String.IsEmpty(Skin.String(PopupPosition.label))">$INFO[Skin.String(PopupPosition.label)]</value>
+        <value>$LOCALIZE[44108]</value>
+    </variable>
     <!-- Background Overlay Type Name -->
     <variable name="BackgroundOverlayTypeNameVar">
 		<value condition="String.IsEqual(Skin.String(background_overlay),0) | String.IsEmpty(Skin.String(background_overlay)) ">$LOCALIZE[231]</value>
