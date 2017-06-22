@@ -723,7 +723,7 @@
     <!-- Popup Position Name -->
     <variable name="SkinSettingPopupPositionNameVar">
         <value condition="!String.IsEmpty(Skin.String(PopupPosition.label))">$INFO[Skin.String(PopupPosition.label)]</value>
-        <value>$LOCALIZE[44108]</value>
+        <value>$LOCALIZE[44106]</value>
     </variable>
     <!-- Background Overlay Type Name -->
     <variable name="BackgroundOverlayTypeNameVar">

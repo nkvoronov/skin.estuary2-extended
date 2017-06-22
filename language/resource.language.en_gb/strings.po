@@ -928,25 +928,33 @@ msgid "Set notification popup position."
 msgstr ""
 
 msgctxt "#44104"
-msgid "Bottom center"
+msgid "Top left"
 msgstr ""
 
 msgctxt "#44105"
-msgid "Bottom right"
-msgstr ""
-
-msgctxt "#44106"
-msgid "Bottom left"
-msgstr ""
-
-msgctxt "#44107"
 msgid "Top center"
 msgstr ""
 
-msgctxt "#44108"
+msgctxt "#44106"
 msgid "Top right"
 msgstr ""
 
+msgctxt "#44107"
+msgid "Bottom left"
+msgstr ""
+
+msgctxt "#44108"
+msgid "Bottom center"
+msgstr ""
+
 msgctxt "#44109"
-msgid "Top left"
+msgid "Bottom right"
+msgstr ""
+
+msgctxt "#44110"
+msgid "Hide backgrounds"
+msgstr ""
+
+msgctxt "#44111"
+msgid "Select single image?"
 msgstr ""

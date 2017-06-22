@@ -743,25 +743,33 @@ msgid "Set notification popup position."
 msgstr "Встановіть позицію спливаючих повідомлень"
 
 msgctxt "#44104"
-msgid "Bottom center"
-msgstr "Внизу по центру"
+msgid "Top left"
+msgstr "Вгорі зліва"
 
 msgctxt "#44105"
-msgid "Bottom right"
-msgstr "Внизу справа"
-
-msgctxt "#44106"
-msgid "Bottom left"
-msgstr "Внизу зліва"
-
-msgctxt "#44107"
 msgid "Top center"
 msgstr "Вгорі по центру"
 
-msgctxt "#44108"
+msgctxt "#44106"
 msgid "Top right"
 msgstr "Вгорі справа"
 
+msgctxt "#44107"
+msgid "Bottom left"
+msgstr "Внизу зліва"
+
+msgctxt "#44108"
+msgid "Bottom center"
+msgstr "Внизу по центру"
+
 msgctxt "#44109"
-msgid "Top left"
-msgstr "Вгорі зліва"
+msgid "Bottom right"
+msgstr "Внизу справа"
+
+msgctxt "#44110"
+msgid "Hide backgrounds"
+msgstr "Скрити фони"
+
+msgctxt "#44111"
+msgid "Select single image?"
+msgstr "Вибрати одно зображення?"
