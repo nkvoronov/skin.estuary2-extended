@@ -50,7 +50,7 @@
                     <label>$ADDON[script.skinshortcuts 32045]</label>
                     <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                    <enable>!Skin.HasSetting(no_fanart)</enable>
+                    <enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
                 </control>
                 <control type="button" id="405">
                     <description>Edit submenu</description>
@@ -76,6 +76,7 @@
                 </control>				
                 <!-- Widgets -->
                 <control type="button" id="351">
+                    <description>Widget 1</description>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
                     <label2>$VAR[WidgetName1Label2Var]</label2>
@@ -86,6 +87,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="352">
+                    <description>Widget 2</description>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
                     <label2>$VAR[WidgetName2Label2Var]</label2>
@@ -96,6 +98,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="353">
+                    <description>Widget 3</description>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
                     <label2>$VAR[WidgetName3Label2Var]</label2>
@@ -106,6 +109,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="354">
+                    <description>Widget 4</description>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
                     <label2>$VAR[WidgetName4Label2Var]</label2>
@@ -116,6 +120,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="355">
+                    <description>Widget 5</description>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 5</label>
                     <label2>$VAR[WidgetName5Label2Var]</label2>
@@ -126,6 +131,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="356">
+                    <description>Widget 6</description>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 6</label>
                     <label2>$VAR[WidgetName6Label2Var]</label2>

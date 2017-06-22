@@ -252,7 +252,7 @@
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43032]</label>
 					<label2>$VAR[WidgetLimitItemsVar]</label2>
-                    <onclick condition="String.IsEmpty(Skin.String(widget_limititems))">Skin.SetString(widget_limititems,10,)</onclick>
+                    <onclick condition="String.IsEmpty(Skin.String(widget_limititems))">Skin.SetString(widget_limititems,20,)</onclick>
 					<onclick>Skin.SetNumeric(widget_limititems)</onclick>
 				</control>
                 <control type="image" id="205">
@@ -566,36 +566,45 @@
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
-                <control type="button" id="507">
+                <control type="radiobutton" id="507">
+                    <description>Hide backgrounds</description>					
+					<include>DefaultSettingButton</include>
+                    <label>$LOCALIZE[44110]</label>
+					<onclick>Skin.ToggleSetting(hide_backgrounds)</onclick>
+					<selected>Skin.HasSetting(hide_backgrounds)</selected>
+					<enable>!Skin.HasSetting(no_fanart)</enable>
+				</control>
+                <control type="button" id="508">
                     <description>Power background</description>					
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44003]</label>
 					<label2>$VAR[BackgroundPowerNameVar]</label2>
-					<onclick>Skin.SetImage(background_power)</onclick>
-					<enable>!Skin.HasSetting(no_fanart)</enable>
+					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(background_power),noaction=Skin.SetPath(background_power))</onclick>
+					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
-                <control type="button" id="508">
+                <control type="button" id="509">
                     <description>Settings background</description>					
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44004]</label>
 					<label2>$VAR[BackgroundSettingsNameVar]</label2>
-					<onclick>Skin.SetImage(background_settings)</onclick>
-					<enable>!Skin.HasSetting(no_fanart)</enable>
+					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(background_settings),noaction=Skin.SetPath(background_settings))</onclick>
+                    <onclick>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onclick>
+					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
-                <control type="button" id="509">
+                <control type="button" id="510">
                     <description>Search background</description>					
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44005]</label>
 					<label2>$VAR[BackgroundSearchNameVar]</label2>
-					<onclick>Skin.SetImage(background_search)</onclick>
-					<enable>!Skin.HasSetting(no_fanart)</enable>
+					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(Skin.SetImage(background_search),noaction=Skin.SetPath(background_search))</onclick>
+					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
-                <control type="image" id="510">
+                <control type="image" id="511">
                     <description>Separator image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
-				<control type="button" id="511">
+				<control type="button" id="512">
                     <description>Home Fanart</description>
 					<label>$LOCALIZE[31131]</label>
 					<label2>$VAR[HomeFanartNameVar]</label2>
@@ -604,7 +613,7 @@
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-				<control type="button" id="512">
+				<control type="button" id="513">
                     <description>MovieGenre Fanart</description>
 					<label>$LOCALIZE[31149]</label>
 					<label2>$VAR[MovieGenreFanartNameVar]</label2>
@@ -613,7 +622,7 @@
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                     <enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-				<control type="button" id="513">
+				<control type="button" id="514">
                     <description>Weather Fanart</description>
 					<label>$LOCALIZE[31062]</label>
 					<label2>$VAR[WeatherFanartNameVar]</label2>
@@ -622,16 +631,16 @@
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                     <enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-                <control type="image" id="514">
+                <control type="image" id="515">
                     <description>Separator image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
-                <control type="button" id="515">
+                <control type="button" id="516">
                     <description>Reset section</description>
                     <include>DefaultSettingButton</include>
                     <label>10041</label>
-                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_fanart)|Skin.Reset(use_custom_bg)|Skin.Reset(custom_background)|Skin.SetString(background_overlay,0)|Skin.Reset(Opacity)|Skin.Reset(background_power)|Skin.Reset(background_settings)|Skin.Reset(background_search)|Skin.Reset(HomeFanart.name)|Skin.Reset(HomeFanart.path)|Skin.Reset(MovieGenreFanart.name)|Skin.Reset(MovieGenreFanart.path)|Skin.Reset(WeatherFanart.name)|Skin.Reset(WeatherFanart.path))</onclick>
+                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_fanart)|Skin.Reset(use_custom_bg)|Skin.Reset(custom_background)|Skin.SetString(background_overlay,0)|Skin.Reset(Opacity)|Skin.Reset(hide_backgrounds)|Skin.Reset(background_power)|Skin.Reset(background_settings)|Skin.Reset(background_search)|Skin.Reset(HomeFanart.name)|Skin.Reset(HomeFanart.path)|Skin.Reset(MovieGenreFanart.name)|Skin.Reset(MovieGenreFanart.path)|Skin.Reset(WeatherFanart.name)|Skin.Reset(WeatherFanart.path)|SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
                 </control>
 			</control>
             <!-- Colors -->

@@ -168,16 +168,6 @@
 			<param name="sortorder" value="descending"/>
 		</include>
 	</include>
-    <!-- Playlists Type -->
-	<include name="Widget-Playlists">
-		<include content="Widget-Categories">
-			<param name="widget_header" value="$PARAM[widget_header]"/>
-            <param name="widget_target" value="$PARAM[widget_target]"/>
-            <param name="content_path" value="$PARAM[content_path]"/>
-            <param name="list_id" value="$PARAM[list_id]"/>
-			<param name="fallback_image" value="DefaultPlaylist.png"/>			
-		</include>
-	</include>
     <!-- Movies Type -->
 	<include name="Widget-Movies">
 		<include content="Widget-Posters">
@@ -272,6 +262,18 @@
             <param name="fallback_image" value="DefaultFavourites.png"/>
 		</include>
 	</include>
+    <!-- Playlists Type -->
+	<include name="Widget-Playlists">
+		<include content="Widget-Categories">
+            <param name="scale" value="true"/>
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+            <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="icon_height" value="100"/>
+			<param name="fallback_image" value="DefaultPlaylist.png"/>			
+		</include>
+	</include>
     <!-- Movie Genres Type -->	
 	<include name="Widget-MovieGenres">
 		<include content="Widget-Categories">
@@ -281,7 +283,7 @@
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="icon" value="$VAR[WidgetMovieGenreIconVar]"/>           
-			<param name="icon_height" value="105"/>
+			<param name="icon_height" value="100"/>
 			<param name="fallback_image" value="DefaultGenre.png"/>
 		</include>
 	</include>
@@ -294,7 +296,7 @@
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="icon" value="$VAR[WidgetMusicGenreIconVar]"/>            
-			<param name="icon_height" value="105"/>
+			<param name="icon_height" value="100"/>
             <param name="fallback_image" value="DefaultMusicGenres.png"/>
 		</include>
 	</include>
@@ -307,7 +309,7 @@
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="icon" value="$VAR[WidgetStudioIconVar]"/>
-            <param name="icon_height" value="105"/>
+            <param name="icon_height" value="100"/>
 			<param name="fallback_image" value="DefaultStudios.png"/>
 		</include>
 	</include>
@@ -320,10 +322,21 @@
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="icon" value="$VAR[WidgetCountryIconVar]"/>
-            <param name="icon_height" value="105"/>
+            <param name="icon_height" value="100"/>
 			<param name="fallback_image" value="DefaultCountry.png"/>
 		</include>
 	</include>
+    <!-- Other Type -->
+	<include name="Widget-Other">
+		<include content="Widget-Categories">
+            <param name="scale" value="true"/>
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>            
+            <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="icon_height" value="100"/>
+		</include>
+	</include>    
     <!-- SubMenu Type -->
 	<include name="Widget-SubMenu">
 		<include content="Widget-Categories">
@@ -336,17 +349,6 @@
             <param name="list_id" value="$PARAM[list_id]"/>
 		</include>	
 	</include>    
-    <!-- Other Type -->
-	<include name="Widget-Other">
-		<include content="Widget-Categories">
-            <param name="scale" value="true"/>
-			<param name="widget_header" value="$PARAM[widget_header]"/>
-            <param name="widget_target" value="$PARAM[widget_target]"/>
-            <param name="content_path" value="$PARAM[content_path]"/>            
-            <param name="list_id" value="$PARAM[list_id]"/>
-			<param name="icon_height" value="105"/>
-		</include>
-	</include>
 
 	<!-- *** Common Widget *** -->	
 
@@ -525,7 +527,7 @@
 							<visible>!$PARAM[scale]</visible>
 						</control>
 						<control type="image">
-							<top>20</top>
+							<top>25</top>
 							<left>62</left>
 							<width>200</width>
 							<height>$PARAM[icon_height]</height>
@@ -599,7 +601,7 @@
 							<visible>!$PARAM[scale]</visible>
 						</control>
 						<control type="image">
-							<top>20</top>
+							<top>25</top>
 							<left>62</left>
 							<width>200</width>
 							<height>$PARAM[icon_height]</height>

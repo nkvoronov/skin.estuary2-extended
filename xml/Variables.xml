@@ -483,7 +483,7 @@
     <variable name="GeneralFanartVar">
         <value condition="Skin.HasSetting(no_fanart)">$VAR[GlobalFanartVar]</value>
         <value condition="!String.IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(home).Property(fanarthometype)]$INFO[Skin.String(HomeFanart.ext)]</value>
-        <value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + !String.IsEmpty(Window(home).Property(homebackground))">$INFO[Window(home).Property(homebackground)]</value>
+        <value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + !String.IsEmpty(Window(home).Property(homebackground)) + !Skin.HasSetting(hide_backgrounds)">$INFO[Window(home).Property(homebackground)]</value>
     </variable>
     <!-- Weather Fanart Value -->
     <variable name="WeatherFanartValueVar">
@@ -519,10 +519,10 @@
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
         <value condition="!String.IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$VAR[HomeMenuTypeVar]$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(804)">$VAR[BackgroundPowerVar]</value>
-		<value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(802)">$VAR[BackgroundSettingsVar]</value>
-		<value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(801)">$VAR[BackgroundSearchVar]</value>				
-        <value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + !String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
+		<value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(804) + !Skin.HasSetting(hide_backgrounds)">$VAR[BackgroundPowerVar]</value>
+		<value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(802) + !Skin.HasSetting(hide_backgrounds)">$VAR[BackgroundSettingsVar]</value>
+		<value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(801) + !Skin.HasSetting(hide_backgrounds)">$VAR[BackgroundSearchVar]</value>				
+        <value condition="String.IsEmpty(Skin.String(HomeFanart.path)) + !String.IsEmpty(Container(9000).ListItem.Property(background)) + !Skin.HasSetting(hide_backgrounds)">$INFO[Container(9000).ListItem.Property(background)]</value>
 	</variable>
 	<!-- Home Menu Type -->
     <variable name="HomeMenuTypeVar">
@@ -733,7 +733,7 @@
     <!-- Popup Position Name -->
     <variable name="SkinSettingPopupPositionNameVar">
         <value condition="!String.IsEmpty(Skin.String(PopupPosition.label))">$INFO[Skin.String(PopupPosition.label)]</value>
-        <value>$LOCALIZE[44108]</value>
+        <value>$LOCALIZE[44106]</value>
     </variable>
     <!-- Background Overlay Type Name -->
     <variable name="BackgroundOverlayTypeNameVar">
