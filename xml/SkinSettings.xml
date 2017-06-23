@@ -49,8 +49,8 @@
                     <description>Hide date</description>
                     <label>$LOCALIZE[44100]</label>
                     <include>DefaultSettingButton</include>
-                    <onclick>Skin.ToggleSetting(hide_date)</onclick>
-                    <selected>Skin.HasSetting(hide_date)</selected>
+                    <onclick>Skin.ToggleSetting(hide_time)</onclick>
+                    <selected>Skin.HasSetting(hide_time)</selected>
                 </control>
 				<control type="radiobutton" id="105">
                     <description>Show weatherinfo</description>
@@ -537,7 +537,7 @@
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[44002]</label>
 					<label2>$INFO[Skin.String(custom_background)]</label2>
-					<onclick>Skin.SetImage(custom_background)</onclick>
+                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(custom_background),noaction=Skin.SetPath(custom_background))</onclick>
 					<enable>Skin.HasSetting(use_custom_bg) + Skin.HasSetting(no_fanart)</enable>
 				</control>                
 				<control type="button" id="504">
@@ -650,7 +650,7 @@
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
-				<onright>60</onright>
+                <onright>60</onright>
 				<onup>600</onup>
 				<ondown>600</ondown>
                 <pagecontrol>60</pagecontrol>
