@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1200">
+	<defaultcontrol always="true">6</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<depth>DepthOSD</depth>
+	<controls>
+        <include content="DialogSelectValue">
+            <param name="dialogheaderlabel" value="$LOCALIZE[44101]" />
+            <param name="dialogincludeselectval" value="PopupPositionVal" />
+            <param name="dialogsettingval" value="PopupPosition" />
+        </include>
+	</controls>
+</window>

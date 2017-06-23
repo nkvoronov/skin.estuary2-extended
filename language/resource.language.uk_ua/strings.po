@@ -618,6 +618,10 @@ msgctxt "#43025"
 msgid "Choose weather fanart pack"
 msgstr "Вибрати фан-арт пакет для погоди"
 
+msgctxt "#43032"
+msgid "Widget Limit Items"
+msgstr "Віджети ліміт елементів"
+
 msgctxt "#43033"
 msgid "Choose music genre icons"
 msgstr "Вибрати іконки жанрів для музики"

@@ -48,8 +48,8 @@
                     <description>Hide date</description>
                     <label>$LOCALIZE[44100]</label>
                     <include>DefaultSettingButton</include>
-                    <onclick>Skin.ToggleSetting(hide_date)</onclick>
-                    <selected>Skin.HasSetting(hide_date)</selected>
+                    <onclick>Skin.ToggleSetting(hide_time)</onclick>
+                    <selected>Skin.HasSetting(hide_time)</selected>
                 </control>
 				<control type="radiobutton" id="105">
                     <description>Show weatherinfo</description>
@@ -107,7 +107,7 @@
                     <description>Reset section</description>
                     <include>DefaultSettingButton</include>
                     <label>10041</label>
-                    <!-- <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_date)|Skin.Reset(show_weatherinfo)|Skin.Reset(hide_mediaflags)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)|Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favorites)|Skin.Reset(animated_posters))</onclick> -->
+                    <onclick>ActivateWindow(1111)</onclick>
                 </control>                
 			</control>
             <!-- Options -->
@@ -206,7 +206,7 @@
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44101]</label>
                     <label2>$VAR[SkinSettingPopupPositionNameVar]</label2>
-                    <!-- <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=PopupPosition,header=$LOCALIZE[44101])</onclick> -->
+                    <onclick>ActivateWindow(1200)</onclick>
                 </control>
                 <control type="radiobutton" id="213">
                     <description>Hide popup</description>
@@ -265,7 +265,7 @@
                     <description>Reset section</description>
                     <include>DefaultSettingButton</include>
                     <label>10041</label>
-                    <!-- <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.path)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(enable_skin_debug))</onclick> -->
+                    <onclick>ActivateWindow(1112)</onclick>
                 </control>
             </control>
             <!-- Main menu -->
@@ -376,7 +376,7 @@
                     <description>Reset section</description>
                     <include>DefaultSettingButton</include>
                     <label>10041</label>
-                    <!-- <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.path)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(enable_skin_debug))</onclick> -->
+                    <onclick>ActivateWindow(1113)</onclick>
                 </control>
 			</control>
             <!-- User Widgets -->
@@ -468,7 +468,7 @@
                     <description>Reset section</description>
                     <include>DefaultSettingButton</include>
                     <label>10041</label>
-                    <!-- <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(enable_custom_list_addons_video)|Skin.Reset(AddonSetVideo.0.Label)|Skin.Reset(AddonSetVideo.1.Label)|Skin.Reset(AddonSetVideo.2.Label)|Skin.Reset(AddonSetVideo.3.Label)|Skin.Reset(AddonSetVideo.4.Label)|Skin.Reset(AddonSetVideo.5.Label)|Skin.Reset(AddonSetVideo.6.Label)|Skin.Reset(AddonSetVideo.7.Label)|Skin.Reset(AddonSetVideo.8.Label)|Skin.Reset(AddonSetVideo.9.Label)|Skin.Reset(enable_custom_list_addons_audio)|Skin.Reset(AddonSetAudio.0.Label)|Skin.Reset(AddonSetAudio.1.Label)|Skin.Reset(AddonSetAudio.2.Label)|Skin.Reset(AddonSetAudio.3.Label)|Skin.Reset(AddonSetAudio.4.Label)|Skin.Reset(AddonSetAudio.5.Label)|Skin.Reset(AddonSetAudio.6.Label)|Skin.Reset(AddonSetAudio.7.Label)|Skin.Reset(AddonSetAudio.8.Label)|Skin.Reset(AddonSetAudio.9.Label)|Skin.Reset(enable_custom_list_addons_programs)|Skin.Reset(AddonSetPrograms.0.Label)|Skin.Reset(AddonSetPrograms.1.Label)|Skin.Reset(AddonSetPrograms.2.Label)|Skin.Reset(AddonSetPrograms.3.Label)|Skin.Reset(AddonSetPrograms.4.Label)|Skin.Reset(AddonSetPrograms.5.Label)|Skin.Reset(AddonSetPrograms.6.Label)|Skin.Reset(AddonSetPrograms.7.Label)|Skin.Reset(AddonSetPrograms.8.Label)|Skin.Reset(AddonSetPrograms.9.Label)|Skin.Reset(enable_custom_list_addons_apps)|Skin.Reset(enable_custom_list_addons_image)|Skin.Reset(AddonSetImage.0.Label)|Skin.Reset(AddonSetImage.1.Label)|Skin.Reset(AddonSetImage.2.Label)|Skin.Reset(AddonSetImage.3.Label)|Skin.Reset(AddonSetImage.4.Label)|Skin.Reset(AddonSetImage.5.Label)|Skin.Reset(AddonSetImage.6.Label)|Skin.Reset(AddonSetImage.7.Label)|Skin.Reset(AddonSetImage.8.Label)|Skin.Reset(AddonSetImage.9.Label)|Skin.Reset(enable_custom_list_channels_tv)|Skin.Reset(ChannelTV.0.Label)|Skin.Reset(ChannelTV.1.Label)|Skin.Reset(ChannelTV.2.Label)|Skin.Reset(ChannelTV.3.Label)|Skin.Reset(ChannelTV.4.Label)|Skin.Reset(ChannelTV.5.Label)|Skin.Reset(ChannelTV.6.Label)|Skin.Reset(ChannelTV.7.Label)|Skin.Reset(ChannelTV.8.Label)|Skin.Reset(ChannelTV.9.Label)|Skin.Reset(enable_custom_list_channels_radio)|Skin.Reset(ChannelRadio.0.Label)|Skin.Reset(ChannelRadio.1.Label)|Skin.Reset(ChannelRadio.2.Label)|Skin.Reset(ChannelRadio.3.Label)|Skin.Reset(ChannelRadio.4.Label)|Skin.Reset(ChannelRadio.5.Label)|Skin.Reset(ChannelRadio.6.Label)|Skin.Reset(ChannelRadio.7.Label)|Skin.Reset(ChannelRadio.8.Label)|Skin.Reset(ChannelRadio.9.Label))</onclick> -->
+                    <onclick>ActivateWindow(1114)</onclick>
                 </control>                
             </control>
             <!-- Backgrounds -->
@@ -503,7 +503,8 @@
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[44002]</label>
 					<label2>$INFO[Skin.String(custom_background)]</label2>
-					<onclick>Skin.SetImage(custom_background)</onclick>
+					<onclick>SetProperty(setbackgrounds,custom_background,home)</onclick>
+                    <onclick>ActivateWindow(1202)</onclick>
 					<enable>Skin.HasSetting(use_custom_bg) + Skin.HasSetting(no_fanart)</enable>
 				</control>                
 				<control type="button" id="504">
@@ -525,7 +526,7 @@
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44000]</label>
                     <label2>$VAR[BackgroundOpacityValueNameVar]</label2>
-                    <!-- <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Opacity,header=$LOCALIZE[44000])</onclick> -->
+                    <onclick>ActivateWindow(1201)</onclick>
                 </control>
                 <control type="image" id="506">
                     <description>Separator image</description>
@@ -545,7 +546,8 @@
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44003]</label>
 					<label2>$VAR[BackgroundPowerNameVar]</label2>
-					<!-- <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(background_power),noaction=Skin.SetPath(background_power))</onclick> -->
+                    <onclick>SetProperty(setbackgrounds,background_power,home)</onclick>
+                    <onclick>ActivateWindow(1202)</onclick>
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
                 <control type="button" id="509">
@@ -553,7 +555,8 @@
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44004]</label>
 					<label2>$VAR[BackgroundSettingsNameVar]</label2>
-					<!-- <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(background_settings),noaction=Skin.SetPath(background_settings))</onclick> -->
+                    <onclick>SetProperty(setbackgrounds,background_settings,home)</onclick>
+                    <onclick>ActivateWindow(1202)</onclick>
                     <onclick>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onclick>
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
@@ -562,7 +565,8 @@
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44005]</label>
 					<label2>$VAR[BackgroundSearchNameVar]</label2>
-					<!-- <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(Skin.SetImage(background_search),noaction=Skin.SetPath(background_search))</onclick> -->
+                    <onclick>SetProperty(setbackgrounds,background_search,home)</onclick>
+                    <onclick>ActivateWindow(1202)</onclick>
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
                 <control type="image" id="511">
@@ -606,7 +610,7 @@
                     <description>Reset section</description>
                     <include>DefaultSettingButton</include>
                     <label>10041</label>
-                    <!-- <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_fanart)|Skin.Reset(use_custom_bg)|Skin.Reset(custom_background)|Skin.SetString(background_overlay,0)|Skin.Reset(Opacity)|Skin.Reset(hide_backgrounds)|Skin.Reset(background_power)|Skin.Reset(background_settings)|Skin.Reset(background_search)|Skin.Reset(HomeFanart.name)|Skin.Reset(HomeFanart.path)|Skin.Reset(MovieGenreFanart.name)|Skin.Reset(MovieGenreFanart.path)|Skin.Reset(WeatherFanart.name)|Skin.Reset(WeatherFanart.path)|SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick> -->
+                    <onclick>ActivateWindow(1115)</onclick>
                 </control>
 			</control>
             <!-- Reset -->

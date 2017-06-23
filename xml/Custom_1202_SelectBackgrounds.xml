@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1202">
+    <defaultcontrol>10</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<depth>DepthDialog+</depth>
+	<controls>
+        <include content="DialogYesNo">
+            <param name="dialogheaderlabel" value="$LOCALIZE[33069]" />
+            <param name="dialogtext" value="$LOCALIZE[44111]" />
+            <param name="dialogincludeyes" value="DialogSetImage" />
+            <param name="dialogincludeno" value="DialogSetFile" />
+        </include>
+	</controls>
+</window>
+
