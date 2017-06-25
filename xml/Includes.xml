@@ -1721,6 +1721,35 @@
             </control>       
         </definition>
     </include>
+    <!-- Backgrounds Select Value -->
+    <include name="BackgroundsSelVal">
+        <content>
+            <item id="1">
+                <description>Reset Background</description>
+                <icon>DefaultAddon.png</icon>
+                <label>$LOCALIZE[15109]</label>
+                <label2></label2>
+                <onclick>Skin.Reset($INFO[Window(home).Property(setbackgrounds)])</onclick>
+                <onclick>PreviousMenu</onclick>            
+            </item>
+            <item id="2">
+                <description>Own Background</description>
+                <icon>DefaultFile.png</icon>
+                <label>$LOCALIZE[44111]</label>
+                <label2></label2>              
+                <onclick>Skin.SetImage($INFO[Window(home).Property(setbackgrounds)])</onclick>
+                <onclick>PreviousMenu</onclick>            
+            </item>
+            <item id="3">
+                <description>Multi Background</description>
+                <icon>DefaultFolder.png</icon>
+                <label>$LOCALIZE[44112]</label>
+                <label2></label2>              
+                <onclick>Skin.SetPath($INFO[Window(home).Property(setbackgrounds)])</onclick>
+                <onclick>PreviousMenu</onclick>            
+            </item>
+        </content>
+    </include>
     <!-- Popup Position Value -->
     <include name="PopupPositionVal">
         <content>
@@ -2007,14 +2036,21 @@
         <onclick>Skin.Reset(widget_limititems)</onclick>
         <onclick>Skin.Reset(StudiosImages.name)</onclick>
         <onclick>Skin.Reset(StudiosImages.path)</onclick>
+        <onclick>Skin.Reset(StudiosImages.ext)</onclick>
         <onclick>Skin.Reset(LanguageFlags.name)</onclick>
         <onclick>Skin.Reset(LanguageFlags.path)</onclick>
+        <onclick>Skin.Reset(LanguageFlags.ext)</onclick>
         <onclick>Skin.Reset(MovieGenreIcons.name)</onclick>
         <onclick>Skin.Reset(MovieGenreIcons.path)</onclick>
+        <onclick>Skin.Reset(MovieGenreIcons.ext)</onclick>
         <onclick>Skin.Reset(MusicGenreIcons.name)</onclick>
         <onclick>Skin.Reset(MusicGenreIcons.path)</onclick>
+        <onclick>Skin.Reset(MusicGenreIcons.ext)</onclick>
         <onclick>Skin.Reset(WeatherIcons.name)</onclick> 
         <onclick>Skin.Reset(WeatherIcons.path)</onclick>
+        <onclick>Skin.Reset(WeatherIcons.ext)</onclick>
+        <onclick>Skin.Reset(WeatherIcons.multi)</onclick>
+        <onclick>Skin.Reset(PopupPosition)</onclick>
         <onclick>Skin.Reset(PopupPosition.label)</onclick>
         <onclick>Skin.Reset(hide_popup)</onclick>
         <onclick>Skin.Reset(enable_custom_list_addons)</onclick>
@@ -2118,13 +2154,29 @@
         <onclick>Skin.Reset(hide_backgrounds)</onclick>
         <onclick>Skin.Reset(background_power)</onclick>
         <onclick>Skin.Reset(background_settings)</onclick>
-        <onclick>Skin.Reset(background_search)</onclick>
+        <onclick>Skin.Reset(background_search)</onclick>        
+        <onclick>Skin.Reset(background_movies)</onclick>
+        <onclick>Skin.Reset(background_tvshows)</onclick>
+        <onclick>Skin.Reset(background_music)</onclick>
+        <onclick>Skin.Reset(background_disc)</onclick>
+        <onclick>Skin.Reset(background_musicvideos)</onclick>
+        <onclick>Skin.Reset(background_livetv)</onclick>
+        <onclick>Skin.Reset(background_radio)</onclick>
+        <onclick>Skin.Reset(background_addons)</onclick>
+        <onclick>Skin.Reset(background_pictures)</onclick>
+        <onclick>Skin.Reset(background_videos)</onclick>
+        <onclick>Skin.Reset(background_favourites)</onclick>
+        <onclick>Skin.Reset(background_weather)</onclick>       
         <onclick>Skin.Reset(HomeFanart.name)</onclick>
         <onclick>Skin.Reset(HomeFanart.path)</onclick>
+        <onclick>Skin.Reset(HomeFanart.ext)</onclick>
         <onclick>Skin.Reset(MovieGenreFanart.name)</onclick>
         <onclick>Skin.Reset(MovieGenreFanart.path)</onclick>
+        <onclick>Skin.Reset(MovieGenreFanart.ext)</onclick>
         <onclick>Skin.Reset(WeatherFanart.name)</onclick>
         <onclick>Skin.Reset(WeatherFanart.path)</onclick>
+        <onclick>Skin.Reset(WeatherFanart.ext)</onclick>
+        <onclick>Skin.Reset(WeatherFanart.multi)</onclick>
         <onclick>SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
         <include>DialogClickNo</include>
     </include>
@@ -2138,16 +2190,6 @@
     <!-- Click No -->
     <include name="DialogClickNo">
         <onclick>PreviousMenu</onclick>
-    </include>
-    <!-- Dialog SetImage -->
-    <include name="DialogSetImage">
-        <onclick>Skin.SetImage($INFO[Window(home).Property(setbackgrounds)])</onclick>
-        <include>DialogClickNo</include>
-    </include>
-    <!-- Dialog SetFile -->
-    <include name="DialogSetFile">
-        <onclick>Skin.SetPath($INFO[Window(home).Property(setbackgrounds)])</onclick>
-        <include>DialogClickNo</include>
     </include>
     <!-- Addon SubMenu Content -->
 	<include name="AddonSubMenuContent">

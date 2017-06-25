@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1202">
-    <defaultcontrol>10</defaultcontrol>
+    <onunload>ClearProperty(setbackgrounds,home)</onunload>
+	<defaultcontrol always="true">6</defaultcontrol>
 	<include>Animation_DialogPopupOpenClose</include>
-	<depth>DepthDialog+</depth>
+	<depth>DepthOSD</depth>
 	<controls>
-        <include content="DialogYesNo">
+        <include content="DialogSelectValue">
             <param name="dialogheaderlabel" value="$LOCALIZE[33069]" />
-            <param name="dialogtext" value="$LOCALIZE[44111]" />
-            <param name="dialogincludeyes" value="DialogSetImage" />
-            <param name="dialogincludeno" value="DialogSetFile" />
+            <param name="dialogincludeselectval" value="BackgroundsSelVal" />
+            <param name="dialogsettingval" value="setbackgrounds" />
         </include>
 	</controls>
 </window>

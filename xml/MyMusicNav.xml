@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<menucontrol>9000</menucontrol>
-    <onload condition="String.IsEmpty(Window(home).Property(fanarthometype))">SetProperty(fanarthometype,music,home)</onload>
-    <onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundMusicVar],home)</onload>
+    <onload>SetProperty(fanarthometype,music,home)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundMusicVar],home)</onload>
     <views>50,52,53,54,55,58,500</views>
 	<controls>
         <!-- Background -->

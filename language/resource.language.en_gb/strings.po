@@ -940,5 +940,9 @@ msgid "Bottom right"
 msgstr ""
 
 msgctxt "#44111"
-msgid "Select single image?"
+msgid "Single image"
+msgstr ""
+
+msgctxt "#44112"
+msgid "Multi-image"
 msgstr ""

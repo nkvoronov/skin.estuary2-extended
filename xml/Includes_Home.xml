@@ -374,6 +374,8 @@
 		<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 		<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 		<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+        <onfocus>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
+		<onfocus>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 		<onback>PageUp</onback>
 		<onback>PageUp</onback>
 		<onback>PageUp</onback>

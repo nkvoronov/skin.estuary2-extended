@@ -729,9 +729,9 @@
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
                 <onright>60</onright>
+				<onup>600</onup>
+				<ondown>600</ondown>
                 <pagecontrol>60</pagecontrol>
-				<onup>500</onup>
-				<ondown>500</ondown>
 				<visible>Container(9000).HasFocus(6)</visible>
                 <control type="label" id="601">
                     <description>Reset label</description>
