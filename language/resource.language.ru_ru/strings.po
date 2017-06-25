@@ -903,5 +903,9 @@ msgid "Bottom right"
 msgstr "Внизу справа"
 
 msgctxt "#44111"
-msgid "Select single image?"
-msgstr "Выбрать одно изображение?"
+msgid "Single image"
+msgstr "Одно изображение"
+
+msgctxt "#44112"
+msgid "Multi-image"
+msgstr "Набор картинок"

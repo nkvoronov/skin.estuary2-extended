@@ -374,7 +374,7 @@
                     <description>Reset section</description>
                     <include>DefaultSettingButton</include>
                     <label>10041</label>
-                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.path)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(enable_skin_debug))</onclick>
+                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(enable_skin_debug))</onclick>
                 </control>
             </control>
             <!-- Main menu -->
@@ -537,7 +537,8 @@
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[44002]</label>
 					<label2>$INFO[Skin.String(custom_background)]</label2>
-                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(custom_background),noaction=Skin.SetPath(custom_background))</onclick>
+					<onclick>SetProperty(setbackgrounds,custom_background,home)</onclick>
+                    <onclick>ActivateWindow(1202)</onclick>
 					<enable>Skin.HasSetting(use_custom_bg) + Skin.HasSetting(no_fanart)</enable>
 				</control>                
 				<control type="button" id="504">
@@ -579,7 +580,8 @@
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[33060]</label>
 					<label2>$VAR[BackgroundPowerNameVar]</label2>
-					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(background_power),noaction=Skin.SetPath(background_power))</onclick>
+                    <onclick>SetProperty(setbackgrounds,background_power,home)</onclick>
+                    <onclick>ActivateWindow(1202)</onclick>
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
                 <control type="button" id="509">
@@ -587,7 +589,8 @@
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[21417]</label>
 					<label2>$VAR[BackgroundSettingsNameVar]</label2>
-					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(background_settings),noaction=Skin.SetPath(background_settings))</onclick>
+                    <onclick>SetProperty(setbackgrounds,background_settings,home)</onclick>
+                    <onclick>ActivateWindow(1202)</onclick>
                     <onclick>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onclick>
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
@@ -596,7 +599,8 @@
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[137]</label>
 					<label2>$VAR[BackgroundSearchNameVar]</label2>
-					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(Skin.SetImage(background_search),noaction=Skin.SetPath(background_search))</onclick>
+                    <onclick>SetProperty(setbackgrounds,background_search,home)</onclick>
+                    <onclick>ActivateWindow(1202)</onclick>
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
                 <control type="image" id="511">
@@ -640,7 +644,7 @@
                     <description>Reset section</description>
                     <include>DefaultSettingButton</include>
                     <label>10041</label>
-                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_fanart)|Skin.Reset(use_custom_bg)|Skin.Reset(custom_background)|Skin.SetString(background_overlay,0)|Skin.Reset(Opacity)|Skin.Reset(hide_backgrounds)|Skin.Reset(background_power)|Skin.Reset(background_settings)|Skin.Reset(background_search)|Skin.Reset(HomeFanart.name)|Skin.Reset(HomeFanart.path)|Skin.Reset(MovieGenreFanart.name)|Skin.Reset(MovieGenreFanart.path)|Skin.Reset(WeatherFanart.name)|Skin.Reset(WeatherFanart.path)|SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
+                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_fanart)|Skin.Reset(use_custom_bg)|Skin.Reset(custom_background)|Skin.SetString(background_overlay,0)|Skin.Reset(Opacity)|Skin.Reset(hide_backgrounds)|Skin.Reset(background_power)|Skin.Reset(background_settings)|Skin.Reset(background_search)|Skin.Reset(HomeFanart.name)|Skin.Reset(HomeFanart.path)|Skin.Reset(HomeFanart.ext)|Skin.Reset(MovieGenreFanart.name)|Skin.Reset(MovieGenreFanart.path)|Skin.Reset(MovieGenreFanart.ext)|Skin.Reset(WeatherFanart.name)|Skin.Reset(WeatherFanart.ext)|Skin.Reset(WeatherFanart.path)|Skin.Reset(WeatherFanart.multi)|SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
                 </control>
 			</control>
             <!-- Colors -->
