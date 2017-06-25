@@ -1042,18 +1042,6 @@ msgctxt "#44002"
 msgid "Choose image path"
 msgstr ""
 
-msgctxt "#44003"
-msgid "Background for power"
-msgstr ""
-
-msgctxt "#44004"
-msgid "Background for settings"
-msgstr ""
-
-msgctxt "#44005"
-msgid "Background for search"
-msgstr ""
-
 msgctxt "#44100"
 msgid "Hide time"
 msgstr ""
@@ -1092,10 +1080,6 @@ msgstr ""
 
 msgctxt "#44109"
 msgid "Bottom right"
-msgstr ""
-
-msgctxt "#44110"
-msgid "Hide backgrounds"
 msgstr ""
 
 msgctxt "#44111"

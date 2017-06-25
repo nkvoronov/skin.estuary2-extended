@@ -569,15 +569,15 @@
                 <control type="radiobutton" id="507">
                     <description>Hide backgrounds</description>					
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[44110]</label>
+                    <label>$LOCALIZE[33071]</label>
 					<onclick>Skin.ToggleSetting(hide_backgrounds)</onclick>
-					<selected>Skin.HasSetting(hide_backgrounds)</selected>
+					<selected>!Skin.HasSetting(hide_backgrounds)</selected>
 					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
                 <control type="button" id="508">
                     <description>Power background</description>					
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[44003]</label>
+                    <label>- $LOCALIZE[33060]</label>
 					<label2>$VAR[BackgroundPowerNameVar]</label2>
 					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(background_power),noaction=Skin.SetPath(background_power))</onclick>
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
@@ -585,7 +585,7 @@
                 <control type="button" id="509">
                     <description>Settings background</description>					
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[44004]</label>
+                    <label>- $LOCALIZE[21417]</label>
 					<label2>$VAR[BackgroundSettingsNameVar]</label2>
 					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(background_settings),noaction=Skin.SetPath(background_settings))</onclick>
                     <onclick>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onclick>
@@ -594,7 +594,7 @@
                 <control type="button" id="510">
                     <description>Search background</description>					
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[44005]</label>
+                    <label>- $LOCALIZE[137]</label>
 					<label2>$VAR[BackgroundSearchNameVar]</label2>
 					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[33069],message=$LOCALIZE[44111],yesaction=Skin.SetImage(Skin.SetImage(background_search),noaction=Skin.SetPath(background_search))</onclick>
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>

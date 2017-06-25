@@ -862,18 +862,6 @@ msgctxt "#44002"
 msgid "Choose image path"
 msgstr "Виберіть шлях до зображення"
 
-msgctxt "#44003"
-msgid "Background for power"
-msgstr "Фон для виключення"
-
-msgctxt "#44004"
-msgid "Background for settings"
-msgstr "Фон для налаштувань"
-
-msgctxt "#44005"
-msgid "Background for search"
-msgstr "Фон для пошуку"
-
 msgctxt "#44100"
 msgid "Hide time"
 msgstr "Приховати час"
@@ -913,10 +901,6 @@ msgstr "Внизу по центру"
 msgctxt "#44109"
 msgid "Bottom right"
 msgstr "Внизу справа"
-
-msgctxt "#44110"
-msgid "Hide backgrounds"
-msgstr "Скрити фони"
 
 msgctxt "#44111"
 msgid "Select single image?"

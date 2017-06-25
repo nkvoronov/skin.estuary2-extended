@@ -347,6 +347,7 @@
             <param name="content_path" value="$PARAM[content_path]"/> 
             <param name="widget_target" value="$PARAM[widget_target]"/>            
             <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="type" value="$PARAM[type]"/>
 		</include>	
 	</include>    
 

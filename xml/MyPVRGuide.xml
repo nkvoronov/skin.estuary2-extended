@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
+    <onload condition="String.IsEmpty(Window(home).Property(fanarthometype))">SetProperty(fanarthometype,livetv,home)</onload>
 	<views>10</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
