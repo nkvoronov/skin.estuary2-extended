@@ -108,7 +108,7 @@
 						<top>1</top>
 						<width>95</width>
 						<height>95</height>
-						<texture>$INFO[ListItem.Art(thumb)]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>104</left>
@@ -127,7 +127,7 @@
 						<top>1</top>
 						<width>95</width>
 						<height>95</height>
-						<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
+						<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>104</left>
@@ -144,148 +144,148 @@
 					<!-- Movies -->
 					<item>
 						<label>$LOCALIZE[342]</label>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
+                        <onclick>SetProperty(fanarthometype,movies,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundMoviesVar],home)</onclick>
 						<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
 						<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,sources://video/,return)</onclick>
+                        <icon>icons/sidemenu/movies.png</icon>
 						<property name="menu_id">$NUMBER[5000]</property>
-                        <property name="background">special://skin/extras/home-images/movies.jpg</property>
-						<thumb>icons/sidemenu/movies.png</thumb>
-						<property name="id">movies</property>
+                        <property name="defaultID">movies</property>
+                        <property name="background">$VAR[BackgroundMoviesVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
 					</item>
 					<!-- TVShows -->
 					<item>
 						<label>$LOCALIZE[20343]</label>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
+                        <onclick>SetProperty(fanarthometype,tvshows,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundTVShowsVar],home)</onclick>
 						<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
 						<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,sources://video/,return)</onclick>
+                        <icon>icons/sidemenu/tv.png</icon>
 						<property name="menu_id">$NUMBER[6000]</property>
-                        <property name="background">special://skin/extras/home-images/tvshows.jpg</property>
-						<thumb>icons/sidemenu/tv.png</thumb>
-						<property name="id">tvshows</property>
+                        <property name="defaultID">tvshows</property>
+                        <property name="background">$VAR[BackgroundTVShowsVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
 					</item>
 					<!-- Music -->
 					<item>
 						<label>$LOCALIZE[2]</label>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
+                        <onclick>SetProperty(fanarthometype,music,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundMusicVar],home)</onclick>
 						<onclick>ActivateWindow(Music,root,return)</onclick>
+                        <icon>icons/sidemenu/music.png</icon>
 						<property name="menu_id">$NUMBER[7000]</property>
-                        <property name="background">special://skin/extras/home-images/music.jpg</property>
-						<thumb>icons/sidemenu/music.png</thumb>
-						<property name="id">music</property>
+                        <property name="defaultID">music</property>
+                        <property name="background">$VAR[BackgroundMusicVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>
 					<!-- Disc -->
 					<item>
 						<label>$LOCALIZE[427]</label>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
+                        <onclick>SetProperty(fanarthometype,dvd,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundDiscVar],home)</onclick>
 						<onclick>PlayDisc</onclick>
+                        <icon>icons/sidemenu/disc.png</icon>
 						<property name="menu_id">$NUMBER[21000]</property>
-                        <property name="background">special://skin/extras/home-images/disc.jpg</property>
-						<thumb>icons/sidemenu/disc.png</thumb>
-						<property name="id">disc</property>
+                        <property name="defaultID">dvd</property>
+                        <property name="background">$VAR[BackgroundDiscVar]</property>						
 						<visible>System.HasMediaDVD</visible>
 					</item>
 					<!-- MusicVideos -->
 					<item>
 						<label>$LOCALIZE[20389]</label>
+                        <onclick>SetProperty(fanarthometype,musicvideos,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundMusicVideosVar],home)</onclick>
+                        <onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
+                        <icon>icons/sidemenu/musicvideos.png</icon>                        
 						<property name="menu_id">$NUMBER[16000]</property>
-                        <property name="background">special://skin/extras/home-images/musicvideo.jpg</property>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
-						<onclick>ActivateWindow(Videos,musicvideos,return)</onclick>
-						<thumb>icons/sidemenu/musicvideos.png</thumb>
-						<property name="id">musicvideos</property>
+                        <property name="defaultID">musicvideos</property>
+                        <property name="background">$VAR[BackgroundMusicVideosVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
 					</item>
-					<!-- Livetv -->
+					<!-- LiveTV -->
 					<item>
-						<label>$LOCALIZE[19020]</label>
-						<property name="menu_id">$NUMBER[12000]</property>
-                        <property name="background">special://skin/extras/home-images/livetv.jpg</property>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
+						<label>$LOCALIZE[19020]</label>                        
+                        <onclick>SetProperty(fanarthometype,livetv,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundLiveTVVar],home)</onclick>
 						<onclick>ActivateWindow(TVChannels)</onclick>
-						<thumb>icons/sidemenu/livetv.png</thumb>
-						<property name="id">livetv</property>
+						<icon>icons/sidemenu/livetv.png</icon>
+                        <property name="menu_id">$NUMBER[12000]</property>
+						<property name="defaultID">livetv</property>
+                        <property name="background">$VAR[BackgroundLiveTVVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
 					</item>
 					<!-- Radio -->
 					<item>
 						<label>$LOCALIZE[19021]</label>
+                        <onclick>SetProperty(fanarthometype,radio,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundRadioVar],home)</onclick>
+                        <onclick>ActivateWindow(RadioChannels)</onclick>
+                        <icon>icons/sidemenu/radio.png</icon>
 						<property name="menu_id">$NUMBER[13000]</property>
-                        <property name="background">special://skin/extras/home-images/radio.jpg</property>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
-						<onclick>ActivateWindow(RadioChannels)</onclick>
-						<thumb>icons/sidemenu/radio.png</thumb>
-						<property name="id">radio</property>
+                        <property name="defaultID">radio</property>
+                        <property name="background">$VAR[BackgroundRadioVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
 					</item>
 					<!-- Addons -->
 					<item>
 						<label>$LOCALIZE[24001]</label>
+                        <onclick>SetProperty(fanarthometype,addons,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundAddonsVar],home)</onclick>
+                        <onclick>ActivateWindow(1100)</onclick>
+                        <icon>icons/sidemenu/addons.png</icon>
 						<property name="menu_id">$NUMBER[8000]</property>
-                        <property name="background">special://skin/extras/home-images/addons.jpg</property>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
-						<onclick>ActivateWindow(1100)</onclick>
-						<thumb>icons/sidemenu/addons.png</thumb>
-						<property name="id">addons</property>
+                        <property name="defaultID">addons</property>
+                        <property name="background">$VAR[BackgroundAddonsVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					</item>
 					<!-- Pictures -->
 					<item>
 						<label>$LOCALIZE[1]</label>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
+                        <onclick>SetProperty(fanarthometype,pictures,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundPicturesVar],home)</onclick>
 						<onclick>ActivateWindow(Pictures)</onclick>
+                        <icon>icons/sidemenu/pictures.png</icon>
 						<property name="menu_id">$NUMBER[4000]</property>
-                        <property name="background">special://skin/extras/home-images/pictures.jpg</property>
-						<thumb>icons/sidemenu/pictures.png</thumb>
-						<property name="id">pictures</property>
+                        <property name="defaultID">pictures</property>
+                        <property name="background">$VAR[BackgroundPicturesVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					</item>
 					<!-- Videos -->
 					<item>
 						<label>$LOCALIZE[3]</label>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
+                        <onclick>SetProperty(fanarthometype,video,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundVideosVar],home)</onclick>
 						<onclick>ActivateWindow(Videos,root)</onclick>
+                        <icon>icons/sidemenu/videos.png</icon>
 						<property name="menu_id">$NUMBER[11000]</property>
-                        <property name="background">special://skin/extras/home-images/videos.jpg</property>
-						<thumb>icons/sidemenu/videos.png</thumb>
-						<property name="id">video</property>
+                        <property name="defaultID">video</property>
+                        <property name="background">$VAR[BackgroundVideosVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 					</item>
 					<!-- Favourites -->
 					<item>
 						<label>$LOCALIZE[10134]</label>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
+                        <onclick>SetProperty(fanarthometype,favorites,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundFavouritesVar],home)</onclick>
 						<onclick>ActivateWindow(favourites)</onclick>
+                        <icon>icons/sidemenu/favourites.png</icon>
 						<property name="menu_id">$NUMBER[14000]</property>
-                        <property name="background">special://skin/extras/home-images/favorites.jpg</property>
-						<thumb>icons/sidemenu/favourites.png</thumb>
-						<property name="id">favorites</property>
+                        <property name="defaultID">favorites</property>
+                        <property name="background">$VAR[BackgroundFavouritesVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 					</item>
 					<!-- Weather -->
 					<item>
 						<label>$LOCALIZE[8]</label>
-                        <onclick>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onclick>
-                        <onclick>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onclick>
+                        <onclick>SetProperty(fanarthometype,weather,home)</onclick>
+                        <onclick>SetProperty(homebackground,$VAR[BackgroundWeatherVar],home)</onclick>
 						<onclick condition="!String.IsEmpty(Weather.Plugin)">ActivateWindow(Weather)</onclick>
 						<onclick condition="String.IsEmpty(Weather.Plugin)">ReplaceWindow(servicesettings,weather)</onclick>
+                        <icon>icons/sidemenu/weather.png</icon>
 						<property name="menu_id">$NUMBER[15000]</property>
-                        <property name="background">special://skin/extras/home-images/weather.jpg</property>
-						<thumb>icons/sidemenu/weather.png</thumb>
-						<property name="id">weather</property>
+                        <property name="defaultID">weather</property>
+                        <property name="background">$VAR[BackgroundWeatherVar]</property>						
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 					</item>
 				</content>

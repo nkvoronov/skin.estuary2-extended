@@ -62,7 +62,7 @@
 					<width>600</width>
 					<align>right</align>
 					<label>$INFO[System.Time]</label>
-                    <visible>!Skin.HasSetting(hide_date)</visible>
+                    <visible>!Skin.HasSetting(hide_time)</visible>
 				</control>
 				<control type="grouplist">
 					<right>24</right>

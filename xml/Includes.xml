@@ -653,7 +653,7 @@
 				<include content="Visible_Right_Delayed">
 					<param name="id" value="$PARAM[id]"/>
 				</include>
-				<visible>String.IsEqual(Container(9000).ListItem.Property(id),$PARAM[id])</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),$PARAM[id])</visible>
 				<control type="group">
 					<visible>Integer.IsGreater(Container($PARAM[group_id]50).NumItems,0) | Container($PARAM[group_id]50).IsUpdating</visible>
 					<control type="panel" id="$PARAM[group_id]50">
@@ -2181,32 +2181,32 @@
 	<include name="PVRSubMenuContent">
         <item>
             <label>$LOCALIZE[19019]</label>
-            <onclick>ActivateWindow($PARAM[pvr_type]Channels)</onclick>
+            <onclick>ActivateWindow($PARAM[type]Channels)</onclick>
             <thumb>DefaultAddonPeripheral.png</thumb>
         </item>
         <item>
             <label>$LOCALIZE[19069]</label>
-            <onclick>ActivateWindow($PARAM[pvr_type]Guide)</onclick>
+            <onclick>ActivateWindow($PARAM[type]Guide)</onclick>
             <thumb>icons/pvr/epg.png</thumb>
         </item>
         <item>
             <label>$LOCALIZE[19017]</label>
-            <onclick>ActivateWindow($PARAM[pvr_type]Recordings)</onclick>
+            <onclick>ActivateWindow($PARAM[type]Recordings)</onclick>
             <thumb>icons/pvr/recording.png</thumb>
         </item>
         <item>
             <label>$LOCALIZE[19040]</label>
-            <onclick>ActivateWindow($PARAM[pvr_type]Timers)</onclick>
+            <onclick>ActivateWindow($PARAM[type]Timers)</onclick>
             <thumb>icons/pvr/timer.png</thumb>
         </item>
         <item>
             <label>$LOCALIZE[19138]</label>
-            <onclick>ActivateWindow($PARAM[pvr_type]TimerRules)</onclick>
+            <onclick>ActivateWindow($PARAM[type]TimerRules)</onclick>
             <thumb>icons/pvr/timer-rule.png</thumb>
         </item>
         <item>
             <label>$LOCALIZE[137]</label>
-            <onclick>ActivateWindow($PARAM[pvr_type]Search)</onclick>
+            <onclick>ActivateWindow($PARAM[type]Search)</onclick>
             <thumb>DefaultAddonsSearch.png</thumb>
         </item>
 	</include>    

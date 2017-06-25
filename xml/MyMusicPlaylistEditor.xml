@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">6</defaultcontrol>
 	<menucontrol>9000</menucontrol>
     <onload>SetProperty(fanarthometype,music,home)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundMusicVar],home)</onload>
 	<controls>
         <!-- Background -->
 		<include>DefaultBackground</include>

@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">52</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
     <onload>SetProperty(fanarthometype,addons,home)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundAddonsVar],home)</onload>
 	<views>50,52,55,500</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
