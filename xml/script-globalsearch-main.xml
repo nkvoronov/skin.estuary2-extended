@@ -135,7 +135,7 @@
 								<thumb>defaultmovies.png</thumb>
 								<onclick>noop</onclick>
                                 <property name="defaultID">movies</property>
-                                <property name="menu_id">$NUMBER[111]</property>
+                                <property name="menu_id">$NUMBER[119]</property>
 								<visible>Control.IsVisible(119)</visible>
 							</item>
 							<item id="2">
@@ -144,7 +144,7 @@
 								<thumb>defaulttvshows.png</thumb>
 								<onclick>noop</onclick>
                                 <property name="defaultID">tvshows</property>
-                                <property name="menu_id">$NUMBER[121]</property>
+                                <property name="menu_id">$NUMBER[129]</property>
 								<visible>Control.IsVisible(129)</visible>
 							</item>
 							<item id="3">
@@ -153,7 +153,7 @@
 								<thumb>defaultaddontvinfo.png</thumb>
 								<onclick>noop</onclick>
                                 <property name="defaultID">seasons</property>
-                                <property name="menu_id">$NUMBER[131]</property>
+                                <property name="menu_id">$NUMBER[139]</property>
 								<visible>Control.IsVisible(139)</visible>
 							</item>
 							<item id="4">
@@ -162,7 +162,7 @@
 								<thumb>defaultaddontvinfo.png</thumb>
 								<onclick>noop</onclick>
                                 <property name="defaultID">episodes</property>
-                                <property name="menu_id">$NUMBER[141]</property>
+                                <property name="menu_id">$NUMBER[149]</property>
 								<visible>Control.IsVisible(149)</visible>
 							</item>
 							<item id="5">
@@ -171,7 +171,7 @@
 								<thumb>defaultmusicvideos.png</thumb>
 								<onclick>noop</onclick>
                                 <property name="defaultID">musicvideos</property>
-                                <property name="menu_id">$NUMBER[151]</property>
+                                <property name="menu_id">$NUMBER[159]</property>
 								<visible>Control.IsVisible(159)</visible>
 							</item>
 							<item id="6">
@@ -180,7 +180,7 @@
 								<thumb>defaultmusicartists.png</thumb>
 								<onclick>noop</onclick>
                                 <property name="defaultID">artists</property>
-                                <property name="menu_id">$NUMBER[161]</property>
+                                <property name="menu_id">$NUMBER[169]</property>
 								<visible>Control.IsVisible(169)</visible>
 							</item>
 							<item id="7">
@@ -189,7 +189,7 @@
 								<thumb>defaultmusicalbums.png</thumb>
 								<onclick>noop</onclick>
                                 <property name="defaultID">albums</property>
-                                <property name="menu_id">$NUMBER[171]</property>
+                                <property name="menu_id">$NUMBER[179]</property>
 								<visible>Control.IsVisible(179)</visible>
 							</item>
 							<item id="8">
@@ -198,7 +198,7 @@
 								<thumb>defaultmusicsongs.png</thumb>
 								<onclick>noop</onclick>
                                 <property name="defaultID">songs</property>
-                                <property name="menu_id">$NUMBER[181]</property>
+                                <property name="menu_id">$NUMBER[189]</property>
 								<visible>Control.IsVisible(189)</visible>
 							</item>
 							<item id="9">
@@ -207,7 +207,7 @@
 								<thumb>defaultactor.png</thumb>
 								<onclick>noop</onclick>
                                 <property name="defaultID">actors</property>
-                                <property name="menu_id">$NUMBER[211]</property>
+                                <property name="menu_id">$NUMBER[219]</property>
 								<visible>Control.IsVisible(219)</visible>
 							</item>
 							<item id="10">
@@ -215,8 +215,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(230),: ]</label2>
 								<thumb>defaultdirector.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">epg</property>
-                                <property name="menu_id">$NUMBER[231]</property>
+                                <property name="defaultID">directors</property>
+                                <property name="menu_id">$NUMBER[239]</property>
 								<visible>Control.IsVisible(239)</visible>
 							</item>
 							<item id="11">
@@ -224,8 +224,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(220),: ]</label2>
 								<thumb>defaultaddonpvrclient.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">directors</property>
-                                <property name="menu_id">$NUMBER[221]</property>
+                                <property name="defaultID">epg</property>
+                                <property name="menu_id">$NUMBER[229]</property>
 								<visible>Control.IsVisible(229)</visible>
 							</item>
 						</content>
@@ -299,7 +299,7 @@
 					<control type="group" id="119">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[111]"/>
+                                <param name="id" value="movies"/>
                             </include>                        
                             <control type="panel" id="111">
                                 <left>490</left>
@@ -384,7 +384,7 @@
 					<control type="group" id="129">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[121]"/>
+                                <param name="id" value="tvshows"/>
                             </include>                        
                             <control type="panel" id="121">
                                 <left>490</left>
@@ -473,7 +473,7 @@
 					<control type="group" id="139">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[131]"/>
+                                <param name="id" value="seasons"/>
                             </include>                        
                             <control type="panel" id="131">
                                 <left>490</left>
@@ -560,7 +560,7 @@
 					<control type="group" id="149">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[141]"/>
+                                <param name="id" value="episodes"/>
                             </include>                        
                             <control type="panel" id="141">
                                 <left>490</left>
@@ -649,7 +649,7 @@
 					<control type="group" id="159">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[151]"/>
+                                <param name="id" value="musicvideos"/>
                             </include>                        
                             <control type="panel" id="151">
                                 <left>490</left>
@@ -738,7 +738,7 @@
 					<control type="group" id="169">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[161]"/>
+                                <param name="id" value="artists"/>
                             </include>                        
                             <control type="panel" id="161">
                                 <left>490</left>
@@ -812,7 +812,7 @@
 					<control type="group" id="179">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[171]"/>
+                                <param name="id" value="albums"/>
                             </include>
                             <control type="panel" id="171">
                                 <left>490</left>
@@ -886,7 +886,7 @@
 					<control type="group" id="189">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[181]"/>
+                                <param name="id" value="songs"/>
                             </include>                        
                             <control type="panel" id="181">
                                 <left>490</left>
@@ -960,7 +960,7 @@
 					<control type="group" id="219">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[211]"/>
+                                <param name="id" value="actors"/>
                             </include>                        
                             <control type="panel" id="211">
                                 <left>490</left>
@@ -1045,7 +1045,7 @@
 					<control type="group" id="229">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[221]"/>
+                                <param name="id" value="epg"/>
                             </include>                        
                             <control type="panel" id="221">
                                 <left>490</left>
@@ -1197,7 +1197,7 @@
                     <control type="group" id="239">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
-                                <param name="id" value="$NUMBER[231]"/>
+                                <param name="id" value="directors"/>
                             </include>                        
                             <control type="panel" id="231">
                                <left>490</left>
