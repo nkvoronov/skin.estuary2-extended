@@ -42,7 +42,7 @@
                 <param name="overlay_background" value="$VAR[SearchFanartVar]" />
             </include>
 			<control type="group">
-				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">conditional</animation>
                 <!-- Find Categores -->
 				<control type="group">
                     <top>100</top>
