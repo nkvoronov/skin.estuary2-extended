@@ -5,8 +5,8 @@
     <depth>DepthDialog+</depth>
     <controls>
         <control type="group">
-			<centerleft>50%</centerleft>
-			<width>1682</width>
+            <width>1682</width>
+			<centerleft>50%</centerleft>			
 			<centertop>50%</centertop>
 			<height>728</height>
 			<include content="DialogBackgroundCommons">

@@ -1089,3 +1089,7 @@ msgstr ""
 msgctxt "#44112"
 msgid "Multi-image"
 msgstr ""
+
+msgctxt "#44113"
+msgid "Alternative view"
+msgstr ""

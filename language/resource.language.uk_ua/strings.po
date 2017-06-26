@@ -909,3 +909,7 @@ msgstr "Oдне зображення"
 msgctxt "#44112"
 msgid "Multi-image"
 msgstr "Hабір картинок"
+
+msgctxt "#44113"
+msgid "Alternative view"
+msgstr "Альтернативний вид"
