@@ -66,44 +66,67 @@
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
 				</control>
-				<control type="radiobutton" id="107">
+                <control type="label" id="107">
+                    <description>Addons label</description>
+                    <include>DefaultSettingLabel</include>
+                    <label>$LOCALIZE[24001]</label>
+                </control>
+				<control type="radiobutton" id="108">
                     <description>Activate Global Search</description>					
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[24000] Global Search</label>
+                    <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 					<onclick>Skin.ToggleSetting(enable_globalsearch)</onclick>
 					<selected>Skin.HasSetting(enable_globalsearch)</selected>
-                    <enable>System.hasAddon(script.globalsearch)</enable>
 				</control>
-                <control type="button" id="108">
+                <control type="button" id="109">
                     <description>Settings Global Search</description>					
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[24020]</label>
+                    <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
                     <onclick>Addon.OpenSettings(script.globalsearch)</onclick>
-					<enable>Skin.HasSetting(enable_globalsearch)</enable>
-					<visible>System.HasAddon(script.globalsearch)</visible>
 				</control>
-				<control type="radiobutton" id="109">
+				<control type="radiobutton" id="110">
                     <description>Activate Simple Playlists</description>					
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[24000] Simple Playlists</label>
+                    <onclick condition="!System.HasAddon(script.simpleplaylists)">InstallAddon(script.simpleplaylists)</onclick>
 					<onclick>Skin.ToggleSetting(enable_watchitlater)</onclick>
 					<selected>Skin.HasSetting(enable_watchitlater)</selected>
-                    <enable>System.hasAddon(script.simpleplaylists)</enable>
 				</control>
-                <control type="button" id="110">
+                <control type="button" id="111">
                     <description>Settings Simple Playlists</description>					
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[24020]</label>
+                    <onclick condition="!System.HasAddon(script.simpleplaylists)">InstallAddon(script.simpleplaylists)</onclick>
                     <onclick>Addon.OpenSettings(script.simpleplaylists)</onclick>
-					<enable>Skin.HasSetting(enable_watchitlater)</enable>
-					<visible>System.HasAddon(script.simpleplaylists)</visible>
 				</control>
-                <control type="image" id="111">
+                <control type="label" id="112">
+                    <description>CU LRC Lyrics Label</description>
+                    <include>DefaultSettingLabel</include>
+                    <label>$LOCALIZE[24000] CU LRC Lyrics</label>
+                </control>
+                <control type="button" id="113">
+                    <description>Settings CU LRC Lyrics</description>					
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[24020]</label>
+                    <onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
+                    <onclick>Addon.OpenSettings(script.cu.lrclyrics)</onclick>
+				</control>
+                <control type="radiobutton" id="114">
+                    <description>CU LRC Lyrics Alternative View</description>					
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[44113]</label>
+                    <onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
+					<onclick>Skin.ToggleSetting(lrclyrics_alternative_view)</onclick>
+					<selected>Skin.HasSetting(lrclyrics_alternative_view)</selected>
+				</control>
+                <control type="image" id="115">
                     <description>Separator image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
-                <control type="button" id="112">
+                <control type="button" id="116">
                     <description>Reset section</description>
                     <include>DefaultSettingButton</include>
                     <label>10041</label>

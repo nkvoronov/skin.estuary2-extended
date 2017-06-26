@@ -765,3 +765,7 @@ msgstr "Одно изображение"
 msgctxt "#44112"
 msgid "Multi-image"
 msgstr "Набор картинок"
+
+msgctxt "#44113"
+msgid "Alternative view"
+msgstr "Алтернативный вид"

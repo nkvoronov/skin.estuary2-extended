@@ -23,6 +23,7 @@
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
 	<include file="Variables.xml" />
+    <include file="script-cu-lrclyrics-includes.xml"/>
 	<include file="Constants_1920.xml" condition="!String.IsEqual(Skin.AspectRatio,21:9)"/>
 	<include file="Constants_2560.xml" condition="String.IsEqual(Skin.AspectRatio,21:9)"/>
 	<constant name="DepthDialog">0.50</constant>
@@ -2026,6 +2027,7 @@
         <onclick>Skin.Reset(enable_splashscreen)</onclick>
         <onclick>Skin.Reset(enable_globalsearch)</onclick>
         <onclick>Skin.Reset(enable_watchitlater)</onclick>
+        <onclick>Skin.Reset(lrclyrics_alternative_view)</onclick>
         <include>DialogClickNo</include>
     </include>
     <!-- Reset Options -->

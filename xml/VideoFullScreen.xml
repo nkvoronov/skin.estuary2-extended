@@ -4,7 +4,7 @@
 	<controls>
         <control type="label" id="1">
             <description>Clock label</description>
-            <left>1100</left>
+            <right>20</right>
             <top>25</top>
             <width>800</width>
             <height>25</height>
