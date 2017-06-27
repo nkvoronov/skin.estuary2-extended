@@ -321,6 +321,8 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -334,6 +336,8 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -406,7 +410,9 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="fallback_image" value="DefaultTVShows.png" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -420,7 +426,9 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="fallback_image" value="DefaultTVShows.png" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -495,7 +503,9 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="fallback_image" value="DefaultTVShows.png" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -509,7 +519,9 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="fallback_image" value="DefaultTVShows.png" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -584,6 +596,7 @@
                                             <param name="main_label" value="$INFO[ListItem.Property(Title)]" />
                                             <param name="sub_label" value="$INFO[ListItem.Property(TVShowTitle)]" />
                                             <param name="thumb_label" value="$INFO[ListItem.Property(Season),,x]$INFO[ListItem.Property(Episode)]" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -599,6 +612,7 @@
                                             <param name="main_label" value="$INFO[ListItem.Property(Title)]" />
                                             <param name="sub_label" value="$INFO[ListItem.Property(TVShowTitle)]" />
                                             <param name="thumb_label" value="$INFO[ListItem.Property(Season),,x]$INFO[ListItem.Property(Episode)]" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -673,6 +687,7 @@
                                             <param name="main_label" value="$INFO[ListItem.Label]" />
                                             <param name="sub_label" value="$INFO[ListItem.Property(Artist)]" />
                                             <param name="thumb_label" value="" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -688,6 +703,7 @@
                                             <param name="main_label" value="$INFO[ListItem.Label]" />
                                             <param name="sub_label" value="$INFO[ListItem.Property(Artist)]" />
                                             <param name="thumb_label" value="" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -759,6 +775,8 @@
                                         <top>150</top>
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="isalbum" value="false" />
                                             <param name="fallback_image" value="DefaultMusicArtists.png" />
                                         </include>
                                     </control>
@@ -772,6 +790,8 @@
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
                                             <param name="focused" value="true" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="isalbum" value="false" />
                                             <param name="fallback_image" value="DefaultMusicArtists.png" />
                                         </include>
                                     </control>
@@ -833,6 +853,10 @@
                                         <top>150</top>
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="sub_label">$INFO[ListItem.Label]</param>
+                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
+                                            <param name="isalbum" value="true" />
                                             <param name="fallback_image" value="DefaultMusicAlbums.png" />
                                         </include>
                                     </control>
@@ -846,6 +870,10 @@
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
                                             <param name="focused" value="true" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="sub_label">$INFO[ListItem.Label]</param>
+                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
+                                            <param name="isalbum" value="true" />
                                             <param name="fallback_image" value="DefaultMusicAlbums.png" />
                                         </include>
                                     </control>
@@ -907,6 +935,10 @@
                                         <top>150</top>
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="sub_label">$INFO[ListItem.Label]</param>
+                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
+                                            <param name="isalbum" value="true" />
                                             <param name="fallback_image" value="DefaultMusicSongs.png" />
                                         </include>
                                     </control>
@@ -920,6 +952,10 @@
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
                                             <param name="focused" value="true" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="sub_label">$INFO[ListItem.Label]</param>
+                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
+                                            <param name="isalbum" value="true" />
                                             <param name="fallback_image" value="DefaultMusicSongs.png" />
                                         </include>
                                     </control>
@@ -982,6 +1018,8 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -995,6 +1033,8 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -1219,6 +1259,8 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -1232,6 +1274,8 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="tvshows" value="false" />
                                         </include>
                                     </control>
                                 </focusedlayout>

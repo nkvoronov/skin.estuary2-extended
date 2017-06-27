@@ -62,6 +62,8 @@
 		<param name="sub_label">$INFO[ListItem.Title]</param>
 		<param name="single_label">$INFO[ListItem.Label]</param>
 		<param name="focused">false</param>
+        <param name="userratingval">ListItem.UserRating</param>
+        <param name="isalbum">String.IsEqual(ListItem.DBType,album)</param>
 		<definition>
 			<control type="image">
 				<top>0</top>
@@ -111,11 +113,11 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
-				<visible>!String.IsEqual(ListItem.DBType,album)</visible>
+				<visible>!$PARAM[isalbum]</visible>
                 <visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="group">
-				<visible>String.IsEqual(ListItem.DBType,album)</visible>
+				<visible>$PARAM[isalbum]</visible>
 				<control type="label">
 					<left>29</left>
 					<top>300</top>
@@ -140,7 +142,9 @@
 			<control type="group">
 				<left>133</left>
 				<top>2</top>
-				<include>UserRatingCircle</include>
+                <include content="UserRatingCircle">
+                    <param name="userratingval" value="$PARAM[userratingval]" />
+                </include>
 			</control>
 		</definition>
 	</include>
@@ -150,6 +154,7 @@
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
 		<param name="fallback_image">DefaultTVShows.png</param>
 		<param name="focused">false</param>
+        <param name="userratingval">ListItem.UserRating</param>
 		<definition>
 			<control type="image">
 				<top>10</top>
@@ -262,7 +267,9 @@
 			<control type="group">
 				<left>134</left>
 				<top>8</top>
-				<include>UserRatingCircle</include>
+                <include content="UserRatingCircle">
+                    <param name="userratingval" value="$PARAM[userratingval]" />
+                </include>
 			</control>
 		</definition>
 	</include>
@@ -272,6 +279,7 @@
         <param name="poster">$VAR[ListPosterVar]</param>
         <param name="value_poster">ListItem.Art(poster)</param>
         <param name="noposter">$INFO[ListItem.Icon]</param>
+        <param name="userratingval">ListItem.UserRating</param>
         <param name="width">298</param>
         <param name="height">408</param>    
         <param name="border">true</param>
@@ -428,13 +436,6 @@
                     <texture>$VAR[WallWatchedIconVar]</texture>
 					<visible>$PARAM[watched]</visible>
                 </control>
-                <control type="group">
-					<visible>$PARAM[rating]</visible>
-                    <centerleft>50%</centerleft>
-                    <width>44</width>
-                    <top>4</top>
-                    <include>UserRatingCircle</include>
-                </control>
                 <control type="progress">
                     <left>24</left>
                     <right>24</right>
@@ -445,6 +446,15 @@
                     <info>ListItem.PercentPlayed</info>
                     <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 					<visible>$PARAM[progress]</visible>
+                </control>
+                <control type="group">
+					<visible>$PARAM[rating]</visible>
+                    <centerleft>50%</centerleft>
+                    <width>44</width>
+                    <top>4</top>
+                    <include content="UserRatingCircle">
+                        <param name="userratingval" value="$PARAM[userratingval]" />
+                    </include>
                 </control>
             </control>
 		</definition>
