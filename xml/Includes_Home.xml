@@ -428,7 +428,7 @@
 	</include>
     <!-- Widget Dynamic Content -->
 	<include name="Widget-Content">
-		<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+		<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 	</include>
     <!-- Widget Static Content -->
 	<include name="Widget-ContentCustom">
@@ -656,7 +656,7 @@
 		<param name="visible">true</param>    
 		<param name="custom">false</param>
         <param name="type">no</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="fallback_image">DefaultFolder.png</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>        
@@ -730,7 +730,7 @@
 		<param name="visible">true</param>    
 		<param name="custom">false</param>
         <param name="type">no</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>        
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>        
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
@@ -813,7 +813,7 @@
 		<param name="visible">true</param>
 		<param name="custom">false</param>
         <param name="type">no</param>
-		<param name="widget_limit">$VAR[WidgetLimitItemsVar]</param>
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
         <param name="favourites">false</param>        
 		<param name="sub_label">$INFO[ListItem.Label]</param>
 		<param name="fallback_image">DefaultFolder.png</param>

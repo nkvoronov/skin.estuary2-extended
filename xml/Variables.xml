@@ -912,13 +912,18 @@
 		<value condition="String.IsEmpty(Player.Art(thumb)) + VideoPlayer.Content(livetv)">DefaultTVShows.png</value>
 		<value>$INFO[Player.Art(thumb)]</value>
 	</variable>    
-    <!-- PVR Status Image -->
+    <!-- Wall Watched Icon -->
 	<variable name="WallWatchedIconVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.IsCollection">overlays/set.png</value>
 		<value condition="ListItem.IsPlaying">overlays/watched/OverlayPlaying-List.png</value>
 		<value condition="ListItem.IsResumable">overlays/watched/resume.png</value>
 		<value condition="Integer.IsGreater(ListItem.Playcount,0)">$INFO[ListItem.Overlay]</value>
+	</variable>
+    <!-- Wall Watched Searh Icon -->
+	<variable name="WallWatchedSearhIconVar">
+		<value condition="!Integer.IsEqual(ListItem.Property(percentplayed),0)">overlays/watched/resume.png</value>
+        <value condition="Integer.IsGreater(ListItem.Property(playcount),0)">OverlayWatched.png</value>
 	</variable>
     <!-- PVR Status Image -->    
     <variable name="PVRStatusImageVar">

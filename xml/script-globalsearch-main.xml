@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+    <onload>SetProperty(fanarthometype,search,home)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundSearchVar],home)</onload>
 	<animation effect="fade" time="400">WindowOpen</animation>
 	<animation effect="fade" time="400">WindowClose</animation>
 	<controls>
@@ -321,6 +323,12 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="istvshows" value="false" />
+                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -334,6 +342,12 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="istvshows" value="false" />
+                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -406,7 +420,10 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="fallback_image" value="DefaultTVShows.png" />
+                                            <param name="istvshows" value="true" />
+                                            <param name="totalepisodes" value="ListItem.Property(episode)" />
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -420,7 +437,10 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="fallback_image" value="DefaultTVShows.png" />
+                                            <param name="istvshows" value="true" />
+                                            <param name="totalepisodes" value="ListItem.Property(episode)" />
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -495,7 +515,9 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="fallback_image" value="DefaultTVShows.png" />
+                                            <param name="istvshows" value="false" />
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -509,7 +531,9 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="fallback_image" value="DefaultTVShows.png" />
+                                            <param name="istvshows" value="false" />
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -584,6 +608,10 @@
                                             <param name="main_label" value="$INFO[ListItem.Property(Title)]" />
                                             <param name="sub_label" value="$INFO[ListItem.Property(TVShowTitle)]" />
                                             <param name="thumb_label" value="$INFO[ListItem.Property(Season),,x]$INFO[ListItem.Property(Episode)]" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -599,6 +627,10 @@
                                             <param name="main_label" value="$INFO[ListItem.Property(Title)]" />
                                             <param name="sub_label" value="$INFO[ListItem.Property(TVShowTitle)]" />
                                             <param name="thumb_label" value="$INFO[ListItem.Property(Season),,x]$INFO[ListItem.Property(Episode)]" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -627,6 +659,7 @@
                             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
                             <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
                                 <param name="container_id" value="141" />
+                                <param name="visible_pemiered" value="true" />
                             </include>
                         </control>
                         <control type="group">
@@ -671,8 +704,12 @@
                                         <top>110</top>
                                         <include content="InfoWallEpisodeLayout">
                                             <param name="main_label" value="$INFO[ListItem.Label]" />
-                                            <param name="sub_label" value="$INFO[ListItem.Property(Artist)]" />
-                                            <param name="thumb_label" value="" />
+                                            <param name="sub_label" value="$INFO[ListItem.Property(artist)]" />
+                                            <param name="thumb_label" value="$INFO[ListItem.Property(year)" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -686,8 +723,12 @@
                                         <include content="InfoWallEpisodeLayout">
                                             <param name="focused" value="true" />
                                             <param name="main_label" value="$INFO[ListItem.Label]" />
-                                            <param name="sub_label" value="$INFO[ListItem.Property(Artist)]" />
-                                            <param name="thumb_label" value="" />
+                                            <param name="sub_label" value="$INFO[ListItem.Property(artist)]" />
+                                            <param name="thumb_label" value="$INFO[ListItem.Property(year)" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -759,6 +800,8 @@
                                         <top>150</top>
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="istwolabel" value="false" />
                                             <param name="fallback_image" value="DefaultMusicArtists.png" />
                                         </include>
                                     </control>
@@ -772,6 +815,8 @@
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
                                             <param name="focused" value="true" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="istwolabel" value="false" />
                                             <param name="fallback_image" value="DefaultMusicArtists.png" />
                                         </include>
                                     </control>
@@ -833,6 +878,10 @@
                                         <top>150</top>
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="sub_label">$INFO[ListItem.Label]</param>
+                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
+                                            <param name="istwolabel" value="true" />
                                             <param name="fallback_image" value="DefaultMusicAlbums.png" />
                                         </include>
                                     </control>
@@ -846,6 +895,10 @@
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
                                             <param name="focused" value="true" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="sub_label">$INFO[ListItem.Label]</param>
+                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
+                                            <param name="istwolabel" value="true" />
                                             <param name="fallback_image" value="DefaultMusicAlbums.png" />
                                         </include>
                                     </control>
@@ -907,6 +960,10 @@
                                         <top>150</top>
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="sub_label">$INFO[ListItem.Label]</param>
+                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
+                                            <param name="istwolabel" value="true" />
                                             <param name="fallback_image" value="DefaultMusicSongs.png" />
                                         </include>
                                     </control>
@@ -920,6 +977,10 @@
                                         <left>40</left>
                                         <include content="InfoWallMusicLayout">
                                             <param name="focused" value="true" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="sub_label">$INFO[ListItem.Label]</param>
+                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
+                                            <param name="istwolabel" value="true" />
                                             <param name="fallback_image" value="DefaultMusicSongs.png" />
                                         </include>
                                     </control>
@@ -982,6 +1043,12 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="istvshows" value="false" />
+                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -995,6 +1062,12 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="istvshows" value="false" />
+                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </focusedlayout>
@@ -1110,10 +1183,10 @@
                                         <left>70</left>
                                         <top>150</top>
                                         <animation type="Focus">
-                                            <effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,100" />
+                                            <effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,240" />
                                         </animation>
                                         <animation type="Unfocus">
-                                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100" />
+                                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,240" />
                                         </animation>
                                         <control type="image">
                                             <width>319</width>
@@ -1219,6 +1292,12 @@
                                         <top>120</top>
                                         <include content="InfoWallMovieLayout">                                       
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="istvshows" value="false" />
+                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </itemlayout>
@@ -1232,6 +1311,12 @@
                                         <include content="InfoWallMovieLayout">
                                             <param name="focused" value="true" />
                                             <param name="value_poster" value="ListItem.Property(art(poster))" />
+                                            <param name="userratingval" value="ListItem.Property(userrating)" />
+                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
+                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+                                            <param name="istvshows" value="false" />
+                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
                                         </include>
                                     </control>
                                 </focusedlayout>

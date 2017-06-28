@@ -91,9 +91,10 @@
 	</include>
 	<include name="UserRatingCircle">
 		<param name="animation">False</param>
+        <param name="userratingval">ListItem.UserRating</param>
 		<definition>
 			<control type="group">
-				<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+				<visible>!String.IsEmpty($PARAM[userratingval])</visible>
 				<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
 				<control type="image">
 					<left>3</left>
@@ -111,7 +112,7 @@
 					<width>44</width>
 					<height>44</height>
 					<font>font20_title</font>
-					<label>$INFO[ListItem.UserRating]</label>
+					<label>$INFO[$PARAM[userratingval]]</label>
 				</control>
 			</control>
 		</definition>
@@ -472,7 +473,7 @@
                 <itemgap>28</itemgap>
                 <width>1900</width>
                 <usecontrolcoords>true</usecontrolcoords>
-                <!-- <animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation> -->
+                <animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation>
                 <control type="group">
                     <width>150</width>
                     <top>-5</top>
