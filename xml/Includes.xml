@@ -474,7 +474,7 @@
                 <itemgap>28</itemgap>
                 <width>1900</width>
                 <usecontrolcoords>true</usecontrolcoords>
-                <!-- <animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation> -->
+                <animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation>
                 <control type="group">
                     <width>150</width>
                     <top>-5</top>

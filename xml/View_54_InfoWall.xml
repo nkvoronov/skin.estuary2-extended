@@ -63,7 +63,7 @@
 		<param name="single_label">$INFO[ListItem.Label]</param>
 		<param name="focused">false</param>
         <param name="userratingval">ListItem.UserRating</param>
-        <param name="isalbum">String.IsEqual(ListItem.DBType,album)</param>
+        <param name="istwolabel">[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</param>
 		<definition>
 			<control type="image">
 				<top>0</top>
@@ -113,11 +113,11 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
-				<visible>!$PARAM[isalbum]</visible>
+				<visible>!$PARAM[istwolabel]</visible>
                 <visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="group">
-				<visible>$PARAM[isalbum]</visible>
+				<visible>$PARAM[istwolabel]</visible>
 				<control type="label">
 					<left>29</left>
 					<top>300</top>
@@ -155,6 +155,9 @@
 		<param name="fallback_image">DefaultTVShows.png</param>
 		<param name="focused">false</param>
         <param name="userratingval">ListItem.UserRating</param>
+        <param name="percentplayed">ListItem.PercentPlayed</param>
+        <param name="ispercentplayed">Integer.IsEqual(ListItem.PercentPlayed,0)</param>
+        <param name="watchedicon">$VAR[WallWatchedIconVar]</param>
 		<definition>
 			<control type="image">
 				<top>10</top>
@@ -212,13 +215,6 @@
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>right</align>
 			</control>
-			<control type="image">
-				<left>20</left>
-				<top>175</top>
-				<width>32</width>
-				<height>32</height>
-				<texture>$VAR[WallWatchedIconVar]</texture>
-			</control>
 			<control type="textbox">
 				<left>28</left>
 				<top>202</top>
@@ -254,6 +250,13 @@
 					<align>center</align>
 				</control>
 			</control>
+			<control type="image">
+				<left>20</left>
+				<top>175</top>
+				<width>32</width>
+				<height>32</height>
+				<texture>$PARAM[watchedicon]</texture>
+			</control>            
 			<control type="progress">
 				<left>20</left>
 				<top>258</top>
@@ -261,8 +264,8 @@
 				<height>1</height>
 				<texturebg></texturebg>
 				<midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>ListItem.PercentPlayed</info>
-				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+				<info>$PARAM[percentplayed]</info>
+				<visible>!$PARAM[ispercentplayed]</visible>
 			</control>
 			<control type="group">
 				<left>134</left>
@@ -280,6 +283,13 @@
         <param name="value_poster">ListItem.Art(poster)</param>
         <param name="noposter">$INFO[ListItem.Icon]</param>
         <param name="userratingval">ListItem.UserRating</param>
+        <param name="percentplayed">ListItem.PercentPlayed</param>
+        <param name="ispercentplayed">Integer.IsEqual(ListItem.PercentPlayed,0)</param>
+        <param name="istvshows">String.IsEqual(ListItem.DBtype,tvshow)</param>
+        <param name="totalepisodes">ListItem.Property(TotalEpisodes)</param>
+        <param name="watchedepisodes">ListItem.Property(WatchedEpisodes)</param>
+        <param name="overlaybg">Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</param>
+        <param name="watchedicon">$VAR[WallWatchedIconVar]</param>
         <param name="width">298</param>
         <param name="height">408</param>    
         <param name="border">true</param>
@@ -395,12 +405,12 @@
                         <width>80</width>
                         <height>80</height>
                         <texture>overlays/overlay-bg.png</texture>
-                        <visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+                        <visible>$PARAM[overlaybg]</visible>
 						<visible>$PARAM[watched]</visible>
                     </control>
                 </control>
                 <control type="group">
-                    <visible>String.IsEqual(ListItem.DBtype,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+                    <visible>$PARAM[istvshows] + !String.IsEmpty($PARAM[totalepisodes])</visible>
 					<visible>$PARAM[tvshows]</visible>
                     <control type="image">
                         <left>24</left>
@@ -408,14 +418,14 @@
                         <bottom>24</bottom>
                         <height>50</height>
                         <texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
-                        <visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+                        <visible>!String.IsEmpty($PARAM[value_poster])</visible>
                     </control>
                     <control type="label">
                         <right>65</right>
                         <width>244</width>
 						<height>24</height>
 						<bottom>34</bottom>
-                        <label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
+                        <label>$INFO[$PARAM[watchedepisodes]]$INFO[$PARAM[totalepisodes], / ,]</label>
                         <font>font20_title</font>
                         <shadowcolor>text_shadow</shadowcolor>
                         <align>right</align>
@@ -433,7 +443,7 @@
                     <bottom>24</bottom>
                     <width>32</width>
                     <height>32</height>
-                    <texture>$VAR[WallWatchedIconVar]</texture>
+                    <texture>$PARAM[watchedicon]</texture>
 					<visible>$PARAM[watched]</visible>
                 </control>
                 <control type="progress">
@@ -443,8 +453,8 @@
                     <height>1</height>
                     <texturebg></texturebg>
                     <midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-                    <info>ListItem.PercentPlayed</info>
-                    <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+                    <info>$PARAM[percentplayed]</info>
+                    <visible>!$PARAM[ispercentplayed]</visible>
 					<visible>$PARAM[progress]</visible>
                 </control>
                 <control type="group">
