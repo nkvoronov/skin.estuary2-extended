@@ -389,7 +389,7 @@
 				<top>-5</top>
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]" />
+					<param name="texture" value="$VAR[MediaFlagsStudioIconVar]" />
 				</include>
 			</control>
 			<control type="group">
@@ -479,7 +479,7 @@
                     <top>-5</top>
                     <visible>$PARAM[istvshows]</visible>
                     <include content="MediaFlag">
-                        <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Studio),resource://resource.images.studios.white/,.png]" />
+                        <param name="texture" value="$VAR[MediaFlagsSearchStudioIconVar]$INFO[Container($PARAM[container_id]).ListItem.Property(studio)].png" />
                     </include>
                 </control>
                 <control type="group">
