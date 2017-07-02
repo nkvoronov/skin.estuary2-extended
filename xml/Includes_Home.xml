@@ -251,6 +251,18 @@
             <param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
+    <!-- Mixed Type -->
+	<include name="Widget-Mixed">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+            <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="fallback_image" value="DefaultMusicAlbums.png"/>
+            <param name="sortby" value="$PARAM[sortby]"/>
+            <param name="sortorder" value="$PARAM[sortorder]"/>
+		</include>
+	</include>
     <!-- Favourites Type -->
 	<include name="Widget-Favourites">
 		<include content="Widget-Square">
@@ -272,6 +284,17 @@
             <param name="list_id" value="$PARAM[list_id]"/>
             <param name="icon_height" value="100"/>
 			<param name="fallback_image" value="DefaultPlaylist.png"/>			
+		</include>
+	</include>
+    <!-- Source Type -->
+	<include name="Widget-Source">
+		<include content="Widget-Categories">
+            <param name="scale" value="true"/>
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>            
+            <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="icon_height" value="100"/>
 		</include>
 	</include>
     <!-- Movie Genres Type -->	
@@ -328,13 +351,12 @@
 	</include>
     <!-- Other Type -->
 	<include name="Widget-Other">
-		<include content="Widget-Categories">
-            <param name="scale" value="true"/>
+		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>            
             <param name="list_id" value="$PARAM[list_id]"/>
-			<param name="icon_height" value="100"/>
+			<param name="fallback_image" value="DefaultFolder.png"/>
 		</include>
 	</include>    
     <!-- SubMenu Type -->

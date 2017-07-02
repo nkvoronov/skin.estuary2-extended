@@ -316,8 +316,7 @@
             <shortcut label="134" type="2" icon="special://skin/extras/icons/songs.png">ActivateWindow(music,musicdb://songs/,return)</shortcut>
             <shortcut label="271" type="2" icon="special://skin/extras/icons/musictop100.png">ActivateWindow(music,musicdb://top100/,return)</shortcut>
             <shortcut label="10504" type="2" icon="special://skin/extras/icons/musictop100songs.png">ActivateWindow(music,musicdb://top100/songs/,return)</shortcut>
-            <shortcut label="10505" type="2" icon="special://skin/extras/icons/musictop100albums.png">ActivateWindow(music,musicdb://top100/albums/,return)</shortcut>            
-            <shortcut label="521" type="2" icon="special://skin/extras/icons/musiccompilations.png">ActivateWindow(music,musicdb://compilations/,return)</shortcut>
+            <shortcut label="10505" type="2" icon="special://skin/extras/icons/musictop100albums.png">ActivateWindow(music,musicdb://top100/albums/,return)</shortcut>
             <shortcut label="562" type="2" icon="special://skin/extras/icons/years.png">ActivateWindow(music,musicdb://years/,return)</shortcut>
             <shortcut label="1050" type="2" icon="special://skin/extras/icons/sets.png">ActivateWindow(music,musicdb://singles/,return)</shortcut>
             <shortcut label="10516" type="2" icon="special://skin/extras/icons/media.png">ActivateWindow(music,musicdb://,return)</shortcut>            
@@ -433,6 +432,7 @@
 		<!-- Pictures -->
         <node label="1" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
 			<shortcut label="20094" type="1" icon="special://skin/extras/icons/files.png" widget="Library" widgetType="source" widgetTarget="pictures">sources://pictures</shortcut>
+            <shortcut label="1039" type="1" icon="special://skin/extras/icons/pictures2.png" widget="Library" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut>
             <content>picturesources</content>
         </node>
 		<!-- LiveTV -->
@@ -447,10 +447,11 @@
 			<shortcut label="31018" type="19021" icon="special://skin/extras/icons/channels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
             <shortcut label="31015" type="19021" icon="special://skin/extras/icons/recordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
             <shortcut label="19040" type="19021" icon="special://skin/extras/icons/timers.png" widget="Library" widgetType="radiotimer" widgetTarget="pvr">RadioTimers</shortcut>
-			<shortcut label="43241" type="19020" icon="special://skin/extras/icons/channels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
+			<shortcut label="43242" type="19021" icon="special://skin/extras/icons/channels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
 		</node>
 		<!-- Video -->
-        <node label="3" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">			
+        <node label="3" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+            <shortcut label="3" type="3" icon="special://skin/extras/icons/videos.png" widget="Library" widgetType="source" widgetTarget="videos">library://video/</shortcut>
 			<shortcut label="20094" type="3" icon="special://skin/extras/icons/files.png" widget="Library" widgetType="source" widgetTarget="videos">sources://video</shortcut>
 			<shortcut label="136" type="3" icon="special://skin/extras/icons/playlists.png" widget="Library" widgetType="playlist" widgetTarget="videos">special://videoplaylists/</shortcut>
 			<shortcut label="1037" type="3" icon="special://skin/extras/icons/video-addons.png" widget="Library" widgetType="video" widgetTarget="videos">addons://sources/video/</shortcut>
@@ -503,22 +504,21 @@
 		</node>
 		<!-- Music -->
         <node label="2" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <shortcut label="10516" type="2" icon="special://skin/extras/icons/media.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://</shortcut>
+            <shortcut label="2" type="2" icon="special://skin/extras/icons/media.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://</shortcut>
             <shortcut label="20094" type="2" icon="special://skin/extras/icons/files.png" widget="Library" widgetType="source" widgetTarget="music">sources://music/</shortcut>
             <shortcut label="359" type="2" icon="special://skin/extras/icons/musicrecentlyadded.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://recentlyaddedalbums/</shortcut>
             <shortcut label="517" type="2" icon="special://skin/extras/icons/musicrecentlyplayed.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://recentlyplayedalbums/</shortcut>
             <shortcut label="135" type="2" icon="special://skin/extras/icons/musicgenres.png" widget="Library" widgetType="musicgenre" widgetTarget="music">musicdb://genres/</shortcut>
-            <shortcut label="133" type="2" icon="special://skin/extras/icons/artist.png" widget="Library" widgetType="artists" widgetTarget="music">music,musicdb://artists/</shortcut>
+            <shortcut label="133" type="2" icon="special://skin/extras/icons/artist.png" widget="Library" widgetType="artists" widgetTarget="music">musicdb://artists/</shortcut>
 			<shortcut label="29994" type="2" icon="DefaultMusicRoles.png" widget="Library" widgetType="source" widgetTarget="music">library://music/musicroles/</shortcut>
-            <shortcut label="132" type="2" icon="special://skin/extras/icons/album.png" widget="Library" widgetType="albums" widgetTarget="music">music,musicdb://albums/</shortcut>
+            <shortcut label="132" type="2" icon="special://skin/extras/icons/album.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://albums/</shortcut>
             <shortcut label="134" type="2" icon="special://skin/extras/icons/songs.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://songs/</shortcut>
             <shortcut label="271" type="2" icon="special://skin/extras/icons/musictop100.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://top100/</shortcut>
             <shortcut label="10504" type="2" icon="special://skin/extras/icons/musictop100songs.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://top100/songs/</shortcut>
-            <shortcut label="10505" type="2" icon="special://skin/extras/icons/musictop100albums.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://top100/albums/</shortcut>            
-            <shortcut label="521" type="2" icon="special://skin/extras/icons/musiccompilations.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://compilations</shortcut>
+            <shortcut label="10505" type="2" icon="special://skin/extras/icons/musictop100albums.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://top100/albums/</shortcut>
             <shortcut label="562" type="2" icon="special://skin/extras/icons/years.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://years/</shortcut>
             <shortcut label="1050" type="2" icon="special://skin/extras/icons/sets.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://singles/</shortcut>            
-            <shortcut label="1038" type="24001" icon="special://skin/extras/icons/music.png" widget="Library" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
+            <shortcut label="1038" type="2" icon="special://skin/extras/icons/music.png" widget="Library" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
             <shortcut label="136" type="2" icon="special://skin/extras/icons/playlists.png" widget="Library" widgetType="playlist" widgetTarget="music">special://musicplaylists/</shortcut>
             <node label="32040">
                 <content>playlist-audio</content>
