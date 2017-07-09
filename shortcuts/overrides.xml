@@ -17,6 +17,19 @@
     <groupoverride group="powermenu" disable_groups="" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
     <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</groupoverride>
     <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</groupoverride>
+    <!-- Default Backgrounds -->
+	<backgrounddefault labelID="weather">special://skin/extras/home-images/weather.jpg</backgrounddefault>
+	<backgrounddefault labelID="pictures">special://skin/extras/home-images/pictures.jpg</backgrounddefault>
+	<backgrounddefault labelID="livetv">special://skin/extras/home-images/livetv.jpg</backgrounddefault>
+	<backgrounddefault labelID="radio">special://skin/extras/home-images/radio.jpg</backgrounddefault>
+    <backgrounddefault labelID="video">special://skin/extras/home-images/videos.jpg</backgrounddefault>
+    <backgrounddefault labelID="movies">special://skin/extras/home-images/movies.jpg</backgrounddefault>
+    <backgrounddefault labelID="tvshows">special://skin/extras/home-images/tvshows.jpg</backgrounddefault>
+    <backgrounddefault labelID="musicvideos">special://skin/extras/home-images/musicvideo.jpg</backgrounddefault>
+    <backgrounddefault labelID="music">special://skin/extras/home-images/music.jpg</backgrounddefault>    
+    <backgrounddefault labelID="addons">special://skin/extras/home-images/addons.jpg</backgrounddefault>    
+    <backgrounddefault labelID="favorites">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
+    <backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>
     <!-- Additionnal Widgets -->
     <widget label="43081" icon="special://skin/extras/icons/weather.png">WeatherWidget</widget>
 	<widget label="43082" icon="special://skin/extras/icons/livetv.png">TVWidget</widget>
@@ -168,19 +181,6 @@
 	<propertydefault labelID="music" property="widgetType.widget6">albums</propertydefault>
 	<propertydefault labelID="music" property="widgetTarget.widget6">music</propertydefault>
 	<propertydefault labelID="music" property="widgetPath.widget6">special://skin/extras/playlists/mostplayed_albums.xsp</propertydefault>
-    <!-- Default Backgrounds -->
-	<backgrounddefault labelID="weather">special://skin/extras/home-images/weather.jpg</backgrounddefault>
-	<backgrounddefault labelID="pictures">special://skin/extras/home-images/pictures.jpg</backgrounddefault>
-	<backgrounddefault labelID="livetv">special://skin/extras/home-images/livetv.jpg</backgrounddefault>
-	<backgrounddefault labelID="radio">special://skin/extras/home-images/radio.jpg</backgrounddefault>
-    <backgrounddefault labelID="video">special://skin/extras/home-images/videos.jpg</backgrounddefault>
-    <backgrounddefault labelID="movies">special://skin/extras/home-images/movies.jpg</backgrounddefault>
-    <backgrounddefault labelID="tvshows">special://skin/extras/home-images/tvshows.jpg</backgrounddefault>
-    <backgrounddefault labelID="musicvideos">special://skin/extras/home-images/musicvideo.jpg</backgrounddefault>
-    <backgrounddefault labelID="music">special://skin/extras/home-images/music.jpg</backgrounddefault>    
-    <backgrounddefault labelID="addons">special://skin/extras/home-images/addons.jpg</backgrounddefault>    
-    <backgrounddefault labelID="favorites">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
-    <backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>
     <!-- Context Menu -->
     <contextmenu>
         <enableon>211</enableon>
@@ -216,6 +216,7 @@
             <shortcut label="19019" type="19020" icon="special://skin/extras/icons/channels.png">ActivateWindow(tvchannels)</shortcut>
             <shortcut label="19069" type="19020" icon="special://skin/extras/icons/guide.png">ActivateWindow(tvguide)</shortcut>
             <shortcut label="19017" type="19020" icon="special://skin/extras/icons/recordings.png">ActivateWindow(tvrecordings)</shortcut>
+			<shortcut label="19138" type="19020" icon="special://skin/extras/icons/timers.png">ActivateWindow(tvtimerrules)</shortcut>
             <shortcut label="19040" type="19020" icon="special://skin/extras/icons/timers.png">ActivateWindow(tvtimers)</shortcut>
             <shortcut label="137" type="19020" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(tvsearch)</shortcut>
             <shortcut label="32066" type="19020" icon="special://skin/extras/icons/livetv.png">PlayPvrTV</shortcut>
@@ -231,6 +232,7 @@
             <shortcut label="19019" type="19021" icon="special://skin/extras/icons/channels.png">ActivateWindow(radiochannels)</shortcut>
             <shortcut label="19069" type="19021" icon="special://skin/extras/icons/guide.png">ActivateWindow(radioguide)</shortcut>
             <shortcut label="19017" type="19021" icon="special://skin/extras/icons/recordings.png">ActivateWindow(radiorecordings)</shortcut>
+			<shortcut label="19138" type="19021" icon="special://skin/extras/icons/timers.png">ActivateWindow(radiotimerrules)</shortcut>
             <shortcut label="19040" type="19021" icon="special://skin/extras/icons/timers.png">ActivateWindow(radiotimers)</shortcut>
             <shortcut label="137" type="19021" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(radiosearch)</shortcut>
             <shortcut label="32067" type="19021" icon="special://skin/extras/icons/radio.png">PlayPvrRadio</shortcut>
