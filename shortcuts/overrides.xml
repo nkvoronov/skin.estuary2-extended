@@ -517,11 +517,11 @@
 			<shortcut label="29994" type="2" icon="DefaultMusicRoles.png" widget="Library" widgetType="source" widgetTarget="music">library://music/musicroles/</shortcut>
             <shortcut label="132" type="2" icon="special://skin/extras/icons/album.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://albums/</shortcut>
             <shortcut label="134" type="2" icon="special://skin/extras/icons/songs.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://songs/</shortcut>
-            <shortcut label="271" type="2" icon="special://skin/extras/icons/musictop100.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://top100/</shortcut>
+            <shortcut label="271" type="2" icon="special://skin/extras/icons/musictop100.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://top100/</shortcut>
             <shortcut label="10504" type="2" icon="special://skin/extras/icons/musictop100songs.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://top100/songs/</shortcut>
             <shortcut label="10505" type="2" icon="special://skin/extras/icons/musictop100albums.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://top100/albums/</shortcut>
             <shortcut label="562" type="2" icon="special://skin/extras/icons/years.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://years/</shortcut>
-            <shortcut label="1050" type="2" icon="special://skin/extras/icons/sets.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://singles/</shortcut>            
+            <shortcut label="1050" type="2" icon="special://skin/extras/icons/sets.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://singles/</shortcut>            
             <shortcut label="136" type="2" icon="special://skin/extras/icons/playlists.png" widget="Library" widgetType="playlist" widgetTarget="music">special://musicplaylists/</shortcut>
             <shortcut label="1038" type="2" icon="special://skin/extras/icons/music.png" widget="Library" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
             <node label="32040">
