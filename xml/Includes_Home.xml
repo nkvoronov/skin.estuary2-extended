@@ -9,8 +9,8 @@
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
-            <param name="fallback_image" value="DefaultAddon.png"/>
             <param name="list_id" value="$PARAM[list_id]"/>			
+            <param name="fallback_image" value="DefaultAddon.png"/>			
 		</include>
 	</include>
     <!-- Videos Type -->
@@ -19,8 +19,8 @@
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
-			<param name="fallback_image" value="DefaultAddon.png"/>	
             <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="fallback_image" value="DefaultAddon.png"/>	
 		</include>
 	</include>
     <!-- Musics Type -->
@@ -29,8 +29,8 @@
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
-			<param name="fallback_image" value="DefaultAddon.png"/>
             <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="fallback_image" value="DefaultAddon.png"/>
 		</include>
 	</include>
     <!-- Programs Type -->
@@ -39,8 +39,8 @@
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
-			<param name="fallback_image" value="DefaultAddon.png"/>
             <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="fallback_image" value="DefaultAddon.png"/>
 		</include>
 	</include>
     <!-- Addons Type -->
@@ -49,10 +49,10 @@
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
-			<param name="fallback_image" value="DefaultAddon.png"/>
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="sortby" value="lastused"/>
 			<param name="sortorder" value="descending"/>
+            <param name="fallback_image" value="DefaultAddon.png"/>
 		</include>
 	</include>
     <!-- Custom Addons Type -->
@@ -62,8 +62,8 @@
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>			
-			<param name="fallback_image" value="DefaultAddon.png"/>
             <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="fallback_image" value="DefaultAddon.png"/>            
 		</include>
 	</include>
     <!-- TV Timers Type -->
@@ -175,9 +175,9 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
-            <param name="fallback_image" value="DefaultMovies.png" />
             <param name="sortby" value="$PARAM[sortby]"/>
             <param name="sortorder" value="$PARAM[sortorder]"/>
+            <param name="fallback_image" value="DefaultMovies.png" />
 		</include>
 	</include>
     <!-- TVShows Type -->
@@ -187,9 +187,9 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
-			<param name="fallback_image" value="DefaultTVShows.png" />           
             <param name="sortby" value="$PARAM[sortby]"/>
             <param name="sortorder" value="$PARAM[sortorder]"/>
+            <param name="fallback_image" value="DefaultTVShows.png" />
 		</include>
 	</include>
     <!-- Episodes Type -->
@@ -222,9 +222,9 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
-            <param name="fallback_image" value="DefaultMusicAlbums.png"/>
             <param name="sortby" value="$PARAM[sortby]"/>
             <param name="sortorder" value="$PARAM[sortorder]"/>
+            <param name="fallback_image" value="DefaultMusicAlbums.png"/>            
 		</include>
 	</include>
     <!-- Artists Type -->
@@ -234,9 +234,9 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
-            <param name="fallback_image" value="DefaultMusicArtists.png"/>
             <param name="sortby" value="$PARAM[sortby]"/>
             <param name="sortorder" value="$PARAM[sortorder]"/>
+            <param name="fallback_image" value="DefaultMusicArtists.png"/>
 		</include>
 	</include>
     <!-- Songs Type -->
@@ -246,9 +246,9 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
-            <param name="fallback_image" value="DefaultMusicSongs.png"/>
             <param name="sortby" value="$PARAM[sortby]"/>
             <param name="sortorder" value="$PARAM[sortorder]"/>
+            <param name="fallback_image" value="DefaultMusicSongs.png"/>
 		</include>
 	</include>
     <!-- Mixed Type -->
@@ -258,9 +258,9 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
-            <param name="fallback_image" value="DefaultMusicAlbums.png"/>
             <param name="sortby" value="$PARAM[sortby]"/>
             <param name="sortorder" value="$PARAM[sortorder]"/>
+            <param name="fallback_image" value="DefaultMusicAlbums.png"/>
 		</include>
 	</include>
     <!-- Favourites Type -->
