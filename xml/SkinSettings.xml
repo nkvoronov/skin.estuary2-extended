@@ -14,8 +14,8 @@
 			<include>OpenClose_Right</include>
             <!-- General -->
 			<control type="grouplist" id="100">
-				<top>160</top>
 				<left>0</left>
+				<top>160</top>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -26,15 +26,15 @@
 				<visible>Container(9000).HasFocus(1)</visible>
 				<control type="radiobutton" id="101">
                     <description>No Slide Animations</description>
-					<label>$LOCALIZE[31095]</label>
 					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[31095]</label>
 					<selected>!Skin.HasSetting(no_slide_animations)</selected>
 					<onclick>Skin.ToggleSetting(no_slide_animations)</onclick>
 				</control>
 				<control type="radiobutton" id="102">
                     <description>Autoscroll</description>
-					<label>$LOCALIZE[20189]</label>
 					<include>DefaultSettingButton</include>
+                    <label>$LOCALIZE[20189]</label>
 					<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 					<selected>Skin.HasSetting(autoscroll)</selected>
 				</control>
@@ -54,21 +54,21 @@
                 </control>
 				<control type="radiobutton" id="105">
                     <description>Show Weather Info</description>
-					<label>$LOCALIZE[31093]</label>
 					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[31093]</label>
 					<onclick condition="!String.IsEmpty(Weather.Plugin)">Skin.ToggleSetting(show_weatherinfo)</onclick>
 					<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
 					<selected>Skin.HasSetting(show_weatherinfo) + !String.IsEmpty(Weather.Plugin)</selected>
 				</control>
 				<control type="radiobutton" id="106">
                     <description>Hide Mediaflags</description>
-					<label>$LOCALIZE[31160]</label>
 					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[31160]</label>
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
 				</control>
                 <control type="label" id="107">
-                    <description>Splash Screen Label</description>
+                    <description>Addons label</description>
                     <include>DefaultSettingLabel</include>
                     <label>$LOCALIZE[512]</label>
                 </control>
@@ -95,7 +95,7 @@
                     <onclick condition="String.IsEmpty(Skin.String(duration_splashscreen))">Skin.SetString(duration_splashscreen,5,)</onclick>
 				    <onclick>Skin.SetNumeric(duration_splashscreen)</onclick> 
 					<enable>Skin.HasSetting(enable_splashscreen)</enable>
-				</control>                
+				</control>
                 <control type="label" id="111">
                     <description>Addons Label</description>
                     <include>DefaultSettingLabel</include>
@@ -229,13 +229,13 @@
                     <description>Reset Section</description>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[10041]</label>
-                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_date)|Skin.Reset(show_weatherinfo)|Skin.Reset(hide_mediaflags)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)|Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(lrclyrics_alternative_view)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favorites)|Skin.Reset(animated_posters))</onclick>
-                </control>                
+                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_time)|Skin.Reset(show_weatherinfo)|Skin.Reset(hide_mediaflags)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)|Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(lrclyrics_alternative_view)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favorites)|Skin.Reset(animated_posters))</onclick>
+                </control>
 			</control>
             <!-- Options -->
 			<control type="grouplist" id="200">
-				<top>160</top>
 				<left>0</left>
+				<top>160</top>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -270,7 +270,7 @@
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43032]</label>
 					<label2>$VAR[WidgetLimitItemsVar]</label2>
-                    <onclick condition="String.IsEmpty(Skin.String(widget_limititems))">Skin.SetString(widget_limititems,20,)</onclick>
+                    <onclick condition="String.IsEmpty(Skin.String(widget_limititems))">Skin.SetString(widget_limititems,25,)</onclick>
 					<onclick>Skin.SetNumeric(widget_limititems)</onclick>
 				</control>
                 <control type="image" id="205">
@@ -397,8 +397,8 @@
             </control>
             <!-- Main menu -->
 			<control type="grouplist" id="300">
-				<top>160</top>
 				<left>0</left>
+				<top>160</top>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -413,7 +413,7 @@
                     <label>$ADDON[script.skinshortcuts 32071]</label>
                     <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
                 </control>
-                <control type="button" id="302">
+               	<control type="button" id="302">
                     <description>Manage Power Menu</description>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43020]</label>
@@ -425,7 +425,7 @@
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
                 <control type="button" id="3043">
-                    <description>Reset All Menu</description>                    
+                    <description>Reset All Menu</description>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32037]</label>
                     <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
@@ -433,14 +433,14 @@
 			</control>
             <!-- User Widgets -->
             <control type="grouplist" id="400">
-				<top>160</top>
 				<left>0</left>
+				<top>160</top>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
 				<onright>40</onright>
                 <pagecontrol>40</pagecontrol>
-				<onup>400</onup>				
+				<onup>400</onup>
 				<ondown>400</ondown>
 				<visible>Container(9000).HasFocus(4)</visible>
 				<control type="label" id="401">
@@ -525,8 +525,8 @@
             </control>
             <!-- Backgrounds -->
 			<control type="grouplist" id="500">
-				<top>160</top>
 				<left>0</left>
+				<top>160</top>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -537,8 +537,8 @@
 				<visible>Container(9000).HasFocus(5)</visible>
 				<control type="radiobutton" id="501">
                     <description>No Fanart</description>
-					<label>$LOCALIZE[31002]</label>
 					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[31002]</label>
 					<onclick>Skin.ToggleSetting(no_fanart)</onclick>
 					<selected>!Skin.HasSetting(no_fanart)</selected>
 				</control>
@@ -553,7 +553,7 @@
 				<control type="button" id="503">
                     <description>Custom Background</description>					
 					<include>DefaultSettingButton</include>
-                    <label>- $LOCALIZE[44002]</label>
+                    <label>- $LOCALIZE[31109]</label>
 					<label2>$INFO[Skin.String(custom_background)]</label2>
 					<onclick>SetProperty(setbackgrounds,custom_background,home)</onclick>
                     <onclick>ActivateWindow(1202)</onclick>
@@ -561,9 +561,9 @@
 				</control>                
 				<control type="button" id="504">
                     <description>Background Overlay Type</description>
+					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[31156]</label>
 					<label2>$VAR[BackgroundOverlayTypeNameVar]</label2>
-					<include>DefaultSettingButton</include>
 					<onclick condition="String.IsEqual(Skin.String(background_overlay),7)">Skin.SetString(background_overlay,0)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(background_overlay),6)">Skin.SetString(background_overlay,7)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(background_overlay),5)">Skin.SetString(background_overlay,6)</onclick>
@@ -586,7 +586,7 @@
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
                 <control type="radiobutton" id="507">
-                    <description>Hide Backgrounds</description>					
+                    <description>Hide Backgrounds</description>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[33071]</label>
 					<onclick>Skin.ToggleSetting(hide_backgrounds)</onclick>
@@ -594,7 +594,7 @@
 					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
                 <control type="button" id="508">
-                    <description>Power Background</description>					
+                    <description>Power Background</description>
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[33060]</label>
 					<label2>$VAR[BackgroundPowerNameVar]</label2>
@@ -603,7 +603,7 @@
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
                 <control type="button" id="509">
-                    <description>Settings Background</description>					
+                    <description>Settings Background</description>
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[21417]</label>
 					<label2>$VAR[BackgroundSettingsNameVar]</label2>
@@ -613,7 +613,7 @@
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
                 <control type="button" id="510">
-                    <description>Search Background</description>					
+                    <description>Search Background</description>
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[137]</label>
 					<label2>$VAR[BackgroundSearchNameVar]</label2>
@@ -628,9 +628,9 @@
                 </control>
 				<control type="button" id="512">
                     <description>Home Fanart</description>
+					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[31131]</label>
 					<label2>$VAR[HomeFanartNameVar]</label2>
-					<include>DefaultSettingButton</include>
                     <onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=HomeFanart&amp;type=resource.images.skinbackgrounds)</onclick>					
 					<enable>!Skin.HasSetting(no_fanart)</enable>
@@ -646,9 +646,9 @@
 				</control>
 				<control type="button" id="514">
                     <description>Weather Fanart</description>
+					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[31062]</label>
 					<label2>$VAR[WeatherFanartNameVar]</label2>
-					<include>DefaultSettingButton</include>
                     <onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>					
                     <enable>!Skin.HasSetting(no_fanart)</enable>
@@ -667,15 +667,15 @@
 			</control>
             <!-- Colors -->
 			<control type="grouplist" id="600">
-				<top>160</top>
 				<left>0</left>
+				<top>160</top>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
                 <onright>60</onright>
+                <pagecontrol>60</pagecontrol>
 				<onup>600</onup>
 				<ondown>600</ondown>
-                <pagecontrol>60</pagecontrol>
 				<visible>Container(9000).HasFocus(6)</visible>
                 <control type="button" id="601">
                     <description>Color Primary Background</description>
@@ -730,8 +730,8 @@
             </control>
             <!-- Reset -->
 			<control type="grouplist" id="700">
-				<top>160</top>
 				<left>0</left>
+				<top>160</top>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>

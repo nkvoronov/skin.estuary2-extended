@@ -230,7 +230,7 @@ msgstr "Головне меню"
 
 msgctxt "#31062"
 msgid "Choose weather fanart pack"
-msgstr "Вибрати набір фан-артів погоди"
+msgstr "Вибрати фан-арт пакет для погоди"
 
 msgctxt "#31063"
 msgid "Sections"
@@ -267,6 +267,18 @@ msgstr "Налаштування живлення"
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Кіноцикли"
+
+msgctxt "#31076"
+msgid "Play optical disc"
+msgstr ""
+
+msgctxt "#31077"
+msgid "Previous location"
+msgstr ""
+
+msgctxt "#31078"
+msgid "Next location"
+msgstr ""
 
 msgctxt "#31079"
 msgid "Cast not available"
@@ -356,6 +368,14 @@ msgctxt "#31107"
 msgid "WideList"
 msgstr "Широкий список"
 
+msgctxt "#31108"
+msgid "Use custom global background"
+msgstr "Використовувати фон користувача"
+
+msgctxt "#31109"
+msgid "Choose image path"
+msgstr "Виберіть шлях до зображення"
+
 msgctxt "#31110"
 msgid "Enter files section"
 msgstr "Вибрати файли"
@@ -442,7 +462,7 @@ msgstr "Налаштування головного меню: налаштуйт
 
 msgctxt "#31131"
 msgid "Choose skin fanart pack"
-msgstr "Вибрати набір фан-артів обкладинки"
+msgstr "Вибрати фан-арт пакет для обкладинки"
 
 msgctxt "#31132"
 msgid "min"
@@ -498,7 +518,7 @@ msgstr "Категорії"
 
 msgctxt "#31149"
 msgid "Select genre fanart pack"
-msgstr "Вибрати набір фан-артів жанрів"
+msgstr "Вибрати фан-арт пакет для жанрів"
 
 msgctxt "#31150"
 msgid "Repository"
@@ -645,14 +665,6 @@ msgstr "Список користувача тв і радіо каналів"
 msgctxt "#43023"
 msgid "Choose background pattern"
 msgstr "Виберіть шаблон фону"
-
-msgctxt "#43024"
-msgid "Choose home fanart pack"
-msgstr "Вибрати фан-арт пакет"
-
-msgctxt "#43025"
-msgid "Choose weather fanart pack"
-msgstr "Вибрати фан-арт пакет для погоди"
 
 msgctxt "#43026"
 msgid "Color Primary Background"
@@ -857,10 +869,6 @@ msgstr "Прозорість фону"
 msgctxt "#44001"
 msgid "Opacity "
 msgstr "Прозорість "
-
-msgctxt "#44002"
-msgid "Choose image path"
-msgstr "Виберіть шлях до зображення"
 
 msgctxt "#44100"
 msgid "Hide time"
