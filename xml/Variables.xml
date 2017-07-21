@@ -797,7 +797,7 @@
     <!-- Widget Limit Items -->
     <variable name="WidgetLimitItemsVar">
         <value condition="!String.IsEmpty(Skin.String(widget_limititems))">$INFO[Skin.String(widget_limititems)]</value>
-        <value>20</value>
+        <value>25</value>
     </variable>
     <!-- Popup Position Name -->
     <variable name="SkinSettingPopupPositionNameVar">

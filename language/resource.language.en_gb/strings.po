@@ -355,7 +355,20 @@ msgctxt "#31075"
 msgid "Movie sets"
 msgstr ""
 
-#empty strings from id 31076 to 31078
+#: /xml/Home.xml
+msgctxt "#31076"
+msgid "Play optical disc"
+msgstr ""
+
+#: /xml/Home.xml
+msgctxt "#31077"
+msgid "Previous location"
+msgstr ""
+
+#: /xml/Home.xml
+msgctxt "#31078"
+msgid "Next location"
+msgstr ""
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31079"
@@ -480,7 +493,15 @@ msgctxt "#31107"
 msgid "WideList"
 msgstr ""
 
-#empty strings from id 31108 to 31109
+#: /xml/SkinSettings.xml
+msgctxt "#31108"
+msgid "Use custom global background"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31109"
+msgid "Choose image path"
+msgstr ""
 
 #: /xml/Home.xml
 msgctxt "#31110"
@@ -790,14 +811,6 @@ msgctxt "#43023"
 msgid "Choose background pattern"
 msgstr ""
 
-msgctxt "#43024"
-msgid "Choose home fanart pack"
-msgstr ""
-
-msgctxt "#43025"
-msgid "Choose weather fanart pack"
-msgstr ""
-
 msgctxt "#43032"
 msgid "Widget Limit Items"
 msgstr ""
@@ -893,10 +906,6 @@ msgstr ""
 
 msgctxt "#44001"
 msgid "Opacity "
-msgstr ""
-
-msgctxt "#44002"
-msgid "Choose image path"
 msgstr ""
 
 msgctxt "#44100"

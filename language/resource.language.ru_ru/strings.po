@@ -230,7 +230,7 @@ msgstr "Главное меню"
 
 msgctxt "#31062"
 msgid "Choose weather fanart pack"
-msgstr "Выбрать набор фан-арта погоды"
+msgstr "Выбрать фан-арт пакет для погоды"
 
 msgctxt "#31063"
 msgid "Sections"
@@ -267,6 +267,18 @@ msgstr "Настройки питания"
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Киноциклы"
+
+msgctxt "#31076"
+msgid "Play optical disc"
+msgstr ""
+
+msgctxt "#31077"
+msgid "Previous location"
+msgstr ""
+
+msgctxt "#31078"
+msgid "Next location"
+msgstr ""
 
 msgctxt "#31079"
 msgid "Cast not available"
@@ -356,6 +368,14 @@ msgctxt "#31107"
 msgid "WideList"
 msgstr "Широкий список"
 
+msgctxt "#31108"
+msgid "Use custom global background"
+msgstr "Использовать пользовательский фон"
+
+msgctxt "#31109"
+msgid "Choose image path"
+msgstr "Выберите путь к изображению"
+
 msgctxt "#31110"
 msgid "Enter files section"
 msgstr "Войти в раздел \"Файлы\""
@@ -442,7 +462,7 @@ msgstr "Основные настройки меню: Настройка гла�
 
 msgctxt "#31131"
 msgid "Choose skin fanart pack"
-msgstr "Выбрать набор фан-арта обложки"
+msgstr "Выбрать фан-арт пакет для обложки"
 
 msgctxt "#31132"
 msgid "min"
@@ -498,7 +518,7 @@ msgstr "Категории"
 
 msgctxt "#31149"
 msgid "Select genre fanart pack"
-msgstr "Выбрать набор фан-арта жанров"
+msgstr "Выбрать фан-арт пакет для жанров"
 
 msgctxt "#31150"
 msgid "Repository"
@@ -610,14 +630,6 @@ msgctxt "#43023"
 msgid "Choose background pattern"
 msgstr "Выберите шаблон фона"
 
-msgctxt "#43024"
-msgid "Choose home fanart pack"
-msgstr "Выбрать фан-арт пакет"
-
-msgctxt "#43025"
-msgid "Choose weather fanart pack"
-msgstr "Выбрать фан-арт пакет для погоды"
-
 msgctxt "#43032"
 msgid "Widget Limit Items"
 msgstr "Виджеты лимит элементов"
@@ -713,10 +725,6 @@ msgstr "Прозрачность фона"
 msgctxt "#44001"
 msgid "Opacity "
 msgstr "Прозрачность "
-
-msgctxt "#44002"
-msgid "Choose image path"
-msgstr "Выберите путь к изображению"
 
 msgctxt "#44100"
 msgid "Hide time"

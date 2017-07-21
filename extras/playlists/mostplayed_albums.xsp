@@ -5,6 +5,6 @@
     <rule field="playcount" operator="greaterthan">
         <value>0</value>
     </rule>
-    <limit>20</limit>
+    <limit>25</limit>
     <order direction="descending">playcount</order>
 </smartplaylist>
