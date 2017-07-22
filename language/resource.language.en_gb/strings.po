@@ -356,11 +356,6 @@ msgid "Movie sets"
 msgstr ""
 
 #: /xml/Home.xml
-msgctxt "#31076"
-msgid "Play optical disc"
-msgstr ""
-
-#: /xml/Home.xml
 msgctxt "#31077"
 msgid "Previous location"
 msgstr ""

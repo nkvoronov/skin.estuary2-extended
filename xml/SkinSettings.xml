@@ -9,6 +9,83 @@
 	<controls>
         <!-- Background -->
 		<include>DefaultBackground</include>
+		<control type="group">
+			<depth>DepthContentPanel</depth>
+			<left>0</left>
+			<include>OpenClose_Left</include>
+			<include content="ContentPanel">
+				<param name="width" value="530" />
+			</include>
+			<control type="list" id="9000">
+				<description>Button Area</description>
+				<left>0</left>
+				<top>160</top>
+				<width>470</width>
+				<height>700</height>
+				<onleft>10000</onleft>
+				<onright>10000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemlayout height="90" width="470">
+					<control type="label">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>90</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font37</font>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				<focusedlayout height="90" width="470">
+					<control type="image">
+						<width>470</width>
+						<height>90</height>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
+					</control>
+					<control type="label">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>90</height>
+						<font>font37</font>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$LOCALIZE[128]</label>
+						<onclick>noop</onclick>
+					</item>
+                    <item id="2">
+						<label>$LOCALIZE[43000]</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="3">
+						<label>$LOCALIZE[31061]</label>
+						<onclick>noop</onclick>
+					</item>
+                    <item id="4">
+						<label>$LOCALIZE[43001]</label>
+                        <visible>Skin.HasSetting(enable_custom_list_addons) | Skin.HasSetting(enable_custom_list_channels)</visible>
+						<onclick>noop</onclick>
+					</item>
+                   <item id="5">
+						<label>$LOCALIZE[19190]</label>
+						<onclick>noop</onclick>
+					</item>
+                    <item id="6">
+						<label>$LOCALIZE[43002]</label>
+						<onclick>noop</onclick>
+                        <visible>System.HasAddon(script.skin.helper.colorpicker)</visible>
+					</item>
+                    <item id="7">
+						<label>$LOCALIZE[10035]</label>
+						<onclick>noop</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
 		<control type="group" id="10000">
 			<left>470</left>
 			<include>OpenClose_Right</include>
@@ -791,83 +868,6 @@
 				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
-		<control type="group">
-			<depth>DepthContentPanel</depth>
-			<left>0</left>
-			<include>OpenClose_Left</include>
-			<include content="ContentPanel">
-				<param name="width" value="530" />
-			</include>
-			<control type="list" id="9000">
-				<description>Button Area</description>
-				<left>0</left>
-				<top>160</top>
-				<width>470</width>
-				<height>700</height>
-				<onleft>10000</onleft>
-				<onright>10000</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<itemlayout height="90" width="470">
-					<control type="label">
-						<textoffsetx>30</textoffsetx>
-						<width>470</width>
-						<height>90</height>
-						<label>$INFO[ListItem.Label]</label>
-						<font>font37</font>
-						<aligny>center</aligny>
-					</control>
-				</itemlayout>
-				<focusedlayout height="90" width="470">
-					<control type="image">
-						<width>470</width>
-						<height>90</height>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
-						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
-					</control>
-					<control type="label">
-						<textoffsetx>30</textoffsetx>
-						<width>470</width>
-						<height>90</height>
-						<font>font37</font>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</focusedlayout>
-				<content>
-					<item id="1">
-						<label>$LOCALIZE[128]</label>
-						<onclick>noop</onclick>
-					</item>
-                    <item id="2">
-						<label>$LOCALIZE[43000]</label>
-						<onclick>noop</onclick>
-					</item>
-					<item id="3">
-						<label>$LOCALIZE[31061]</label>
-						<onclick>noop</onclick>
-					</item>
-                    <item id="4">
-						<label>$LOCALIZE[43001]</label>
-                        <visible>Skin.HasSetting(enable_custom_list_addons) | Skin.HasSetting(enable_custom_list_channels)</visible>
-						<onclick>noop</onclick>
-					</item>
-                   <item id="5">
-						<label>$LOCALIZE[19190]</label>
-						<onclick>noop</onclick>
-					</item>
-                    <item id="6">
-						<label>$LOCALIZE[43002]</label>
-						<onclick>noop</onclick>
-                        <visible>System.HasAddon(script.skin.helper.colorpicker)</visible>
-					</item>
-                    <item id="7">
-						<label>$LOCALIZE[10035]</label>
-						<onclick>noop</onclick>
-					</item>
-				</content>
-			</control>
-		</control>
 		<control type="scrollbar" id="10">
 			<right>0</right>
 			<top>163</top>
@@ -980,10 +980,6 @@
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 			<visible>Control.IsVisible(700)</visible>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
-		</include>
-		<include>BottomBar</include>
 		<control type="textbox" id="6">
 			<include>OpenClose_Right</include>
 			<description>description area</description>
@@ -997,5 +993,9 @@
 			<label>$VAR[SkinSettingsHelpTextVar]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
+		</include>
+		<include>BottomBar</include>
 	</controls>
 </window>

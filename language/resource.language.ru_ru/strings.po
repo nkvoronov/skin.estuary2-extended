@@ -268,17 +268,13 @@ msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Киноциклы"
 
-msgctxt "#31076"
-msgid "Play optical disc"
-msgstr ""
-
 msgctxt "#31077"
 msgid "Previous location"
-msgstr ""
+msgstr "Предыдущее местоположение"
 
 msgctxt "#31078"
 msgid "Next location"
-msgstr ""
+msgstr "Следующее местоположение"
 
 msgctxt "#31079"
 msgid "Cast not available"
