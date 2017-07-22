@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary2-extended" version="1.9.16.061" name="Estuary v2 Extended" provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON">
+<addon 
+	id="skin.estuary2-extended" 
+	version="1.9.16.062" 
+	name="Estuary v2 Extended" 
+	provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
         <import addon="script.pvr.favourites" version="2.0.0"/>
         <import addon="script.image.resource.select" version="1.1.0"/>
 	</requires>
-	<extension point="xbmc.gui.skin" debugging="false">
+	<extension 
+		point="xbmc.gui.skin" 
+		debugging="false">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
 		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
 		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
