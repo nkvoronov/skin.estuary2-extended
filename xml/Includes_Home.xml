@@ -356,6 +356,8 @@
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>            
             <param name="list_id" value="$PARAM[list_id]"/>
+            <param name="sortby" value="$PARAM[sortby]"/>
+            <param name="sortorder" value="$PARAM[sortorder]"/>
 			<param name="fallback_image" value="DefaultFolder.png"/>
 		</include>
 	</include>    
@@ -460,7 +462,7 @@
             </include>
 		</content>
 	</include>
-    <!-- Widget PVR Common  -->    
+    <!-- Widget PVR Common  -->
 	<include name="Widget-PVR">
 		<control type="image">
 			<top>80</top>
@@ -751,7 +753,7 @@
 	</include>
     <!-- Thumbs -->
 	<include name="Widget-Thumbs">
-		<param name="visible">true</param>    
+        <param name="visible">true</param>
 		<param name="custom">false</param>
         <param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>        
@@ -832,14 +834,14 @@
 				</include>
 			</control>
 		</definition>
-	</include>    
+	</include>
     <!-- Square -->
 	<include name="Widget-Square">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
         <param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
-        <param name="favourites">false</param>        
+        <param name="favourites">false</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
 		<param name="fallback_image">DefaultFolder.png</param>
 		<param name="sortby"></param>

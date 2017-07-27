@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<includes>    
+<includes>
     <!-- WeatherWidget 100 -->
     <include name="include-WeatherWidget">
 		<!-- Weather Info -->
@@ -79,14 +79,14 @@
         </control>
 		<!-- Weather Daily -->
         <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
-            <param name="content_include" value="DailyItems" />            
+            <param name="content_include" value="DailyItems" />
             <param name="widget_header" value="$LOCALIZE[31019]"/>
             <param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
 			<param name="list_id" value="$PARAM[control_id]103" />
         </include>
 		<!-- Weather Hourly -->
         <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
-            <param name="content_include" value="HourlyItems" />           
+            <param name="content_include" value="HourlyItems" />
             <param name="widget_header" value="$LOCALIZE[33036]"/>
             <param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
 			<param name="list_id" value="$PARAM[control_id]104" />
@@ -97,7 +97,7 @@
 		<include content="Widget-Favourites">          
             <param name="list_id" value="$PARAM[control_id]110"/>						
         </include>
-    </include>    
+    </include>
     <!-- TVWidget 120 -->
     <include name="include-TVWidget">
 		<!-- Timers -->
@@ -167,7 +167,7 @@
 		<include condition="System.Platform.Android" content="Widget-Addons">
 			<param name="content_path" value="androidapp://sources/apps/"/>
 			<param name="widget_header" value="$LOCALIZE[20244]"/>
-			<param name="widget_target" value="programs"/>			
+			<param name="widget_target" value="programs"/>
 			<param name="list_id" value="$PARAM[control_id]143"/>
 		</include>
 		<!-- Images Addons -->
@@ -185,35 +185,35 @@
             <param name="widget_header" value="$PARAM[widget1_name]"/>
             <param name="widget_target" value="$PARAM[widget1_target]"/>
             <param name="content_path" value="$PARAM[widget1_path]"/>            
-            <param name="list_id" value="$PARAM[control_id]150"/>						
+            <param name="list_id" value="$PARAM[control_id]150"/>
         </include>
         <!-- Widget 2 -->
         <include content="Widget-$PARAM[widget2_type]">
             <param name="widget_header" value="$PARAM[widget2_name]"/>
             <param name="widget_target" value="$PARAM[widget2_target]"/>
             <param name="content_path" value="$PARAM[widget2_path]"/>
-            <param name="list_id" value="$PARAM[control_id]151"/>				
+            <param name="list_id" value="$PARAM[control_id]151"/>
         </include>
         <!-- Widget 3 -->
         <include content="Widget-$PARAM[widget3_type]">
             <param name="widget_header" value="$PARAM[widget3_name]"/>
             <param name="widget_target" value="$PARAM[widget3_target]"/>
             <param name="content_path" value="$PARAM[widget3_path]"/>
-            <param name="list_id" value="$PARAM[control_id]152"/>				
+            <param name="list_id" value="$PARAM[control_id]152"/>
         </include>
         <!-- Widget 4 -->
         <include content="Widget-$PARAM[widget4_type]">
             <param name="widget_header" value="$PARAM[widget4_name]"/>
             <param name="widget_target" value="$PARAM[widget4_target]"/>
             <param name="content_path" value="$PARAM[widget4_path]"/>
-            <param name="list_id" value="$PARAM[control_id]153"/>				
+            <param name="list_id" value="$PARAM[control_id]153"/>
         </include>
         <!-- Widget 5 -->
         <include content="Widget-$PARAM[widget5_type]">
             <param name="widget_header" value="$PARAM[widget5_name]"/>
             <param name="widget_target" value="$PARAM[widget5_target]"/>
             <param name="content_path" value="$PARAM[widget5_path]"/>
-            <param name="list_id" value="$PARAM[control_id]154"/>				
+            <param name="list_id" value="$PARAM[control_id]154"/>
         </include>			
         <!-- Widget 6 -->
         <include content="Widget-$PARAM[widget6_type]">
