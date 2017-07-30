@@ -56,10 +56,6 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr ""
 
-msgctxt "#31108"
-msgid "Use custom global background"
-msgstr ""
-
 #: /xml/MyVideoNav.xml
 msgctxt "#31009"
 msgid "Download icons"
@@ -988,6 +984,10 @@ msgstr ""
 
 msgctxt "#43091"
 msgid "Random music videos artists"
+msgstr ""
+
+msgctxt "#43092"
+msgid "Unwatched music videos"
 msgstr ""
 
 msgctxt "#43100"

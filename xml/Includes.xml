@@ -998,7 +998,7 @@
 					<control type="label">
 						<label>$INFO[Container.PluginCategory, / ]</label>
 						<include>BreadcrumbsLabel</include>
-						<visible>!String.isempty(Container.PluginCategory)</visible>
+						<visible>!String.IsEmpty(Container.PluginCategory)</visible>
 					</control>
 					<control type="label">
 						<label>$INFO[Control.GetLabel(10),: ]</label>
@@ -1170,12 +1170,14 @@
 		<width>auto</width>
 	</include>
 	<include name="ColoredBackgroundImages">
+        <!-- Primary Background Default -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
 		</control>
+        <!-- Secondary Background -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
