@@ -70,7 +70,7 @@
                         <visible>Skin.HasSetting(enable_custom_list_addons) | Skin.HasSetting(enable_custom_list_channels)</visible>
 						<onclick>noop</onclick>
 					</item>
-                   <item id="5">
+                   	<item id="5">
 						<label>$LOCALIZE[19190]</label>
 						<onclick>noop</onclick>
 					</item>

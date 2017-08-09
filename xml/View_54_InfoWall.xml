@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="PictureLayout">
+        <param name="fallback_image">DefaultFolder.png</param>
 		<param name="focused">false</param>
 		<definition>
 			<control type="image">
@@ -51,7 +52,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
                 <label>$INFO[ListItem.Label]</label>
-                <autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
+                <scroll>$PARAM[focused]</scroll>
                 <visible>!ListItem.IsParentFolder</visible>
             </control>
 		</definition>
