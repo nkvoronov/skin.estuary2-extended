@@ -1596,7 +1596,7 @@
                             <height>60</height>
                             <font>font14</font>
                             <aligny>center</aligny>
-                            <label>[B]$INFO[ListItem.Label][/B]</label>
+                            <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="textbox">
                             <left>135</left>
@@ -1633,7 +1633,7 @@
                             <aligny>center</aligny>
                             <scroll>true</scroll>
                             <font>font14</font>
-                            <label>[B]$INFO[ListItem.Label][/B]</label>
+                            <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="textbox">
                             <left>135</left>
