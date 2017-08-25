@@ -23,11 +23,11 @@
         <!-- MusicVideos 16000 -->
         <include>MusicVideosHomeWidgets</include>
         <!-- Pictures 4000 -->
-        <include>PicturesVideosHomeWidgets</include>
+        <include>PicturesHomeWidgets</include>
         <!-- Disc 21000 -->
-        <include>DiscVideosHomeWidgets</include>    
+        <include>DiscHomeWidgets</include>    
     </include>
-    <!-- Movies -->
+    <!-- Movies 5000 -->
     <include name="MoviesHomeWidgets">
         <control type="group" id="5000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),movies)</visible>
@@ -91,7 +91,7 @@
             </include>
         </control>
     </include>
-    <!-- TVShows -->
+    <!-- TVShows 6000 -->
     <include name="TVShowsHomeWidgets">
         <control type="group" id="6000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)</visible>
@@ -150,7 +150,7 @@
             </include>
         </control>
     </include>
-    <!-- Music -->
+    <!-- Music 7000 -->
     <include name="MusicHomeWidgets">
         <control type="group" id="7000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),music)</visible>
@@ -215,7 +215,7 @@
             </include>
         </control>
     </include>
-    <!-- Addons -->
+    <!-- Addons 8000 -->
     <include name="AddonsHomeWidgets">
         <control type="group" id="8000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),addons)</visible>
@@ -308,7 +308,7 @@
             </include>
         </control>
     </include>
-    <!-- Video -->
+    <!-- Video 11000 -->
     <include name="VideoHomeWidgets">
         <control type="group" id="11000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),video)</visible>
@@ -325,7 +325,7 @@
                     <param name="list_id" value="11900"/>
                     <param name="visible" value="true"/>
                 </include>
-                <include content="Widget-Other">
+                <include content="Widget-Source">
                     <param name="content_path" value="sources://video/"/>
                     <param name="widget_header" value="$LOCALIZE[20094]"/>
                     <param name="widget_target" value="videos"/>
@@ -348,7 +348,7 @@
             </include>
         </control>
     </include>
-    <!-- LiveTV -->
+    <!-- LiveTV 12000 -->
     <include name="LiveTVHomeWidgets">
         <control type="group" id="12000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv)</visible>
@@ -442,7 +442,7 @@
             </include>
         </control>
     </include>    
-    <!-- Favorites -->
+    <!-- Favorites 14000 -->
     <include name="FavoritesHomeWidgets">
         <control type="group" id="14000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),favorites)</visible>
@@ -497,7 +497,7 @@
             </include>
         </control>    
     </include> 
-    <!-- Weather -->
+    <!-- Weather 15000 -->
     <include name="WeatherHomeWidgets">
         <control type="group" id="15000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)</visible>
@@ -602,7 +602,7 @@
             </include>
         </control>
     </include>
-    <!-- MusicVideos -->
+    <!-- MusicVideos 16000 -->
     <include name="MusicVideosHomeWidgets">
         <control type="group" id="16000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),musicvideos)</visible>
@@ -659,8 +659,8 @@
             </include>
         </control>
     </include>
-    <!-- Pictures -->
-    <include name="PicturesVideosHomeWidgets">
+    <!-- Pictures 4000 -->
+    <include name="PicturesHomeWidgets">
         <control type="group" id="4000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),pictures)</visible>
             <include content="Visible_Right_Delayed">
@@ -668,7 +668,7 @@
             </include>
             <control type="grouplist" id="4001">
                 <include>WidgetGroup-Common</include>
-                <include content="Widget-Other" condition="!Skin.HasSetting(HomeMenuNoPicturesButton)">
+                <include content="Widget-Source" condition="!Skin.HasSetting(HomeMenuNoPicturesButton)">
                     <param name="content_path" value="sources://pictures/"/>
                     <param name="widget_header" value="$LOCALIZE[20094]"/>
                     <param name="widget_target" value="pictures"/>
@@ -677,8 +677,8 @@
             </control>
         </control>
     </include>
-    <!-- Disc -->
-    <include name="DiscVideosHomeWidgets">
+    <!-- Disc 21000 -->
+    <include name="DiscHomeWidgets">
         <control type="group" id="21000">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd)</visible>
             <include content="Visible_Right_Delayed">
