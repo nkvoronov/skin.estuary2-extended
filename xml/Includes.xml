@@ -127,13 +127,14 @@
 		<param name="font">font13</param>
 		<param name="sortby"></param>
 		<param name="sortorder">ascending</param>
+		<param name="orientation">vertical</param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="panel" id="$PARAM[list_id]">
 				<top>0</top>
 				<width>$PARAM[width]</width>
 				<bottom>$PARAM[bottom]</bottom>
-				<orientation>vertical</orientation>
+				<orientation>$PARAM[orientation]</orientation>
 				<visible>$PARAM[visible]</visible>
 				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
 					<control type="label">
@@ -786,6 +787,8 @@
 		</definition>
 	</include>
 	<include name="UpDownArrows">
+        <param name="width">48</param>
+        <param name="height">24</param>
 		<param name="up_posy">134</param>
 		<param name="down_posy">910</param>
 		<param name="posx">936</param>
@@ -794,8 +797,8 @@
 			<control type="button" id="$PARAM[container_id]588">
 				<left>$PARAM[posx]</left>
 				<top>$PARAM[down_posy]</top>
-				<width>48</width>
-				<height>24</height>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
 				<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
@@ -809,8 +812,8 @@
 			<control type="button" id="$PARAM[container_id]589">
 				<left>$PARAM[posx]</left>
 				<top>$PARAM[up_posy]</top>
-				<width>48</width>
-				<height>24</height>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
 				<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
@@ -995,7 +998,7 @@
 					<control type="label">
 						<label>$INFO[Container.PluginCategory, / ]</label>
 						<include>BreadcrumbsLabel</include>
-						<visible>!String.isempty(Container.PluginCategory)</visible>
+						<visible>!String.IsEmpty(Container.PluginCategory)</visible>
 					</control>
 					<control type="label">
 						<label>$INFO[Control.GetLabel(10),: ]</label>
@@ -1167,12 +1170,14 @@
 		<width>auto</width>
 	</include>
 	<include name="ColoredBackgroundImages">
+        <!-- Primary Background Default -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
 		</control>
+        <!-- Secondary Background -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
