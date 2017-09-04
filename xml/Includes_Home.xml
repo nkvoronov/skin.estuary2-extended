@@ -211,7 +211,7 @@
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="main_label">$INFO[ListItem.Label]</param>
 			<param name="sub_label">$INFO[ListItem.Artist]</param>
-			<param name="thumb_label">$INFO[ListItem.Year]</param>
+			<param name="thumb_label">$INFO[ListItem.Duration,, $LOCALIZE[31132]]</param>
 			<param name="fallback_image" value="DefaultMusicVideos.png" />
 		</include>
 	</include>
