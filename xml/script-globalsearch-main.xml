@@ -705,7 +705,7 @@
                                         <include content="InfoWallEpisodeLayout">
                                             <param name="main_label" value="$INFO[ListItem.Label]" />
                                             <param name="sub_label" value="$INFO[ListItem.Property(artist)]" />
-                                            <param name="thumb_label" value="$INFO[ListItem.Property(year)]" />
+                                            <param name="thumb_label" value="$INFO[ListItem.Property(Duration),, $LOCALIZE[31132]]" />
                                             <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="percentplayed" value="ListItem.Property(percentplayed)" />
                                             <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
@@ -724,7 +724,7 @@
                                             <param name="focused" value="true" />
                                             <param name="main_label" value="$INFO[ListItem.Label]" />
                                             <param name="sub_label" value="$INFO[ListItem.Property(artist)]" />
-                                            <param name="thumb_label" value="$INFO[ListItem.Property(year)]" />
+                                            <param name="thumb_label" value="$INFO[ListItem.Property(Duration),, $LOCALIZE[31132]]" />
                                             <param name="userratingval" value="ListItem.Property(userrating)" />
                                             <param name="percentplayed" value="ListItem.Property(percentplayed)" />
                                             <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
