@@ -39,6 +39,20 @@
 			<control type="label" id="230">
 				<font>-</font>
 			</control>
+            <control type="button" id="200000">
+                <include>HiddenObject</include>
+                <animation effect="fade" time="300" start="100" end="0">Focus</animation>
+                <onfocus>SetFocus(2000)</onfocus>
+                <onclick>noop</onclick>
+                <visible allowhiddenfocus="true">Control.HasFocus(200000)</visible>
+            </control>
+            <control type="button" id="200001">
+                <include>HiddenObject</include>
+                <animation effect="fade" time="300" start="100" end="0">Focus</animation>
+                <onfocus>SetFocus(2000)</onfocus>
+                <onclick>noop</onclick>
+                <visible allowhiddenfocus="true">Control.HasFocus(200001)</visible>
+            </control>
 			<!-- Background -->
             <include content="DefaultBackground">
                 <param name="overlay_background" value="$VAR[SearchFanartVar]" />
@@ -62,8 +76,8 @@
 						<movement>6</movement>
 						<onup>198</onup>
 						<ondown>198</ondown>
-						<onleft>101</onleft>
-						<onright>101</onright>
+						<onleft>2000</onleft>
+						<onright>2000</onright>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<itemlayout height="95">
 							<control type="image">
@@ -287,15 +301,23 @@
                             <texturenofocus></texturenofocus>
                             <onup>9000</onup>
                             <ondown>9000</ondown>
-                            <onleft>101</onleft>
-                            <onright>101</onright>
+                            <onleft>2000</onleft>
+                            <onright>2000</onright>
                         </control>
                     </control>
 				</control>
                 <include>BottomBar</include>                
                 <!-- Find Content -->
-				<control type="group" id="101">					
+				<control type="group" id="2000">					
                     <left>50</left>
+                    <animation type="Conditional" condition="Control.IsVisible(200000)" reversible="false">
+                        <effect type="slide" end="0,20" time="60" tween="sine" />
+                        <effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
+                    </animation>
+                    <animation type="Conditional" condition="Control.IsVisible(200001)" reversible="false">
+                        <effect type="slide" end="0,-20" time="60" tween="sine" />
+                        <effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
+                    </animation>
                     <include>OpenClose_Right</include>
                     <!-- Movies -->
 					<control type="group" id="119">
@@ -310,8 +332,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>115</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>115</pagecontrol>
@@ -407,8 +429,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>125</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>125</pagecontrol>
@@ -502,8 +524,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>135</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>135</pagecontrol>
@@ -593,8 +615,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>145</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>145</pagecontrol>
@@ -691,8 +713,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>155</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>155</pagecontrol>
@@ -788,8 +810,8 @@
                                <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>165</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>165</pagecontrol>
@@ -866,8 +888,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>175</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>175</pagecontrol>
@@ -948,8 +970,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>185</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>185</pagecontrol>
@@ -1030,8 +1052,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>215</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>215</pagecontrol>
@@ -1127,8 +1149,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>225</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>225</pagecontrol>
@@ -1279,8 +1301,8 @@
                                 <height>100%</height>
                                 <onleft>9000</onleft>
                                 <onright>235</onright>
-                                <onup>101</onup>
-                                <ondown>101</ondown>
+                                <onup>2000</onup>
+                                <ondown>2000</ondown>
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>235</pagecontrol>
