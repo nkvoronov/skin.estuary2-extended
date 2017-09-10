@@ -2,8 +2,7 @@
 <window>
     <onload>SetProperty(fanarthometype,search,home)</onload>
     <onload>SetProperty(homebackground,$VAR[BackgroundSearchVar],home)</onload>
-	<animation effect="fade" time="400">WindowOpen</animation>
-	<animation effect="fade" time="400">WindowClose</animation>
+    <backgroundcolor>background</backgroundcolor>
 	<controls>
 		<control type="group" id="100">
 			<control type="label" id="110">
@@ -39,20 +38,6 @@
 			<control type="label" id="230">
 				<font>-</font>
 			</control>
-            <control type="button" id="200000">
-                <include>HiddenObject</include>
-                <animation effect="fade" time="300" start="100" end="0">Focus</animation>
-                <onfocus>SetFocus(2000)</onfocus>
-                <onclick>noop</onclick>
-                <visible allowhiddenfocus="true">Control.HasFocus(200000)</visible>
-            </control>
-            <control type="button" id="200001">
-                <include>HiddenObject</include>
-                <animation effect="fade" time="300" start="100" end="0">Focus</animation>
-                <onfocus>SetFocus(2000)</onfocus>
-                <onclick>noop</onclick>
-                <visible allowhiddenfocus="true">Control.HasFocus(200001)</visible>
-            </control>
 			<!-- Background -->
             <include content="DefaultBackground">
                 <param name="overlay_background" value="$VAR[SearchFanartVar]" />
@@ -310,21 +295,14 @@
                 <!-- Find Content -->
 				<control type="group" id="2000">					
                     <left>50</left>
-                    <animation type="Conditional" condition="Control.IsVisible(200000)" reversible="false">
-                        <effect type="slide" end="0,20" time="60" tween="sine" />
-                        <effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
-                    </animation>
-                    <animation type="Conditional" condition="Control.IsVisible(200001)" reversible="false">
-                        <effect type="slide" end="0,-20" time="60" tween="sine" />
-                        <effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
-                    </animation>
                     <include>OpenClose_Right</include>
                     <!-- Movies -->
 					<control type="group" id="119">
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="movies"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(1)</visible>
                             <control type="panel" id="111">
                                 <left>490</left>
                                 <top>0</top>
@@ -337,8 +315,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>115</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(1)</visible>                            
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                                            
                                 <itemlayout height="445" width="320">
                                     <control type="group">
                                         <left>30</left>
@@ -386,34 +363,31 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(115)">conditional</animation>
-                                <visible>Control.IsVisible(111)</visible>
                             </control>
                         </control>
                         <control type="group">
-                            <visible>Control.IsVisible(111)</visible>
+                            <visible>Container(9000).HasFocus(1)</visible>
                             <depth>DepthBars</depth>
-                            <bottom>0</bottom>
-                            <height>70</height>
                             <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
                             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                <param name="container_id" value="111" />
-                            </include>
-                        </control>
-                        <control type="group">
-                            <visible>Control.IsVisible(111)</visible>
-                            <depth>DepthBars</depth>
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(111).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(111).CurrentItem,, / ]$INFO[Container(111).NumItems]" />
-                            </include>
+                            <control type="group">
+                                <left>-30</left>
+                                <bottom>-10</bottom>
+                                <height>70</height>
+                                <width>100</width>                            
+                                <include content="InfoFlag">
+                                    <param name="visible" value="!String.IsEmpty(Container(111).NumItems)" />
+                                    <param name="icon" value="frame/item-count.png" />
+                                    <param name="label" value="$INFO[Container(111).CurrentItem,, / ]$INFO[Container(111).NumItems]" />
+                                </include>
+                            </control>                            
+                            <control type="group">                                                           
+                                <bottom>0</bottom>
+                                <height>70</height>
+                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+                                    <param name="container_id" value="111" />
+                                </include>
+                            </control>
                         </control>
 					</control>
                     <!-- TVShows -->
@@ -421,7 +395,8 @@
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="tvshows"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(2)</visible>
                             <control type="panel" id="121">
                                 <left>490</left>
                                 <top>0</top>
@@ -434,8 +409,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>125</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(2)</visible>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
                                 <itemlayout height="445" width="320">
                                     <control type="group">
                                         <left>30</left>
@@ -479,36 +453,33 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(125)">conditional</animation>
-                                <visible>Control.IsVisible(121)</visible>
                             </control>
                         </control>
 						<control type="group">
-                            <visible>Control.IsVisible(121)</visible>
+                            <visible>Container(9000).HasFocus(2)</visible>
                             <depth>DepthBars</depth>
-                            <bottom>0</bottom>
-                            <height>70</height>
                             <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
                             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                <param name="container_id" value="121" />
-                                <param name="istvshows" value="true" />
-                                <param name="visible_pemiered" value="true" />
-                            </include>
-                        </control>
-                        <control type="group">
-                            <visible>Control.IsVisible(121)</visible>
-                            <depth>DepthBars</depth>
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(121).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(121).CurrentItem,, / ]$INFO[Container(121).NumItems]" />
-                            </include>
+                            <control type="group">
+                                <left>-30</left>
+                                <bottom>-10</bottom>
+                                <height>70</height>
+                                <width>100</width>
+                                <include content="InfoFlag">
+                                    <param name="visible" value="!String.IsEmpty(Container(121).NumItems)" />
+                                    <param name="icon" value="frame/item-count.png" />
+                                    <param name="label" value="$INFO[Container(121).CurrentItem,, / ]$INFO[Container(121).NumItems]" />
+                                </include>
+                            </control>                            
+                            <control type="group">                                
+                                <bottom>0</bottom>
+                                <height>70</height>
+                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+                                    <param name="container_id" value="121" />
+                                    <param name="istvshows" value="true" />
+                                    <param name="visible_pemiered" value="true" />
+                                </include>
+                            </control>
                         </control>
 					</control>
                     <!-- Seasons -->
@@ -516,7 +487,8 @@
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="seasons"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(3)</visible>
                             <control type="panel" id="131">
                                 <left>490</left>
                                 <top>0</top>
@@ -529,8 +501,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>135</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(3)</visible>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
                                 <itemlayout height="445" width="320">
                                     <control type="group">
                                         <left>30</left>
@@ -572,34 +543,31 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(135)">conditional</animation>
-                                <visible>Control.IsVisible(131)</visible>
                             </control>                            
                         </control>
 						<control type="group">
-                            <visible>Control.IsVisible(131)</visible>
+                            <visible>Container(9000).HasFocus(3)</visible>
                             <depth>DepthBars</depth>
-                            <bottom>0</bottom>
-                            <height>70</height>
                             <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
                             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                <param name="container_id" value="131" />
-                            </include>
-                        </control>
-                        <control type="group">
-                            <visible>Control.IsVisible(131)</visible>
-                            <depth>DepthBars</depth>
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(131).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(131).CurrentItem,, / ]$INFO[Container(131).NumItems]" />
-                            </include>
+                            <control type="group">
+                                <left>-30</left>
+                                <bottom>-10</bottom>
+                                <height>70</height>
+                                <width>100</width>                            
+                                <include content="InfoFlag">
+                                    <param name="visible" value="!String.IsEmpty(Container(131).NumItems)" />
+                                    <param name="icon" value="frame/item-count.png" />
+                                    <param name="label" value="$INFO[Container(131).CurrentItem,, / ]$INFO[Container(131).NumItems]" />
+                                </include>
+                            </control>                            
+                            <control type="group">                                                            
+                                <bottom>0</bottom>
+                                <height>70</height>                                
+                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+                                    <param name="container_id" value="131" />
+                                </include>
+                            </control>
                         </control>
 					</control>
                     <!-- Episodes -->
@@ -607,7 +575,8 @@
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="episodes"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(4)</visible>                            
                             <control type="panel" id="141">
                                 <left>490</left>
                                 <top>0</top>
@@ -620,8 +589,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>145</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(4)</visible>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
                                 <itemlayout height="300" width="300">
                                     <control type="group">
                                         <left>64</left>
@@ -669,43 +637,41 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(145)">conditional</animation>
-                                <visible>Control.IsVisible(141)</visible>
                             </control>                            
                         </control>
 						<control type="group">
-                            <visible>Control.IsVisible(141)</visible>
+                            <visible>Container(9000).HasFocus(4)</visible>
                             <depth>DepthBars</depth>
-                            <bottom>0</bottom>
-                            <height>70</height>
                             <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
                             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                <param name="container_id" value="141" />
-                                <param name="visible_pemiered" value="true" />
-                            </include>
-                        </control>
-                        <control type="group">
-                            <visible>Control.IsVisible(141)</visible>
-                            <depth>DepthBars</depth>
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(141).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(141).CurrentItem,, / ]$INFO[Container(141).NumItems]" />
-                            </include>
+                            <control type="group">                                
+                                <left>-30</left>
+                                <bottom>-10</bottom>
+                                <height>70</height>
+                                <width>100</width>                            
+                                <include content="InfoFlag">
+                                    <param name="visible" value="!String.IsEmpty(Container(141).NumItems)" />
+                                    <param name="icon" value="frame/item-count.png" />
+                                    <param name="label" value="$INFO[Container(141).CurrentItem,, / ]$INFO[Container(141).NumItems]" />
+                                </include>
+                            </control>                            
+                            <control type="group">                           
+                                <bottom>0</bottom>
+                                <height>70</height>                               
+                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+                                    <param name="container_id" value="141" />
+                                    <param name="visible_pemiered" value="true" />
+                                </include>
+                            </control>
                         </control>
 					</control>
                     <!-- MusicVideos -->
-					<control type="group" id="159">
+					<control type="group" id="159">                        
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="musicvideos"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(5)</visible>
                             <control type="panel" id="151">
                                 <left>490</left>
                                 <top>0</top>
@@ -718,8 +684,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>155</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(5)</visible>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
                                 <itemlayout height="300" width="300">
                                     <control type="group">
                                         <left>64</left>
@@ -767,34 +732,31 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(155)">conditional</animation>
-                                <visible>Control.IsVisible(151)</visible>
                             </control>                            
                         </control>
 						<control type="group">
-                            <visible>Control.IsVisible(151)</visible>
+                            <visible>Container(9000).HasFocus(5)</visible>
                             <depth>DepthBars</depth>
-                            <bottom>0</bottom>
-                            <height>70</height>
                             <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
                             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                <param name="container_id" value="151" />
-                            </include>
-                        </control>
-                        <control type="group">
-                            <visible>Control.IsVisible(151)</visible>
-                            <depth>DepthBars</depth>
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(151).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(151).CurrentItem,, / ]$INFO[Container(151).NumItems]" />
-                            </include>
+                            <control type="group">
+                                <left>-30</left>
+                                <bottom>-10</bottom>
+                                <height>70</height>
+                                <width>100</width>                           
+                                <include content="InfoFlag">
+                                    <param name="visible" value="!String.IsEmpty(Container(151).NumItems)" />
+                                    <param name="icon" value="frame/item-count.png" />
+                                    <param name="label" value="$INFO[Container(151).CurrentItem,, / ]$INFO[Container(151).NumItems]" />
+                                </include>
+                            </control>                            
+                            <control type="group">                                                            
+                                <bottom>0</bottom>
+                                <height>70</height>                                
+                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+                                    <param name="container_id" value="151" />
+                                </include>
+                            </control>
                         </control>
 					</control>
                     <!-- Artists -->
@@ -802,7 +764,8 @@
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="artists"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(6)</visible>
                             <control type="panel" id="161">
                                 <left>490</left>
                                 <top>0</top>
@@ -815,8 +778,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>165</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(6)</visible>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
                                 <itemlayout height="410" width="310">
                                     <control type="group">
                                         <top>150</top>
@@ -856,18 +818,17 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(165)">conditional</animation>
-                                <visible>Control.IsVisible(161)</visible>
                             </control>                            
                         </control>
                         <control type="group">
-                            <visible>Control.IsVisible(161)</visible>
+                            <visible>Container(9000).HasFocus(6)</visible>                            
                             <depth>DepthBars</depth>
+                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
                             <left>-30</left>
                             <bottom>-10</bottom>
                             <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
+                            <width>100</width>                            
                             <include content="InfoFlag">
                                 <param name="visible" value="!String.IsEmpty(Container(161).NumItems)" />
                                 <param name="icon" value="frame/item-count.png" />
@@ -881,6 +842,7 @@
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="albums"/>
                             </include>
+                            <visible>Container(9000).HasFocus(7)</visible>
                             <control type="panel" id="171">
                                 <left>490</left>
                                 <top>0</top>
@@ -893,8 +855,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>175</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(7)</visible>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
                                 <itemlayout height="410" width="310">
                                     <control type="group">
                                         <top>150</top>
@@ -938,18 +899,17 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(175)">conditional</animation>
-                                <visible>Control.IsVisible(171)</visible>
                             </control>
                         </control>
                         <control type="group">
-                            <visible>Control.IsVisible(171)</visible>
+                            <visible>Container(9000).HasFocus(7)</visible>
                             <depth>DepthBars</depth>
+                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                                
                             <left>-30</left>
                             <bottom>-10</bottom>
                             <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
+                            <width>100</width>                                                        
                             <include content="InfoFlag">
                                 <param name="visible" value="!String.IsEmpty(Container(171).NumItems)" />
                                 <param name="icon" value="frame/item-count.png" />
@@ -962,7 +922,8 @@
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="songs"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(8)</visible>
                             <control type="panel" id="181">
                                 <left>490</left>
                                 <top>0</top>
@@ -975,9 +936,8 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>185</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(8)</visible>
-                                    <itemlayout height="410" width="310">
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
+                                <itemlayout height="410" width="310">
                                     <control type="group">
                                         <top>150</top>
                                         <left>40</left>
@@ -1020,18 +980,17 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(185)">conditional</animation>
-                                <visible>Control.IsVisible(181)</visible>
                             </control>                            
                         </control>
                         <control type="group">
-                            <visible>Control.IsVisible(181)</visible>
+                            <visible>Container(9000).HasFocus(8)</visible>
                             <depth>DepthBars</depth>
+                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
                             <left>-30</left>
                             <bottom>-10</bottom>
                             <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
+                            <width>100</width>                                                        
                             <include content="InfoFlag">
                                 <param name="visible" value="!String.IsEmpty(Container(181).NumItems)" />
                                 <param name="icon" value="frame/item-count.png" />
@@ -1044,7 +1003,8 @@
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="actors"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(9)</visible>
                             <control type="panel" id="211">
                                 <left>490</left>
                                 <top>0</top>
@@ -1057,8 +1017,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>215</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(9)</visible>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
                                 <itemlayout height="445" width="320">
                                     <control type="group">
                                         <left>30</left>
@@ -1106,34 +1065,31 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(215)">conditional</animation>
-                                <visible>Control.IsVisible(211)</visible>
                             </control>
                         </control>
                         <control type="group">
-                            <visible>Control.IsVisible(211)</visible>
+                            <visible>Container(9000).HasFocus(9)</visible>
                             <depth>DepthBars</depth>
-                            <bottom>0</bottom>
-                            <height>70</height>
                             <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
                             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                <param name="container_id" value="211" />
-                            </include>
-                        </control>
-                        <control type="group">
-                            <visible>Control.IsVisible(211)</visible>
-                            <depth>DepthBars</depth>
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(211).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(211).CurrentItem,, / ]$INFO[Container(211).NumItems]" />
-                            </include>
+                            <control type="group">
+                                <left>-30</left>
+                                <bottom>-10</bottom>
+                                <height>70</height>
+                                <width>100</width>                           
+                                <include content="InfoFlag">
+                                    <param name="visible" value="!String.IsEmpty(Container(211).NumItems)" />
+                                    <param name="icon" value="frame/item-count.png" />
+                                    <param name="label" value="$INFO[Container(211).CurrentItem,, / ]$INFO[Container(211).NumItems]" />
+                                </include>
+                            </control>                            
+                            <control type="group">                                                            
+                                <bottom>0</bottom>
+                                <height>70</height>                                
+                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+                                    <param name="container_id" value="211" />
+                                </include>
+                            </control>
                         </control>
 					</control>
                     <!-- EPG -->
@@ -1141,7 +1097,8 @@
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="epg"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(11)</visible>
                             <control type="panel" id="221">
                                 <left>490</left>
                                 <top>0</top>
@@ -1154,8 +1111,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>225</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(11)</visible>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
                                 <itemlayout width="310" height="370">
                                     <control type="group">
                                         <left>70</left>
@@ -1269,18 +1225,17 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(225)">conditional</animation>
-                                <visible>Control.IsVisible(221)</visible>
                             </control>                            
                         </control>
                         <control type="group">
-                            <visible>Control.IsVisible(221)</visible>
+                            <visible>Container(9000).HasFocus(11)</visible>
                             <depth>DepthBars</depth>
+                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation> 
                             <left>-30</left>
                             <bottom>-10</bottom>
                             <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
+                            <width>100</width>                                                           
                             <include content="InfoFlag">
                                 <param name="visible" value="!String.IsEmpty(Container(221).NumItems)" />
                                 <param name="icon" value="frame/item-count.png" />
@@ -1293,7 +1248,8 @@
                         <control type="group">
                             <include content="Visible_Right_Delayed">
                                 <param name="id" value="directors"/>
-                            </include>                        
+                            </include>
+                            <visible>Container(9000).HasFocus(10)</visible>
                             <control type="panel" id="231">
                                <left>490</left>
                                 <top>0</top>
@@ -1306,8 +1262,7 @@
                                 <viewtype label="31101">icon</viewtype>
                                 <preloaditems>2</preloaditems>
                                 <pagecontrol>235</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                                <visible>Container(9000).HasFocus(10)</visible>
+                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
                                 <itemlayout height="445" width="320">
                                     <control type="group">
                                         <left>30</left>
@@ -1355,34 +1310,31 @@
                                 <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
                                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                                 <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(235)">conditional</animation>
-                                <visible>Control.IsVisible(231)</visible>
                             </control>                           
                         </control>
                         <control type="group">
-                            <visible>Control.IsVisible(231)</visible>
+                            <visible>Container(9000).HasFocus(10)</visible>
                             <depth>DepthBars</depth>
-                            <bottom>0</bottom>
-                            <height>70</height>
                             <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
                             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                <param name="container_id" value="231" />
-                            </include>
-                        </control>
-                        <control type="group">
-                            <visible>Control.IsVisible(231)</visible>
-                            <depth>DepthBars</depth>
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                            
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(231).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(231).CurrentItem,, / ]$INFO[Container(231).NumItems]" />
-                            </include>
+                            <control type="group">
+                                <left>-30</left>
+                                <bottom>-10</bottom>
+                                <height>70</height>
+                                <width>100</width>                            
+                                <include content="InfoFlag">
+                                    <param name="visible" value="!String.IsEmpty(Container(231).NumItems)" />
+                                    <param name="icon" value="frame/item-count.png" />
+                                    <param name="label" value="$INFO[Container(231).CurrentItem,, / ]$INFO[Container(231).NumItems]" />
+                                </include>
+                            </control>                            
+                            <control type="group">                                
+                                <bottom>0</bottom>
+                                <height>70</height>                                
+                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+                                    <param name="container_id" value="231" />
+                                </include>
+                            </control>
                         </control>
                     </control>
 				</control>
