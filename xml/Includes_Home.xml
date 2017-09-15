@@ -265,13 +265,8 @@
 	</include>
     <!-- Favourites Type -->
 	<include name="Widget-Favourites">
-		<include content="Widget-Square">
-            <param name="favourites" value="true"/>
-			<param name="widget_header" value=""/>
-            <param name="widget_target" value=""/>
-            <param name="content_path" value="favourites://"/>
+		<include content="Widget-Square-Favourites">
             <param name="list_id" value="$PARAM[list_id]"/>
-            <param name="fallback_image" value="DefaultFavourites.png"/>
 		</include>
 	</include>
     <!-- Playlists Type -->
@@ -841,7 +836,6 @@
 		<param name="custom">false</param>
         <param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
-        <param name="favourites">false</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
 		<param name="fallback_image">DefaultFolder.png</param>
 		<param name="sortby"></param>
@@ -863,7 +857,6 @@
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-                <onclick condition="$PARAM[favourites]">$INFO[ListItem.FileNameAndPath]</onclick>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<itemlayout width="310" height="500">
@@ -915,6 +908,58 @@
 					<param name="content_path" value="$PARAM[content_path]"/>
                     <param name="type" value="$PARAM[type]"/>
 				</include>
+			</control>
+		</definition>
+	</include>
+    <!-- Square-Favourites -->
+	<include name="Widget-Square-Favourites">
+		<param name="visible">true</param>
+		<param name="sub_label">$INFO[ListItem.Label]</param>
+		<param name="fallback_image">DefaultFavourites.png</param>
+		<definition>
+			<control type="panel" id="$PARAM[list_id]">
+				<left>0</left>
+				<top>120</top>
+				<right>0</right>
+				<height>1000</height>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <onup>$PARAM[list_id]</onup>
+                <ondown>$PARAM[list_id]</ondown>
+                <preloaditems>2</preloaditems>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <orientation>vertical</orientation>                
+                <onclick>$INFO[ListItem.FileNameAndPath]</onclick>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<itemlayout width="330" height="396">
+					<control type="group">
+						<left>70</left>
+						<include content="InfoWallMusicLayout">
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="fallback_image" value="$PARAM[fallback_image]" />
+							<param name="focused" value="false" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="330" height="396">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<animation type="Focus">
+							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
+						</animation>
+						<include content="InfoWallMusicLayout">
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="fallback_image" value="$PARAM[fallback_image]" />
+							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+                <content>favourites://</content>
 			</control>
 		</definition>
 	</include>
