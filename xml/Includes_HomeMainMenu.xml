@@ -71,6 +71,7 @@
 				<focusposition>1</focusposition>
                 <onfocus>ClearProperty(listposition,home)</onfocus>
                 <onright>2000</onright>                
+                <onleft>700</onleft>
 				<onup>700</onup>
 				<ondown>700</ondown>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
