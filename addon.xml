@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
 	id="skin.estuary2-extended" 
-	version="1.9.16.068" 
+	version="1.9.16.069" 
 	name="Estuary v2 Extended" 
 	provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON">
 	<requires>
