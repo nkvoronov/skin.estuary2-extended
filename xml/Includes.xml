@@ -2083,71 +2083,191 @@
     <include name="DialogUserWidgets">
         <onclick>Skin.Reset(enable_custom_list_addons_video)</onclick>
         <onclick>Skin.Reset(AddonSetVideo.0.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.0.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.0.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetVideo.1.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.1.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.1.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetVideo.2.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.2.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.2.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetVideo.3.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.3.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.3.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetVideo.4.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.4.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.4.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetVideo.5.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.5.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.5.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetVideo.6.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.6.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.6.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetVideo.7.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.7.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.7.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetVideo.8.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.9.Label)</onclick>        
+        <onclick>Skin.Reset(AddonSetVideo.8.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.8.Icon)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.9.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.9.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetVideo.9.Icon)</onclick>        
         <onclick>Skin.Reset(enable_custom_list_addons_audio)</onclick>
         <onclick>Skin.Reset(AddonSetAudio.0.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.0.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.0.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetAudio.1.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.1.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.1.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetAudio.2.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.2.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.2.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetAudio.3.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.3.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.3.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetAudio.4.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.4.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.4.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetAudio.5.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.5.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.5.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetAudio.6.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.6.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.6.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetAudio.7.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.7.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.7.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetAudio.8.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.9.Label)</onclick>        
+        <onclick>Skin.Reset(AddonSetAudio.8.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.8.Icon)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.9.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.9.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetAudio.9.Icon)</onclick>        
         <onclick>Skin.Reset(enable_custom_list_addons_programs)</onclick>
         <onclick>Skin.Reset(AddonSetPrograms.0.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.0.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.0.Icon)</onclick>        
         <onclick>Skin.Reset(AddonSetPrograms.1.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.1.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.1.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetPrograms.2.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.2.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.2.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetPrograms.3.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.3.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.3.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetPrograms.4.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.4.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.4.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetPrograms.5.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.5.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.5.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetPrograms.6.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.6.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.6.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetPrograms.7.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.7.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.7.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetPrograms.8.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.8.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.8.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetPrograms.9.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.9.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetPrograms.9.Icon)</onclick>
         <onclick>Skin.Reset(enable_custom_list_addons_apps)</onclick>
         <onclick>Skin.Reset(enable_custom_list_addons_image)</onclick>
         <onclick>Skin.Reset(AddonSetImage.0.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.0.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.0.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetImage.1.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.1.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.1.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetImage.2.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.2.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.2.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetImage.3.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.3.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.3.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetImage.4.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.4.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.4.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetImage.5.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.5.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.5.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetImage.6.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.6.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.6.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetImage.7.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.7.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.7.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetImage.8.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.8.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.8.Icon)</onclick>
         <onclick>Skin.Reset(AddonSetImage.9.Label)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.9.Name)</onclick>
+        <onclick>Skin.Reset(AddonSetImage.9.Icon)</onclick>
         <onclick>Skin.Reset(enable_custom_list_channels_tv)</onclick>
         <onclick>Skin.Reset(ChannelTV.0.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.0.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.0.Icon)</onclick>
         <onclick>Skin.Reset(ChannelTV.1.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.1.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.1.Icon)</onclick>
         <onclick>Skin.Reset(ChannelTV.2.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.2.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.2.Icon)</onclick>
         <onclick>Skin.Reset(ChannelTV.3.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.3.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.3.Icon)</onclick>
         <onclick>Skin.Reset(ChannelTV.4.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.4.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.4.Icon)</onclick>
         <onclick>Skin.Reset(ChannelTV.5.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.5.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.5.Icon)</onclick>
         <onclick>Skin.Reset(ChannelTV.6.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.6.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.6.Icon)</onclick>
         <onclick>Skin.Reset(ChannelTV.7.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.7.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.7.Icon)</onclick>
         <onclick>Skin.Reset(ChannelTV.8.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.8.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.8.Icon)</onclick>
         <onclick>Skin.Reset(ChannelTV.9.Label)</onclick>
+        <onclick>Skin.Reset(ChannelTV.9.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelTV.9.Icon)</onclick>
         <onclick>Skin.Reset(enable_custom_list_channels_radio)</onclick>
         <onclick>Skin.Reset(ChannelRadio.0.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.0.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.0.Icon)</onclick>        
         <onclick>Skin.Reset(ChannelRadio.1.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.1.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.1.Icon)</onclick>
         <onclick>Skin.Reset(ChannelRadio.2.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.2.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.2.Icon)</onclick>
         <onclick>Skin.Reset(ChannelRadio.3.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.3.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.3.Icon)</onclick>
         <onclick>Skin.Reset(ChannelRadio.4.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.4.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.4.Icon)</onclick>
         <onclick>Skin.Reset(ChannelRadio.5.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.5.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.5.Icon)</onclick>
         <onclick>Skin.Reset(ChannelRadio.6.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.6.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.6.Icon)</onclick>
         <onclick>Skin.Reset(ChannelRadio.7.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.7.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.7.Icon)</onclick>
         <onclick>Skin.Reset(ChannelRadio.8.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.8.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.8.Icon)</onclick>
         <onclick>Skin.Reset(ChannelRadio.9.Label)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.9.ChannelId)</onclick>
+        <onclick>Skin.Reset(ChannelRadio.9.Icon)</onclick>
         <include>DialogClickNo</include>
     </include>
     <!-- Reset Backgrounds -->
