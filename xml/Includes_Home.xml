@@ -46,6 +46,7 @@
     <!-- Addons Type -->
 	<include name="Widget-Addons">
 		<include content="Widget-Square">
+            <param name="homebackground" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
@@ -58,6 +59,7 @@
     <!-- Custom Addons Type -->
 	<include name="Widget-AddonsCustom">
 		<include content="Widget-Square">
+            <param name="homebackground" value="true"/>
 			<param name="custom" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
@@ -831,6 +833,7 @@
 	<include name="Widget-Square">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
+        <param name="homebackground">false</param>
         <param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
@@ -881,6 +884,8 @@
 						<control type="button">
 							<onfocus condition="!$PARAM[custom]">SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
 							<onfocus condition="$PARAM[custom]">SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Property(AddonFanart)],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 							<texturenofocus></texturenofocus>
 							<texturefocus></texturefocus>
 						</control>
