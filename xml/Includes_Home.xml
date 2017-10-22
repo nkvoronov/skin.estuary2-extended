@@ -46,7 +46,6 @@
     <!-- Addons Type -->
 	<include name="Widget-Addons">
 		<include content="Widget-Square">
-            <param name="homebackground" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
@@ -59,7 +58,6 @@
     <!-- Custom Addons Type -->
 	<include name="Widget-AddonsCustom">
 		<include content="Widget-Square">
-            <param name="homebackground" value="true"/>
 			<param name="custom" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
@@ -173,6 +171,7 @@
     <!-- Movies Type -->
 	<include name="Widget-Movies">
 		<include content="Widget-Posters">
+            <param name="homebackground" value="false"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
@@ -197,6 +196,7 @@
     <!-- Episodes Type -->
 	<include name="Widget-Episodes">
 		<include content="Widget-Thumbs">
+            <param name="homebackground" value="false"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
@@ -244,6 +244,7 @@
     <!-- Songs Type -->
 	<include name="Widget-Songs">
 		<include content="Widget-Square">
+            <param name="homebackground" value="false"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
@@ -360,7 +361,7 @@
 	</include>    
     <!-- SubMenu Type -->
 	<include name="Widget-SubMenu">
-		<include content="Widget-Categories">
+		<include content="Widget-Categories">        
             <param name="custom" value="$PARAM[custom]"/>
             <param name="visible" value="$PARAM[visible]"/>
             <param name="item_limit" value="20"/>
@@ -501,6 +502,7 @@
 	<include name="Widget-Categories">
 		<param name="visible">true</param>    
 		<param name="custom">false</param>
+        <param name="homebackground">true</param>
         <param name="type">no</param>        
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
         <param name="scale">false</param>
@@ -527,8 +529,6 @@
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-                <onfocus>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
-                <onfocus>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<itemlayout width="310" height="340">
@@ -597,6 +597,8 @@
 						</animation>
 						<control type="button">
 							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 							<texturenofocus></texturenofocus>
 							<texturefocus></texturefocus>
 						</control>
@@ -676,6 +678,7 @@
 	<include name="Widget-Posters">
 		<param name="visible">true</param>    
 		<param name="custom">false</param>
+        <param name="homebackground">true</param>
         <param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="fallback_image">DefaultFolder.png</param>
@@ -723,6 +726,8 @@
 						</animation>
 						<control type="button">
 							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 							<texturenofocus></texturenofocus>
 							<texturefocus></texturefocus>
 						</control>
@@ -750,6 +755,7 @@
 	<include name="Widget-Thumbs">
 		<param name="visible">true</param>    
 		<param name="custom">false</param>
+        <param name="homebackground">true</param>
         <param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>        
 		<param name="main_label">$INFO[ListItem.Title]</param>
@@ -803,6 +809,8 @@
 						</animation>
 						<control type="button">
 							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 							<texturenofocus></texturenofocus>
 							<texturefocus></texturefocus>
 						</control>
@@ -833,7 +841,7 @@
 	<include name="Widget-Square">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-        <param name="homebackground">false</param>
+        <param name="homebackground">true</param>
         <param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
@@ -915,6 +923,7 @@
     <!-- Square-Favourites -->
 	<include name="Widget-Square-Favourites">
 		<param name="visible">true</param>
+        <param name="homebackground">true</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
 		<param name="fallback_image">DefaultFavourites.png</param>
 		<definition>
@@ -953,6 +962,12 @@
 						<animation type="Unfocus">
 							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
 						</animation>
+                        <control type="button">
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
+							<texturenofocus></texturenofocus>
+							<texturefocus></texturefocus>
+						</control>
 						<include content="InfoWallMusicLayout">
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="fallback_image" value="$PARAM[fallback_image]" />
@@ -968,6 +983,7 @@
 	<include name="Widget-Channels">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
+        <param name="homebackground">true</param>
         <param name="type">no</param>        
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
@@ -1053,6 +1069,12 @@
 						<animation type="Unfocus">
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100" />
 						</animation>
+                        <control type="button">
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
+                            <onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
+							<texturenofocus></texturenofocus>
+							<texturefocus></texturefocus>
+						</control>
 						<control type="image">
 							<width>319</width>
 							<height>340</height>
