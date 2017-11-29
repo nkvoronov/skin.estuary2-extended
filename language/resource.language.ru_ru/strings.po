@@ -236,6 +236,10 @@ msgctxt "#31063"
 msgid "Sections"
 msgstr "Разделы"
 
+msgctxt "#31064"
+msgid "unwatched"
+msgstr "непросмотренных"
+
 msgctxt "#31065"
 msgid "Video playlist"
 msgstr "Плейлист видео"
