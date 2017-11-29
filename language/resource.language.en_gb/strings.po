@@ -309,7 +309,9 @@ msgctxt "#31063"
 msgid "Sections"
 msgstr ""
 
-#empty string with id 31064
+msgctxt "#31064"
+msgid "unwatched"
+msgstr ""
 
 #: /xml/MyVideoPlaylist.xml
 msgctxt "#31065"
