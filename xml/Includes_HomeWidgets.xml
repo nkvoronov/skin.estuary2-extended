@@ -240,7 +240,7 @@
                     <param name="sortorder" value="descending"/>
                     <param name="list_id" value="8100"/>
                 </include>
-                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)" content="WidgetListCustomAddons">
+                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)" content="Widget-AddonsCustom">
                     <param name="widget_header" value="$LOCALIZE[1037]"/>
                     <param name="widget_target" value="Video"/>
                     <param name="list_id" value="8100"/>                    
@@ -254,7 +254,7 @@
                     <param name="sortorder" value="descending"/>
                     <param name="list_id" value="8200"/>
                 </include>
-                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)" content="WidgetListCustomAddons">
+                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)" content="Widget-AddonsCustom">
                     <param name="widget_header" value="$LOCALIZE[1038]"/>
                     <param name="widget_target" value="Audio"/>
                     <param name="list_id" value="8200"/>                    

@@ -61,7 +61,6 @@
 			<param name="custom" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
-            <param name="content_path" value="$PARAM[content_path]"/>			
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="fallback_image" value="DefaultAddon.png"/>            
 		</include>
@@ -149,7 +148,6 @@
 			<param name="visible" value="System.HasPVRAddon"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
-            <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="label2" value="$INFO[ListItem.Property(Title)]"/>           
 		</include>
@@ -914,7 +912,7 @@
 					<param name="content_path" value="$PARAM[content_path]"/>
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
-					<param name="content_path" value="$PARAM[content_path]"/>
+					<param name="content_path" value="CustomAddons$PARAM[widget_target]"/>
                     <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>
@@ -1138,7 +1136,7 @@
 					<param name="content_path" value="$PARAM[content_path]"/>
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
-					<param name="content_path" value="$PARAM[content_path]"/>
+					<param name="content_path" value="CustomChannels$PARAM[widget_target]"/>
                     <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>
