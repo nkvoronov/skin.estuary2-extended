@@ -362,6 +362,7 @@
     <!-- 502 Fanart View Image -->
 	<variable name="FanartImageVar">
 		<value condition="ListItem.IsParentFolder">special://skin/extras/backgrounds/movie.jpg</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + [!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)]">$INFO[ListItem.Art(animatedfanart)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
     <!-- 58 BigPoster View Image -->
@@ -447,6 +448,7 @@
     <!-- 56,57 No Clear View -->    
     <variable name="NoClearViewVar">
         <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + [!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)]">$INFO[ListItem.Art(animatedfanart)]</value>
         <value>$INFO[ListItem.Art(fanart)]</value>
     </variable>
     <!-- 57 ClearArt View -->
@@ -543,6 +545,7 @@
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
 		<value condition="Container.Content(genres) + Window.IsActive(videos) + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$INFO[ListItem.Label]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
         <value condition="Window.IsActive(pictures) + String.IsEmpty(ListItem.Art(fanart)) + !ListItem.IsFolder">$INFO[ListItem.FolderPath]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + [!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)]">$INFO[ListItem.Art(animatedfanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
@@ -721,6 +724,11 @@
     <variable name="WidgetLimitItemsVar">
         <value condition="!String.IsEmpty(Skin.String(widget_limititems))">$INFO[Skin.String(widget_limititems)]</value>
         <value>25</value>
+    </variable>
+    <!-- Random Fanart Delay -->
+    <variable name="RandomFanartDelayVar">
+        <value condition="!String.IsEmpty(Skin.String(random_fanart_delay))">$INFO[Skin.String(random_fanart_delay)]</value>
+        <value>30</value>
     </variable>
     <!-- Duration SplashScreen -->
     <variable name="DurationSplashScreenNameVar">

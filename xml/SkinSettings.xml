@@ -297,16 +297,40 @@
                     <onclick>Skin.ToggleSetting(animated_posters)</onclick>
 					<selected>Skin.HasSetting(animated_posters)</selected>
 				</control>
-                <control type="image" id="129">
+				<control type="radiobutton" id="129">
+                    <description>Enable Animated Fanarts</description>					
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[44116]</label>
+                    <onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+                    <onclick>Skin.ToggleSetting(animated_fanarts)</onclick>
+					<selected>Skin.HasSetting(animated_fanarts)</selected>
+				</control>
+				<control type="radiobutton" id="130">
+                    <description>Enable Wall Backgrounds</description>					
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[44114]</label>
+                    <onclick condition="!System.HasAddon(script.skin.helper.backgrounds)">InstallAddon(script.skin.helper.backgrounds)</onclick>
+                    <onclick>Skin.ToggleSetting(wall_backgrounds)</onclick>
+					<selected>Skin.HasSetting(wall_backgrounds)</selected>
+				</control>
+                <control type="button" id="131">
+                    <description>Random Fanart Delay</description>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[44115]</label>
+					<label2>$VAR[RandomFanartDelayVar]</label2>
+                    <onclick condition="String.IsEmpty(Skin.String(random_fanart_delay))">Skin.SetString(random_fanart_delay,30,)</onclick>
+					<onclick>Skin.SetNumeric(random_fanart_delay)</onclick>
+				</control>
+                <control type="image" id="132">
                     <description>Separator Image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
-                <control type="button" id="130">
+                <control type="button" id="133">
                     <description>Reset Section</description>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[10041]</label>
-                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_time)|Skin.Reset(show_weatherinfo)|Skin.Reset(hide_mediaflags)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)|Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(lrclyrics_alternative_view)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favorites)|Skin.Reset(animated_posters))</onclick>
+                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_time)|Skin.Reset(show_weatherinfo)|Skin.Reset(hide_mediaflags)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)|Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(lrclyrics_alternative_view)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favorites)|Skin.Reset(animated_posters)|Skin.Reset(animated_fanarts)|Skin.Reset(wall_backgrounds)|Skin.Reset(random_fanart_delay))</onclick>
                 </control>
 			</control>
             <!-- Options -->

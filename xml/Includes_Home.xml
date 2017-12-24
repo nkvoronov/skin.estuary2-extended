@@ -728,6 +728,7 @@
 						</animation>
 						<control type="button">
 							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							<onfocus condition="!String.IsEmpty(Container($PARAM[list_id]).ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)">SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(animatedfanart)],home)</onfocus>
 							<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
                             <onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
                             <onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>

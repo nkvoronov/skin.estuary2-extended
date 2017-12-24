@@ -921,3 +921,15 @@ msgstr "Hабір картинок"
 msgctxt "#44113"
 msgid "Alternative view"
 msgstr "Альтернативний вид"
+
+msgctxt "#44114"
+msgid "Enable Wall Backgrounds"
+msgstr "Дозволити стіну фонів"
+
+msgctxt "#44115"
+msgid "Random Fanart Delay"
+msgstr "Тривалість показу для випадкових фонів (сек)"
+
+msgctxt "#44116"
+msgid "Enable Animated Fanarts"
+msgstr "Дозволити анімовані фони"

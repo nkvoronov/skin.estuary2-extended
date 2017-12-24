@@ -1099,3 +1099,15 @@ msgstr ""
 msgctxt "#44113"
 msgid "Alternative view"
 msgstr ""
+
+msgctxt "#44114"
+msgid "Enable Wall Backgrounds"
+msgstr ""
+
+msgctxt "#44115"
+msgid "Random Fanart Delay"
+msgstr ""
+
+msgctxt "#44116"
+msgid "Enable Animated Fanarts"
+msgstr ""
