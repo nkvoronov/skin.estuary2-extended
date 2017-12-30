@@ -433,6 +433,11 @@
 		<shortcut label="43086" icon="resource://resource.images.skinicons.estuary/media.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="MediaWidget">MediaWidget</shortcut>
 		<!-- Smart Shortcuts -->
         <shortcut label="43101" icon="DefaultFolder.png" condition="String.IsEmpty(Window(home).Property(WidgetVisibility)) + System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</shortcut>
+		<!-- Weather -->
+        <node label="8" condition="!String.IsEmpty(Weather.Plugin)">
+            <shortcut label="31019" type="8" icon="resource://resource.images.skinicons.estuary/weather.png" widget="Custom" widgetType="weatherdaily" widgetTarget="weather">DailyItems</shortcut>
+            <shortcut label="33036" type="8" icon="resource://resource.images.skinicons.estuary/weather.png" widget="Custom" widgetType="weatherhourly" widgetTarget="weather">HourlyItems</shortcut>
+        </node>
 		<!-- Pictures -->
         <node label="1" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
 			<shortcut label="20094" type="1" icon="resource://resource.images.skinicons.estuary/files.png" widget="Library" widgetType="source" widgetTarget="pictures">sources://pictures</shortcut>
@@ -563,7 +568,7 @@
         </node>
 		<!-- Favourites -->
         <node label="1036" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-			<shortcut label="1036" type="1036" icon="resource://resource.images.skinicons.estuary/favourites2.png" widget="Library" widgetType="favourites" widgetTarget="">favourites://</shortcut>
+			<shortcut label="1036" type="1036" icon="resource://resource.images.skinicons.estuary/favourites2.png" widget="Library" widgetType="favouriteslist" widgetTarget="">favourites://</shortcut>
 		</node>
     </widget-groupings>
 </overrides>

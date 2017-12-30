@@ -61,7 +61,6 @@
 			<param name="custom" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
-            <param name="content_path" value="$PARAM[content_path]"/>			
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="fallback_image" value="DefaultAddon.png"/>            
 		</include>
@@ -149,7 +148,6 @@
 			<param name="visible" value="System.HasPVRAddon"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
-            <param name="content_path" value="$PARAM[content_path]"/>
             <param name="list_id" value="$PARAM[list_id]"/>
 			<param name="label2" value="$INFO[ListItem.Property(Title)]"/>           
 		</include>
@@ -266,8 +264,19 @@
             <param name="fallback_image" value="DefaultMusicAlbums.png"/>
 		</include>
 	</include>
-    <!-- Favourites Type -->
-	<include name="Widget-Favourites">
+    <!-- Favourites List Type -->
+	<include name="Widget-FavouritesList">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+            <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="fallback_image" value="DefaultFavourites.png"/>
+			<param name="favourites" value="true"/>
+		</include>
+	</include>
+    <!-- Favourites Full Type -->
+	<include name="Widget-FavouritesFull">
 		<include content="Widget-Square-Favourites">
             <param name="list_id" value="$PARAM[list_id]"/>
 		</include>
@@ -373,6 +382,24 @@
             <param name="type" value="$PARAM[type]"/>
 		</include>	
 	</include>    
+	<!-- Weather Daily -->
+	<include name="Widget-WeatherDaily">
+		<include content="Widget-Weather">
+            <param name="content_include" value="DailyItems" />
+            <param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="visible" value="$PARAM[visible]" />
+			<param name="list_id" value="$PARAM[list_id]" />
+        </include>
+	</include>
+	<!-- Weather Hourly -->
+	<include name="Widget-WeatherHourly">
+		<include content="Widget-Weather">
+            <param name="content_include" value="HourlyItems" />
+            <param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="visible" value="$PARAM[visible]" />
+			<param name="list_id" value="$PARAM[list_id]" />
+        </include>
+	</include>	
 
 	<!-- *** Common Widget *** -->	
 
@@ -847,6 +874,7 @@
 		<param name="visible">true</param>
 		<param name="custom">false</param>
         <param name="homebackground">true</param>
+		<param name="favourites">false</param>
         <param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
@@ -870,6 +898,7 @@
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
+				<onclick condition="$PARAM[favourites]">$INFO[ListItem.FileNameAndPath]</onclick>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<itemlayout width="310" height="500">
@@ -920,7 +949,7 @@
 					<param name="content_path" value="$PARAM[content_path]"/>
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
-					<param name="content_path" value="$PARAM[content_path]"/>
+					<param name="content_path" value="CustomAddons$PARAM[widget_target]"/>
                     <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>
@@ -1144,7 +1173,7 @@
 					<param name="content_path" value="$PARAM[content_path]"/>
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
-					<param name="content_path" value="$PARAM[content_path]"/>
+					<param name="content_path" value="CustomChannels$PARAM[widget_target]"/>
                     <param name="type" value="$PARAM[type]"/>
 				</include>
 			</control>

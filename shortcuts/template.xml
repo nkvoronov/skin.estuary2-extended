@@ -56,7 +56,10 @@
         <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="musicgenre">MusicGenres</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="studios">Studios</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="country">Country</property>
-		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="favourites">Favourites</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="favouriteslist">FavouritesList</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="favouritesfull">FavouritesFull</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="weatherdaily">WeatherDaily</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="weatherhourly">WeatherHourly</property>
         <property name="widget1_type">Other</property>
         <!-- widget type 2 -->
 		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="picture">Pictures</property>
@@ -84,7 +87,10 @@
         <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="musicgenre">MusicGenres</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="studios">Studios</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="country">Country</property>
-		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="favourites">Favourites</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="favouriteslist">FavouritesList</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="favouritesfull">FavouritesFull</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="weatherdaily">WeatherDaily</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="weatherhourly">WeatherHourly</property>
         <property name="widget2_type">Other</property>
         <!-- widget type 3 -->
 		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="picture">Pictures</property>
@@ -112,7 +118,10 @@
         <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="musicgenre">MusicGenres</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="studios">Studios</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="country">Country</property>
-		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="favourites">Favourites</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="favouriteslist">FavouritesList</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="favouritesfull">FavouritesFull</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="weatherdaily">WeatherDaily</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="weatherhourly">WeatherHourly</property>
         <property name="widget3_type">Other</property>
         <!-- widget type 4 -->
 		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="picture">Pictures</property>
@@ -140,7 +149,10 @@
         <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="musicgenre">MusicGenres</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="studios">Studios</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="country">Country</property>
-		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="favourites">Favourites</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="favouriteslist">FavouritesList</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="favouritesfull">FavouritesFull</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="weatherdaily">WeatherDaily</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="weatherhourly">WeatherHourly</property>
         <property name="widget4_type">Other</property>
         <!-- widget type 5 -->
 		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="picture">Pictures</property>
@@ -168,7 +180,10 @@
         <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="musicgenre">MusicGenres</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="studios">Studios</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="country">Country</property>
-		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="favourites">Favourites</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="favouriteslist">FavouritesList</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="favouritesfull">FavouritesFull</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="weatherdaily">WeatherDaily</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="weatherhourly">WeatherHourly</property>
         <property name="widget5_type">Other</property>        
          <!-- widget type 6 -->
 		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="picture">Pictures</property>
@@ -196,7 +211,10 @@
         <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="musicgenre">MusicGenres</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="studios">Studios</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="country">Country</property>
-		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="favourites">Favourites</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="favouriteslist">FavouritesList</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="favouritesfull">FavouritesFull</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="weatherdaily">WeatherDaily</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="weatherhourly">WeatherHourly</property>
         <property name="widget6_type">Other</property>       
         <controls>
             <control type="group" id="$PYTHON[10+int($SKINSHORTCUTS[id])]000">
