@@ -98,10 +98,10 @@
 				</control>
 				<control type="label">
 					<right>340</right>
-					<top>164</top>
+					<top>174</top>
 					<align>right</align>
 					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I][CR]$INFO[Weather.Conditions]</label>
-					<font>font14</font>
+					<font>font12</font>
 					<width>630</width>
 				</control>
 				<control type="grouplist">
@@ -136,10 +136,10 @@
 						<param name="header" value="$LOCALIZE[403]" />
 					</include>
 					<include content="WeatherIcons">
-						<param name="left" value="-20" />
+						<param name="left" value="0" />
 						<param name="top" value="-10" />
-						<param name="width" value="150" />
-						<param name="height" value="150" />
+						<param name="width" value="130" />
+						<param name="height" value="130" />
 						<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
 						<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
 					</include>

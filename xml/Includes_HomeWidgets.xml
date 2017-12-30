@@ -535,7 +535,7 @@
                         <height>24</height>
                         <right>60</right>
                         <align>right</align>
-                        <font>font14</font>
+                		<font>font12</font>
                         <label>$INFO[Weather.Conditions,, ∙ ]$INFO[Weather.Temperature]</label>
                     </control>
                     <control type="grouplist">
@@ -570,27 +570,28 @@
                             <param name="texture" value="icons/weather/sunset.png" />
                             <param name="header" value="403" />
                         </include>
-                        <include content="WeatherIcons">
+                		<include content="WeatherIcons" condition="!String.IsEmpty(Weather.Plugin)">
                             <param name="left" value="0" />
                             <param name="top" value="-10" />
-                            <param name="width" value="150" />
-                            <param name="height" value="150" />
+                    		<param name="width" value="130" />
+                    		<param name="height" value="130" />
                             <param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
                             <param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
                         </include>
                     </control>
                 </control>
-                <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
-                    <param name="content_include" value="DailyItems" />
-                    <param name="list_id" value="15200" />
+				<!-- Weather Daily -->
+        		<include content="Widget-WeatherDaily" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="widget_header" value="$LOCALIZE[31019]"/>
                     <param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+				<param name="list_id" value="$PARAM[control_id]103" />
                 </include>
-                <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
-                    <param name="content_include" value="HourlyItems" />
-                    <param name="list_id" value="15100" />
+				<!-- Weather Hourly -->
+        		<include content="Widget-WeatherHourly" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="widget_header" value="$LOCALIZE[33036]"/>
                     <param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+					<param name="list_id" value="$PARAM[control_id]104" />
+        		</include>
                 </include>
             </control>
             <include content="Widget-Image" condition="String.IsEmpty(Weather.plugin)">
