@@ -56,10 +56,6 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr ""
 
-msgctxt "#31108"
-msgid "Use custom global background"
-msgstr ""
-
 #: /xml/MyVideoNav.xml
 msgctxt "#31009"
 msgid "Download icons"
@@ -301,7 +297,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31062"
-msgid "Choose weather fanart pack"
+msgid "Choose weather backgrounds pack"
 msgstr ""
 
 #: /xml/Includes_MediaMenu.xml
@@ -607,7 +603,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31131"
-msgid "Choose skin fanart pack"
+msgid "Choose home backgrounds pack"
 msgstr ""
 
 #: /xml/MyVideoNav.xml /xml/View_502_FanArt.xml
@@ -683,7 +679,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31149"
-msgid "Select genre fanart pack"
+msgid "Choose genre backgrounds pack"
 msgstr ""
 
 #: /xml/DialogAddonInfo.xml
@@ -769,19 +765,19 @@ msgid "Show stats"
 msgstr ""
 
 msgctxt "#43012"
-msgid "Choose movie genre icons"
+msgid "Choose movie genre icons pack"
 msgstr ""
 
 msgctxt "#43013"
-msgid "Choose studios logos"
+msgid "Choose studios icons pack"
 msgstr ""
 
 msgctxt "#43014"
-msgid "Choose flags country"
+msgid "Choose flags country icons pack"
 msgstr ""
 
 msgctxt "#43015"
-msgid "Choose weather icons"
+msgid "Choose weather icons pack"
 msgstr ""
 
 msgctxt "#43017"
@@ -813,7 +809,7 @@ msgid "Widget Limit Items"
 msgstr ""
 
 msgctxt "#43033"
-msgid "Choose music genre icons"
+msgid "Choose music genre icons pack"
 msgstr ""
 
 msgctxt "#43040"
