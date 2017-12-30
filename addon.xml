@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
 	id="skin.estuary2-extended" 
-	version="1.9.16.076" 
+	version="1.9.16.077" 
 	name="Estuary v2 Extended" 
 	provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON">
 	<requires>
@@ -154,14 +154,18 @@
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshot-01.png</screenshot>
+			<screenshot>resources/screenshot-02.png</screenshot>
+			<screenshot>resources/screenshot-03.png</screenshot>
+			<screenshot>resources/screenshot-04.png</screenshot>
+			<screenshot>resources/screenshot-05.png</screenshot>
+			<screenshot>resources/screenshot-06.png</screenshot>
+			<screenshot>resources/screenshot-07.png</screenshot>
+			<screenshot>resources/screenshot-08.png</screenshot>
+			<screenshot>resources/screenshot-09.png</screenshot>
+			<screenshot>resources/screenshot-10.png</screenshot>
+			<screenshot>resources/screenshot-11.png</screenshot>
+			<screenshot>resources/screenshot-12.png</screenshot>
 		</assets>
 	</extension>
 </addon>
