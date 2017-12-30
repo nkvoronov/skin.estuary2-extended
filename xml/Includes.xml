@@ -561,6 +561,43 @@
 			</control>
 		</control>
 	</include>
+	<include name="WeatherIcons">		
+		<param name="left">50</param>
+		<param name="top">232</param>
+		<param name="width">300</param>
+		<param name="height">300</param>
+		<param name="image_1">$VAR[CurrentWeatherIconVar]</param>
+		<param name="image_multi">$VAR[CurrentWeatherIconVar]</param>
+		<definition>
+			<control type="image">
+				<description>Weather icon 1</description>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture>$PARAM[image_1]</texture>
+				<aspectratio>keep</aspectratio>				
+				<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
+			</control>
+			<control type="multiimage">
+				<description>Weather multiimage</description>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<imagepath>$PARAM[image_multi]</imagepath>
+				<aspectratio>keep</aspectratio>				
+				<timeperimage>100</timeperimage>
+				<randomize>false</randomize>
+				<fadetime>300</fadetime>
+				<pauseatend>1000</pauseatend>
+				<animation effect="fade" time="225">Visible</animation>
+                <animation effect="fade" time="225">Hidden</animation>
+				<animation effect="fade" time="150">WindowClose</animation>
+				<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
+			</control>
+		</definition>
+	</include>
 	<include name="FileManagerPanel">
 		<definition>
 			<control type="fixedlist" id="$PARAM[list_id]">
@@ -1199,8 +1236,8 @@
             <!-- Visualisation -->
 			<control type="visualisation">
 				<include>FullScreenDimensions</include>
+				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 				<visible>!Slideshow.IsActive</visible>
-				<visible>Player.HasAudio + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + Visualisation.Enabled</visible>
 			</control>
             <!-- Backgrounds -->
 			<control type="group">
@@ -1212,7 +1249,7 @@
 					<include>ColoredBackgroundImages</include>
 				</control>
 				<control type="group" id="31111">
-					<visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name)]] | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+					<visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]]</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -1510,43 +1547,6 @@
 				<param name="visible" value="!Window.IsMedia" />
 			</include>
 		</control>
-	</include>
-	<include name="WeatherIcons">		
-		<param name="left">50</param>
-		<param name="top">232</param>
-		<param name="width">300</param>
-		<param name="height">300</param>
-		<param name="image_1">$VAR[CurrentWeatherIconVar]</param>
-		<param name="image_multi">$VAR[CurrentWeatherIconVar]</param>
-		<definition>
-			<control type="image">
-				<description>Weather icon 1</description>
-				<left>$PARAM[left]</left>
-				<top>$PARAM[top]</top>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<texture>$PARAM[image_1]</texture>
-				<aspectratio>keep</aspectratio>				
-				<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
-			</control>
-			<control type="multiimage">
-				<description>Weather multiimage</description>
-				<left>$PARAM[left]</left>
-				<top>$PARAM[top]</top>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<imagepath>$PARAM[image_multi]</imagepath>
-				<aspectratio>keep</aspectratio>				
-				<timeperimage>100</timeperimage>
-				<randomize>false</randomize>
-				<fadetime>300</fadetime>
-				<pauseatend>1000</pauseatend>
-				<animation effect="fade" time="225">Visible</animation>
-                <animation effect="fade" time="225">Hidden</animation>
-				<animation effect="fade" time="150">WindowClose</animation>
-				<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
-			</control>
-		</definition>
 	</include>
     <!-- Dialog Select Value -->
     <include name="DialogSelectValue">
