@@ -591,7 +591,6 @@
                     <param name="widget_header" value="$LOCALIZE[33036]"/>
                     <param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
 					<param name="list_id" value="$PARAM[control_id]104" />
-        		</include>
                 </include>
             </control>
             <include content="Widget-Image" condition="String.IsEmpty(Weather.plugin)">
