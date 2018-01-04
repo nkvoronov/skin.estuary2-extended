@@ -264,8 +264,19 @@
             <param name="fallback_image" value="DefaultMusicAlbums.png"/>
 		</include>
 	</include>
-    <!-- Favourites Type -->
-	<include name="Widget-Favourites">
+    <!-- Favourites List Type -->
+	<include name="Widget-FavouritesList">
+		<include content="Widget-Square">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="widget_target" value="$PARAM[widget_target]"/>
+            <param name="content_path" value="$PARAM[content_path]"/>
+            <param name="list_id" value="$PARAM[list_id]"/>
+			<param name="fallback_image" value="DefaultFavourites.png"/>
+			<param name="favourites" value="true"/>
+		</include>
+	</include>
+    <!-- Favourites Full Type -->
+	<include name="Widget-FavouritesFull">
 		<include content="Widget-Square-Favourites">
             <param name="list_id" value="$PARAM[list_id]"/>
 		</include>
@@ -360,6 +371,7 @@
     <!-- SubMenu Type -->
 	<include name="Widget-SubMenu">
 		<include content="Widget-Categories">        
+            <param name="homebackground" value="false"/>        
             <param name="custom" value="$PARAM[custom]"/>
             <param name="visible" value="$PARAM[visible]"/>
             <param name="item_limit" value="20"/>
@@ -370,6 +382,24 @@
             <param name="type" value="$PARAM[type]"/>
 		</include>	
 	</include>    
+	<!-- Weather Daily -->
+	<include name="Widget-WeatherDaily">
+		<include content="Widget-Weather">
+            <param name="content_include" value="DailyItems" />
+            <param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="visible" value="$PARAM[visible]" />
+			<param name="list_id" value="$PARAM[list_id]" />
+        </include>
+	</include>
+	<!-- Weather Hourly -->
+	<include name="Widget-WeatherHourly">
+		<include content="Widget-Weather">
+            <param name="content_include" value="HourlyItems" />
+            <param name="widget_header" value="$PARAM[widget_header]"/>
+            <param name="visible" value="$PARAM[visible]" />
+			<param name="list_id" value="$PARAM[list_id]" />
+        </include>
+	</include>	
 
 	<!-- *** Common Widget *** -->	
 
@@ -840,6 +870,7 @@
 		<param name="visible">true</param>
 		<param name="custom">false</param>
         <param name="homebackground">true</param>
+		<param name="favourites">false</param>
         <param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
@@ -863,6 +894,7 @@
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
+				<onclick condition="$PARAM[favourites]">$INFO[ListItem.FileNameAndPath]</onclick>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<itemlayout width="310" height="500">
