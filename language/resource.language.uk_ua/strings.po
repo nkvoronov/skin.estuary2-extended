@@ -773,3 +773,15 @@ msgstr "Hабір картинок"
 msgctxt "#44113"
 msgid "Alternative view"
 msgstr "Альтернативний вид"
+
+msgctxt "#44117"
+msgid "Hide fanart in full screen visualisation"
+msgstr "Приховувати фанарт в повноекранної візуалізації"
+
+msgctxt "#44118"
+msgid "Show background \"Now playing\" video"
+msgstr "Показувати на відео \"Відтворюється\""
+
+msgctxt "#44119"
+msgid "Show background \"Now playing\" visualisation"
+msgstr "Показувати на візуалізації \"Відтворюється\""

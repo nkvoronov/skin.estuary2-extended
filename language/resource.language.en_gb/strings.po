@@ -952,3 +952,15 @@ msgstr ""
 msgctxt "#44113"
 msgid "Alternative view"
 msgstr ""
+
+msgctxt "#44117"
+msgid "Hide fanart in full screen visualisation"
+msgstr ""
+
+msgctxt "#44118"
+msgid "Show background \"Now playing\" video"
+msgstr ""
+
+msgctxt "#44119"
+msgid "Show background \"Now playing\" visualisation"
+msgstr ""

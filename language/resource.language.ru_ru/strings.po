@@ -773,3 +773,15 @@ msgstr "Набор картинок"
 msgctxt "#44113"
 msgid "Alternative view"
 msgstr "Алтернативный вид"
+
+msgctxt "#44117"
+msgid "Hide fanart in full screen visualisation"
+msgstr "Скрывать фанарт в полноэкранной визуализации"
+
+msgctxt "#44118"
+msgid "Show background \"Now playing\" video"
+msgstr "Воспроизводимое видео в качестве фона"
+
+msgctxt "#44119"
+msgid "Show background \"Now playing\" visualisation"
+msgstr "Музыкальная визуализация в качестве фона"

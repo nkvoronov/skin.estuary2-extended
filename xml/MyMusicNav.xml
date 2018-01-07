@@ -9,7 +9,7 @@
 	<controls>
         <!-- Background -->
 		<include content="DefaultBackground">
-			<param name="overlay_background" value="$VAR[MediaFanartVar]" />
+			<param name="fanart_media" value="$VAR[MediaFanartVar]" />
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
