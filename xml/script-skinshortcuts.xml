@@ -143,7 +143,6 @@
                 <ondown>PageUp</ondown>
                 <ondown>PageUp</ondown>
                 <onright>90010</onright>
-                <onleft>211</onleft>                
                 <align>justify</align>
                 <!-- Add Button -->
                 <include content="IconButton">

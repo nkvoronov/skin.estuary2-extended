@@ -644,23 +644,32 @@
 					<selected>!Skin.HasSetting(no_fanart)</selected>
 				</control>
 				<control type="radiobutton" id="502">
-                    <description>Use Custom Background</description>					
+					<description>Hide Visualization Fanart</description>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[31108]</label>
-					<onclick>Skin.ToggleSetting(use_custom_bg)</onclick>
-					<selected>Skin.HasSetting(use_custom_bg)</selected>
-                    <enable>Skin.HasSetting(no_fanart)</enable>
+					<label>$LOCALIZE[44117]</label>
+					<onclick>Skin.ToggleSetting(hide_visualization_fanart)</onclick>
+					<selected>Skin.HasSetting(hide_visualization_fanart)</selected>
 				</control>
-				<control type="button" id="503">
-                    <description>Custom Background</description>					
+				<control type="radiobutton" id="503">
+					<description>Show Background Video</description>
 					<include>DefaultSettingButton</include>
-                    <label>- $LOCALIZE[31109]</label>
-					<label2>$INFO[Skin.String(custom_background)]</label2>
-					<onclick>SetProperty(setbackgrounds,custom_background,home)</onclick>
-                    <onclick>ActivateWindow(1202)</onclick>
-					<enable>Skin.HasSetting(use_custom_bg) + Skin.HasSetting(no_fanart)</enable>
+					<label>$LOCALIZE[44118]</label>
+					<onclick>Skin.ToggleSetting(show_background_video)</onclick>
+					<selected>!Skin.HasSetting(show_background_video)</selected>
+				</control>
+				<control type="radiobutton" id="504">
+					<description>Show Background Visualization</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44119]</label>
+					<onclick>Skin.ToggleSetting(show_background_vis)</onclick>
+					<selected>!Skin.HasSetting(show_background_vis)</selected>
+				</control>
+                <control type="image" id="505">
+                    <description>Separator Image</description>
+                    <height>3</height>
+                    <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 				</control>                
-				<control type="button" id="504">
+				<control type="button" id="506">
                     <description>Background Overlay Type</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[31156]</label>
@@ -674,36 +683,58 @@
 					<onclick condition="String.IsEqual(Skin.String(background_overlay),1)">Skin.SetString(background_overlay,2)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(background_overlay),0)">Skin.SetString(background_overlay,1)</onclick>
 				</control>
-                <control type="button" id="505">
+                <control type="button" id="507">
                     <description>Background Opacity</description>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[44000]</label>
                     <label2>$VAR[BackgroundOpacityValueNameVar]</label2>
                     <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Opacity,header=$LOCALIZE[44000])</onclick>
                 </control>
-                <control type="image" id="506">
+                <control type="image" id="508">
                     <description>Separator Image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
-                <control type="radiobutton" id="507">
-                    <description>Hide Backgrounds</description>
+                <control type="radiobutton" id="509">
+                    <description>Separate Backgrounds</description>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[33071]</label>
-					<onclick>Skin.ToggleSetting(hide_backgrounds)</onclick>
-					<selected>!Skin.HasSetting(hide_backgrounds)</selected>
-					<enable>!Skin.HasSetting(no_fanart)</enable>
+					<onclick>Skin.ToggleSetting(separate_background)</onclick>
+					<selected>Skin.HasSetting(separate_background)</selected>
+					<enable>!Skin.HasSetting(use_custom_bg)</enable>
+				</control>				
+				<control type="radiobutton" id="510">
+                    <description>Use Custom Background</description>					
+					<include>DefaultSettingButton</include>
+                    <label>$LOCALIZE[31108]</label>
+					<onclick>Skin.ToggleSetting(use_custom_bg)</onclick>
+					<selected>Skin.HasSetting(use_custom_bg)</selected>
+                    <enable>!Skin.HasSetting(separate_background)</enable>
 				</control>
-                <control type="button" id="508">
+				<control type="button" id="511">
+                    <description>Custom Background</description>					
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[31109]</label>
+					<label2>$INFO[Skin.String(custom_background)]</label2>
+					<onclick>SetProperty(setbackgrounds,custom_background,home)</onclick>
+                    <onclick>ActivateWindow(1202)</onclick>
+					<enable>Skin.HasSetting(use_custom_bg)</enable>
+				</control>
+                <control type="image" id="512">
+                    <description>Separator Image</description>
+                    <height>3</height>
+                    <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+				</control>
+                <control type="button" id="513">
                     <description>Power Background</description>
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[33060]</label>
 					<label2>$VAR[BackgroundPowerNameVar]</label2>
                     <onclick>SetProperty(setbackgrounds,background_power,home)</onclick>
                     <onclick>ActivateWindow(1202)</onclick>
-					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
+					<enable>Skin.HasSetting(separate_background)</enable>
 				</control>
-                <control type="button" id="509">
+                <control type="button" id="514">
                     <description>Settings Background</description>
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[21417]</label>
@@ -711,32 +742,32 @@
                     <onclick>SetProperty(setbackgrounds,background_settings,home)</onclick>
                     <onclick>ActivateWindow(1202)</onclick>
                     <onclick>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onclick>
-					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
+					<enable>Skin.HasSetting(separate_background)</enable>
 				</control>
-                <control type="button" id="510">
+                <control type="button" id="515">
                     <description>Search Background</description>
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[137]</label>
 					<label2>$VAR[BackgroundSearchNameVar]</label2>
                     <onclick>SetProperty(setbackgrounds,background_search,home)</onclick>
                     <onclick>ActivateWindow(1202)</onclick>
-					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
+					<enable>Skin.HasSetting(separate_background)</enable>
 				</control>
-                <control type="image" id="511">
+                <control type="image" id="516">
                     <description>Separator Image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
-				<control type="button" id="512">
+				<control type="button" id="517">
                     <description>Home Fanart</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[31131]</label>
 					<label2>$VAR[HomeFanartNameVar]</label2>
                     <onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=HomeFanart&amp;type=resource.images.skinbackgrounds)</onclick>					
-					<enable>!Skin.HasSetting(no_fanart)</enable>
+					<enable>Skin.HasSetting(separate_background)</enable>
 				</control>
-				<control type="button" id="513">
+				<control type="button" id="518">
                     <description>MovieGenre Fanart</description>
 					<label>$LOCALIZE[31149]</label>
 					<label2>$VAR[MovieGenreFanartNameVar]</label2>
@@ -745,7 +776,7 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
                     <enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-				<control type="button" id="514">
+				<control type="button" id="519">
                     <description>Weather Fanart</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[31062]</label>
@@ -754,16 +785,16 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>					
                     <enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-                <control type="image" id="515">
+                <control type="image" id="520">
                     <description>Separator Image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
                 </control>
-                <control type="button" id="516">
+                <control type="button" id="521">
                     <description>Reset Section</description>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[10041]</label>
-                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_fanart)|Skin.Reset(use_custom_bg)|Skin.Reset(custom_background)|Skin.SetString(background_overlay,0)|Skin.Reset(Opacity)|Skin.Reset(hide_backgrounds)|Skin.Reset(background_power)|Skin.Reset(background_settings)|Skin.Reset(background_search)|Skin.Reset(HomeFanart.name)|Skin.Reset(HomeFanart.path)|Skin.Reset(HomeFanart.ext)|Skin.Reset(MovieGenreFanart.name)|Skin.Reset(MovieGenreFanart.path)|Skin.Reset(MovieGenreFanart.ext)|Skin.Reset(WeatherFanart.name)|Skin.Reset(WeatherFanart.ext)|Skin.Reset(WeatherFanart.path)|Skin.Reset(WeatherFanart.multi)|SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
+                    <onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_fanart)|Skin.Reset(hide_visualization_fanart)|Skin.Reset(show_background_video)|Skin.Reset(show_background_vis)|Skin.SetString(background_overlay,0)|Skin.Reset(Opacity)|Skin.Reset(Opacity.label)|Skin.Reset(separate_background)|Skin.Reset(use_custom_bg)|Skin.Reset(custom_background)|Skin.Reset(background_power)|Skin.Reset(background_settings)|Skin.Reset(background_search)|Skin.Reset(HomeFanart.name)|Skin.Reset(HomeFanart.path)|Skin.Reset(HomeFanart.ext)|Skin.Reset(MovieGenreFanart.name)|Skin.Reset(MovieGenreFanart.path)|Skin.Reset(MovieGenreFanart.ext)|Skin.Reset(WeatherFanart.name)|Skin.Reset(WeatherFanart.ext)|Skin.Reset(WeatherFanart.path)|Skin.Reset(WeatherFanart.multi)|SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
                 </control>
 			</control>
             <!-- Colors -->

@@ -1224,20 +1224,20 @@
 		</control>
 	</include>
 	<include name="DefaultBackground">
-		<param name="overlay_background">$VAR[GeneralFanartVar]</param>
+		<param name="main_background">$VAR[MainBackgroundVar]</param>
+		<param name="fanart_background">$VAR[FanartBackgroundVar]</param>
+		<param name="fanart_media"></param>
 		<definition>
             <!-- Video -->
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
-				<visible>Player.HasVideo</visible>
-				<visible>!Slideshow.IsActive</visible>
+				<visible>Player.HasVideo + !Skin.HasSetting(show_background_video) + !Slideshow.IsActive</visible>
 			</control>
             <!-- Visualisation -->
 			<control type="visualisation">
 				<include>FullScreenDimensions</include>
-				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
-				<visible>!Slideshow.IsActive</visible>
+				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Slideshow.IsActive + !Skin.HasSetting(show_background_vis)</visible>
 			</control>
             <!-- Backgrounds -->
 			<control type="group">
@@ -1249,18 +1249,47 @@
 					<include>ColoredBackgroundImages</include>
 				</control>
 				<control type="group" id="31111">
-					<visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]]</visible>
+					<visible>![[Player.HasVideo + !Skin.HasSetting(show_background_video)] | [Player.HasAudio + Visualisation.Enabled + !Skin.HasSetting(show_background_vis) + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]]</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
-                    <control type="multiimage" id="32111">
+					<control type="group" id="32111">
+						<visible>!Control.IsVisible(502) | $EXP[infodialog_active] | $EXP[fanart_visible]</visible>
+						<control type="multiimage" id="32211">
 						<include>FullScreenDimensions</include>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[overlay_background]</imagepath>
-						<visible>!Control.IsVisible(502) | $EXP[infodialog_active] | $EXP[fanart_visible]</visible>
+							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Skin.String(custom_background)]</imagepath>
+							<visible>Skin.HasSetting(use_custom_bg) + !String.IsEmpty(Skin.String(custom_background)) + String.IsEmpty(Control.GetLabel(32213)</visible>
+						</control>
+						<control type="group" id="32212">
+							<visible>Skin.HasSetting(separate_background) + String.IsEmpty(Control.GetLabel(32213)</visible>
+							<animation effect="fade" time="400">VisibleChange</animation>
+							<control type="multiimage" id="32221">
+								<include>FullScreenDimensions</include>
+								<aspectratio>scale</aspectratio>
+								<fadetime>400</fadetime>								
+								<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[main_background]</imagepath>
+								<visible>String.IsEmpty(Skin.String(HomeFanart.path)) | String.IsEmpty(Control.GetLabel(32222)</visible>
+							</control>
+							<control type="multiimage" id="32222">
+								<include>FullScreenDimensions</include>
+								<aspectratio>scale</aspectratio>
+								<fadetime>400</fadetime>
+								<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[fanart_background]</imagepath>
+								<visible>!String.IsEmpty(Skin.String(HomeFanart.path))</visible>
+							</control>
+						</control>
+						<control type="multiimage" id="32213">
+							<include>FullScreenDimensions</include>
+							<aspectratio>scale</aspectratio>
+							<fadetime>400</fadetime>
+							<animation effect="fade" time="400">VisibleChange</animation>
+							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[fanart_media]</imagepath>
+							<visible>!Skin.HasSetting(no_fanart)</visible>
+						</control>
 					</control>
 					<control type="image">
 						<left>-3</left>

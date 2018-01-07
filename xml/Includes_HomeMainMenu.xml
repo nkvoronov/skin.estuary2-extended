@@ -38,9 +38,7 @@
 			<!-- Search button -->
 			<include content="IconButton">
 				<param name="control_id" value="803" />
-                <param name="onclick" value="SetProperty(fanarthometype,search,home)" />
-                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSearchVar],home)" />
-				<param name="onclick_3" value="ActivateWindow(1107)" />
+				<param name="onclick" value="ActivateWindow(1107)" />
 				<param name="icon" value="icons/search.png" />
 				<param name="label" value="$LOCALIZE[137]" />
 			</include>
@@ -72,8 +70,8 @@
                 <onfocus>ClearProperty(listposition,home)</onfocus>
                 <onright>2000</onright>                
                 <onleft>700</onleft>
-				<onup>700</onup>
-				<ondown>700</ondown>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<focusedlayout height="95">
 					<control type="group">
