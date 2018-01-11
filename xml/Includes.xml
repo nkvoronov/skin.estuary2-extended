@@ -1262,17 +1262,17 @@
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
 							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Skin.String(custom_background)]</imagepath>
-							<visible>Skin.HasSetting(use_custom_bg) + !String.IsEmpty(Skin.String(custom_background)) + String.IsEmpty(Control.GetLabel(32213)</visible>
+							<visible>Skin.HasSetting(use_custom_bg) + !String.IsEmpty(Skin.String(custom_background)) + String.IsEmpty(Control.GetLabel(32213))</visible>
 						</control>
 						<control type="group" id="32212">
-							<visible>Skin.HasSetting(separate_background) + String.IsEmpty(Control.GetLabel(32213)</visible>
+							<visible>Skin.HasSetting(separate_background) + String.IsEmpty(Control.GetLabel(32213))</visible>
 							<animation effect="fade" time="400">VisibleChange</animation>
 							<control type="multiimage" id="32221">
 								<include>FullScreenDimensions</include>
 								<aspectratio>scale</aspectratio>
 								<fadetime>400</fadetime>								
 								<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[main_background]</imagepath>
-								<visible>String.IsEmpty(Skin.String(HomeFanart.path)) | String.IsEmpty(Control.GetLabel(32222)</visible>
+								<visible>String.IsEmpty(Skin.String(HomeFanart.path)) | String.IsEmpty(Control.GetLabel(32222))</visible>
 							</control>
 							<control type="multiimage" id="32222">
 								<include>FullScreenDimensions</include>
