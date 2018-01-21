@@ -40,20 +40,20 @@
 				<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 				<bordersize>4</bordersize>
 			</control>
-            <control type="label">
-                <description>Clock label</description>
-                <right>20</right>
-                <top>25</top>
-                <width>800</width>
-                <height>25</height>
-                <align>right</align>
-                <aligny>center</aligny>
-                <font>font13</font>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <label>$INFO[System.Time]</label>
-                <visible>Skin.HasSetting(full_screen_clock) + ![Player.ShowInfo | Window.IsActive(musicosd)]</visible>
-            </control>
+			<control type="label">
+				<description>Clock label</description>
+				<right>20</right>
+				<top>25</top>
+				<width>800</width>
+				<height>25</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[System.Time]</label>
+				<visible>Skin.HasSetting(full_screen_clock) + ![Player.ShowInfo | Window.IsActive(musicosd)]</visible>
+			</control>
 			<control type="group">
 				<top>-30</top>
 				<visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !Window.IsActive(playerprocessinfo)</visible>
@@ -66,7 +66,7 @@
 						<width>1600</width>
 						<height>40</height>
 						<label>[COLOR white]$INFO[MusicPlayer.Artist][/COLOR]</label>
-                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<font>font60</font>
 						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
@@ -75,8 +75,8 @@
 						<top>80</top>
 						<width>1600</width>
 						<height>40</height>
-                        <label>[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</label>
-                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<label>[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</label>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<font>font37</font>
 						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
@@ -85,8 +85,8 @@
 						<top>127</top>
 						<width>1600</width>
 						<height>40</height>
-                        <label>$INFO[MusicPlayer.TrackNumber,,. ][COLOR white]$INFO[MusicPlayer.Title][/COLOR]</label>
-                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<label>$INFO[MusicPlayer.TrackNumber,,. ][COLOR white]$INFO[MusicPlayer.Title][/COLOR]</label>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<font>font45</font>
 						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>

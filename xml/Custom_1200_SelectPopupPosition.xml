@@ -4,10 +4,10 @@
 	<include>Animation_DialogPopupOpenClose</include>
 	<depth>DepthOSD</depth>
 	<controls>
-        <include content="DialogSelectValue">
-            <param name="dialogheaderlabel" value="$LOCALIZE[44101]" />
-            <param name="dialogincludeselectval" value="PopupPositionVal" />
-            <param name="dialogsettingval" value="PopupPosition" />
-        </include>
+		<include content="DialogSelectValue">
+			<param name="dialogheaderlabel" value="$LOCALIZE[44101]" />
+			<param name="dialogincludeselectval" value="PopupPositionVal" />
+			<param name="dialogsettingval" value="PopupPosition" />
+		</include>
 	</controls>
 </window>

@@ -4,10 +4,10 @@
 	<include>Animation_DialogPopupOpenClose</include>
 	<depth>DepthOSD</depth>
 	<controls>
-        <include content="DialogSelectValue">
-            <param name="dialogheaderlabel" value="$LOCALIZE[44000]" />
-            <param name="dialogincludeselectval" value="BackgroundOpacityVal" />
-            <param name="dialogsettingval" value="Opacity" />
-        </include>
+		<include content="DialogSelectValue">
+			<param name="dialogheaderlabel" value="$LOCALIZE[44000]" />
+			<param name="dialogincludeselectval" value="BackgroundOpacityVal" />
+			<param name="dialogsettingval" value="Opacity" />
+		</include>
 	</controls>
 </window>

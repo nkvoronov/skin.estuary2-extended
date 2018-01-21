@@ -2,12 +2,12 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
-    <onload condition="String.IsEmpty(Window(home).Property(fanarthometype)) | ![String.IsEqual(window(home).Property(fanarthometype),movies) | String.IsEqual(window(home).Property(fanarthometype),tvshows) | String.IsEqual(window(home).Property(fanarthometype),musicvideos)]">SetProperty(fanarthometype,video,home)</onload>
-    <onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),movies) | String.IsEqual(window(home).Property(fanarthometype),tvshows) | String.IsEqual(window(home).Property(fanarthometype),musicvideos)]">SetProperty(homebackground,$VAR[BackgroundVideosVar],home)</onload>
-    <views>50,51,52,53,54,55,56,57,58,500,501,502</views>
+	<onload condition="String.IsEmpty(Window(home).Property(fanarthometype)) | ![String.IsEqual(window(home).Property(fanarthometype),movies) | String.IsEqual(window(home).Property(fanarthometype),tvshows) | String.IsEqual(window(home).Property(fanarthometype),musicvideos)]">SetProperty(fanarthometype,video,home)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),movies) | String.IsEqual(window(home).Property(fanarthometype),tvshows) | String.IsEqual(window(home).Property(fanarthometype),musicvideos)]">SetProperty(homebackground,$VAR[BackgroundVideosVar],home)</onload>
+	<views>50,51,52,53,54,55,56,57,58,500,501,502</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-        <!-- Background -->
+		<!-- Background -->
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[MediaFanartVar]" />
 		</include>
@@ -19,9 +19,9 @@
 			<include>View_53_Shift</include>
 			<include>View_54_InfoWall</include>
 			<include>View_55_WideList</include>
-            <include>View_56_ClearLogos</include>
-            <include>View_57_ClearArts</include>
-            <include>View_58_BigPoster</include>
+			<include>View_56_ClearLogos</include>
+			<include>View_57_ClearArts</include>
+			<include>View_58_BigPoster</include>
 			<include>View_500_Wall</include>
 			<include>View_501_Banner</include>
 			<include>View_502_FanArt</include>
@@ -58,7 +58,7 @@
 						<bottom>100</bottom>
 						<visible>!ListItem.IsCollection</visible>
 						<label>$INFO[ListItem.Genre,,[CR][CR]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][COLOR white]$INFO[ListItem.Plot][/COLOR][CR][CR]</label>
-                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">

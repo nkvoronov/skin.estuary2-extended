@@ -91,8 +91,8 @@
 		<param name="height">100</param>
 		<param name="wrapmultiline">false</param>
 		<param name="font">font25_title</param>
-        <param name="isincludeclick">false</param>
-        <param name="onclickinclude"></param>
+		<param name="isincludeclick">false</param>
+		<param name="onclickinclude"></param>
 		<param name="onclick"></param>
 		<param name="onclick2"></param>
 		<param name="onclick3"></param>
@@ -105,7 +105,7 @@
 				<label>$PARAM[label]</label>
 				<font>$PARAM[font]</font>
 				<textoffsetx>20</textoffsetx>
-                <include condition="$PARAM[isincludeclick]">$PARAM[onclickinclude]</include>
+				<include condition="$PARAM[isincludeclick]">$PARAM[onclickinclude]</include>
 				<onclick condition="!$PARAM[isincludeclick]">$PARAM[onclick]</onclick>
 				<onclick condition="!$PARAM[isincludeclick]">$PARAM[onclick2]</onclick>
 				<onclick condition="!$PARAM[isincludeclick]">$PARAM[onclick3]</onclick>
@@ -157,7 +157,7 @@
 				<aligny>center</aligny>
 				<onclick>$PARAM[onclick]</onclick>
 				<onclick>$PARAM[onclick_2]</onclick>
-                <onclick>$PARAM[onclick_3]</onclick>
+				<onclick>$PARAM[onclick_3]</onclick>
 				<font></font>
 				<label>$PARAM[label]</label>
 				<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>

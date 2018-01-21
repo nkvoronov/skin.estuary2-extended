@@ -271,7 +271,7 @@
 		</control>
 	</include>
 	<include name="MediaMenuNowPlaying">
-        <param name="left">5</param>
+		<param name="left">5</param>
 		<definition>
 			<control type="grouplist" id="14100">
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>

@@ -3,22 +3,22 @@
 	<include file="Defaults.xml" />
 	<include file="Includes_Home.xml" />
 	<include file="Includes_HomeMainMenu.xml" />
-    <include file="Includes_HomeSubMenu.xml" />
-    <include file="Includes_HomeWidgets.xml" />
+	<include file="Includes_HomeSubMenu.xml" />
+	<include file="Includes_HomeWidgets.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_MediaMenu.xml" />
 	<include file="Includes_Buttons.xml" />
 	<include file="Includes_PVR.xml" />
-    <include file="Includes_UserWidgets.xml" />
+	<include file="Includes_UserWidgets.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_Poster.xml" />
 	<include file="View_52_IconWall.xml" />
 	<include file="View_53_Shift.xml" />
 	<include file="View_54_InfoWall.xml" />
 	<include file="View_55_WideList.xml" />
-    <include file="View_56_ClearLogo.xml" />
-    <include file="View_57_ClearArt.xml" />
-    <include file="View_58_BigPoster.xml" />
+	<include file="View_56_ClearLogo.xml" />
+	<include file="View_57_ClearArt.xml" />
+	<include file="View_58_BigPoster.xml" />
 	<include file="View_500_Wall.xml" />
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
@@ -42,7 +42,7 @@
 	<constant name="list_item_height">80</constant>
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Window.IsActive(MyPlaylist.xml)</expression>
-    <expression name="fanart_visible">Window.IsActive(skinsettings) | Window.IsActive(Custom_1100_AddonLauncher.xml)</expression>
+	<expression name="fanart_visible">Window.IsActive(skinsettings) | Window.IsActive(Custom_1100_AddonLauncher.xml)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -91,7 +91,7 @@
 	</include>
 	<include name="UserRatingCircle">
 		<param name="animation">False</param>
-        <param name="userratingval">ListItem.UserRating</param>
+		<param name="userratingval">ListItem.UserRating</param>
 		<definition>
 			<control type="group">
 				<visible>!String.IsEmpty($PARAM[userratingval])</visible>
@@ -143,7 +143,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
@@ -155,7 +155,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
@@ -402,7 +402,7 @@
 					<param name="label" value="$INFO[ListItem.Premiered]" />
 				</include>
 			</control>
-            <control type="group">
+			<control type="group">
 				<top>10</top>
 				<width>100</width>
 				<include content="InfoFlag">
@@ -410,7 +410,7 @@
 					<param name="icon" value="lists/rating.png" />
 					<param name="label" value="$INFO[ListItem.Rating]" />
 				</include>
-            </control>
+			</control>
 			<control type="group">
 				<width>115</width>
 				<visible>!String.IsEmpty(ListItem.Duration) + !String.IsEqual(ListItem.DBtype,tvshow)</visible>
@@ -437,19 +437,19 @@
 			<include content="MediaFlag">
 				<param name="texture" value="$VAR[ResolutionFlagVar]" />
 				<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
-			</include>            
+			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]" />
 			</include>
-            <include content="MediaFlag">
-                <param name="texture" value="$INFO[ListItem.VideoCodec,flags/videocodec/,.png]" />
-                <param name="visible" value="!String.IsEmpty(ListItem.VideoCodec)" />
-            </include>
+			<include content="MediaFlag">
+				<param name="texture" value="$INFO[ListItem.VideoCodec,flags/videocodec/,.png]" />
+				<param name="visible" value="!String.IsEmpty(ListItem.VideoCodec)" />
+			</include>
 			<include content="InfoList">
-                <param name="width" value="1" />
+				<param name="width" value="1" />
 				<param name="item_height" value="1" />
-                <param name="list_id" value="5800" />
-            </include>
+				<param name="list_id" value="5800" />
+			</include>
 			<control type="group">
 				<top>10</top>
 				<width>100</width>
@@ -458,86 +458,86 @@
 					<param name="icon" value="overlays/set.png" />
 					<param name="label" value="$INFO[Container(5800).NumItems]" />
 				</include>
-            </control>
+			</control>
 		</control>
 	</include>
 	<include name="MediaFlagsSearch">
-        <param name="visible_pemiered">false</param>
-        <param name="istvshows">false</param>
-        <definition>
-            <control type="grouplist">
-                <orientation>horizontal</orientation>
-                <right>20</right>
-                <top>0</top>
-                <height>70</height>
-                <align>right</align>
-                <itemgap>28</itemgap>
-                <width>1900</width>
-                <usecontrolcoords>true</usecontrolcoords>
-                <animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation>
-                <control type="group">
-                    <width>150</width>
-                    <top>-5</top>
-                    <visible>$PARAM[istvshows]</visible>
-                    <include content="MediaFlag">
-                        <param name="texture" value="$VAR[MediaFlagsSearchStudioIconVar]$INFO[Container($PARAM[container_id]).ListItem.Property(studio)].png" />
-                    </include>
-                </control>
-                <control type="group">
-                    <top>10</top>
-                    <width>200</width>
-                    <visible>$PARAM[visible_pemiered]</visible>
-                    <include content="InfoFlag">
-                        <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Premiered))" />
-                        <param name="icon" value="lists/year.png" />
-                        <param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Premiered)]" />
-                    </include>
-                </control>
-                <control type="group">
-                    <top>10</top>
-                    <width>100</width>
-                    <include content="InfoFlag">
-                        <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Rating))" />
-                        <param name="icon" value="lists/rating.png" />
-                        <param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Rating)]" />
-                    </include>
-                </control>
-                <control type="group">
-                    <width>115</width>
-                    <visible>!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Duration))</visible>
-                    <control type="label">
-                        <width>115</width>
-                        <height>60</height>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[Container($PARAM[container_id]).ListItem.Property(Duration),, $LOCALIZE[31132]]</label>
-                        <font>font_flag</font>
-                    </control>
-                    <include content="MediaFlag">
-                        <param name="texture" value="flags/flag.png" />
-                    </include>
-                </control>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioChannels),flags/audiochannel/,.png]" />
-                    <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioChannels))" />
-                </include>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioCodec),flags/audiocodec/,.png]" />
-                    <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioCodec))" />
-                </include>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoResolution),flags/videoresolution/,.png]" />
-                    <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoResolution))" />
-                </include>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoAspect),flags/aspectratio/,.png]" />
-                </include>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoCodec),flags/videocodec/,.png]" />
-                    <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoCodec))" />
-                </include>
-            </control>
-        </definition>
+		<param name="visible_pemiered">false</param>
+		<param name="istvshows">false</param>
+		<definition>
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<right>20</right>
+				<top>0</top>
+				<height>70</height>
+				<align>right</align>
+				<itemgap>28</itemgap>
+				<width>1900</width>
+				<usecontrolcoords>true</usecontrolcoords>
+				<animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation>
+				<control type="group">
+					<width>150</width>
+					<top>-5</top>
+					<visible>$PARAM[istvshows]</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="$VAR[MediaFlagsSearchStudioIconVar]$INFO[Container($PARAM[container_id]).ListItem.Property(studio)].png" />
+					</include>
+				</control>
+				<control type="group">
+					<top>10</top>
+					<width>200</width>
+					<visible>$PARAM[visible_pemiered]</visible>
+					<include content="InfoFlag">
+						<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Premiered))" />
+						<param name="icon" value="lists/year.png" />
+						<param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Premiered)]" />
+					</include>
+				</control>
+				<control type="group">
+					<top>10</top>
+					<width>100</width>
+					<include content="InfoFlag">
+						<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Rating))" />
+						<param name="icon" value="lists/rating.png" />
+						<param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Rating)]" />
+					</include>
+				</control>
+				<control type="group">
+					<width>115</width>
+					<visible>!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Duration))</visible>
+					<control type="label">
+						<width>115</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Container($PARAM[container_id]).ListItem.Property(Duration),, $LOCALIZE[31132]]</label>
+						<font>font_flag</font>
+					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/flag.png" />
+					</include>
+				</control>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioChannels),flags/audiochannel/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioChannels))" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioCodec),flags/audiocodec/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioCodec))" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoResolution),flags/videoresolution/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoResolution))" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoAspect),flags/aspectratio/,.png]" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoCodec),flags/videocodec/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoCodec))" />
+				</include>
+			</control>
+		</definition>
 	</include>
 	<include name="WeatherIcon">
 		<control type="group">
@@ -560,7 +560,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="WeatherIcons">		
+	<include name="WeatherIcons">
 		<param name="left">50</param>
 		<param name="top">232</param>
 		<param name="width">300</param>
@@ -575,7 +575,7 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<texture>$PARAM[image_1]</texture>
-				<aspectratio>keep</aspectratio>				
+				<aspectratio>keep</aspectratio>
 				<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
 			</control>
 			<control type="multiimage">
@@ -585,13 +585,13 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<imagepath>$PARAM[image_multi]</imagepath>
-				<aspectratio>keep</aspectratio>				
+				<aspectratio>keep</aspectratio>
 				<timeperimage>100</timeperimage>
 				<randomize>false</randomize>
 				<fadetime>300</fadetime>
 				<pauseatend>1000</pauseatend>
 				<animation effect="fade" time="225">Visible</animation>
-                <animation effect="fade" time="225">Hidden</animation>
+				<animation effect="fade" time="225">Hidden</animation>
 				<animation effect="fade" time="150">WindowClose</animation>
 				<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
 			</control>
@@ -804,7 +804,7 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font52_title</font>
-                    <textcolor>$VAR[MainColorVar]</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<height>65</height>
 					<align>center</align>
@@ -814,7 +814,7 @@
 				<control type="label" id="$PARAM[id]">
 					<label>$PARAM[sub_label]</label>
 					<left>85</left>
-                    <textcolor>$VAR[MainColorVar]</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>center</align>
 					<height>100</height>
@@ -824,8 +824,8 @@
 		</definition>
 	</include>
 	<include name="UpDownArrows">
-        <param name="width">48</param>
-        <param name="height">24</param>
+		<param name="width">48</param>
+		<param name="height">24</param>
 		<param name="up_posy">134</param>
 		<param name="down_posy">910</param>
 		<param name="posx">936</param>
@@ -1125,7 +1125,7 @@
 						<width>auto</width>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 						<label>$INFO[System.Time]</label>
-                        <visible>!Skin.HasSetting(hide_time)</visible>
+						<visible>!Skin.HasSetting(hide_time)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -1207,14 +1207,14 @@
 		<width>auto</width>
 	</include>
 	<include name="ColoredBackgroundImages">
-        <!-- Primary Background Default -->
+		<!-- Primary Background Default -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
 		</control>
-        <!-- Secondary Background -->
+		<!-- Secondary Background -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
@@ -1227,18 +1227,18 @@
 		<param name="fanart_background">$VAR[FanartBackgroundVar]</param>
 		<param name="fanart_media"></param>
 		<definition>
-            <!-- Video -->
+			<!-- Video -->
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasVideo + !Skin.HasSetting(show_background_video) + !Slideshow.IsActive</visible>
 			</control>
-            <!-- Visualisation -->
+			<!-- Visualisation -->
 			<control type="visualisation">
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Slideshow.IsActive + !Skin.HasSetting(show_background_vis)</visible>
 			</control>
-            <!-- Backgrounds -->
+			<!-- Backgrounds -->
 			<control type="group">
 				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
@@ -1269,7 +1269,7 @@
 							<control type="multiimage" id="32221">
 								<include>FullScreenDimensions</include>
 								<aspectratio>scale</aspectratio>
-								<fadetime>400</fadetime>								
+								<fadetime>400</fadetime>
 								<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[main_background]</imagepath>
 								<visible>String.IsEmpty(Skin.String(HomeFanart.path)) | String.IsEmpty(Control.GetLabel(32222))</visible>
 							</control>
@@ -1576,844 +1576,844 @@
 			</include>
 		</control>
 	</include>
-    <!-- Dialog Select Value -->
-    <include name="DialogSelectValue">
-        <definition>
-            <control type="group">
-                <centertop>50%</centertop>
-                <centerleft>50%</centerleft>
-                <height>742</height>
-                <width>1220</width>
-                <include content="DialogBackgroundCommons">
-                    <param name="width" value="1220" />
-                    <param name="height" value="742" />
-                    <param name="header_label" value="$PARAM[dialogheaderlabel]" />
-                    <param name="header_id" value="1" />
-                </include>
-                <control type="image">
-                    <left>0</left>
-                    <top>80</top>
-                    <width>920</width>
-                    <height>665</height>
-                    <texture border="40">buttons/dialogbutton-nofo.png</texture>
-                </control>
-                <control type="list" id="6">
-                    <left>20</left>
-                    <top>100</top>
-                    <width>880</width>
-                    <height>625</height>
-                    <onup>6</onup>
-                    <ondown>6</ondown>
-                    <onleft>9001</onleft>
-                    <onright>61</onright>
-                    <pagecontrol>61</pagecontrol>
-                    <scrolltime>200</scrolltime>
-                    <itemlayout height="125" width="880">
-                        <control type="image">
-                            <left>12</left>
-                            <top>7</top>
-                            <width>110</width>
-                            <height>110</height>
-                            <texture>$INFO[Listitem.Icon]</texture>
-                            <aspectratio>keep</aspectratio>
-                        </control>
-                        <control type="label">
-                            <left>135</left>
-                            <top>0</top>
-                            <right>20</right>
-                            <height>60</height>
-                            <font>font14</font>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                        <control type="textbox">
-                            <left>135</left>
-                            <top>52</top>
-                            <right>20</right>
-                            <height>65</height>
-                            <font>font12</font>
-                            <textcolor>grey</textcolor>
-                            <label>$INFO[ListItem.Label2]</label>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout height="125" width="880">
-                        <control type="image">
-                            <left>0</left>
-                            <top>0</top>
-                            <right>0</right>
-                            <bottom>0</bottom>
-                            <texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
-                            <visible>Control.HasFocus(6)</visible>
-                        </control>
-                        <control type="image">
-                            <left>12</left>
-                            <top>7</top>
-                            <width>110</width>
-                            <height>110</height>
-                            <texture>$INFO[Listitem.Icon]</texture>
-                            <aspectratio>keep</aspectratio>
-                        </control>
-                        <control type="label">
-                            <left>135</left>
-                            <top>0</top>
-                            <right>20</right>
-                            <height>60</height>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <font>font14</font>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                        <control type="textbox">
-                            <left>135</left>
-                            <top>52</top>
-                            <right>20</right>
-                            <height>65</height>
-                            <font>font12</font>
-                            <label>$INFO[ListItem.Label2]</label>
-                        </control>
-                    </focusedlayout>
-                    <include content="$PARAM[dialogincludeselectval]">
-                        <param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
-                    </include>
-                </control>
-                <control type="scrollbar" id="61">
-                    <left>910</left>
-                    <top>100</top>
-                    <width>12</width>
-                    <height>625</height>
-                    <onleft>6</onleft>
-                    <onright>9001</onright>
-                    <orientation>vertical</orientation>
-                </control>
-                <control type="label">
-                    <left>925</left>
-                    <top>695</top>
-                    <width>275</width>
-                    <height>35</height>
-                    <font>font12</font>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <textcolor>grey</textcolor>
-                    <label>$VAR[SelectLabelVar]</label>
-                </control>
-                <control type="grouplist" id="9001">
-                    <left>920</left>
-                    <top>80</top>
-                    <onleft>61</onleft>
-                    <itemgap>dialogbuttons_itemgap</itemgap>
-                    <onright>6</onright>
-                    <include content="DefaultDialogButton">
-                        <param name="id" value="7" />
-                        <param name="label" value="$LOCALIZE[222]" />
-                        <param name="onclick" value="PreviousMenu" />
-                    </include>
-                </control>
-            </control>       
-        </definition>
-    </include>
-    <!-- Backgrounds Select Value -->
-    <include name="BackgroundsSelVal">
-        <content>
-            <item id="1">
-                <description>Reset Background</description>
-                <icon>DefaultAddon.png</icon>
-                <label>$LOCALIZE[15109]</label>
-                <label2></label2>
-                <onclick>Skin.Reset($INFO[Window(home).Property(setbackgrounds)])</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="2">
-                <description>Own Background</description>
-                <icon>DefaultFile.png</icon>
-                <label>$LOCALIZE[44111]</label>
-                <label2></label2>              
-                <onclick>Skin.SetImage($INFO[Window(home).Property(setbackgrounds)])</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="3">
-                <description>Multi Background</description>
-                <icon>DefaultFolder.png</icon>
-                <label>$LOCALIZE[44112]</label>
-                <label2></label2>              
-                <onclick>Skin.SetPath($INFO[Window(home).Property(setbackgrounds)])</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-        </content>
-    </include>
-    <!-- Dialog Yes No -->
-    <include name="DialogYesNo">
-        <param name="dialogincludeno">DialogClickNo</param>
-        <definition>
-            <control type="group">            		
-                <height>390</height>
-                <centertop>50%</centertop>
-                <centerleft>50%</centerleft>
-                <width>915</width>
-                <include content="DialogBackgroundCommons">
-                    <param name="width" value="915" />
-                    <param name="height" value="380" />
-                    <param name="header_label" value="$PARAM[dialogheaderlabel]" />
-                    <param name="header_id" value="1" />
-                </include>
-                <control type="textbox" id="9">
-                    <left>30</left>
-                    <top>82</top>
-                    <width>855</width>
-                    <height>165</height>
-                    <label>$PARAM[dialogtext]</label>
-                    <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
-                </control>
-                <control type="grouplist" id="9000">
-                    <orientation>horizontal</orientation>
-                    <left>0</left>
-                    <top>280</top>
-                    <width>915</width>
-                    <align>center</align>
-                    <include content="DefaultDialogButton">
-                        <param name="id" value="11" />
-                        <param name="label" value="$LOCALIZE[107]" />
-                        <param name="isincludeclick" value="true" />
-                        <param name="onclickinclude" value="$PARAM[dialogincludeyes]" />
-                    </include>
-                    <include content="DefaultDialogButton">
-                        <param name="id" value="10" />
-                        <param name="label" value="$LOCALIZE[106]" />
-                        <param name="isincludeclick" value="true" />
-                        <param name="onclickinclude" value="$PARAM[dialogincludeno]" />
-                    </include>
-                </control>            
-            </control>
-        </definition>
-    </include>
-    <!-- Popup Position Value -->
-    <include name="PopupPositionVal">
-        <content>
-            <item id="1">
-                <description>TopLeft</description>
-                <icon>dialogs/settings/PopupNotification-TopLeft.png</icon>
-                <label>$LOCALIZE[44104]</label>
-                <label2></label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],TopLeft,)</onclick>
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44104],)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="2">
-                <description>TopCenter</description>
-                <icon>dialogs/settings/PopupNotification-TopCenter.png</icon>
-                <label>$LOCALIZE[44105]</label>
-                <label2></label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],TopCenter,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44105],)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="3">
-                <description>TopRight</description>
-                <icon>dialogs/settings/PopupNotification-TopRight.png</icon>
-                <label>$LOCALIZE[44106]</label>
-                <label2></label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],TopRight,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44106],)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="4">
-                <description>BottomLeft</description>
-                <icon>dialogs/settings/PopupNotification-BottomLeft.png</icon>
-                <label>$LOCALIZE[44107]</label>
-                <label2></label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],BottomLeft,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44107],)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="5">
-                <description>BottomCenter</description>
-                <icon>dialogs/settings/PopupNotification-BottomCenter.png</icon>
-                <label>$LOCALIZE[44108]</label>
-                <label2></label2>
-               <onclick>Skin.SetString($PARAM[dialogsettingval],BottomCenter,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44108],)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="6">
-                <description>BottomRight</description>
-                <icon>dialogs/settings/PopupNotification-BottomRight.png</icon>
-                <label>$LOCALIZE[44109]</label>
-                <label2></label2> 
-                <onclick>Skin.SetString($PARAM[dialogsettingval],BottomRight,)</onclick>
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44109],)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-        </content>
-    </include>
-    <!-- Background Opacity Value -->
-    <include name="BackgroundOpacityVal">
-        <content>
-            <item id="1">
-                <description>Opacity Default</description>
-                <icon>DefaultAddon.png</icon>
-                <label>$LOCALIZE[15109]</label>
-                <label2>$LOCALIZE[15109]</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],Default,)</onclick>
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[15109],)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="2">
-                <description>Opacity 0</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[0]</label>
-                <label2>$LOCALIZE[44001]0%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],0,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]0,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="3">
-                <description>Opacity 5</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[5]</label>
-                <label2>$LOCALIZE[44001]5%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],5,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]5,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="4">
-                <description>Opacity 10</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[10]</label>
-                <label2>$LOCALIZE[44001]10%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],10,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]10,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="5">
-                <description>Opacity 15</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[15]</label>
-                <label2>$LOCALIZE[44001]15%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],15,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]15,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="6">
-                <description>Opacity 20</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[20]</label>
-                <label2>$LOCALIZE[44001]20%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],20,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]20,)</onclick>
-                <onclick>PreviousMenu</onclick>        
-            </item>
-            <item id="7">
-                <description>Opacity 25</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[25]</label>
-                <label2>$LOCALIZE[44001]25%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],25,)</onclick>
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]25,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="8">
-                <description>Opacity 30</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[30]</label>
-                <label2>$LOCALIZE[44001]30%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],30,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]30,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="9">
-                <description>Opacity 35</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[35]</label>
-                <label2>$LOCALIZE[44001]35%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],35,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]35,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="10">
-                <description>Opacity 40</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[40]</label>
-                <label2>$LOCALIZE[44001]40%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],40,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]40,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="11">
-                <description>Opacity 45</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[45]</label>
-                <label2>$LOCALIZE[44001]45%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],45,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]45,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="12">
-                <description>Opacity 50</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[50]</label>
-                <label2>$LOCALIZE[44001]50%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],50,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]50,)</onclick>
-                <onclick>PreviousMenu</onclick>        
-            </item>
-            <item id="13">
-                <description>Opacity 55</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[55]</label>
-                <label2>$LOCALIZE[44001]55%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],55,)</onclick>
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]55,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="14">
-                <description>Opacity 60</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[60]</label>
-                <label2>$LOCALIZE[44001]60%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],60,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]60,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="15">
-                <description>Opacity 65</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[65]</label>
-                <label2>$LOCALIZE[44001]65%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],65,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]65,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="16">
-                <description>Opacity 70</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[70]</label>
-                <label2>$LOCALIZE[44001]70%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],70,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]70,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="17">
-                <description>Opacity 75</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[75]</label>
-                <label2>$LOCALIZE[44001]75%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],75,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]75,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="18">
-                <description>Opacity 80</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[80]</label>
-                <label2>$LOCALIZE[44001]80%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],80,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]80,)</onclick>
-                <onclick>PreviousMenu</onclick>        
-            </item>
-            <item id="19">
-                <description>Opacity 85</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[85]</label>
-                <label2>$LOCALIZE[44001]85%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],85,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]85,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="20">
-                <description>Opacity 90</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[90]</label>
-                <label2>$LOCALIZE[44001]90%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],90,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]90,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="21">
-                <description>Opacity 95</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[95]</label>
-                <label2>$LOCALIZE[44001]95%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],95,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]95,)</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="22">
-                <description>Opacity 100</description>
-                <icon>DefaultAddonLookAndFeel.png</icon>
-                <label>$NUMBER[100]</label>
-                <label2>$LOCALIZE[44001]100%</label2>
-                <onclick>Skin.SetString($PARAM[dialogsettingval],100,)</onclick>                
-                <onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]100,)</onclick>
-                <onclick>PreviousMenu</onclick>        
-            </item>           
-        </content>
-    </include>
-    
-    <!-- *** Reset *** -->
-    
-    <!-- Reset General -->
-    <include name="DialogResetGeneral">
-        <onclick>Skin.Reset(no_slide_animations)</onclick>
-        <onclick>Skin.Reset(autoscroll)</onclick>
-        <onclick>Skin.Reset(touchmode)</onclick>
-        <onclick>Skin.Reset(hide_time)</onclick>
-        <onclick>Skin.Reset(show_weatherinfo)</onclick>
-        <onclick>Skin.Reset(hide_mediaflags)</onclick>
-        <onclick>Skin.Reset(enable_splashscreen)</onclick>
-        <onclick>Skin.Reset(enable_globalsearch)</onclick>
-        <onclick>Skin.Reset(enable_watchitlater)</onclick>
-        <onclick>Skin.Reset(lrclyrics_alternative_view)</onclick>
-        <include>DialogClickNo</include>
-    </include>
-    <!-- Reset Options -->
-    <include name="DialogResetOptions">
-        <onclick>Skin.Reset(full_screen_clock)</onclick>
-        <onclick>Skin.Reset(slideshow_info)</onclick>
-        <onclick>Skin.Reset(enable_home_stats)</onclick>
-        <onclick>Skin.Reset(widget_limititems)</onclick>
-        <onclick>Skin.Reset(StudiosImages.name)</onclick>
-        <onclick>Skin.Reset(StudiosImages.path)</onclick>
-        <onclick>Skin.Reset(StudiosImages.ext)</onclick>
-        <onclick>Skin.Reset(LanguageFlags.name)</onclick>
-        <onclick>Skin.Reset(LanguageFlags.path)</onclick>
-        <onclick>Skin.Reset(LanguageFlags.ext)</onclick>
-        <onclick>Skin.Reset(MovieGenreIcons.name)</onclick>
-        <onclick>Skin.Reset(MovieGenreIcons.path)</onclick>
-        <onclick>Skin.Reset(MovieGenreIcons.ext)</onclick>
-        <onclick>Skin.Reset(MusicGenreIcons.name)</onclick>
-        <onclick>Skin.Reset(MusicGenreIcons.path)</onclick>
-        <onclick>Skin.Reset(MusicGenreIcons.ext)</onclick>
-        <onclick>Skin.Reset(WeatherIcons.name)</onclick> 
-        <onclick>Skin.Reset(WeatherIcons.path)</onclick>
-        <onclick>Skin.Reset(WeatherIcons.ext)</onclick>
-        <onclick>Skin.Reset(WeatherIcons.multi)</onclick>
-        <onclick>Skin.Reset(PopupPosition)</onclick>
-        <onclick>Skin.Reset(PopupPosition.label)</onclick>
-        <onclick>Skin.Reset(hide_popup)</onclick>
-        <onclick>Skin.Reset(enable_custom_list_addons)</onclick>
-        <onclick>Skin.Reset(enable_custom_list_channels)</onclick>
-        <onclick>Skin.Reset(enable_skin_debug)</onclick>
-        <include>DialogClickNo</include>
-    </include>
-    <!-- Reset Main Menu -->
-    <include name="DialogMainMenu">
-        <onclick>Skin.Reset(HomeMenuNoMovieButton)</onclick>
-        <onclick>Skin.Reset(HomeMenuNoTVShowButton)</onclick>
-        <onclick>Skin.Reset(HomeMenuNoMusicButton)</onclick>
-        <onclick>Skin.Reset(HomeMenuNoTVButton)</onclick>
-        <onclick>Skin.Reset(HomeMenuNoRadioButton)</onclick>
-        <onclick>Skin.Reset(HomeMenuNoProgramsButton)</onclick>
-        <onclick>Skin.Reset(HomeMenuNoPicturesButton)</onclick>
-        <onclick>Skin.Reset(HomeMenuNoVideosButton)</onclick>
-        <onclick>Skin.Reset(HomeMenuNoFavButton)</onclick>
-        <onclick>Skin.Reset(HomeMenuNoWeatherButton)</onclick>
-        <include>DialogClickNo</include>
-    </include>
-    <!-- Reset User Widgets -->
-    <include name="DialogUserWidgets">
-        <onclick>Skin.Reset(enable_custom_list_addons_video)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.0.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.0.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.0.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.1.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.1.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.1.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.2.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.2.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.2.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.3.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.3.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.3.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.4.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.4.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.4.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.5.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.5.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.5.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.6.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.6.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.6.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.7.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.7.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.7.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.8.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.8.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.8.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.9.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.9.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetVideo.9.Icon)</onclick>        
-        <onclick>Skin.Reset(enable_custom_list_addons_audio)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.0.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.0.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.0.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.1.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.1.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.1.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.2.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.2.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.2.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.3.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.3.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.3.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.4.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.4.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.4.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.5.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.5.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.5.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.6.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.6.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.6.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.7.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.7.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.7.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.8.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.8.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.8.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.9.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.9.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetAudio.9.Icon)</onclick>        
-        <onclick>Skin.Reset(enable_custom_list_addons_programs)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.0.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.0.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.0.Icon)</onclick>        
-        <onclick>Skin.Reset(AddonSetPrograms.1.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.1.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.1.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.2.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.2.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.2.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.3.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.3.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.3.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.4.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.4.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.4.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.5.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.5.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.5.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.6.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.6.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.6.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.7.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.7.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.7.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.8.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.8.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.8.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.9.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.9.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetPrograms.9.Icon)</onclick>
-        <onclick>Skin.Reset(enable_custom_list_addons_apps)</onclick>
-        <onclick>Skin.Reset(enable_custom_list_addons_image)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.0.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.0.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.0.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.1.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.1.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.1.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.2.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.2.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.2.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.3.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.3.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.3.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.4.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.4.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.4.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.5.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.5.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.5.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.6.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.6.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.6.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.7.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.7.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.7.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.8.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.8.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.8.Icon)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.9.Label)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.9.Name)</onclick>
-        <onclick>Skin.Reset(AddonSetImage.9.Icon)</onclick>
-        <onclick>Skin.Reset(enable_custom_list_channels_tv)</onclick>
-        <onclick>Skin.Reset(ChannelTV.0.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.0.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.0.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelTV.1.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.1.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.1.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelTV.2.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.2.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.2.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelTV.3.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.3.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.3.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelTV.4.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.4.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.4.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelTV.5.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.5.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.5.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelTV.6.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.6.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.6.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelTV.7.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.7.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.7.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelTV.8.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.8.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.8.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelTV.9.Label)</onclick>
-        <onclick>Skin.Reset(ChannelTV.9.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelTV.9.Icon)</onclick>
-        <onclick>Skin.Reset(enable_custom_list_channels_radio)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.0.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.0.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.0.Icon)</onclick>        
-        <onclick>Skin.Reset(ChannelRadio.1.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.1.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.1.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.2.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.2.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.2.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.3.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.3.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.3.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.4.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.4.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.4.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.5.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.5.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.5.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.6.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.6.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.6.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.7.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.7.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.7.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.8.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.8.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.8.Icon)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.9.Label)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.9.ChannelId)</onclick>
-        <onclick>Skin.Reset(ChannelRadio.9.Icon)</onclick>
-        <include>DialogClickNo</include>
-    </include>
-    <!-- Reset Backgrounds -->
-    <include name="DialogBackgrounds">
-        <onclick>Skin.Reset(no_fanart)</onclick>
+	<!-- Dialog Select Value -->
+	<include name="DialogSelectValue">
+		<definition>
+			<control type="group">
+				<centertop>50%</centertop>
+				<centerleft>50%</centerleft>
+				<height>742</height>
+				<width>1220</width>
+				<include content="DialogBackgroundCommons">
+					<param name="width" value="1220" />
+					<param name="height" value="742" />
+					<param name="header_label" value="$PARAM[dialogheaderlabel]" />
+					<param name="header_id" value="1" />
+				</include>
+				<control type="image">
+					<left>0</left>
+					<top>80</top>
+					<width>920</width>
+					<height>665</height>
+					<texture border="40">buttons/dialogbutton-nofo.png</texture>
+				</control>
+				<control type="list" id="6">
+					<left>20</left>
+					<top>100</top>
+					<width>880</width>
+					<height>625</height>
+					<onup>6</onup>
+					<ondown>6</ondown>
+					<onleft>9001</onleft>
+					<onright>61</onright>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="125" width="880">
+						<control type="image">
+							<left>12</left>
+							<top>7</top>
+							<width>110</width>
+							<height>110</height>
+							<texture>$INFO[Listitem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>0</top>
+							<right>20</right>
+							<height>60</height>
+							<font>font14</font>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="textbox">
+							<left>135</left>
+							<top>52</top>
+							<right>20</right>
+							<height>65</height>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="125" width="880">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<right>0</right>
+							<bottom>0</bottom>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+							<visible>Control.HasFocus(6)</visible>
+						</control>
+						<control type="image">
+							<left>12</left>
+							<top>7</top>
+							<width>110</width>
+							<height>110</height>
+							<texture>$INFO[Listitem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>0</top>
+							<right>20</right>
+							<height>60</height>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<font>font14</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="textbox">
+							<left>135</left>
+							<top>52</top>
+							<right>20</right>
+							<height>65</height>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+					<include content="$PARAM[dialogincludeselectval]">
+						<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
+					</include>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>910</left>
+					<top>100</top>
+					<width>12</width>
+					<height>625</height>
+					<onleft>6</onleft>
+					<onright>9001</onright>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="label">
+					<left>925</left>
+					<top>695</top>
+					<width>275</width>
+					<height>35</height>
+					<font>font12</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<label>$VAR[SelectLabelVar]</label>
+				</control>
+				<control type="grouplist" id="9001">
+					<left>920</left>
+					<top>80</top>
+					<onleft>61</onleft>
+					<itemgap>dialogbuttons_itemgap</itemgap>
+					<onright>6</onright>
+					<include content="DefaultDialogButton">
+						<param name="id" value="7" />
+						<param name="label" value="$LOCALIZE[222]" />
+						<param name="onclick" value="PreviousMenu" />
+					</include>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- Backgrounds Select Value -->
+	<include name="BackgroundsSelVal">
+		<content>
+			<item id="1">
+				<description>Reset Background</description>
+				<icon>DefaultAddon.png</icon>
+				<label>$LOCALIZE[15109]</label>
+				<label2></label2>
+				<onclick>Skin.Reset($INFO[Window(home).Property(setbackgrounds)])</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="2">
+				<description>Own Background</description>
+				<icon>DefaultFile.png</icon>
+				<label>$LOCALIZE[44111]</label>
+				<label2></label2>
+				<onclick>Skin.SetImage($INFO[Window(home).Property(setbackgrounds)])</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="3">
+				<description>Multi Background</description>
+				<icon>DefaultFolder.png</icon>
+				<label>$LOCALIZE[44112]</label>
+				<label2></label2>
+				<onclick>Skin.SetPath($INFO[Window(home).Property(setbackgrounds)])</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+		</content>
+	</include>
+	<!-- Dialog Yes No -->
+	<include name="DialogYesNo">
+		<param name="dialogincludeno">DialogClickNo</param>
+		<definition>
+			<control type="group">
+				<height>390</height>
+				<centertop>50%</centertop>
+				<centerleft>50%</centerleft>
+				<width>915</width>
+				<include content="DialogBackgroundCommons">
+					<param name="width" value="915" />
+					<param name="height" value="380" />
+					<param name="header_label" value="$PARAM[dialogheaderlabel]" />
+					<param name="header_id" value="1" />
+				</include>
+				<control type="textbox" id="9">
+					<left>30</left>
+					<top>82</top>
+					<width>855</width>
+					<height>165</height>
+					<label>$PARAM[dialogtext]</label>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				</control>
+				<control type="grouplist" id="9000">
+					<orientation>horizontal</orientation>
+					<left>0</left>
+					<top>280</top>
+					<width>915</width>
+					<align>center</align>
+					<include content="DefaultDialogButton">
+						<param name="id" value="11" />
+						<param name="label" value="$LOCALIZE[107]" />
+						<param name="isincludeclick" value="true" />
+						<param name="onclickinclude" value="$PARAM[dialogincludeyes]" />
+					</include>
+					<include content="DefaultDialogButton">
+						<param name="id" value="10" />
+						<param name="label" value="$LOCALIZE[106]" />
+						<param name="isincludeclick" value="true" />
+						<param name="onclickinclude" value="$PARAM[dialogincludeno]" />
+					</include>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- Popup Position Value -->
+	<include name="PopupPositionVal">
+		<content>
+			<item id="1">
+				<description>TopLeft</description>
+				<icon>dialogs/settings/PopupNotification-TopLeft.png</icon>
+				<label>$LOCALIZE[44104]</label>
+				<label2></label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],TopLeft,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44104],)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="2">
+				<description>TopCenter</description>
+				<icon>dialogs/settings/PopupNotification-TopCenter.png</icon>
+				<label>$LOCALIZE[44105]</label>
+				<label2></label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],TopCenter,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44105],)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="3">
+				<description>TopRight</description>
+				<icon>dialogs/settings/PopupNotification-TopRight.png</icon>
+				<label>$LOCALIZE[44106]</label>
+				<label2></label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],TopRight,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44106],)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="4">
+				<description>BottomLeft</description>
+				<icon>dialogs/settings/PopupNotification-BottomLeft.png</icon>
+				<label>$LOCALIZE[44107]</label>
+				<label2></label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],BottomLeft,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44107],)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="5">
+				<description>BottomCenter</description>
+				<icon>dialogs/settings/PopupNotification-BottomCenter.png</icon>
+				<label>$LOCALIZE[44108]</label>
+				<label2></label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],BottomCenter,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44108],)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="6">
+				<description>BottomRight</description>
+				<icon>dialogs/settings/PopupNotification-BottomRight.png</icon>
+				<label>$LOCALIZE[44109]</label>
+				<label2></label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],BottomRight,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44109],)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+		</content>
+	</include>
+	<!-- Background Opacity Value -->
+	<include name="BackgroundOpacityVal">
+		<content>
+			<item id="1">
+				<description>Opacity Default</description>
+				<icon>DefaultAddon.png</icon>
+				<label>$LOCALIZE[15109]</label>
+				<label2>$LOCALIZE[15109]</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],Default,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[15109],)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="2">
+				<description>Opacity 0</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[0]</label>
+				<label2>$LOCALIZE[44001]0%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],0,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]0,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="3">
+				<description>Opacity 5</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[5]</label>
+				<label2>$LOCALIZE[44001]5%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],5,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]5,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="4">
+				<description>Opacity 10</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[10]</label>
+				<label2>$LOCALIZE[44001]10%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],10,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]10,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="5">
+				<description>Opacity 15</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[15]</label>
+				<label2>$LOCALIZE[44001]15%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],15,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]15,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="6">
+				<description>Opacity 20</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[20]</label>
+				<label2>$LOCALIZE[44001]20%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],20,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]20,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="7">
+				<description>Opacity 25</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[25]</label>
+				<label2>$LOCALIZE[44001]25%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],25,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]25,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="8">
+				<description>Opacity 30</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[30]</label>
+				<label2>$LOCALIZE[44001]30%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],30,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]30,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="9">
+				<description>Opacity 35</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[35]</label>
+				<label2>$LOCALIZE[44001]35%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],35,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]35,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="10">
+				<description>Opacity 40</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[40]</label>
+				<label2>$LOCALIZE[44001]40%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],40,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]40,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="11">
+				<description>Opacity 45</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[45]</label>
+				<label2>$LOCALIZE[44001]45%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],45,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]45,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="12">
+				<description>Opacity 50</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[50]</label>
+				<label2>$LOCALIZE[44001]50%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],50,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]50,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="13">
+				<description>Opacity 55</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[55]</label>
+				<label2>$LOCALIZE[44001]55%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],55,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]55,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="14">
+				<description>Opacity 60</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[60]</label>
+				<label2>$LOCALIZE[44001]60%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],60,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]60,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="15">
+				<description>Opacity 65</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[65]</label>
+				<label2>$LOCALIZE[44001]65%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],65,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]65,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="16">
+				<description>Opacity 70</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[70]</label>
+				<label2>$LOCALIZE[44001]70%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],70,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]70,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="17">
+				<description>Opacity 75</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[75]</label>
+				<label2>$LOCALIZE[44001]75%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],75,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]75,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="18">
+				<description>Opacity 80</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[80]</label>
+				<label2>$LOCALIZE[44001]80%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],80,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]80,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="19">
+				<description>Opacity 85</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[85]</label>
+				<label2>$LOCALIZE[44001]85%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],85,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]85,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="20">
+				<description>Opacity 90</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[90]</label>
+				<label2>$LOCALIZE[44001]90%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],90,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]90,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="21">
+				<description>Opacity 95</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[95]</label>
+				<label2>$LOCALIZE[44001]95%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],95,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]95,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="22">
+				<description>Opacity 100</description>
+				<icon>DefaultAddonLookAndFeel.png</icon>
+				<label>$NUMBER[100]</label>
+				<label2>$LOCALIZE[44001]100%</label2>
+				<onclick>Skin.SetString($PARAM[dialogsettingval],100,)</onclick>
+				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]100,)</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+		</content>
+	</include>
+
+	<!-- *** Reset *** -->
+
+	<!-- Reset General -->
+	<include name="DialogResetGeneral">
+		<onclick>Skin.Reset(no_slide_animations)</onclick>
+		<onclick>Skin.Reset(autoscroll)</onclick>
+		<onclick>Skin.Reset(touchmode)</onclick>
+		<onclick>Skin.Reset(hide_time)</onclick>
+		<onclick>Skin.Reset(show_weatherinfo)</onclick>
+		<onclick>Skin.Reset(hide_mediaflags)</onclick>
+		<onclick>Skin.Reset(enable_splashscreen)</onclick>
+		<onclick>Skin.Reset(enable_globalsearch)</onclick>
+		<onclick>Skin.Reset(enable_watchitlater)</onclick>
+		<onclick>Skin.Reset(lrclyrics_alternative_view)</onclick>
+		<include>DialogClickNo</include>
+	</include>
+	<!-- Reset Options -->
+	<include name="DialogResetOptions">
+		<onclick>Skin.Reset(full_screen_clock)</onclick>
+		<onclick>Skin.Reset(slideshow_info)</onclick>
+		<onclick>Skin.Reset(enable_home_stats)</onclick>
+		<onclick>Skin.Reset(widget_limititems)</onclick>
+		<onclick>Skin.Reset(StudiosImages.name)</onclick>
+		<onclick>Skin.Reset(StudiosImages.path)</onclick>
+		<onclick>Skin.Reset(StudiosImages.ext)</onclick>
+		<onclick>Skin.Reset(LanguageFlags.name)</onclick>
+		<onclick>Skin.Reset(LanguageFlags.path)</onclick>
+		<onclick>Skin.Reset(LanguageFlags.ext)</onclick>
+		<onclick>Skin.Reset(MovieGenreIcons.name)</onclick>
+		<onclick>Skin.Reset(MovieGenreIcons.path)</onclick>
+		<onclick>Skin.Reset(MovieGenreIcons.ext)</onclick>
+		<onclick>Skin.Reset(MusicGenreIcons.name)</onclick>
+		<onclick>Skin.Reset(MusicGenreIcons.path)</onclick>
+		<onclick>Skin.Reset(MusicGenreIcons.ext)</onclick>
+		<onclick>Skin.Reset(WeatherIcons.name)</onclick>
+		<onclick>Skin.Reset(WeatherIcons.path)</onclick>
+		<onclick>Skin.Reset(WeatherIcons.ext)</onclick>
+		<onclick>Skin.Reset(WeatherIcons.multi)</onclick>
+		<onclick>Skin.Reset(PopupPosition)</onclick>
+		<onclick>Skin.Reset(PopupPosition.label)</onclick>
+		<onclick>Skin.Reset(hide_popup)</onclick>
+		<onclick>Skin.Reset(enable_custom_list_addons)</onclick>
+		<onclick>Skin.Reset(enable_custom_list_channels)</onclick>
+		<onclick>Skin.Reset(enable_skin_debug)</onclick>
+		<include>DialogClickNo</include>
+	</include>
+	<!-- Reset Main Menu -->
+	<include name="DialogMainMenu">
+		<onclick>Skin.Reset(HomeMenuNoMovieButton)</onclick>
+		<onclick>Skin.Reset(HomeMenuNoTVShowButton)</onclick>
+		<onclick>Skin.Reset(HomeMenuNoMusicButton)</onclick>
+		<onclick>Skin.Reset(HomeMenuNoTVButton)</onclick>
+		<onclick>Skin.Reset(HomeMenuNoRadioButton)</onclick>
+		<onclick>Skin.Reset(HomeMenuNoProgramsButton)</onclick>
+		<onclick>Skin.Reset(HomeMenuNoPicturesButton)</onclick>
+		<onclick>Skin.Reset(HomeMenuNoVideosButton)</onclick>
+		<onclick>Skin.Reset(HomeMenuNoFavButton)</onclick>
+		<onclick>Skin.Reset(HomeMenuNoWeatherButton)</onclick>
+		<include>DialogClickNo</include>
+	</include>
+	<!-- Reset User Widgets -->
+	<include name="DialogUserWidgets">
+		<onclick>Skin.Reset(enable_custom_list_addons_video)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.0.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.0.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.0.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.1.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.1.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.1.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.2.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.2.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.2.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.3.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.3.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.3.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.4.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.4.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.4.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.5.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.5.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.5.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.6.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.6.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.6.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.7.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.7.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.7.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.8.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.8.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.8.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.9.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.9.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetVideo.9.Icon)</onclick>
+		<onclick>Skin.Reset(enable_custom_list_addons_audio)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.0.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.0.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.0.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.1.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.1.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.1.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.2.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.2.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.2.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.3.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.3.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.3.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.4.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.4.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.4.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.5.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.5.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.5.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.6.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.6.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.6.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.7.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.7.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.7.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.8.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.8.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.8.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.9.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.9.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetAudio.9.Icon)</onclick>
+		<onclick>Skin.Reset(enable_custom_list_addons_programs)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.0.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.0.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.0.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.1.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.1.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.1.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.2.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.2.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.2.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.3.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.3.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.3.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.4.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.4.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.4.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.5.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.5.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.5.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.6.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.6.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.6.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.7.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.7.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.7.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.8.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.8.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.8.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.9.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.9.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetPrograms.9.Icon)</onclick>
+		<onclick>Skin.Reset(enable_custom_list_addons_apps)</onclick>
+		<onclick>Skin.Reset(enable_custom_list_addons_image)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.0.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.0.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.0.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.1.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.1.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.1.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.2.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.2.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.2.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.3.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.3.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.3.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.4.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.4.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.4.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.5.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.5.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.5.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.6.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.6.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.6.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.7.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.7.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.7.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.8.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.8.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.8.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.9.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.9.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetImage.9.Icon)</onclick>
+		<onclick>Skin.Reset(enable_custom_list_channels_tv)</onclick>
+		<onclick>Skin.Reset(ChannelTV.0.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.0.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.0.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelTV.1.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.1.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.1.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelTV.2.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.2.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.2.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelTV.3.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.3.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.3.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelTV.4.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.4.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.4.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelTV.5.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.5.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.5.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelTV.6.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.6.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.6.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelTV.7.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.7.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.7.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelTV.8.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.8.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.8.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelTV.9.Label)</onclick>
+		<onclick>Skin.Reset(ChannelTV.9.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelTV.9.Icon)</onclick>
+		<onclick>Skin.Reset(enable_custom_list_channels_radio)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.0.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.0.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.0.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.1.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.1.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.1.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.2.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.2.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.2.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.3.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.3.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.3.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.4.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.4.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.4.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.5.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.5.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.5.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.6.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.6.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.6.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.7.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.7.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.7.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.8.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.8.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.8.Icon)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.9.Label)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.9.ChannelId)</onclick>
+		<onclick>Skin.Reset(ChannelRadio.9.Icon)</onclick>
+		<include>DialogClickNo</include>
+	</include>
+	<!-- Reset Backgrounds -->
+	<include name="DialogBackgrounds">
+		<onclick>Skin.Reset(no_fanart)</onclick>
 		<onclick>Skin.Reset(hide_visualization_fanart)</onclick>
 		<onclick>Skin.Reset(show_background_video)</onclick>
 		<onclick>Skin.Reset(show_background_vis)</onclick>
 		<onclick>Skin.SetString(background_overlay,0)</onclick>
-        <onclick>Skin.Reset(Opacity)</onclick>
-        <onclick>Skin.Reset(Opacity.label)</onclick>
-		<onclick>Skin.Reset(separate_background)</onclick>		
-        <onclick>Skin.Reset(use_custom_bg)</onclick>
-        <onclick>Skin.Reset(custom_background)</onclick>
-        <onclick>Skin.Reset(background_power)</onclick>
-        <onclick>Skin.Reset(background_settings)</onclick>
-        <onclick>Skin.Reset(background_search)</onclick>        
-        <onclick>Skin.Reset(background_movies)</onclick>
-        <onclick>Skin.Reset(background_tvshows)</onclick>
-        <onclick>Skin.Reset(background_music)</onclick>
-        <onclick>Skin.Reset(background_disc)</onclick>
-        <onclick>Skin.Reset(background_musicvideos)</onclick>
-        <onclick>Skin.Reset(background_livetv)</onclick>
-        <onclick>Skin.Reset(background_radio)</onclick>
-        <onclick>Skin.Reset(background_addons)</onclick>
-        <onclick>Skin.Reset(background_pictures)</onclick>
-        <onclick>Skin.Reset(background_videos)</onclick>
-        <onclick>Skin.Reset(background_favourites)</onclick>
-        <onclick>Skin.Reset(background_weather)</onclick>       
-        <onclick>Skin.Reset(HomeFanart.name)</onclick>
-        <onclick>Skin.Reset(HomeFanart.path)</onclick>
-        <onclick>Skin.Reset(HomeFanart.ext)</onclick>
-        <onclick>Skin.Reset(MovieGenreFanart.name)</onclick>
-        <onclick>Skin.Reset(MovieGenreFanart.path)</onclick>
-        <onclick>Skin.Reset(MovieGenreFanart.ext)</onclick>
-        <onclick>Skin.Reset(WeatherFanart.name)</onclick>
-        <onclick>Skin.Reset(WeatherFanart.path)</onclick>
-        <onclick>Skin.Reset(WeatherFanart.ext)</onclick>
-        <onclick>Skin.Reset(WeatherFanart.multi)</onclick>
-        <onclick>SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
-        <include>DialogClickNo</include>
-    </include>
-    <!-- Reset Skin -->
-    <include name="DialogResetSkin">
-        <onclick>Skin.ResetSettings</onclick>
-        <onclick>ReloadSkin()</onclick>
-        <include>DialogClickNo</include>
-        <onclick>ActivateWindow(Home)</onclick>
-    </include>
-    <!-- Click No -->
-    <include name="DialogClickNo">
-        <onclick>PreviousMenu</onclick>
-    </include>
-    <!-- Addon SubMenu Content -->
-	<include name="AddonSubMenuContent">
-        <item>
-            <label>$LOCALIZE[24998]</label>
-            <onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
-            <thumb>DefaultAddonsInstalled.png</thumb>
-        </item>
-        <item>
-            <label>$LOCALIZE[24043]</label>
-            <onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
-            <thumb>DefaultAddonsUpdates.png</thumb>
-        </item>
-        <item>
-            <label>$LOCALIZE[24004]</label>
-            <onclick>ActivateWindow(addonbrowser,addons://recently_updated/,return)</onclick>
-            <thumb>DefaultAddonsRecentlyUpdated.png</thumb>
-        </item>
-        <item>
-            <label>$LOCALIZE[24033]</label>
-            <onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
-            <thumb>DefaultAddonsRepo.png</thumb>
-        </item>
-        <item>
-            <label>$LOCALIZE[137]</label>
-            <onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
-            <thumb>DefaultAddonsSearch.png</thumb>
-        </item>
+		<onclick>Skin.Reset(Opacity)</onclick>
+		<onclick>Skin.Reset(Opacity.label)</onclick>
+		<onclick>Skin.Reset(separate_background)</onclick>
+		<onclick>Skin.Reset(use_custom_bg)</onclick>
+		<onclick>Skin.Reset(custom_background)</onclick>
+		<onclick>Skin.Reset(background_power)</onclick>
+		<onclick>Skin.Reset(background_settings)</onclick>
+		<onclick>Skin.Reset(background_search)</onclick>
+		<onclick>Skin.Reset(background_movies)</onclick>
+		<onclick>Skin.Reset(background_tvshows)</onclick>
+		<onclick>Skin.Reset(background_music)</onclick>
+		<onclick>Skin.Reset(background_disc)</onclick>
+		<onclick>Skin.Reset(background_musicvideos)</onclick>
+		<onclick>Skin.Reset(background_livetv)</onclick>
+		<onclick>Skin.Reset(background_radio)</onclick>
+		<onclick>Skin.Reset(background_addons)</onclick>
+		<onclick>Skin.Reset(background_pictures)</onclick>
+		<onclick>Skin.Reset(background_videos)</onclick>
+		<onclick>Skin.Reset(background_favourites)</onclick>
+		<onclick>Skin.Reset(background_weather)</onclick>
+		<onclick>Skin.Reset(HomeFanart.name)</onclick>
+		<onclick>Skin.Reset(HomeFanart.path)</onclick>
+		<onclick>Skin.Reset(HomeFanart.ext)</onclick>
+		<onclick>Skin.Reset(MovieGenreFanart.name)</onclick>
+		<onclick>Skin.Reset(MovieGenreFanart.path)</onclick>
+		<onclick>Skin.Reset(MovieGenreFanart.ext)</onclick>
+		<onclick>Skin.Reset(WeatherFanart.name)</onclick>
+		<onclick>Skin.Reset(WeatherFanart.path)</onclick>
+		<onclick>Skin.Reset(WeatherFanart.ext)</onclick>
+		<onclick>Skin.Reset(WeatherFanart.multi)</onclick>
+		<onclick>SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
+		<include>DialogClickNo</include>
 	</include>
-    <!-- PVR SubMenu Content -->
+	<!-- Reset Skin -->
+	<include name="DialogResetSkin">
+		<onclick>Skin.ResetSettings</onclick>
+		<onclick>ReloadSkin()</onclick>
+		<include>DialogClickNo</include>
+		<onclick>ActivateWindow(Home)</onclick>
+	</include>
+	<!-- Click No -->
+	<include name="DialogClickNo">
+		<onclick>PreviousMenu</onclick>
+	</include>
+	<!-- Addon SubMenu Content -->
+	<include name="AddonSubMenuContent">
+		<item>
+			<label>$LOCALIZE[24998]</label>
+			<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
+			<thumb>DefaultAddonsInstalled.png</thumb>
+		</item>
+		<item>
+			<label>$LOCALIZE[24043]</label>
+			<onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
+			<thumb>DefaultAddonsUpdates.png</thumb>
+		</item>
+		<item>
+			<label>$LOCALIZE[24004]</label>
+			<onclick>ActivateWindow(addonbrowser,addons://recently_updated/,return)</onclick>
+			<thumb>DefaultAddonsRecentlyUpdated.png</thumb>
+		</item>
+		<item>
+			<label>$LOCALIZE[24033]</label>
+			<onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
+			<thumb>DefaultAddonsRepo.png</thumb>
+		</item>
+		<item>
+			<label>$LOCALIZE[137]</label>
+			<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
+			<thumb>DefaultAddonsSearch.png</thumb>
+		</item>
+	</include>
+	<!-- PVR SubMenu Content -->
 	<include name="PVRSubMenuContent">
-        <item>
-            <label>$LOCALIZE[19019]</label>
-            <onclick>ActivateWindow($PARAM[type]Channels)</onclick>
-            <thumb>DefaultAddonPeripheral.png</thumb>
-        </item>
-        <item>
-            <label>$LOCALIZE[19069]</label>
-            <onclick>ActivateWindow($PARAM[type]Guide)</onclick>
-            <thumb>icons/pvr/epg.png</thumb>
-        </item>
-        <item>
-            <label>$LOCALIZE[19017]</label>
-            <onclick>ActivateWindow($PARAM[type]Recordings)</onclick>
-            <thumb>icons/pvr/recording.png</thumb>
-        </item>
-        <item>
-            <label>$LOCALIZE[19040]</label>
-            <onclick>ActivateWindow($PARAM[type]Timers)</onclick>
-            <thumb>icons/pvr/timer.png</thumb>
-        </item>
-        <item>
-            <label>$LOCALIZE[19138]</label>
-            <onclick>ActivateWindow($PARAM[type]TimerRules)</onclick>
-            <thumb>icons/pvr/timer-rule.png</thumb>
-        </item>
-        <item>
-            <label>$LOCALIZE[137]</label>
-            <onclick>ActivateWindow($PARAM[type]Search)</onclick>
-            <thumb>DefaultAddonsSearch.png</thumb>
-        </item>
-	    <!-- Lrclyrics Dialog -->
-	    <include name="Lrclyrics_Dialog">
-	        <include>Animation_DialogPopupOpenClose</include>
-	        <depth>DepthOSD</depth>
-	    </include>
-	</include>    
+		<item>
+			<label>$LOCALIZE[19019]</label>
+			<onclick>ActivateWindow($PARAM[type]Channels)</onclick>
+			<thumb>DefaultAddonPeripheral.png</thumb>
+		</item>
+		<item>
+			<label>$LOCALIZE[19069]</label>
+			<onclick>ActivateWindow($PARAM[type]Guide)</onclick>
+			<thumb>icons/pvr/epg.png</thumb>
+		</item>
+		<item>
+			<label>$LOCALIZE[19017]</label>
+			<onclick>ActivateWindow($PARAM[type]Recordings)</onclick>
+			<thumb>icons/pvr/recording.png</thumb>
+		</item>
+		<item>
+			<label>$LOCALIZE[19040]</label>
+			<onclick>ActivateWindow($PARAM[type]Timers)</onclick>
+			<thumb>icons/pvr/timer.png</thumb>
+		</item>
+		<item>
+			<label>$LOCALIZE[19138]</label>
+			<onclick>ActivateWindow($PARAM[type]TimerRules)</onclick>
+			<thumb>icons/pvr/timer-rule.png</thumb>
+		</item>
+		<item>
+			<label>$LOCALIZE[137]</label>
+			<onclick>ActivateWindow($PARAM[type]Search)</onclick>
+			<thumb>DefaultAddonsSearch.png</thumb>
+		</item>
+		<!-- Lrclyrics Dialog -->
+		<include name="Lrclyrics_Dialog">
+			<include>Animation_DialogPopupOpenClose</include>
+			<depth>DepthOSD</depth>
+		</include>
+	</include>
 </includes>

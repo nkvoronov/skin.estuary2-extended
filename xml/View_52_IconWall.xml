@@ -47,7 +47,7 @@
 							<texture fallback="DefaultCountry.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>Container.Content(countries)</visible>
+							<visible>Container.Content(countries)</visible>
 						</control>
 						<control type="image">
 							<left>120</left>
@@ -57,7 +57,7 @@
 							<texture fallback="DefaultGenre.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>Container.Content(genres) + Window.IsActive(videos)</visible>
+							<visible>Container.Content(genres) + Window.IsActive(videos)</visible>
 						</control>
 						<control type="image">
 							<left>120</left>
@@ -67,7 +67,7 @@
 							<texture fallback="DefaultMusicGenres.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>Container.Content(genres) + !Window.IsActive(videos)</visible>
+							<visible>Container.Content(genres) + !Window.IsActive(videos)</visible>
 						</control>
 						<control type="image">
 							<left>120</left>
@@ -77,7 +77,7 @@
 							<texture fallback="DefaultFolder.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>![Container.Content(studios) | Container.Content(countries) | Container.Content(genres)]</visible>
+							<visible>![Container.Content(studios) | Container.Content(countries) | Container.Content(genres)]</visible>
 						</control>
 						<control type="image">
 							<left>20</left>
@@ -140,7 +140,7 @@
 							<texture fallback="DefaultCountry.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>Container.Content(countries)</visible>
+							<visible>Container.Content(countries)</visible>
 						</control>
 						<control type="image">
 							<left>120</left>
@@ -150,7 +150,7 @@
 							<texture fallback="DefaultGenre.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>Container.Content(genres) + Window.IsActive(videos)</visible>
+							<visible>Container.Content(genres) + Window.IsActive(videos)</visible>
 						</control>
 						<control type="image">
 							<left>120</left>
@@ -160,7 +160,7 @@
 							<texture fallback="DefaultMusicGenres.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>Container.Content(genres) + !Window.IsActive(videos)</visible>
+							<visible>Container.Content(genres) + !Window.IsActive(videos)</visible>
 						</control>
 						<control type="image">
 							<left>120</left>
@@ -170,7 +170,7 @@
 							<texture fallback="DefaultFolder.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>![Container.Content(studios) | Container.Content(countries) | Container.Content(genres)]</visible>
+							<visible>![Container.Content(studios) | Container.Content(countries) | Container.Content(genres)]</visible>
 						</control>
 						<control type="image">
 							<left>20</left>

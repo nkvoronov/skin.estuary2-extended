@@ -6,15 +6,15 @@
 	<controls>
 		<control type="group">
 			<width>1440</width>
-            <centerleft>50%</centerleft>        
-            <centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
 				<height>940</height>
-            <include  content="DialogBackgroundCommons">
-                <param name="width" value="1440" />
-                <param name="height" value="940" />
-                <param name="header_label" value="$ADDON[script.transmission 32000]" />
-                <param name="header_id" value="1" />
-            </include>        
+			<include  content="DialogBackgroundCommons">
+				<param name="width" value="1440" />
+				<param name="height" value="940" />
+				<param name="header_label" value="$ADDON[script.transmission 32000]" />
+				<param name="header_id" value="1" />
+			</include>
 		<control type="group">
 			<left>0</left>
 			<top>70</top>
@@ -252,6 +252,6 @@
 				</control>
 			</focusedlayout>
 		</control>
-        </control>
+		</control>
 	</controls>
 </window>

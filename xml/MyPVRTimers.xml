@@ -2,12 +2,12 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
-    <onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(fanarthometype,livetv,home)</onload>
-    <onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(homebackground,$VAR[BackgroundLiveTVVar],home)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(fanarthometype,livetv,home)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(homebackground,$VAR[BackgroundLiveTVVar],home)</onload>
 	<menucontrol>9000</menucontrol>
 	<views>50</views>
 	<controls>
-        <!-- Background -->
+		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>

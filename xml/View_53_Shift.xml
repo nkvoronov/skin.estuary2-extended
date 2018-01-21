@@ -73,7 +73,7 @@
 								<bordertexture border="21">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
 							</control>
-                            <control type="image">
+							<control type="image">
 								<depth>DepthContentPopout</depth>
 								<left>15</left>
 								<top>90</top>
@@ -90,7 +90,7 @@
 								<top>90</top>
 								<width>340</width>
 								<height>480</height>
-                                <aspectratio aligny="center">keep</aspectratio>
+								<aspectratio aligny="center">keep</aspectratio>
 								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
 								<bordersize>25</bordersize>
 								<visible>String.IsEmpty(ListItem.Art(poster)) + !ListItem.IsParentFolder</visible>
@@ -100,8 +100,8 @@
 								<top>145</top>
 								<width>340</width>
 								<height>340</height>
-                                <aspectratio>scale</aspectratio>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>								
+								<aspectratio>scale</aspectratio>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
 								<bordersize>20</bordersize>
 								<visible>String.IsEmpty(ListItem.Art(poster)) + ListItem.IsParentFolder</visible>
 							</control>
@@ -169,7 +169,7 @@
 								<aspectratio aligny="center">keep</aspectratio>
 								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
 								<bordersize>25</bordersize>
-							</control>						
+							</control>
 						</control>
 						<control type="textbox">
 							<left>20</left>
@@ -200,7 +200,7 @@
 								<bordertexture border="21">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
 							</control>
-                            <control type="image">
+							<control type="image">
 								<depth>DepthContentPopout</depth>
 								<left>15</left>
 								<top>90</top>
@@ -217,7 +217,7 @@
 								<top>90</top>
 								<width>340</width>
 								<height>480</height>
-                                <aspectratio aligny="center">keep</aspectratio>
+								<aspectratio aligny="center">keep</aspectratio>
 								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
 								<bordersize>25</bordersize>
 								<visible>String.IsEmpty(ListItem.Art(poster)) + !ListItem.IsParentFolder</visible>
@@ -227,8 +227,8 @@
 								<top>145</top>
 								<width>340</width>
 								<height>340</height>
-                                <aspectratio>scale</aspectratio>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>								
+								<aspectratio>scale</aspectratio>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
 								<bordersize>20</bordersize>
 								<visible>String.IsEmpty(ListItem.Art(poster)) + ListItem.IsParentFolder</visible>
 							</control>
@@ -352,7 +352,7 @@
 							<width>940</width>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Year,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Title][/COLOR]</label>
-                            <textcolor>$VAR[MainColorVar]</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
@@ -363,7 +363,7 @@
 							<width>940</width>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Year,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Title][/COLOR]</label>
-                            <textcolor>$VAR[MainColorVar]</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</itemlayout>
@@ -382,7 +382,7 @@
 				<right>30</right>
 				<height>163</height>
 				<label>$PARAM[textbox_content]</label>
-                <textcolor>$VAR[MainColorVar]</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
 		</control>

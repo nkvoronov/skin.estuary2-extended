@@ -14,7 +14,7 @@
 				<param name="header_label" value="$LOCALIZE[31072]" />
 				<param name="header_id" value="2" />
 			</include>
-            <control type="panel" id="9000">
+			<control type="panel" id="9000">
 				<include>ButtonMenuList</include>
 				<content>
 					<item>
@@ -77,12 +77,12 @@
 						<onclick>InhibitIdleShutdown(false)</onclick>
 						<visible>System.HasShutdown + System.IsInhibit</visible>
 					</item>
-                    <item>
-                        <label>$LOCALIZE[20183]</label>
-                        <onclick>ReloadSkin()</onclick>
-                        <onclick condition="Skin.HasSetting(enable_skin_debug)">Skin.ToggleDebug</onclick>
-                        <visible>!Skin.HasSetting(hide_reload_skin_button)</visible>
-                    </item>
+					<item>
+						<label>$LOCALIZE[20183]</label>
+						<onclick>ReloadSkin()</onclick>
+						<onclick condition="Skin.HasSetting(enable_skin_debug)">Skin.ToggleDebug</onclick>
+						<visible>!Skin.HasSetting(hide_reload_skin_button)</visible>
+					</item>
 				</content>
 			</control>
 		</control>
