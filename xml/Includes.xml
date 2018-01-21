@@ -3,27 +3,27 @@
 	<include file="Defaults.xml" />
 	<include file="Includes_Home.xml" />
 	<include file="Includes_HomeMainMenu.xml" />
-    <include file="Includes_HomeSubMenu.xml" />
-    <include file="Includes_HomeWidgets.xml" />
+	<include file="Includes_HomeSubMenu.xml" />
+	<include file="Includes_HomeWidgets.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_MediaMenu.xml" />
 	<include file="Includes_Buttons.xml" />
 	<include file="Includes_PVR.xml" />
-    <include file="Includes_UserWidgets.xml" />
+	<include file="Includes_UserWidgets.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_Poster.xml" />
 	<include file="View_52_IconWall.xml" />
 	<include file="View_53_Shift.xml" />
 	<include file="View_54_InfoWall.xml" />
 	<include file="View_55_WideList.xml" />
-    <include file="View_56_ClearLogo.xml" />
-    <include file="View_57_ClearArt.xml" />
-    <include file="View_58_BigPoster.xml" />
+	<include file="View_56_ClearLogo.xml" />
+	<include file="View_57_ClearArt.xml" />
+	<include file="View_58_BigPoster.xml" />
 	<include file="View_500_Wall.xml" />
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
 	<include file="Variables.xml" />
-    <include file="script-skinshortcuts-includes.xml"/>
+	<include file="script-skinshortcuts-includes.xml"/>
 	<include file="Constants_1920.xml" condition="!String.IsEqual(Skin.AspectRatio,21:9)"/>
 	<include file="Constants_2560.xml" condition="String.IsEqual(Skin.AspectRatio,21:9)"/>
 	<constant name="DepthDialog">0.50</constant>
@@ -43,7 +43,7 @@
 	<constant name="list_item_height">80</constant>
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Window.IsActive(MyPlaylist.xml)</expression>
-    <expression name="fanart_visible">Window.IsActive(skinsettings) | Window.IsActive(Custom_1100_AddonLauncher.xml)</expression>
+	<expression name="fanart_visible">Window.IsActive(skinsettings) | Window.IsActive(Custom_1100_AddonLauncher.xml)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -92,7 +92,7 @@
 	</include>
 	<include name="UserRatingCircle">
 		<param name="animation">False</param>
-        <param name="userratingval">ListItem.UserRating</param>
+		<param name="userratingval">ListItem.UserRating</param>
 		<definition>
 			<control type="group">
 				<visible>!String.IsEmpty($PARAM[userratingval])</visible>
@@ -144,7 +144,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
@@ -156,7 +156,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
@@ -403,7 +403,7 @@
 					<param name="label" value="$INFO[ListItem.Premiered]" />
 				</include>
 			</control>
-            <control type="group">
+			<control type="group">
 				<top>10</top>
 				<width>100</width>
 				<include content="InfoFlag">
@@ -411,7 +411,7 @@
 					<param name="icon" value="lists/rating.png" />
 					<param name="label" value="$INFO[ListItem.Rating]" />
 				</include>
-            </control>
+			</control>
 			<control type="group">
 				<width>115</width>
 				<visible>!String.IsEmpty(ListItem.Duration) + !String.IsEqual(ListItem.DBtype,tvshow)</visible>
@@ -438,19 +438,19 @@
 			<include content="MediaFlag">
 				<param name="texture" value="$VAR[ResolutionFlagVar]" />
 				<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
-			</include>            
+			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]" />
 			</include>
-            <include content="MediaFlag">
-                <param name="texture" value="$INFO[ListItem.VideoCodec,flags/videocodec/,.png]" />
-                <param name="visible" value="!String.IsEmpty(ListItem.VideoCodec)" />
-            </include>
+			<include content="MediaFlag">
+				<param name="texture" value="$INFO[ListItem.VideoCodec,flags/videocodec/,.png]" />
+				<param name="visible" value="!String.IsEmpty(ListItem.VideoCodec)" />
+			</include>
 			<include content="InfoList">
-                <param name="width" value="1" />
+				<param name="width" value="1" />
 				<param name="item_height" value="1" />
-                <param name="list_id" value="5800" />
-            </include>
+				<param name="list_id" value="5800" />
+			</include>
 			<control type="group">
 				<top>10</top>
 				<width>100</width>
@@ -459,86 +459,86 @@
 					<param name="icon" value="overlays/set.png" />
 					<param name="label" value="$INFO[Container(5800).NumItems]" />
 				</include>
-            </control>
+			</control>
 		</control>
 	</include>
 	<include name="MediaFlagsSearch">
-        <param name="visible_pemiered">false</param>
-        <param name="istvshows">false</param>
-        <definition>
-            <control type="grouplist">
-                <orientation>horizontal</orientation>
-                <right>20</right>
-                <top>0</top>
-                <height>70</height>
-                <align>right</align>
-                <itemgap>28</itemgap>
-                <width>1900</width>
-                <usecontrolcoords>true</usecontrolcoords>
-                <animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation>
-                <control type="group">
-                    <width>150</width>
-                    <top>-5</top>
-                    <visible>$PARAM[istvshows]</visible>
-                    <include content="MediaFlag">
-                        <param name="texture" value="$VAR[MediaFlagsSearchStudioIconVar]$INFO[Container($PARAM[container_id]).ListItem.Property(studio)].png" />
-                    </include>
-                </control>
-                <control type="group">
-                    <top>10</top>
-                    <width>200</width>
-                    <visible>$PARAM[visible_pemiered]</visible>
-                    <include content="InfoFlag">
-                        <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Premiered))" />
-                        <param name="icon" value="lists/year.png" />
-                        <param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Premiered)]" />
-                    </include>
-                </control>
-                <control type="group">
-                    <top>10</top>
-                    <width>100</width>
-                    <include content="InfoFlag">
-                        <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Rating))" />
-                        <param name="icon" value="lists/rating.png" />
-                        <param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Rating)]" />
-                    </include>
-                </control>
-                <control type="group">
-                    <width>115</width>
-                    <visible>!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Duration))</visible>
-                    <control type="label">
-                        <width>115</width>
-                        <height>60</height>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[Container($PARAM[container_id]).ListItem.Property(Duration),, $LOCALIZE[31132]]</label>
-                        <font>font_flag</font>
-                    </control>
-                    <include content="MediaFlag">
-                        <param name="texture" value="flags/flag.png" />
-                    </include>
-                </control>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioChannels),flags/audiochannel/,.png]" />
-                    <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioChannels))" />
-                </include>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioCodec),flags/audiocodec/,.png]" />
-                    <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioCodec))" />
-                </include>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoResolution),flags/videoresolution/,.png]" />
-                    <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoResolution))" />
-                </include>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoAspect),flags/aspectratio/,.png]" />
-                </include>
-                <include content="MediaFlag">
-                    <param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoCodec),flags/videocodec/,.png]" />
-                    <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoCodec))" />
-                </include>
-            </control>
-        </definition>
+		<param name="visible_pemiered">false</param>
+		<param name="istvshows">false</param>
+		<definition>
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<right>20</right>
+				<top>0</top>
+				<height>70</height>
+				<align>right</align>
+				<itemgap>28</itemgap>
+				<width>1900</width>
+				<usecontrolcoords>true</usecontrolcoords>
+				<animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation>
+				<control type="group">
+					<width>150</width>
+					<top>-5</top>
+					<visible>$PARAM[istvshows]</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="$VAR[MediaFlagsSearchStudioIconVar]$INFO[Container($PARAM[container_id]).ListItem.Property(studio)].png" />
+					</include>
+				</control>
+				<control type="group">
+					<top>10</top>
+					<width>200</width>
+					<visible>$PARAM[visible_pemiered]</visible>
+					<include content="InfoFlag">
+						<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Premiered))" />
+						<param name="icon" value="lists/year.png" />
+						<param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Premiered)]" />
+					</include>
+				</control>
+				<control type="group">
+					<top>10</top>
+					<width>100</width>
+					<include content="InfoFlag">
+						<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Rating))" />
+						<param name="icon" value="lists/rating.png" />
+						<param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Rating)]" />
+					</include>
+				</control>
+				<control type="group">
+					<width>115</width>
+					<visible>!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Duration))</visible>
+					<control type="label">
+						<width>115</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Container($PARAM[container_id]).ListItem.Property(Duration),, $LOCALIZE[31132]]</label>
+						<font>font_flag</font>
+					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/flag.png" />
+					</include>
+				</control>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioChannels),flags/audiochannel/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioChannels))" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioCodec),flags/audiocodec/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioCodec))" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoResolution),flags/videoresolution/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoResolution))" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoAspect),flags/aspectratio/,.png]" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoCodec),flags/videocodec/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoCodec))" />
+				</include>
+			</control>
+		</definition>
 	</include>
 	<include name="WeatherIcon">
 		<control type="group">
@@ -561,7 +561,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="WeatherIcons">		
+	<include name="WeatherIcons">
 		<param name="left">50</param>
 		<param name="top">232</param>
 		<param name="width">300</param>
@@ -576,7 +576,7 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<texture>$PARAM[image_1]</texture>
-				<aspectratio>keep</aspectratio>				
+				<aspectratio>keep</aspectratio>
 				<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
 			</control>
 			<control type="multiimage">
@@ -586,13 +586,13 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<imagepath>$PARAM[image_multi]</imagepath>
-				<aspectratio>keep</aspectratio>				
+				<aspectratio>keep</aspectratio>
 				<timeperimage>100</timeperimage>
 				<randomize>false</randomize>
 				<fadetime>300</fadetime>
 				<pauseatend>1000</pauseatend>
 				<animation effect="fade" time="225">Visible</animation>
-                <animation effect="fade" time="225">Hidden</animation>
+				<animation effect="fade" time="225">Hidden</animation>
 				<animation effect="fade" time="150">WindowClose</animation>
 				<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
 			</control>
@@ -805,7 +805,7 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font52_title</font>
-                    <textcolor>$VAR[MainColorVar]</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<height>65</height>
 					<align>center</align>
@@ -815,7 +815,7 @@
 				<control type="label" id="$PARAM[id]">
 					<label>$PARAM[sub_label]</label>
 					<left>85</left>
-                    <textcolor>$VAR[MainColorVar]</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>center</align>
 					<height>100</height>
@@ -825,8 +825,8 @@
 		</definition>
 	</include>
 	<include name="UpDownArrows">
-        <param name="width">48</param>
-        <param name="height">24</param>
+		<param name="width">48</param>
+		<param name="height">24</param>
 		<param name="up_posy">134</param>
 		<param name="down_posy">910</param>
 		<param name="posx">936</param>
@@ -1126,7 +1126,7 @@
 						<width>auto</width>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 						<label>$INFO[System.Time]</label>
-                        <visible>!Skin.HasSetting(hide_time)</visible>
+						<visible>!Skin.HasSetting(hide_time)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -1208,14 +1208,14 @@
 		<width>auto</width>
 	</include>
 	<include name="ColoredBackgroundImages">
-        <!-- Primary Background Default -->
+		<!-- Primary Background Default -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
 		</control>
-        <!-- Secondary Background -->
+		<!-- Secondary Background -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
@@ -1228,18 +1228,18 @@
 		<param name="fanart_background">$VAR[FanartBackgroundVar]</param>
 		<param name="fanart_media"></param>
 		<definition>
-            <!-- Video -->
+			<!-- Video -->
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasVideo + !Skin.HasSetting(show_background_video) + !Slideshow.IsActive</visible>
 			</control>
-            <!-- Visualisation -->
+			<!-- Visualisation -->
 			<control type="visualisation">
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Slideshow.IsActive + !Skin.HasSetting(show_background_vis)</visible>
 			</control>
-            <!-- Backgrounds -->
+			<!-- Backgrounds -->
 			<control type="group">
 				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
@@ -1257,10 +1257,10 @@
 					<control type="group" id="32111">
 						<visible>!Control.IsVisible(502) | $EXP[infodialog_active] | $EXP[fanart_visible]</visible>
 						<control type="multiimage" id="32211">
-						<include>FullScreenDimensions</include>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<animation effect="fade" time="400">VisibleChange</animation>
+							<include>FullScreenDimensions</include>
+							<aspectratio>scale</aspectratio>
+							<fadetime>400</fadetime>
+							<animation effect="fade" time="400">VisibleChange</animation>
 							<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$INFO[Skin.String(custom_background)]</imagepath>
 							<visible>Skin.HasSetting(use_custom_bg) + !String.IsEmpty(Skin.String(custom_background)) + String.IsEmpty(Control.GetLabel(32213))</visible>
 						</control>
@@ -1270,7 +1270,7 @@
 							<control type="multiimage" id="32221">
 								<include>FullScreenDimensions</include>
 								<aspectratio>scale</aspectratio>
-								<fadetime>400</fadetime>								
+								<fadetime>400</fadetime>
 								<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[main_background]</imagepath>
 								<visible>String.IsEmpty(Skin.String(HomeFanart.path)) | String.IsEmpty(Control.GetLabel(32222))</visible>
 							</control>
@@ -1577,173 +1577,173 @@
 			</include>
 		</control>
 	</include>
-    <!-- Dialog Select Value -->
-    <include name="DialogSelectValue">
-        <definition>
-            <control type="group">
-                <centertop>50%</centertop>
-                <centerleft>50%</centerleft>
-                <height>742</height>
-                <width>1220</width>
-                <include content="DialogBackgroundCommons">
-                    <param name="width" value="1220" />
-                    <param name="height" value="742" />
-                    <param name="header_label" value="$PARAM[dialogheaderlabel]" />
-                    <param name="header_id" value="1" />
-                </include>
-                <control type="image">
-                    <left>0</left>
-                    <top>80</top>
-                    <width>920</width>
-                    <height>665</height>
-                    <texture border="40">buttons/dialogbutton-nofo.png</texture>
-                </control>
-                <control type="list" id="6">
-                    <left>20</left>
-                    <top>100</top>
-                    <width>880</width>
-                    <height>625</height>
-                    <onup>6</onup>
-                    <ondown>6</ondown>
-                    <onleft>9001</onleft>
-                    <onright>61</onright>
-                    <pagecontrol>61</pagecontrol>
-                    <scrolltime>200</scrolltime>
-                    <itemlayout height="125" width="880">
-                        <control type="image">
-                            <left>12</left>
-                            <top>7</top>
-                            <width>110</width>
-                            <height>110</height>
-                            <texture>$INFO[Listitem.Icon]</texture>
-                            <aspectratio>keep</aspectratio>
-                        </control>
-                        <control type="label">
-                            <left>135</left>
-                            <top>0</top>
-                            <right>20</right>
-                            <height>60</height>
-                            <font>font14</font>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                        <control type="textbox">
-                            <left>135</left>
-                            <top>52</top>
-                            <right>20</right>
-                            <height>65</height>
-                            <font>font12</font>
-                            <textcolor>grey</textcolor>
-                            <label>$INFO[ListItem.Label2]</label>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout height="125" width="880">
-                        <control type="image">
-                            <left>0</left>
-                            <top>0</top>
-                            <right>0</right>
-                            <bottom>0</bottom>
-                            <texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
-                            <visible>Control.HasFocus(6)</visible>
-                        </control>
-                        <control type="image">
-                            <left>12</left>
-                            <top>7</top>
-                            <width>110</width>
-                            <height>110</height>
-                            <texture>$INFO[Listitem.Icon]</texture>
-                            <aspectratio>keep</aspectratio>
-                        </control>
-                        <control type="label">
-                            <left>135</left>
-                            <top>0</top>
-                            <right>20</right>
-                            <height>60</height>
-                            <aligny>center</aligny>
-                            <scroll>true</scroll>
-                            <font>font14</font>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                        <control type="textbox">
-                            <left>135</left>
-                            <top>52</top>
-                            <right>20</right>
-                            <height>65</height>
-                            <font>font12</font>
-                            <label>$INFO[ListItem.Label2]</label>
-                        </control>
-                    </focusedlayout>
-                    <include content="$PARAM[dialogincludeselectval]">
-                        <param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
-                    </include>
-                </control>
-                <control type="scrollbar" id="61">
-                    <left>910</left>
-                    <top>100</top>
-                    <width>12</width>
-                    <height>625</height>
-                    <onleft>6</onleft>
-                    <onright>9001</onright>
-                    <orientation>vertical</orientation>
-                </control>
-                <control type="label">
-                    <left>925</left>
-                    <top>695</top>
-                    <width>275</width>
-                    <height>35</height>
-                    <font>font12</font>
-                    <align>right</align>
-                    <aligny>center</aligny>
-                    <textcolor>grey</textcolor>
-                    <label>$VAR[SelectLabelVar]</label>
-                </control>
-                <control type="grouplist" id="9001">
-                    <left>920</left>
-                    <top>80</top>
-                    <onleft>61</onleft>
-                    <itemgap>dialogbuttons_itemgap</itemgap>
-                    <onright>6</onright>
-                    <include content="DefaultDialogButton">
-                        <param name="id" value="7" />
-                        <param name="label" value="$LOCALIZE[222]" />
-                        <param name="onclick" value="PreviousMenu" />
-                    </include>
-                </control>
-            </control>
-        </definition>
-    </include>
-    <!-- Backgrounds Select Value -->
-    <include name="BackgroundsSelVal">
-        <content>
-            <item id="1">
-                <description>Reset Background</description>
-                <icon>DefaultAddon.png</icon>
-                <label>$LOCALIZE[15109]</label>
-                <label2></label2>
-                <onclick>Skin.Reset($INFO[Window(home).Property(setbackgrounds)])</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="2">
-                <description>Own Background</description>
-                <icon>DefaultFile.png</icon>
-                <label>$LOCALIZE[44111]</label>
-                <label2></label2>              
-                <onclick>Skin.SetImage($INFO[Window(home).Property(setbackgrounds)])</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-            <item id="3">
-                <description>Multi Background</description>
-                <icon>DefaultFolder.png</icon>
-                <label>$LOCALIZE[44112]</label>
-                <label2></label2>              
-                <onclick>Skin.SetPath($INFO[Window(home).Property(setbackgrounds)])</onclick>
-                <onclick>PreviousMenu</onclick>            
-            </item>
-        </content>
-    </include>
-    <!-- Lrclyrics Dialog -->
-    <include name="Lrclyrics_Dialog">
-        <include>Animation_DialogPopupOpenClose</include>
-        <depth>DepthOSD</depth>
-    </include>    
+	<!-- Dialog Select Value -->
+	<include name="DialogSelectValue">
+		<definition>
+			<control type="group">
+				<centertop>50%</centertop>
+				<centerleft>50%</centerleft>
+				<height>742</height>
+				<width>1220</width>
+				<include content="DialogBackgroundCommons">
+					<param name="width" value="1220" />
+					<param name="height" value="742" />
+					<param name="header_label" value="$PARAM[dialogheaderlabel]" />
+					<param name="header_id" value="1" />
+				</include>
+				<control type="image">
+					<left>0</left>
+					<top>80</top>
+					<width>920</width>
+					<height>665</height>
+					<texture border="40">buttons/dialogbutton-nofo.png</texture>
+				</control>
+				<control type="list" id="6">
+					<left>20</left>
+					<top>100</top>
+					<width>880</width>
+					<height>625</height>
+					<onup>6</onup>
+					<ondown>6</ondown>
+					<onleft>9001</onleft>
+					<onright>61</onright>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="125" width="880">
+						<control type="image">
+							<left>12</left>
+							<top>7</top>
+							<width>110</width>
+							<height>110</height>
+							<texture>$INFO[Listitem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>0</top>
+							<right>20</right>
+							<height>60</height>
+							<font>font14</font>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="textbox">
+							<left>135</left>
+							<top>52</top>
+							<right>20</right>
+							<height>65</height>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="125" width="880">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<right>0</right>
+							<bottom>0</bottom>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+							<visible>Control.HasFocus(6)</visible>
+						</control>
+						<control type="image">
+							<left>12</left>
+							<top>7</top>
+							<width>110</width>
+							<height>110</height>
+							<texture>$INFO[Listitem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>0</top>
+							<right>20</right>
+							<height>60</height>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<font>font14</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="textbox">
+							<left>135</left>
+							<top>52</top>
+							<right>20</right>
+							<height>65</height>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+					<include content="$PARAM[dialogincludeselectval]">
+						<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
+					</include>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>910</left>
+					<top>100</top>
+					<width>12</width>
+					<height>625</height>
+					<onleft>6</onleft>
+					<onright>9001</onright>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="label">
+					<left>925</left>
+					<top>695</top>
+					<width>275</width>
+					<height>35</height>
+					<font>font12</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<label>$VAR[SelectLabelVar]</label>
+				</control>
+				<control type="grouplist" id="9001">
+					<left>920</left>
+					<top>80</top>
+					<onleft>61</onleft>
+					<itemgap>dialogbuttons_itemgap</itemgap>
+					<onright>6</onright>
+					<include content="DefaultDialogButton">
+						<param name="id" value="7" />
+						<param name="label" value="$LOCALIZE[222]" />
+						<param name="onclick" value="PreviousMenu" />
+					</include>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- Backgrounds Select Value -->
+	<include name="BackgroundsSelVal">
+		<content>
+			<item id="1">
+				<description>Reset Background</description>
+				<icon>DefaultAddon.png</icon>
+				<label>$LOCALIZE[15109]</label>
+				<label2></label2>
+				<onclick>Skin.Reset($INFO[Window(home).Property(setbackgrounds)])</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="2">
+				<description>Own Background</description>
+				<icon>DefaultFile.png</icon>
+				<label>$LOCALIZE[44111]</label>
+				<label2></label2>
+				<onclick>Skin.SetImage($INFO[Window(home).Property(setbackgrounds)])</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+			<item id="3">
+				<description>Multi Background</description>
+				<icon>DefaultFolder.png</icon>
+				<label>$LOCALIZE[44112]</label>
+				<label2></label2>
+				<onclick>Skin.SetPath($INFO[Window(home).Property(setbackgrounds)])</onclick>
+				<onclick>PreviousMenu</onclick>
+			</item>
+		</content>
+	</include>
+	<!-- Lrclyrics Dialog -->
+	<include name="Lrclyrics_Dialog">
+		<include>Animation_DialogPopupOpenClose</include>
+		<depth>DepthOSD</depth>
+	</include>
 </includes>

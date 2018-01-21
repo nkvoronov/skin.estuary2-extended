@@ -60,13 +60,13 @@
 						</include>
 					</control>
 				</focusedlayout>
-                <itemlayout height="400" width="300" condition="Container.Content(images)">
+				<itemlayout height="400" width="300" condition="Container.Content(images)">
 					<control type="group">
 						<top>150</top>
 						<include>PictureLayout</include>
 					</control>
 				</itemlayout>
-                <focusedlayout height="400" width="300" condition="Container.Content(images)">
+				<focusedlayout height="400" width="300" condition="Container.Content(images)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<top>150</top>

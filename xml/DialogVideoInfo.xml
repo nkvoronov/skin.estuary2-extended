@@ -15,7 +15,7 @@
 				<top>150</top>
 				<left>66</left>
 				<include>OpenClose_Left</include>
-                <control type="image">
+				<control type="image">
 					<top>-16</top>
 					<left>-16</left>
 					<width>566</width>

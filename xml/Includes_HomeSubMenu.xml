@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <includes>
-    <include name="HomeSubMenu">
+	<include name="HomeSubMenu">
 		<control type="group" id="2000">
 			<left>462</left>
 			<animation type="Conditional" condition="Control.IsVisible(200000)" reversible="false">
@@ -12,49 +12,49 @@
 				<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
 			</animation>
 			<include>OpenClose_Right</include>
-            <include>skinshortcuts-template-submenus</include>
+			<include>skinshortcuts-template-submenus</include>
 		</control>
-    </include>
-    <!-- -->
-    <include name="HomeSubPanels">
-        <control type="grouplist" id="$PARAM[submain_id]001">
-            <include>WidgetGroup-Common</include>
-            <!-- Categories -->
-            <include content="Widget-SubMenu">
-                <param name="custom" value="true"/>
-                <param name="visible" value="true"/>
-                <param name="content_path" value="$PARAM[submenu_content]"/>
-                <param name="widget_header" value="$LOCALIZE[31148]"/>
-                <param name="list_id" value="$PARAM[submain_id]900"/>
-            </include>
-            <include content="$PARAM[widget_content]">
-                <param name="control_id" value="$PARAM[submain_id]" />
-                <!-- -->
-                <param name="widget1_name" value="$PARAM[widget1_name]"/>
-                <param name="widget1_type" value="$PARAM[widget1_type]"/>
-                <param name="widget1_target" value="$PARAM[widget1_target]"/>
-                <param name="widget1_path" value="$PARAM[widget1_path]"/>
-                <param name="widget2_name" value="$PARAM[widget2_name]"/>
-                <param name="widget2_type" value="$PARAM[widget2_type]"/>
-                <param name="widget2_target" value="$PARAM[widget2_target]"/>
-                <param name="widget2_path" value="$PARAM[widget2_path]"/>                    
-                <param name="widget3_name" value="$PARAM[widget3_name]"/>
-                <param name="widget3_type" value="$PARAM[widget3_type]"/>
-                <param name="widget3_target" value="$PARAM[widget3_target]"/>
-                <param name="widget3_path" value="$PARAM[widget3_path]"/>
-                <param name="widget4_name" value="$PARAM[widget4_name]"/>
-                <param name="widget4_type" value="$PARAM[widget4_type]"/>
-                <param name="widget4_target" value="$PARAM[widget4_target]"/>
-                <param name="widget4_path" value="$PARAM[widget4_path]"/>
-                <param name="widget5_name" value="$PARAM[widget5_name]"/>
-                <param name="widget5_type" value="$PARAM[widget5_type]"/>
-                <param name="widget5_target" value="$PARAM[widget5_target]"/>
-                <param name="widget5_path" value="$PARAM[widget5_path]"/>
-                <param name="widget6_name" value="$PARAM[widget6_name]"/>
-                <param name="widget6_type" value="$PARAM[widget6_type]"/>
-                <param name="widget6_target" value="$PARAM[widget6_target]"/>
-                <param name="widget6_path" value="$PARAM[widget6_path]"/>
-            </include>			
-        </control>
-    </include>
+	</include>
+	<!-- -->
+	<include name="HomeSubPanels">
+		<control type="grouplist" id="$PARAM[submain_id]001">
+			<include>WidgetGroup-Common</include>
+			<!-- Categories -->
+			<include content="Widget-SubMenu">
+				<param name="custom" value="true"/>
+				<param name="visible" value="true"/>
+				<param name="content_path" value="$PARAM[submenu_content]"/>
+				<param name="widget_header" value="$LOCALIZE[31148]"/>
+				<param name="list_id" value="$PARAM[submain_id]900"/>
+			</include>
+			<include content="$PARAM[widget_content]">
+				<param name="control_id" value="$PARAM[submain_id]" />
+				<!-- -->
+				<param name="widget1_name" value="$PARAM[widget1_name]"/>
+				<param name="widget1_type" value="$PARAM[widget1_type]"/>
+				<param name="widget1_target" value="$PARAM[widget1_target]"/>
+				<param name="widget1_path" value="$PARAM[widget1_path]"/>
+				<param name="widget2_name" value="$PARAM[widget2_name]"/>
+				<param name="widget2_type" value="$PARAM[widget2_type]"/>
+				<param name="widget2_target" value="$PARAM[widget2_target]"/>
+				<param name="widget2_path" value="$PARAM[widget2_path]"/>
+				<param name="widget3_name" value="$PARAM[widget3_name]"/>
+				<param name="widget3_type" value="$PARAM[widget3_type]"/>
+				<param name="widget3_target" value="$PARAM[widget3_target]"/>
+				<param name="widget3_path" value="$PARAM[widget3_path]"/>
+				<param name="widget4_name" value="$PARAM[widget4_name]"/>
+				<param name="widget4_type" value="$PARAM[widget4_type]"/>
+				<param name="widget4_target" value="$PARAM[widget4_target]"/>
+				<param name="widget4_path" value="$PARAM[widget4_path]"/>
+				<param name="widget5_name" value="$PARAM[widget5_name]"/>
+				<param name="widget5_type" value="$PARAM[widget5_type]"/>
+				<param name="widget5_target" value="$PARAM[widget5_target]"/>
+				<param name="widget5_path" value="$PARAM[widget5_path]"/>
+				<param name="widget6_name" value="$PARAM[widget6_name]"/>
+				<param name="widget6_type" value="$PARAM[widget6_type]"/>
+				<param name="widget6_target" value="$PARAM[widget6_target]"/>
+				<param name="widget6_path" value="$PARAM[widget6_path]"/>
+			</include>
+		</control>
+	</include>
 </includes>

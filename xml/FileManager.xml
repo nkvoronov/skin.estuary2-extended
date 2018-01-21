@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">20</defaultcontrol>
-    <onload>SetProperty(fanarthometype,filemanager,home)</onload>
+	<onload>SetProperty(fanarthometype,filemanager,home)</onload>
 	<controls>
-        <!-- Background -->
+		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="image">
 			<description>Dialog Header image</description>

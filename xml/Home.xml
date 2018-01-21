@@ -4,29 +4,29 @@
 	<!-- SkinShortcuts-->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
 	<!-- SkinHelper -->
-    <onload condition="Skin.HasSetting(smartshortcuts_playlists)">Skin.SetBool(SmartShortcuts.playlists)</onload>
-    <onload condition="!Skin.HasSetting(smartshortcuts_playlists)">Skin.Reset(SmartShortcuts.playlists)</onload>
-    <onload condition="Skin.HasSetting(smartshortcuts_favorites)">Skin.SetBool(SmartShortcuts.favorites)</onload>
-    <onload condition="!Skin.HasSetting(smartshortcuts_favorites)">Skin.Reset(SmartShortcuts.favorites)</onload>
-    <onload condition="Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
-    <onload condition="![Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)]">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
-    <onload condition="Skin.HasSetting(wall_backgrounds)">Skin.SetBool(SkinHelper.EnableWallBackgrounds)</onload>
-    <onload condition="!Skin.HasSetting(wall_backgrounds)">Skin.Reset(SkinHelper.EnableWallBackgrounds)</onload>
-    <onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
-    <onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
-    <onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
-    <onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
+	<onload condition="Skin.HasSetting(smartshortcuts_playlists)">Skin.SetBool(SmartShortcuts.playlists)</onload>
+	<onload condition="!Skin.HasSetting(smartshortcuts_playlists)">Skin.Reset(SmartShortcuts.playlists)</onload>
+	<onload condition="Skin.HasSetting(smartshortcuts_favorites)">Skin.SetBool(SmartShortcuts.favorites)</onload>
+	<onload condition="!Skin.HasSetting(smartshortcuts_favorites)">Skin.Reset(SmartShortcuts.favorites)</onload>
+	<onload condition="Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
+	<onload condition="![Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)]">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
+	<onload condition="Skin.HasSetting(wall_backgrounds)">Skin.SetBool(SkinHelper.EnableWallBackgrounds)</onload>
+	<onload condition="!Skin.HasSetting(wall_backgrounds)">Skin.Reset(SkinHelper.EnableWallBackgrounds)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay, $VAR[RandomFanartDelayVar])</onload>
     <onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
 	<!-- -->
 	<onload condition="!String.IsEmpty(Window(home).Property(fanarthometype))">ClearProperty(fanarthometype,home)</onload>
-    <onload condition="!String.IsEmpty(Window(home).Property(homebackground))">ClearProperty(homebackground,home)</onload>
-    <onload condition="!String.IsEmpty(Window(home).Property(mediaartfanart))">ClearProperty(mediaartfanart,home)</onload>
-    <onload condition="!String.IsEmpty(Window(home).Property(weatherfanartcode))">ClearProperty(weatherfanartcode,home)</onload>
-    <!-- -->
-    <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(homebackground))">ClearProperty(homebackground,home)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(mediaartfanart))">ClearProperty(mediaartfanart,home)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(weatherfanartcode))">ClearProperty(weatherfanartcode,home)</onload>
+	<!-- -->
+	<onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
-    <controls>
+	<controls>
 		<control type="button" id="200000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
@@ -46,11 +46,11 @@
 			<param name="fanart_media" value="$VAR[HomeFanartMediaVar]" />
 		</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>			
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<!-- HomeSubMenu -->
 			<include>HomeSubMenu</include>
 			<!-- HomeMainMenu -->
-			<include>HomeMainMenu</include>			
+			<include>HomeMainMenu</include>
 			<!-- BottomBar -->
 			<include>BottomBar</include>
 			<!-- TopBar -->
@@ -79,17 +79,17 @@
 					<height>36</height>
 					<texture>icons/logo-text.png</texture>
 				</control>
-                <!-- StatBar -->
-                <control type="label">
-                    <left>-90</left>
-                    <top>-15</top>
-                    <width>1920</width>
+				<!-- StatBar -->
+				<control type="label">
+					<left>-90</left>
+					<top>-15</top>
+					<width>1920</width>
 					<align>center</align>
-                    <label>$VAR[InfoBarStatsVar]</label>
-                    <font>font12</font>
-                    <visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
-                    <visible>Skin.HasSetting(enable_home_stats)</visible>				
-                </control>
+					<label>$VAR[InfoBarStatsVar]</label>
+					<font>font12</font>
+					<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+					<visible>Skin.HasSetting(enable_home_stats)</visible>
+				</control>
 			</control>
 			<!-- RSS -->
 			<control type="rss">

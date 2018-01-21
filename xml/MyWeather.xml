@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">15100</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
-    <onload>SetProperty(fanarthometype,weather,home)</onload>
+	<onload>SetProperty(fanarthometype,weather,home)</onload>
 	<menucontrol>10000</menucontrol>
 	<controls>
 		<control type="button" id="200000">
@@ -24,7 +24,7 @@
 			<onfocus>ActivateWindow(servicesettings,weather)</onfocus>
 			<onclick>noop</onclick>
 		</control>
-        <!-- Background -->
+		<!-- Background -->
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[WeatherFanartVar]" />
 		</include>

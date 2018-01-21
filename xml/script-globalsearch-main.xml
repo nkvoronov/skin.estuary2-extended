@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<control type="group" id="100">
 			<control type="label" id="110">
@@ -37,20 +37,20 @@
 				<font>-</font>
 			</control>
 			<!-- Background -->
-            <include content="DefaultBackground">
-                <param name="fanart_media" value="$VAR[SearchFanartVar]" />
-            </include>
+			<include content="DefaultBackground">
+				<param name="fanart_media" value="$VAR[SearchFanartVar]" />
+			</include>
 			<control type="group">
 				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">conditional</animation>
-                <!-- Find Categores -->
+				<!-- Find Categores -->
 				<control type="group">
-                    <top>100</top>
-                    <depth>DepthContentPanel</depth>
-                    <include>OpenClose_Left</include>
-                    <include content="ContentPanel">
-                        <param name="top" value="-15%" />
-                        <param name="width" value="522" />
-                    </include>                    
+					<top>100</top>
+					<depth>DepthContentPanel</depth>
+					<include>OpenClose_Left</include>
+					<include content="ContentPanel">
+						<param name="top" value="-15%" />
+						<param name="width" value="522" />
+					</include>
 					<control type="fixedlist" id="9000">
 						<left>0</left>
 						<top>140</top>
@@ -133,8 +133,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(110),: ]</label2>
 								<thumb>defaultmovies.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">movies</property>
-                                <property name="menu_id">$NUMBER[119]</property>
+								<property name="defaultID">movies</property>
+								<property name="menu_id">$NUMBER[119]</property>
 								<visible>Control.IsVisible(119)</visible>
 							</item>
 							<item id="2">
@@ -142,8 +142,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(120),: ]</label2>
 								<thumb>defaulttvshows.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">tvshows</property>
-                                <property name="menu_id">$NUMBER[129]</property>
+								<property name="defaultID">tvshows</property>
+								<property name="menu_id">$NUMBER[129]</property>
 								<visible>Control.IsVisible(129)</visible>
 							</item>
 							<item id="3">
@@ -151,8 +151,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(130),: ]</label2>
 								<thumb>defaultaddontvinfo.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">seasons</property>
-                                <property name="menu_id">$NUMBER[139]</property>
+								<property name="defaultID">seasons</property>
+								<property name="menu_id">$NUMBER[139]</property>
 								<visible>Control.IsVisible(139)</visible>
 							</item>
 							<item id="4">
@@ -160,8 +160,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(140),: ]</label2>
 								<thumb>defaultaddontvinfo.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">episodes</property>
-                                <property name="menu_id">$NUMBER[149]</property>
+								<property name="defaultID">episodes</property>
+								<property name="menu_id">$NUMBER[149]</property>
 								<visible>Control.IsVisible(149)</visible>
 							</item>
 							<item id="5">
@@ -169,8 +169,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(150),: ]</label2>
 								<thumb>defaultmusicvideos.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">musicvideos</property>
-                                <property name="menu_id">$NUMBER[159]</property>
+								<property name="defaultID">musicvideos</property>
+								<property name="menu_id">$NUMBER[159]</property>
 								<visible>Control.IsVisible(159)</visible>
 							</item>
 							<item id="6">
@@ -178,8 +178,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(160),: ]</label2>
 								<thumb>defaultmusicartists.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">artists</property>
-                                <property name="menu_id">$NUMBER[169]</property>
+								<property name="defaultID">artists</property>
+								<property name="menu_id">$NUMBER[169]</property>
 								<visible>Control.IsVisible(169)</visible>
 							</item>
 							<item id="7">
@@ -187,8 +187,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(170),: ]</label2>
 								<thumb>defaultmusicalbums.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">albums</property>
-                                <property name="menu_id">$NUMBER[179]</property>
+								<property name="defaultID">albums</property>
+								<property name="menu_id">$NUMBER[179]</property>
 								<visible>Control.IsVisible(179)</visible>
 							</item>
 							<item id="8">
@@ -196,8 +196,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(180),: ]</label2>
 								<thumb>defaultmusicsongs.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">songs</property>
-                                <property name="menu_id">$NUMBER[189]</property>
+								<property name="defaultID">songs</property>
+								<property name="menu_id">$NUMBER[189]</property>
 								<visible>Control.IsVisible(189)</visible>
 							</item>
 							<item id="9">
@@ -205,8 +205,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(210),: ]</label2>
 								<thumb>defaultactor.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">actors</property>
-                                <property name="menu_id">$NUMBER[219]</property>
+								<property name="defaultID">actors</property>
+								<property name="menu_id">$NUMBER[219]</property>
 								<visible>Control.IsVisible(219)</visible>
 							</item>
 							<item id="10">
@@ -214,8 +214,8 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(230),: ]</label2>
 								<thumb>defaultdirector.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">directors</property>
-                                <property name="menu_id">$NUMBER[239]</property>
+								<property name="defaultID">directors</property>
+								<property name="menu_id">$NUMBER[239]</property>
 								<visible>Control.IsVisible(239)</visible>
 							</item>
 							<item id="11">
@@ -223,1120 +223,1120 @@
 								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(220),: ]</label2>
 								<thumb>defaultaddonpvrclient.png</thumb>
 								<onclick>noop</onclick>
-                                <property name="defaultID">epg</property>
-                                <property name="menu_id">$NUMBER[229]</property>
+								<property name="defaultID">epg</property>
+								<property name="menu_id">$NUMBER[229]</property>
 								<visible>Control.IsVisible(229)</visible>
 							</item>
 						</content>
 					</control>
-                    <control type="group">
-                        <control type="image">
-                            <left>333</left>
-                            <top>1</top>
-                            <width>118</width>
-                            <height>118</height>
-                            <texture colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texture>
-                            <visible>Control.HasFocus(198)</visible>
-                        </control>
-                        <control type="image">
-                            <left>372</left>
-                            <top>40</top>
-                            <width>40</width>
-                            <height>40</height>
-                            <texture colordiffuse="FFA0A0A0">icons/search.png</texture>
-                            <visible>!Control.HasFocus(198)</visible>
-                        </control>
-                        <control type="image">
-                            <left>372</left>
-                            <top>40</top>
-                            <width>40</width>
-                            <height>40</height>
-                            <texture colordiffuse="FFF0F0F0">icons/search.png</texture>
-                            <visible>Control.HasFocus(198)</visible>
-                        </control>
-                        <control type="label" id="190">
-                            <left>77</left>
-                            <top>20</top>
-                            <width>380</width>
-                            <height>55</height>
-                            <aligny>center</aligny>
-                            <font>font13</font>
-                            <label></label>
-                        </control>
-                        <control type="label" id="191">
-                            <left>77</left>
-                            <top>50</top>
-                            <width>380</width>
-                            <height>55</height>
-                            <aligny>center</aligny>
-                            <font>font13</font>
-                            <label></label>
-                        </control>
-                        <control type="button" id="198">
-                            <left>77</left>
-                            <top>0</top>
-                            <width>500</width>
-                            <height>120</height>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <font>font14</font>
-                            <texturefocus></texturefocus>
-                            <texturenofocus></texturenofocus>
-                            <onup>9000</onup>
-                            <ondown>9000</ondown>
-                            <onleft>2000</onleft>
-                            <onright>2000</onright>
-                        </control>
-                    </control>
+					<control type="group">
+						<control type="image">
+							<left>333</left>
+							<top>1</top>
+							<width>118</width>
+							<height>118</height>
+							<texture colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texture>
+							<visible>Control.HasFocus(198)</visible>
+						</control>
+						<control type="image">
+							<left>372</left>
+							<top>40</top>
+							<width>40</width>
+							<height>40</height>
+							<texture colordiffuse="FFA0A0A0">icons/search.png</texture>
+							<visible>!Control.HasFocus(198)</visible>
+						</control>
+						<control type="image">
+							<left>372</left>
+							<top>40</top>
+							<width>40</width>
+							<height>40</height>
+							<texture colordiffuse="FFF0F0F0">icons/search.png</texture>
+							<visible>Control.HasFocus(198)</visible>
+						</control>
+						<control type="label" id="190">
+							<left>77</left>
+							<top>20</top>
+							<width>380</width>
+							<height>55</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label></label>
+						</control>
+						<control type="label" id="191">
+							<left>77</left>
+							<top>50</top>
+							<width>380</width>
+							<height>55</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label></label>
+						</control>
+						<control type="button" id="198">
+							<left>77</left>
+							<top>0</top>
+							<width>500</width>
+							<height>120</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font14</font>
+							<texturefocus></texturefocus>
+							<texturenofocus></texturenofocus>
+							<onup>9000</onup>
+							<ondown>9000</ondown>
+							<onleft>2000</onleft>
+							<onright>2000</onright>
+						</control>
+					</control>
 				</control>
-                <include>BottomBar</include>                
-                <!-- Find Content -->
-				<control type="group" id="2000">					
-                    <left>50</left>
-                    <include>OpenClose_Right</include>
-                    <!-- Movies -->
+				<include>BottomBar</include>
+				<!-- Find Content -->
+				<control type="group" id="2000">
+					<left>50</left>
+					<include>OpenClose_Right</include>
+					<!-- Movies -->
 					<control type="group" id="119">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="movies"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(1)</visible>
-                            <control type="panel" id="111">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>115</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>115</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                                            
-                                <itemlayout height="445" width="320">
-                                    <control type="group">
-                                        <left>30</left>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">                                       
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="istvshows" value="false" />
-                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="445" width="320">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <left>30</left>
-                                        <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
-                                        <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="istvshows" value="false" />
-                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                            <control type="scrollbar" id="115">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>111</onleft>
-                                <onright>111</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(115)">conditional</animation>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <visible>Container(9000).HasFocus(1)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <control type="group">
-                                <left>-30</left>
-                                <bottom>-10</bottom>
-                                <height>70</height>
-                                <width>100</width>                            
-                                <include content="InfoFlag">
-                                    <param name="visible" value="!String.IsEmpty(Container(111).NumItems)" />
-                                    <param name="icon" value="frame/item-count.png" />
-                                    <param name="label" value="$INFO[Container(111).CurrentItem,, / ]$INFO[Container(111).NumItems]" />
-                                </include>
-                            </control>                            
-                            <control type="group">                                                           
-                                <bottom>0</bottom>
-                                <height>70</height>
-                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                    <param name="container_id" value="111" />
-                                </include>
-                            </control>
-                        </control>
+						<control type="group">
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="movies"/>
+							</include>
+							<visible>Container(9000).HasFocus(1)</visible>
+							<control type="panel" id="111">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>115</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>115</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="445" width="320">
+									<control type="group">
+										<left>30</left>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="istvshows" value="false" />
+											<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="445" width="320">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<left>30</left>
+										<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
+										<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="focused" value="true" />
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="istvshows" value="false" />
+											<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="115">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>111</onleft>
+								<onright>111</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(115)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(1)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<control type="group">
+								<left>-30</left>
+								<bottom>-10</bottom>
+								<height>70</height>
+								<width>100</width>
+								<include content="InfoFlag">
+									<param name="visible" value="!String.IsEmpty(Container(111).NumItems)" />
+									<param name="icon" value="frame/item-count.png" />
+									<param name="label" value="$INFO[Container(111).CurrentItem,, / ]$INFO[Container(111).NumItems]" />
+								</include>
+							</control>
+							<control type="group">
+								<bottom>0</bottom>
+								<height>70</height>
+								<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+									<param name="container_id" value="111" />
+								</include>
+							</control>
+						</control>
 					</control>
-                    <!-- TVShows -->
+					<!-- TVShows -->
 					<control type="group" id="129">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="tvshows"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(2)</visible>
-                            <control type="panel" id="121">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>125</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>125</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout height="445" width="320">
-                                    <control type="group">
-                                        <left>30</left>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">                                       
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="fallback_image" value="DefaultTVShows.png" />
-                                            <param name="istvshows" value="true" />
-                                            <param name="totalepisodes" value="ListItem.Property(episode)" />
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="445" width="320">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <left>30</left>
-                                        <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
-                                        <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="fallback_image" value="DefaultTVShows.png" />
-                                            <param name="istvshows" value="true" />
-                                            <param name="totalepisodes" value="ListItem.Property(episode)" />
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                            <control type="scrollbar" id="125">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>121</onleft>
-                                <onright>121</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(125)">conditional</animation>
-                            </control>
-                        </control>
 						<control type="group">
-                            <visible>Container(9000).HasFocus(2)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <control type="group">
-                                <left>-30</left>
-                                <bottom>-10</bottom>
-                                <height>70</height>
-                                <width>100</width>
-                                <include content="InfoFlag">
-                                    <param name="visible" value="!String.IsEmpty(Container(121).NumItems)" />
-                                    <param name="icon" value="frame/item-count.png" />
-                                    <param name="label" value="$INFO[Container(121).CurrentItem,, / ]$INFO[Container(121).NumItems]" />
-                                </include>
-                            </control>                            
-                            <control type="group">                                
-                                <bottom>0</bottom>
-                                <height>70</height>
-                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                    <param name="container_id" value="121" />
-                                    <param name="istvshows" value="true" />
-                                    <param name="visible_pemiered" value="true" />
-                                </include>
-                            </control>
-                        </control>
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="tvshows"/>
+							</include>
+							<visible>Container(9000).HasFocus(2)</visible>
+							<control type="panel" id="121">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>125</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>125</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="445" width="320">
+									<control type="group">
+										<left>30</left>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="fallback_image" value="DefaultTVShows.png" />
+											<param name="istvshows" value="true" />
+											<param name="totalepisodes" value="ListItem.Property(episode)" />
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="445" width="320">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<left>30</left>
+										<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
+										<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="focused" value="true" />
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="fallback_image" value="DefaultTVShows.png" />
+											<param name="istvshows" value="true" />
+											<param name="totalepisodes" value="ListItem.Property(episode)" />
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="125">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>121</onleft>
+								<onright>121</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(125)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(2)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<control type="group">
+								<left>-30</left>
+								<bottom>-10</bottom>
+								<height>70</height>
+								<width>100</width>
+								<include content="InfoFlag">
+									<param name="visible" value="!String.IsEmpty(Container(121).NumItems)" />
+									<param name="icon" value="frame/item-count.png" />
+									<param name="label" value="$INFO[Container(121).CurrentItem,, / ]$INFO[Container(121).NumItems]" />
+								</include>
+							</control>
+							<control type="group">
+								<bottom>0</bottom>
+								<height>70</height>
+								<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+									<param name="container_id" value="121" />
+									<param name="istvshows" value="true" />
+									<param name="visible_pemiered" value="true" />
+								</include>
+							</control>
+						</control>
 					</control>
-                    <!-- Seasons -->
+					<!-- Seasons -->
 					<control type="group" id="139">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="seasons"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(3)</visible>
-                            <control type="panel" id="131">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>135</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>135</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout height="445" width="320">
-                                    <control type="group">
-                                        <left>30</left>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">                                       
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="fallback_image" value="DefaultTVShows.png" />
-                                            <param name="istvshows" value="false" />
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="445" width="320">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <left>30</left>
-                                        <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
-                                        <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="fallback_image" value="DefaultTVShows.png" />
-                                            <param name="istvshows" value="false" />
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                            <control type="scrollbar" id="135">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>131</onleft>
-                                <onright>131</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(135)">conditional</animation>
-                            </control>                            
-                        </control>
 						<control type="group">
-                            <visible>Container(9000).HasFocus(3)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <control type="group">
-                                <left>-30</left>
-                                <bottom>-10</bottom>
-                                <height>70</height>
-                                <width>100</width>                            
-                                <include content="InfoFlag">
-                                    <param name="visible" value="!String.IsEmpty(Container(131).NumItems)" />
-                                    <param name="icon" value="frame/item-count.png" />
-                                    <param name="label" value="$INFO[Container(131).CurrentItem,, / ]$INFO[Container(131).NumItems]" />
-                                </include>
-                            </control>                            
-                            <control type="group">                                                            
-                                <bottom>0</bottom>
-                                <height>70</height>                                
-                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                    <param name="container_id" value="131" />
-                                </include>
-                            </control>
-                        </control>
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="seasons"/>
+							</include>
+							<visible>Container(9000).HasFocus(3)</visible>
+							<control type="panel" id="131">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>135</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>135</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="445" width="320">
+									<control type="group">
+										<left>30</left>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="fallback_image" value="DefaultTVShows.png" />
+											<param name="istvshows" value="false" />
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="445" width="320">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<left>30</left>
+										<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
+										<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="focused" value="true" />
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="fallback_image" value="DefaultTVShows.png" />
+											<param name="istvshows" value="false" />
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="135">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>131</onleft>
+								<onright>131</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(135)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(3)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<control type="group">
+								<left>-30</left>
+								<bottom>-10</bottom>
+								<height>70</height>
+								<width>100</width>
+								<include content="InfoFlag">
+									<param name="visible" value="!String.IsEmpty(Container(131).NumItems)" />
+									<param name="icon" value="frame/item-count.png" />
+									<param name="label" value="$INFO[Container(131).CurrentItem,, / ]$INFO[Container(131).NumItems]" />
+								</include>
+							</control>
+							<control type="group">
+								<bottom>0</bottom>
+								<height>70</height>
+								<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+									<param name="container_id" value="131" />
+								</include>
+							</control>
+						</control>
 					</control>
-                    <!-- Episodes -->
+					<!-- Episodes -->
 					<control type="group" id="149">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="episodes"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(4)</visible>                            
-                            <control type="panel" id="141">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>145</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>145</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout height="300" width="300">
-                                    <control type="group">
-                                        <left>64</left>
-                                        <top>110</top>
-                                        <include content="InfoWallEpisodeLayout">
-                                            <param name="main_label" value="$INFO[ListItem.Property(Title)]" />
-                                            <param name="sub_label" value="$INFO[ListItem.Property(TVShowTitle)]" />
-                                            <param name="thumb_label" value="$INFO[ListItem.Property(Season),,x]$INFO[ListItem.Property(Episode)]" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="300" width="300">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,250">Focus</animation>
-                                        <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
-                                        <left>64</left>
-                                        <top>110</top>
-                                        <include content="InfoWallEpisodeLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="main_label" value="$INFO[ListItem.Property(Title)]" />
-                                            <param name="sub_label" value="$INFO[ListItem.Property(TVShowTitle)]" />
-                                            <param name="thumb_label" value="$INFO[ListItem.Property(Season),,x]$INFO[ListItem.Property(Episode)]" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                            <control type="scrollbar" id="145">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>141</onleft>
-                                <onright>141</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(145)">conditional</animation>
-                            </control>                            
-                        </control>
 						<control type="group">
-                            <visible>Container(9000).HasFocus(4)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <control type="group">                                
-                                <left>-30</left>
-                                <bottom>-10</bottom>
-                                <height>70</height>
-                                <width>100</width>                            
-                                <include content="InfoFlag">
-                                    <param name="visible" value="!String.IsEmpty(Container(141).NumItems)" />
-                                    <param name="icon" value="frame/item-count.png" />
-                                    <param name="label" value="$INFO[Container(141).CurrentItem,, / ]$INFO[Container(141).NumItems]" />
-                                </include>
-                            </control>                            
-                            <control type="group">                           
-                                <bottom>0</bottom>
-                                <height>70</height>                               
-                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                    <param name="container_id" value="141" />
-                                    <param name="visible_pemiered" value="true" />
-                                </include>
-                            </control>
-                        </control>
-					</control>
-                    <!-- MusicVideos -->
-					<control type="group" id="159">                        
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="musicvideos"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(5)</visible>
-                            <control type="panel" id="151">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>155</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>155</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout height="300" width="300">
-                                    <control type="group">
-                                        <left>64</left>
-                                        <top>110</top>
-                                        <include content="InfoWallEpisodeLayout">
-                                            <param name="main_label" value="$INFO[ListItem.Label]" />
-                                            <param name="sub_label" value="$INFO[ListItem.Property(artist)]" />
-                                            <param name="thumb_label" value="$INFO[ListItem.Property(Duration),, $LOCALIZE[31132]]" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="300" width="300">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,250">Focus</animation>
-                                        <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
-                                        <left>64</left>
-                                        <top>110</top>
-                                        <include content="InfoWallEpisodeLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="main_label" value="$INFO[ListItem.Label]" />
-                                            <param name="sub_label" value="$INFO[ListItem.Property(artist)]" />
-                                            <param name="thumb_label" value="$INFO[ListItem.Property(Duration),, $LOCALIZE[31132]]" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                            <control type="scrollbar" id="155">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>151</onleft>
-                                <onright>151</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(155)">conditional</animation>
-                            </control>                            
-                        </control>
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="episodes"/>
+							</include>
+							<visible>Container(9000).HasFocus(4)</visible>
+							<control type="panel" id="141">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>145</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>145</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="300" width="300">
+									<control type="group">
+										<left>64</left>
+										<top>110</top>
+										<include content="InfoWallEpisodeLayout">
+											<param name="main_label" value="$INFO[ListItem.Property(Title)]" />
+											<param name="sub_label" value="$INFO[ListItem.Property(TVShowTitle)]" />
+											<param name="thumb_label" value="$INFO[ListItem.Property(Season),,x]$INFO[ListItem.Property(Episode)]" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="300" width="300">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,250">Focus</animation>
+										<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
+										<left>64</left>
+										<top>110</top>
+										<include content="InfoWallEpisodeLayout">
+											<param name="focused" value="true" />
+											<param name="main_label" value="$INFO[ListItem.Property(Title)]" />
+											<param name="sub_label" value="$INFO[ListItem.Property(TVShowTitle)]" />
+											<param name="thumb_label" value="$INFO[ListItem.Property(Season),,x]$INFO[ListItem.Property(Episode)]" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="145">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>141</onleft>
+								<onright>141</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(145)">conditional</animation>
+							</control>
+						</control>
 						<control type="group">
-                            <visible>Container(9000).HasFocus(5)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <control type="group">
-                                <left>-30</left>
-                                <bottom>-10</bottom>
-                                <height>70</height>
-                                <width>100</width>                           
-                                <include content="InfoFlag">
-                                    <param name="visible" value="!String.IsEmpty(Container(151).NumItems)" />
-                                    <param name="icon" value="frame/item-count.png" />
-                                    <param name="label" value="$INFO[Container(151).CurrentItem,, / ]$INFO[Container(151).NumItems]" />
-                                </include>
-                            </control>                            
-                            <control type="group">                                                            
-                                <bottom>0</bottom>
-                                <height>70</height>                                
-                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                    <param name="container_id" value="151" />
-                                </include>
-                            </control>
-                        </control>
+							<visible>Container(9000).HasFocus(4)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<control type="group">
+								<left>-30</left>
+								<bottom>-10</bottom>
+								<height>70</height>
+								<width>100</width>
+								<include content="InfoFlag">
+									<param name="visible" value="!String.IsEmpty(Container(141).NumItems)" />
+									<param name="icon" value="frame/item-count.png" />
+									<param name="label" value="$INFO[Container(141).CurrentItem,, / ]$INFO[Container(141).NumItems]" />
+								</include>
+							</control>
+							<control type="group">
+								<bottom>0</bottom>
+								<height>70</height>
+								<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+									<param name="container_id" value="141" />
+									<param name="visible_pemiered" value="true" />
+								</include>
+							</control>
+						</control>
 					</control>
-                    <!-- Artists -->
+					<!-- MusicVideos -->
+					<control type="group" id="159">
+						<control type="group">
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="musicvideos"/>
+							</include>
+							<visible>Container(9000).HasFocus(5)</visible>
+							<control type="panel" id="151">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>155</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>155</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="300" width="300">
+									<control type="group">
+										<left>64</left>
+										<top>110</top>
+										<include content="InfoWallEpisodeLayout">
+											<param name="main_label" value="$INFO[ListItem.Label]" />
+											<param name="sub_label" value="$INFO[ListItem.Property(artist)]" />
+											<param name="thumb_label" value="$INFO[ListItem.Property(Duration),, $LOCALIZE[31132]]" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="300" width="300">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,250">Focus</animation>
+										<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
+										<left>64</left>
+										<top>110</top>
+										<include content="InfoWallEpisodeLayout">
+											<param name="focused" value="true" />
+											<param name="main_label" value="$INFO[ListItem.Label]" />
+											<param name="sub_label" value="$INFO[ListItem.Property(artist)]" />
+											<param name="thumb_label" value="$INFO[ListItem.Property(Duration),, $LOCALIZE[31132]]" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="155">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>151</onleft>
+								<onright>151</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(155)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(5)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<control type="group">
+								<left>-30</left>
+								<bottom>-10</bottom>
+								<height>70</height>
+								<width>100</width>
+								<include content="InfoFlag">
+									<param name="visible" value="!String.IsEmpty(Container(151).NumItems)" />
+									<param name="icon" value="frame/item-count.png" />
+									<param name="label" value="$INFO[Container(151).CurrentItem,, / ]$INFO[Container(151).NumItems]" />
+								</include>
+							</control>
+							<control type="group">
+								<bottom>0</bottom>
+								<height>70</height>
+								<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+									<param name="container_id" value="151" />
+								</include>
+							</control>
+						</control>
+					</control>
+					<!-- Artists -->
 					<control type="group" id="169">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="artists"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(6)</visible>
-                            <control type="panel" id="161">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                               <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>165</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>165</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout height="410" width="310">
-                                    <control type="group">
-                                        <top>150</top>
-                                        <left>40</left>
-                                        <include content="InfoWallMusicLayout">
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="istwolabel" value="false" />
-                                            <param name="fallback_image" value="DefaultMusicArtists.png" />
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="410" width="310">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
-                                        <animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
-                                        <top>150</top>
-                                        <left>40</left>
-                                        <include content="InfoWallMusicLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="istwolabel" value="false" />
-                                            <param name="fallback_image" value="DefaultMusicArtists.png" />
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                            <control type="scrollbar" id="165">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>161</onleft>
-                                <onright>161</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(165)">conditional</animation>
-                            </control>                            
-                        </control>
-                        <control type="group">
-                            <visible>Container(9000).HasFocus(6)</visible>                            
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>                            
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(161).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(161).CurrentItem,, / ]$INFO[Container(161).NumItems]" />
-                            </include>
-                        </control>
+						<control type="group">
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="artists"/>
+							</include>
+							<visible>Container(9000).HasFocus(6)</visible>
+							<control type="panel" id="161">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+							   <height>100%</height>
+								<onleft>9000</onleft>
+								<onright>165</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>165</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="410" width="310">
+									<control type="group">
+										<top>150</top>
+										<left>40</left>
+										<include content="InfoWallMusicLayout">
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="istwolabel" value="false" />
+											<param name="fallback_image" value="DefaultMusicArtists.png" />
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="410" width="310">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
+										<animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
+										<top>150</top>
+										<left>40</left>
+										<include content="InfoWallMusicLayout">
+											<param name="focused" value="true" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="istwolabel" value="false" />
+											<param name="fallback_image" value="DefaultMusicArtists.png" />
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="165">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>161</onleft>
+								<onright>161</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(165)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(6)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<left>-30</left>
+							<bottom>-10</bottom>
+							<height>70</height>
+							<width>100</width>
+							<include content="InfoFlag">
+								<param name="visible" value="!String.IsEmpty(Container(161).NumItems)" />
+								<param name="icon" value="frame/item-count.png" />
+								<param name="label" value="$INFO[Container(161).CurrentItem,, / ]$INFO[Container(161).NumItems]" />
+							</include>
+						</control>
 					</control>
-                    <!-- Albums -->
+					<!-- Albums -->
 					<control type="group" id="179">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="albums"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(7)</visible>
-                            <control type="panel" id="171">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>175</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>175</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout height="410" width="310">
-                                    <control type="group">
-                                        <top>150</top>
-                                        <left>40</left>
-                                        <include content="InfoWallMusicLayout">
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="sub_label">$INFO[ListItem.Label]</param>
-                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
-                                            <param name="istwolabel" value="true" />
-                                            <param name="fallback_image" value="DefaultMusicAlbums.png" />
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="410" width="310">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
-                                        <animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
-                                        <top>150</top>
-                                        <left>40</left>
-                                        <include content="InfoWallMusicLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="sub_label">$INFO[ListItem.Label]</param>
-                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
-                                            <param name="istwolabel" value="true" />
-                                            <param name="fallback_image" value="DefaultMusicAlbums.png" />
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                            <control type="scrollbar" id="175">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>171</onleft>
-                                <onright>171</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(175)">conditional</animation>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <visible>Container(9000).HasFocus(7)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>                                
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>                                                        
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(171).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(171).CurrentItem,, / ]$INFO[Container(171).NumItems]" />
-                            </include>
-                        </control>
+						<control type="group">
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="albums"/>
+							</include>
+							<visible>Container(9000).HasFocus(7)</visible>
+							<control type="panel" id="171">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>175</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>175</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="410" width="310">
+									<control type="group">
+										<top>150</top>
+										<left>40</left>
+										<include content="InfoWallMusicLayout">
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="sub_label">$INFO[ListItem.Label]</param>
+											<param name="main_label">$INFO[ListItem.Property(artist)]</param>
+											<param name="istwolabel" value="true" />
+											<param name="fallback_image" value="DefaultMusicAlbums.png" />
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="410" width="310">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
+										<animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
+										<top>150</top>
+										<left>40</left>
+										<include content="InfoWallMusicLayout">
+											<param name="focused" value="true" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="sub_label">$INFO[ListItem.Label]</param>
+											<param name="main_label">$INFO[ListItem.Property(artist)]</param>
+											<param name="istwolabel" value="true" />
+											<param name="fallback_image" value="DefaultMusicAlbums.png" />
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="175">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>171</onleft>
+								<onright>171</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(175)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(7)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<left>-30</left>
+							<bottom>-10</bottom>
+							<height>70</height>
+							<width>100</width>
+							<include content="InfoFlag">
+								<param name="visible" value="!String.IsEmpty(Container(171).NumItems)" />
+								<param name="icon" value="frame/item-count.png" />
+								<param name="label" value="$INFO[Container(171).CurrentItem,, / ]$INFO[Container(171).NumItems]" />
+							</include>
+						</control>
 					</control>
-                    <!-- Songs -->
+					<!-- Songs -->
 					<control type="group" id="189">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="songs"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(8)</visible>
-                            <control type="panel" id="181">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>185</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>185</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout height="410" width="310">
-                                    <control type="group">
-                                        <top>150</top>
-                                        <left>40</left>
-                                        <include content="InfoWallMusicLayout">
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="sub_label">$INFO[ListItem.Label]</param>
-                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
-                                            <param name="istwolabel" value="true" />
-                                            <param name="fallback_image" value="DefaultMusicSongs.png" />
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="410" width="310">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
-                                        <animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
-                                        <top>150</top>
-                                        <left>40</left>
-                                        <include content="InfoWallMusicLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="sub_label">$INFO[ListItem.Label]</param>
-                                            <param name="main_label">$INFO[ListItem.Property(artist)]</param>
-                                            <param name="istwolabel" value="true" />
-                                            <param name="fallback_image" value="DefaultMusicSongs.png" />
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                            <control type="scrollbar" id="185">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>181</onleft>
-                                <onright>181</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(185)">conditional</animation>
-                            </control>                            
-                        </control>
-                        <control type="group">
-                            <visible>Container(9000).HasFocus(8)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>                                                        
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(181).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(181).CurrentItem,, / ]$INFO[Container(181).NumItems]" />
-                            </include>
-                        </control>
+						<control type="group">
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="songs"/>
+							</include>
+							<visible>Container(9000).HasFocus(8)</visible>
+							<control type="panel" id="181">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>185</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>185</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="410" width="310">
+									<control type="group">
+										<top>150</top>
+										<left>40</left>
+										<include content="InfoWallMusicLayout">
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="sub_label">$INFO[ListItem.Label]</param>
+											<param name="main_label">$INFO[ListItem.Property(artist)]</param>
+											<param name="istwolabel" value="true" />
+											<param name="fallback_image" value="DefaultMusicSongs.png" />
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="410" width="310">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
+										<animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
+										<top>150</top>
+										<left>40</left>
+										<include content="InfoWallMusicLayout">
+											<param name="focused" value="true" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="sub_label">$INFO[ListItem.Label]</param>
+											<param name="main_label">$INFO[ListItem.Property(artist)]</param>
+											<param name="istwolabel" value="true" />
+											<param name="fallback_image" value="DefaultMusicSongs.png" />
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="185">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>181</onleft>
+								<onright>181</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(185)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(8)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<left>-30</left>
+							<bottom>-10</bottom>
+							<height>70</height>
+							<width>100</width>
+							<include content="InfoFlag">
+								<param name="visible" value="!String.IsEmpty(Container(181).NumItems)" />
+								<param name="icon" value="frame/item-count.png" />
+								<param name="label" value="$INFO[Container(181).CurrentItem,, / ]$INFO[Container(181).NumItems]" />
+							</include>
+						</control>
 					</control>
-                    <!-- Actors -->
+					<!-- Actors -->
 					<control type="group" id="219">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="actors"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(9)</visible>
-                            <control type="panel" id="211">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>215</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>215</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout height="445" width="320">
-                                    <control type="group">
-                                        <left>30</left>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">                                       
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="istvshows" value="false" />
-                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="445" width="320">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <left>30</left>
-                                        <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
-                                        <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="istvshows" value="false" />
-                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                            <control type="scrollbar" id="215">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>211</onleft>
-                                <onright>211</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(215)">conditional</animation>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <visible>Container(9000).HasFocus(9)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <control type="group">
-                                <left>-30</left>
-                                <bottom>-10</bottom>
-                                <height>70</height>
-                                <width>100</width>                           
-                                <include content="InfoFlag">
-                                    <param name="visible" value="!String.IsEmpty(Container(211).NumItems)" />
-                                    <param name="icon" value="frame/item-count.png" />
-                                    <param name="label" value="$INFO[Container(211).CurrentItem,, / ]$INFO[Container(211).NumItems]" />
-                                </include>
-                            </control>                            
-                            <control type="group">                                                            
-                                <bottom>0</bottom>
-                                <height>70</height>                                
-                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                    <param name="container_id" value="211" />
-                                </include>
-                            </control>
-                        </control>
+						<control type="group">
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="actors"/>
+							</include>
+							<visible>Container(9000).HasFocus(9)</visible>
+							<control type="panel" id="211">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>215</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>215</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="445" width="320">
+									<control type="group">
+										<left>30</left>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="istvshows" value="false" />
+											<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="445" width="320">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<left>30</left>
+										<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
+										<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="focused" value="true" />
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="istvshows" value="false" />
+											<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="215">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>211</onleft>
+								<onright>211</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(215)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(9)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<control type="group">
+								<left>-30</left>
+								<bottom>-10</bottom>
+								<height>70</height>
+								<width>100</width>
+								<include content="InfoFlag">
+									<param name="visible" value="!String.IsEmpty(Container(211).NumItems)" />
+									<param name="icon" value="frame/item-count.png" />
+									<param name="label" value="$INFO[Container(211).CurrentItem,, / ]$INFO[Container(211).NumItems]" />
+								</include>
+							</control>
+							<control type="group">
+								<bottom>0</bottom>
+								<height>70</height>
+								<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+									<param name="container_id" value="211" />
+								</include>
+							</control>
+						</control>
 					</control>
-                    <!-- EPG -->
+					<!-- EPG -->
 					<control type="group" id="229">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="epg"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(11)</visible>
-                            <control type="panel" id="221">
-                                <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>225</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>225</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout width="310" height="370">
-                                    <control type="group">
-                                        <left>70</left>
-                                        <top>150</top>
-                                        <control type="image">
-                                            <width>319</width>
-                                            <height>340</height>
-                                            <texture>dialogs/dialog-bg-nobo.png</texture>
-                                            <bordertexture border="21">overlays/shadow.png</bordertexture>
-                                            <bordersize>20</bordersize>
-                                        </control>
-                                        <control type="image">
-                                            <top>43</top>
-                                            <left>38</left>
-                                            <width>245</width>
-                                            <height>200</height>
-                                            <texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
-                                            <aspectratio>keep</aspectratio>
-                                        </control>
-                                        <control type="label">
-                                            <left>42</left>
-                                            <top>230</top>
-                                            <width>245</width>
-                                            <height>70</height>
-                                            <font>font12</font>
-                                            <align>center</align>
-                                            <aligny>center</aligny>
-                                            <selectedcolor>FFF0F0F0</selectedcolor>
-                                            <label>[B]$INFO[ListItem.Property(ChannelName)][/B]</label>
-                                        </control>
-                                        <control type="label">
-                                            <left>42</left>
-                                            <top>260</top>
-                                            <width>245</width>
-                                            <height>65</height>
-                                            <font>font12</font>
-                                            <align>center</align>
-                                            <aligny>center</aligny>
-                                            <selectedcolor>FFF0F0F0</selectedcolor>
-                                            <label>$INFO[ListItem.Label]</label>
-                                        </control>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout width="310" height="370">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <left>70</left>
-                                        <top>150</top>
-                                        <animation type="Focus">
-                                            <effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,240" />
-                                        </animation>
-                                        <animation type="Unfocus">
-                                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,240" />
-                                        </animation>
-                                        <control type="image">
-                                            <width>319</width>
-                                            <height>340</height>
-                                            <texture>dialogs/dialog-bg-nobo.png</texture>
-                                            <bordertexture border="21">overlays/shadow.png</bordertexture>
-                                            <bordersize>20</bordersize>
-                                        </control>
-                                        <control type="image">
-                                            <width>319</width>
-                                            <height>340</height>
-                                            <texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-                                            <bordersize>20</bordersize>
-                                            <include>Animation_FocusTextureFade</include>
-                                        </control>
-                                        <control type="image">
-                                            <top>43</top>
-                                            <left>38</left>
-                                            <width>245</width>
-                                            <height>200</height>
-                                            <texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
-                                            <aspectratio>keep</aspectratio>
-                                        </control>
-                                        <control type="label">
-                                            <left>42</left>
-                                            <top>230</top>
-                                            <width>245</width>
-                                            <height>70</height>
-                                            <font>font12</font>
-                                            <align>center</align>
-                                            <aligny>center</aligny>
-                                            <selectedcolor>FFF0F0F0</selectedcolor>
-                                            <label>[B]$INFO[ListItem.Property(ChannelName)][/B]</label>
-                                        </control>
-                                        <control type="label">
-                                            <left>42</left>
-                                            <top>260</top>
-                                            <width>245</width>
-                                            <height>65</height>
-                                            <font>font12</font>
-                                            <align>center</align>
-                                            <aligny>center</aligny>
-                                            <selectedcolor>FFF0F0F0</selectedcolor>
-                                            <label>$INFO[ListItem.Label]</label>
-                                        </control>
-                                    </control>
-                                </focusedlayout>                            
-                            </control>
-                            <control type="scrollbar" id="225">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>221</onleft>
-                                <onright>221</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(225)">conditional</animation>
-                            </control>                            
-                        </control>
-                        <control type="group">
-                            <visible>Container(9000).HasFocus(11)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation> 
-                            <left>-30</left>
-                            <bottom>-10</bottom>
-                            <height>70</height>
-                            <width>100</width>                                                           
-                            <include content="InfoFlag">
-                                <param name="visible" value="!String.IsEmpty(Container(221).NumItems)" />
-                                <param name="icon" value="frame/item-count.png" />
-                                <param name="label" value="$INFO[Container(221).CurrentItem,, / ]$INFO[Container(221).NumItems]" />
-                            </include>
-                        </control>
+						<control type="group">
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="epg"/>
+							</include>
+							<visible>Container(9000).HasFocus(11)</visible>
+							<control type="panel" id="221">
+								<left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>225</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>225</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout width="310" height="370">
+									<control type="group">
+										<left>70</left>
+										<top>150</top>
+										<control type="image">
+											<width>319</width>
+											<height>340</height>
+											<texture>dialogs/dialog-bg-nobo.png</texture>
+											<bordertexture border="21">overlays/shadow.png</bordertexture>
+											<bordersize>20</bordersize>
+										</control>
+										<control type="image">
+											<top>43</top>
+											<left>38</left>
+											<width>245</width>
+											<height>200</height>
+											<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
+											<aspectratio>keep</aspectratio>
+										</control>
+										<control type="label">
+											<left>42</left>
+											<top>230</top>
+											<width>245</width>
+											<height>70</height>
+											<font>font12</font>
+											<align>center</align>
+											<aligny>center</aligny>
+											<selectedcolor>FFF0F0F0</selectedcolor>
+											<label>[B]$INFO[ListItem.Property(ChannelName)][/B]</label>
+										</control>
+										<control type="label">
+											<left>42</left>
+											<top>260</top>
+											<width>245</width>
+											<height>65</height>
+											<font>font12</font>
+											<align>center</align>
+											<aligny>center</aligny>
+											<selectedcolor>FFF0F0F0</selectedcolor>
+											<label>$INFO[ListItem.Label]</label>
+										</control>
+									</control>
+								</itemlayout>
+								<focusedlayout width="310" height="370">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<left>70</left>
+										<top>150</top>
+										<animation type="Focus">
+											<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,240" />
+										</animation>
+										<animation type="Unfocus">
+											<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,240" />
+										</animation>
+										<control type="image">
+											<width>319</width>
+											<height>340</height>
+											<texture>dialogs/dialog-bg-nobo.png</texture>
+											<bordertexture border="21">overlays/shadow.png</bordertexture>
+											<bordersize>20</bordersize>
+										</control>
+										<control type="image">
+											<width>319</width>
+											<height>340</height>
+											<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+											<bordersize>20</bordersize>
+											<include>Animation_FocusTextureFade</include>
+										</control>
+										<control type="image">
+											<top>43</top>
+											<left>38</left>
+											<width>245</width>
+											<height>200</height>
+											<texture fallback="DefaultTVShows.png">$INFO[ListItem.Icon]</texture>
+											<aspectratio>keep</aspectratio>
+										</control>
+										<control type="label">
+											<left>42</left>
+											<top>230</top>
+											<width>245</width>
+											<height>70</height>
+											<font>font12</font>
+											<align>center</align>
+											<aligny>center</aligny>
+											<selectedcolor>FFF0F0F0</selectedcolor>
+											<label>[B]$INFO[ListItem.Property(ChannelName)][/B]</label>
+										</control>
+										<control type="label">
+											<left>42</left>
+											<top>260</top>
+											<width>245</width>
+											<height>65</height>
+											<font>font12</font>
+											<align>center</align>
+											<aligny>center</aligny>
+											<selectedcolor>FFF0F0F0</selectedcolor>
+											<label>$INFO[ListItem.Label]</label>
+										</control>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="225">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>221</onleft>
+								<onright>221</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(225)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(11)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<left>-30</left>
+							<bottom>-10</bottom>
+							<height>70</height>
+							<width>100</width>
+							<include content="InfoFlag">
+								<param name="visible" value="!String.IsEmpty(Container(221).NumItems)" />
+								<param name="icon" value="frame/item-count.png" />
+								<param name="label" value="$INFO[Container(221).CurrentItem,, / ]$INFO[Container(221).NumItems]" />
+							</include>
+						</control>
 					</control>
-                    <!-- Directors -->
-                    <control type="group" id="239">
-                        <control type="group">
-                            <include content="Visible_Right_Delayed">
-                                <param name="id" value="directors"/>
-                            </include>
-                            <visible>Container(9000).HasFocus(10)</visible>
-                            <control type="panel" id="231">
-                               <left>490</left>
-                                <top>0</top>
-                                <right>15</right>
-                                <height>100%</height>
-                                <onleft>9000</onleft>
-                                <onright>235</onright>
-                                <onup>2000</onup>
-                                <ondown>2000</ondown>
-                                <viewtype label="31101">icon</viewtype>
-                                <preloaditems>2</preloaditems>
-                                <pagecontrol>235</pagecontrol>
-                                <scrolltime tween="cubic" easing="out">500</scrolltime>                                
-                                <itemlayout height="445" width="320">
-                                    <control type="group">
-                                        <left>30</left>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">                                       
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="istvshows" value="false" />
-                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </itemlayout>
-                                <focusedlayout height="445" width="320">
-                                    <control type="group">
-                                        <depth>DepthContentPopout</depth>
-                                        <left>30</left>
-                                        <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
-                                        <animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
-                                        <top>120</top>
-                                        <include content="InfoWallMovieLayout">
-                                            <param name="focused" value="true" />
-                                            <param name="value_poster" value="ListItem.Property(art(poster))" />
-                                            <param name="userratingval" value="ListItem.Property(userrating)" />
-                                            <param name="percentplayed" value="ListItem.Property(percentplayed)" />
-                                            <param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
-                                            <param name="istvshows" value="false" />
-                                            <param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-                                            <param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                                        </include>
-                                    </control>
-                                </focusedlayout>
-                            </control>
-                             <control type="scrollbar" id="235">
-                                <right>0</right>
-                                <top>80</top>
-                                <width>13</width>
-                                <bottom>80</bottom>
-                                <onleft>231</onleft>
-                                <onright>231</onright>
-                                <orientation>vertical</orientation>
-                                <texturesliderbackground />
-                                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-                                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-                                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(235)">conditional</animation>
-                            </control>                           
-                        </control>
-                        <control type="group">
-                            <visible>Container(9000).HasFocus(10)</visible>
-                            <depth>DepthBars</depth>
-                            <animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-                            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                            <control type="group">
-                                <left>-30</left>
-                                <bottom>-10</bottom>
-                                <height>70</height>
-                                <width>100</width>                            
-                                <include content="InfoFlag">
-                                    <param name="visible" value="!String.IsEmpty(Container(231).NumItems)" />
-                                    <param name="icon" value="frame/item-count.png" />
-                                    <param name="label" value="$INFO[Container(231).CurrentItem,, / ]$INFO[Container(231).NumItems]" />
-                                </include>
-                            </control>                            
-                            <control type="group">                                
-                                <bottom>0</bottom>
-                                <height>70</height>                                
-                                <include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
-                                    <param name="container_id" value="231" />
-                                </include>
-                            </control>
-                        </control>
-                    </control>
+					<!-- Directors -->
+					<control type="group" id="239">
+						<control type="group">
+							<include content="Visible_Right_Delayed">
+								<param name="id" value="directors"/>
+							</include>
+							<visible>Container(9000).HasFocus(10)</visible>
+							<control type="panel" id="231">
+							   <left>490</left>
+								<top>0</top>
+								<right>15</right>
+								<height>100%</height>
+								<onleft>9000</onleft>
+								<onright>235</onright>
+								<onup>2000</onup>
+								<ondown>2000</ondown>
+								<viewtype label="31101">icon</viewtype>
+								<preloaditems>2</preloaditems>
+								<pagecontrol>235</pagecontrol>
+								<scrolltime tween="cubic" easing="out">500</scrolltime>
+								<itemlayout height="445" width="320">
+									<control type="group">
+										<left>30</left>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="istvshows" value="false" />
+											<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</itemlayout>
+								<focusedlayout height="445" width="320">
+									<control type="group">
+										<depth>DepthContentPopout</depth>
+										<left>30</left>
+										<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
+										<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
+										<top>120</top>
+										<include content="InfoWallMovieLayout">
+											<param name="focused" value="true" />
+											<param name="value_poster" value="ListItem.Property(art(poster))" />
+											<param name="userratingval" value="ListItem.Property(userrating)" />
+											<param name="percentplayed" value="ListItem.Property(percentplayed)" />
+											<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+											<param name="istvshows" value="false" />
+											<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
+											<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+										</include>
+									</control>
+								</focusedlayout>
+							</control>
+							 <control type="scrollbar" id="235">
+								<right>0</right>
+								<top>80</top>
+								<width>13</width>
+								<bottom>80</bottom>
+								<onleft>231</onleft>
+								<onright>231</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground />
+								<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+								<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+								<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(235)">conditional</animation>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9000).HasFocus(10)</visible>
+							<depth>DepthBars</depth>
+							<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+							<control type="group">
+								<left>-30</left>
+								<bottom>-10</bottom>
+								<height>70</height>
+								<width>100</width>
+								<include content="InfoFlag">
+									<param name="visible" value="!String.IsEmpty(Container(231).NumItems)" />
+									<param name="icon" value="frame/item-count.png" />
+									<param name="label" value="$INFO[Container(231).CurrentItem,, / ]$INFO[Container(231).NumItems]" />
+								</include>
+							</control>
+							<control type="group">
+								<bottom>0</bottom>
+								<height>70</height>
+								<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlagsSearch">
+									<param name="container_id" value="231" />
+								</include>
+							</control>
+						</control>
+					</control>
 				</control>
-                <!-- Not Found -->
+				<!-- Not Found -->
 				<control type="label" id="199">
 					<left>436</left>
 					<top>0</top>
@@ -1347,32 +1347,32 @@
 					<font>font_MainMenu</font>
 					<label>$LOCALIZE[284]</label>
 				</control>
-                <include content="TopBar">
-                    <param name="breadcrumbs_label" value="" />
-                </include>                
-                <!-- Logo -->
-                <control type="group">
-                    <depth>DepthBars</depth>
-                    <animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">conditional</animation>
-                    <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-                    <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                    <top>30</top>
-                    <left>90</left>
-                    <control type="image">
-                        <aspectratio>keep</aspectratio>
-                        <width>56</width>
-                        <height>56</height>
-                        <texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>40</left>
-                        <top>10</top>
-                        <aspectratio>keep</aspectratio>
-                        <width>192</width>
-                        <height>36</height>
-                        <texture>icons/logo-text.png</texture>
-                    </control>
-                </control>
+				<include content="TopBar">
+					<param name="breadcrumbs_label" value="" />
+				</include>
+				<!-- Logo -->
+				<control type="group">
+					<depth>DepthBars</depth>
+					<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">conditional</animation>
+					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+					<top>30</top>
+					<left>90</left>
+					<control type="image">
+						<aspectratio>keep</aspectratio>
+						<width>56</width>
+						<height>56</height>
+						<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+					</control>
+					<control type="image">
+						<left>40</left>
+						<top>10</top>
+						<aspectratio>keep</aspectratio>
+						<width>192</width>
+						<height>36</height>
+						<texture>icons/logo-text.png</texture>
+					</control>
+				</control>
 			</control>
 		</control>
 	</controls>

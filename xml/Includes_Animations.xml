@@ -34,14 +34,14 @@
 		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 	</include>
 	<include name="Visible_Right_Delayed">
-        <param name="home">false</param>
+		<param name="home">false</param>
 		<definition>
 			<include condition="Skin.HasSetting(no_slide_animations)">Visible_Fade</include>
-            <include content="Vis_FadeSlide_Right_Delayed" condition="!Skin.HasSetting(no_slide_animations)">
-                <param name="home" value="$PARAM[home]" />
+			<include content="Vis_FadeSlide_Right_Delayed" condition="!Skin.HasSetting(no_slide_animations)">
+				<param name="home" value="$PARAM[home]" />
 				<param name="id" value="$PARAM[id]" />
 			</include>
-        </definition>
+		</definition>
 	</include>
 	<include name="Vis_FadeSlide_Right_Delayed">
 		<animation type="Conditional" condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),$PARAM[id]) + !$PARAM[home]">

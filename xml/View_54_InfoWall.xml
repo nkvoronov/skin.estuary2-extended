@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="PictureLayout">
-        <param name="fallback_image">DefaultFolder.png</param>
+		<param name="fallback_image">DefaultFolder.png</param>
 		<param name="focused">false</param>
 		<definition>
 			<control type="image">
@@ -31,8 +31,8 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
-                <visible>!ListItem.IsParentFolder</visible>
-			</control>        
+				<visible>!ListItem.IsParentFolder</visible>
+			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -41,9 +41,9 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
-                <visible>ListItem.IsParentFolder</visible>
-			</control> 
-            <control type="label">
+				<visible>ListItem.IsParentFolder</visible>
+			</control>
+			<control type="label">
 				<left>28</left>
 				<top>289</top>
 				<width>262</width>
@@ -51,10 +51,10 @@
 				<font>font12</font>
 				<align>center</align>
 				<aligny>center</aligny>
-                <label>$INFO[ListItem.Label]</label>
-                <scroll>$PARAM[focused]</scroll>
-                <visible>!ListItem.IsParentFolder</visible>
-            </control>
+				<label>$INFO[ListItem.Label]</label>
+				<scroll>$PARAM[focused]</scroll>
+				<visible>!ListItem.IsParentFolder</visible>
+			</control>
 		</definition>
 	</include>
 	<include name="InfoWallMusicLayout">
@@ -63,8 +63,8 @@
 		<param name="sub_label">$INFO[ListItem.Title]</param>
 		<param name="single_label">$INFO[ListItem.Label]</param>
 		<param name="focused">false</param>
-        <param name="userratingval">ListItem.UserRating</param>
-        <param name="istwolabel">[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</param>
+		<param name="userratingval">ListItem.UserRating</param>
+		<param name="istwolabel">[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</param>
 		<definition>
 			<control type="image">
 				<top>0</top>
@@ -93,7 +93,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
-                <visible>!ListItem.IsParentFolder</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -103,7 +103,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
-                <visible>ListItem.IsParentFolder</visible>
+				<visible>ListItem.IsParentFolder</visible>
 			</control>
 			<control type="textbox">
 				<left>28</left>
@@ -115,7 +115,7 @@
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
 				<visible>!$PARAM[istwolabel]</visible>
-                <visible>!ListItem.IsParentFolder</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="group">
 				<visible>$PARAM[istwolabel]</visible>
@@ -143,9 +143,9 @@
 			<control type="group">
 				<left>133</left>
 				<top>2</top>
-                <include content="UserRatingCircle">
-                    <param name="userratingval" value="$PARAM[userratingval]" />
-                </include>
+				<include content="UserRatingCircle">
+					<param name="userratingval" value="$PARAM[userratingval]" />
+				</include>
 			</control>
 		</definition>
 	</include>
@@ -155,10 +155,10 @@
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
 		<param name="fallback_image">DefaultTVShows.png</param>
 		<param name="focused">false</param>
-        <param name="userratingval">ListItem.UserRating</param>
-        <param name="percentplayed">ListItem.PercentPlayed</param>
-        <param name="ispercentplayed">Integer.IsEqual(ListItem.PercentPlayed,0)</param>
-        <param name="watchedicon">$VAR[WallWatchedIconVar]</param>
+		<param name="userratingval">ListItem.UserRating</param>
+		<param name="percentplayed">ListItem.PercentPlayed</param>
+		<param name="ispercentplayed">Integer.IsEqual(ListItem.PercentPlayed,0)</param>
+		<param name="watchedicon">$VAR[WallWatchedIconVar]</param>
 		<definition>
 			<control type="image">
 				<top>10</top>
@@ -187,7 +187,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
-                <visible>!ListItem.IsParentFolder</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -197,7 +197,7 @@
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
-                <visible>ListItem.IsParentFolder</visible>
+				<visible>ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image">
 				<left>136</left>
@@ -226,7 +226,7 @@
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>Window.IsActive(videos)</visible>
-                <visible>!ListItem.IsParentFolder</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(videos)</visible>
@@ -257,7 +257,7 @@
 				<width>32</width>
 				<height>32</height>
 				<texture>$PARAM[watchedicon]</texture>
-			</control>            
+			</control>
 			<control type="progress">
 				<left>20</left>
 				<top>258</top>
@@ -271,203 +271,203 @@
 			<control type="group">
 				<left>134</left>
 				<top>8</top>
-                <include content="UserRatingCircle">
-                    <param name="userratingval" value="$PARAM[userratingval]" />
-                </include>
+				<include content="UserRatingCircle">
+					<param name="userratingval" value="$PARAM[userratingval]" />
+				</include>
 			</control>
 		</definition>
 	</include>
-	<include name="InfoWallMovieLayout">		
+	<include name="InfoWallMovieLayout">
 		<param name="focused">false</param>
-        <param name="fallback_image">DefaultMovies.png</param>
-        <param name="poster">$VAR[ListPosterVar]</param>
-        <param name="value_poster">ListItem.Art(poster)</param>
-        <param name="noposter">$INFO[ListItem.Icon]</param>
-        <param name="userratingval">ListItem.UserRating</param>
-        <param name="percentplayed">ListItem.PercentPlayed</param>
-        <param name="ispercentplayed">Integer.IsEqual(ListItem.PercentPlayed,0)</param>
-        <param name="istvshows">String.IsEqual(ListItem.DBtype,tvshow)</param>
-        <param name="totalepisodes">ListItem.Property(TotalEpisodes)</param>
-        <param name="watchedepisodes">ListItem.Property(WatchedEpisodes)</param>
-        <param name="overlaybg">Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</param>
-        <param name="watchedicon">$VAR[WallWatchedIconVar]</param>
-        <param name="width">298</param>
-        <param name="height">408</param>    
-        <param name="border">true</param>
+		<param name="fallback_image">DefaultMovies.png</param>
+		<param name="poster">$VAR[ListPosterVar]</param>
+		<param name="value_poster">ListItem.Art(poster)</param>
+		<param name="noposter">$INFO[ListItem.Icon]</param>
+		<param name="userratingval">ListItem.UserRating</param>
+		<param name="percentplayed">ListItem.PercentPlayed</param>
+		<param name="ispercentplayed">Integer.IsEqual(ListItem.PercentPlayed,0)</param>
+		<param name="istvshows">String.IsEqual(ListItem.DBtype,tvshow)</param>
+		<param name="totalepisodes">ListItem.Property(TotalEpisodes)</param>
+		<param name="watchedepisodes">ListItem.Property(WatchedEpisodes)</param>
+		<param name="overlaybg">Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</param>
+		<param name="watchedicon">$VAR[WallWatchedIconVar]</param>
+		<param name="width">298</param>
+		<param name="height">408</param>
+		<param name="border">true</param>
 		<param name="tvshows">true</param>
 		<param name="watched">true</param>
 		<param name="rating">true</param>
 		<param name="progress">true</param>
 		<definition>
-            <control type="group">
-                <left>15</left>
-                <top>-10</top>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-                <control type="group">
-                    <visible>String.IsEmpty($PARAM[value_poster])</visible>
-                    <control type="image">
-                        <top>4</top>
-                        <left>4</left>
-                        <right>4</right>
-                        <bottom>4</bottom>
-                        <texture>dialogs/dialog-bg-nobo.png</texture>
-                        <bordertexture border="21">overlays/shadow.png</bordertexture>
-                        <bordersize>20</bordersize>
-                        <visible>$PARAM[border]</visible>
-                    </control>
-                    <control type="image">
-                        <top>4</top>
-                        <left>4</left>
-                        <right>4</right>
-                        <bottom>4</bottom>
-                        <texture>dialogs/dialog-bg-nobo.png</texture>
-                        <bordersize>20</bordersize>
-                        <visible>!$PARAM[border]</visible>
-                    </control>
-                    <control type="image">
-                        <top>4</top>
-                        <left>4</left>
-                        <right>4</right>
-                        <bottom>4</bottom>
-                        <texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-                        <bordersize>20</bordersize>
-                        <visible>$PARAM[focused]</visible>
-                        <include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-                    </control>
-                    <control type="textbox">
-                        <left>24</left>
-                        <right>24</right>
-                        <bottom>40</bottom>
-                        <height>50</height>
-                        <font>font27</font>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
-                        <autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
-                        <visible>!ListItem.IsParentFolder</visible>
-                    </control>
-                    <control type="image">
-                        <centerleft>50%</centerleft>
-                        <centertop>50%</centertop> 
-                        <left>8</left>
-                        <right>8</right>
-                        <top>8</top>
-                        <height>80%</height>
-                        <texture fallback="$PARAM[fallback_image]" background="true">$PARAM[noposter]</texture>
-                        <aspectratio>keep</aspectratio>
-                        <bordersize>20</bordersize>
-                        <visible>!ListItem.IsParentFolder</visible>
-                    </control>
-                    <control type="image">
-                        <top>4</top>
-                        <left>4</left>
-                        <right>4</right>
-                        <bottom>4</bottom>
-                        <texture fallback="$PARAM[fallback_image]" background="true">$PARAM[noposter]</texture>
-                        <aspectratio>keep</aspectratio>
-                        <bordersize>20</bordersize>
-                        <visible>ListItem.IsParentFolder</visible>
-                    </control>
-                </control>
-                <control type="group">
-                    <visible>!String.IsEmpty($PARAM[value_poster])</visible>
-                    <control type="image">
-                        <texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-                        <bordertexture border="21">overlays/shadow.png</bordertexture>
-                        <bordersize>20</bordersize>
-                        <visible>$PARAM[focused]</visible>
-                        <include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-                    </control>
-                    <control type="image">
-                        <top>4</top>
-                        <left>4</left>
-                        <right>4</right>
-                        <bottom>4</bottom>
-                        <texture background="true">$PARAM[poster]</texture>
-                        <aspectratio>scale</aspectratio>
-                        <bordertexture border="21">overlays/shadow.png</bordertexture>
-                        <bordersize>20</bordersize>
-                        <visible>$PARAM[border]</visible>
-                    </control>
-                    <control type="image">
-                        <top>4</top>
-                        <left>4</left>
-                        <right>4</right>
-                        <bottom>4</bottom>
-                        <texture background="true">$PARAM[poster]</texture>
-                        <aspectratio>scale</aspectratio>
-                        <bordersize>20</bordersize>
-                        <visible>!$PARAM[border]</visible>
-                    </control>
-                    <control type="image">
-                        <left>24</left>
-                        <bottom>24</bottom>
-                        <width>80</width>
-                        <height>80</height>
-                        <texture>overlays/overlay-bg.png</texture>
-                        <visible>$PARAM[overlaybg]</visible>
-						<visible>$PARAM[watched]</visible>
-                    </control>
-                </control>
-                <control type="group">
-                    <visible>$PARAM[istvshows] + !String.IsEmpty($PARAM[totalepisodes])</visible>
-					<visible>$PARAM[tvshows]</visible>
-                    <control type="image">
-                        <left>24</left>
+			<control type="group">
+				<left>15</left>
+				<top>-10</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<control type="group">
+					<visible>String.IsEmpty($PARAM[value_poster])</visible>
+					<control type="image">
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture>dialogs/dialog-bg-nobo.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>$PARAM[border]</visible>
+					</control>
+					<control type="image">
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture>dialogs/dialog-bg-nobo.png</texture>
+						<bordersize>20</bordersize>
+						<visible>!$PARAM[border]</visible>
+					</control>
+					<control type="image">
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+						<bordersize>20</bordersize>
+						<visible>$PARAM[focused]</visible>
+						<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+					</control>
+					<control type="textbox">
+						<left>24</left>
 						<right>24</right>
-                        <bottom>24</bottom>
-                        <height>50</height>
-                        <texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
-                        <visible>!String.IsEmpty($PARAM[value_poster])</visible>
-                    </control>
-                    <control type="label">
-                        <right>65</right>
-                        <width>244</width>
+						<bottom>40</bottom>
+						<height>50</height>
+						<font>font27</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>80%</height>
+						<texture fallback="$PARAM[fallback_image]" background="true">$PARAM[noposter]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="image">
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture fallback="$PARAM[fallback_image]" background="true">$PARAM[noposter]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>ListItem.IsParentFolder</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!String.IsEmpty($PARAM[value_poster])</visible>
+					<control type="image">
+						<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>$PARAM[focused]</visible>
+						<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+					</control>
+					<control type="image">
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture background="true">$PARAM[poster]</texture>
+						<aspectratio>scale</aspectratio>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>$PARAM[border]</visible>
+					</control>
+					<control type="image">
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture background="true">$PARAM[poster]</texture>
+						<aspectratio>scale</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>!$PARAM[border]</visible>
+					</control>
+					<control type="image">
+						<left>24</left>
+						<bottom>24</bottom>
+						<width>80</width>
+						<height>80</height>
+						<texture>overlays/overlay-bg.png</texture>
+						<visible>$PARAM[overlaybg]</visible>
+						<visible>$PARAM[watched]</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>$PARAM[istvshows] + !String.IsEmpty($PARAM[totalepisodes])</visible>
+					<visible>$PARAM[tvshows]</visible>
+					<control type="image">
+						<left>24</left>
+						<right>24</right>
+						<bottom>24</bottom>
+						<height>50</height>
+						<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+						<visible>!String.IsEmpty($PARAM[value_poster])</visible>
+					</control>
+					<control type="label">
+						<right>65</right>
+						<width>244</width>
 						<height>24</height>
 						<bottom>34</bottom>
-                        <label>$INFO[$PARAM[watchedepisodes]]$INFO[$PARAM[totalepisodes], / ,]</label>
-                        <font>font20_title</font>
-                        <shadowcolor>text_shadow</shadowcolor>
-                        <align>right</align>
-                    </control>
-                    <control type="image">
+						<label>$INFO[$PARAM[watchedepisodes]]$INFO[$PARAM[totalepisodes], / ,]</label>
+						<font>font20_title</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<align>right</align>
+					</control>
+					<control type="image">
 						<right>32</right>
-                        <width>24</width>
-                        <height>24</height>
+						<width>24</width>
+						<height>24</height>
 						<bottom>32</bottom>
-                        <texture>lists/played-total.png</texture>
-                    </control>
-                </control>
-                <control type="image">
-                    <left>24</left>
-                    <bottom>24</bottom>
-                    <width>32</width>
-                    <height>32</height>
-                    <texture>$PARAM[watchedicon]</texture>
+						<texture>lists/played-total.png</texture>
+					</control>
+				</control>
+				<control type="image">
+					<left>24</left>
+					<bottom>24</bottom>
+					<width>32</width>
+					<height>32</height>
+					<texture>$PARAM[watchedicon]</texture>
 					<visible>$PARAM[watched]</visible>
-                </control>
-                <control type="progress">
-                    <left>24</left>
-                    <right>24</right>
-                    <bottom>44</bottom>
-                    <height>1</height>
-                    <texturebg></texturebg>
-                    <midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-                    <info>$PARAM[percentplayed]</info>
-                    <visible>!$PARAM[ispercentplayed]</visible>
+				</control>
+				<control type="progress">
+					<left>24</left>
+					<right>24</right>
+					<bottom>44</bottom>
+					<height>1</height>
+					<texturebg></texturebg>
+					<midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+					<info>$PARAM[percentplayed]</info>
+					<visible>!$PARAM[ispercentplayed]</visible>
 					<visible>$PARAM[progress]</visible>
-                </control>
-                <control type="group">
+				</control>
+				<control type="group">
 					<visible>$PARAM[rating]</visible>
-                    <centerleft>50%</centerleft>
-                    <width>44</width>
-                    <top>4</top>
-                    <include content="UserRatingCircle">
-                        <param name="userratingval" value="$PARAM[userratingval]" />
-                    </include>
-                </control>
-            </control>
+					<centerleft>50%</centerleft>
+					<width>44</width>
+					<top>4</top>
+					<include content="UserRatingCircle">
+						<param name="userratingval" value="$PARAM[userratingval]" />
+					</include>
+				</control>
+			</control>
 		</definition>
 	</include>
 	<include name="View_54_InfoWall">
