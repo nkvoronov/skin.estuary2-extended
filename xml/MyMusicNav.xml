@@ -4,6 +4,7 @@
 	<backgroundcolor>background</backgroundcolor>
 	<menucontrol>9000</menucontrol>
 	<onload>SetProperty(fanarthometype,music,home)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/music.jpg,home)</onload>
 	<views>50,52,53,54,55,58,500</views>
 	<controls>
 		<!-- Background -->

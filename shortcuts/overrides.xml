@@ -29,7 +29,7 @@
 	<backgrounddefault labelID="music">special://skin/extras/home-images/music.jpg</backgrounddefault>
 	<backgrounddefault labelID="addons">special://skin/extras/home-images/addons.jpg</backgrounddefault>
 	<backgrounddefault labelID="favorites">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
-	<backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>
+	<backgrounddefault labelID="dvd">special://skin/extras/home-images/dvd.jpg</backgrounddefault>
 	<!-- Additionnal Widgets -->
 	<widget label="43081" icon="resource://resource.images.skinicons.estuary/weather.png">WeatherWidget</widget>
 	<widget label="43082" icon="resource://resource.images.skinicons.estuary/livetv.png">TVWidget</widget>

@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">15100</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<onload>SetProperty(fanarthometype,weather,home)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/weather.jpg,home)</onload>
 	<menucontrol>10000</menucontrol>
 	<controls>
 		<control type="button" id="200000">
