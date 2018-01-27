@@ -677,12 +677,12 @@
 			</control>
 		</control>
 	</include>
-	<!-- Disc 21000 -->
+	<!-- DVD 21000 -->
 	<include name="DiscHomeWidgets">
 		<control type="group" id="21000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd)</visible>
 			<include content="Visible_Right_Delayed">
-				<param name="id" value="disc"/>
+				<param name="id" value="dvd"/>
 			</include>
 			<include content="Widget-Image">
 				<param name="text_label" value="$INFO[System.DVDLabel]" />
