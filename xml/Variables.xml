@@ -652,14 +652,14 @@
 		<value condition="!String.IsEmpty(Skin.String(background_music))">$INFO[Skin.String(background_music)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
-	<!-- Background Disc -->
-	<variable name="BackgroundDiscVar">
-		<value condition="!String.IsEmpty(Skin.String(background_disc))">$INFO[Skin.String(background_disc)]</value>
-		<value>special://skin/extras/home-images/disc.jpg</value>
+	<!-- Background DVD -->
+	<variable name="BackgroundDVDVar">
+		<value condition="!String.IsEmpty(Skin.String(background_dvd))">$INFO[Skin.String(background_dvd)]</value>
+		<value>special://skin/extras/home-images/dvd.jpg</value>
 	</variable>
-	<!-- Background Disc Name -->
-	<variable name="BackgroundDiscNameVar">
-		<value condition="!String.IsEmpty(Skin.String(background_disc))">$INFO[Skin.String(background_disc)]</value>
+	<!-- Background DVD Name -->
+	<variable name="BackgroundDVDNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_dvd))">$INFO[Skin.String(background_dvd)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<!-- Background MusicVideos -->

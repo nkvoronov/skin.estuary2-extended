@@ -725,8 +725,8 @@
 					<description>Disc Background</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[427]</label>
-					<label2>$VAR[BackgroundDiscNameVar]</label2>
-					<onclick>SetProperty(setbackgrounds,background_disc,home)</onclick>
+					<label2>$VAR[BackgroundDVDNameVar]</label2>
+					<onclick>SetProperty(setbackgrounds,background_dvd,home)</onclick>
 					<onclick>ActivateWindow(1202)</onclick>
 					<enable>Skin.HasSetting(separate_background)</enable>
 				</control>

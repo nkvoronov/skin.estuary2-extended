@@ -181,12 +181,12 @@
 					<item>
 						<label>$LOCALIZE[427]</label>
 						<onclick>SetProperty(fanarthometype,dvd,home)</onclick>
-						<onclick>SetProperty(homebackground,$VAR[BackgroundDiscVar],home)</onclick>
+						<onclick>SetProperty(homebackground,$VAR[BackgroundDVDVar],home)</onclick>
 						<onclick>PlayDisc</onclick>
 						<icon>icons/sidemenu/disc.png</icon>
 						<property name="menu_id">$NUMBER[21000]</property>
 						<property name="defaultID">dvd</property>
-						<property name="background">$VAR[BackgroundDiscVar]</property>
+						<property name="background">$VAR[BackgroundDVDVar]</property>
 						<visible>System.HasMediaDVD</visible>
 					</item>
 					<!-- MusicVideos -->
