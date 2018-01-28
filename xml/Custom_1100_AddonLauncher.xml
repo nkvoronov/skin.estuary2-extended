@@ -2,7 +2,7 @@
 <window id="1100">
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload>SetProperty(fanarthometype,addons,home)</onload>
-	<onload>SetProperty(homebackground,$VAR[BackgroundAddonsVar],home)</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/addons.jpg,home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<!-- Background -->
