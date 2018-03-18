@@ -3,6 +3,18 @@
 	<defaultcontrol></defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="30" time="0" condition="!String.IsEmpty(Player.Art(fanart)) | !Skin.HasSetting(hide_visualization_fanart) | Visualisation.Enabled">Conditional</animation>
+			<include>ColoredBackgroundImages</include>
+		</control>
+		<control type="multiimage">
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$VAR[BackgroundAudioVar]</imagepath>
+			<visible>String.IsEmpty(Player.Art(fanart)) | Skin.HasSetting(hide_visualization_fanart)</visible>
+		</control>		
 		<control type="visualisation">
 			<include>FullScreenDimensions</include>
 			<visible>Player.HasAudio</visible>
@@ -18,10 +30,6 @@
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<texture background="true" colordiffuse="88FFFFFF">$INFO[Player.Art(fanart)]</texture>
 			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(hide_visualization_fanart)</visible>
-		</control>
-		<control type="group">
-			<animation effect="fade" start="100" end="30" time="0" condition="!String.IsEmpty(Player.Art(fanart)) | Visualisation.Enabled">Conditional</animation>
-			<include>ColoredBackgroundImages</include>
 		</control>
 		<control type="group">
 			<bottom>0</bottom>

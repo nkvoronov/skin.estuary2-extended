@@ -378,7 +378,7 @@
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		        </control>
+				</control>
 				<control type="button" id="206">
 					<description>Studios Images</description>
 					<include>DefaultSettingButton</include>
@@ -404,7 +404,7 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
 				</control>
 				<control type="button" id="209">
-				    <description>Music Genre Icons</description>
+					<description>Music Genre Icons</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43033]</label>
 					<label2>$VAR[MusicGenreIconsNameVar]</label2>
@@ -423,7 +423,7 @@
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		        </control>
+				</control>
 				<control type="button" id="212">
 					<description>Popup Position</description>
 					<include>DefaultSettingButton</include>
@@ -442,7 +442,7 @@
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		        </control>
+				</control>
 				<control type="button" id="215">
 					<description>Busy Texture</description>
 					<include>DefaultSettingButton</include>
@@ -454,7 +454,7 @@
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		        </control>
+				</control>
 				<control type="radiobutton" id="217">
 					<description>Enable Custom List Addons</description>
 					<include>DefaultSettingButton</include>
@@ -475,7 +475,7 @@
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		        </control>
+				</control>
 				<control type="radiobutton" id="220">
 					<description>Skin Toggle Debug</description>
 					<include>DefaultSettingButton</include>
@@ -753,12 +753,21 @@
 					<onclick>ActivateWindow(1202)</onclick>
 					<enable>Skin.HasSetting(separate_background)</enable>
 				</control>
-				<control type="image" id="516">
+				<control type="button" id="516">
+					<description>Audio Background</description>
+					<include>DefaultSettingButton</include>
+					<label>- $LOCALIZE[44120]</label>
+					<label2>$VAR[BackgroundAudioNameVar]</label2>
+					<onclick>SetProperty(setbackgrounds,background_audio,home)</onclick>
+					<onclick>ActivateWindow(1202)</onclick>
+					<enable>Skin.HasSetting(separate_background)</enable>
+				</control>
+				<control type="image" id="517">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="517">
+				<control type="button" id="518">
 					<description>Home Fanart</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[31131]</label>
@@ -767,7 +776,7 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=HomeFanart&amp;type=resource.images.skinbackgrounds)</onclick>
 					<enable>Skin.HasSetting(separate_background)</enable>
 				</control>
-				<control type="button" id="518">
+				<control type="button" id="519">
 					<description>MovieGenre Fanart</description>
 					<label>$LOCALIZE[31149]</label>
 					<label2>$VAR[MovieGenreFanartNameVar]</label2>
@@ -776,7 +785,7 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
 					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-				<control type="button" id="519">
+				<control type="button" id="520">
 					<description>Weather Fanart</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[31062]</label>
@@ -785,12 +794,12 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
 					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-				<control type="image" id="520">
+				<control type="image" id="521">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="521">
+				<control type="button" id="522">
 					<description>Reset Section</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[10041]</label>

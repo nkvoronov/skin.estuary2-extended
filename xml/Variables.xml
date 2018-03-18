@@ -549,7 +549,7 @@
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
-		<value condition="!String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
+		<value>$INFO[Container.Art(fanart)]</value>
 	</variable>
 	<!-- Weather Fanart -->
 	<variable name="WeatherFanartVar">
@@ -658,6 +658,16 @@
 	<!-- Background Search Name -->
 	<variable name="BackgroundSearchNameVar">
 		<value condition="!String.IsEmpty(Skin.String(background_search))">$INFO[Skin.String(background_search)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<!-- Background Audio -->
+	<variable name="BackgroundAudioVar">
+		<value condition="!String.IsEmpty(Skin.String(background_audio))">$INFO[Skin.String(background_audio)]</value>
+		<value>special://skin/extras/home-images/music.jpg</value>
+	</variable>
+	<!-- Background Audio Name -->
+	<variable name="BackgroundAudioNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_audio))">$INFO[Skin.String(background_audio)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<!-- HomeFanart Name -->
