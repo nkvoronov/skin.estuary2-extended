@@ -964,3 +964,7 @@ msgstr ""
 msgctxt "#44119"
 msgid "Show background \"Now playing\" visualisation"
 msgstr ""
+
+msgctxt "#44120"
+msgid "Music and Radio"
+msgstr ""

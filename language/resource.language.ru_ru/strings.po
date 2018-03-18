@@ -785,3 +785,7 @@ msgstr "Воспроизводимое видео в качестве фона"
 msgctxt "#44119"
 msgid "Show background \"Now playing\" visualisation"
 msgstr "Музыкальная визуализация в качестве фона"
+
+msgctxt "#44120"
+msgid "Music and Radio"
+msgstr "Музыка и Радио"
