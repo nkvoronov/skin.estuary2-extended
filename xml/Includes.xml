@@ -2319,6 +2319,7 @@
 		<onclick>Skin.Reset(background_power)</onclick>
 		<onclick>Skin.Reset(background_settings)</onclick>
 		<onclick>Skin.Reset(background_search)</onclick>
+		<onclick>Skin.Reset(background_audio)</onclick>
 		<onclick>Skin.Reset(background_movies)</onclick>
 		<onclick>Skin.Reset(background_tvshows)</onclick>
 		<onclick>Skin.Reset(background_music)</onclick>
