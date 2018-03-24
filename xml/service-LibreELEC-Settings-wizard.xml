@@ -4,71 +4,40 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
-			<left>300</left>
-			<top>200</top>
-			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
-			</animation>
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<height>700</height>
+			<width>1320</width>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="1320" />
+				<param name="height" value="700" />
+				<param name="header_label" value="" />
+				<param name="header_id" value="32300" />
+			</include>
 			<control type="image">
 				<left>0</left>
-				<top>0</top>
-				<width>1320</width>
-				<height>680</height>
-				<texture border="15">dialogs/dialog-bg-solid.png</texture>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
+				<top>70</top>
 				<width>270</width>
-				<height>680</height>
+				<height>630</height>
 				<texture border="15">os/libreelec/floor.png</texture>
 			</control>
 			<control type="image">
-				<left>2</left>
-				<top>2</top>
+				<left>0</left>
+				<top>70</top>
 				<width>270</width>
-				<height>676</height>
-				<texture>os/libreelec/wizard.png</texture>
+				<height>630</height>
+				<texture border="15">os/libreelec/wizard.png</texture>
 			</control>
 			<control type="image">
 				<left>268</left>
-				<top>0</top>
-				<width>1052</width>
-				<height>50</height>
-				<texture border="5">os/libreelec/black-back2.png</texture>
-			</control>
-			<control type="label" id="32300">
-				<left>300</left>
-				<top>10</top>
-				<width>740</width>
-				<height>30</height>
-				<font>font16caps</font>
-				<label />
-				<align>left</align>
-				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="image">
-				<left>268</left>
-				<top>550</top>
+				<top>570</top>
 				<width>1051</width>
 				<height>131</height>
 				<texture border="5">os/libreelec/black-back2.png</texture>
 			</control>
-			<control type="image">
-				<left>269</left>
-				<top>549</top>
-				<width>1050</width>
-				<height>3</height>
-				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator.png</texture>
-			</control>
 			<control type="group" id="1398">
+				<top>15</top>
+				<height>530</height>
 				<visible>String.IsEmpty(Control.GetLabel(1390))</visible>
 				<animation type="Visible" reversible="false">
 					<effect type="fade" start="0" end="100" time="300" />
@@ -409,7 +378,7 @@
 			</control>
 			<control type="button" id="1500">
 				<left>970</left>
-				<top>576</top>
+				<top>590</top>
 				<width>300</width>
 				<height>90</height>
 				<visible>true</visible>
