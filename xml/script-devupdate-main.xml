@@ -207,7 +207,7 @@
 					<right>20</right>
 					<align>right</align>
 					<aligny>top</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 			</control>
 		</control>  
