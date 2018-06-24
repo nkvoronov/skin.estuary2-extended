@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<animation effect="fade" time="400">WindowOpen</animation>
+	<animation effect="fade" time="400">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<width>1080</width>
+			<height>420</height>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="1080" />
+				<param name="height" value="420" />
+				<param name="header_label" value="" />
+				<param name="header_id" value="1" />
+			</include>
+			<!-- Main -->
+			<control type="grouplist" id="9000">
+				<description>Edit channel controls</description>
+				<top>76</top>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<itemgap>-20</itemgap>
+				<control type="button" id="30">
+					<description>Org channel name</description>
+					<width>800</width>
+					<include>SettingsItemCommon</include>
+					<enable>false</enable>
+				</control>
+				<control type="button" id="31">
+					<description>User channel name</description>
+					<width>800</width>
+					<include>SettingsItemCommon</include>
+				</control>
+				<control type="button" id="32">
+					<description>Channel icon</description>
+					<width>800</width>
+					<include>SettingsItemCommon</include>
+				</control>
+				<control type="button" id="33">
+					<description>Channel correction</description>
+					<width>800</width>
+					<include>SettingsItemCommon</include>
+				</control>
+			</control>
+			<!-- include Buttons (Save, Cancel, other) -->
+			<control type="grouplist" id="9001">
+				<description>Button grouplist</description>
+				<left>780</left>
+				<top>76</top>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<itemgap>-20</itemgap>
+				<!-- Button Delete -->
+				<include content="DefaultDialogButton">
+					<param name="id" value="34" />
+					<param name="label" value="" />
+					<param name="width" value="300" />
+				</include>
+				<!-- Button OK -->
+				<include content="DefaultDialogButton">
+					<param name="id" value="35" />
+					<param name="label" value="" />
+					<param name="width" value="300" />
+				</include>
+				<!-- Button Cancel -->
+				<include content="DefaultDialogButton">
+					<param name="id" value="36" />
+					<param name="label" value="" />
+					<param name="width" value="300" />
+				</include>
+			</control>
+		</control>
+	</controls>
+</window>
