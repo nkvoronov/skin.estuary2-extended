@@ -937,6 +937,12 @@
 		<value condition="Integer.IsGreater(ListItem.VideoResolution,1080)">flags/videoresolution/4K.png</value>
 		<value>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</value>
 	</variable>
+	<!-- Resolution Player Flag -->
+	<variable name="ResolutionFlagPlayerVar">
+		<value condition="VideoPlayer.IsStereoscopic">flags/videoresolution/3D.png</value>
+		<value condition="Integer.IsGreater(VideoPlayer.VideoResolution,1080)">flags/videoresolution/4K.png</value>
+		<value>$INFO[VideoPlayer.VideoResolution,flags/videoresolution/,.png]</value>
+	</variable>
 	<variable name="InfoListPathVar">
 		<value condition="String.IsEmpty(Container.PluginName)">$INFO[ListItem.FolderPath]</value>
 		<value></value>
