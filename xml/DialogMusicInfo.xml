@@ -175,8 +175,8 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<textcolor>$VAR[MainColorVar]</textcolor>
 							<label>$INFO[ListItem.Label,,.][COLOR white]$INFO[ListItem.Label2][/COLOR]</label>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout height="72.5" width="595" condition="Container.Content(songs)">
@@ -193,8 +193,8 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<textcolor>$VAR[MainColorVar]</textcolor>
 							<label>$INFO[ListItem.Label,,.][COLOR white]$INFO[ListItem.Label2][/COLOR]</label>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="72.5" width="595" condition="Container.Content(albums)">
@@ -211,13 +211,13 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
+							<label>$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
 							<textcolor>$VAR[MainColorVar]</textcolor>
-						    <label>$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
 							<top>28</top>
-							<include>UserRatingCircle</include>
+							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="72.5" width="595" condition="Container.Content(albums)">
@@ -235,13 +235,13 @@
 								<height>60</height>
 								<font>font12</font>
 								<aligny>center</aligny>
-								<textcolor>$VAR[MainColorVar]</textcolor>
 								<label>$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
+								<textcolor>$VAR[MainColorVar]</textcolor>
 							</control>
 							<control type="group">
 								<left>230</left>
 								<top>28</top>
-								<include>UserRatingCircle</include>
+								<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 							</control>
 						</control>
 					</focusedlayout>
@@ -270,13 +270,13 @@
 							<font>font27_narrow</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[MainColorVar]</textcolor>
 							<label>$INFO[ListItem.Label2,,[COLOR white] - [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="group">
 							<left>230</left>
 							<top>28</top>
-							<include>UserRatingCircle</include>
+							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>
 					</itemlayout>
 					<focusedlayout height="360" width="236" condition="Container.Content(artists)">
@@ -308,13 +308,13 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
-								<textcolor>$VAR[MainColorVar]</textcolor>
 								<label>$INFO[ListItem.Label2,,[COLOR white] - [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
+								<textcolor>$VAR[MainColorVar]</textcolor>
 							</control>
 							<control type="group">
 								<left>230</left>
 								<top>28</top>
-								<include>UserRatingCircle</include>
+								<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 							</control>
 							<control type="image">
 								<left>16</left>
@@ -347,11 +347,12 @@
 						<onup>130</onup>
 						<onleft>12</onleft>
 						<onright>120</onright>
+						<onclick condition="String.IsEmpty(ListItem.DBID)">PlayMedia($INFO[ListItem.FilenameAndPath])</onclick>
 						<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 						<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,song)">RunScript(script.playalbum,songid=$INFO[ListItem.DBID])</onclick>
 						<onclick condition="System.HasAddon(script.playalbum)">Action(close)</onclick>
-						<onclick condition="!System.HasAddon(script.playalbum)">InstallAddon(script.playalbum)</onclick>
-						<visible>[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + !String.IsEmpty(ListItem.Dbid)</visible>
+						<onclick condition="!System.HasAddon(script.playalbum) + !String.IsEmpty(ListItem.DBID)">InstallAddon(script.playalbum)</onclick>
+						<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
 					</control>
 					<control type="group" id="420">
 						<width>262</width>
@@ -362,7 +363,7 @@
 							</include>
 							<label>$LOCALIZE[31033]</label>
 							<onup>130</onup>
-							<onleft>12</onleft>
+							<onleft>155</onleft>
 							<onright>120</onright>
 							<onup condition="Integer.IsGreater(Container(5000).CurrentItem,3)">210</onup>
 							<onup condition="!Integer.IsGreater(Container(5000).CurrentItem,3)">138</onup>
@@ -433,8 +434,8 @@
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 				<include content="InfoDialogTopBarInfo">
-				    <param name="main_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
-				    <param name="sub_label" value="[COLOR white]$INFO[ListItem.Genre][/COLOR]" />
+					<param name="main_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
+					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Genre][/COLOR]" />
 					<param name="id" value="33333" />
 				</include>
 			</control>
@@ -442,8 +443,8 @@
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,album)</visible>
 				<include content="InfoDialogTopBarInfo">
-				    <param name="main_label" value="[COLOR white]$INFO[ListItem.Album][/COLOR] $INFO[ListItem.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]" />
-				    <param name="sub_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
+					<param name="main_label" value="[COLOR white]$INFO[ListItem.Album][/COLOR] $INFO[ListItem.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]" />
+					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
 					<param name="id" value="33334" />
 				</include>
 			</control>
@@ -451,11 +452,12 @@
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicinformation)</visible>
 				<include content="InfoDialogTopBarInfo">
-				    <param name="main_label" value="$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Title][/COLOR]" />
-				    <param name="sub_label" value="[COLOR white]$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album][/COLOR] $INFO[ListItem.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]" />
+					<param name="main_label" value="$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Title][/COLOR]" />
+					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album][/COLOR] $INFO[ListItem.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]" />
 					<param name="id" value="33335" />
 				</include>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
 	</controls>
 </window>

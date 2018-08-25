@@ -22,7 +22,6 @@
 				<param name="width" value="872" />
 			</include>
 			<include content="FileManagerPanel">
-				<param name="header_label" value="" />
 				<param name="list_id" value="20" />
 				<param name="scrollbar_id" value="60" />
 				<param name="onleft_id" value="60" />
@@ -51,8 +50,6 @@
 				<param name="left" value="-20" />
 			</include>
 			<include content="FileManagerPanel">
-				<param name="header_id" value="102" />
-				<param name="header_label" value="" />
 				<param name="list_id" value="21" />
 				<param name="scrollbar_id" value="61" />
 				<param name="onleft_id" value="20" />

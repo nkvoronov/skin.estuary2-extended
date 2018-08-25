@@ -48,6 +48,10 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Непросмотреные фильмы"
 
+msgctxt "#31008"
+msgid "Enable category widgets"
+msgstr "Включить виджеты категорий"
+
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Загрузить иконки"
@@ -108,6 +112,10 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Вид"
 
+msgctxt "#31024"
+msgid "Choose rating to display for media items"
+msgstr "Выбрать рейтинг для показа мультимедийных элементов"
+
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "Список избранного пуст. Вы можете добавить сюда любой медиаконтент с помощью контекстного меню."
@@ -118,7 +126,7 @@ msgstr "Таймшифт"
 
 msgctxt "#31028"
 msgid "Show fanart"
-msgstr "Показать фан-арт"
+msgstr "Показать фанарт"
 
 msgctxt "#31029"
 msgid "Last logged in"
@@ -192,10 +200,6 @@ msgctxt "#31050"
 msgid "Press [B]OK[/B] to stop"
 msgstr "Нажмите [B]OK[/B] для остановки"
 
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "Переключить язык"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "отфильтровано"
@@ -221,20 +225,16 @@ msgid "Automatic Login on startup"
 msgstr "Автоматическая авторизация при запуске"
 
 msgctxt "#31061"
-msgid "Main menu"
-msgstr "Главное меню"
+msgid "Main menu items"
+msgstr "Элементы главного меню"
 
 msgctxt "#31062"
-msgid "Choose weather backgrounds pack"
-msgstr "Выбрать пакет фонов для погоды"
+msgid "Choose weather fanart pack"
+msgstr "Выбрать набор фанарта погоды"
 
 msgctxt "#31063"
 msgid "Sections"
 msgstr "Разделы"
-
-msgctxt "#31064"
-msgid "unwatched"
-msgstr "непросмотренных"
 
 msgctxt "#31065"
 msgid "Video playlist"
@@ -267,14 +267,6 @@ msgstr "Настройки питания"
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Киноциклы"
-
-msgctxt "#31077"
-msgid "Previous location"
-msgstr "Предыдущее местоположение"
-
-msgctxt "#31078"
-msgid "Next location"
-msgstr "Следующее местоположение"
 
 msgctxt "#31079"
 msgid "Cast not available"
@@ -457,12 +449,16 @@ msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Основные настройки меню: Настройка главного экрана в соответствии с Вашими предпочтениями."
 
 msgctxt "#31131"
-msgid "Choose home backgrounds pack"
-msgstr "Выбрать пакет фонов для главного экрана"
+msgid "Choose skin fanart pack"
+msgstr "Выбрать набор фанарта обложки"
 
 msgctxt "#31132"
-msgid "min"
-msgstr "мин"
+msgid "Select Program"
+msgstr "Выбрать программу"
+
+msgctxt "#31133"
+msgid "Select Resolution"
+msgstr "Выберите разрешение"
 
 msgctxt "#31134"
 msgid "Remaining"
@@ -513,8 +509,8 @@ msgid "Categories"
 msgstr "Категории"
 
 msgctxt "#31149"
-msgid "Choose genre backgrounds pack"
-msgstr "Выбрать пакет фонов для жанров"
+msgid "Select genre fanart pack"
+msgstr "Выбрать набор фанарта жанров"
 
 msgctxt "#31150"
 msgid "Repository"
@@ -542,7 +538,7 @@ msgstr "Нет закладок"
 
 msgctxt "#31156"
 msgid "Choose background pattern"
-msgstr "Выберите шаблон фона"
+msgstr "Выберите фон"
 
 msgctxt "#31157"
 msgid "Edit categories"
@@ -563,6 +559,26 @@ msgstr "Флаги сведений"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "Цифровая клавиатура"
+
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "Играйте в свои личные игры или загрузить одну из многочисленных надстроек из официального репозитория."
+
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "Показать фанатный фон"
+
+msgctxt "#31164"
+msgid "Choose kind of profile identification"
+msgstr "Выбрать вид идентификации профиля"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Название профиля"
+
+msgctxt "#31166"
+msgid "Profile avatar"
+msgstr "Аватар профиля"
 
 # EXTENDED ADDED VALUE
 
