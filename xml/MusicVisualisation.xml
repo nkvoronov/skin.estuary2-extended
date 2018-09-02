@@ -39,7 +39,7 @@
 				<left>33</left>
 				<top>200</top>
 				<include>Visible_Left</include>
-				<visible>Player.ShowInfo | Window.IsActive(musicosd)</visible>
+				<visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !MusicPlayer.Content(livetv)</visible>
 				<width>500</width>
 				<height>500</height>
 				<fadetime>400</fadetime>
@@ -94,9 +94,9 @@
 						<width>1600</width>
 						<height>40</height>
 						<label>$INFO[MusicPlayer.TrackNumber,,. ][COLOR white]$INFO[MusicPlayer.Title][/COLOR]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
 						<font>font45</font>
 						<shadowcolor>black</shadowcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<scroll>true</scroll>
 					</control>
 				</control>

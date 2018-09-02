@@ -49,8 +49,8 @@
 					<width>1050</width>
 					<height>425</height>
 					<align>justify</align>
-					<textcolor>$VAR[MainColorVar]</textcolor>
 					<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] [COLOR white]($INFO[ListItem.Duration])[CR][/COLOR][COLOR white]$INFO[ListItem.StartDate][CR][/COLOR]$INFO[ListItem.Season, [COLOR white],[/COLOR]x]$INFO[ListItem.Episode, [COLOR white],[/COLOR]: ]$INFO[ListItem.EpisodeName,[B][COLOR white],[/COLOR][/B][CR]]$INFO[ListItem.Genre,$LOCALIZE[515]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Writer,$LOCALIZE[20417]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Director,$LOCALIZE[20339]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Cast,$LOCALIZE[206]:[COLOR white] ,[/COLOR][CR]][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="grouplist" id="9000">
@@ -67,35 +67,48 @@
 					<onup>61</onup>
 					<ondown>61</ondown>
 					<include content="InfoDialogButton">
+						<param name="width" value="275" />
 						<param name="id" value="5" />
 						<param name="icon" value="icons/infodialogs/launch.png" />
 						<param name="label" value="$LOCALIZE[19165]" />
 						<param name="visible" value="Window.IsActive(PVRGuideInfo)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="4" />
-						<param name="icon" value="icons/infodialogs/similar.png" />
-						<param name="label" value="$LOCALIZE[19003]" />
+						<param name="width" value="275" />
+						<param name="id" value="10" />
+						<param name="icon" value="icons/infodialogs/cinema.png" />
+						<param name="label" value="$LOCALIZE[19190]" />
 						<param name="visible" value="Window.IsActive(PVRGuideInfo)" />
 					</include>
 					<include content="InfoDialogButton">
+						<param name="width" value="275" />
 						<param name="id" value="8" />
 						<param name="icon" value="icons/infodialogs/play_record.png" />
 						<param name="label" value="$LOCALIZE[19687]" />
 						<param name="visible" value="Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo)" />
 					</include>
 					<include content="InfoDialogButton">
+						<param name="width" value="275" />
 						<param name="id" value="6" />
 						<param name="icon" value="icons/infodialogs/record.png" />
 						<param name="visible" value="Window.IsActive(PVRGuideInfo)" />
 					</include>
 					<include content="InfoDialogButton">
+						<param name="width" value="275" />
 						<param name="id" value="9" />
 						<param name="icon" value="icons/infodialogs/timer.png" />
 						<param name="label" value="$LOCALIZE[19061]" />
 						<param name="visible" value="Window.IsActive(PVRGuideInfo)" />
 					</include>
 					<include content="InfoDialogButton">
+						<param name="width" value="275" />
+						<param name="id" value="4" />
+						<param name="icon" value="icons/infodialogs/similar.png" />
+						<param name="label" value="$LOCALIZE[19003]" />
+						<param name="visible" value="Window.IsActive(PVRGuideInfo)" />
+					</include>
+					<include content="InfoDialogButton">
+						<param name="width" value="275" />
 						<param name="id" value="440" />
 						<param name="icon" value="icons/infodialogs/youtube.png" />
 						<param name="label" value="$LOCALIZE[31114]" />
@@ -111,5 +124,6 @@
 				<param name="posy" value="40" />
 			</include>
 		</control>
+		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
 	</controls>
 </window>
