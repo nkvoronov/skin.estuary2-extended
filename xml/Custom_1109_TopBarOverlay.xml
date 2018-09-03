@@ -45,8 +45,8 @@
 				<control type="label">
 					<label>$VAR[NowPlayingBreadcrumbsVar]</label>
 					<font>font45</font>
-					<shadowcolor>text_shadow</shadowcolor>
 					<textcolor>$VAR[MainColorVar]</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
 					<top>7</top>
 					<height>100</height>
 					<left>0</left>

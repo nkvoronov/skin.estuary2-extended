@@ -5,8 +5,8 @@
 		<control type="group">
 			<!-- Right Top Default -->
 			<depth>DepthMax</depth>
-			<top>85</top>
-			<right>0</right>
+			<top>95</top>
+			<right>-5</right>
 			<width>640</width>
 			<include>OpenClose_Right</include>
 			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>

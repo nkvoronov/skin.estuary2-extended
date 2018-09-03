@@ -256,8 +256,8 @@
 						<width>470</width>
 						<height>40</height>
 						<label>$INFO[ListItem.AddonOrigin,$LOCALIZE[31150]:[COLOR white] ,[/COLOR] ]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
 						<visible>!String.IsEmpty(ListItem.AddonOrigin)</visible>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 					</control>
 				</control>
 			</control>

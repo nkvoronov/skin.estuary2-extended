@@ -226,7 +226,7 @@ msgstr "Автоматическая авторизация при запуск�
 
 msgctxt "#31061"
 msgid "Main menu items"
-msgstr "Элементы главного меню"
+msgstr "Главное меню"
 
 msgctxt "#31062"
 msgid "Choose weather fanart pack"
@@ -355,14 +355,6 @@ msgstr "Телетекст"
 msgctxt "#31107"
 msgid "WideList"
 msgstr "Широкий список"
-
-msgctxt "#31108"
-msgid "Use custom global background"
-msgstr "Использовать пользовательский фон"
-
-msgctxt "#31109"
-msgid "Choose image path"
-msgstr "Выберите путь к изображению"
 
 msgctxt "#31110"
 msgid "Enter files section"
@@ -581,6 +573,14 @@ msgid "Profile avatar"
 msgstr "Аватар профиля"
 
 # EXTENDED ADDED VALUE
+
+msgctxt "#42000"
+msgid "Use custom global background"
+msgstr "Использовать пользовательский фон"
+
+msgctxt "#42001"
+msgid "Choose image path"
+msgstr "Выберите путь к изображению"
 
 msgctxt "#43000"
 msgid "Options"

@@ -70,11 +70,11 @@
 						<onclick>noop</onclick>
 					</item>
 					<item id="5">
-						<label>$LOCALIZE[19190]</label>
+						<label>$LOCALIZE[33068]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="6">
-						<label>$LOCALIZE[10035]</label>
+						<label>$LOCALIZE[13007]</label>
 						<onclick>noop</onclick>
 					</item>
 				</content>
@@ -85,8 +85,8 @@
 			<include>OpenClose_Right</include>
 			<!-- General -->
 			<control type="grouplist" id="100">
-				<left>0</left>
 				<top>160</top>
+				<left>0</left>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -267,7 +267,7 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=LanguageFlags&amp;type=resource.images.languageflags)</onclick>
 				</control>
 				<control type="button" id="208">
-				    <description>Movie Genre Icons</description>
+					<description>Movie Genre Icons</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43012]</label>
 					<label2>$VAR[MovieGenreIconsNameVar]</label2>
@@ -647,7 +647,7 @@
 				<control type="radiobutton" id="510">
 					<description>Use Custom Background</description>
 					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[31108]</label>
+					<label>$LOCALIZE[42000]</label>
 					<onclick>Skin.ToggleSetting(use_custom_bg)</onclick>
 					<selected>Skin.HasSetting(use_custom_bg)</selected>
 					<enable>!Skin.HasSetting(separate_background)</enable>
@@ -655,7 +655,7 @@
 				<control type="button" id="511">
 					<description>Custom Background</description>
 					<include>DefaultSettingButton</include>
-					<label>- $LOCALIZE[31109]</label>
+					<label>- $LOCALIZE[42001]</label>
 					<label2>$INFO[Skin.String(custom_background)]</label2>
 					<onclick>SetProperty(setbackgrounds,custom_background,home)</onclick>
 					<onclick>ActivateWindow(1202)</onclick>
@@ -870,7 +870,7 @@
 				<control type="label" id="601">
 					<description>Reset Label</description>
 					<include>DefaultSettingLabel</include>
-					<label>$LOCALIZE[10035]</label>
+					<label>$LOCALIZE[13007]</label>
 				</control>
 				<control type="button" id="602">
 					<description>Reset Skin</description>
@@ -992,6 +992,10 @@
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 			<visible>Control.IsVisible(600)</visible>
 		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
+		</include>
+		<include>BottomBar</include>
 		<control type="textbox" id="6">
 			<include>OpenClose_Right</include>
 			<description>description area</description>
@@ -1005,9 +1009,5 @@
 			<label>$VAR[SkinSettingsHelpTextVar]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
-		</include>
-		<include>BottomBar</include>
 	</controls>
 </window>

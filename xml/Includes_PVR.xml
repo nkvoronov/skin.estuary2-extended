@@ -101,6 +101,93 @@
 			<orientation>vertical</orientation>
 		</control>
 	</include>
+	<include name="PVRProgress">
+		<control type="group">
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<visible>!Player.ChannelPreviewActive</visible>
+			<control type="group">
+				<visible>Player.SeekEnabled | VideoPlayer.HasEPG</visible>
+				<control type="label">
+					<top>22</top>
+					<right>20</right>
+					<width>400</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font30</font>
+					<label>$INFO[PVR.TimeshiftProgressEndTime]</label>
+				</control>
+				<control type="label">
+					<top>22</top>
+					<left>20</left>
+					<width>400</width>
+					<height>50</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font30</font>
+					<label>$INFO[PVR.TimeshiftProgressStartTime]</label>
+				</control>
+				<control type="label">
+					<top>22</top>
+					<left>20</left>
+					<right>20</right>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font30</font>
+					<label>[B]$LOCALIZE[31026][/B] $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
+					<visible>PVR.IsTimeShift</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>VideoPlayer.HasEPG</visible>
+				<control type="progress">
+					<left>0</left>
+					<top>$PARAM[epg_bar_top]</top>
+					<width>100%</width>
+					<height>$PARAM[epg_bar_height]</height>
+					<info2>PVR.TimeshiftProgressEpgStart</info2>
+					<info>PVR.TimeshiftProgressPlayPos</info>
+					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
+				</control>
+				<control type="progress">
+					<left>0</left>
+					<top>$PARAM[epg_bar_top]</top>
+					<width>100%</width>
+					<height>$PARAM[epg_bar_height]</height>
+					<info2>PVR.TimeshiftProgressPlayPos</info2>
+					<info>PVR.TimeshiftProgressEpgEnd</info>
+					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+					<midtexture>colors/white50.png</midtexture>
+				</control>
+			</control>
+			<control type="progress">
+				<left>0</left>
+				<top>$PARAM[ts_bar_top]</top>
+				<width>100%</width>
+				<height>$PARAM[ts_bar_height]</height>
+				<info2>PVR.TimeshiftProgressBufferStart</info2>
+				<info>PVR.TimeshiftProgressBufferEnd</info>
+				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<midtexture>colors/white70.png</midtexture>
+				<visible>Player.SeekEnabled</visible>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<visible>Player.ChannelPreviewActive</visible>
+			<control type="progress">
+				<left>0</left>
+				<top>70</top>
+				<width>100%</width>
+				<height>16</height>
+				<info>PVR.EpgEventProgress</info>
+				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
+			</control>
+		</control>
+	</include>
 	<include name="PVRInfoPanel">
 		<control type="group">
 			<visible>!ListItem.IsFolder</visible>
@@ -270,14 +357,14 @@
 				<onup>$PARAM[control_onupdown_id]</onup>
 				<ondown>$PARAM[control_onupdown_id]</ondown>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
-				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="button_focus">$PARAM[progress_texture]</progresstexture>
+				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="$VAR[MainColorVar]">$PARAM[progress_texture]</progresstexture>
 				<rulerdatelayout width="1700" height="45" condition="$PARAM[has_rulerdate_layout]">
 					<control type="label">
 						<width>1700</width>
 						<height>45</height>
 						<font>font24</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
@@ -289,7 +376,7 @@
 						<font>font12</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>10</textoffsetx>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 					</control>
 				</rulerlayout>
 				<channellayout height="62" width="$PARAM[channel_width]">
@@ -321,7 +408,7 @@
 						<height>60</height>
 						<font>font32_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
@@ -331,7 +418,7 @@
 						<height>60</height>
 						<font>font13</font>
 						<label>$INFO[ListItem.ChannelName]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<aligny>center</aligny>
 						<textoffsetx>10</textoffsetx>
 					</control>
@@ -364,13 +451,13 @@
 						<left>2</left>
 						<width>54</width>
 						<height>54</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<control type="image" id="2">
 						<width>58</width>
 						<height>58</height>
-						<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+						<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 					</control>
 					<control type="image" id="2">
 						<width>58</width>

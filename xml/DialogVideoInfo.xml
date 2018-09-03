@@ -461,24 +461,40 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Art(fanart))" />
 					</include>
 					<include content="InfoDialogButton">
+						<param name="id" value="13" />
+						<param name="icon" value="icons/infodialogs/director.png" />
+						<param name="label" value="$LOCALIZE[31123]" />
+						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
+					</include>
+					<include content="InfoDialogButton">
+						<param name="id" value="104" />
+						<param name="icon" value="icons/infodialogs/image.png" />
+						<param name="label" value="$LOCALIZE[31028]" />
+						<param name="onclick_1" value="SetProperty(fanart,$ESCINFO[ListItem.Art(fanart)],home)" />
+						<param name="onclick_2" value="ActivateWindow(1104)" />
+						<param name="visible" value="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(animatedfanart)) + !Skin.HasSetting(animated_fanarts)" />
+					</include>
+					<include content="InfoDialogButton">
 						<param name="id" value="105" />
+						<param name="icon" value="icons/infodialogs/image.png" />
+						<param name="label" value="$LOCALIZE[31028]" />
+						<param name="onclick_1" value="SetProperty(fanart,$ESCINFO[ListItem.Art(animatedfanart)],home)" />
+						<param name="onclick_2" value="ActivateWindow(1104)" />
+						<param name="visible" value="!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)" />
+					</include>
+					<include content="InfoDialogButton">
+						<param name="id" value="106" />
 						<param name="icon" value="icons/infodialogs/download.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(movies)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="106" />
+						<param name="id" value="107" />
 						<param name="icon" value="icons/infodialogs/download.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(tvshows)" />
-					</include>
-					<include content="InfoDialogButton">
-						<param name="id" value="13" />
-						<param name="icon" value="icons/infodialogs/director.png" />
-						<param name="label" value="$LOCALIZE[31123]" />
-						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="10" />
@@ -579,5 +595,6 @@
 				</control>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
 	</controls>
 </window>

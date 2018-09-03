@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon
-	id="skin.estuary2-extended"
-	version="2.0.11.098"
-	name="Estuary v2 Extended"
-	provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON">
+<addon id="skin.estuary2-extended" version="2.0.12.099" name="Estuary v2 Extended" provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.13.0"/>
 		<import addon="script.pvr.favourites" version="2.0.0"/>
 		<import addon="script.image.resource.select" version="1.1.0"/>
 	</requires>
-	<extension
-		point="xbmc.gui.skin"
-		debugging="false">
+	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
 		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
 		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
@@ -143,6 +137,15 @@
 		<disclaimer lang="sr_RS">Estuary v2 Extended је подразумевана маска за Kodi, уклањање може изазвати проблеме</disclaimer>
 		<disclaimer lang="sr_RS@latin">Estuary v2 Extended je podrazumevana maska za Kodi, uklanjanje može izazvati probleme</disclaimer>
 		<disclaimer lang="sv_SE">Estuary v2 Extended är standard skalet för Kodi, ta bort den kan orsaka problem</disclaimer>
+		<disclaimer lang="szl">Estuary v2 Extended je wychodnōm skōrōm Kodi, jij uchrōniynie może sprŏwiać niyprzileżytości</disclaimer>
+		<disclaimer lang="th_TH">Estuary v2 Extended เป็นหน้าตาเริ่มต้นสำหรับ Kodi, การลบมัน อาจทำให้เกิดปัญหา</disclaimer>
+		<disclaimer lang="tr_TR">Estuary v2 Extended Kodi için varsayılan dış görünümdür, kaldırmak sorunlara yol açabilir</disclaimer>
+		<disclaimer lang="uk_UA">Estuary v2 Extended — основна обкладинка Kodi, і її видалення може призвести до проблем</disclaimer>
+		<disclaimer lang="zh_CN">Estuary v2 Extended 是 Kodi 的默认皮肤，删除它可能导致故障。</disclaimer>
+		<disclaimer lang="zh_TW">Estuary v2 Extended 是 Kodi 預設的佈景主題，移除它可能會造成問題</disclaimer>
+		<disclaimer lang="sr_RS">Estuary v2 Extended је подразумевана маска за Kodi, уклањање може изазвати проблеме</disclaimer>
+		<disclaimer lang="sr_RS@latin">Estuary v2 Extended je podrazumevana maska za Kodi, uklanjanje može izazvati probleme</disclaimer>
+		<disclaimer lang="sv_SE">Estuary v2 Extended är Kodis standardskal. Om du tar bort det kan det orsaka problem.</disclaimer>
 		<disclaimer lang="szl">Estuary v2 Extended je wychodnōm skōrōm Kodi, jij uchrōniynie może sprŏwiać niyprzileżytości</disclaimer>
 		<disclaimer lang="th_TH">Estuary v2 Extended เป็นหน้าตาเริ่มต้นสำหรับ Kodi, การลบมัน อาจทำให้เกิดปัญหา</disclaimer>
 		<disclaimer lang="tr_TR">Estuary v2 Extended Kodi için varsayılan dış görünümdür, kaldırmak sorunlara yol açabilir</disclaimer>
