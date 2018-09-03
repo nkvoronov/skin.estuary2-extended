@@ -122,6 +122,7 @@
 		<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
+	<!-- List Label2 -->
 	<variable name="ListLabel2Var">
 		<value condition="String.IsEmpty(Container.PluginName) + Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
@@ -316,16 +317,6 @@
 		<value condition="Control.HasFocus(703)">$LOCALIZE[24013]</value>
 		<value condition="Control.HasFocus(5000)">$LOCALIZE[10004]</value>
 	</variable>
-	<!-- SkinSettings Help Text -->
-	<variable name="SkinSettingsHelpTextVar">
-		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>
-		<value condition="Container(9000).HasFocus(2)">$LOCALIZE[43040]</value>
-		<value condition="Container(9000).HasFocus(3)">$LOCALIZE[31130]</value>
-		<value condition="Container(9000).HasFocus(4)">$LOCALIZE[43041]</value>
-		<value condition="Container(9000).HasFocus(5)">$LOCALIZE[43042]</value>
-		<value condition="Container(9000).HasFocus(6)">$LOCALIZE[43043]</value>
-		<value condition="Container(9000).HasFocus(7)">$LOCALIZE[43044]</value>
-	</variable>
 	<!-- Volume Icon -->
 	<variable name="VolumeIconVar">
 		<value condition="Player.Muted">dialogs/volume/mute.png</value>
@@ -428,7 +419,7 @@
 		<value condition="ListItem.IsResumable">overlays/watched/resume.png</value>
 		<value condition="Integer.IsGreater(ListItem.Playcount,0)">$INFO[ListItem.Overlay]</value>
 	</variable>
-	<!-- Breadcrumbs -->
+	<!-- Breadcrumbs Video -->
 	<variable name="BreadcrumbsVideoVar">
 		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(container.folderpath,videodb://movies)">$LOCALIZE[20342]</value>
 		<value condition="Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)">$LOCALIZE[20389]</value>
@@ -477,7 +468,7 @@
 		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
 		<value>$LOCALIZE[19199] - $LOCALIZE[19023]</value>
 	</variable>
-	<variable name="PVRGroupMgrHeader">
+	<variable name="PVRGroupMgrHeaderVar">
 		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19048] - $LOCALIZE[19174]</value>
 		<value>$LOCALIZE[19048] - $LOCALIZE[19173]</value>
 	</variable>
@@ -789,16 +780,6 @@
 		<value condition="!String.IsEmpty(Skin.String(MusicGenreIcons.name))">$INFO[Skin.String(MusicGenreIcons.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
-	<!-- SkinIcons -->
-	<variable name="SkinIconsVar">
-		<value condition="!String.IsEmpty(Skin.String(SkinIcons.name))">$INFO[Skin.String(SkinIcons.name)]</value>
-		<value>resource://resource.images.skinicons.estuary/</value>
-	</variable>
-	<!-- SkinIcons Name -->
-	<variable name="SkinIconsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(SkinIcons.name))">$INFO[Skin.String(SkinIcons.name)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
 	<!-- Widget Limit Items -->
 	<variable name="WidgetLimitItemsVar">
 		<value condition="!String.IsEmpty(Skin.String(widget_limititems))">$INFO[Skin.String(widget_limititems)]</value>
@@ -860,77 +841,15 @@
 		<value condition="!String.IsEmpty(Skin.String(PrimaryBackgroundColor))">$INFO[Skin.String(PrimaryBackgroundColor)]</value>
 		<value>primary_background</value>
 	</variable>
-	<!-- PrimaryBackground Color Name -->
-	<variable name="PrimaryBackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(PrimaryBackgroundColor))">$INFO[Skin.String(PrimaryBackgroundColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
 	<!-- SecondaryBackground Color -->
 	<variable name="SecondaryBackgroundColorVar">
 		<value condition="!String.IsEmpty(Skin.String(SecondaryBackgroundColor))">$INFO[Skin.String(SecondaryBackgroundColor)]</value>
 		<value>secondary_background</value>
 	</variable>
-	<!-- SecondaryBackground Color Name -->
-	<variable name="SecondaryBackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(SecondaryBackgroundColor))">$INFO[Skin.String(SecondaryBackgroundColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
 	<!-- Main Color -->
 	<variable name="MainColorVar">
 		<value condition="!String.IsEmpty(Skin.String(MainColor))">$INFO[Skin.String(MainColor)]</value>
 		<value>button_focus</value>
-	</variable>
-	<!-- Main Color Name -->
-	<variable name="MainColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MainColor))">$INFO[Skin.String(MainColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<!-- Skin Setting Spinner -->
-	<variable name="SkinSettingSpinnerVar">
-		<value condition="Skin.String(SkinHelper.SpinnerTexture.Path,None)">$LOCALIZE[15109]</value>
-		<value condition="!String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path))">$INFO[Skin.String(SkinHelper.SpinnerTexture.Path)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<!-- Widget Type Name -->
-	<variable name="SkinSettingWidgetNameVar">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<!-- Widget Name 1 -->
-	<variable name="WidgetName1Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget1))">$INFO[Container(211).ListItem.Property(widgetName.widget1)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<!-- Widget Name 2 -->
-	<variable name="WidgetName2Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget2))">$INFO[Container(211).ListItem.Property(widgetName.widget2)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<!-- Widget Name 3 -->
-	<variable name="WidgetName3Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget3))">$INFO[Container(211).ListItem.Property(widgetName.widget3)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<!-- Widget Name 4 -->
-	<variable name="WidgetName4Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget4))">$INFO[Container(211).ListItem.Property(widgetName.widget4)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<!-- Widget Name 5 -->
-	<variable name="WidgetName5Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget5))">$INFO[Container(211).ListItem.Property(widgetName.widget5)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<!-- Widget Name 6 -->
-	<variable name="WidgetName6Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget6))">$INFO[Container(211).ListItem.Property(widgetName.widget6)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<!-- SkinShortcuts Title -->
-	<variable name="SkinShortcutsTitleVar">
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)"> / $ADDON[script.skinshortcuts 32071]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)"> / $LOCALIZE[43020]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)"> / $ADDON[script.skinshortcuts 32072]</value>
 	</variable>
 	<!-- WidgetList Text Icon -->
 	<variable name="WidgetListTextIconVar">
@@ -1014,7 +933,6 @@
 		<value condition="Control.HasFocus(5555)">$INFO[VideoPlayer.NextTitle,[B][COLOR white],[/COLOR][/B][CR]]$INFO[VideoPlayer.NextPlot,[COLOR white],[/COLOR]]</value>
 		<value>$INFO[VideoPlayer.CastAndRole,[COLOR white],[/COLOR]]</value>
 	</variable>
-	<!-- List Label2 -->
 	<!-- Select Label -->
 	<variable name="SelectLabelVar">
 		<value condition="Control.IsVisible(3)">[COLOR $VAR[MainColorVar]]$INFO[Container(3).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR]</value>
@@ -1024,6 +942,16 @@
 	<variable name="BottomBarPageLabelVar">
 		<value condition="Control.HasFocus(600) | Control.HasFocus(50600) | Control.HasFocus(502600) | Control.HasFocus(5199) | Control.HasFocus(531) | Control.HasFocus(533)">[COLOR $VAR[MainColorVar]]$INFO[Container.CurrentPage,, / ]$INFO[Container.NumPages][/COLOR]</value>
 		<value>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</value>
+	</variable>
+	<!-- SkinSettings Help Text -->
+	<variable name="SkinSettingsHelpTextVar">
+		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>
+		<value condition="Container(9000).HasFocus(2)">$LOCALIZE[43040]</value>
+		<value condition="Container(9000).HasFocus(3)">$LOCALIZE[31130]</value>
+		<value condition="Container(9000).HasFocus(4)">$LOCALIZE[43041]</value>
+		<value condition="Container(9000).HasFocus(5)">$LOCALIZE[43042]</value>
+		<value condition="Container(9000).HasFocus(6)">$LOCALIZE[43043]</value>
+		<value condition="Container(9000).HasFocus(7)">$LOCALIZE[43044]</value>
 	</variable>
 	<!-- SystemInfoWidget Skin Name and Version-->
 	<variable name="NameAndVersionSkinVar">
@@ -1041,15 +969,15 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),musicvideos) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[20389])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16102]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Watched)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[16101]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.UnWatched)]</value>
 		<!-- Music -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),music) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[2])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[132]: [/COLOR][/B]$INFO[Window.Property(Music.AlbumsCount)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[133]: [/COLOR][/B]$INFO[Window.Property(Music.ArtistsCount)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[134]: [/COLOR][/B]$INFO[Window.Property(Music.SongsCount)]</value>
+		<!-- TV -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[19020])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalTVChannels)]</value>
+		<!-- Radio -->
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),radio) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[19021])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalRadioChannels)]</value>
 		<!-- Weather -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),weather) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[8])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[143][/COLOR][/B] $INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[33030]: [/COLOR][/B]$INFO[Window(weather).Property(Current.Condition)]</value>
 		<!-- PlayDisc -->
 		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[446])] + System.HasMediaDVD">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[427]: [/COLOR][/B]$INFO[System.DVDLabel]</value>
 		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[446])] + !System.HasMediaDVD">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[427]: [/COLOR][/B]$LOCALIZE[164]</value>
-		<!-- TV -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[19020])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalTVChannels)]</value>
-		<!-- Radio -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),radio) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[19021])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalRadioChannels)]</value>
 		<!-- Addons -->
 		<value condition="[String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.label2, $LOCALIZE[24001])]">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[3]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalVideoAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[2]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalAudioAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[0]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalProgramAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[1]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalPicturesAddons)]</value>
 		<!-- Favourites -->
@@ -1064,5 +992,77 @@
 		<value condition="VideoPlayer.Content(LiveTV) + Player.HasAudio + !String.EndsWith(MusicPlayer.Title,.pvr)">$INFO[MusicPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(LiveTV)">$INFO[Player.Title]</value>
 		<value>$INFO[Player.Time]$INFO[Player.Title, - ]</value>
+	</variable>
+	<!-- SkinIcons -->
+	<variable name="SkinIconsVar">
+		<value condition="!String.IsEmpty(Skin.String(SkinIcons.name))">$INFO[Skin.String(SkinIcons.name)]</value>
+		<value>resource://resource.images.skinicons.estuary/</value>
+	</variable>
+	<!-- SkinIcons Name -->
+	<variable name="SkinIconsNameVar">
+		<value condition="!String.IsEmpty(Skin.String(SkinIcons.name))">$INFO[Skin.String(SkinIcons.name)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<!-- PrimaryBackground Color Name -->
+	<variable name="PrimaryBackgroundColorNameVar">
+		<value condition="!String.IsEmpty(Skin.String(PrimaryBackgroundColor))">$INFO[Skin.String(PrimaryBackgroundColor)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<!-- SecondaryBackground Color Name -->
+	<variable name="SecondaryBackgroundColorNameVar">
+		<value condition="!String.IsEmpty(Skin.String(SecondaryBackgroundColor))">$INFO[Skin.String(SecondaryBackgroundColor)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<!-- Main Color Name -->
+	<variable name="MainColorNameVar">
+		<value condition="!String.IsEmpty(Skin.String(MainColor))">$INFO[Skin.String(MainColor)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<!-- Skin Setting Spinner -->
+	<variable name="SkinSettingSpinnerVar">
+		<value condition="Skin.String(SkinHelper.SpinnerTexture.Path,None)">$LOCALIZE[15109]</value>
+		<value condition="!String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path))">$INFO[Skin.String(SkinHelper.SpinnerTexture.Path)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<!-- Widget Type Name -->
+	<variable name="SkinSettingWidgetNameVar">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<!-- Widget Name 1 -->
+	<variable name="WidgetName1Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget1))">$INFO[Container(211).ListItem.Property(widgetName.widget1)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<!-- Widget Name 2 -->
+	<variable name="WidgetName2Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget2))">$INFO[Container(211).ListItem.Property(widgetName.widget2)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<!-- Widget Name 3 -->
+	<variable name="WidgetName3Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget3))">$INFO[Container(211).ListItem.Property(widgetName.widget3)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<!-- Widget Name 4 -->
+	<variable name="WidgetName4Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget4))">$INFO[Container(211).ListItem.Property(widgetName.widget4)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<!-- Widget Name 5 -->
+	<variable name="WidgetName5Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget5))">$INFO[Container(211).ListItem.Property(widgetName.widget5)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<!-- Widget Name 6 -->
+	<variable name="WidgetName6Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget6))">$INFO[Container(211).ListItem.Property(widgetName.widget6)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<!-- SkinShortcuts Title -->
+	<variable name="SkinShortcutsTitleVar">
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)"> / $ADDON[script.skinshortcuts 32071]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)"> / $LOCALIZE[43020]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)"> / $ADDON[script.skinshortcuts 32072]</value>
 	</variable>
 </includes>

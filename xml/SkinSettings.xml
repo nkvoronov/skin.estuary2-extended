@@ -170,7 +170,7 @@
 					<label>- $LOCALIZE[43005]</label>
 					<label2>$VAR[DurationSplashScreenNameVar]</label2>
 					<onclick condition="String.IsEmpty(Skin.String(duration_splashscreen))">Skin.SetString(duration_splashscreen,5,)</onclick>
-				    <onclick>Skin.SetNumeric(duration_splashscreen)</onclick>
+					<onclick>Skin.SetNumeric(duration_splashscreen)</onclick>
 					<enable>Skin.HasSetting(enable_splashscreen)</enable>
 				</control>
 				<control type="label" id="111">
@@ -396,7 +396,7 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=LanguageFlags&amp;type=resource.images.languageflags)</onclick>
 				</control>
 				<control type="button" id="208">
-				    <description>Movie Genre Icons</description>
+					<description>Movie Genre Icons</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43012]</label>
 					<label2>$VAR[MovieGenreIconsNameVar]</label2>
@@ -525,7 +525,7 @@
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="3043">
+				<control type="button" id="304">
 					<description>Reset All Menu</description>
 					<include>DefaultSettingButton</include>
 					<label>$ADDON[script.skinshortcuts 32037]</label>
