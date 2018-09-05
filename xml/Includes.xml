@@ -106,10 +106,8 @@
 	</include>
 	<include name="RatingCircle">
 		<param name="animation">False</param>
-		<param name="userratingval">ListItem.UserRating</param>
 		<definition>
 			<control type="group">
-				<visible>!String.IsEmpty($PARAM[userratingval])</visible>
 				<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
 				<include content="UserRatingContent" condition="Skin.HasSetting(circle_userrating)">
 					<param name="infolabel" value="ListItem.UserRating" />
