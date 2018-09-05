@@ -5,7 +5,6 @@
 	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/addons.jpg,home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-		<!-- Background -->
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[AddonsFanartVar]" />
 		</include>
@@ -78,8 +77,9 @@
 					<width>462</width>
 					<height>671</height>
 					<pagecontrol>70</pagecontrol>
-					<onup>700</onup>
-					<ondown>700</ondown>
+					<onleft>700</onleft>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
 					<onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<focusedlayout height="95" width="462">

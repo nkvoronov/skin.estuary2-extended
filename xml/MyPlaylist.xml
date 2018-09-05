@@ -6,7 +6,6 @@
 	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/videos.jpg,home)</onload>
 	<views>50</views>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -28,7 +27,7 @@
 					<pagecontrol>60</pagecontrol>
 					<viewtype label="List">list</viewtype>
 					<preloaditems>1</preloaditems>
-					<focusedlayout height="list_item_height" width="playlistlist_width">
+					<focusedlayout height="list_item_height">
 						<control type="image">
 							<left>0</left>
 							<right>0</right>
@@ -56,7 +55,7 @@
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
-					<itemlayout height="list_item_height" width="playlistlist_width">
+					<itemlayout height="list_item_height">
 						<control type="label">
 							<left>30</left>
 							<bottom>0</bottom>

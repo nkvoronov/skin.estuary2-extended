@@ -52,7 +52,7 @@
 					<fadetime>0</fadetime>
 					<colordiffuse>$VAR[MainColorVar]</colordiffuse>
 					<visible>![String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path)) | Skin.String(SkinHelper.SpinnerTexture.Path,None)]</visible>
-				</control>				
+				</control>
 				<control type="image">
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>

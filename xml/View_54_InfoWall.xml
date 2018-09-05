@@ -143,9 +143,7 @@
 			<control type="group">
 				<left>133</left>
 				<top>2</top>
-				<include content="UserRatingCircle">
-					<param name="userratingval" value="$PARAM[userratingval]" />
-				</include>
+				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 		</definition>
 	</include>
@@ -271,9 +269,7 @@
 			<control type="group">
 				<left>134</left>
 				<top>8</top>
-				<include content="UserRatingCircle">
-					<param name="userratingval" value="$PARAM[userratingval]" />
-				</include>
+				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 		</definition>
 	</include>
@@ -463,7 +459,7 @@
 					<centerleft>50%</centerleft>
 					<width>44</width>
 					<top>4</top>
-					<include content="UserRatingCircle">
+					<include content="RatingCircle">
 						<param name="userratingval" value="$PARAM[userratingval]" />
 					</include>
 				</control>
@@ -491,7 +487,7 @@
 				<preloaditems>2</preloaditems>
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(videos)</visible>
+				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
 				<itemlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
 					<control type="group">
 						<left>30</left>

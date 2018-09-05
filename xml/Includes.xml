@@ -1168,14 +1168,12 @@
 		<width>auto</width>
 	</include>
 	<include name="ColoredBackgroundImages">
-		<!-- Primary Background Default -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
 		</control>
-		<!-- Secondary Background -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
@@ -1188,18 +1186,15 @@
 		<param name="fanart_background">$VAR[FanartBackgroundVar]</param>
 		<param name="fanart_media"></param>
 		<definition>
-			<!-- Video -->
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasVideo + !Skin.HasSetting(show_background_video) + !Slideshow.IsActive</visible>
 			</control>
-			<!-- Visualisation -->
 			<control type="visualisation">
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Slideshow.IsActive + !Skin.HasSetting(show_background_vis)</visible>
 			</control>
-			<!-- Backgrounds -->
 			<control type="group">
 				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
@@ -1632,7 +1627,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<!-- Dialog Select Value -->
 	<include name="DialogSelectValue">
 		<definition>
 			<control type="group">
@@ -1767,7 +1761,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Backgrounds Select Value -->
 	<include name="BackgroundsSelVal">
 		<content>
 			<item id="1">

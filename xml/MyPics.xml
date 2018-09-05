@@ -7,7 +7,6 @@
 	<views>50,52,53,54,55,500</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<!-- Background -->
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[MediaFanartVar]" />
 		</include>

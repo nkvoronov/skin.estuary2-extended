@@ -25,7 +25,6 @@
 			<onfocus>ActivateWindow(servicesettings,weather)</onfocus>
 			<onclick>noop</onclick>
 		</control>
-		<!-- Background -->
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[WeatherFanartVar]" />
 		</include>

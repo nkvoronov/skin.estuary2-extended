@@ -7,7 +7,6 @@
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onunload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<depth>DepthContentPanel</depth>
@@ -89,7 +88,6 @@
 		<control type="group" id="10000">
 			<left>470</left>
 			<include>OpenClose_Right</include>
-			<!-- General -->
 			<control type="grouplist" id="100">
 				<top>160</top>
 				<left>0</left>
@@ -333,7 +331,6 @@
 					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_time)|Skin.Reset(show_weatherinfo)|Skin.Reset(hide_mediaflags)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)|Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(lrclyrics_alternative_view)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favorites)|Skin.Reset(animated_posters)|Skin.Reset(animated_fanarts)|Skin.Reset(wall_backgrounds)|Skin.Reset(random_fanart_delay))</onclick>
 				</control>
 			</control>
-			<!-- Options -->
 			<control type="grouplist" id="200">
 				<left>0</left>
 				<top>160</top>
@@ -496,7 +493,6 @@
 					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(enable_skin_debug))</onclick>
 				</control>
 			</control>
-			<!-- Main menu -->
 			<control type="grouplist" id="300">
 				<left>0</left>
 				<top>160</top>
@@ -532,7 +528,6 @@
 					<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 				</control>
 			</control>
-			<!-- User Widgets -->
 			<control type="grouplist" id="400">
 				<left>0</left>
 				<top>160</top>
@@ -624,7 +619,6 @@
 					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(enable_custom_list_addons_video)|Skin.Reset(AddonSetVideo.0.Label)|Skin.Reset(AddonSetVideo.0.Name)|Skin.Reset(AddonSetVideo.0.Icon)|Skin.Reset(AddonSetVideo.1.Label)|Skin.Reset(AddonSetVideo.1.Name)|Skin.Reset(AddonSetVideo.1.Icon)|Skin.Reset(AddonSetVideo.2.Label)|Skin.Reset(AddonSetVideo.2.Name)|Skin.Reset(AddonSetVideo.2.Icon)|Skin.Reset(AddonSetVideo.3.Label)|Skin.Reset(AddonSetVideo.3.Name)|Skin.Reset(AddonSetVideo.3.Icon)|Skin.Reset(AddonSetVideo.4.Label)|Skin.Reset(AddonSetVideo.4.Name)|Skin.Reset(AddonSetVideo.4.Icon)|Skin.Reset(AddonSetVideo.5.Label)|Skin.Reset(AddonSetVideo.5.Name)|Skin.Reset(AddonSetVideo.5.Icon)|Skin.Reset(AddonSetVideo.6.Label)|Skin.Reset(AddonSetVideo.6.Name)|Skin.Reset(AddonSetVideo.6.Icon)|Skin.Reset(AddonSetVideo.7.Label)|Skin.Reset(AddonSetVideo.7.Name)|Skin.Reset(AddonSetVideo.7.Icon)|Skin.Reset(AddonSetVideo.8.Label)|Skin.Reset(AddonSetVideo.8.Name)|Skin.Reset(AddonSetVideo.8.Icon)|Skin.Reset(AddonSetVideo.9.Label)|Skin.Reset(AddonSetVideo.9.Name)|Skin.Reset(AddonSetVideo.9.Icon)|Skin.Reset(enable_custom_list_addons_audio)|Skin.Reset(AddonSetAudio.0.Label)|Skin.Reset(AddonSetAudio.0.Name)|Skin.Reset(AddonSetAudio.0.Icon)|Skin.Reset(AddonSetAudio.1.Label)|Skin.Reset(AddonSetAudio.1.Name)|Skin.Reset(AddonSetAudio.1.Icon)|Skin.Reset(AddonSetAudio.2.Label)|Skin.Reset(AddonSetAudio.2.Name)|Skin.Reset(AddonSetAudio.2.Icon)|Skin.Reset(AddonSetAudio.3.Label)|Skin.Reset(AddonSetAudio.3.Name)|Skin.Reset(AddonSetAudio.3.Icon)|Skin.Reset(AddonSetAudio.4.Label)|Skin.Reset(AddonSetAudio.4.Name)|Skin.Reset(AddonSetAudio.4.Icon)|Skin.Reset(AddonSetAudio.5.Label)|Skin.Reset(AddonSetAudio.5.Name)|Skin.Reset(AddonSetAudio.5.Icon)|Skin.Reset(AddonSetAudio.6.Label)|Skin.Reset(AddonSetAudio.6.Name)|Skin.Reset(AddonSetAudio.6.Icon)|Skin.Reset(AddonSetAudio.7.Label)|Skin.Reset(AddonSetAudio.7.Name)|Skin.Reset(AddonSetAudio.7.Icon)|Skin.Reset(AddonSetAudio.8.Label)|Skin.Reset(AddonSetAudio.8.Name)|Skin.Reset(AddonSetAudio.8.Icon)|Skin.Reset(AddonSetAudio.9.Label)|Skin.Reset(AddonSetAudio.9.Name)|Skin.Reset(AddonSetAudio.9.Icon)|Skin.Reset(enable_custom_list_addons_programs)|Skin.Reset(AddonSetPrograms.0.Label)|Skin.Reset(AddonSetPrograms.0.Name)|Skin.Reset(AddonSetPrograms.0.Icon)|Skin.Reset(AddonSetPrograms.1.Label)|Skin.Reset(AddonSetPrograms.1.Name)|Skin.Reset(AddonSetPrograms.1.Icon)|Skin.Reset(AddonSetPrograms.2.Label)|Skin.Reset(AddonSetPrograms.2.Name)|Skin.Reset(AddonSetPrograms.2.Icon)|Skin.Reset(AddonSetPrograms.3.Label)|Skin.Reset(AddonSetPrograms.3.Name)|Skin.Reset(AddonSetPrograms.3.Icon)|Skin.Reset(AddonSetPrograms.4.Label)|Skin.Reset(AddonSetPrograms.4.Name)|Skin.Reset(AddonSetPrograms.4.Icon)|Skin.Reset(AddonSetPrograms.5.Label)|Skin.Reset(AddonSetPrograms.5.Name)|Skin.Reset(AddonSetPrograms.5.Icon)|Skin.Reset(AddonSetPrograms.6.Label)|Skin.Reset(AddonSetPrograms.6.Name)|Skin.Reset(AddonSetPrograms.6.Icon)|Skin.Reset(AddonSetPrograms.7.Label)|Skin.Reset(AddonSetPrograms.7.Name)|Skin.Reset(AddonSetPrograms.7.Icon)|Skin.Reset(AddonSetPrograms.8.Label)|Skin.Reset(AddonSetPrograms.8.Name)|Skin.Reset(AddonSetPrograms.8.Icon)|Skin.Reset(AddonSetPrograms.9.Label)|Skin.Reset(AddonSetPrograms.9.Name)|Skin.Reset(AddonSetPrograms.9.Icon)|Skin.Reset(enable_custom_list_addons_apps)|Skin.Reset(enable_custom_list_addons_image)|Skin.Reset(AddonSetImage.0.Label)|Skin.Reset(AddonSetImage.0.Name)|Skin.Reset(AddonSetImage.0.Icon)|Skin.Reset(AddonSetImage.1.Label)|Skin.Reset(AddonSetImage.1.Name)|Skin.Reset(AddonSetImage.1.Icon)|Skin.Reset(AddonSetImage.2.Label)|Skin.Reset(AddonSetImage.2.Name)|Skin.Reset(AddonSetImage.2.Icon)|Skin.Reset(AddonSetImage.3.Label)|Skin.Reset(AddonSetImage.3.Name)|Skin.Reset(AddonSetImage.3.Icon)|Skin.Reset(AddonSetImage.4.Label)|Skin.Reset(AddonSetImage.4.Name)|Skin.Reset(AddonSetImage.4.Icon)|Skin.Reset(AddonSetImage.5.Label)|Skin.Reset(AddonSetImage.5.Name)|Skin.Reset(AddonSetImage.5.Icon)|Skin.Reset(AddonSetImage.6.Label)|Skin.Reset(AddonSetImage.6.Name)|Skin.Reset(AddonSetImage.6.Icon)|Skin.Reset(AddonSetImage.7.Label)|Skin.Reset(AddonSetImage.7.Name)|Skin.Reset(AddonSetImage.7.Icon)|Skin.Reset(AddonSetImage.8.Label)|Skin.Reset(AddonSetImage.8.Name)|Skin.Reset(AddonSetImage.8.Icon)|Skin.Reset(AddonSetImage.9.Label)|Skin.Reset(AddonSetImage.9.Name)|Skin.Reset(AddonSetImage.9.Icon)|Skin.Reset(enable_custom_list_channels_tv)|Skin.Reset(ChannelTV.0.Label)|Skin.Reset(ChannelTV.0.ChannelId)|Skin.Reset(ChannelTV.0.Icon)|Skin.Reset(ChannelTV.1.Label)|Skin.Reset(ChannelTV.1.ChannelId)|Skin.Reset(ChannelTV.1.Icon)|Skin.Reset(ChannelTV.2.Label)|Skin.Reset(ChannelTV.2.ChannelId)|Skin.Reset(ChannelTV.2.Icon)|Skin.Reset(ChannelTV.3.Label)|Skin.Reset(ChannelTV.3.ChannelId)|Skin.Reset(ChannelTV.3.Icon)|Skin.Reset(ChannelTV.4.Label)|Skin.Reset(ChannelTV.4.ChannelId)|Skin.Reset(ChannelTV.4.Icon)|Skin.Reset(ChannelTV.5.Label)|Skin.Reset(ChannelTV.5.ChannelId)|Skin.Reset(ChannelTV.5.Icon)|Skin.Reset(ChannelTV.6.Label)|Skin.Reset(ChannelTV.6.ChannelId)|Skin.Reset(ChannelTV.6.Icon)|Skin.Reset(ChannelTV.7.Label)|Skin.Reset(ChannelTV.7.ChannelId)|Skin.Reset(ChannelTV.7.Icon)|Skin.Reset(ChannelTV.8.Label)|Skin.Reset(ChannelTV.8.ChannelId)|Skin.Reset(ChannelTV.8.Icon)|Skin.Reset(ChannelTV.9.Label)|Skin.Reset(ChannelTV.9.ChannelId)|Skin.Reset(ChannelTV.9.Icon)|Skin.Reset(enable_custom_list_channels_radio)|Skin.Reset(ChannelRadio.0.Label)|Skin.Reset(ChannelRadio.0.ChannelId)|Skin.Reset(ChannelRadio.0.Icon)|Skin.Reset(ChannelRadio.1.Label)|Skin.Reset(ChannelRadio.1.ChannelId)|Skin.Reset(ChannelRadio.1.Icon)|Skin.Reset(ChannelRadio.2.Label)|Skin.Reset(ChannelRadio.2.ChannelId)|Skin.Reset(ChannelRadio.2.Icon)|Skin.Reset(ChannelRadio.3.Label)|Skin.Reset(ChannelRadio.3.ChannelId)|Skin.Reset(ChannelRadio.3.Icon)|Skin.Reset(ChannelRadio.4.Label)|Skin.Reset(ChannelRadio.4.ChannelId)|Skin.Reset(ChannelRadio.4.Icon)|Skin.Reset(ChannelRadio.5.Label)|Skin.Reset(ChannelRadio.5.ChannelId)|Skin.Reset(ChannelRadio.5.Icon)|Skin.Reset(ChannelRadio.6.Label)|Skin.Reset(ChannelRadio.6.ChannelId)|Skin.Reset(ChannelRadio.6.Icon)|Skin.Reset(ChannelRadio.7.Label)|Skin.Reset(ChannelRadio.7.ChannelId)|Skin.Reset(ChannelRadio.7.Icon)|Skin.Reset(ChannelRadio.8.Label)|Skin.Reset(ChannelRadio.8.ChannelId)|Skin.Reset(ChannelRadio.8.Icon)|Skin.Reset(ChannelRadio.9.Label)|Skin.Reset(ChannelRadio.9.ChannelId)|Skin.Reset(ChannelRadio.9.Icon))</onclick>
 				</control>
 			</control>
-			<!-- Backgrounds -->
 			<control type="grouplist" id="500">
 				<left>0</left>
 				<top>160</top>
@@ -806,7 +800,6 @@
 					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(no_fanart)|Skin.Reset(hide_visualization_fanart)|Skin.Reset(show_background_video)|Skin.Reset(show_background_vis)|Skin.SetString(background_overlay,0)|Skin.Reset(Opacity)|Skin.Reset(Opacity.label)|Skin.Reset(separate_background)|Skin.Reset(use_custom_bg)|Skin.Reset(custom_background)|Skin.Reset(background_power)|Skin.Reset(background_settings)|Skin.Reset(background_search)|Skin.Reset(background_audio)|Skin.Reset(HomeFanart.name)|Skin.Reset(HomeFanart.path)|Skin.Reset(HomeFanart.ext)|Skin.Reset(MovieGenreFanart.name)|Skin.Reset(MovieGenreFanart.path)|Skin.Reset(MovieGenreFanart.ext)|Skin.Reset(WeatherFanart.name)|Skin.Reset(WeatherFanart.ext)|Skin.Reset(WeatherFanart.path)|Skin.Reset(WeatherFanart.multi)|SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
 				</control>
 			</control>
-			<!-- Colors -->
 			<control type="grouplist" id="600">
 				<left>0</left>
 				<top>160</top>
@@ -869,7 +862,6 @@
 					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(PrimaryBackgroundColor)|Skin.Reset(SecondaryBackgroundColor)|Skin.Reset(MainColor))</onclick>
 				</control>
 			</control>
-			<!-- Reset -->
 			<control type="grouplist" id="700">
 				<left>0</left>
 				<top>160</top>

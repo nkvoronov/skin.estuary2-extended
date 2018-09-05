@@ -6,7 +6,6 @@
 	<onload>SetProperty(fanarthometype,music,home)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/music.jpg,home)</onload>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<include>OpenClose_Left</include>
