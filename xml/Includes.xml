@@ -2104,6 +2104,12 @@
 		<onclick>Skin.Reset(hide_time)</onclick>
 		<onclick>Skin.Reset(show_weatherinfo)</onclick>
 		<onclick>Skin.Reset(hide_mediaflags)</onclick>
+        <onclick>Skin.SetBool(circle_rating)</onclick>
+        <onclick>Skin.Reset(circle_userrating)</onclick>
+        <onclick>Skin.Reset(circle_none)</onclick>
+        <onclick>Skin.SetBool(show_profilename)</onclick>
+        <onclick>Skin.Reset(show_profileavatar)</onclick>
+        <onclick>Skin.Reset(show_none)</onclick>        
 		<onclick>Skin.Reset(enable_splashscreen)</onclick>
 		<onclick>Skin.Reset(enable_globalsearch)</onclick>
 		<onclick>Skin.Reset(enable_watchitlater)</onclick>
@@ -2140,6 +2146,7 @@
 		<include>DialogClickNo</include>
 	</include>
 	<include name="DialogMainMenu">
+        <onclick>Skin.Reset(home_no_categories_widget)</onclick>
 		<onclick>Skin.Reset(HomeMenuNoMovieButton)</onclick>
 		<onclick>Skin.Reset(HomeMenuNoTVShowButton)</onclick>
 		<onclick>Skin.Reset(HomeMenuNoMusicButton)</onclick>
@@ -2148,6 +2155,7 @@
 		<onclick>Skin.Reset(HomeMenuNoProgramsButton)</onclick>
 		<onclick>Skin.Reset(HomeMenuNoPicturesButton)</onclick>
 		<onclick>Skin.Reset(HomeMenuNoVideosButton)</onclick>
+        <onclick>Skin.Reset(HomeMenuNoGamesButton)</onclick>
 		<onclick>Skin.Reset(HomeMenuNoFavButton)</onclick>
 		<onclick>Skin.Reset(HomeMenuNoWeatherButton)</onclick>
 		<include>DialogClickNo</include>
