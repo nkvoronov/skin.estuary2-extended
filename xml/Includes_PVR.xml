@@ -442,7 +442,7 @@
 						<top>35</top>
 						<width>20</width>
 						<height>20</height>
-						<texture>$VAR[PVRTimerIcon]</texture>
+						<texture>$VAR[PVRTimerIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="62" width="60">
@@ -479,7 +479,7 @@
 						<top>35</top>
 						<width>20</width>
 						<height>20</height>
-						<texture>$VAR[PVRTimerIcon]</texture>
+						<texture>$VAR[PVRTimerIconVar]</texture>
 					</control>
 				</focusedlayout>
 			</control>

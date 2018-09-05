@@ -80,7 +80,7 @@
 					</itemlayout>
 					<focusedlayout condition="!Control.IsVisible(200)" width="700" height="80">
 						<control type="image">
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(100)</visible>
 						</control>
 						<control type="image">
@@ -112,7 +112,7 @@
 					</focusedlayout>
 					<focusedlayout condition="Control.IsVisible(200)" width="688" height="80">
 						<control type="image">
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(100)</visible>
 						</control>
 						<control type="image">

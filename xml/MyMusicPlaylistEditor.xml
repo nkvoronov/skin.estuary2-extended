@@ -6,7 +6,6 @@
 	<onload>SetProperty(fanarthometype,music,home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundMusicVar],home)</onload>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<include>OpenClose_Left</include>

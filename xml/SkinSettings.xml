@@ -6,7 +6,6 @@
 	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<depth>DepthContentPanel</depth>
@@ -83,7 +82,6 @@
 		<control type="group" id="10000">
 			<left>470</left>
 			<include>OpenClose_Right</include>
-			<!-- General -->
 			<control type="grouplist" id="100">
 				<top>160</top>
 				<left>0</left>
@@ -204,7 +202,6 @@
 					<onclick>ActivateWindow(1111)</onclick>
 				</control>
 			</control>
-			<!-- Options -->
 			<control type="grouplist" id="200">
 				<left>0</left>
 				<top>160</top>
@@ -362,7 +359,6 @@
 					<onclick>ActivateWindow(1112)</onclick>
 				</control>
 			</control>
-			<!-- Main menu -->
 			<control type="grouplist" id="300">
 				<left>0</left>
 				<top>160</top>
@@ -473,7 +469,6 @@
 					<onclick>ActivateWindow(1113)</onclick>
 				</control>
 			</control>
-			<!-- User Widgets -->
 			<control type="grouplist" id="400">
 				<left>0</left>
 				<top>160</top>
@@ -565,7 +560,6 @@
 					<onclick>ActivateWindow(1114)</onclick>
 				</control>
 			</control>
-			<!-- Backgrounds -->
 			<control type="grouplist" id="500">
 				<left>0</left>
 				<top>160</top>
@@ -855,7 +849,6 @@
 					<onclick>ActivateWindow(1115)</onclick>
 				</control>
 			</control>
-			<!-- Reset -->
 			<control type="grouplist" id="600">
 				<left>0</left>
 				<top>160</top>

@@ -174,7 +174,7 @@
 						<control type="group">
 							<left>231</left>
 							<top>-8</top>
-							<include>UserRatingCircle</include>
+							<include>RatingCircle</include>
 						</control>
 					</control>
 				</itemlayout>
@@ -313,7 +313,7 @@
 						<control type="group">
 							<left>231</left>
 							<top>-8</top>
-							<include>UserRatingCircle</include>
+							<include>RatingCircle</include>
 						</control>
 					</control>
 				</focusedlayout>
@@ -401,7 +401,7 @@
 						<control type="group">
 							<left>231</left>
 							<top>-8</top>
-							<include>UserRatingCircle</include>
+							<include>RatingCircle</include>
 						</control>
 					</control>
 				</itemlayout>
@@ -498,7 +498,7 @@
 						<control type="group">
 							<left>231</left>
 							<top>-8</top>
-							<include>UserRatingCircle</include>
+							<include>RatingCircle</include>
 						</control>
 					</control>
 				</focusedlayout>

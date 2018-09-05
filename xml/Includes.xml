@@ -1167,14 +1167,12 @@
 		<width>auto</width>
 	</include>
 	<include name="ColoredBackgroundImages">
-		<!-- Primary Background Default -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/primary.jpg</texture>
 		</control>
-		<!-- Secondary Background -->
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
@@ -1187,18 +1185,15 @@
 		<param name="fanart_background">$VAR[FanartBackgroundVar]</param>
 		<param name="fanart_media"></param>
 		<definition>
-			<!-- Video -->
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasVideo + !Skin.HasSetting(show_background_video) + !Slideshow.IsActive</visible>
 			</control>
-			<!-- Visualisation -->
 			<control type="visualisation">
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Slideshow.IsActive + !Skin.HasSetting(show_background_vis)</visible>
 			</control>
-			<!-- Backgrounds -->
 			<control type="group">
 				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
@@ -1631,7 +1626,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<!-- Dialog Select Value -->
 	<include name="DialogSelectValue">
 		<definition>
 			<control type="group">
@@ -1766,7 +1760,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Backgrounds Select Value -->
 	<include name="BackgroundsSelVal">
 		<content>
 			<item id="1">
@@ -1800,7 +1793,6 @@
 		<include>Animation_DialogPopupOpenClose</include>
 		<depth>DepthOSD</depth>
 	</include>
-	<!-- Dialog Yes No -->
 	<include name="DialogYesNo">
 		<param name="dialogincludeno">DialogClickNo</param>
 		<definition>
@@ -1845,7 +1837,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Popup Position Value -->
 	<include name="PopupPositionVal">
 		<content>
 			<item id="1">
@@ -1904,7 +1895,6 @@
 			</item>
 		</content>
 	</include>
-	<!-- Background Opacity Value -->
 	<include name="BackgroundOpacityVal">
 		<content>
 			<item id="1">
@@ -2107,10 +2097,6 @@
 			</item>
 		</content>
 	</include>
-
-	<!-- *** Reset *** -->
-
-	<!-- Reset General -->
 	<include name="DialogResetGeneral">
 		<onclick>Skin.Reset(no_slide_animations)</onclick>
 		<onclick>Skin.Reset(autoscroll)</onclick>
@@ -2124,7 +2110,6 @@
 		<onclick>Skin.Reset(lrclyrics_alternative_view)</onclick>
 		<include>DialogClickNo</include>
 	</include>
-	<!-- Reset Options -->
 	<include name="DialogResetOptions">
 		<onclick>Skin.Reset(full_screen_clock)</onclick>
 		<onclick>Skin.Reset(slideshow_info)</onclick>
@@ -2154,7 +2139,6 @@
 		<onclick>Skin.Reset(enable_skin_debug)</onclick>
 		<include>DialogClickNo</include>
 	</include>
-	<!-- Reset Main Menu -->
 	<include name="DialogMainMenu">
 		<onclick>Skin.Reset(HomeMenuNoMovieButton)</onclick>
 		<onclick>Skin.Reset(HomeMenuNoTVShowButton)</onclick>
@@ -2168,7 +2152,6 @@
 		<onclick>Skin.Reset(HomeMenuNoWeatherButton)</onclick>
 		<include>DialogClickNo</include>
 	</include>
-	<!-- Reset User Widgets -->
 	<include name="DialogUserWidgets">
 		<onclick>Skin.Reset(enable_custom_list_addons_video)</onclick>
 		<onclick>Skin.Reset(AddonSetVideo.0.Label)</onclick>
@@ -2359,7 +2342,6 @@
 		<onclick>Skin.Reset(ChannelRadio.9.Icon)</onclick>
 		<include>DialogClickNo</include>
 	</include>
-	<!-- Reset Backgrounds -->
 	<include name="DialogBackgrounds">
 		<onclick>Skin.Reset(no_fanart)</onclick>
 		<onclick>Skin.Reset(hide_visualization_fanart)</onclick>
@@ -2400,18 +2382,15 @@
 		<onclick>SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,home))</onclick>
 		<include>DialogClickNo</include>
 	</include>
-	<!-- Reset Skin -->
 	<include name="DialogResetSkin">
 		<onclick>Skin.ResetSettings</onclick>
 		<onclick>ReloadSkin()</onclick>
 		<include>DialogClickNo</include>
 		<onclick>ActivateWindow(Home)</onclick>
 	</include>
-	<!-- Click No -->
 	<include name="DialogClickNo">
 		<onclick>PreviousMenu</onclick>
 	</include>
-	<!-- Addon SubMenu Content -->
 	<include name="AddonSubMenuContent">
 		<item>
 			<label>$LOCALIZE[24998]</label>
@@ -2439,7 +2418,6 @@
 			<thumb>DefaultAddonsSearch.png</thumb>
 		</item>
 	</include>
-	<!-- PVR SubMenu Content -->
 	<include name="PVRSubMenuContent">
 		<item>
 			<label>$LOCALIZE[19019]</label>

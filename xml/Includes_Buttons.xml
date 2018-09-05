@@ -91,13 +91,13 @@
 		<param name="height">100</param>
 		<param name="wrapmultiline">false</param>
 		<param name="font">font25_title</param>
+		<param name="onclick"></param>
+		<param name="visible">true</param>
 		<param name="isincludeclick">false</param>
 		<param name="onclickinclude"></param>
-		<param name="onclick"></param>
 		<param name="onclick2"></param>
 		<param name="onclick3"></param>
 		<param name="onclick4"></param>
-		<param name="visible">true</param>
 		<definition>
 			<control type="button" id="$PARAM[id]">
 				<width>$PARAM[width]</width>

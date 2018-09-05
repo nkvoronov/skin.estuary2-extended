@@ -8,6 +8,7 @@
 			<include>Visible_Right</include>
 			<include content="ListContainer">
 				<param name="list_id" value="50" />
+				<param name="right" value="594" />
 				<param name="viewtype_label" value="$LOCALIZE[535]" />
 			</include>
 			<control type="group">
@@ -55,8 +56,8 @@
 					</control>
 					<control type="group">
 						<left>310</left>
-						<top>100</top>
-						<include content="UserRatingCircle">
+						<top>936</top>
+						<include content="RatingCircle">
 							<param name="animation" value="True" />
 						</include>
 					</control>
@@ -209,7 +210,7 @@
 					<control type="group">
 						<left>268</left>
 						<top>120</top>
-						<include>UserRatingCircle</include>
+						<include>RatingCircle</include>
 					</control>
 					<control type="progress">
 						<left>120</left>
@@ -236,7 +237,7 @@
 					<control type="group">
 						<left>268</left>
 						<top>120</top>
-						<include>UserRatingCircle</include>
+						<include>RatingCircle</include>
 					</control>
 				</control>
 				<control type="textbox" id="15500">
@@ -252,7 +253,7 @@
 				<control type="group">
 					<left>20</left>
 					<top>640</top>
-					<visible>ListItem.IsCollection</visible>
+					<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
 					<include content="InfoList">
 						<param name="bottom" value="100" />
 						<param name="width" value="540" />
@@ -262,7 +263,7 @@
 					</include>
 				</control>
 				<control type="group">
-					<visible>String.IsEmpty(Control.GetLabel(15500)) + !ListItem.IsCollection</visible>
+					<visible>!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)</visible>
 					<control type="textbox">
 						<left>30</left>
 						<top>460</top>
