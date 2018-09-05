@@ -8,83 +8,6 @@
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
-		<control type="group">
-			<depth>DepthContentPanel</depth>
-			<left>0</left>
-			<include>OpenClose_Left</include>
-			<include content="ContentPanel">
-				<param name="width" value="530" />
-			</include>
-			<control type="list" id="9000">
-				<description>Button Area</description>
-				<left>0</left>
-				<top>160</top>
-				<width>470</width>
-				<height>700</height>
-				<onleft>10000</onleft>
-				<onright>10000</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<itemlayout height="90" width="470">
-					<control type="label">
-						<textoffsetx>30</textoffsetx>
-						<width>470</width>
-						<height>90</height>
-						<label>$INFO[ListItem.Label]</label>
-						<font>font37</font>
-						<aligny>center</aligny>
-					</control>
-				</itemlayout>
-				<focusedlayout height="90" width="470">
-					<control type="image">
-						<width>470</width>
-						<height>90</height>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
-						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
-					</control>
-					<control type="label">
-						<textoffsetx>30</textoffsetx>
-						<width>470</width>
-						<height>90</height>
-						<font>font37</font>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</focusedlayout>
-				<content>
-					<item id="1">
-						<label>$LOCALIZE[128]</label>
-						<onclick>noop</onclick>
-					</item>
-					<item id="2">
-						<label>$LOCALIZE[43000]</label>
-						<onclick>noop</onclick>
-					</item>
-					<item id="3">
-						<label>$LOCALIZE[31061]</label>
-						<onclick>noop</onclick>
-					</item>
-					<item id="4">
-						<label>$LOCALIZE[43001]</label>
-						<visible>Skin.HasSetting(enable_custom_list_addons) | Skin.HasSetting(enable_custom_list_channels)</visible>
-						<onclick>noop</onclick>
-					</item>
-					<item id="5">
-						<label>$LOCALIZE[33068]</label>
-						<onclick>noop</onclick>
-					</item>
-					<item id="6">
-						<label>$LOCALIZE[43002]</label>
-						<onclick>noop</onclick>
-						<visible>System.HasAddon(script.skin.helper.colorpicker)</visible>
-					</item>
-					<item id="7">
-						<label>$LOCALIZE[13007]</label>
-						<onclick>noop</onclick>
-					</item>
-				</content>
-			</control>
-		</control>
 		<control type="group" id="10000">
 			<left>470</left>
 			<include>OpenClose_Right</include>
@@ -936,117 +859,207 @@
 				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 		</control>
-		<control type="scrollbar" id="10">
-			<right>0</right>
-			<top>163</top>
-			<width>12</width>
-			<bottom>137</bottom>
-			<orientation>vertical</orientation>
-			<texturesliderbackground />
-			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(10)">conditional</animation>
-			<onleft>100</onleft>
-			<onright>100</onright>
-			<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-			<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-			<visible>Control.IsVisible(100)</visible>
+		<control type="group">
+			<depth>DepthContentPanel</depth>
+			<left>0</left>
+			<include>OpenClose_Left</include>
+			<include content="ContentPanel">
+				<param name="width" value="530" />
+			</include>
+			<control type="list" id="9000">
+				<description>Button Area</description>
+				<left>0</left>
+				<top>160</top>
+				<width>470</width>
+				<height>700</height>
+				<onleft>10000</onleft>
+				<onright>10000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemlayout height="90" width="470">
+					<control type="label">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>90</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font37</font>
+						<aligny>center</aligny>
+					</control>
+				</itemlayout>
+				<focusedlayout height="90" width="470">
+					<control type="image">
+						<width>470</width>
+						<height>90</height>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
+					</control>
+					<control type="label">
+						<textoffsetx>30</textoffsetx>
+						<width>470</width>
+						<height>90</height>
+						<font>font37</font>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$LOCALIZE[128]</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="2">
+						<label>$LOCALIZE[43000]</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="3">
+						<label>$LOCALIZE[31061]</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="4">
+						<label>$LOCALIZE[43001]</label>
+						<visible>Skin.HasSetting(enable_custom_list_addons) | Skin.HasSetting(enable_custom_list_channels)</visible>
+						<onclick>noop</onclick>
+					</item>
+					<item id="5">
+						<label>$LOCALIZE[33068]</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="6">
+						<label>$LOCALIZE[43002]</label>
+						<onclick>noop</onclick>
+						<visible>System.HasAddon(script.skin.helper.colorpicker)</visible>
+					</item>
+					<item id="7">
+						<label>$LOCALIZE[13007]</label>
+						<onclick>noop</onclick>
+					</item>
+				</content>
+			</control>
 		</control>
-		<control type="scrollbar" id="20">
+		<control type="group">
 			<right>0</right>
 			<top>163</top>
-			<width>12</width>
 			<bottom>137</bottom>
-			<orientation>vertical</orientation>
-			<texturesliderbackground />
-			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(20)">conditional</animation>
-			<onleft>200</onleft>
-			<onright>200</onright>
-			<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-			<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-			<visible>Control.IsVisible(200)</visible>
-		</control>
-		<control type="scrollbar" id="30">
-			<right>0</right>
-			<top>163</top>
-			<width>12</width>
-			<bottom>137</bottom>
-			<orientation>vertical</orientation>
-			<texturesliderbackground />
-			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(30)">conditional</animation>
-			<onleft>300</onleft>
-			<onright>300</onright>
-			<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-			<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-			<visible>Control.IsVisible(300)</visible>
-		</control>
-		<control type="scrollbar" id="40">
-			<right>0</right>
-			<top>163</top>
-			<width>12</width>
-			<bottom>137</bottom>
-			<orientation>vertical</orientation>
-			<texturesliderbackground />
-			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(40)">conditional</animation>
-			<onleft>400</onleft>
-			<onright>400</onright>
-			<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-			<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-			<visible>Control.IsVisible(400)</visible>
-		</control>
-		<control type="scrollbar" id="50">
-			<right>0</right>
-			<top>163</top>
-			<width>12</width>
-			<bottom>137</bottom>
-			<orientation>vertical</orientation>
-			<texturesliderbackground />
-			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">conditional</animation>
-			<onleft>500</onleft>
-			<onright>500</onright>
-			<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-			<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-			<visible>Control.IsVisible(500)</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<right>0</right>
-			<top>163</top>
-			<width>12</width>
-			<bottom>137</bottom>
-			<orientation>vertical</orientation>
-			<texturesliderbackground />
-			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
-			<onleft>600</onleft>
-			<onright>600</onright>
-			<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-			<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-			<visible>Control.IsVisible(600)</visible>
-		</control>
-		<control type="scrollbar" id="70">
-			<right>0</right>
-			<top>163</top>
-			<width>12</width>
-			<bottom>137</bottom>
-			<orientation>vertical</orientation>
-			<texturesliderbackground />
-			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">conditional</animation>
-			<onleft>700</onleft>
-			<onright>700</onright>
-			<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-			<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-			<visible>Control.IsVisible(700)</visible>
+			<width>60</width>
+			<control type="scrollbar" id="10">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(10)">conditional</animation>
+				<onleft>100</onleft>
+				<onright>100</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Control.IsVisible(100)</visible>
+			</control>
+			<control type="scrollbar" id="20">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(20)">conditional</animation>
+				<onleft>200</onleft>
+				<onright>200</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Control.IsVisible(200)</visible>
+			</control>
+			<control type="scrollbar" id="30">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(30)">conditional</animation>
+				<onleft>300</onleft>
+				<onright>300</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Control.IsVisible(300)</visible>
+			</control>
+			<control type="scrollbar" id="40">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(40)">conditional</animation>
+				<onleft>400</onleft>
+				<onright>400</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Control.IsVisible(400)</visible>
+			</control>
+			<control type="scrollbar" id="50">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">conditional</animation>
+				<onleft>500</onleft>
+				<onright>500</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Control.IsVisible(500)</visible>
+			</control>
+			<control type="scrollbar" id="60">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+				<onleft>600</onleft>
+				<onright>600</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Control.IsVisible(600)</visible>
+			</control>
+			<control type="scrollbar" id="70">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">conditional</animation>
+				<onleft>700</onleft>
+				<onright>700</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<visible>Control.IsVisible(700)</visible>
+			</control>
 		</control>
 		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
