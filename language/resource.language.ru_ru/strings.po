@@ -603,8 +603,8 @@ msgid "Path:"
 msgstr "Путь:"
 
 msgctxt "#43005"
-msgid "Duration (sec)"
-msgstr "Длительность (сек)"
+msgid "Duration"
+msgstr "Длительность"
 
 msgctxt "#43006"
 msgid "Enable Smart Shortcuts Playlists"
@@ -940,7 +940,7 @@ msgstr "Разрешить стену фонов"
 
 msgctxt "#44115"
 msgid "Random Fanart Delay"
-msgstr "Длительность показа для случайных фонов (сек)"
+msgstr "Длительность показа для случайных фонов"
 
 msgctxt "#44116"
 msgid "Enable Animated Fanarts"

@@ -792,7 +792,7 @@ msgid "Path:"
 msgstr ""
 
 msgctxt "#43005"
-msgid "Duration (sec)"
+msgid "Duration"
 msgstr ""
 
 msgctxt "#43006"
