@@ -108,6 +108,7 @@
 							<control type="group">
 								<left>163</left>
 								<top>90</top>
+								<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
 								<include>RatingCircle</include>
 							</control>
 							<control type="group">
@@ -235,6 +236,7 @@
 							<control type="group">
 								<left>163</left>
 								<top>90</top>
+								<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
 								<include>RatingCircle</include>
 							</control>
 							<control type="group">

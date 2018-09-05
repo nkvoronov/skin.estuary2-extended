@@ -143,7 +143,8 @@
 			<control type="group">
 				<left>133</left>
 				<top>2</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+				<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
+				<include>RatingCircle</include>
 			</control>
 		</definition>
 	</include>
@@ -269,7 +270,8 @@
 			<control type="group">
 				<left>134</left>
 				<top>8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+				<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
+				<include>RatingCircle</include>
 			</control>
 		</definition>
 	</include>
@@ -456,12 +458,11 @@
 				</control>
 				<control type="group">
 					<visible>$PARAM[rating]</visible>
+					<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
 					<centerleft>50%</centerleft>
 					<width>44</width>
 					<top>4</top>
-					<include content="RatingCircle">
-						<param name="userratingval" value="$PARAM[userratingval]" />
-					</include>
+					<include>RatingCircle</include>
 				</control>
 			</control>
 		</definition>
