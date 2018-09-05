@@ -1,12 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>90010</defaultcontrol>
+	<defaultcontrol>211</defaultcontrol>
 	<onload>SetProperty(fanarthometype,settings,home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
+		<control type="group" id="10000">
+			<left>470</left>
+			<include>OpenClose_Right</include>
+			<control type="grouplist" id="90010">
+				<left>0</left>
+				<top>160</top>
+				<right>0</right>
+				<bottom>140</bottom>
+				<onleft>211</onleft>
+				<onright>60</onright>
+				<onup>90010</onup>
+				<ondown>90010</ondown>
+				<pagecontrol>60</pagecontrol>
+				<control type="button" id="401">
+					<description>Choose Shortcut</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32048]</label>
+					<label2>$INFO[Container(211).ListItem.Label]</label2>
+				</control>
+				<control type="button" id="307">
+					<description>Change Action</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32027]</label>
+					<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
+				</control>
+				<control type="button" id="305">
+					<description>Change Label</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32025]</label>
+					<label2>$INFO[Container(211).ListItem.Label]</label2>
+				</control>
+				<control type="button" id="306">
+					<description>Browse For Thumbnail</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32026]</label>
+					<label2>$INFO[Container(211).ListItem.Icon]</label2>
+				</control>
+				<control type="button" id="310">
+					<description>Browse For Background</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32045]</label>
+					<label2>$INFO[Container(211).ListItem.Property(background)]</label2>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
+				</control>
+				<control type="button" id="405">
+					<description>Edit Submenu</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32072]</label>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+				</control>
+				<control type="button" id="312">
+					<description>Edit Widget Name</description>
+					<include>DefaultSettingButton</include>
+					<label></label>
+					<label2></label2>
+					<visible>false</visible>
+				</control>
+				<control type="button" id="350">
+					<description>Select Widget Type</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[43070]</label>
+					<label2>$VAR[SkinSettingWidgetNameVar]</label2>
+					<onclick>SetProperty(WidgetVisibility,True,home)</onclick>
+					<onclick>SendClick(312)</onclick>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+				</control>
+				<control type="button" id="351">
+					<description>Widget 1</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32044] 1</label>
+					<label2>$VAR[WidgetName1Label2Var]</label2>
+					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
+					<onclick>SetProperty(widgetID, widget1)</onclick>
+					<onclick>SendClick(312)</onclick>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+				</control>
+				<control type="button" id="352">
+					<description>Widget 2</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32044] 2</label>
+					<label2>$VAR[WidgetName2Label2Var]</label2>
+					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
+					<onclick>SetProperty(widgetID, widget2)</onclick>
+					<onclick>SendClick(312)</onclick>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+				</control>
+				<control type="button" id="353">
+					<description>Widget 3</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32044] 3</label>
+					<label2>$VAR[WidgetName3Label2Var]</label2>
+					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
+					<onclick>SetProperty(widgetID, widget3)</onclick>
+					<onclick>SendClick(312)</onclick>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+				</control>
+				<control type="button" id="354">
+					<description>Widget 4</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32044] 4</label>
+					<label2>$VAR[WidgetName4Label2Var]</label2>
+					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
+					<onclick>SetProperty(widgetID, widget4)</onclick>
+					<onclick>SendClick(312)</onclick>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+				</control>
+				<control type="button" id="355">
+					<description>Widget 5</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32044] 5</label>
+					<label2>$VAR[WidgetName5Label2Var]</label2>
+					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
+					<onclick>SetProperty(widgetID, widget5)</onclick>
+					<onclick>SendClick(312)</onclick>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+				</control>
+				<control type="button" id="356">
+					<description>Widget 6</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32044] 6</label>
+					<label2>$VAR[WidgetName6Label2Var]</label2>
+					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
+					<onclick>SetProperty(widgetID, widget6)</onclick>
+					<onclick>SendClick(312)</onclick>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+				</control>
+				<control type="image" id="600">
+					<description>Separator image</description>
+					<height>3</height>
+					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+		        </control>
+				<control type="label" id="599">
+					<description>Disable Menu Item Label</description>
+					<include>DefaultSettingLabel</include>
+					<label>Is$INFO[Container(211).ListItem.Property(skinshortcuts-disabled)]</label>
+					<visible>false</visible>
+				</control>
+				<control type="radiobutton" id="313">
+					<description>Disable Menu Item</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[43071]</label>
+					<selected>String.IsEqual(Control.GetLabel(599),IsTrue)</selected>
+				</control>
+				<control type="image" id="601">
+					<description>Separator Image</description>
+					<height>3</height>
+					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+		        </control>
+				<control type="button" id="308">
+					<description>Restore Shortcuts</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32028]</label>
+				</control>
+			</control>
+			<control type="image">
+				<description>Dialog Header Image</description>
+				<left>0</left>
+				<top>160</top>
+				<right>0</right>
+				<height>3</height>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Header Image</description>
+				<left>0</left>
+				<bottom>134</bottom>
+				<right>0</right>
+				<height>3</height>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
+			</control>
+		</control>
 		<control type="group">
 			<visible>Control.IsVisible(211)</visible>
 			<depth>DepthContentPanel</depth>
@@ -128,7 +305,6 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<!-- Edit Buttons -->
 			<control type="grouplist" id="700">
 				<orientation>horizontal</orientation>
 				<itemgap>0</itemgap>
@@ -144,229 +320,57 @@
 				<ondown>PageUp</ondown>
 				<onright>90010</onright>
 				<align>justify</align>
-				<!-- Add Button -->
 				<include content="IconButton">
 					<param name="control_id" value="301" />
 					<param name="icon" value="shortcuts/add.png" />
 				</include>
-				<!-- Delete Button -->
 				<include content="IconButton">
 					<param name="control_id" value="302" />
 					<param name="icon" value="shortcuts/delete.png" />
 				</include>
-				<!-- Up Button -->
 				<include content="IconButton">
 					<param name="control_id" value="303" />
 					<param name="icon" value="shortcuts/up.png" />
 				</include>
-				<!-- Down Button -->
 				<include content="IconButton">
 					<param name="control_id" value="304" />
 					<param name="icon" value="shortcuts/down.png" />
 				</include>
 			</control>
 		</control>
-		<control type="group" id="10000">
-			<left>470</left>
-			<include>OpenClose_Right</include>
-			<control type="grouplist" id="90010">
-				<left>0</left>
-				<top>160</top>
-				<right>0</right>
-				<bottom>140</bottom>
-				<onleft>211</onleft>
-				<onright>60</onright>
-				<onup>90010</onup>
-				<ondown>90010</ondown>
-				<pagecontrol>60</pagecontrol>
-				<control type="button" id="401">
-					<description>Choose Shortcut</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32048]</label>
-					<label2>$INFO[Container(211).ListItem.Label]</label2>
-				</control>
-				<control type="button" id="307">
-					<description>Change Action</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32027]</label>
-					<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
-				</control>
-				<control type="button" id="305">
-					<description>Change Label</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32025]</label>
-					<label2>$INFO[Container(211).ListItem.Label]</label2>
-				</control>
-				<control type="button" id="306">
-					<description>Browse For Thumbnail</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32026]</label>
-					<label2>$INFO[Container(211).ListItem.Icon]</label2>
-				</control>
-				<control type="button" id="310">
-					<description>Browse For Background</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32045]</label>
-					<label2>$INFO[Container(211).ListItem.Property(background)]</label2>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
-				</control>
-				<control type="button" id="405">
-					<description>Edit Submenu</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32072]</label>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-				</control>
-				<control type="button" id="312">
-					<description>Edit Widget Name</description>
-					<include>DefaultSettingButton</include>
-					<label></label>
-					<label2></label2>
-					<visible>false</visible>
-				</control>
-				<control type="button" id="350">
-					<description>Select Widget Type</description>
-					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[43070]</label>
-					<label2>$VAR[SkinSettingWidgetNameVar]</label2>
-					<onclick>SetProperty(WidgetVisibility,True,home)</onclick>
-					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-				</control>
-				<!-- Widgets -->
-				<control type="button" id="351">
-					<description>Widget 1</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32044] 1</label>
-					<label2>$VAR[WidgetName1Label2Var]</label2>
-					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
-					<onclick>SetProperty(widgetID, widget1)</onclick>
-					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
-				</control>
-				<control type="button" id="352">
-					<description>Widget 2</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32044] 2</label>
-					<label2>$VAR[WidgetName2Label2Var]</label2>
-					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
-					<onclick>SetProperty(widgetID, widget2)</onclick>
-					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
-				</control>
-				<control type="button" id="353">
-					<description>Widget 3</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32044] 3</label>
-					<label2>$VAR[WidgetName3Label2Var]</label2>
-					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
-					<onclick>SetProperty(widgetID, widget3)</onclick>
-					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
-				</control>
-				<control type="button" id="354">
-					<description>Widget 4</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32044] 4</label>
-					<label2>$VAR[WidgetName4Label2Var]</label2>
-					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
-					<onclick>SetProperty(widgetID, widget4)</onclick>
-					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
-				</control>
-				<control type="button" id="355">
-					<description>Widget 5</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32044] 5</label>
-					<label2>$VAR[WidgetName5Label2Var]</label2>
-					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
-					<onclick>SetProperty(widgetID, widget5)</onclick>
-					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
-				</control>
-				<control type="button" id="356">
-					<description>Widget 6</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32044] 6</label>
-					<label2>$VAR[WidgetName6Label2Var]</label2>
-					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
-					<onclick>SetProperty(widgetID, widget6)</onclick>
-					<onclick>SendClick(312)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
-				</control>
-				<control type="image" id="600">
-					<description>Separator image</description>
-					<height>3</height>
-					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		        </control>
-				<control type="label" id="599">
-					<description>Disable Menu Item Label</description>
-					<include>DefaultSettingLabel</include>
-					<label>Is$INFO[Container(211).ListItem.Property(skinshortcuts-disabled)]</label>
-					<visible>false</visible>
-				</control>
-				<control type="radiobutton" id="313">
-					<description>Disable Menu Item</description>
-					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[43071]</label>
-					<selected>String.IsEqual(Control.GetLabel(599),IsTrue)</selected>
-				</control>
-				<control type="image" id="601">
-					<description>Separator Image</description>
-					<height>3</height>
-					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		        </control>
-				<control type="button" id="308">
-					<description>Restore Shortcuts</description>
-					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32028]</label>
-				</control>
-			</control>
-			<control type="image">
-				<description>Dialog Header Image</description>
-				<left>0</left>
-				<top>160</top>
-				<right>0</right>
-				<height>3</height>
-				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
-			</control>
-			<control type="image">
-				<description>Dialog Header Image</description>
-				<left>0</left>
-				<bottom>134</bottom>
-				<right>0</right>
-				<height>3</height>
-				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
-			</control>
-		</control>
-		<control type="scrollbar" id="60">
+		<control type="group">
 			<right>0</right>
 			<top>163</top>
-			<width>12</width>
 			<bottom>137</bottom>
-			<orientation>vertical</orientation>
-			<texturesliderbackground />
-			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
-			<onleft>90010</onleft>
-			<onright>211</onright>
-			<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-			<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-			<visible>Control.IsVisible(90010)</visible>
+			<width>60</width>
+            <control type="scrollbar" id="60">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+                <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+                <onleft>90010</onleft>
+                <onright>211</onright>
+                <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+                <animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+                <animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+                <hitrect x="0" y="0" w="60" h="100%" />
+                <showonepage>false</showonepage>
+            </control>
 		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$LOCALIZE[5]$VAR[SkinShortcutsTitleVar]" />
+		</include>
+		<include>BottomBar</include>
 		<control type="textbox" id="6">
 			<include>OpenClose_Right</include>
 			<description>Description Area</description>
 			<left>510</left>
 			<bottom>27</bottom>
-			<width>1150</width>
+			<width>1350</width>
 			<height>100</height>
 			<font>font12</font>
 			<align>justify</align>
@@ -374,9 +378,5 @@
 			<label>$INFO[Container(211).ListItem.Label]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5]$VAR[SkinShortcutsTitleVar]" />
-		</include>
-		<include>BottomBar</include>
 	</controls>
 </window>
