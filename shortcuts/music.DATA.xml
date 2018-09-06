@@ -3,67 +3,67 @@
 	<shortcut>
 		<label>135</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/musicgenres.png</icon>
+		<icon>DefaultMusicGenres.png</icon>
 		<action>ActivateWindow(music,musicdb://genres/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>133</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/artist.png</icon>
+		<icon>DefaultMusicArtists.png</icon>
 		<action>ActivateWindow(music,musicdb://artists/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>132</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/album.png</icon>
+		<icon>DefaultMusicAlbums.png</icon>
 		<action>ActivateWindow(music,musicdb://albums/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>1050</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/sets.png</icon>
+		<icon>DefaultMusicSongs.png</icon>
 		<action>ActivateWindow(music,musicdb://singles/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>134</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/songs.png</icon>
+		<icon>DefaultMusicSongs.png</icon>
 		<action>ActivateWindow(music,musicdb://songs/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>562</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/years.png</icon>
+		<icon>DefaultMusicYears.png</icon>
 		<action>ActivateWindow(music,musicdb://years/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>271</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/musictop100.png</icon>
+		<icon>DefaultMusicTop100.png</icon>
 		<action>ActivateWindow(music,musicdb://top100/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>359</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/recentlyadded.png</icon>
+		<icon>DefaultMusicRecentlyAdded.png</icon>
 		<action>ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>517</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/musicrecentlyplayed.png</icon>
+		<icon>DefaultMusicRecentlyPlayed.png</icon>
 		<action>ActivateWindow(music,musicdb://recentlyplayedalbums/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>20389</label>
 		<label2>20389</label2>
-		<icon>resource://resource.images.skinicons.estuary/musicvideos.png</icon>
+		<icon>DefaultMusicVideos.png</icon>
 		<action>ActivateWindow(videos,videodb://musicvideos/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>136</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/playlists.png</icon>
+		<icon>DefaultMusicPlaylists.png</icon>
 		<action>ActivateWindow(music,special://musicplaylists/,return)</action>
 	</shortcut>
 	<shortcut>
@@ -73,21 +73,27 @@
 		<action>ActivateWindow(music,library://music/musicroles/,return)</action>
 	</shortcut>
 	<shortcut>
+		<label>39031</label>
+		<label2>2</label2>
+		<icon>DefaultMusicSources.png</icon>
+		<action>ActivateWindow(music,library://music/musicsources/,return)</action>
+	</shortcut>    
+	<shortcut>
 		<label>744</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/files.png</icon>
+		<icon>DefaultFolder.png</icon>
 		<action>ActivateWindow(music,sources://music/,return)</action>
 	</shortcut>
 	<shortcut>
-		<label>24001</label>
+		<label>1038</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/music.png</icon>
+		<icon>DefaultAddonMusic.png</icon>
 		<action>ActivateWindow(music,addons://sources/audio/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>653</label>
 		<label2>2</label2>
-		<icon>resource://resource.images.skinicons.estuary/updatelibrary.png</icon>
+		<icon>DefaultAddonsUpdates.png</icon>
 		<action>UpdateLibrary(music)</action>
 	</shortcut>
 </shortcuts>

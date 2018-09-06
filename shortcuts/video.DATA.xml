@@ -3,43 +3,43 @@
 	<shortcut>
 		<label>342</label>
 		<label2>342</label2>
-		<icon>resource://resource.images.skinicons.estuary/movies2.png</icon>
+		<icon>DefaultMovies.png</icon>
 		<action>ActivateWindow(videos,videodb://movies/titles/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>20343</label>
 		<label2>20343</label2>
-		<icon>resource://resource.images.skinicons.estuary/tvshows.png</icon>
+		<icon>DefaultTVShows.png</icon>
 		<action>ActivateWindow(videos,videodb://tvshows/titles/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>20389</label>
 		<label2>20389</label2>
-		<icon>resource://resource.images.skinicons.estuary/musicvideos.png</icon>
+		<icon>DefaultMusicVideos.png</icon>
 		<action>ActivateWindow(videos,videodb://musicvideos/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>744</label>
 		<label2>3</label2>
-		<icon>resource://resource.images.skinicons.estuary/files.png</icon>
+		<icon>DefaultFolder.png.png</icon>
 		<action>ActivateWindow(videos,sources://video/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>136</label>
 		<label2>3</label2>
-		<icon>resource://resource.images.skinicons.estuary/playlists.png</icon>
+		<icon>DefaultVideoPlaylists.png</icon>
 		<action>ActivateWindow(videos,special://videoplaylists/,return)</action>
 	</shortcut>
 	<shortcut>
-		<label>24001</label>
+		<label>1037</label>
 		<label2>3</label2>
-		<icon>resource://resource.images.skinicons.estuary/video-addons.png</icon>
+		<icon>DefaultAddonVideo.png</icon>
 		<action>ActivateWindow(videos,addons://sources/video/,return)</action>
 	</shortcut>
 	<shortcut>
 		<label>653</label>
 		<label2>3</label2>
-		<icon>resource://resource.images.skinicons.estuary/updatelibrary.png</icon>
+		<icon>DefaultAddonsUpdates.png</icon>
 		<action>UpdateLibrary(video)</action>
 	</shortcut>
 </shortcuts>

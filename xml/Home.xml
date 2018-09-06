@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
-	<!-- SkinShortcuts-->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
-	<!-- SkinHelper -->
 	<onload condition="Skin.HasSetting(smartshortcuts_playlists)">Skin.SetBool(SmartShortcuts.playlists)</onload>
 	<onload condition="!Skin.HasSetting(smartshortcuts_playlists)">Skin.Reset(SmartShortcuts.playlists)</onload>
 	<onload condition="Skin.HasSetting(smartshortcuts_favorites)">Skin.SetBool(SmartShortcuts.favorites)</onload>
@@ -17,13 +15,11 @@
 	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay, $VAR[RandomFanartDelayVar])</onload>
-    <onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
-	<!-- -->
+	<onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
 	<onload condition="!String.IsEmpty(Window(home).Property(fanarthometype))">ClearProperty(fanarthometype,home)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(homebackground))">ClearProperty(homebackground,home)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(mediaartfanart))">ClearProperty(mediaartfanart,home)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(weatherfanartcode))">ClearProperty(weatherfanartcode,home)</onload>
-	<!-- -->
 	<onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
@@ -41,23 +37,44 @@
 			<onclick>noop</onclick>
 			<visible allowhiddenfocus="true">Control.HasFocus(200001)</visible>
 		</control>
-		<!-- Background -->
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[HomeFanartMediaVar]" />
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
-			<!-- HomeSubMenu -->
 			<include>HomeSubMenu</include>
-			<!-- HomeMainMenu -->
 			<include>HomeMainMenu</include>
-			<!-- BottomBar -->
 			<include>BottomBar</include>
-			<!-- TopBar -->
+			<control type="group">
+				<depth>DepthBars</depth>
+				<bottom>0</bottom>
+				<height>70</height>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
+					<param name="infolabel_prefix" value="Container." />
+					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
+				</include>
+				<control type="rss">
+					<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+					<left>0</left>
+					<bottom>0</bottom>
+					<height>39</height>
+					<width>100%</width>
+					<font>font12</font>
+					<urlset>1</urlset>
+					<hitrect x="-100" y="0" w="1" h="1" />
+					<titlecolor>$VAR[MainColorVar]</titlecolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<headlinecolor>FFC0C0C0</headlinecolor>
+					<visible>Skin.HasSetting(hide_mediaflags) | !ControlGroup(2000).HasFocus</visible>
+					<animation effect="fade" time="300">VisibleChange</animation>
+				</control>
+			</control>
 			<include content="TopBar">
 				<param name="breadcrumbs_label" value="" />
 			</include>
-			<!-- Logo -->
 			<control type="group">
 				<depth>DepthBars</depth>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
@@ -79,7 +96,6 @@
 					<height>36</height>
 					<texture>icons/logo-text.png</texture>
 				</control>
-				<!-- StatBar -->
 				<control type="label">
 					<left>-90</left>
 					<top>-15</top>
@@ -90,23 +106,6 @@
 					<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 					<visible>Skin.HasSetting(enable_home_stats)</visible>
 				</control>
-			</control>
-			<!-- RSS -->
-			<control type="rss">
-				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-				<left>0</left>
-				<bottom>0</bottom>
-				<height>39</height>
-				<width>100%</width>
-				<font>font12</font>
-				<urlset>1</urlset>
-				<hitrect x="-100" y="0" w="1" h="1" />
-				<titlecolor>$VAR[MainColorVar]</titlecolor>
-				<textcolor>$VAR[MainColorVar]</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
-				<headlinecolor>FFC0C0C0</headlinecolor>
 			</control>
 		</control>
 	</controls>
