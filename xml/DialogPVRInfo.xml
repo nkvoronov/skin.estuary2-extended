@@ -9,7 +9,6 @@
 			<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
 			<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 			<visible>Window.isActive(fullscreenvideo)</visible>
-			<include>ColoredBackgroundImages</include>
 		</control>
 		<control type="group">
 			<centertop>50%</centertop>
@@ -49,7 +48,7 @@
 					<width>1050</width>
 					<height>425</height>
 					<align>justify</align>
-					<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] [COLOR white]($INFO[ListItem.Duration])[CR][/COLOR][COLOR white]$INFO[ListItem.StartDate][CR][/COLOR]$INFO[ListItem.Season, [COLOR white],[/COLOR]x]$INFO[ListItem.Episode, [COLOR white],[/COLOR]: ]$INFO[ListItem.EpisodeName,[B][COLOR white],[/COLOR][/B][CR]]$INFO[ListItem.Genre,$LOCALIZE[515]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Writer,$LOCALIZE[20417]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Director,$LOCALIZE[20339]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Cast,$LOCALIZE[206]:[COLOR white] ,[/COLOR][CR]][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+					<label>$INFO[ListItem.StartDate][CR]$INFO[ListItem.StartTime,$LOCALIZE[555]: [COLOR grey],[/COLOR]]$INFO[ListItem.EndTime,[COLOR grey] - ,[/COLOR]][COLOR white] ([/COLOR]$INFO[ListItem.Duration][COLOR white])[/COLOR][CR]$INFO[ListItem.Season,[COLOR white],[/COLOR]x]$INFO[ListItem.Episode,[COLOR white],[/COLOR]: ]$INFO[ListItem.EpisodeName,[B][COLOR white],[/COLOR][/B][CR]]$INFO[ListItem.Genre,$LOCALIZE[515]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Writer,$LOCALIZE[20417]:[COLOR white],[/COLOR][CR]]$INFO[ListItem.Director,$LOCALIZE[20339]:[COLOR white],[/COLOR][CR]]$INFO[ListItem.Cast,$LOCALIZE[206]:[COLOR white],[/COLOR][CR]][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>

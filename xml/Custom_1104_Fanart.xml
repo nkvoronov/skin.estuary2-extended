@@ -11,7 +11,7 @@
 		</control>
 		<control type="image">
 			<include>FullScreenDimensions</include>
-			<aspectratio>keep</aspectratio>
+			<aspectratio>scale</aspectratio>
 			<texture>$INFO[Window(home).Property(fanart)]</texture>
 		</control>
 		<control type="button" id="3000">

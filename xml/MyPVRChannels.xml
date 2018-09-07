@@ -101,7 +101,7 @@
 							<width>80</width>
 							<height>70</height>
 							<aspectratio align="right">keep</aspectratio>
-							<texture>$INFO[listitem.icon]</texture>
+							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="progress">
 							<left>105</left>
@@ -314,12 +314,13 @@
 				<width>850</width>
 				<height>60</height>
 				<visible>!String.isempty(ListItem.NextTitle)</visible>
-				<label>[COLOR grey]$LOCALIZE[19031]:[/COLOR] $INFO[ListItem.NextStartTime]: $INFO[ListItem.NextTitle]</label>
+				<label>$LOCALIZE[19031]: $INFO[ListItem.NextStartTime,[COLOR grey],[/COLOR]]$INFO[ListItem.NextTitle,[COLOR white] - ,[/COLOR]]</label>
 				<shadowcolor>black</shadowcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 				<wrapmultiline>true</wrapmultiline>
 				<font>font27</font>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 			</control>
 			<include>PVRChannelNumberInput</include>
 			<include>MediaMenuMouseOverlay</include>
