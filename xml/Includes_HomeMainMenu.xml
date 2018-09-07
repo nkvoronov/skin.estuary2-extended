@@ -139,7 +139,6 @@
 					</control>
 				</itemlayout>
 				<content>
-					<!-- Movies -->
 					<item>
 						<label>$LOCALIZE[342]</label>
 						<onclick>SetProperty(fanarthometype,movies,home)</onclick>
@@ -152,7 +151,6 @@
 						<property name="background">$VAR[BackgroundMoviesVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
 					</item>
-					<!-- TVShows -->
 					<item>
 						<label>$LOCALIZE[20343]</label>
 						<onclick>SetProperty(fanarthometype,tvshows,home)</onclick>
@@ -165,7 +163,6 @@
 						<property name="background">$VAR[BackgroundTVShowsVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
 					</item>
-					<!-- Music -->
 					<item>
 						<label>$LOCALIZE[2]</label>
 						<onclick>SetProperty(fanarthometype,music,home)</onclick>
@@ -177,7 +174,6 @@
 						<property name="background">$VAR[BackgroundMusicVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>
-					<!-- Disc -->
 					<item>
 						<label>$LOCALIZE[427]</label>
 						<onclick>SetProperty(fanarthometype,dvd,home)</onclick>
@@ -189,7 +185,6 @@
 						<property name="background">$VAR[BackgroundDVDVar]</property>
 						<visible>System.HasMediaDVD</visible>
 					</item>
-					<!-- MusicVideos -->
 					<item>
 						<label>$LOCALIZE[20389]</label>
 						<onclick>SetProperty(fanarthometype,musicvideos,home)</onclick>
@@ -201,7 +196,6 @@
 						<property name="background">$VAR[BackgroundMusicVideosVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
 					</item>
-					<!-- LiveTV -->
 					<item>
 						<label>$LOCALIZE[19020]</label>
 						<onclick>SetProperty(fanarthometype,livetv,home)</onclick>
@@ -213,7 +207,6 @@
 						<property name="background">$VAR[BackgroundLiveTVVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
 					</item>
-					<!-- Radio -->
 					<item>
 						<label>$LOCALIZE[19021]</label>
 						<onclick>SetProperty(fanarthometype,radio,home)</onclick>
@@ -225,7 +218,6 @@
 						<property name="background">$VAR[BackgroundRadioVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
 					</item>
-					<!-- Addons -->
 					<item>
 						<label>$LOCALIZE[24001]</label>
 						<onclick>SetProperty(fanarthometype,addons,home)</onclick>
@@ -237,7 +229,6 @@
 						<property name="background">$VAR[BackgroundAddonsVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					</item>
-					<!-- Pictures -->
 					<item>
 						<label>$LOCALIZE[1]</label>
 						<onclick>SetProperty(fanarthometype,pictures,home)</onclick>
@@ -249,7 +240,6 @@
 						<property name="background">$VAR[BackgroundPicturesVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					</item>
-					<!-- Videos -->
 					<item>
 						<label>$LOCALIZE[3]</label>
 						<onclick>SetProperty(fanarthometype,video,home)</onclick>
@@ -261,7 +251,6 @@
 						<property name="background">$VAR[BackgroundVideosVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 					</item>
-					<!-- Favourites -->
 					<item>
 						<label>$LOCALIZE[10134]</label>
 						<onclick>SetProperty(fanarthometype,favorites,home)</onclick>
@@ -273,7 +262,6 @@
 						<property name="background">$VAR[BackgroundFavouritesVar]</property>
 						<visible>!Skin.HasSetting(HomeMenuNoFavButton)</visible>
 					</item>
-					<!-- Weather -->
 					<item>
 						<label>$LOCALIZE[8]</label>
 						<onclick>SetProperty(fanarthometype,weather,home)</onclick>

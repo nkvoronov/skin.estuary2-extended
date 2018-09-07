@@ -129,7 +129,7 @@
 				<font>font12</font>
 				<align>right</align>
 				<textcolor>grey</textcolor>
-				<label>$VAR[SelectLabel]</label>
+				<label>$VAR[SelectLabelVar]</label>
 			</control>
 			<control type="grouplist" id="9001">
 				<left>920</left>
