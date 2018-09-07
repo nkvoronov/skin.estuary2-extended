@@ -20,7 +20,6 @@
 			<include>View_55_WideList</include>
 			<include>View_58_BigPoster</include>
 			<include>View_500_Wall</include>
-			<include>CommonScrollbars</include>
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<visible>Control.Isvisible(54) | Control.IsVisible(55)</visible>
@@ -33,6 +32,7 @@
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
 			</include>
+			<include>CommonScrollbars</include>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
 				<include>MediaMenuCommon</include>
