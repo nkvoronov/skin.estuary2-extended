@@ -1,33 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<!-- Home Widgets -->
 	<include name="HomeWidgets">
-		<!-- Movies 5000-->
 		<include>MoviesHomeWidgets</include>
-		<!-- TVShows 6000 -->
 		<include>TVShowsHomeWidgets</include>
-		<!-- Music 7000 -->
 		<include>MusicHomeWidgets</include>
-		<!-- Addons 8000 -->
 		<include>AddonsHomeWidgets</include>
-		<!-- Video 11000 -->
 		<include>VideoHomeWidgets</include>
-		<!-- LiveTV 12000 -->
 		<include>LiveTVHomeWidgets</include>
-		<!-- Radio 13000 -->
 		<include>RadioHomeWidgets</include>
-		<!-- Favorites 14000 -->
 		<include>FavoritesHomeWidgets</include>
-		<!-- Weather 15000 -->
 		<include>WeatherHomeWidgets</include>
-		<!-- MusicVideos 16000 -->
 		<include>MusicVideosHomeWidgets</include>
-		<!-- Pictures 4000 -->
 		<include>PicturesHomeWidgets</include>
-		<!-- Disc 21000 -->
+		<include>GamesHomeWidgets</include>
 		<include>DiscHomeWidgets</include>
 	</include>
-	<!-- Movies 5000 -->
 	<include name="MoviesHomeWidgets">
 		<control type="group" id="5000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),movies)</visible>
@@ -36,7 +23,7 @@
 			</include>
 			<control type="grouplist" id="5001">
 				<include>WidgetGroup-Common</include>
-				<include content="Widget-SubMenu" condition="Library.HasContent(movies)">
+				<include content="Widget-SubMenu" condition="Library.HasContent(movies) + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="custom" value="false"/>
 					<param name="content_path" value="library://video/movies/"/>
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
@@ -89,9 +76,11 @@
 				<param name="button_id" value="5700"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="5010"/>
+			</include>
 		</control>
 	</include>
-	<!-- TVShows 6000 -->
 	<include name="TVShowsHomeWidgets">
 		<control type="group" id="6000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)</visible>
@@ -100,7 +89,7 @@
 			</include>
 			<control type="grouplist" id="6001">
 				<include>WidgetGroup-Common</include>
-				<include content="Widget-SubMenu" condition="Library.HasContent(tvshows)">
+				<include content="Widget-SubMenu" condition="Library.HasContent(tvshows) + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="custom" value="false"/>
 					<param name="content_path" value="library://video/tvshows/"/>
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
@@ -148,9 +137,11 @@
 				<param name="button_id" value="6600"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="6010"/>
+			</include>
 		</control>
 	</include>
-	<!-- Music 7000 -->
 	<include name="MusicHomeWidgets">
 		<control type="group" id="7000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),music)</visible>
@@ -159,7 +150,7 @@
 			</include>
 			<control type="grouplist" id="7001">
 				<include>WidgetGroup-Common</include>
-				<include content="Widget-SubMenu" condition="Library.HasContent(music)">
+				<include content="Widget-SubMenu" condition="Library.HasContent(music) + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="custom" value="false"/>
 					<param name="content_path" value="library://music/"/>
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
@@ -213,9 +204,11 @@
 				<param name="button_id" value="7700"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="7010"/>
+			</include>
 		</control>
 	</include>
-	<!-- Addons 8000 -->
 	<include name="AddonsHomeWidgets">
 		<control type="group" id="8000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),addons)</visible>
@@ -224,14 +217,13 @@
 			</include>
 			<control type="grouplist" id="8001">
 				<include>WidgetGroup-Common</include>
-				<include content="Widget-SubMenu">
+				<include content="Widget-SubMenu" condition="!Skin.HasSetting(home_no_categories_widget)">
 					<param name="custom" value="true"/>
 					<param name="content_path" value="AddonSubMenuContent"/>
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
 					<param name="list_id" value="8900"/>
 					<param name="visible" value="Integer.IsGreater(Container(8100).NumItems,0) | Integer.IsGreater(Container(8200).NumItems,0) | Integer.IsGreater(Container(8300).NumItems,0) | Integer.IsGreater(Container(8400).NumItems,0) | Integer.IsGreater(Container(8500).NumItems,0)"/>
 				</include>
-				<!-- Video Addons -->
 				<include condition="![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)]" content="Widget-Addons">
 					<param name="content_path" value="addons://sources/video/"/>
 					<param name="widget_header" value="$LOCALIZE[1037]"/>
@@ -245,7 +237,6 @@
 					<param name="widget_target" value="Video"/>
 					<param name="list_id" value="8100"/>
 				</include>
-				<!-- Audio Addons -->
 				<include condition="![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)]" content="Widget-Addons">
 					<param name="content_path" value="addons://sources/audio/"/>
 					<param name="widget_header" value="$LOCALIZE[1038]"/>
@@ -259,7 +250,6 @@
 					<param name="widget_target" value="Audio"/>
 					<param name="list_id" value="8200"/>
 				</include>
-				<!-- Programs Addons -->
 				<include condition="![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_programs)]" content="Widget-Addons">
 					<param name="content_path" value="addons://sources/executable/"/>
 					<param name="widget_header" value="$LOCALIZE[1043]"/>
@@ -273,7 +263,6 @@
 					<param name="widget_target" value="Programs"/>
 					<param name="list_id" value="8300"/>
 				</include>
-				<!-- Android Apps -->
 				<include condition="System.Platform.Android" content="Widget-Addons">
 					<param name="content_path" value="androidapp://sources/apps/"/>
 					<param name="widget_header" value="$LOCALIZE[20244]"/>
@@ -282,7 +271,6 @@
 					<param name="sortorder" value="descending"/>
 					<param name="list_id" value="8400"/>
 				</include>
-				<!-- Images Addons -->
 				<include condition="![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)]" content="Widget-Addons">
 					<param name="content_path" value="addons://sources/image/"/>
 					<param name="widget_header" value="$LOCALIZE[1039]"/>
@@ -297,7 +285,6 @@
 					<param name="list_id" value="8500"/>
 				</include>
 			</control>
-			<!-- No Addons -->
 			<include content="Widget-Image">
 				<param name="text_label" value="$LOCALIZE[31119]" />
 				<param name="button_label" value="$LOCALIZE[31118]" />
@@ -306,9 +293,11 @@
 				<param name="visible" value="!Integer.IsGreater(Container(8100).NumItems,0) + !Integer.IsGreater(Container(8200).NumItems,0) + !Integer.IsGreater(Container(8300).NumItems,0) + !Integer.IsGreater(Container(8400).NumItems,0) + !Integer.IsGreater(Container(8500).NumItems,0) + !Skin.HasSetting(enable_custom_list_addons)"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoProgramsButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="8010"/>
+			</include>
 		</control>
 	</include>
-	<!-- Video 11000 -->
 	<include name="VideoHomeWidgets">
 		<control type="group" id="11000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),video)</visible>
@@ -317,7 +306,7 @@
 			</include>
 			<control type="grouplist" id="11001">
 				<include>WidgetGroup-Common</include>
-				<include content="Widget-SubMenu">
+				<include content="Widget-SubMenu" condition="!Skin.HasSetting(home_no_categories_widget)">
 					<param name="custom" value="false"/>
 					<param name="content_path" value="library://video/"/>
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
@@ -346,9 +335,11 @@
 				<param name="visible" value="!Integer.IsGreater(Container(11001).NumItems,0)"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoVideosButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="11010"/>
+			</include>
 		</control>
 	</include>
-	<!-- LiveTV 12000 -->
 	<include name="LiveTVHomeWidgets">
 		<control type="group" id="12000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv)</visible>
@@ -360,7 +351,7 @@
 				<include content="Widget-TVTimers">
 					<param name="list_id" value="12855"/>
 				</include>
-				<include content="Widget-SubMenu" condition="System.HasPVRAddon">
+				<include content="Widget-SubMenu" condition="System.HasPVRAddon + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="custom" value="true"/>
 					<param name="content_path" value="PVRSubMenuContent"/>
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
@@ -393,9 +384,11 @@
 				<param name="button_id" value="12300"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="12010"/>
+			</include>
 		</control>
 	</include>
-	<!-- Radio 13000 -->
 	<include name="RadioHomeWidgets">
 		<control type="group" id="13000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),radio)</visible>
@@ -407,7 +400,7 @@
 				<include content="Widget-RadioTimers">
 					<param name="list_id" value="13855"/>
 				</include>
-				<include content="Widget-SubMenu" condition="System.HasPVRAddon">
+				<include content="Widget-SubMenu" condition="System.HasPVRAddon + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="custom" value="true"/>
 					<param name="content_path" value="PVRSubMenuContent"/>
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
@@ -440,9 +433,11 @@
 				<param name="button_id" value="13300"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoRadioButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="13010"/>
+			</include>
 		</control>
 	</include>
-	<!-- Favorites 14000 -->
 	<include name="FavoritesHomeWidgets">
 		<control type="group" id="14000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),favorites)</visible>
@@ -495,9 +490,11 @@
 				<param name="visible_1" value="false"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoFavButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="14010"/>
+			</include>
 		</control>
 	</include>
-	<!-- Weather 15000 -->
 	<include name="WeatherHomeWidgets">
 		<control type="group" id="15000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),weather)</visible>
@@ -580,13 +577,11 @@
 						</include>
 					</control>
 				</control>
-				<!-- Weather Daily -->
 				<include content="Widget-WeatherDaily" condition="!String.IsEmpty(Weather.Plugin)">
 					<param name="widget_header" value="$LOCALIZE[31019]"/>
 					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
 				<param name="list_id" value="$PARAM[control_id]103" />
 				</include>
-				<!-- Weather Hourly -->
 				<include content="Widget-WeatherHourly" condition="!String.IsEmpty(Weather.Plugin)">
 					<param name="widget_header" value="$LOCALIZE[33036]"/>
 					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
@@ -600,9 +595,11 @@
 				<param name="button_id" value="15300"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoWeatherButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="15010"/>
+			</include>
 		</control>
 	</include>
-	<!-- MusicVideos 16000 -->
 	<include name="MusicVideosHomeWidgets">
 		<control type="group" id="16000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),musicvideos)</visible>
@@ -611,9 +608,9 @@
 			</include>
 			<control type="grouplist" id="16001">
 				<include>WidgetGroup-Common</include>
-				<include content="Widget-SubMenu" condition="Library.HasContent(musicvideos)">
+				<include content="Widget-SubMenu" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="custom" value="false"/>
-					<param name="content_path" value="library://music/musicvideos/"/>
+					<param name="content_path" value="library://video/musicvideos/"/>
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="16900"/>
@@ -657,9 +654,11 @@
 				<param name="button_id" value="16600"/>
 				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicVideoButton)"/>
 			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="16010"/>
+			</include>
 		</control>
 	</include>
-	<!-- Pictures 4000 -->
 	<include name="PicturesHomeWidgets">
 		<control type="group" id="4000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),pictures)</visible>
@@ -677,7 +676,38 @@
 			</control>
 		</control>
 	</include>
-	<!-- DVD 21000 -->
+	<include name="GamesHomeWidgets">
+		<control type="group" id="17000">
+			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),games)</visible>
+			<include content="Visible_Right_Delayed">
+				<param name="id" value="games"/>
+			</include>
+			<control type="grouplist" id="17001">
+				<include>WidgetGroup-Common</include>
+				<pagecontrol>17010</pagecontrol>
+				<include content="Widget-Addons">
+					<param name="content_path" value="addons://sources/game/"/>
+					<param name="widget_header" value="$LOCALIZE[35049]"/>
+					<param name="widget_target" value="games"/>
+					<param name="sortby" value="lastused"/>
+					<param name="sortorder" value="descending"/>
+					<param name="list_id" value="17200"/>
+					<param name="fallback_icon" value="DefaultAddonGame.png"/>
+				</include>
+			</control>
+			<include content="Widget-Image">
+				<param name="text_label" value="$LOCALIZE[31162]" />
+				<param name="button_label" value="$LOCALIZE[31110]" />
+				<param name="button_onclick" value="ActivateWindow(games)"/>
+				<param name="button_id" value="17100"/>
+				<param name="visible" value="!Integer.IsGreater(Container(17001).NumItems,0)"/>
+				<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoGamesButton)"/>
+			</include>
+			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
+				<param name="scrollbar_id" value="17010"/>
+			</include>
+		</control>
+	</include>
 	<include name="DiscHomeWidgets">
 		<control type="group" id="21000">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),dvd)</visible>

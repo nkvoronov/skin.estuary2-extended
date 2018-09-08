@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
-	<!-- *** Types Widget *** -->
-
-	<!-- Pictures Type -->
 	<include name="Widget-Pictures">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -13,7 +9,6 @@
 			<param name="fallback_image" value="DefaultAddon.png"/>
 		</include>
 	</include>
-	<!-- Videos Type -->
 	<include name="Widget-Videos">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -23,7 +18,6 @@
 			<param name="fallback_image" value="DefaultAddon.png"/>
 		</include>
 	</include>
-	<!-- Musics Type -->
 	<include name="Widget-Musics">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -33,7 +27,6 @@
 			<param name="fallback_image" value="DefaultAddon.png"/>
 		</include>
 	</include>
-	<!-- Programs Type -->
 	<include name="Widget-Programs">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -43,7 +36,6 @@
 			<param name="fallback_image" value="DefaultAddon.png"/>
 		</include>
 	</include>
-	<!-- Addons Type -->
 	<include name="Widget-Addons">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -55,7 +47,6 @@
 			<param name="fallback_image" value="DefaultAddon.png"/>
 		</include>
 	</include>
-	<!-- Custom Addons Type -->
 	<include name="Widget-AddonsCustom">
 		<include content="Widget-Square">
 			<param name="custom" value="true"/>
@@ -65,7 +56,6 @@
 			<param name="fallback_image" value="DefaultAddon.png"/>
 		</include>
 	</include>
-	<!-- TV Timers Type -->
 	<include name="Widget-TVTimers">
 		<control type="grouplist" id="$PARAM[list_id]">
 			<height>390</height>
@@ -97,7 +87,6 @@
 			</control>
 		</control>
 	</include>
-	<!-- Radio Timers Type -->
 	<include name="Widget-RadioTimers">
 		<control type="grouplist" id="$PARAM[list_id]">
 			<height>390</height>
@@ -129,7 +118,6 @@
 			</control>
 		</control>
 	</include>
-	<!-- PVR Channels Type -->
 	<include name="Widget-PVRChannels">
 		<include content="Widget-Channels">
 			<param name="visible" value="System.HasPVRAddon"/>
@@ -141,7 +129,6 @@
 			<param name="sortorder" value="descending"/>
 		</include>
 	</include>
-	<!-- Custom PVR Channels Type -->
 	<include name="Widget-PVRChannelsCustom">
 		<include content="Widget-Channels">
 			<param name="custom" value="true"/>
@@ -152,7 +139,6 @@
 			<param name="label2" value="$INFO[ListItem.Property(Title)]"/>
 		</include>
 	</include>
-	<!-- PVR Recordings Type -->
 	<include name="Widget-PVRRecordings">
 		<include content="Widget-Channels">
 			<param name="visible" value="System.HasPVRAddon"/>
@@ -166,7 +152,6 @@
 			<param name="sortorder" value="descending"/>
 		</include>
 	</include>
-	<!-- Movies Type -->
 	<include name="Widget-Movies">
 		<include content="Widget-Posters">
 			<param name="homebackground" value="false"/>
@@ -179,7 +164,6 @@
 			<param name="fallback_image" value="DefaultMovies.png" />
 		</include>
 	</include>
-	<!-- TVShows Type -->
 	<include name="Widget-TVShows">
 		<include content="Widget-Posters">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -191,7 +175,6 @@
 			<param name="fallback_image" value="DefaultTVShows.png" />
 		</include>
 	</include>
-	<!-- Episodes Type -->
 	<include name="Widget-Episodes">
 		<include content="Widget-Thumbs">
 			<param name="homebackground" value="false"/>
@@ -202,7 +185,6 @@
 			<param name="fallback_image" value="DefaultTVShows.png" />
 		</include>
 	</include>
-	<!-- Music Videos Type -->
 	<include name="Widget-MusicVideos">
 		<include content="Widget-Thumbs">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -215,7 +197,6 @@
 			<param name="fallback_image" value="DefaultMusicVideos.png" />
 		</include>
 	</include>
-	<!-- Albums Type -->
 	<include name="Widget-Albums">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -227,7 +208,6 @@
 			<param name="fallback_image" value="DefaultMusicAlbums.png"/>
 		</include>
 	</include>
-	<!-- Artists Type -->
 	<include name="Widget-Artists">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -239,7 +219,6 @@
 			<param name="fallback_image" value="DefaultMusicArtists.png"/>
 		</include>
 	</include>
-	<!-- Songs Type -->
 	<include name="Widget-Songs">
 		<include content="Widget-Square">
 			<param name="homebackground" value="false"/>
@@ -252,7 +231,6 @@
 			<param name="fallback_image" value="DefaultMusicSongs.png"/>
 		</include>
 	</include>
-	<!-- Mixed Type -->
 	<include name="Widget-Mixed">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -264,7 +242,6 @@
 			<param name="fallback_image" value="DefaultMusicAlbums.png"/>
 		</include>
 	</include>
-	<!-- Favourites List Type -->
 	<include name="Widget-FavouritesList">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -275,13 +252,11 @@
 			<param name="favourites" value="true"/>
 		</include>
 	</include>
-	<!-- Favourites Full Type -->
 	<include name="Widget-FavouritesFull">
 		<include content="Widget-Square-Favourites">
 			<param name="list_id" value="$PARAM[list_id]"/>
 		</include>
 	</include>
-	<!-- Playlists Type -->
 	<include name="Widget-Playlists">
 		<include content="Widget-Categories">
 			<param name="scale" value="true"/>
@@ -293,7 +268,6 @@
 			<param name="fallback_image" value="DefaultPlaylist.png"/>
 		</include>
 	</include>
-	<!-- Source Type -->
 	<include name="Widget-Source">
 		<include content="Widget-Categories">
 			<param name="scale" value="true"/>
@@ -304,7 +278,6 @@
 			<param name="icon_height" value="100"/>
 		</include>
 	</include>
-	<!-- Movie Genres Type -->
 	<include name="Widget-MovieGenres">
 		<include content="Widget-Categories">
 			<param name="scale" value="true"/>
@@ -317,7 +290,6 @@
 			<param name="fallback_image" value="DefaultGenre.png"/>
 		</include>
 	</include>
-	<!-- Music Genres Type -->
 	<include name="Widget-MusicGenres">
 		<include content="Widget-Categories">
 			<param name="scale" value="true"/>
@@ -330,7 +302,6 @@
 			<param name="fallback_image" value="DefaultMusicGenres.png"/>
 		</include>
 	</include>
-	<!-- Studios Type -->
 	<include name="Widget-Studios">
 		<include content="Widget-Categories">
 			<param name="scale" value="true"/>
@@ -343,7 +314,6 @@
 			<param name="fallback_image" value="DefaultStudios.png"/>
 		</include>
 	</include>
-	<!-- Country Type -->
 	<include name="Widget-Country">
 		<include content="Widget-Categories">
 			<param name="scale" value="true"/>
@@ -356,7 +326,6 @@
 			<param name="fallback_image" value="DefaultCountry.png"/>
 		</include>
 	</include>
-	<!-- Other Type -->
 	<include name="Widget-Other">
 		<include content="Widget-Square">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
@@ -368,7 +337,6 @@
 			<param name="fallback_image" value="DefaultFolder.png"/>
 		</include>
 	</include>
-	<!-- SubMenu Type -->
 	<include name="Widget-SubMenu">
 		<include content="Widget-Categories">
 			<param name="homebackground" value="false"/>
@@ -382,7 +350,6 @@
 			<param name="type" value="$PARAM[type]"/>
 		</include>
 	</include>
-	<!-- Weather Daily -->
 	<include name="Widget-WeatherDaily">
 		<include content="Widget-Weather">
 			<param name="content_include" value="DailyItems" />
@@ -391,7 +358,6 @@
 			<param name="list_id" value="$PARAM[list_id]" />
 		</include>
 	</include>
-	<!-- Weather Hourly -->
 	<include name="Widget-WeatherHourly">
 		<include content="Widget-Weather">
 			<param name="content_include" value="HourlyItems" />
@@ -400,10 +366,6 @@
 			<param name="list_id" value="$PARAM[list_id]" />
 		</include>
 	</include>
-
-	<!-- *** Common Widget *** -->
-
-	<!-- Widget Group Common -->
 	<include name="WidgetGroup-Common">
 		<orientation>vertical</orientation>
 		<height>100%</height>
@@ -413,7 +375,6 @@
 		<ondown>200001</ondown>
 		<usecontrolcoords>true</usecontrolcoords>
 	</include>
-	<!-- Widget Common -->
 	<include name="Widget-Common">
 		<scrolltime tween="cubic" easing="out">500</scrolltime>
 		<orientation>horizontal</orientation>
@@ -430,7 +391,6 @@
 		<onback>PageUp</onback>
 		<preloaditems>2</preloaditems>
 	</include>
-	<!-- Busy List Spinner -->
 	<include name="BusyListSpinner">
 		<param name="posy">160</param>
 		<param name="visible">true</param>
@@ -458,7 +418,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Category Label -->
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
 		<definition>
@@ -474,11 +433,9 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Widget Dynamic Content -->
 	<include name="Widget-Content">
 		<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 	</include>
-	<!-- Widget Static Content -->
 	<include name="Widget-ContentCustom">
 		<content>
 			<include content="$PARAM[content_path]">
@@ -486,7 +443,6 @@
 			</include>
 		</content>
 	</include>
-	<!-- Widget PVR Common  -->
 	<include name="Widget-PVR">
 		<control type="image">
 			<top>80</top>
@@ -523,10 +479,6 @@
 			<shadowcolor>black</shadowcolor>
 		</control>
 	</include>
-
-	<!-- *** General Widget *** -->
-
-	<!-- Categories -->
 	<include name="Widget-Categories">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
@@ -702,7 +654,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Posters -->
 	<include name="Widget-Posters">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
@@ -779,7 +730,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Thumbs -->
 	<include name="Widget-Thumbs">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
@@ -865,7 +815,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Square -->
 	<include name="Widget-Square">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
@@ -950,7 +899,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Square-Favourites -->
 	<include name="Widget-Square-Favourites">
 		<param name="visible">true</param>
 		<param name="homebackground">true</param>
@@ -1009,7 +957,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Channels -->
 	<include name="Widget-Channels">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
@@ -1174,7 +1121,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Image -->
 	<include name="Widget-Image">
 		<param name="visible">true</param>
 		<param name="visible_1">true</param>
@@ -1234,10 +1180,6 @@
 			</control>
 		</definition>
 	</include>
-
-	<!-- *** Weather Widget *** -->
-
-	<!-- Weather Main -->
 	<include name="Widget-Weather">
 		<param name="width">266</param>
 		<definition>
@@ -1370,7 +1312,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- Weather Content Hourly -->
 	<include name="HourlyItems">
 		<content>
 			<include content="WeatherNAItem">
@@ -1408,7 +1349,6 @@
 			</include>
 		</content>
 	</include>
-	<!-- Weather Content Daily -->
 	<include name="DailyItems">
 		<content>
 			<include content="WeatherNAItem">
@@ -1458,7 +1398,6 @@
 			</include>
 		</content>
 	</include>
-	<!-- Weather None Item -->
 	<include name="WeatherNAItem">
 		<item>
 			<icon>resource://resource.images.weathericons.default/na.png</icon>
@@ -1479,7 +1418,6 @@
 			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
 		</item>
 	</include>
-	<!-- Weather Hourly Item -->
 	<include name="WeatherHourlyItem">
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
@@ -1521,7 +1459,6 @@
 			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
 		</item>
 	</include>
-	<!-- Weather Daily Item -->
 	<include name="WeatherDailyItem">
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
@@ -1566,7 +1503,6 @@
 			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
 		</item>
 	</include>
-	<!-- Weather Map Item -->
 	<include name="WeatherMapItem">
 		<control type="group" id="700$PARAM[item_id]">
 			<height>1110</height>
@@ -1623,6 +1559,28 @@
 			<onclick>noop</onclick>
 			<label>$INFO[Window(weather).Property(Map.$PARAM[item_id].Heading)]</label>
 			<visible>Weather.IsFetched + !String.IsEmpty(Window(weather).Property(Map.$PARAM[item_id].Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
+		</control>
+	</include>
+	<include name="Widget-Scrollbar">
+		<control type="group">
+			<right>0</right>
+			<top>80</top>
+			<bottom>80</bottom>
+			<width>60</width>
+			<control type="scrollbar" id="$PARAM[scrollbar_id]">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>13</width>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[scrollbar_id])">conditional</animation>
+			</control>
 		</control>
 	</include>
 </includes>

@@ -34,6 +34,7 @@
 				<right>400</right>
 				<aligny>center</aligny>
 				<visible>!String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(pvrosdchannels) + !Window.IsActive(pvrchannelguide)</visible>

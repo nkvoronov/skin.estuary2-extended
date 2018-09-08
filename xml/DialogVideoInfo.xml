@@ -472,15 +472,7 @@
 						<param name="label" value="$LOCALIZE[31028]" />
 						<param name="onclick_1" value="SetProperty(fanart,$ESCINFO[ListItem.Art(fanart)],home)" />
 						<param name="onclick_2" value="ActivateWindow(1104)" />
-						<param name="visible" value="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(animatedfanart)) + !Skin.HasSetting(animated_fanarts)" />
-					</include>
-					<include content="InfoDialogButton">
-						<param name="id" value="105" />
-						<param name="icon" value="icons/infodialogs/image.png" />
-						<param name="label" value="$LOCALIZE[31028]" />
-						<param name="onclick_1" value="SetProperty(fanart,$ESCINFO[ListItem.Art(animatedfanart)],home)" />
-						<param name="onclick_2" value="ActivateWindow(1104)" />
-						<param name="visible" value="!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)" />
+						<param name="visible" value="!String.IsEmpty(ListItem.Art(fanart))" />
 					</include>
 					<!-- <include content="InfoDialogButton">
 						<param name="id" value="106" />

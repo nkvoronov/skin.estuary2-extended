@@ -155,10 +155,6 @@
 		<value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
 		<value>DefaultGenre.png</value>
 	</variable>
-	<variable name="WidgetStudioIconVar">
-		<value condition="System.HasAddon(resource.images.studios.white)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
-		<value>DefaultStudio.png</value>
-	</variable>
 	<variable name="AddonsLabel2Var">
 		<value condition="ListItem.Property(addon.downloading)">$INFO[ListItem.Property(addon.status)]</value>
 		<value condition="!String.IsEqual(Container.SortMethod,$LOCALIZE[551])">$INFO[ListItem.Label2]</value>
@@ -304,7 +300,7 @@
 	</variable>
 	<variable name="NowPlayingBreadcrumbsVar">
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title,[COLOR white],[/COLOR]]</value>
-		<value condition="Window.IsActive(fullscreenvideo)">[COLOR white]$INFO[VideoPlayer.Title][/COLOR]$INFO[VideoPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
+		<value condition="Window.IsActive(fullscreenvideo)">[COLOR white]$INFO[VideoPlayer.Title][/COLOR]$INFO[VideoPlayer.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
 		<value condition="MusicPartyMode.Enabled">[COLOR white]$LOCALIZE[589][/COLOR]</value>
 		<value>[COLOR white]$LOCALIZE[31000] ...[/COLOR]</value>
 	</variable>
@@ -743,10 +739,6 @@
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
 		<value>DefaultStudios.png</value>
 	</variable>
-	<variable name="MediaFlagsStudioIconVar">
-		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]</value>
-		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</value>
-	</variable>
 	<variable name="MediaFlagsSearchStudioIconVar">
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">resource://resource.images.studios.white/</value>
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">resource://resource.images.studios.coloured/</value>
@@ -809,6 +801,10 @@
 		<value condition="VideoPlayer.Content(LiveTV)">$INFO[Player.Title]</value>
 		<value>$INFO[Player.Time]$INFO[Player.Title, - ]</value>
 	</variable>
+	<variable name="SkinSettingWidgetNameVar">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
 	<variable name="BackgroundMoviesVar">
 		<value condition="!String.IsEmpty(Skin.String(background_movies))">$INFO[Skin.String(background_movies)]</value>
 		<value>special://skin/extras/home-images/movies.jpg</value>
@@ -857,9 +853,21 @@
 		<value condition="!String.IsEmpty(Skin.String(background_livetv))">$INFO[Skin.String(background_livetv)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
-	<variable name="SkinSettingWidgetNameVar">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
-		<value>$LOCALIZE[231]</value>
+	<variable name="BackgroundRadioVar">
+		<value condition="!String.IsEmpty(Skin.String(background_radio))">$INFO[Skin.String(background_radio)]</value>
+		<value>special://skin/extras/home-images/music.jpg</value>
+	</variable>
+	<variable name="BackgroundRadioNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_radio))">$INFO[Skin.String(background_radio)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundGamesVar">
+		<value condition="!String.IsEmpty(Skin.String(background_games))">$INFO[Skin.String(background_games)]</value>
+		<value>special://skin/extras/home-images/games.jpg</value>
+	</variable>
+	<variable name="BackgroundGamesNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_games))">$INFO[Skin.String(background_games)]</value>
+		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="BackgroundAddonsVar">
 		<value condition="!String.IsEmpty(Skin.String(background_addons))">$INFO[Skin.String(background_addons)]</value>
@@ -900,5 +908,9 @@
 	<variable name="BackgroundWeatherNameVar">
 		<value condition="!String.IsEmpty(Skin.String(background_weather))">$INFO[Skin.String(background_weather)]</value>
 		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="MusicPlayerCodecVar">
+		<value condition="String.IsEqual(MusicPlayer.Codec,mp3float)">MP3</value>
+		<value>MusicPlayer.Codec</value>
 	</variable>
 </includes>
