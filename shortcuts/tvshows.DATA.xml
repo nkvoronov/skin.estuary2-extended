@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
-		<label>20382</label>
+		<label>41000</label>
 		<label2>20343</label2>
 		<icon>defaultrecentlyaddedepisodes.png</icon>
 		<action>ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</action>

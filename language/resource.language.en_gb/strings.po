@@ -744,6 +744,10 @@ msgstr ""
 
 # EXTENDED ADDED VALUE
 
+msgctxt "#41000"
+msgid "Recently added"
+msgstr ""
+
 msgctxt "#43000"
 msgid "Options"
 msgstr ""
