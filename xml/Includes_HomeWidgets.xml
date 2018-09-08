@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<!-- WeatherWidget 100 -->
 	<include name="include-WeatherWidget">
-		<!-- Weather Info -->
 		<control type="group" id="$PARAM[control_id]102">
 			<description>Weather info</description>
 			<left>68</left>
@@ -77,39 +75,32 @@
 				</include>
 			</control>
 		</control>
-		<!-- Weather Daily -->
 		<include content="Widget-WeatherDaily" condition="!String.IsEmpty(Weather.Plugin)">
 			<param name="widget_header" value="$LOCALIZE[31019]"/>
 			<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
 			<param name="list_id" value="$PARAM[control_id]103" />
 		</include>
-		<!-- Weather Hourly -->
 		<include content="Widget-WeatherHourly" condition="!String.IsEmpty(Weather.Plugin)">
 			<param name="widget_header" value="$LOCALIZE[33036]"/>
 			<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
 			<param name="list_id" value="$PARAM[control_id]104" />
 		</include>
 	</include>
-	<!-- Favorites 110 -->
 	<include name="include-FavouritesWidget">
 		<include content="Widget-FavouritesFull">
 			<param name="list_id" value="$PARAM[control_id]110"/>
 		</include>
 	</include>
-	<!-- TVWidget 120 -->
 	<include name="include-TVWidget">
-		<!-- Timers -->
 		<include content="Widget-TVTimers">
 			<param name="list_id" value="$PARAM[control_id]120"/>
 		</include>
-		<!-- Channels -->
 		<include content="Widget-PVRChannels">
 			<param name="content_path" value="pvr://channels/tv/*?view=lastplayed"/>
 			<param name="widget_header" value="$LOCALIZE[31016]"/>
 			<param name="widget_target" value="pvr"/>
 			<param name="list_id" value="$PARAM[control_id]121"/>
 		</include>
-		<!-- Recordings -->
 		<include content="Widget-PVRRecordings">
 			<param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
 			<param name="widget_header" value="$LOCALIZE[31015]"/>
@@ -117,20 +108,16 @@
 			<param name="list_id" value="$PARAM[control_id]122"/>
 		</include>
 	</include>
-	<!-- RadioWidget 130 -->
 	<include name="include-RadioWidget">
-		<!-- Timers -->
 		<include content="Widget-RadioTimers">
 			<param name="list_id" value="$PARAM[control_id]130"/>
 		</include>
-		<!-- Channels -->
 		<include content="Widget-PVRChannels" >
 			<param name="content_path" value="pvr://channels/radio/*?view=lastplayed"/>
 			<param name="widget_header" value="$LOCALIZE[31018]"/>
 			<param name="widget_target" value="files"/>
 			<param name="list_id" value="$PARAM[control_id]131"/>
 		</include>
-		<!-- Recordings -->
 		<include content="Widget-PVRRecordings">
 			<param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
 			<param name="widget_header" value="$LOCALIZE[31015]"/>
@@ -138,37 +125,31 @@
 			<param name="list_id" value="$PARAM[control_id]132"/>
 		</include>
 	</include>
-	<!-- AddonsWidget 140 -->
 	<include name="include-AddonsWidget">
-		<!-- Video Addons -->
 		<include content="Widget-Addons">
 			<param name="content_path" value="addons://sources/video/"/>
 			<param name="widget_header" value="$LOCALIZE[1037]"/>
 			<param name="widget_target" value="videos"/>
 			<param name="list_id" value="$PARAM[control_id]140"/>
 		</include>
-		<!-- Audio Addons -->
 		<include content="Widget-Addons">
 			<param name="content_path" value="addons://sources/audio/"/>
 			<param name="widget_header" value="$LOCALIZE[1038]"/>
 			<param name="widget_target" value="music"/>
 			<param name="list_id" value="$PARAM[control_id]141"/>
 		</include>
-		<!-- Programs Addons -->
 		<include content="Widget-Addons">
 			<param name="content_path" value="addons://sources/executable/"/>
 			<param name="widget_header" value="$LOCALIZE[1043]"/>
 			<param name="widget_target" value="programs"/>
 			<param name="list_id" value="$PARAM[control_id]142"/>
 		</include>
-		<!-- Android Apps -->
 		<include condition="System.Platform.Android" content="Widget-Addons">
 			<param name="content_path" value="androidapp://sources/apps/"/>
 			<param name="widget_header" value="$LOCALIZE[20244]"/>
 			<param name="widget_target" value="programs"/>
 			<param name="list_id" value="$PARAM[control_id]143"/>
 		</include>
-		<!-- Images Addons -->
 		<include content="Widget-Addons">
 			<param name="content_path" value="addons://sources/image/"/>
 			<param name="widget_header" value="$LOCALIZE[1039]"/>
@@ -176,44 +157,37 @@
 			<param name="list_id" value="$PARAM[control_id]144"/>
 		</include>
 	</include>
-	<!-- Media Widget 150 -->
 	<include name="include-MediaWidget">
-		<!-- Widget 1 -->
 		<include content="Widget-$PARAM[widget1_type]">
 			<param name="widget_header" value="$PARAM[widget1_name]"/>
 			<param name="widget_target" value="$PARAM[widget1_target]"/>
 			<param name="content_path" value="$PARAM[widget1_path]"/>
 			<param name="list_id" value="$PARAM[control_id]150"/>
 		</include>
-		<!-- Widget 2 -->
 		<include content="Widget-$PARAM[widget2_type]">
 			<param name="widget_header" value="$PARAM[widget2_name]"/>
 			<param name="widget_target" value="$PARAM[widget2_target]"/>
 			<param name="content_path" value="$PARAM[widget2_path]"/>
 			<param name="list_id" value="$PARAM[control_id]151"/>
 		</include>
-		<!-- Widget 3 -->
 		<include content="Widget-$PARAM[widget3_type]">
 			<param name="widget_header" value="$PARAM[widget3_name]"/>
 			<param name="widget_target" value="$PARAM[widget3_target]"/>
 			<param name="content_path" value="$PARAM[widget3_path]"/>
 			<param name="list_id" value="$PARAM[control_id]152"/>
 		</include>
-		<!-- Widget 4 -->
 		<include content="Widget-$PARAM[widget4_type]">
 			<param name="widget_header" value="$PARAM[widget4_name]"/>
 			<param name="widget_target" value="$PARAM[widget4_target]"/>
 			<param name="content_path" value="$PARAM[widget4_path]"/>
 			<param name="list_id" value="$PARAM[control_id]153"/>
 		</include>
-		<!-- Widget 5 -->
 		<include content="Widget-$PARAM[widget5_type]">
 			<param name="widget_header" value="$PARAM[widget5_name]"/>
 			<param name="widget_target" value="$PARAM[widget5_target]"/>
 			<param name="content_path" value="$PARAM[widget5_path]"/>
 			<param name="list_id" value="$PARAM[control_id]154"/>
 		</include>
-		<!-- Widget 6 -->
 		<include content="Widget-$PARAM[widget6_type]">
 			<param name="widget_header" value="$PARAM[widget6_name]"/>
 			<param name="widget_target" value="$PARAM[widget6_target]"/>
@@ -221,7 +195,6 @@
 			<param name="list_id" value="$PARAM[control_id]155"/>
 		</include>
 	</include>
-	<!-- None Widget 160 -->
 	<include name="include-None">
 		<control type="group" id="$PARAM[control_id]160">
 			<onup>$PARAM[control_id]900</onup>

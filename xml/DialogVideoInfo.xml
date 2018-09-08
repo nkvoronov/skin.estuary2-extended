@@ -476,9 +476,10 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="10" />
-						<param name="icon" value="icons/infodialogs/choose_image.png" />
-						<param name="label" value="$LOCALIZE[13511]" />
+						<param name="id" value="6" />
+						<param name="icon" value="icons/infodialogs/update.png" />
+						<param name="label" value="$LOCALIZE[184]" />
+						<param name="visible" value="Control.IsEnabled(6)" />
 					</include>
 					<!-- <include content="InfoDialogButton">
 						<param name="id" value="104" />
@@ -495,10 +496,9 @@
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(tvshows)" />
 					</include> -->
 					<include content="InfoDialogButton">
-						<param name="id" value="6" />
-						<param name="icon" value="icons/infodialogs/update.png" />
-						<param name="label" value="$LOCALIZE[184]" />
-						<param name="visible" value="Control.IsEnabled(6)" />
+						<param name="id" value="10" />
+						<param name="icon" value="icons/infodialogs/choose_image.png" />
+						<param name="label" value="$LOCALIZE[13511]" />
 					</include>
 				</control>
 				<include content="LeftRightArrows">

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="HomeSystemButtons">
-		<!-- System Buttons -->
 		<control type="grouplist" id="700">
 			<orientation>horizontal</orientation>
 			<itemgap>0</itemgap>
@@ -9,15 +8,10 @@
 			<width>480</width>
 			<height>110</height>
 			<top>100</top>
-			<onup>SetFocus(9000)</onup>
-			<onup>PageDown</onup>
-			<onup>PageDown</onup>
-			<ondown>SetFocus(9000)</ondown>
-			<ondown>PageUp</ondown>
-			<ondown>PageUp</ondown>
+			<onup>SetFocus(9000,99,absolute)</onup>
+			<ondown>SetFocus(9000,0,absolute)</ondown>
 			<onright>2000</onright>
 			<align>justify</align>
-			<!-- Power button -->
 			<include content="IconButton">
 				<param name="control_id" value="801" />
 				<param name="onclick" value="SetProperty(fanarthometype,power,home)" />
@@ -26,7 +20,6 @@
 				<param name="icon" value="icons/power.png" />
 				<param name="label" value="$LOCALIZE[33060]" />
 			</include>
-			<!-- Settings button -->
 			<include content="IconButton">
 				<param name="control_id" value="802" />
 				<param name="onclick" value="SetProperty(fanarthometype,settings,home)" />
@@ -35,14 +28,12 @@
 				<param name="icon" value="icons/settings.png" />
 				<param name="label" value="$LOCALIZE[21417]" />
 			</include>
-			<!-- Search button -->
 			<include content="IconButton">
 				<param name="control_id" value="803" />
 				<param name="onclick" value="ActivateWindow(1107)" />
 				<param name="icon" value="icons/search.png" />
 				<param name="label" value="$LOCALIZE[137]" />
 			</include>
-			<!-- FullScreen button -->
 			<include content="IconButton">
 				<param name="control_id" value="804" />
 				<param name="onclick" value="Fullscreen" />
@@ -52,7 +43,6 @@
 			</include>
 		</control>
 	</include>
-	<!-- Main menu -->
 	<include name="HomeMainMenu">
 		<control type="group">
 			<depth>DepthContentPanel</depth>
@@ -68,7 +58,7 @@
 				<movement>6</movement>
 				<focusposition>1</focusposition>
 				<onfocus>ClearProperty(listposition,home)</onfocus>
-				<onright>2000</onright>                
+				<onright>2000</onright>
 				<onleft>700</onleft>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
@@ -142,7 +132,6 @@
 					<include>skinshortcuts-mainmenu</include>
 				</content>
 			</control>
-			<!-- HomeSystemButtons -->
 			<include>HomeSystemButtons</include>
 		</control>
 	</include>

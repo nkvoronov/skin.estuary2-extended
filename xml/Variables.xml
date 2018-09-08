@@ -162,10 +162,6 @@
 		<value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
 		<value>DefaultGenre.png</value>
 	</variable>
-	<variable name="WidgetStudioIconVar">
-		<value condition="System.HasAddon(resource.images.studios.white)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
-		<value>DefaultStudio.png</value>
-	</variable>
 	<variable name="AddonsLabel2Var">
 		<value condition="ListItem.Property(addon.downloading)">$INFO[ListItem.Property(addon.status)]</value>
 		<value condition="!String.IsEqual(Container.SortMethod,$LOCALIZE[551])">$INFO[ListItem.Label2]</value>
@@ -312,8 +308,8 @@
 	</variable>
 	<variable name="NowPlayingBreadcrumbsVar">
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title,[COLOR white],[/COLOR]]</value>
-		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[VideoPlayer.Season,[COLOR button_focus]S,[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR button_focus]E,: [/COLOR]]$INFO[VideoPlayer.Title]</value>
-		<value condition="Window.IsActive(fullscreenvideo)">[COLOR white]$INFO[VideoPlayer.Title][/COLOR]$INFO[VideoPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
+		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x, ][COLOR white]$INFO[VideoPlayer.Title][/COLOR]</value>
+		<value condition="Window.IsActive(fullscreenvideo)">[COLOR white]$INFO[VideoPlayer.Title][/COLOR]$INFO[VideoPlayer.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
 		<value condition="MusicPartyMode.Enabled">[COLOR white]$LOCALIZE[589][/COLOR]</value>
 		<value>[COLOR white]$LOCALIZE[31000] ...[/COLOR]</value>
 	</variable>
@@ -593,6 +589,7 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13200])">profile</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13005])">power</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1036])">favourites</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016])">games</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43058]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43059])">playlists</value>
 		<value>$INFO[Container(9000).ListItem.Property(defaultID)]</value>
 	</variable>
@@ -774,10 +771,6 @@
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
 		<value>DefaultStudios.png</value>
 	</variable>
-	<variable name="MediaFlagsStudioIconVar">
-		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]</value>
-		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</value>
-	</variable>
 	<variable name="MediaFlagsSearchStudioIconVar">
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">resource://resource.images.studios.white/</value>
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">resource://resource.images.studios.coloured/</value>
@@ -813,6 +806,10 @@
 	<variable name="BottomBarPageLabelVar">
 		<value condition="Control.HasFocus(600) | Control.HasFocus(50600) | Control.HasFocus(502600) | Control.HasFocus(5199) | Control.HasFocus(531) | Control.HasFocus(533)">[COLOR $VAR[MainColorVar]]$INFO[Container.CurrentPage,, / ]$INFO[Container.NumPages][/COLOR]</value>
 		<value>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</value>
+	</variable>
+	<variable name="MusicPlayerCodecVar">
+		<value condition="String.IsEqual(MusicPlayer.Codec,mp3float)">MP3</value>
+		<value>MusicPlayer.Codec</value>
 	</variable>
 	<variable name="SkinSettingsHelpTextVar">
 		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>
