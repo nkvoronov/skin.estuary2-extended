@@ -436,12 +436,12 @@
 			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]" />
-                <param name="visible" value="!String.IsEmpty(ListItem.VideoAspect)" />
+				<param name="visible" value="!String.IsEmpty(ListItem.VideoAspect)" />
 			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$VAR[ResolutionFlagVar]" />
 				<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
-			</include>            
+			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$INFO[ListItem.VideoCodec,flags/videocodec/,.png]" />
 				<param name="visible" value="!String.IsEmpty(ListItem.VideoCodec)" />
@@ -557,12 +557,12 @@
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoAspect),flags/aspectratio/,.png]" />
-                    <param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoAspect))" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoAspect))" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoResolution),flags/videoresolution/,.png]" />
 					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoResolution))" />
-				</include>                
+				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoCodec),flags/videocodec/,.png]" />
 					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoCodec))" />

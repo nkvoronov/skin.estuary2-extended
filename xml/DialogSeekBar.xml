@@ -275,7 +275,7 @@
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$VAR[ResolutionFlagPlayerVar]" />
-                    <param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
+					<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
