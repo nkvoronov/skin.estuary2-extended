@@ -613,7 +613,7 @@
 				<include>WidgetGroup-Common</include>
 				<include content="Widget-SubMenu" condition="Library.HasContent(musicvideos)">
 					<param name="custom" value="false"/>
-					<param name="content_path" value="library://music/musicvideos/"/>
+					<param name="content_path" value="library://video/musicvideos/"/>
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
 					<param name="widget_target" value="videos"/>
 					<param name="list_id" value="16900"/>

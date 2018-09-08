@@ -32,13 +32,13 @@
 					<param name="top" value="90" />
 					<param name="left" value="150" />
 					<param name="visible" value="!Player.ChannelPreviewActive" />
-					<param name="label" value="MusicPlayer.BitRate" />
+					<param name="label" value="$INFO[MusicPlayer.BitRate]" />
 				</include>
 				<include content="MusicInfoFlag">
 					<param name="top" value="90" />
 					<param name="left" value="270" />
 					<param name="visible" value="!Player.ChannelPreviewActive" />
-					<param name="label" value="MusicPlayer.SampleRate" />
+					<param name="label" value="$INFO[MusicPlayer.SampleRate]" />
 				</include>
 				<control type="image">
 					<left>370</left>
@@ -272,6 +272,10 @@
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
 					<param name="visible" value="!String.IsEmpty(VideoPlayer.VideoAspect)" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$VAR[ResolutionFlagPlayerVar]" />
+                    <param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
