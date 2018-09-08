@@ -116,8 +116,8 @@
 	</variable>
 	<variable name="ShiftLeftTextBoxVar">
 		<value condition="Window.IsActive(pictures)">$INFO[ListItem.Property(description),,[CR]]$INFO[ListItem.PictureDatetime,$LOCALIZE[552]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureResolution,$LOCALIZE[169]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureCamMake,$LOCALIZE[31041]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureCamModel,$LOCALIZE[21823]: [COLOR white],[/COLOR][CR]]</value>
-		<value condition="String.IsEqual(listitem.DBType,artist)">$INFO[ListItem.Genre,$LOCALIZE[515]:  [COLOR white],[/COLOR][CR]]$INFO[ListItem.Property(Artist_YearsActive),$LOCALIZE[21898]:  [COLOR white],[/COLOR][CR]]$INFO[ListItem.Property(Artist_Style),$LOCALIZE[736]:  [COLOR white],[/COLOR][CR]]</value>
-		<value condition="String.IsEqual(listitem.DBType,album)">$INFO[ListItem.Year,$LOCALIZE[345]:  [COLOR white],[/COLOR][CR]]$INFO[ListItem.Genre,$LOCALIZE[515]:  [COLOR white],[/COLOR][CR]]$INFO[ListItem.Property(album_label),$LOCALIZE[21899]:  [COLOR white],[/COLOR][CR]]$INFO[ListItem.Property(album_style),$LOCALIZE[736]:  [COLOR white],[/COLOR][CR]]</value>
+		<value condition="String.IsEqual(listitem.DBType,artist)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Property(Artist_YearsActive),$LOCALIZE[21898]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Property(Artist_Style),$LOCALIZE[736]: [COLOR white],[/COLOR][CR]]</value>
+		<value condition="String.IsEqual(listitem.DBType,album)">$INFO[ListItem.Year,$LOCALIZE[345]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Property(album_label),$LOCALIZE[21899]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Property(album_style),$LOCALIZE[736]: [COLOR white],[/COLOR][CR]]</value>
 		<value condition="String.IsEqual(Listitem.DBType,season) | String.IsEqual(Listitem.DBType,tvshow)">$INFO[ListItem.Genre,$LOCALIZE[515]:  [COLOR white],[/COLOR][CR]]$INFO[ListItem.Premiered,$LOCALIZE[20416]:  [COLOR white],[/COLOR]]</value>
 		<value>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Director,$LOCALIZE[20339]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Writer,$LOCALIZE[20417]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Premiered,$LOCALIZE[20416]: [COLOR white],[/COLOR]]</value>
 	</variable>
@@ -300,6 +300,7 @@
 	</variable>
 	<variable name="NowPlayingBreadcrumbsVar">
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title,[COLOR white],[/COLOR]]</value>
+		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x, ][COLOR white]$INFO[VideoPlayer.Title][/COLOR]</value>
 		<value condition="Window.IsActive(fullscreenvideo)">[COLOR white]$INFO[VideoPlayer.Title][/COLOR]$INFO[VideoPlayer.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
 		<value condition="MusicPartyMode.Enabled">[COLOR white]$LOCALIZE[589][/COLOR]</value>
 		<value>[COLOR white]$LOCALIZE[31000] ...[/COLOR]</value>
@@ -773,6 +774,10 @@
 		<value condition="Control.HasFocus(600) | Control.HasFocus(50600) | Control.HasFocus(502600) | Control.HasFocus(5199) | Control.HasFocus(531) | Control.HasFocus(533)">[COLOR $VAR[MainColorVar]]$INFO[Container.CurrentPage,, / ]$INFO[Container.NumPages][/COLOR]</value>
 		<value>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</value>
 	</variable>
+	<variable name="MusicPlayerCodecVar">
+		<value condition="String.IsEqual(MusicPlayer.Codec,mp3float)">MP3</value>
+		<value>MusicPlayer.Codec</value>
+	</variable>
 	<variable name="SkinSettingsHelpTextVar">
 		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>
 		<value condition="Container(9000).HasFocus(2)">$LOCALIZE[43040]</value>
@@ -908,9 +913,5 @@
 	<variable name="BackgroundWeatherNameVar">
 		<value condition="!String.IsEmpty(Skin.String(background_weather))">$INFO[Skin.String(background_weather)]</value>
 		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="MusicPlayerCodecVar">
-		<value condition="String.IsEqual(MusicPlayer.Codec,mp3float)">MP3</value>
-		<value>MusicPlayer.Codec</value>
 	</variable>
 </includes>
