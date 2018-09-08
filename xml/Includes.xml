@@ -2,28 +2,28 @@
 <includes>
 	<include file="Defaults.xml" />
 	<include file="Includes_Home.xml" />
-	<include file="Includes_HomeMainMenu.xml" />
-	<include file="Includes_HomeSubMenu.xml" />
-	<include file="Includes_HomeWidgets.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_MediaMenu.xml" />
 	<include file="Includes_Buttons.xml" />
 	<include file="Includes_PVR.xml" />
-	<include file="Includes_UserWidgets.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_Poster.xml" />
 	<include file="View_52_IconWall.xml" />
 	<include file="View_53_Shift.xml" />
 	<include file="View_54_InfoWall.xml" />
 	<include file="View_55_WideList.xml" />
-	<include file="View_56_ClearLogo.xml" />
-	<include file="View_57_ClearArt.xml" />
-	<include file="View_58_BigPoster.xml" />
 	<include file="View_500_Wall.xml" />
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
 	<include file="Variables.xml" />
 	<include file="script-skinshortcuts-includes.xml"/>
+	<include file="Includes_HomeMainMenu.xml" />
+	<include file="Includes_HomeSubMenu.xml" />
+	<include file="Includes_HomeWidgets.xml" />
+	<include file="Includes_UserWidgets.xml" />
+	<include file="View_56_ClearLogo.xml" />
+	<include file="View_57_ClearArt.xml" />
+	<include file="View_58_BigPoster.xml" />
 	<include file="Constants_1920.xml" condition="!String.IsEqual(Skin.AspectRatio,21:9)"/>
 	<include file="Constants_2560.xml" condition="String.IsEqual(Skin.AspectRatio,21:9)"/>
 	<constant name="DepthDialog">0.50</constant>
@@ -359,36 +359,6 @@
 			</control>
 		</control>
 	</include>
-	<include name="MusicInfoFlag">
-		<param name="top">0</param>
-		<param name="left">0</param>
-		<param name="width">120</param>
-		<param name="height">99</param>
-		<param name="visible">true</param>
-		<param name="texture">flags/flag.png</param>
-		<param name="label">flag</param>
-		<definition>
-			<control type="group">
-				<top>$PARAM[top]</top>
-				<left>$PARAM[left]</left>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<visible>$PARAM[visible]</visible>
-				<control type="image">
-					<texture>$PARAM[texture]</texture>
-					<aspectratio>keep</aspectratio>
-					<visible>!String.IsEmpty($PARAM[label])</visible>
-				</control>
-				<control type="label">
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font_flag</font>
-					<label>$INFO[$PARAM[label]]</label>
-					<textcolor>white</textcolor>
-				</control>
-			</control>
-		</definition>
-	</include>
 	<include name="MediaFlag">
 		<param name="width">115</param>
 		<param name="height">60</param>
@@ -466,11 +436,12 @@
 				<param name="visible" value="!String.IsEmpty(ListItem.AudioCodec)" />
 			</include>
 			<include content="MediaFlag">
-				<param name="texture" value="$VAR[ResolutionFlagVar]" />
-				<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
+				<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]" />
+				<param name="visible" value="!String.IsEmpty(ListItem.VideoAspect)" />
 			</include>
 			<include content="MediaFlag">
-				<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]" />
+				<param name="texture" value="$VAR[ResolutionFlagVar]" />
+				<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
 			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$INFO[ListItem.VideoCodec,flags/videocodec/,.png]" />
@@ -491,6 +462,35 @@
 				</include>
 			</control>
 		</control>
+	</include>
+	<include name="MusicInfoFlag">
+		<param name="top">0</param>
+		<param name="left">0</param>
+		<param name="width">120</param>
+		<param name="height">99</param>
+		<param name="visible">true</param>
+		<param name="texture">flags/flag.png</param>
+		<param name="label">flag</param>
+		<definition>
+			<control type="group">
+				<top>$PARAM[top]</top>
+				<left>$PARAM[left]</left>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<visible>$PARAM[visible]</visible>
+				<control type="image">
+					<texture>$PARAM[texture]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font_flag</font>
+					<label>$PARAM[label]</label>
+					<textcolor>white</textcolor>
+				</control>
+			</control>
+		</definition>
 	</include>
 	<include name="MediaFlagsSearch">
 		<param name="visible_pemiered">false</param>
@@ -557,11 +557,12 @@
 					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioCodec))" />
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoResolution),flags/videoresolution/,.png]" />
-					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoResolution))" />
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoAspect),flags/aspectratio/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoAspect))" />
 				</include>
 				<include content="MediaFlag">
-					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoAspect),flags/aspectratio/,.png]" />
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoResolution),flags/videoresolution/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoResolution))" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoCodec),flags/videocodec/,.png]" />

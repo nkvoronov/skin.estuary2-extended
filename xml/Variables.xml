@@ -956,7 +956,7 @@
 	</variable>
 	<!-- Widget MovieGenre Icons -->
 	<variable name="WidgetMovieGenreIconVar">
-	    <value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.arctic.zephyr/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
+		<value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.arctic.zephyr/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
 		<value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.coloured/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.jpg]</value>
 		<value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.filmstrip/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.filmstrip/,.jpg]</value>
 		<value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.grey/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.grey/,.jpg]</value>
