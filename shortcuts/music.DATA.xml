@@ -77,7 +77,7 @@
 		<label2>2</label2>
 		<icon>DefaultMusicSources.png</icon>
 		<action>ActivateWindow(music,library://music/musicsources/,return)</action>
-	</shortcut>    
+	</shortcut>
 	<shortcut>
 		<label>744</label>
 		<label2>2</label2>

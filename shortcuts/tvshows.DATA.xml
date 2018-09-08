@@ -11,7 +11,7 @@
 		<label2>20343</label2>
 		<icon>DefaultInProgressShows.png</icon>
 		<action>ActivateWindow(videos,videodb://inprogresstvshows/,return)</action>
-	</shortcut>    
+	</shortcut>
 	<shortcut>
 		<label>135</label>
 		<label2>20343</label2>

@@ -21,7 +21,7 @@
 	<shortcut>
 		<label>744</label>
 		<label2>3</label2>
-		<icon>DefaultFolder.png.png</icon>
+		<icon>DefaultFolder.png</icon>
 		<action>ActivateWindow(videos,sources://video/,return)</action>
 	</shortcut>
 	<shortcut>
