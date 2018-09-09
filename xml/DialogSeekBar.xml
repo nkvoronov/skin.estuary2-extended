@@ -28,17 +28,17 @@
 					<aspectratio>keep</aspectratio>
 					<visible>!Player.ChannelPreviewActive</visible>
 				</control>
-				<include content="MusicInfoFlag">
-					<param name="top" value="90" />
+				<include content="TextInfoFlag">
+					<param name="top" value="110" />
 					<param name="left" value="150" />
 					<param name="visible" value="!Player.ChannelPreviewActive" />
-					<param name="label" value="MusicPlayer.BitRate" />
+					<param name="label" value="$INFO[MusicPlayer.BitRate]" />
 				</include>
-				<include content="MusicInfoFlag">
-					<param name="top" value="90" />
+				<include content="TextInfoFlag">
+					<param name="top" value="110" />
 					<param name="left" value="270" />
 					<param name="visible" value="!Player.ChannelPreviewActive" />
-					<param name="label" value="MusicPlayer.SampleRate" />
+					<param name="label" value="$INFO[MusicPlayer.SampleRate]" />
 				</include>
 				<control type="image">
 					<left>370</left>

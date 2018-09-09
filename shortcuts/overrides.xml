@@ -239,7 +239,7 @@
 			<shortcut label="29994" type="2" icon="defaultmusicroles.png">ActivateWindow(music,library://music/musicroles/,return)</shortcut>
 			<shortcut label="744" type="2" icon="defaultfolder.png">ActivateWindow(music,sources://music/,return)</shortcut>
 			<shortcut label="1038" type="2" icon="defaultaddonmusic.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
-			<shortcut label="589" type="2" icon="defaultpartymode.png">PlayerControl(PartyMode)</shortcut>
+			<shortcut label="589" type="2" icon="defaultfolder.png">PlayerControl(PartyMode)</shortcut>
 			<shortcut label="653" type="2" icon="defaultaddonsupdates.png">UpdateLibrary(music)</shortcut>
 			<shortcut label="32055" type="2" icon="defaulticonerror.png">CleanLibrary(music)</shortcut>
 			<shortcut label="2" type="10004" icon="icons/settings/player.png">ActivateWindow(playersettings,music)</shortcut>
@@ -347,7 +347,7 @@
 			<shortcut label="744" type="3" icon="defaultfolder.png">ActivateWindow(videos,sources://video/,return)</shortcut>
 			<shortcut label="136" type="3" icon="defaultvideoplaylists.png">ActivateWindow(videos,special://videoplaylists/,return)</shortcut>
 			<shortcut label="1037" type="3" icon="defaultaddonvideo.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
-			<shortcut label="589" type="3" icon="defaultpartymode.png">PlayerControl(PartyMode(video))</shortcut>
+			<shortcut label="589" type="3" icon="defaultfolder.png">PlayerControl(PartyMode(video))</shortcut>
 			<shortcut label="653" type="3" icon="defaultaddonsupdates.png">UpdateLibrary(video)</shortcut>
 			<shortcut label="32055" type="3" icon="defaulticonerror.png">CleanLibrary(video)</shortcut>
 			<shortcut label="3" type="10004" icon="icons/settings/player.png">ActivateWindow(playersettings,videos)</shortcut>
