@@ -335,7 +335,8 @@
 						<top>20</top>
 						<width>540</width>
 						<height>625</height>
-						<label>$INFO[ListItem.Duration,$LOCALIZE[180]: ]</label>
+						<label>$INFO[ListItem.Duration,$LOCALIZE[180]: [COLOR white],[/COLOR]]</label>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 					</control>
 					<control type="label">
 						<top>-20</top>
@@ -378,13 +379,18 @@
 			</include>
 			<control type="textbox">
 				<bottom>15</bottom>
+				<include>OpenClose_Right</include>
 				<width>800</width>
 				<right>40</right>
 				<height>80</height>
+				<visible>!String.IsEmpty(ListItem.NextTitle)</visible>
+				<label>$LOCALIZE[19031]: $INFO[ListItem.NextStartTime,[COLOR grey],[/COLOR]]$INFO[ListItem.NextTitle,[COLOR white] - ,[/COLOR]]</label>
+				<shadowcolor>black</shadowcolor>
 				<align>right</align>
-				<visible>!String.isempty(ListItem.NextTitle)</visible>
-				<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031]:[CR][/COLOR]] $INFO[ListItem.NextStartTime]</label>
-				<include>OpenClose_Right</include>
+				<aligny>center</aligny>
+				<wrapmultiline>true</wrapmultiline>
+				<font>font27</font>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 			</control>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
