@@ -335,7 +335,8 @@
 						<top>20</top>
 						<width>540</width>
 						<height>625</height>
-						<label>$INFO[ListItem.Duration,$LOCALIZE[180]: ]</label>
+						<label>$INFO[ListItem.Duration,$LOCALIZE[180]: [COLOR white],[/COLOR]]</label>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 					</control>
 					<control type="label">
 						<top>-20</top>

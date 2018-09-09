@@ -441,8 +441,8 @@
 				</include>
 			</control>
 			<include content="TextInfoFlag">
-				 <param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow)" />
-				 <param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Duration]" />
+				 <param name="visible" value="!String.IsEmpty(ListItem.Duration) + !String.IsEqual(ListItem.DBtype,tvshow)" />
+				 <param name="label" value="$INFO[ListItem.Duration,, $LOCALIZE[31132]]" />
 			</include>
 			<include content="MediaFlag">
 				<param name="texture" value="$INFO[ListItem.AudioChannels,flags/audiochannel/,.png]" />

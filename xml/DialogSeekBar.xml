@@ -22,7 +22,7 @@
 				<control type="image">
 					<left>30</left>
 					<top>90</top>
-					<width>120</width>
+					<width>115</width>
 					<height>99</height>
 					<texture>$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]</texture>
 					<aspectratio>keep</aspectratio>
@@ -31,13 +31,13 @@
 				<include content="TextInfoFlag">
 					<param name="top" value="110" />
 					<param name="left" value="150" />
-					<param name="visible" value="!Player.ChannelPreviewActive" />
+					<param name="visible" value="!Player.ChannelPreviewActive + !String.IsEmpty(MusicPlayer.BitRate)" />
 					<param name="label" value="$INFO[MusicPlayer.BitRate]" />
 				</include>
 				<include content="TextInfoFlag">
 					<param name="top" value="110" />
 					<param name="left" value="270" />
-					<param name="visible" value="!Player.ChannelPreviewActive" />
+					<param name="visible" value="!Player.ChannelPreviewActive + !String.IsEmpty(MusicPlayer.SampleRate)" />
 					<param name="label" value="$INFO[MusicPlayer.SampleRate]" />
 				</include>
 				<control type="image">
