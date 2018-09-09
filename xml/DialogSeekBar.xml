@@ -21,20 +21,20 @@
 			<control type="group">
 				<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(musicosd)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<include content="MusicInfoFlag">
-					<param name="top" value="90" />
+				<include content="TextInfoFlag">
+					<param name="top" value="110" />
 					<param name="left" value="30" />
 					<param name="visible" value="Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)" />
 					<param name="label" value="$VAR[MusicPlayerCodecVar]" />
 				</include>
-				<include content="MusicInfoFlag">
-					<param name="top" value="90" />
+				<include content="TextInfoFlag">
+					<param name="top" value="110" />
 					<param name="left" value="150" />
 					<param name="visible" value="Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)" />
 					<param name="label" value="$INFO[MusicPlayer.BitRate]" />
 				</include>
-				<include content="MusicInfoFlag">
-					<param name="top" value="90" />
+				<include content="TextInfoFlag">
+					<param name="top" value="110" />
 					<param name="left" value="270" />
 					<param name="visible" value="Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)" />
 					<param name="label" value="$INFO[MusicPlayer.SampleRate]" />
@@ -73,7 +73,8 @@
 						<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
 					</include>
 					<include content="MediaFlag">
-						<param name="texture" value="$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]" />
+						<param name="texture" value="$VAR[AudioCodecFlagPlayerVar]" />
+						<param name="visible" value="!String.IsEmpty(VideoPlayer.AudioCodec)" />
 					</include>
 					<include content="MediaFlag">
 						<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />

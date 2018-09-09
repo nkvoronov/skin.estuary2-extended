@@ -589,7 +589,7 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13200])">profile</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13005])">power</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1036])">favourites</value>
-        <value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016])">games</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016])">games</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43058]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[43059])">playlists</value>
 		<value>$INFO[Container(9000).ListItem.Property(defaultID)]</value>
 	</variable>
@@ -743,6 +743,14 @@
 		<value condition="!Integer.IsEqual(ListItem.Property(percentplayed),0)">overlays/watched/resume.png</value>
 		<value condition="Integer.IsGreater(ListItem.Property(playcount),0)">OverlayWatched.png</value>
 	</variable>
+	<variable name="MusicPlayerCodecVar">
+		<value condition="String.IsEqual(MusicPlayer.Codec,mp3float)">MP3</value>
+		<value>MusicPlayer.Codec</value>
+	</variable>
+	<variable name="AudioCodecFlagPlayerVar">
+		<value condition="String.IsEqual(VideoPlayer.AudioCodec,mp3float)">flags/audiocodec/mp3.png</value>
+		<value>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</value>
+	</variable>
 	<variable name="ResolutionFlagPlayerVar">
 		<value condition="VideoPlayer.IsStereoscopic">flags/videoresolution/3D.png</value>
 		<value condition="Integer.IsGreater(VideoPlayer.VideoResolution,1080)">flags/videoresolution/4K.png</value>
@@ -806,10 +814,6 @@
 	<variable name="BottomBarPageLabelVar">
 		<value condition="Control.HasFocus(600) | Control.HasFocus(50600) | Control.HasFocus(502600) | Control.HasFocus(5199) | Control.HasFocus(531) | Control.HasFocus(533)">[COLOR $VAR[MainColorVar]]$INFO[Container.CurrentPage,, / ]$INFO[Container.NumPages][/COLOR]</value>
 		<value>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</value>
-	</variable>
-	<variable name="MusicPlayerCodecVar">
-		<value condition="String.IsEqual(MusicPlayer.Codec,mp3float)">MP3</value>
-		<value>MusicPlayer.Codec</value>
 	</variable>
 	<variable name="SkinSettingsHelpTextVar">
 		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>

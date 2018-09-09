@@ -251,6 +251,34 @@
 			</focusedlayout>
 		</definition>
 	</include>
+	<include name="TextInfoFlag">
+		<param name="top">0</param>
+		<param name="left">0</param>
+		<param name="width">115</param>
+		<param name="height">60</param>
+		<param name="visible">true</param>
+		<param name="label">flag</param>
+		<definition>
+			<control type="group">
+				<top>$PARAM[top]</top>
+				<left>$PARAM[left]</left>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<visible>$PARAM[visible]</visible>
+				<control type="label">
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$PARAM[label]</label>
+					<font>font_flag</font>
+				</control>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/flag.png" />
+				</include>
+			</control>
+		</definition>
+	</include>
 	<include name="InfoFlag">
 		<control type="group">
 			<width>180</width>
@@ -321,21 +349,10 @@
 						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]" />
 					</include>
 				</control>
-				<control type="group">
-					<width>115</width>
-					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow)</visible>
-					<control type="label">
-						<width>115</width>
-						<height>60</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$INFO[$PARAM[infolabel_prefix]ListItem.Duration]</label>
-						<font>font_flag</font>
-					</control>
-					<include content="MediaFlag">
-						<param name="texture" value="flags/flag.png" />
-					</include>
-				</control>
+				<include content="TextInfoFlag">
+						<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow)" />
+						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Duration]" />
+				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.AudioChannels,flags/audiochannel/,.png]" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioChannels)" />
@@ -369,35 +386,6 @@
 						<param name="icon" value="overlays/set.png" />
 						<param name="label" value="$INFO[Container(5800).NumItems]" />
 					</include>
-				</control>
-			</control>
-		</definition>
-	</include>
-	<include name="MusicInfoFlag">
-		<param name="top">0</param>
-		<param name="left">0</param>
-		<param name="width">120</param>
-		<param name="height">99</param>
-		<param name="visible">false</param>
-		<param name="texture">flags/flag.png</param>
-		<param name="label">flag</param>
-		<definition>
-			<control type="group">
-				<top>$PARAM[top]</top>
-				<left>$PARAM[left]</left>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<visible>$PARAM[visible]</visible>
-				<control type="image">
-					<texture>$PARAM[texture]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font_flag</font>
-					<label>$PARAM[label]</label>
-					<textcolor>white</textcolor>
 				</control>
 			</control>
 		</definition>
