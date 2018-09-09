@@ -313,7 +313,7 @@
 				<bottom>10</bottom>
 				<width>850</width>
 				<height>60</height>
-				<visible>!String.isempty(ListItem.NextTitle)</visible>
+				<visible>!String.IsEmpty(ListItem.NextTitle)</visible>
 				<label>$LOCALIZE[19031]: $INFO[ListItem.NextStartTime,[COLOR grey],[/COLOR]]$INFO[ListItem.NextTitle,[COLOR white] - ,[/COLOR]]</label>
 				<shadowcolor>black</shadowcolor>
 				<align>right</align>
