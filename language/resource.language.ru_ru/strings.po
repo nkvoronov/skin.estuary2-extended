@@ -582,6 +582,14 @@ msgctxt "#42001"
 msgid "Choose image path"
 msgstr "Выберите путь к изображению"
 
+msgctxt "#42002"
+msgid "Previous location"
+msgstr "Предыдущее местоположение"
+
+msgctxt "#42003"
+msgid "Next location"
+msgstr "Следующее местоположение"
+
 msgctxt "#43000"
 msgid "Options"
 msgstr "Параметры"

@@ -365,8 +365,8 @@
 		<node label="8" condition="!String.IsEmpty(Weather.Plugin)">
 			<shortcut label="8" type="8" icon="icons/sidemenu/weather.png">ActivateWindow(Weather)</shortcut>
 			<shortcut label="184" type="8" icon="DefaultAddonsUpdates.png">Weather.Refresh</shortcut>
-			<shortcut label="31077" type="8" icon="resource://resource.images.skinicons.estuary/location-previous.png">Weather.LocationPrevious</shortcut>
-			<shortcut label="31078" type="8" icon="resource://resource.images.skinicons.estuary/location-next.png">Weather.LocationNext</shortcut>
+			<shortcut label="42002" type="8" icon="resource://resource.images.skinicons.estuary/location-previous.png">Weather.LocationPrevious</shortcut>
+			<shortcut label="42003" type="8" icon="resource://resource.images.skinicons.estuary/location-next.png">Weather.LocationNext</shortcut>
 			<shortcut label="8" type="10004" icon="icons/settings/network.png">ActivateWindow(servicesettings,weather)</shortcut>
 		</node>
 		<node label="10004">

@@ -771,6 +771,14 @@ msgctxt "#42001"
 msgid "Choose image path"
 msgstr ""
 
+msgctxt "#42002"
+msgid "Previous location"
+msgstr ""
+
+msgctxt "#42003"
+msgid "Next location"
+msgstr ""
+
 msgctxt "#43000"
 msgid "Options"
 msgstr ""
