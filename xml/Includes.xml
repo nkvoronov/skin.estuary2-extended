@@ -468,7 +468,7 @@
 		<param name="left">0</param>
 		<param name="width">120</param>
 		<param name="height">99</param>
-		<param name="visible">true</param>
+		<param name="visible">false</param>
 		<param name="texture">flags/flag.png</param>
 		<param name="label">flag</param>
 		<definition>
