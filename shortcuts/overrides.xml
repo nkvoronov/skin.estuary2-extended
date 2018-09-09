@@ -228,10 +228,10 @@
 			<shortcut label="39031" type="2" icon="DefaultMusicSources.png">ActivateWindow(music,library://music/musicsources/,return)</shortcut>
 			<shortcut label="744" type="2" icon="DefaultFolder.png">ActivateWindow(music,sources://music/,return)</shortcut>
 			<shortcut label="1038" type="2" icon="DefaultAddonMusic.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
-			<shortcut label="589" type="2" icon="DefaultPartyMode">PlayerControl(PartyMode)</shortcut>
+			<shortcut label="589" type="2" icon="DefaultPartyMode.png">PlayerControl(PartyMode)</shortcut>
 			<shortcut label="653" type="2" icon="DefaultAddonsUpdates.png">UpdateLibrary(music)</shortcut>
 			<shortcut label="32055" type="2" icon="DefaultIconError.png">CleanLibrary(music)</shortcut>
-			<shortcut label="2" type="10004" icon="icons/settings/player.png">ActivateWindow(musicsettings)</shortcut>
+			<shortcut label="2" type="10004" icon="icons/settings/player.png">ActivateWindow(playersettings,music)</shortcut>
 			<node label="32040">
 				<content>playlist-audio</content>
 			</node>
@@ -332,7 +332,7 @@
 		<node label="1">
 			<shortcut label="1" type="1" icon="icons/sidemenu/pictures.png">ActivateWindow(pictures)</shortcut>
 			<shortcut label="1039" type="1" icon="DefaultAddonPicture.png">ActivateWindow(pictures,addons://sources/image/,return)</shortcut>
-			<shortcut label="1" type="10004" icon="icons/settings/player.png">ActivateWindow(picturessettings)</shortcut>
+			<shortcut label="1" type="10004" icon="icons/settings/player.png">ActivateWindow(playersettings,pictures)</shortcut>
 			<content>picturesources</content>
 		</node>
 		<node label="3">
@@ -343,7 +343,7 @@
 			<shortcut label="589" type="3" icon="DefaultPartyMode.png">PlayerControl(PartyMode(video))</shortcut>
 			<shortcut label="653" type="3" icon="DefaultAddonsUpdates.png">UpdateLibrary(video)</shortcut>
 			<shortcut label="32055" type="3" icon="DefaultIconError.png">CleanLibrary(video)</shortcut>
-			<shortcut label="3" type="10004" icon="icons/settings/player.png">ActivateWindow(videossettings)</shortcut>
+			<shortcut label="3" type="10004" icon="icons/settings/player.png">ActivateWindow(playersettings,videos)</shortcut>
 			<node label="32040">
 				<content>playlist-video</content>
 			</node>
@@ -365,7 +365,9 @@
 		<node label="8" condition="!String.IsEmpty(Weather.Plugin)">
 			<shortcut label="8" type="8" icon="icons/sidemenu/weather.png">ActivateWindow(Weather)</shortcut>
 			<shortcut label="184" type="8" icon="DefaultAddonsUpdates.png">Weather.Refresh</shortcut>
-			<shortcut label="8" type="10004" icon="icons/settings/network.png">ActivateWindow(weathersettings)</shortcut>
+			<shortcut label="31077" type="8" icon="resource://resource.images.skinicons.estuary/location-previous.png">Weather.LocationPrevious</shortcut>
+			<shortcut label="31078" type="8" icon="resource://resource.images.skinicons.estuary/location-next.png">Weather.LocationNext</shortcut>
+			<shortcut label="8" type="10004" icon="icons/settings/network.png">ActivateWindow(servicesettings,weather)</shortcut>
 		</node>
 		<node label="10004">
 			<shortcut label="10004" type="10004" icon="DefaultAddonService.png">ActivateWindow(settings)</shortcut>
@@ -499,7 +501,7 @@
 			<shortcut label="1037" type="24001" icon="DefaultAddonVideo.png" widget="Library" widgetType="addon" widgetTarget="videos">addons://sources/video</shortcut>
 			<shortcut label="1038" type="24001" icon="DefaultAddonMusic.png" widget="Library" widgetType="addon" widgetTarget="music">addons://sources/audio</shortcut>
 			<shortcut label="1039" type="24001" icon="DefaultAddonPicture.png" widget="Library" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut>
-            <shortcut label="35049" type="15016" icon="DefaultAddonGame.png" widget="Library" widgetType="addon" widgetTarget="games" condition="System.GetBool(gamesgeneral.enable)">addons://sources/game/</shortcut>
+			<shortcut label="35049" type="15016" icon="DefaultAddonGame.png" widget="Library" widgetType="addon" widgetTarget="games" condition="System.GetBool(gamesgeneral.enable)">addons://sources/game/</shortcut>
 			<node label="43021" condition="Skin.HasSetting(enable_custom_list_addons) + [ Skin.HasSetting(enable_custom_list_addons_programs) | Skin.HasSetting(enable_custom_list_addons_video) | Skin.HasSetting(enable_custom_list_addons_audio) | Skin.HasSetting(enable_custom_list_addons_image) ]">
 				<shortcut label="1043" type="24001" icon="DefaultAddonProgram.png" condition="Skin.HasSetting(enable_custom_list_addons_programs)" widget="Custom" widgetType="custaddon" widgetTarget="Programs">CustomAddonsPrograms</shortcut>
 				<shortcut label="1037" type="24001" icon="DefaultAddonVideo.png" condition="Skin.HasSetting(enable_custom_list_addons_video)" widget="Custom" widgetType="custaddon" widgetTarget="Video">CustomAddonsVideo</shortcut>
