@@ -477,7 +477,7 @@
 				<left>$PARAM[left]</left>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<visible>$PARAM[visible]</visible>
+				<visible>$PARAM[visible] + !String.IsEmpty($PARAM[label])</visible>
 				<control type="image">
 					<texture>$PARAM[texture]</texture>
 					<aspectratio>keep</aspectratio>
@@ -486,7 +486,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font_flag</font>
-					<label>$PARAM[label]</label>
+					<label>$INFO[$PARAM[label]]</label>
 					<textcolor>white</textcolor>
 				</control>
 			</control>
