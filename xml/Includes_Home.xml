@@ -380,8 +380,6 @@
 		<orientation>horizontal</orientation>
 		<onleft>9000</onleft>
 		<onright>noop</onright>
-		<onunfocus>ClearProperty(weatherfanartcode,home)</onunfocus>
-		<onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
 		<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 		<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 		<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -576,7 +574,6 @@
 							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
 						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
 							<onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
 							<onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 							<texturenofocus></texturenofocus>
@@ -704,7 +701,6 @@
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
 						</animation>
 						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
 							<onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
 							<onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 							<texturenofocus></texturenofocus>
@@ -786,7 +782,6 @@
 							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="230,120" />
 						</animation>
 						<control type="button">
-							<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
 							<onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
 							<onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 							<texturenofocus></texturenofocus>
@@ -869,8 +864,6 @@
 							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
 						</animation>
 						<control type="button">
-							<onfocus condition="!$PARAM[custom]">SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-							<onfocus condition="$PARAM[custom]">SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Property(AddonFanart)],home)</onfocus>
 							<onfocus condition="$PARAM[homebackground]">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
 							<onfocus condition="$PARAM[homebackground]">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
 							<texturenofocus></texturenofocus>
@@ -1252,11 +1245,6 @@
 						<animation type="Unfocus">
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,140" />
 						</animation>
-						<control type="button">
-							<onfocus>SetProperty(weatherfanartcode,$INFO[Container($PARAM[list_id]).ListItem.Property(FanartCode)],home)</onfocus>
-							<texturenofocus></texturenofocus>
-							<texturefocus></texturefocus>
-						</control>
 						<control type="image">
 							<left>0</left>
 							<top>20</top>

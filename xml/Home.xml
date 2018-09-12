@@ -3,8 +3,6 @@
 	<defaultcontrol>9000</defaultcontrol>
 	<onload condition="!String.IsEmpty(Window(home).Property(fanarthometype))">ClearProperty(fanarthometype,home)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(homebackground))">ClearProperty(homebackground,home)</onload>
-	<onload condition="!String.IsEmpty(Window(home).Property(mediaartfanart))">ClearProperty(mediaartfanart,home)</onload>
-	<onload condition="!String.IsEmpty(Window(home).Property(weatherfanartcode))">ClearProperty(weatherfanartcode,home)</onload>
 	<onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
@@ -81,6 +79,15 @@
 					<height>36</height>
 					<texture>icons/logo-text.png</texture>
 				</control>
+				<control type="image">
+					<left>-90</left>
+					<top>-30</top>
+					<width>1920</width>
+					<height>140</height>
+					<texture>$VAR[ContainerClearLogoVar]</texture>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+					<visible>!Skin.HasSetting(hide_mediaflags) + ControlGroup(2000).HasFocus</visible>
+				</control>
 				<control type="label">
 					<left>-90</left>
 					<top>-15</top>
@@ -89,6 +96,7 @@
 					<label>$VAR[InfoBarStatsVar]</label>
 					<font>font12</font>
 					<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+					<visible>Skin.HasSetting(hide_mediaflags) | !ControlGroup(2000).HasFocus</visible>
 					<visible>Skin.HasSetting(enable_home_stats)</visible>
 				</control>
 			</control>
