@@ -281,7 +281,6 @@
 		<value condition="Control.HasFocus(703)">$LOCALIZE[24013]</value>
 		<value condition="Control.HasFocus(5000)">$LOCALIZE[10004]</value>
 	</variable>
-	<!-- Volume Icon -->
 	<variable name="VolumeIconVar">
 		<value condition="Player.Muted">dialogs/volume/mute.png</value>
 		<value condition="Integer.IsGreater(Player.Volume,66)">dialogs/volume/volume.png</value>
