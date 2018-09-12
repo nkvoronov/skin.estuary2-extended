@@ -14,7 +14,6 @@
 				<param name="header_label" value="" />
 				<param name="header_id" value="1" />
 			</include>
-			<!-- Main -->
 			<control type="group" id="9000">
 				<description>Channel lists</description>
 				<left>20</left>
@@ -256,7 +255,6 @@
 					</control>
 				</control>
 			</control>
-			<!-- include Buttons (Save, Cancel, other) -->
 			<control type="grouplist" id="9001">
 				<description>Button grouplist</description>
 				<left>1150</left>
@@ -264,13 +262,11 @@
 				<onleft>7001</onleft>
 				<onright>7000</onright>
 				<itemgap>-20</itemgap>
-				<!-- Button Save -->
 				<include content="DefaultDialogButton">
 					<param name="id" value="28" />
 					<param name="label" value="" />
 					<param name="width" value="300" />
 				</include>
-				<!-- Button Cancel -->
 				<include content="DefaultDialogButton">
 					<param name="id" value="29" />
 					<param name="label" value="" />

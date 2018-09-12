@@ -312,12 +312,8 @@
 				<width>480</width>
 				<height>110</height>
 				<top>100</top>
-				<onup>SetFocus(211)</onup>
-				<onup>PageDown</onup>
-				<onup>PageDown</onup>
-				<ondown>SetFocus(211)</ondown>
-				<ondown>PageUp</ondown>
-				<ondown>PageUp</ondown>
+				<onup>SetFocus(211,99,absolute)</onup>
+				<ondown>SetFocus(211,0,absolute)</ondown>
 				<onright>90010</onright>
 				<align>justify</align>
 				<include content="IconButton">

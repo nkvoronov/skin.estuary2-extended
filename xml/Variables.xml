@@ -324,23 +324,20 @@
 		<value condition="!String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
 	</variable>
+	<variable name="ContainerClearLogoVar">
+		<value condition="!String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo))">$INFO[Container.ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(clearlogo))">$INFO[Container.ListItem.Art(clearlogo)]</value>
+	</variable>
+	<variable name="ItemClearLogoVar">
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+	</variable>
 	<variable name="AddonsFanartVar">
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
 		<value condition="!String.IsEmpty(Container(50050).ListItem.Art(fanart)) + Control.HasFocus(50050)">$INFO[Container(50050).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(50150).ListItem.Art(fanart)) + Control.HasFocus(50150)">$INFO[Container(50150).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(50250).ListItem.Art(fanart)) + Control.HasFocus(50250)">$INFO[Container(50250).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(50350).ListItem.Art(fanart)) + Control.HasFocus(50350)">$INFO[Container(50350).ListItem.Art(fanart)]</value>
-	</variable>
-	<variable name="HomeFanartVar">
-		<value condition="Skin.HasSetting(no_fanart)"></value>
-		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.Property(FanartCode))">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container.ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(804)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]favorites$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Container(9000).ListItem.Property(id)]$INFO[Skin.String(HomeFanart.ext)]</value>
 	</variable>
 	<variable name="MediaFanartVar">
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
@@ -353,7 +350,7 @@
 		<value>$INFO[Container.Art(fanart)]</value>
 	</variable>
 	<variable name="WeatherFanartVar">
-		<value condition="!String.IsEmpty(Window(home).Property(weatherfanartcode))">$VAR[WeatherFanartValueVar]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Property(FanartCode))">$VAR[WeatherFanartValueVar]</value>
 	</variable>
 	<variable name="ListWatchedIconVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
@@ -549,7 +546,7 @@
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 	<variable name="MainBackgroundVar">
-		<value condition="Window.IsActive(script-globalsearch-main.xml)">$VAR[BackgroundSearchVar]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">$VAR[BackgroundSearchVar]</value>
 		<value condition="Window.IsVisible(home) + Control.HasFocus(801)">$VAR[BackgroundPowerVar]</value>
 		<value condition="Window.IsVisible(home) + Control.HasFocus(802)">$VAR[BackgroundSettingsVar]</value>
 		<value condition="Window.IsVisible(home) + Control.HasFocus(803)">$VAR[BackgroundSearchVar]</value>
@@ -557,7 +554,7 @@
 		<value condition="!Window.IsVisible(home) + !String.IsEmpty(Window(home).Property(homebackground))">$INFO[Window(home).Property(homebackground)]</value>
 	</variable>
 	<variable name="FanartBackgroundVar">
-		<value condition="Window.IsActive(script-globalsearch-main.xml)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="Window.IsVisible(home) + Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="Window.IsVisible(home) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="Window.IsVisible(home) + Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
@@ -565,13 +562,15 @@
 		<value condition="!Window.IsVisible(home) + !String.IsEmpty(Window(home).Property(fanarthometype))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(home).Property(fanarthometype)]$INFO[Skin.String(HomeFanart.ext)]</value>
 	</variable>
 	<variable name="WeatherFanartValueVar">
-		<value condition="!Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(weatherfanartcode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
-		<value condition="Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(weatherfanartcode)]</value>
+		<value condition="!Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container.ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
+		<value condition="Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container.ListItem.Property(FanartCode)]</value>
 	</variable>
 	<variable name="HomeFanartMediaVar">
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
-		<value condition="!String.IsEmpty(Window(home).Property(weatherfanartcode)) + !String.IsEmpty(Skin.String(WeatherFanart.path))">$VAR[WeatherFanartValueVar]</value>
-		<value condition="!String.IsEmpty(Window(home).Property(mediaartfanart))">$INFO[Window(home).Property(mediaartfanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Property(FanartCode))">$VAR[WeatherFanartValueVar]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart)) + String.IsEmpty(Container.ListItem.Art(animatedfanart))">$INFO[Container.ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)">$INFO[Container.ListItem.Art(animatedfanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Property(AddonFanart))">$INFO[Container.ListItem.Property(AddonFanart)]</value>
 	</variable>
 	<variable name="HomeMenuTypeVar">
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[8])">weather</value>
@@ -597,17 +596,21 @@
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
 	</variable>
 	<variable name="SearchFanartVar">
-		<value condition="!String.IsEmpty(Container(111).ListItem.Property(Fanart)) + Control.HasFocus(111)">$INFO[Container(111).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(121).ListItem.Property(Fanart)) + Control.HasFocus(121)">$INFO[Container(121).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(131).ListItem.Property(Fanart)) + Control.HasFocus(131)">$INFO[Container(131).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(141).ListItem.Property(Fanart)) + Control.HasFocus(141)">$INFO[Container(141).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(151).ListItem.Property(Fanart)) + Control.HasFocus(151)">$INFO[Container(151).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(161).ListItem.Property(Fanart)) + Control.HasFocus(161)">$INFO[Container(161).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(171).ListItem.Property(Fanart)) + Control.HasFocus(171)">$INFO[Container(171).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(181).ListItem.Property(Fanart)) + Control.HasFocus(181)">$INFO[Container(181).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(Fanart)) + Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(221).ListItem.Property(Fanart)) + Control.HasFocus(221)">$INFO[Container(221).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Container(231).ListItem.Property(Fanart)) + Control.HasFocus(231)">$INFO[Container(231).ListItem.Property(Fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Property(Fanart))">$INFO[Container.ListItem.Property(Fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem..Art(fanart)]</value>
+	</variable>
+	<variable name="SearchIconVar">
+		<value condition="String.IsEqual(ListItem.Property(content),actors)">DefaultActor.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),albums)">DefaultMusicAlbums.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),artists)">DefaultMusicArtists.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),directors)">DefaultDirector.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),episodes)">DefaultTVShows.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),livetv)">DefaultAddonPVRClient.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),movies)">DefaultMovies.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),musicvideos)">DefaultMusicVideos.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),seasons)">DefaultTVShows.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),songs)">DefaultMusicSongs.png</value>
+		<value condition="String.IsEqual(ListItem.Property(content),tvshows)">DefaultTVShows.png</value>
 	</variable>
 	<variable name="BackgroundPowerVar">
 		<value condition="!String.IsEmpty(Skin.String(background_power))">$INFO[Skin.String(background_power)]</value>

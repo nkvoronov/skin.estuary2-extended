@@ -274,8 +274,9 @@
 				<left>260</left>
 				<top>180</top>
 				<height>25</height>
-				<label>[COLOR grey]$LOCALIZE[19031]:[/COLOR] $INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime]: $INFO[VideoPlayer.NextTitle]</label>
+				<label>$LOCALIZE[19031]: $INFO[VideoPlayer.NextStartTime,[COLOR grey], - [/COLOR]]$INFO[VideoPlayer.NextEndTime,[COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextTitle,[COLOR white]. ,[/COLOR]]</label>
 				<visible>VideoPlayer.HasEpg</visible>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 			</control>
 		</control>
 		<control type="group">
