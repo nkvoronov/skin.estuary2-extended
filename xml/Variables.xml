@@ -471,6 +471,10 @@
 		<value condition="!System.IsMaster">$LOCALIZE[20045]</value>
 		<value>$LOCALIZE[20046]</value>
 	</variable>
+	<variable name="ChannelListEPGIconVar">
+		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+		<value>$INFO[ListItem.Icon]</value>
+	</variable>
 	<variable name="VideoLibraryScanLabelVar">
 		<value condition="Library.IsScanningVideo">$LOCALIZE[13353]</value>
 		<value>$LOCALIZE[653]</value>
