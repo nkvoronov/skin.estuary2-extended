@@ -395,19 +395,19 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="441" />
-						<param name="icon" value="icons/infodialogs/cinema.png" />
-						<param name="onclick_1" value="RunScript(script.cinemavision,dbtype=$INFO[ListItem.DBType],dbid=$INFO[ListItem.DBID])" />
-						<param name="label" value="$LOCALIZE[31003]" />
-						<param name="visible" value="System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]" />
-					</include>
-					<include content="InfoDialogButton">
 						<param name="id" value="440" />
 						<param name="icon" value="icons/infodialogs/trailer_search.png" />
 						<param name="label" value="$LOCALIZE[31090]" />
 						<param name="onclick_1" value="Action(close)" />
 						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
 						<param name="visible" value="System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)" />
+					</include>
+					<include content="InfoDialogButton">
+						<param name="id" value="441" />
+						<param name="icon" value="icons/infodialogs/cinema.png" />
+						<param name="onclick_1" value="RunScript(script.cinemavision,dbtype=$INFO[ListItem.DBType],dbid=$INFO[ListItem.DBID])" />
+						<param name="label" value="$LOCALIZE[31003]" />
+						<param name="visible" value="System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]" />
 					</include>
 					<control type="group" id="400">
 						<width>262</width>

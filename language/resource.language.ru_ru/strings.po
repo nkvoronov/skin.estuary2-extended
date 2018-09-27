@@ -118,7 +118,7 @@ msgstr "Таймшифт"
 
 msgctxt "#31028"
 msgid "Show fanart"
-msgstr "Показать фан-арт"
+msgstr "Показать фанарт"
 
 msgctxt "#31029"
 msgid "Last logged in"
