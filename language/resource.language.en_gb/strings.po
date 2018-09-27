@@ -297,12 +297,12 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31061"
-msgid "Main menu items"
+msgid "Main menu"
 msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31062"
-msgid "Choose weather fanart pack"
+msgid "Choose weather backgrounds pack"
 msgstr ""
 
 #: /xml/Includes_MediaMenu.xml
@@ -590,7 +590,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31131"
-msgid "Choose skin fanart pack"
+msgid "Choose home backgrounds pack"
 msgstr ""
 
 #: /xml/Custom_1101_SettingsList.xml
@@ -669,7 +669,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31149"
-msgid "Select genre fanart pack"
+msgid "Choose genre backgrounds pack"
 msgstr ""
 
 #: /xml/DialogAddonInfo.xml
@@ -1157,4 +1157,8 @@ msgstr ""
 
 msgctxt "#44120"
 msgid "Music and Radio"
+msgstr ""
+
+msgctxt "#44121"
+msgid "Download Music Theme"
 msgstr ""
