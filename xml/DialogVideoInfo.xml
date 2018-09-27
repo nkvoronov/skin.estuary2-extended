@@ -500,6 +500,13 @@
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(tvshows)" />
 					</include>
 					<include content="InfoDialogButton">
+						<param name="id" value="107" />
+						<param name="icon" value="icons/infodialogs/cinema.png" />
+						<param name="label" value="$LOCALIZE[44121]" />
+						<param name="onclick_1" value="RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])" />
+						<param name="visible" value="System.HasAddon(script.tvtunes) + IsEmpty(Window(movieinformation).Property('TvTunes_HideVideoInfoButton')) + [Container.Content(movies) | Container.Content(tvshows)]" />
+					</include>
+					<include content="InfoDialogButton">
 						<param name="id" value="6" />
 						<param name="icon" value="icons/infodialogs/update.png" />
 						<param name="label" value="$LOCALIZE[184]" />

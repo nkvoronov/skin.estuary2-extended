@@ -227,9 +227,10 @@
 				<width>800</width>
 				<top>190</top>
 				<height>25</height>
-				<label>$INFO[VideoPlayer.NextTitle,[COLOR grey]$LOCALIZE[19031]: [/COLOR], - ][COLOR $VAR[MainColorVar]]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime: ][/COLOR]</label>
+				<label>$LOCALIZE[19031]: $INFO[VideoPlayer.NextStartTime,[COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextTitle,[COLOR white] - ,[/COLOR]]</label>
 				<align>right</align>
 				<aligny>center</aligny>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<visible>VideoPlayer.HasEpg</visible>
 			</control>
 			<control type="label">
@@ -254,7 +255,7 @@
 			<control type="grouplist">
 				<left>260</left>
 				<top>175</top>
-				<width>600</width>
+				<width>650</width>
 				<height>100</height>
 				<align>left</align>
 				<orientation>horizontal</orientation>
@@ -275,7 +276,7 @@
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$VAR[ResolutionFlagPlayerVar]" />
-					<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
+					<param name="visible" value="!String.IsEmpty(VideoPlayer.VideoResolution)" />
 				</include>
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
