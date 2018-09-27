@@ -949,3 +949,7 @@ msgstr "Музыкальная визуализация в качестве фо
 msgctxt "#44120"
 msgid "Music and Radio"
 msgstr "Музыка и Радио"
+
+msgctxt "#44121"
+msgid "Download Music Theme"
+msgstr "Загрузить Музыкальную тему"
