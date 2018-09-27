@@ -482,7 +482,7 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(animatedfanart))" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="105" />
+						<param name="id" value="108" />
 						<param name="icon" value="icons/infodialogs/image.png" />
 						<param name="label" value="$LOCALIZE[31028]" />
 						<param name="onclick_1" value="SetProperty(fanart,$ESCINFO[ListItem.Art(animatedfanart)],home)" />
@@ -495,18 +495,25 @@
 						<param name="label" value="$LOCALIZE[13511]" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="106" />
+						<param name="id" value="105" />
 						<param name="icon" value="icons/infodialogs/download.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(movies)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="107" />
+						<param name="id" value="106" />
 						<param name="icon" value="icons/infodialogs/download.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(tvshows)" />
+					</include>
+					<include content="InfoDialogButton">
+						<param name="id" value="107" />
+						<param name="icon" value="icons/infodialogs/download.png" />
+						<param name="label" value="$LOCALIZE[43045]" />
+						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])" />
+						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(musicvideos)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="108" />

@@ -952,4 +952,4 @@ msgstr "Музыка и Радио"
 
 msgctxt "#44121"
 msgid "Download Music Theme"
-msgstr "Загрузить Музыкальную тему"
+msgstr "Загрузить музыкальную тему"
