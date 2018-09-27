@@ -227,10 +227,10 @@
 				<width>800</width>
 				<top>190</top>
 				<height>25</height>
-                <label>$LOCALIZE[19031]: $INFO[VideoPlayer.NextStartTime,[COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextTitle,[COLOR white] - ,[/COLOR]]</label>
+				<label>$LOCALIZE[19031]: $INFO[VideoPlayer.NextStartTime,[COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextTitle,[COLOR white] - ,[/COLOR]]</label>
 				<align>right</align>
 				<aligny>center</aligny>
-                <textcolor>$VAR[MainColorVar]</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<visible>VideoPlayer.HasEpg</visible>
 			</control>
 			<control type="label">
