@@ -225,12 +225,12 @@ msgid "Automatic Login on startup"
 msgstr "Автоматическая авторизация при запуске"
 
 msgctxt "#31061"
-msgid "Main menu items"
+msgid "Main menu"
 msgstr "Главное меню"
 
 msgctxt "#31062"
-msgid "Choose weather fanart pack"
-msgstr "Выбрать набор фанарта погоды"
+msgid "Choose weather backgrounds pack"
+msgstr "Выбрать пакет фонов для погоды"
 
 msgctxt "#31063"
 msgid "Sections"
@@ -441,8 +441,8 @@ msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Основные настройки меню: Настройка главного экрана в соответствии с Вашими предпочтениями."
 
 msgctxt "#31131"
-msgid "Choose skin fanart pack"
-msgstr "Выбрать набор фанарта обложки"
+msgid "Choose home backgrounds pack"
+msgstr "Выбрать пакет фонов для главного экрана"
 
 msgctxt "#31132"
 msgid "Select Program"
@@ -501,8 +501,8 @@ msgid "Categories"
 msgstr "Категории"
 
 msgctxt "#31149"
-msgid "Select genre fanart pack"
-msgstr "Выбрать набор фанарта жанров"
+msgid "Choose genre backgrounds pack"
+msgstr "Выбрать пакет фонов для жанров"
 
 msgctxt "#31150"
 msgid "Repository"
@@ -530,7 +530,7 @@ msgstr "Нет закладок"
 
 msgctxt "#31156"
 msgid "Choose background pattern"
-msgstr "Выберите фон"
+msgstr "Выберите шаблон фона"
 
 msgctxt "#31157"
 msgid "Edit categories"
@@ -805,3 +805,7 @@ msgstr "Музыкальная визуализация в качестве фо
 msgctxt "#44120"
 msgid "Music and Radio"
 msgstr "Музыка и Радио"
+
+msgctxt "#44121"
+msgid "Download Music Theme"
+msgstr "Загрузить Музыкальную тему"
