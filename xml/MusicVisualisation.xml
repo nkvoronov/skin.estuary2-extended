@@ -14,8 +14,8 @@
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$VAR[BackgroundAudioVar]</imagepath>
 			<visible>String.IsEmpty(Player.Art(fanart)) | Skin.HasSetting(hide_visualization_fanart)</visible>
-		</control>		
-		<control type="visualisation">
+		</control>
+		<control type="visualisation" id="2">
 			<include>FullScreenDimensions</include>
 			<visible>Player.HasAudio</visible>
 		</control>
