@@ -296,6 +296,10 @@
 		<value condition="!String.IsEmpty(ListItem.Title)">[COLOR white]$INFO[ListItem.Title][/COLOR] $INFO[ListItem.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
 		<value>[COLOR white]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
 	</variable>
+	<variable name="VideoInfoPlayButtonLabelVar">
+		<value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)">$LOCALIZE[1024]</value>
+		<value>$LOCALIZE[208]</value>
+	</variable>
 	<variable name="VideoInfoSubLabelVar">
 		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x, ][COLOR white]$INFO[ListItem.TVShowTitle][/COLOR]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie)">[COLOR white]$INFO[ListItem.Tagline][/COLOR]</value>
