@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol></defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
+	<onload condition="System.HasAddon(script.artistslideshow) + !Skin.HasSetting(hide_background_fanart)">RunScript(script.artistslideshow)</onload>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="30" time="0" condition="!String.IsEmpty(Player.Art(fanart)) | !Skin.HasSetting(hide_visualization_fanart) | Visualisation.Enabled">Conditional</animation>

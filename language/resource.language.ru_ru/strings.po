@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -558,7 +558,7 @@ msgstr "Играйте в свои личные игры или загрузит
 
 msgctxt "#31163"
 msgid "Show Fanart background"
-msgstr "Показать фанатный фон"
+msgstr "Показать фанарт"
 
 msgctxt "#31164"
 msgid "Choose kind of profile identification"
@@ -571,6 +571,10 @@ msgstr "Название профиля"
 msgctxt "#31166"
 msgid "Profile avatar"
 msgstr "Аватар профиля"
+
+msgctxt "#31167"
+msgid "Animate background"
+msgstr "Анимационный фон"
 
 # EXTENDED ADDED VALUE
 
