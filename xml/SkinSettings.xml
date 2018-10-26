@@ -457,13 +457,21 @@
 				</include>
 				<include content="HomeMainCustomWidgetsAddonsSettings">
 					<param name="id1" value="13" />
+					<param name="title" value="$LOCALIZE[35049]" />
+					<param name="flags" value="enable_custom_list_addons_game" />
+					<param name="setadonnstype" value="Game" />
+					<param name="type" value="kodi.gameclient" />
+					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons)" />
+				</include>
+				<include content="HomeMainCustomWidgetsAddonsSettings">
+					<param name="id1" value="14" />
 					<param name="title" value="$LOCALIZE[1043]" />
 					<param name="flags" value="enable_custom_list_addons_programs" />
 					<param name="setadonnstype" value="Programs" />
 					<param name="type" value="xbmc.addon.executable" />
 					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons)" />
 				</include>
-				<control type="radiobutton" id="1400">
+				<control type="radiobutton" id="1500">
 					<description>Enable Custom List Addons Android Apps</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[20244]</label>
@@ -472,14 +480,14 @@
 					<visible>System.Platform.Android</visible>
 				</control>
 				<include content="HomeMainCustomWidgetsAddonsSettings">
-					<param name="id1" value="15" />
+					<param name="id1" value="16" />
 					<param name="title" value="$LOCALIZE[1039]" />
 					<param name="flags" value="enable_custom_list_addons_image" />
 					<param name="setadonnstype" value="Image" />
 					<param name="type" value="xbmc.addon.image" />
 					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons)" />
 				</include>
-				<control type="label" id="1600">
+				<control type="label" id="1700">
 					<description>PVR Channels</description>
 					<include>DefaultSettingLabel</include>
 					<label>$LOCALIZE[43022]</label>

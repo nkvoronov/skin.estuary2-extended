@@ -2234,6 +2234,37 @@
 		<onclick>Skin.Reset(AddonSetAudio.9.Label)</onclick>
 		<onclick>Skin.Reset(AddonSetAudio.9.Name)</onclick>
 		<onclick>Skin.Reset(AddonSetAudio.9.Icon)</onclick>
+        <onclick>Skin.Reset(enable_custom_list_addons_game)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.0.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.0.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.0.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.1.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.1.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.1.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.2.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.2.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.2.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.3.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.3.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.3.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.4.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.4.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.4.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.5.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.5.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.5.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.6.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.6.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.6.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.7.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.7.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.7.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.8.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.8.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.8.Icon)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.9.Label)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.9.Name)</onclick>
+		<onclick>Skin.Reset(AddonSetGame.9.Icon)</onclick>        
 		<onclick>Skin.Reset(enable_custom_list_addons_programs)</onclick>
 		<onclick>Skin.Reset(AddonSetPrograms.0.Label)</onclick>
 		<onclick>Skin.Reset(AddonSetPrograms.0.Name)</onclick>
