@@ -295,7 +295,7 @@
 			<shortcut label="15016" type="15016" icon="icons/sidemenu/games.png">ActivateWindow(games)</shortcut>
 			<node label="35049">
 				<shortcut label="35049" type="15016" icon="DefaultAddonGame.png">ActivateWindow(games,addons://sources/game/,return)</shortcut>
-				<!-- <content>addon-games</content> -->
+				<content>addon-game</content>
 			</node>
 		</node>
 		<node label="24001">
@@ -326,7 +326,7 @@
 			</node>
 			<node label="35049" condition="System.GetBool(gamesgeneral.enable)">
 				<shortcut label="35049" type="15016" icon="DefaultAddonGame.png">ActivateWindow(games,addons://sources/game/,return)</shortcut>
-				<!-- <content>addon-games</content> -->
+				<content>addon-game</content>
 			</node>
 		</node>
 		<node label="1">
@@ -521,9 +521,9 @@
 			<node label="1039">
 				<content>addon-image</content>
 			</node>
-			<!-- <node label="35049" condition="System.GetBool(gamesgeneral.enable)">
-				<content>addon-games</content>
-			</node> -->
+			<node label="35049" condition="System.GetBool(gamesgeneral.enable)">
+				<content>addon-game</content>
+			</node>
 		</node>
 		<node label="1" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
 			<shortcut label="20094" type="1" icon="DefaultFolder.png" widget="Library" widgetType="source" widgetTarget="pictures">sources://pictures</shortcut>
