@@ -138,7 +138,7 @@
 			<param name="widget_target" value="music"/>
 			<param name="list_id" value="$PARAM[control_id]141"/>
 		</include>
-		<include content="Widget-Addons">
+		<include  condition="System.GetBool(gamesgeneral.enable)" content="Widget-Addons">
 			<param name="content_path" value="addons://sources/game/"/>
 			<param name="widget_header" value="$LOCALIZE[35049]"/>
 			<param name="widget_target" value="games"/>
