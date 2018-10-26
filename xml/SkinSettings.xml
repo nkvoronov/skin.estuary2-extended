@@ -461,7 +461,7 @@
 					<param name="flags" value="enable_custom_list_addons_game" />
 					<param name="setadonnstype" value="Game" />
 					<param name="type" value="kodi.gameclient" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons)" />
+					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons) + System.GetBool(gamesgeneral.enable)" />
 				</include>
 				<include content="HomeMainCustomWidgetsAddonsSettings">
 					<param name="id1" value="14" />
