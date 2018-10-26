@@ -496,16 +496,17 @@
 			<shortcut label="35049" type="15016" icon="DefaultAddonGame.png" widget="Library" widgetType="addon" widgetTarget="games">addons://sources/game/</shortcut>
 		</node>
 		<node label="24001" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-			<shortcut label="1043" type="24001" icon="DefaultAddonProgram.png" widget="Library" widgetType="addon" widgetTarget="programs">addons://sources/executable</shortcut>
-			<shortcut label="20244" type="24001" icon="DefaultAddonProgram.png" widget="Library" widgetType="addon" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps</shortcut>
 			<shortcut label="1037" type="24001" icon="DefaultAddonVideo.png" widget="Library" widgetType="addon" widgetTarget="videos">addons://sources/video</shortcut>
 			<shortcut label="1038" type="24001" icon="DefaultAddonMusic.png" widget="Library" widgetType="addon" widgetTarget="music">addons://sources/audio</shortcut>
-			<shortcut label="1039" type="24001" icon="DefaultAddonPicture.png" widget="Library" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut>
 			<shortcut label="35049" type="15016" icon="DefaultAddonGame.png" widget="Library" widgetType="addon" widgetTarget="games" condition="System.GetBool(gamesgeneral.enable)">addons://sources/game/</shortcut>
-			<node label="43021" condition="Skin.HasSetting(enable_custom_list_addons) + [ Skin.HasSetting(enable_custom_list_addons_programs) | Skin.HasSetting(enable_custom_list_addons_video) | Skin.HasSetting(enable_custom_list_addons_audio) | Skin.HasSetting(enable_custom_list_addons_image) ]">
-				<shortcut label="1043" type="24001" icon="DefaultAddonProgram.png" condition="Skin.HasSetting(enable_custom_list_addons_programs)" widget="Custom" widgetType="custaddon" widgetTarget="Programs">CustomAddonsPrograms</shortcut>
+			<shortcut label="1043" type="24001" icon="DefaultAddonProgram.png" widget="Library" widgetType="addon" widgetTarget="programs">addons://sources/executable</shortcut>
+			<shortcut label="20244" type="24001" icon="DefaultAddonProgram.png" widget="Library" widgetType="addon" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps</shortcut>            
+			<shortcut label="1039" type="24001" icon="DefaultAddonPicture.png" widget="Library" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut>
+			<node label="43021" condition="Skin.HasSetting(enable_custom_list_addons) + [ Skin.HasSetting(enable_custom_list_addons_video) | Skin.HasSetting(enable_custom_list_addons_audio) | [ Skin.HasSetting(enable_custom_list_addons_game) + System.GetBool(gamesgeneral.enable) ] | Skin.HasSetting(enable_custom_list_addons_programs) | Skin.HasSetting(enable_custom_list_addons_image) ]">
 				<shortcut label="1037" type="24001" icon="DefaultAddonVideo.png" condition="Skin.HasSetting(enable_custom_list_addons_video)" widget="Custom" widgetType="custaddon" widgetTarget="Video">CustomAddonsVideo</shortcut>
 				<shortcut label="1038" type="24001" icon="DefaultAddonMusic.png" condition="Skin.HasSetting(enable_custom_list_addons_audio)" widget="Custom" widgetType="custaddon" widgetTarget="Audio">CustomAddonsAudio</shortcut>
+				<shortcut label="35049" type="24001" icon="DefaultAddonGame.png" condition="Skin.HasSetting(enable_custom_list_addons_game) + System.GetBool(gamesgeneral.enable)" widget="Custom" widgetType="custaddon" widgetTarget="Game">CustomAddonsGame</shortcut>
+				<shortcut label="1043" type="24001" icon="DefaultAddonProgram.png" condition="Skin.HasSetting(enable_custom_list_addons_programs)" widget="Custom" widgetType="custaddon" widgetTarget="Programs">CustomAddonsPrograms</shortcut>			
 				<shortcut label="1039" type="24001" icon="DefaultAddonPicture.png" condition="Skin.HasSetting(enable_custom_list_addons_image)" widget="Custom" widgetType="custaddon" widgetTarget="Image">CustomAddonsImage</shortcut>
 			</node>
 			<node label="1043">

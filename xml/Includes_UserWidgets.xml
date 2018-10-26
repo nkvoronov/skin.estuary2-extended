@@ -262,6 +262,11 @@
 			<param name="id2" value="Audio" />
 		</include>
 	</include>
+	<include name="CustomAddonsGame">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Game" />
+		</include>
+	</include>
 	<include name="CustomAddonsPrograms">
 		<include content="HomeCustomAddonsItems">
 			<param name="id2" value="Programs" />

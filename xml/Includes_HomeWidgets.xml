@@ -139,22 +139,28 @@
 			<param name="list_id" value="$PARAM[control_id]141"/>
 		</include>
 		<include content="Widget-Addons">
+			<param name="content_path" value="addons://sources/game/"/>
+			<param name="widget_header" value="$LOCALIZE[35049]"/>
+			<param name="widget_target" value="games"/>
+			<param name="list_id" value="$PARAM[control_id]142"/>
+		</include>
+		<include content="Widget-Addons">
 			<param name="content_path" value="addons://sources/executable/"/>
 			<param name="widget_header" value="$LOCALIZE[1043]"/>
 			<param name="widget_target" value="programs"/>
-			<param name="list_id" value="$PARAM[control_id]142"/>
+			<param name="list_id" value="$PARAM[control_id]143"/>
 		</include>
 		<include condition="System.Platform.Android" content="Widget-Addons">
 			<param name="content_path" value="androidapp://sources/apps/"/>
 			<param name="widget_header" value="$LOCALIZE[20244]"/>
 			<param name="widget_target" value="programs"/>
-			<param name="list_id" value="$PARAM[control_id]143"/>
+			<param name="list_id" value="$PARAM[control_id]144"/>
 		</include>
 		<include content="Widget-Addons">
 			<param name="content_path" value="addons://sources/image/"/>
 			<param name="widget_header" value="$LOCALIZE[1039]"/>
 			<param name="widget_target" value="pictures"/>
-			<param name="list_id" value="$PARAM[control_id]144"/>
+			<param name="list_id" value="$PARAM[control_id]145"/>
 		</include>
 	</include>
 	<include name="include-MediaWidget">
