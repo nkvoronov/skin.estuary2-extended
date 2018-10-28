@@ -7,7 +7,9 @@
 	<views>55,51,52,53,54,500,50</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<include>DefaultBackground</include>
+		<include content="DefaultBackground">
+			<param name="fanart_media" value="$VAR[MediaFanartVar]" />
+		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>View_50_List</include>
