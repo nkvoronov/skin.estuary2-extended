@@ -21,26 +21,8 @@
 			<control type="group">
 				<visible>!Window.IsVisible(videoosd) + !Window.IsVisible(musicosd)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<include content="TextInfoFlag">
-					<param name="top" value="110" />
-					<param name="left" value="30" />
-					<param name="visible" value="Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)" />
-					<param name="label" value="$VAR[MusicPlayerCodecVar]" />
-				</include>
-				<include content="TextInfoFlag">
-					<param name="top" value="110" />
-					<param name="left" value="150" />
-					<param name="visible" value="Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)" />
-					<param name="label" value="$INFO[MusicPlayer.BitRate]" />
-				</include>
-				<include content="TextInfoFlag">
-					<param name="top" value="110" />
-					<param name="left" value="270" />
-					<param name="visible" value="Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)" />
-					<param name="label" value="$INFO[MusicPlayer.SampleRate]" />
-				</include>
 				<control type="image">
-					<left>370</left>
+					<left>200</left>
 					<top>120</top>
 					<width>264</width>
 					<height>40</height>
@@ -85,6 +67,37 @@
 					</include>
 					<include content="MediaFlag">
 						<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
+					</include>
+				</control>
+				<control type="grouplist">
+					<right>20</right>
+					<top>110</top>
+					<width>1000</width>
+					<height>100</height>
+					<align>right</align>
+					<include>Animation_BottomSlide</include>
+					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
+					<visible>Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)</visible>
+					<animation effect="fade" start="0" end="100" time="200" delay="1000">Visible</animation>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]" />
+					</include>
+					<include content="TextInfoFlag">
+						<param name="top" value="110" />
+						<param name="left" value="150" />
+						<param name="visible" value="Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)" />
+						<param name="label" value="$INFO[MusicPlayer.BitRate]" />
+					</include>
+					<include content="TextInfoFlag">
+						<param name="top" value="110" />
+						<param name="left" value="270" />
+						<param name="visible" value="Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)" />
+						<param name="label" value="$INFO[MusicPlayer.SampleRate]" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/rds/rds.png" />
+						<param name="visible" value="RDS.HasRDS" />
 					</include>
 				</control>
 				<control type="group">
