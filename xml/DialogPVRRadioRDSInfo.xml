@@ -290,7 +290,7 @@
 
 			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="$LOCALIZE[29900]" />
-				<param name="sub_label" value="[COLOR grey]$VAR[RDSInfoSubTitle][/COLOR]" />
+				<param name="sub_label" value="[COLOR grey]$VAR[RDSInfoSubTitleVar][/COLOR]" />
 				<param name="posy" value="40" />
 			</include>
 		</control>

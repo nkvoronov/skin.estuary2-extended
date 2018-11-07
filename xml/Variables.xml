@@ -768,10 +768,6 @@
 		<value condition="!Integer.IsEqual(ListItem.Property(percentplayed),0)">overlays/watched/resume.png</value>
 		<value condition="Integer.IsGreater(ListItem.Property(playcount),0)">OverlayWatched.png</value>
 	</variable>
-	<variable name="MusicPlayerCodecVar">
-		<value condition="String.IsEqual(MusicPlayer.Codec,mp3float)">MP3</value>
-		<value>MusicPlayer.Codec</value>
-	</variable>
 	<variable name="AudioCodecFlagPlayerVar">
 		<value condition="String.IsEqual(VideoPlayer.AudioCodec,mp3float)">flags/audiocodec/mp3.png</value>
 		<value>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</value>
