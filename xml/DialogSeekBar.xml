@@ -87,6 +87,25 @@
 						<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
 					</include>
 				</control>
+				<control type="grouplist">
+					<right>20</right>
+					<top>110</top>
+					<width>1000</width>
+					<height>100</height>
+					<align>right</align>
+					<include>Animation_BottomSlide</include>
+					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
+					<visible>Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)</visible>
+					<animation effect="fade" start="0" end="100" time="200" delay="1000">Visible</animation>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/rds/rds.png" />
+						<param name="visible" value="RDS.HasRDS" />
+					</include>
+				</control>
 				<control type="group">
 					<visible>PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive</visible>
 					<control type="image">
