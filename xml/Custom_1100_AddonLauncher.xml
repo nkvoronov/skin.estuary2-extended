@@ -79,8 +79,9 @@
 					<pagecontrol>70</pagecontrol>
 					<movement>6</movement>
 					<focusposition>0</focusposition>
-					<onup>700</onup>
-					<ondown>700</ondown>
+					<onleft>700</onleft>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
 					<onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<focusedlayout height="95" width="462">
