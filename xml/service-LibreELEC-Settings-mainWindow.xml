@@ -367,7 +367,7 @@
 							<height>48</height>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(ListItem.Property(netType), ethernet)</visible>
-							<texture>icons/eth.png</texture>
+							<texture>os/libreelec/icons/eth.png</texture>
 						</control>
 						<!-- Icon wifi -->
 						<control type="image">
