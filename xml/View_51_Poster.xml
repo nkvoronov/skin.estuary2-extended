@@ -117,7 +117,7 @@
 						<label>$INFO[ListItem.Tagline,[I],[/I][CR]][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 						<textcolor>$VAR[MainColorVar]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
-						<visible>!ListItem.IsCollection</visible>
+						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
 					</control>
 				</control>
 			</control>

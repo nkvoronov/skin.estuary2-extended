@@ -203,7 +203,7 @@
 				<top>138</top>
 				<width>160</width>
 				<height>70</height>
-				<texture flipx="true">overlays/overlay-bg.png</texture>
+				<texture>overlays/overlayfade.png</texture>
 				<visible>!ListItem.IsParentFolder + !String.IsEmpty(ListItem.Thumb)</visible>
 			</control>
 			<control type="label">

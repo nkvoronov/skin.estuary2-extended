@@ -158,7 +158,6 @@
 						<height>200</height>
 						<texture border="22">dialogs/dialog-bg.png</texture>
 					</control>
-
 					<!-- Main Menu (left) -->
 					<control type="list" id="1000">
 						<visible>false</visible>
@@ -172,7 +171,6 @@
 						<itemlayout height="54" width="260" />
 						<focusedlayout height="54" width="260" />
 					</control>
-
 					<!-- Network Menu Content -->
 					<control type="list" id="1200">
 						<left>300</left>
@@ -268,8 +266,18 @@
 								<width>20</width>
 								<height>20</height>
 								<aspectratio>keep</aspectratio>
-								<visible>Integer.IsGreater(ListItem.Property(Security), 0)</visible>
+								<visible>Integer.IsEqual(ListItem.Property(Security), 1)</visible>
 								<texture>os/coreelec/icons/Key.png</texture>
+							</control>
+							<!-- Insecure Symbol (bottom right) -->
+							<control type="image">
+								<left>930</left>
+								<top>15</top>
+								<width>20</width>
+								<height>20</height>
+								<aspectratio>keep</aspectratio>
+								<visible>Integer.IsEqual(ListItem.Property(Security), 0)</visible>
+								<texture>os/coreelec/icons/Unlock.png</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout height="50">
