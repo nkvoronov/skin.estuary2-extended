@@ -50,7 +50,7 @@
 							<left>160</left>
 							<top>45</top>
 							<right>20</right>
-							<height>60</height>
+							<height>80</height>
 							<aligny>top</aligny>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>
@@ -97,7 +97,7 @@
 							<left>160</left>
 							<top>45</top>
 							<right>20</right>
-							<height>60</height>
+							<height>80</height>
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>
 						</control>

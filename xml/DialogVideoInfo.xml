@@ -486,21 +486,21 @@
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="103" />
-						<param name="icon" value="icons/infodialogs/download.png" />
+						<param name="icon" value="icons/infodialogs/install.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader.ex, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + Container.Content(movies)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="104" />
-						<param name="icon" value="icons/infodialogs/download.png" />
+						<param name="icon" value="icons/infodialogs/install.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader.ex, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + Container.Content(tvshows)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="105" />
-						<param name="icon" value="icons/infodialogs/download.png" />
+						<param name="icon" value="icons/infodialogs/install.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader.ex, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + Container.Content(musicvideos)" />
