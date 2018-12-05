@@ -183,6 +183,7 @@
 		</definition>
 	</include>
 	<include name="ListThumbInfoPanel">
+		<param name="fallback_image"></param>
 		<param name="flip_bg">false</param>
 		<definition>
 			<control type="group">
@@ -200,7 +201,7 @@
 						<height>470</height>
 						<aspectratio>scale</aspectratio>
 						<fadetime>300</fadetime>
-						<texture background="true">$VAR[IconWallThumbVar]</texture>
+						<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 						<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 					<control type="image">
@@ -210,7 +211,7 @@
 						<height>470</height>
 						<aspectratio aligny="center">keep</aspectratio>
 						<fadetime>300</fadetime>
-						<texture background="true">$VAR[IconWallThumbVar]</texture>
+						<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 						<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 					<control type="group">
@@ -239,7 +240,7 @@
 						<height>470</height>
 						<aspectratio aligny="center">keep</aspectratio>
 						<fadetime>300</fadetime>
-						<texture background="true">$VAR[IconWallThumbVar]</texture>
+						<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 					</control>
 					<control type="group">
 						<left>268</left>
