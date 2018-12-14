@@ -87,7 +87,7 @@
 					<texture>$VAR[ItemClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					</control>
-			</control>
+				</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<left>620</left>
@@ -560,7 +560,12 @@
 				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 			</control>
-			<include content="InfoDialogTopBarInfo">
+			<include content="InfoDialogTopBarInfo" condition="String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))">
+				<param name="main_label" value="$VAR[VideoInfoMainLabelVar]" />
+				<param name="sub_label" value="$VAR[VideoInfoSubLabelVar]" />
+			</include>
+			<include content="InfoDialogTopBarInfo" condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(clearlogo))">
+				<param name="posx" value="400" />
 				<param name="main_label" value="$VAR[VideoInfoMainLabelVar]" />
 				<param name="sub_label" value="$VAR[VideoInfoSubLabelVar]" />
 			</include>
