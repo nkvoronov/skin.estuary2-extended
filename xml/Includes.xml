@@ -721,10 +721,11 @@
 	<include name="InfoDialogTopBarInfo">
 		<param name="id">33333</param>
 		<param name="posy">20</param>
+		<param name="posx">100</param>
 		<definition>
 			<control type="grouplist">
-				<left>100</left>
-				<right>100</right>
+				<left>$PARAM[posx]</left>
+				<right>$PARAM[posx]</right>
 				<top>$PARAM[posy]</top>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>

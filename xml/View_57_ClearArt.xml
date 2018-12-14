@@ -75,6 +75,8 @@
 					<control type="group">
 						<visible>String.IsEmpty(ListItem.Art(clearart))</visible>
 						<visible>String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
+						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 						<control type="image">
 							<top>18</top>
 							<left>13</left>
@@ -127,6 +129,8 @@
 					<control type="group">
 						<visible>String.IsEmpty(ListItem.Art(clearart))</visible>
 						<visible>String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
+						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 						<control type="image">
 							<top>18</top>
 							<left>13</left>
