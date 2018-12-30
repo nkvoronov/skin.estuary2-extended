@@ -813,3 +813,11 @@ msgstr "Музыка и Радио"
 msgctxt "#44121"
 msgid "Download Music Theme"
 msgstr "Загрузить музыкальную тему"
+
+msgctxt "#44122"
+msgid "List with Icon"
+msgstr "Список с Иконками"
+
+msgctxt "#44123"
+msgid "List without Icon"
+msgstr "Список без Иконок"
