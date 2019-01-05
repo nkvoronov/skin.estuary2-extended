@@ -272,7 +272,20 @@
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="radiobutton" id="218">
+				<control type="button" id="218">
+					<description>Startup Focus Control</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44124]</label>
+					<label2>$VAR[CustomFocusTextVar]</label2>
+					<onclick condition="String.IsEmpty(Skin.String(custom_focus)) | String.IsEqual(Skin.String(custom_focus),0)">Skin.SetString(custom_focus,1,)</onclick>
+					<onclick>Skin.SetNumeric(custom_focus)</onclick>
+				</control>
+				<control type="image" id="219">
+					<description>Separator Image</description>
+					<height>3</height>
+					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+				</control>
+				<control type="radiobutton" id="220">
 					<description>Skin Toggle Debug</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43019]</label>
@@ -280,19 +293,19 @@
 					<onclick>Skin.ToggleSetting(enable_skin_debug)</onclick>
 					<onclick>Skin.ToggleDebug</onclick>
 				</control>
-				<control type="radiobutton" id="219">
+				<control type="radiobutton" id="221">
 					<description>Hide ReloadSkin Button</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43255]</label>
 					<onclick>Skin.ToggleSetting(hide_reload_skin_button)</onclick>
 					<selected>Skin.HasSetting(hide_reload_skin_button)</selected>
 				</control>
-				<control type="image" id="220">
+				<control type="image" id="222">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="221">
+				<control type="button" id="223">
 					<description>Reset Section</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[10041]</label>

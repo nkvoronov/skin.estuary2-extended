@@ -2163,7 +2163,9 @@
 		<onclick>Skin.Reset(hide_popup)</onclick>
 		<onclick>Skin.Reset(enable_custom_list_addons)</onclick>
 		<onclick>Skin.Reset(enable_custom_list_channels)</onclick>
+		<onclick>Skin.Reset(custom_focus)</onclick>
 		<onclick>Skin.Reset(enable_skin_debug)</onclick>
+		<onclick>Skin.Reset(hide_reload_skin_button)</onclick>
 		<include>DialogClickNo</include>
 	</include>
 	<include name="DialogMainMenu">

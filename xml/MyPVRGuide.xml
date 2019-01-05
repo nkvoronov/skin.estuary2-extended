@@ -196,7 +196,7 @@
 							<width>30%</width>
 							<height>30</height>
 							<align>right</align>
-							<label>$INFO[ListItem.StartTime,$LOCALIZE[555]: [COLOR grey],[/COLOR]]$INFO[ListItem.EndTime,[COLOR grey] - ,[/COLOR]][COLOR white] ([/COLOR]$INFO[ListItem.Duration][COLOR white])[/COLOR]</label>
+							<label>$INFO[ListItem.StartTime,$LOCALIZE[555]: [COLOR grey],[/COLOR]]$INFO[ListItem.EndTime,[COLOR grey] - ,[/COLOR]]$INFO[ListItem.Duration,[COLOR white] ([/COLOR],[COLOR white])[/COLOR]]</label>
 							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">

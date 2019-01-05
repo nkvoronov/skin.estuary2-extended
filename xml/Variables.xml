@@ -943,4 +943,34 @@
 		<value condition="!String.IsEmpty(Skin.String(background_weather))">$INFO[Skin.String(background_weather)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
+	<variable name="CustomFocusTextVar">
+		<value condition="String.IsEmpty(Skin.String(custom_focus)) | String.IsEqual(Skin.String(custom_focus),0)">1</value>
+		<value condition="!String.IsEmpty(Skin.String(custom_focus))">$INFO[Skin.String(custom_focus)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="CustomFocusVar">
+		<value condition="String.IsEmpty(Skin.String(custom_focus))">-1</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),0)">-1</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),1)">-1</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),2)">0</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),3)">1</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),4)">2</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),5)">3</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),6)">4</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),7)">5</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),8)">6</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),9)">7</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),10)">8</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),11)">9</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),12)">10</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),13)">11</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),14)">12</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),15)">13</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),16)">14</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),17)">15</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),18)">16</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),19)">17</value>
+		<value condition="String.IsEqual(Skin.String(custom_focus),20)">18</value>
+		<value>-1</value>
+	</variable>
 </includes>

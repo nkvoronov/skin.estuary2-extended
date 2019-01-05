@@ -1012,3 +1012,7 @@ msgstr ""
 msgctxt "#44123"
 msgid "List without Icon"
 msgstr ""
+
+msgctxt "#44124"
+msgid "After launching KODI, move the focus of the main menu to"
+msgstr ""

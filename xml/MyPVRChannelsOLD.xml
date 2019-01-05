@@ -4,7 +4,7 @@
 	<backgroundcolor>background</backgroundcolor>
 	<onload condition="String.IsEmpty(Window(home).Property(fanarthometype)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(fanarthometype,livetv,home)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(homebackground,$VAR[BackgroundLiveTVVar],home)</onload>
-	<views>50,51,52</views>
+	<views>50,51,52,54</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
@@ -25,7 +25,7 @@
 					<onright>73</onright>
 					<onup>50</onup>
 					<ondown>50</ondown>
-					<viewtype label="$LOCALIZE[44122]">list</viewtype>
+					<viewtype label="44122">list</viewtype>
 					<preloaditems>1</preloaditems>
 					<pagecontrol>73</pagecontrol>
 					<focusedlayout height="90">
@@ -168,7 +168,7 @@
 					<onright>73</onright>
 					<onup>51</onup>
 					<ondown>51</ondown>
-					<viewtype label="$LOCALIZE[44123]">list</viewtype>
+					<viewtype label="44123">list</viewtype>
 					<preloaditems>1</preloaditems>
 					<pagecontrol>73</pagecontrol>
 					<focusedlayout height="70">
@@ -279,192 +279,85 @@
 				</control>
 				<control type="panel" id="52">
 					<left>50</left>
-					<top>140</top>
+					<top>0</top>
 					<width>98%</width>
-					<height>610</height>
+					<height>100%</height>
 					<onleft>9000</onleft>
-					<onright>520</onright>
+					<onright>531</onright>
 					<onup condition="Integer.IsGreater(Container.NumPages,1)">500</onup>
 					<onup condition="!Integer.IsGreater(Container.NumPages,1)">9000</onup>
 					<ondown>500</ondown>
-					<viewtype label="$LOCALIZE[31107]">list</viewtype>
+					<viewtype label="31102">icon</viewtype>
 					<preloaditems>2</preloaditems>
-					<pagecontrol>520</pagecontrol>
+					<pagecontrol>531</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
-					<itemlayout height="200" width="450">
+					<itemlayout height="400" width="300">
 						<control type="group">
-							<top>-2</top>
-							<control type="image">
-								<top>0</top>
-								<width>470</width>
-								<height>220</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
-							<control type="label">
-								<left>20</left>
-								<top>10</top>
-								<height>90</height>
-								<width>82</width>
-								<align>center</align>
-								<aligny>center</aligny>
-								<font>font32_title</font>
-								<label>$INFO[ListItem.ChannelNumberLabel]</label>
-								<textcolor>grey</textcolor>
-								<shadowcolor>text_shadow</shadowcolor>
-							</control>
-							<control type="label">
-								<left>100</left>
-								<top>10</top>
-								<height>90</height>
-								<right>120</right>
-								<aligny>center</aligny>
-								<font>font14</font>
-								<label>$INFO[ListItem.Label]</label>
-								<shadowcolor>text_shadow</shadowcolor>
-							</control>
-							<control type="image">
-								<right>5</right>
-								<top>25</top>
-								<width>80</width>
-								<height>70</height>
-								<aspectratio align="right">keep</aspectratio>
-								<texture>$INFO[listitem.icon]</texture>
-							</control>
-							<control type="image">
-								<right>80</right>
-								<top>40</top>
-								<width>40</width>
-								<height>40</height>
-								<texture>$VAR[PVRStatusImageVar]</texture>
-							</control>
-							<control type="label">
-								<left>30</left>
-								<top>100</top>
-								<height>40</height>
-								<right>20</right>
-								<aligny>center</aligny>
-								<font>font12</font>
-								<label>$INFO[ListItem.Title]</label>
-								<shadowcolor>text_shadow</shadowcolor>
-								<textcolor>grey</textcolor>
-							</control>
-							<control type="progress">
-								<left>30</left>
-								<top>145</top>
-								<right>20</right>
-								<height>12</height>
-								<colordiffuse>88FFFFFF</colordiffuse>
-								<visible>ListItem.HasEpg</visible>
-								<info>ListItem.Progress</info>
-							</control>
-							<control type="label">
-								<left>30</left>
-								<top>155</top>
-								<height>40</height>
-								<right>20</right>
-								<aligny>center</aligny>
-								<font>font12</font>
-								<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]:[COLOR gray] ,[/COLOR]]</label>
-								<shadowcolor>text_shadow</shadowcolor>
-								<textcolor>$VAR[MainColorVar]</textcolor>
-							</control>
+							<top>150</top>
+							<include content="InfoWallMusicLayout">
+								<param name="fallback_image" value="DefaultTVShows.png" />
+								<param name="main_label" value="[COLOR gray]$INFO[ListItem.Title][/COLOR]" />
+								<param name="sub_label" value="[COLOR gray][B]$INFO[ListItem.ChannelNumberLabel][/B][/COLOR] $INFO[ListItem.Label]" />
+								<param name="istwolabel" value="true" />
+							</include>
 						</control>
 					</itemlayout>
-					<focusedlayout height="300" width="450">
+					<focusedlayout height="400" width="300">
 						<control type="group">
 							<depth>DepthContentPopout</depth>
-							<animation effect="zoom" start="100" end="102" time="200" tween="sine" easing="inout" center="200,80">Focus</animation>
-							<animation effect="zoom" start="102" end="100" time="200" tween="sine" easing="inout" center="200,80">UnFocus</animation>
-							<control type="group">
-								<top>-2</top>
-								<control type="image">
-									<top>0</top>
-									<width>470</width>
-									<height>220</height>
-									<texture>dialogs/dialog-bg-nobo.png</texture>
-									<bordertexture border="21">overlays/shadow.png</bordertexture>
-									<bordersize>20</bordersize>
-								</control>
-								<control type="image">
-									<top>-4</top>
-									<left>-4</left>
-									<width>478</width>
-									<height>228</height>
-									<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-									<bordertexture border="21">overlays/shadow.png</bordertexture>
-									<bordersize>20</bordersize>
-									<include>Animation_FocusTextureFade</include>
-								</control>
-								<control type="label">
-									<left>20</left>
-									<top>10</top>
-									<height>90</height>
-									<width>82</width>
-									<align>center</align>
-									<aligny>center</aligny>
-									<font>font32_title</font>
-									<label>$INFO[ListItem.ChannelNumberLabel]</label>
-									<shadowcolor>text_shadow</shadowcolor>
-								</control>
-								<control type="label">
-									<left>100</left>
-									<top>10</top>
-									<height>90</height>
-									<right>120</right>
-									<aligny>center</aligny>
-									<font>font14</font>
-									<label>$INFO[ListItem.Label]</label>
-									<shadowcolor>text_shadow</shadowcolor>
-								</control>
-								<control type="image">
-									<right>5</right>
-									<top>25</top>
-									<width>80</width>
-									<height>70</height>
-									<aspectratio align="right">keep</aspectratio>
-									<texture>$INFO[listitem.icon]</texture>
-								</control>
-								<control type="image">
-									<right>80</right>
-									<top>40</top>
-									<width>40</width>
-									<height>40</height>
-									<texture>$VAR[PVRStatusImageVar]</texture>
-								</control>
-								<control type="label">
-									<left>30</left>
-									<top>100</top>
-									<height>40</height>
-									<right>20</right>
-									<aligny>center</aligny>
-									<font>font12</font>
-									<label>$INFO[ListItem.Title]</label>
-									<shadowcolor>text_shadow</shadowcolor>
-									<scroll>true</scroll>
-								</control>
-								<control type="progress">
-									<left>30</left>
-									<top>145</top>
-									<right>20</right>
-									<height>12</height>
-									<midtexture border="3">progress/texturebg_white.png</midtexture>
-									<visible>ListItem.HasEpg</visible>
-									<info>ListItem.Progress</info>
-								</control>
-								<control type="label">
-									<left>30</left>
-									<top>155</top>
-									<height>40</height>
-									<right>20</right>
-									<aligny>center</aligny>
-									<font>font12</font>
-									<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]:[COLOR white] ,[/COLOR]]</label>
-									<shadowcolor>text_shadow</shadowcolor>
-									<scroll>true</scroll>
-								</control>
-							</control>
+							<top>150</top>
+							<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,350">Focus</animation>
+							<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,350">UnFocus</animation>
+							<include content="InfoWallMusicLayout">
+								<param name="fallback_image" value="DefaultTVShows.png" />
+								<param name="main_label" value="[COLOR gray]$INFO[ListItem.Title][/COLOR]" />
+								<param name="sub_label" value="[COLOR gray][B]$INFO[ListItem.ChannelNumberLabel][/B][/COLOR] $INFO[ListItem.Label]" />
+								<param name="istwolabel" value="true" />
+								<param name="focused" value="true" />
+							</include>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="panel" id="54">
+					<left>910</left>
+					<top>0</top>
+					<right>15</right>
+					<height>100%</height>
+					<onleft>9000</onleft>
+					<onright>531</onright>
+					<onup condition="Integer.IsGreater(Container.NumPages,1)">54</onup>
+					<onup condition="!Integer.IsGreater(Container.NumPages,1)">9000</onup>
+					<ondown>54</ondown>
+					<viewtype label="31101">icon</viewtype>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>531</pagecontrol>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemlayout height="410" width="310">
+						<control type="group">
+							<top>150</top>
+							<left>40</left>
+							<include content="InfoWallMusicLayout">
+								<param name="fallback_image" value="DefaultTVShows.png" />
+								<param name="main_label" value="[COLOR gray]$INFO[ListItem.Title][/COLOR]" />
+								<param name="sub_label" value="[COLOR gray][B]$INFO[ListItem.ChannelNumberLabel][/B][/COLOR] $INFO[ListItem.Label]" />
+								<param name="istwolabel" value="true" />
+							</include>
+						</control>
+					</itemlayout>
+					<focusedlayout height="410" width="310">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
+							<animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
+							<top>150</top>
+							<left>40</left>
+							<include content="InfoWallMusicLayout">
+								<param name="fallback_image" value="DefaultTVShows.png" />
+								<param name="main_label" value="[COLOR gray]$INFO[ListItem.Title][/COLOR]" />
+								<param name="sub_label" value="[COLOR gray][B]$INFO[ListItem.ChannelNumberLabel][/B][/COLOR] $INFO[ListItem.Label]" />
+								<param name="istwolabel" value="true" />
+								<param name="focused" value="true" />
+							</include>
 						</control>
 					</focusedlayout>
 				</control>
@@ -494,68 +387,25 @@
 				<include>PVRInfoPanel</include>
 			</control>
 			<control type="group">
-				<bottom>30</bottom>
-				<height>300</height>
-				<visible>Control.IsVisible(52)</visible>
-				<control type="image">
-					<top>10</top>
-					<left>30</left>
-					<width>290</width>
-					<height>250</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<fadetime>400</fadetime>
-					<texture>$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="group">
-					<top>0</top>
-					<left>350</left>
-					<control type="label">
-						<width>70%</width>
-						<height>30</height>
-						<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
-					</control>
-					<control type="label">
-						<top>0</top>
-						<right>30</right>
-						<width>30%</width>
-						<height>30</height>
-						<align>right</align>
-						<label>$INFO[ListItem.StartTime,$LOCALIZE[555]: [COLOR grey],[/COLOR]]$INFO[ListItem.EndTime,[COLOR grey] - ,[/COLOR]]$INFO[ListItem.Duration,[COLOR white] ([/COLOR],[COLOR white])[/COLOR]]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-					</control>
-					<control type="label">
-						<top>35</top>
-						<width>60%</width>
-						<height>30</height>
-						<label>[I][COLOR grey]$VAR[SeasonEpisodeLabelVar][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white],[/COLOR]][/I]</label>
-					</control>
-					<control type="label">
-						<top>35</top>
-						<right>30</right>
-						<width>40%</width>
-						<height>30</height>
-						<align>right</align>
-						<label>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR]]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="textbox">
-					<left>350</left>
-					<top>85</top>
-					<right>30</right>
-					<height>170</height>
-					<align>justify</align>
-					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				</control>
+				<depth>DepthContentPanel</depth>
+				<include>OpenClose_Left</include>
+				<width>870</width>
+				<left>30</left>
+				<visible>Control.IsVisible(54)</visible>
+				<include content="ContentPanel">
+					<param name="left" value="-72" />
+					<param name="width" value="970" />
+					<param name="top" value="-20" />
+					<param name="flipx" value="true" />
+				</include>
+				<include>PVRInfoPanel</include>
 			</control>
 			<control type="group">
 				<right>0</right>
-				<top>140</top>
+				<top>80</top>
 				<width>60</width>
-				<height>610</height>
-				<visible>Control.IsVisible(52)</visible>
-				<control type="scrollbar" id="520">
+				<bottom>80</bottom>
+				<control type="scrollbar" id="531">
 					<right>0</right>
 					<top>0</top>
 					<bottom>0</bottom>
@@ -566,7 +416,8 @@
 					<texturesliderbackground />
 					<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-					<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(520)">conditional</animation>
+					<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(531)">conditional</animation>
+					<visible>Control.IsVisible(52) | Control.IsVisible(54)</visible>
 					<hitrect x="-20" y="0" w="80" bottom="0r" />
 				</control>
 			</control>
