@@ -985,3 +985,7 @@ msgstr "Список с Иконками"
 msgctxt "#44123"
 msgid "List without Icon"
 msgstr "Список без Иконок"
+
+msgctxt "#44124"
+msgid "After launching KODI, move the focus of the main menu to"
+msgstr "После запуска KODI, переместить фокус главного меню на пункт"
