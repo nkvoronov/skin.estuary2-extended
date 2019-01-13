@@ -12,4 +12,10 @@
 		<icon>resource://resource.images.skinicons.estuary/eject.png</icon>
 		<action>EjectTray()</action>
 	</shortcut>
+	<shortcut>
+		<label>600</label>
+		<label2>446</label2>
+		<icon>resource://resource.images.skinicons.estuary/cd.png</icon>
+		<action>RipCD</action>
+	</shortcut>
 </shortcuts>
