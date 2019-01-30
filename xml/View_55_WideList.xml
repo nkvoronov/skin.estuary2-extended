@@ -221,11 +221,12 @@
 				<left>900</left>
 				<height>30</height>
 				<right>0</right>
-				<top>23</top>
+				<top>25</top>
 				<aligny>right</aligny>
 				<aligny>center</aligny>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="flags/starrating/rating0.png">$INFO[ListItem.UserRating,flags/starrating/,.png]</texture>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
 				<left>35</left>
@@ -250,11 +251,12 @@
 				<left>900</left>
 				<height>30</height>
 				<right>0</right>
-				<top>23</top>
+				<top>25</top>
 				<aligny>right</aligny>
 				<aligny>center</aligny>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="flags/starrating/rating0.png">$INFO[ListItem.UserRating,flags/starrating/,.png]</texture>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
 				<left>35</left>
