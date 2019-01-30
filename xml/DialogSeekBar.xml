@@ -26,7 +26,7 @@
 					<top>120</top>
 					<width>264</width>
 					<height>40</height>
-					<texture>$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
+					<texture fallback="flags/starrating/rating0.png">$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
@@ -35,7 +35,7 @@
 					<width>400</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>font30</font>
+					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
 					<label>$LOCALIZE[21396]:[CR][COLOR white]$INFO[player.chapter]$INFO[player.chaptercount, / ][/COLOR]</label>
 					<visible>player.chaptercount</visible>
@@ -127,7 +127,7 @@
 					<height>50</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font30</font>
+					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134]:[CR][COLOR white],[/COLOR]]</label>
@@ -141,7 +141,7 @@
 					<height>50</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font30</font>
+					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<label>$INFO[PVR.EpgEventRemainingTime,[COLOR button_focus]$LOCALIZE[31134]:[CR][/COLOR]]</label>

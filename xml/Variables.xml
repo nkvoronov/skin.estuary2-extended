@@ -310,7 +310,7 @@
 	<variable name="NowPlayingBreadcrumbsVar">
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title,[COLOR white],[/COLOR]]</value>
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x, ][COLOR white]$INFO[VideoPlayer.Title][/COLOR]</value>
-		<value condition="Window.IsActive(fullscreenvideo)">[COLOR white]$INFO[VideoPlayer.Title][/COLOR]$INFO[VideoPlayer.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
+		<value condition="Window.IsActive(fullscreenvideo)">[COLOR white]$INFO[VideoPlayer.Title][/COLOR]$INFO[VideoPlayer.Year,[COLOR white] ([/COLOR],[COLOR white])[/COLOR]]</value>
 		<value condition="MusicPartyMode.Enabled">[COLOR white]$LOCALIZE[589][/COLOR]</value>
 		<value>[COLOR white]$LOCALIZE[31000] ...[/COLOR]</value>
 	</variable>
