@@ -28,6 +28,7 @@
 					<height>40</height>
 					<texture fallback="flags/starrating/rating0.png">$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
 					<aspectratio>keep</aspectratio>
+					<visible>Player.ShowInfo + Window.IsActive(visualisation)</visible>
 				</control>
 				<control type="label">
 					<top>110</top>
