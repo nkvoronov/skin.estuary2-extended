@@ -485,7 +485,7 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="104" />
+						<param name="id" value="102" />
 						<param name="icon" value="icons/infodialogs/image.png" />
 						<param name="label" value="$LOCALIZE[31028]" />
 						<param name="onclick_1" value="SetProperty(fanart,$ESCINFO[ListItem.Art(fanart)],home)" />
@@ -493,7 +493,7 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(animatedfanart))" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="109" />
+						<param name="id" value="110" />
 						<param name="icon" value="icons/infodialogs/image.png" />
 						<param name="label" value="$LOCALIZE[31028]" />
 						<param name="onclick_1" value="SetProperty(fanart,$ESCINFO[ListItem.Art(animatedfanart)],home)" />
@@ -501,7 +501,7 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="443" />
+						<param name="id" value="103" />
 						<param name="icon" value="icons/infodialogs/set.png" />
 						<param name="label" value="$LOCALIZE[20457]" />
 						<param name="onclick_1" value="Dialog.Close(all,true)" />
@@ -509,7 +509,7 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.SetID)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="10" />
+						<param name="id" value="104" />
 						<param name="icon" value="icons/infodialogs/choose_image.png" />
 						<param name="label" value="$LOCALIZE[13511]" />
 					</include>
@@ -542,7 +542,7 @@
 						<param name="visible" value="System.HasAddon(script.tvtunes) + IsEmpty(Window(movieinformation).Property('TvTunes_HideVideoInfoButton')) + [Container.Content(movies) | Container.Content(tvshows)]" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="6" />
+						<param name="id" value="109" />
 						<param name="icon" value="icons/infodialogs/update.png" />
 						<param name="label" value="$LOCALIZE[184]" />
 						<param name="visible" value="Control.IsEnabled(6)" />
