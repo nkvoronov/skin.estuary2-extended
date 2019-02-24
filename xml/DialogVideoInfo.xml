@@ -478,12 +478,6 @@
 						<param name="visible" value="System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="13" />
-						<param name="icon" value="icons/infodialogs/director.png" />
-						<param name="label" value="$LOCALIZE[31123]" />
-						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
-					</include>
-					<include content="InfoDialogButton">
 						<param name="id" value="102" />
 						<param name="icon" value="icons/infodialogs/image.png" />
 						<param name="label" value="$LOCALIZE[31028]" />
@@ -492,7 +486,13 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.Art(fanart))" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="103" />
+						<param name="id" value="13" />
+						<param name="icon" value="icons/infodialogs/director.png" />
+						<param name="label" value="$LOCALIZE[31123]" />
+						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
+					</include>
+					<include content="InfoDialogButton">
+						<param name="id" value="443" />
 						<param name="icon" value="icons/infodialogs/set.png" />
 						<param name="label" value="$LOCALIZE[20457]" />
 						<param name="onclick_1" value="Dialog.Close(all,true)" />
@@ -500,40 +500,40 @@
 						<param name="visible" value="!String.IsEmpty(ListItem.SetID)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="104" />
+						<param name="id" value="10" />
 						<param name="icon" value="icons/infodialogs/choose_image.png" />
 						<param name="label" value="$LOCALIZE[13511]" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="105" />
+						<param name="id" value="104" />
 						<param name="icon" value="icons/infodialogs/install.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader.ex, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + Container.Content(movies)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="106" />
+						<param name="id" value="105" />
 						<param name="icon" value="icons/infodialogs/install.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader.ex, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + Container.Content(tvshows)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="107" />
+						<param name="id" value="106" />
 						<param name="icon" value="icons/infodialogs/install.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader.ex, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + Container.Content(musicvideos)" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="108" />
+						<param name="id" value="107" />
 						<param name="icon" value="icons/infodialogs/cinema.png" />
 						<param name="label" value="$LOCALIZE[44121]" />
 						<param name="onclick_1" value="RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])" />
 						<param name="visible" value="System.HasAddon(script.tvtunes) + IsEmpty(Window(movieinformation).Property('TvTunes_HideVideoInfoButton')) + [Container.Content(movies) | Container.Content(tvshows)]" />
 					</include>
 					<include content="InfoDialogButton">
-						<param name="id" value="109" />
+						<param name="id" value="6" />
 						<param name="icon" value="icons/infodialogs/update.png" />
 						<param name="label" value="$LOCALIZE[184]" />
 						<param name="visible" value="Control.IsEnabled(6)" />
