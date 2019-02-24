@@ -69,6 +69,12 @@
 					<width>1400</width>
 					<font>Mono26</font>
 				</control>
+				<control type="label" id="13">
+					<height>47</height>
+					<width>1400</width>
+					<font>Mono26</font>
+					<visible>Control.HasFocus(94)</visible>
+				</control>
 			</control>
 			<control type="textbox" id="30">
 				<left>420</left>
