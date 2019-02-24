@@ -953,7 +953,7 @@
 				<control type="grouplist">
 					<left>35</left>
 					<description>Left side of top bar</description>
-					<width>900</width>
+					<width>1400</width>
 					<top>-7</top>
 					<height>100</height>
 					<orientation>horizontal</orientation>
