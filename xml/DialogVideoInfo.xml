@@ -529,8 +529,8 @@
 						<param name="id" value="107" />
 						<param name="icon" value="icons/infodialogs/cinema.png" />
 						<param name="label" value="$LOCALIZE[44121]" />
-						<param name="onclick_1" value="RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])" />
-						<param name="visible" value="System.HasAddon(script.tvtunes) + [Container.Content(movies) | Container.Content(tvshows)]" />
+						<param name="onclick_1" value="RunScript(script.tvtunes.ex,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])" />
+						<param name="visible" value="System.HasAddon(script.tvtunes.ex) + [Container.Content(movies) | Container.Content(tvshows)]" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="6" />
