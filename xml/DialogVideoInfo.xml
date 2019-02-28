@@ -530,7 +530,7 @@
 						<param name="icon" value="icons/infodialogs/cinema.png" />
 						<param name="label" value="$LOCALIZE[44121]" />
 						<param name="onclick_1" value="RunScript(script.tvtunes.ex,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])" />
-						<param name="visible" value="System.HasAddon(script.tvtunes.ex) + [Container.Content(movies) | Container.Content(tvshows)]" />
+						<param name="visible" value="System.HasAddon(script.tvtunes.ex) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)] + String.IsEmpty(Window(movieinformation).Property(TvTunes_HideVideoInfoButton))" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="6" />
