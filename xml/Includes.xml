@@ -2246,7 +2246,7 @@
 		<onclick>Skin.Reset(AddonSetAudio.9.Label)</onclick>
 		<onclick>Skin.Reset(AddonSetAudio.9.Name)</onclick>
 		<onclick>Skin.Reset(AddonSetAudio.9.Icon)</onclick>
-        <onclick>Skin.Reset(enable_custom_list_addons_game)</onclick>
+		<onclick>Skin.Reset(enable_custom_list_addons_game)</onclick>
 		<onclick>Skin.Reset(AddonSetGame.0.Label)</onclick>
 		<onclick>Skin.Reset(AddonSetGame.0.Name)</onclick>
 		<onclick>Skin.Reset(AddonSetGame.0.Icon)</onclick>
@@ -2276,7 +2276,7 @@
 		<onclick>Skin.Reset(AddonSetGame.8.Icon)</onclick>
 		<onclick>Skin.Reset(AddonSetGame.9.Label)</onclick>
 		<onclick>Skin.Reset(AddonSetGame.9.Name)</onclick>
-		<onclick>Skin.Reset(AddonSetGame.9.Icon)</onclick>        
+		<onclick>Skin.Reset(AddonSetGame.9.Icon)</onclick>
 		<onclick>Skin.Reset(enable_custom_list_addons_programs)</onclick>
 		<onclick>Skin.Reset(AddonSetPrograms.0.Label)</onclick>
 		<onclick>Skin.Reset(AddonSetPrograms.0.Name)</onclick>
