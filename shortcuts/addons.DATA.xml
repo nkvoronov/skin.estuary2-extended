@@ -28,7 +28,7 @@
 		<label>24041</label>
 		<label2>24001</label2>
 		<icon>DefaultAddonsZip.png</icon>
-		<action>ActivateWindow(addonbrowser,addons://install/,return)</action>
+		<action>InstallFromZip</action>
 	</shortcut>
 	<shortcut>
 		<label>137</label>
