@@ -2476,6 +2476,11 @@
 			<thumb>DefaultAddonsRepo.png</thumb>
 		</item>
 		<item>
+			<label>$LOCALIZE[24041]</label>
+			<onclick>InstallFromZip</onclick>
+			<thumb>DefaultAddonsZip.png</thumb>
+		</item>
+		<item>
 			<label>$LOCALIZE[137]</label>
 			<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
 			<thumb>DefaultAddonsSearch.png</thumb>
