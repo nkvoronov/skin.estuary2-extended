@@ -128,6 +128,13 @@
 							<aspectratio aligny="top">scale</aspectratio>
 							<texture fallback="special://skin/extras/home-images/music.jpg">$INFO[ListItem.Art(fanart)]</texture>
 						</control>
+						<control type="image">
+							<left>614</left>
+							<top>30</top>
+							<width>1130</width>
+							<height>260</height>
+							<texture>$VAR[ItemArtistBannerVar]</texture>
+						</control>
 						<control type="group">
 							<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
 							<control type="image">
@@ -443,12 +450,12 @@
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-				<include content="InfoDialogTopBarInfo" condition="String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))">
+				<include content="InfoDialogTopBarInfo" condition="String.IsEmpty(ListItem.Art(artist.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))">
 					<param name="main_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
 					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Genre][/COLOR]" />
 					<param name="id" value="33333" />
 				</include>
-				<include content="InfoDialogTopBarInfo" condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(clearlogo))">
+				<include content="InfoDialogTopBarInfo" condition="!String.IsEmpty(ListItem.Art(artist.clearlogo)) | !String.IsEmpty(ListItem.Art(clearlogo))">
 					<param name="posx" value="400" />
 					<param name="main_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
 					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Genre][/COLOR]" />
