@@ -35,6 +35,17 @@
 				</control>
 			</control>
 			<control type="group">
+				<top>30</top>
+				<left>66</left>
+				<include>OpenClose_Left</include>
+				<control type="image">
+					<width>300</width>
+					<height>140</height>
+					<texture>$VAR[ItemClearLogoVar]</texture>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+				</control>
+			</control>
+			<control type="group">
 				<include>OpenClose_Right</include>
 				<include>Visible_Right</include>
 				<left>80</left>
@@ -432,7 +443,13 @@
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-				<include content="InfoDialogTopBarInfo">
+				<include content="InfoDialogTopBarInfo" condition="String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))">
+					<param name="main_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
+					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Genre][/COLOR]" />
+					<param name="id" value="33333" />
+				</include>
+				<include content="InfoDialogTopBarInfo" condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(clearlogo))">
+					<param name="posx" value="400" />
 					<param name="main_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
 					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Genre][/COLOR]" />
 					<param name="id" value="33333" />

@@ -85,8 +85,8 @@
 					<height>140</height>
 					<texture>$VAR[ItemClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
-					</control>
 				</control>
+			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<left>620</left>
