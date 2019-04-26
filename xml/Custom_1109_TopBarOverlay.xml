@@ -23,6 +23,7 @@
 				<height>140</height>
 				<texture>$VAR[PlayerClearLogoVar]</texture>
 				<aspectratio aligny="center" align="center">keep</aspectratio>
+				<visible>!Window.IsActive(visualisation)</visible>
 			</control>
 			<control type="textbox">
 				<label>$VAR[NowPlayingBreadcrumbsVar]</label>
