@@ -49,6 +49,15 @@
 				<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 				<bordersize>4</bordersize>
 			</control>
+			<control type="image">
+				<left>33</left>
+				<top>100</top>
+				<width>500</width>
+				<height>100</height>
+				<texture>$VAR[PlayerClearLogoVar]</texture>
+				<aspectratio aligny="top" align="left">keep</aspectratio>
+				<visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !MusicPlayer.Content(livetv)</visible>
+			</control>
 			<control type="label">
 				<description>Clock label</description>
 				<right>20</right>
@@ -79,6 +88,7 @@
 						<font>font60</font>
 						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
+						<!-- <visible>String.IsEmpty(Player.Art(artist.clearlogo))</visible> -->
 					</control>
 					<control type="label">
 						<top>80</top>
