@@ -21,6 +21,7 @@
 	<include file="Includes_HomeSubMenu.xml" />
 	<include file="Includes_HomeWidgets.xml" />
 	<include file="Includes_UserWidgets.xml" />
+	<include file="Includes_Layouts.xml" />
 	<include file="View_56_ClearLogo.xml" />
 	<include file="View_57_ClearArt.xml" />
 	<include file="View_58_BigPoster.xml" />
@@ -43,6 +44,7 @@
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131) | Window.IsActive(MyPlaylist.xml)</expression>
 	<expression name="fanart_visible">Window.IsActive(skinsettings) | Window.IsActive(Custom_1100_AddonLauncher.xml)</expression>
+    <expression name="default_icon">String.IsEqual(ListItem.Icon, DefaultActor.png) | String.IsEqual(ListItem.Icon, DefaultActorSolid.png) | String.IsEqual(ListItem.Icon, DefaultAddon.png) | String.IsEqual(ListItem.Icon, DefaultAddonAlbumInfo.png) | String.IsEqual(ListItem.Icon, DefaultAddonArtistInfo.png) | String.IsEqual(ListItem.Icon, DefaultAddonAudioDecoder.png) | String.IsEqual(ListItem.Icon, DefaultAddonAudioDSP.png) | String.IsEqual(ListItem.Icon, DefaultAddonAudioEncoder.png) | String.IsEqual(ListItem.Icon, DefaultAddonContextItem.png) | String.IsEqual(ListItem.Icon, DefaultAddonFont.png) | String.IsEqual(ListItem.Icon, DefaultAddonGame.png) | String.IsEqual(ListItem.Icon, DefaultAddonHelper.png) | String.IsEqual(ListItem.Icon, DefaultAddonImageDecoder.png) | String.IsEqual(ListItem.Icon, DefaultAddonImages.png) | String.IsEqual(ListItem.Icon, DefaultAddonInfoLibrary.png) | String.IsEqual(ListItem.Icon, DefaultAddonInfoProvider.png) | String.IsEqual(ListItem.Icon, DefaultAddonInputstream.png) | String.IsEqual(ListItem.Icon, DefaultAddonLanguage.png) | String.IsEqual(ListItem.Icon, DefaultAddonLibrary.png) | String.IsEqual(ListItem.Icon, DefaultAddonLookAndFeel.png) | String.IsEqual(ListItem.Icon, DefaultAddonLyrics.png) | String.IsEqual(ListItem.Icon, DefaultAddonMovieInfo.png) | String.IsEqual(ListItem.Icon, DefaultAddonMusic.png) | String.IsEqual(ListItem.Icon, DefaultAddonMusicVideoInfo.png) | String.IsEqual(ListItem.Icon, DefaultAddonNone.png) | String.IsEqual(ListItem.Icon, DefaultAddonPeripheral.png) | String.IsEqual(ListItem.Icon, DefaultAddonPicture.png) | String.IsEqual(ListItem.Icon, DefaultAddonProgram.png) | String.IsEqual(ListItem.Icon, DefaultAddonPVRClient.png) | String.IsEqual(ListItem.Icon, DefaultAddonRepository.png) | String.IsEqual(ListItem.Icon, DefaultAddonScreensaver.png) | String.IsEqual(ListItem.Icon, DefaultAddonService.png) | String.IsEqual(ListItem.Icon, DefaultAddonsInstalled.png) | String.IsEqual(ListItem.Icon, DefaultAddonSkin.png) | String.IsEqual(ListItem.Icon, DefaultAddonsRecentlyUpdated.png) | String.IsEqual(ListItem.Icon, DefaultAddonsRepo.png) | String.IsEqual(ListItem.Icon, DefaultAddonsSearch.png) | String.IsEqual(ListItem.Icon, DefaultAddonSubtitles.png) | String.IsEqual(ListItem.Icon, DefaultAddonsUpdates.png) | String.IsEqual(ListItem.Icon, DefaultAddonsZip.png) | String.IsEqual(ListItem.Icon, DefaultAddonTvInfo.png) | String.IsEqual(ListItem.Icon, DefaultAddonUISounds.png) | String.IsEqual(ListItem.Icon, DefaultAddonVfs.png) | String.IsEqual(ListItem.Icon, DefaultAddonVideo.png) | String.IsEqual(ListItem.Icon, DefaultAddonVisualization.png) | String.IsEqual(ListItem.Icon, DefaultAddonWeather.png) | String.IsEqual(ListItem.Icon, DefaultAddonWebSkin.png) | String.IsEqual(ListItem.Icon, DefaultAddSource.png) | String.IsEqual(ListItem.Icon, DefaultAlbumCover.png) | String.IsEqual(ListItem.Icon, DefaultArtist.png) | String.IsEqual(ListItem.Icon, DefaultAudio.png) | String.IsEqual(ListItem.Icon, DefaultAudioDSP.png) | String.IsEqual(ListItem.Icon, DefaultBackBanner.png) | String.IsEqual(ListItem.Icon, DefaultBluray.png) | String.IsEqual(ListItem.Icon, DefaultCDDA.png) | String.IsEqual(ListItem.Icon, DefaultCountry.png) | String.IsEqual(ListItem.Icon, DefaultDirector.png) | String.IsEqual(ListItem.Icon, DefaultDVDEmpty.png) | String.IsEqual(ListItem.Icon, DefaultDVDFull.png) | String.IsEqual(ListItem.Icon, DefaultDVDRom.png) | String.IsEqual(ListItem.Icon, DefaultFavourites.png) | String.IsEqual(ListItem.Icon, DefaultFile.png) | String.IsEqual(ListItem.Icon, DefaultFolder.png) | String.IsEqual(ListItem.Icon, DefaultFolderBack.png) | String.IsEqual(ListItem.Icon, DefaultFolderBackPoster.png) | String.IsEqual(ListItem.Icon, DefaultFolderBackSquare.png) | String.IsEqual(ListItem.Icon, DefaultFolderSquare.png) | String.IsEqual(ListItem.Icon, DefaultGenre.png) | String.IsEqual(ListItem.Icon, DefaultHardDisk.png) | String.IsEqual(ListItem.Icon, DefaultInProgressShows.png) | String.IsEqual(ListItem.Icon, DefaultMovies.png) | String.IsEqual(ListItem.Icon, DefaultMovieTitle.png) | String.IsEqual(ListItem.Icon, DefaultMusicAlbums.png) | String.IsEqual(ListItem.Icon, DefaultMusicArtists.png) | String.IsEqual(ListItem.Icon, DefaultMusicCompilations.png) | String.IsEqual(ListItem.Icon, DefaultMusicGenres.png) | String.IsEqual(ListItem.Icon, DefaultMusicPlaylists.png) | String.IsEqual(ListItem.Icon, DefaultMusicRecentlyAdded.png) | String.IsEqual(ListItem.Icon, DefaultMusicRecentlyPlayed.png) | String.IsEqual(ListItem.Icon, DefaultMusicRoles.png) | String.IsEqual(ListItem.Icon, DefaultMusicSearch.png) | String.IsEqual(ListItem.Icon, DefaultMusicSongs.png) | String.IsEqual(ListItem.Icon, DefaultMusicSources.png) | String.IsEqual(ListItem.Icon, DefaultMusicTop100.png) | String.IsEqual(ListItem.Icon, DefaultMusicTop100Albums.png) | String.IsEqual(ListItem.Icon, DefaultMusicTop100Songs.png) | String.IsEqual(ListItem.Icon, DefaultMusicVideos.png) | String.IsEqual(ListItem.Icon, DefaultMusicVideoTitle.png) | String.IsEqual(ListItem.Icon, DefaultMusicYears.png) | String.IsEqual(ListItem.Icon, DefaultNetwork.png) | String.IsEqual(ListItem.Icon, DefaultNoPreview.png) | String.IsEqual(ListItem.Icon, DefaultPartyMode.png) | String.IsEqual(ListItem.Icon, DefaultPicture.png) | String.IsEqual(ListItem.Icon, DefaultPlaylist.png) | String.IsEqual(ListItem.Icon, DefaultProgram.png) | String.IsEqual(ListItem.Icon, DefaultRecentlyAddedEpisodes.png) | String.IsEqual(ListItem.Icon, DefaultRecentlyAddedMovies.png) | String.IsEqual(ListItem.Icon, DefaultRecentlyAddedMusicVideos.png) | String.IsEqual(ListItem.Icon, DefaultRemovableDisk.png) | String.IsEqual(ListItem.Icon, DefaultScript.png) | String.IsEqual(ListItem.Icon, DefaultSets.png) | String.IsEqual(ListItem.Icon, DefaultStudios.png) | String.IsEqual(ListItem.Icon, DefaultTags.png) | String.IsEqual(ListItem.Icon, DefaultTVShows.png) | String.IsEqual(ListItem.Icon, DefaultTVShowTitle.png) | String.IsEqual(ListItem.Icon, DefaultUser.png) | String.IsEqual(ListItem.Icon, DefaultVCD.png) | String.IsEqual(ListItem.Icon, DefaultVideo.png) | String.IsEqual(ListItem.Icon, DefaultVideoCover.png) | String.IsEqual(ListItem.Icon, DefaultVideoDeleted.png) | String.IsEqual(ListItem.Icon, DefaultVideoPlaylists.png) | String.IsEqual(ListItem.Icon, DefaultYear.png)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -101,8 +103,8 @@
 		<height>1</height>
 		<texturefocus />
 		<texturenofocus />
-		<label></label>
-		<font></font>
+		<label />
+		<font />
 	</include>
 	<include name="RatingCircle">
 		<param name="animation">False</param>
@@ -126,7 +128,7 @@
 			<width>44</width>
 			<height>44</height>
 			<aspectratio>keep</aspectratio>
-			<texture colordiffuse="button_focus">overlays/badge.png</texture>
+			<texture colordiffuse="$VAR[MainColorVar]">overlays/badge.png</texture>
 		</control>
 		<control type="label">
 			<left>3</left>
@@ -140,7 +142,7 @@
 		</control>
 	</include>
 	<include name="InfoList">
-		<param name="item_label">$INFO[ListItem.Year,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</param>
+		<param name="item_label">$VAR[ListItemYearLabel2Var][COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Label][/COLOR]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
 		<param name="item_height">40</param>
 		<param name="bottom">100</param>
@@ -165,8 +167,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
 				</focusedlayout>
@@ -177,8 +178,7 @@
 						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
 				</itemlayout>
@@ -213,7 +213,7 @@
 		<param name="align">left</param>
 		<param name="height">70</param>
 		<param name="font">font13</param>
-		<param name="fontcolor">grey</param>
+		<param name="fontcolor">$VAR[GreyColorVar]</param>
 		<definition>
 			<itemlayout width="$PARAM[width]" height="$PARAM[height]">
 				<control type="label">
@@ -288,7 +288,7 @@
 				<left>0</left>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="white">$PARAM[icon]</texture>
+				<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</texture>
 			</control>
 			<control type="label">
 				<left>50</left>
@@ -304,14 +304,23 @@
 		<param name="width">115</param>
 		<param name="height">60</param>
 		<param name="visible">true</param>
+        <param name="colordef">true</param>
 		<definition>
 			<control type="image">
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<fadetime>0</fadetime>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture  colordiffuse="$VAR[ImageColorVar]">$PARAM[texture]</texture>
+				<visible>$PARAM[visible] + $PARAM[colordef]</visible>
+			</control>
+			<control type="image">
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<fadetime>0</fadetime>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture>$PARAM[texture]</texture>
-				<visible>$PARAM[visible]</visible>
+				<visible>$PARAM[visible] + !$PARAM[colordef]</visible>
 			</control>
 		</definition>
 	</include>
@@ -335,9 +344,11 @@
 					<visible>String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow)</visible>
 					<include content="MediaFlag" condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">
 						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.Studio,resource://resource.images.studios.white/,.png]" />
+                        <param name="colordef" value="false" />
 					</include>
 					<include content="MediaFlag" condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">
 						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.Studio,resource://resource.images.studios.coloured/,.png]" />
+                        <param name="colordef" value="false" />
 					</include>
 				</control>
 				<control type="group">
@@ -476,7 +487,7 @@
 				<left>50</left>
 				<width>60</width>
 				<height>60</height>
-				<texture colordiffuse="D0FFFFFF">$PARAM[texture]</texture>
+				<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[texture]</texture>
 			</control>
 			<control type="textbox">
 				<top>68</top>
@@ -559,8 +570,20 @@
 						<width>32</width>
 						<bottom>0</bottom>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture>$VAR[ListWatchedIconVar]</texture>
+                        <animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
+						<texture colordiffuse="$VAR[ImageColorVar]">$VAR[ListWatchedIconVar]</texture>
 					</control>
+                    <control type="image">
+						<left>15</left>
+						<top>0</top>
+						<width>32</width>
+						<bottom>0</bottom>
+                        <aspectratio aligny="center">keep</aspectratio>
+						<texture colordiffuse="$VAR[MainColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
+						<animation effect="fade" time="150">VisibleChange</animation>
+						<visible>!Control.HasFocus($PARAM[list_id])</visible>
+					</control>                    
 					<control type="label">
 						<left>65</left>
 						<top>0</top>
@@ -569,7 +592,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -580,7 +603,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height">
@@ -590,7 +613,7 @@
 						<width>32</width>
 						<bottom>0</bottom>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture>$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[GreyColorVar]">$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>65</left>
@@ -599,7 +622,7 @@
 						<right>20</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>0</left>
@@ -610,8 +633,8 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<textcolor>$VAR[GreyColorVar]</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 			</control>
@@ -642,7 +665,7 @@
 						<itemlayout height="401" width="320">
 							<control type="group">
 								<top>150</top>
-								<include content="InfoWallMusicLayout">
+								<include content="SquareLayout">
 									<param name="fallback_image" value="DefaultAddon.png" />
 								</include>
 							</control>
@@ -652,7 +675,7 @@
 								<top>150</top>
 								<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="150,320">Focus</animation>
 								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="150,320">UnFocus</animation>
-								<include content="InfoWallMusicLayout">
+								<include content="SquareLayout">
 									<param name="fallback_image" value="DefaultAddon.png" />
 									<param name="focused" value="true" />
 								</include>
@@ -703,7 +726,7 @@
 					<width>1400</width>
 					<label>$PARAM[main_label]</label>
 					<font>font30_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<height>35</height>
 					<scroll>true</scroll>
 					<animation effect="slide" start="0,0" end="0,15" time="0" condition="String.IsEmpty(Control.GetLabel($PARAM[id]))">Conditional</animation>
@@ -712,7 +735,7 @@
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
 					<left>85</left>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<height>100</height>
 					<width>1400</width>
 				</control>
@@ -737,8 +760,7 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font52_title</font>
-					<textcolor>$VAR[MainColorVar]</textcolor>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>center</align>
 					<scroll>true</scroll>
@@ -747,8 +769,7 @@
 				<control type="label" id="$PARAM[id]">
 					<label>$PARAM[sub_label]</label>
 					<left>85</left>
-					<textcolor>$VAR[MainColorVar]</textcolor>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<align>center</align>
 					<height>100</height>
 					<width>100%</width>
@@ -877,7 +898,7 @@
 				<top>0</top>
 				<right>0</right>
 				<bottom>0</bottom>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -894,7 +915,7 @@
 				<font>font32_title</font>
 				<label>$PARAM[header_label]</label>
 				<aligny>center</aligny>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			</control>
 			<control type="button" id="22002">
 				<description>button overlay to avoid closing in dialog area</description>
@@ -916,10 +937,10 @@
 				<texturefocus />
 				<texturenofocus />
 				<label></label>
-				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
-				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">dialogs/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="$VAR[ImageColorVar]">icons/logo.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">dialogs/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="$VAR[ImageColorVar]">icons/logo.png</textureradioonnofocus>
 				<onclick>Action(close)</onclick>
 				<visible>!Skin.HasSetting(touchmode)</visible>
 			</control>
@@ -1008,7 +1029,7 @@
 					<top>50</top>
 					<label>$PARAM[sublabel]</label>
 					<left>35</left>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<height>100</height>
 					<width>900</width>
 					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
@@ -1048,7 +1069,7 @@
 							<control type="label">
 								<label>$INFO[Player.Title]</label>
 								<font>font27</font>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 								<height>35</height>
 								<width min="1" max="602">auto</width>
 							</control>
@@ -1058,8 +1079,8 @@
 							<left>-45</left>
 							<top>44</top>
 							<font>font12</font>
-							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							<height>25</height>
 							<width>630</width>
 							<align>right</align>
@@ -1082,7 +1103,7 @@
 							<font>font45</font>
 							<align>right</align>
 							<left>-630</left>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							<aligny>center</aligny>
 							<height>110</height>
 							<width max="600">auto</width>
@@ -1092,7 +1113,7 @@
 					</control>
 					<control type="label">
 						<font>font_clock</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<height>200</height>
 						<width>auto</width>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
@@ -1139,7 +1160,7 @@
 						<height>50</height>
 						<fadetime>300</fadetime>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<texture>$INFO[Weather.FanartCode,weather/small/,.png]</texture>
+						<texture colordiffuse="$VAR[ImageColorVar]">$INFO[Weather.FanartCode,weather/small/,.png]</texture>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
@@ -1174,7 +1195,7 @@
 	</include>
 	<include name="BreadcrumbsLabel">
 		<font>font45</font>
-		<shadowcolor>text_shadow</shadowcolor>
+		<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 		<top>7</top>
 		<height>100</height>
 		<width>auto</width>
@@ -1327,7 +1348,7 @@
 						<height>36</height>
 						<animation effect="rotate" end="-90" center="auto" time="200" reversible="true" condition="Control.IsVisible(51) | Control.IsVisible(53)">Conditional</animation>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">frame/menu-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="FFCCCCCC">frame/menu-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[ImageColorVar]">frame/menu-nofo.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<onclick>SetFocus(9000)</onclick>
 						<visible>!Control.IsVisible(6160)</visible>
@@ -1338,7 +1359,7 @@
 						<width>36</width>
 						<height>36</height>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">icons/menu.png</texturefocus>
-						<texturenofocus colordiffuse="FFCCCCCC">icons/menu.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[ImageColorVar]">icons/menu.png</texturenofocus>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<onclick>SetFocus(9000)</onclick>
 						<visible>Window.IsActive(MyPVRGuide.xml)</visible>
@@ -1348,7 +1369,7 @@
 						<left>64</left>
 						<width>300</width>
 						<height>44</height>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<label>$LOCALIZE[33063]</label>
 						<onclick>SetFocus(9000)</onclick>
 						<texturefocus />
@@ -1376,7 +1397,7 @@
 					<height>48</height>
 					<aligny>center</aligny>
 					<align>right</align>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<label>$INFO[Container($PARAM[right_container_id]).CurrentItem,, / ]$INFO[Container($PARAM[right_container_id]).NumItems]</label>
 				</control>
 				<control type="image">
@@ -1404,7 +1425,7 @@
 					<height>48</height>
 					<aligny>center</aligny>
 					<align>right</align>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<label>$INFO[Container($PARAM[left_container_id]).CurrentItem,, / ]$INFO[Container($PARAM[left_container_id]).NumItems]</label>
 				</control>
 			</control>
@@ -1542,7 +1563,7 @@
 					<top>34</top>
 					<width>52</width>
 					<height>52</height>
-					<texture colordiffuse="grey">$VAR[VolumeIconVar]</texture>
+					<texture colordiffuse="$VAR[GreyColorVar]">$VAR[VolumeIconVar]</texture>
 				</control>
 			</control>
 			<include content="IconButton">
@@ -1564,15 +1585,15 @@
 			<onclick>Action(Back)</onclick>
 			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(home)">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(home)">WindowClose</animation>
-			<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 			<texturenofocus />
 			<radioposx>30</radioposx>
 			<radiowidth>60</radiowidth>
 			<radioheight>60</radioheight>
 			<textureradioonfocus>icons/back.png</textureradioonfocus>
-			<textureradioonnofocus colordiffuse="grey">icons/back.png</textureradioonnofocus>
+			<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/back.png</textureradioonnofocus>
 			<textureradioofffocus>icons/back.png</textureradioofffocus>
-			<textureradiooffnofocus colordiffuse="grey">icons/back.png</textureradiooffnofocus>
+			<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/back.png</textureradiooffnofocus>
 		</control>
 	</include>
 	<include name="SettingsPanel">
@@ -1590,7 +1611,7 @@
 				<top>30</top>
 				<width>240</width>
 				<height>160</height>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
 				<align>center</align>
 				<aspectratio>scale</aspectratio>
 			</control>
@@ -1624,7 +1645,7 @@
 					<left>-5</left>
 					<width>410</width>
 					<height>270</height>
-					<texture colordiffuse="button_focus">colors/grey.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
 					<bordersize>20</bordersize>
 					<include>Animation_FocusTextureFade</include>
 				</control>
@@ -1633,7 +1654,7 @@
 					<top>30</top>
 					<width>240</width>
 					<height>160</height>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 				</control>
@@ -1647,6 +1668,84 @@
 				</control>
 			</control>
 		</focusedlayout>
+	</include>
+	<include name="ColorSkinSetting">
+		<definition>
+			<control type="button" id="$PARAM[control_id1]">
+				<description>Color Value</description>
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=$PARAM[property])</onclick>
+			</control>
+			<control type="button" id="$PARAM[control_id2]">
+				<description>Reset Color</description>
+				<include>DefaultSettingButton</include>
+				<label>- $LOCALIZE[13007]</label>
+				<onclick>Skin.Reset($PARAM[property])</onclick>
+                <visible>!String.IsEmpty(Skin.String($PARAM[property]))</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="SetSkinSetting">
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Set Skin Setting</description>
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=$PARAM[property],header=$PARAM[header])</onclick>
+			</control>
+		</definition>
+	</include>
+	<include name="SelectBackground">
+		<param name="enable">true</param>
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Select Background</description>
+				<include>DefaultSettingButton</include>
+				<label>- $PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick>SetProperty(setbackgrounds,$PARAM[property],home)</onclick>
+				<onclick>ActivateWindow(1202)</onclick>
+				<enable>$PARAM[enable]</enable>
+			</control>
+		</definition>
+	</include>
+	<include name="ResetSkinSettingsParams">
+		<definition>
+			<control type="image" id="$PARAM[control_id1]">
+				<description>Separator Image</description>
+				<height>3</height>
+				<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="button" id="$PARAM[control_id2]">
+				<description>Reset Section</description>
+				<include>DefaultSettingButton</include>
+				<label>$LOCALIZE[10041]</label>
+				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=$PARAM[action])</onclick>
+			</control>
+		</definition>
+	</include>
+	<include name="ResourceSelect">
+		<param name="enable">true</param>
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Resource Select</description>
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+				<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=$PARAM[property]&amp;type=$PARAM[type])</onclick>
+				<!-- Alternative ????
+				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=$PARAM[property],addontype=$PARAM[type])</onclick> -->
+				<enable>$PARAM[enable]</enable>
+			</control>
+		</definition>
 	</include>
 	<include name="DialogSelectValue">
 		<definition>
@@ -1685,7 +1784,7 @@
 							<top>7</top>
 							<width>110</width>
 							<height>110</height>
-							<texture>$INFO[Listitem.Icon]</texture>
+							<texture colordiffuse="$VAR[ImageColorVar]">$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
@@ -1703,7 +1802,7 @@
 							<right>20</right>
 							<height>65</height>
 							<font>font12</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
@@ -1721,7 +1820,7 @@
 							<top>7</top>
 							<width>110</width>
 							<height>110</height>
-							<texture>$INFO[Listitem.Icon]</texture>
+							<texture colordiffuse="$VAR[ImageColorVar]">$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
@@ -1764,7 +1863,7 @@
 					<font>font12</font>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[GreyColorVar]</textcolor>
 					<label>$VAR[SelectLabelVar]</label>
 				</control>
 				<control type="grouplist" id="9001">

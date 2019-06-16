@@ -12,70 +12,62 @@
 			<width>1920</width>
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
 			<control type="group">
+                <depth>DepthContentPopout</depth>
 				<top>150</top>
 				<left>66</left>
 				<include>OpenClose_Left</include>
-				<control type="image">
-					<top>-16</top>
-					<left>-16</left>
-					<width>566</width>
-					<height>841</height>
-					<texture>colors/black.png</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-				</control>
-				<control type="image">
-					<depth>DepthContentPopout</depth>
-					<left>4</left>
-					<top>4</top>
-					<width>526</width>
-					<height>801</height>
-					<aspectratio>scale</aspectratio>
-					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
-				</control>
+                <include content="PosterLayout">
+					<param name="top" value="-20" />
+					<param name="left" value="-20" />					
+					<param name="width" value="572" />
+					<param name="height" value="848" />
+                    <param name="watched" value="false" />
+                    <param name="rating" value="false" />
+                    <param name="progress" value="false" />
+				</include>             
 				<control type="group">
 					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
 					<visible>!String.IsEmpty(ListItem.Thumb) + !String.IsEqual(ListItem.Thumb,ListItem.Art(poster))</visible>
 					<control type="image">
 						<left>4</left>
 						<top>4</top>
-						<width>526</width>
-						<height>801</height>
+						<width>524</width>
+						<height>800</height>
 						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="AAFFFFFF" fallback="DefaultVideo.png">colors/black.png</texture>
+						<texture colordiffuse="bg_videoinfo" fallback="DefaultVideo.png">colors/black.png</texture>
 					</control>
 					<control type="image">
-						<left>14</left>
+						<left>4</left>
 						<top>4</top>
-						<width>506</width>
-						<height>801</height>
+						<width>524</width>
+						<height>800</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Thumb]</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 				</control>
-			</control>
-			<control type="group">
-				<top>154</top>
-				<left>70</left>
-				<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
-				<include>OpenClose_Left</include>
-				<control type="image">
-					<width>526</width>
-					<height>801</height>
-					<aspectratio>stretch</aspectratio>
-					<texture colordiffuse="FF555555">DefaultVideo.png</texture>
-				</control>
-				<control type="image">
-					<left>10</left>
-					<width>506</width>
-					<height>801</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Thumb]</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-				</control>
+                <control type="group">
+                    <visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
+                    <control type="image">
+                        <left>4</left>
+                        <top>4</top>
+                        <width>524</width>
+                        <height>800</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture fallback="DefaultVideo.png">colors/black.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>4</left>
+                        <top>4</top>
+                        <width>524</width>
+                        <height>800</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Art(poster)]</texture>
+                        <bordertexture border="21">overlays/shadow.png</bordertexture>
+                        <bordersize>20</bordersize>
+                    </control>
+                </control>                
 			</control>
 			<control type="group">
 				<top>0</top>
@@ -84,8 +76,9 @@
 				<control type="image">
 					<width>300</width>
 					<height>140</height>
-					<texture>$VAR[ItemClearLogoVar]</texture>
+					<texture>$VAR[ListItemClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
+                    <visible>!Skin.HasSetting(hide_logo_info)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -286,7 +279,7 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture>DefaultActorSolid.png</texture>
+								<texture colordiffuse="$VAR[ImageColorVar]">DefaultActorSolid.png</texture>
 								<aspectratio aligny="center">scale</aspectratio>
 								<bordertexture border="21">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
@@ -325,7 +318,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font12</font>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
 								<label>$INFO[ListItem.Label2]</label>
 							</control>
 						</control>
@@ -338,7 +331,7 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture>DefaultActorSolid.png</texture>
+								<texture colordiffuse="$VAR[ImageColorVar]">DefaultActorSolid.png</texture>
 								<aspectratio aligny="center">scale</aspectratio>
 								<bordertexture border="21">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
@@ -378,7 +371,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font12</font>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
 								<scroll>true</scroll>
 								<label>$INFO[ListItem.Label2]</label>
 							</control>
@@ -462,7 +455,7 @@
 							<align>center</align>
 						</control>
 						<control type="image">
-							<texture>icons/infodialogs/rating.png</texture>
+							<texture colordiffuse="$VAR[ImageColorVar]">icons/infodialogs/rating.png</texture>
 							<left>107</left>
 							<top>30</top>
 							<width>48</width>
@@ -570,8 +563,8 @@
 				<width>1400</width>
 				<height>44</height>
 				<font>font20_title</font>
-				<textcolor>99FFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<textcolor>videoinfopatch</textcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 				<haspath>true</haspath>
 				<label>$VAR[VideoInfoBottomLabelVar]</label>
 				<visible>Control.HasFocus(6)</visible>
@@ -580,11 +573,11 @@
 				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 			</control>
-			<include content="InfoDialogTopBarInfo" condition="String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))">
+			<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(hide_logo_info)">
 				<param name="main_label" value="$VAR[VideoInfoMainLabelVar]" />
 				<param name="sub_label" value="$VAR[VideoInfoSubLabelVar]" />
 			</include>
-			<include content="InfoDialogTopBarInfo" condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(clearlogo))">
+			<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hide_logo_info)">
 				<param name="posx" value="400" />
 				<param name="main_label" value="$VAR[VideoInfoMainLabelVar]" />
 				<param name="sub_label" value="$VAR[VideoInfoSubLabelVar]" />
@@ -609,13 +602,13 @@
 					<width>36</width>
 					<height>36</height>
 					<animation effect="rotate" end="-90" center="36,19" time="0" condition="true">Conditional</animation>
-					<texture colordiffuse="grey">frame/menu-nofo.png</texture>
+					<texture colordiffuse="$VAR[GreyColorVar]">frame/menu-nofo.png</texture>
 				</control>
 				<control type="label">
 					<left>74</left>
 					<width>500</width>
 					<height>44</height>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<label>$LOCALIZE[31125]</label>
 				</control>
 			</control>
@@ -629,13 +622,13 @@
 					<left>17</left>
 					<width>36</width>
 					<height>36</height>
-					<texture colordiffuse="grey">lists/played-total.png</texture>
+					<texture colordiffuse="$VAR[GreyColorVar]">lists/played-total.png</texture>
 				</control>
 				<control type="label">
 					<left>74</left>
 					<width>800</width>
 					<height>44</height>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<label>$LOCALIZE[31126]</label>
 				</control>
 			</control>

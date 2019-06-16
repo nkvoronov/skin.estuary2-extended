@@ -615,8 +615,8 @@ msgid "Path:"
 msgstr "Путь:"
 
 msgctxt "#43005"
-msgid "Duration"
-msgstr "Длительность"
+msgid "Duration, s"
+msgstr "Длительность, сек"
 
 msgctxt "#43006"
 msgid "Enable Smart Shortcuts Playlists"
@@ -951,8 +951,8 @@ msgid "Enable Wall Backgrounds"
 msgstr "Разрешить стену фонов"
 
 msgctxt "#44115"
-msgid "Random Fanart Delay"
-msgstr "Длительность показа для случайных фонов"
+msgid "Random Fanart Delay, s"
+msgstr "Длительность показа для случайных фонов, сек"
 
 msgctxt "#44116"
 msgid "Enable Animated Fanarts"
@@ -989,3 +989,83 @@ msgstr "Список без Иконок"
 msgctxt "#44124"
 msgid "After launching KODI, move the focus of the main menu to"
 msgstr "После запуска KODI, переместить фокус главного меню на пункт"
+
+msgctxt "#44125"
+msgid "Addons options"
+msgstr "Параметры дополнений"
+
+msgctxt "#44126"
+msgid "Show Info At Playback Start, s"
+msgstr "Показать информацию при запуске воспроизведения, сек"
+
+msgctxt "#44127"
+msgid "Auto Close Video OSD, s"
+msgstr "Авто закрытие OSD видео, сек"
+
+msgctxt "#44128"
+msgid "Auto Close Music OSD, s"
+msgstr "Авто закрытие OSD музыки, сек"
+
+msgctxt "#44129"
+msgid "Enable Extra Posters"
+msgstr "Разрешить дополнительные постеры"
+
+msgctxt "#44130"
+msgid "Enable Extra Fanarts"
+msgstr "Разрешить дополнительные фоны"
+
+msgctxt "#44131"
+msgid "Enable PVR Thumbs"
+msgstr "Разрешить PVR иллюстрации"
+
+msgctxt "#44132"
+msgid "Enable Music Art"
+msgstr "Разрешить музыкальные иллюстрации"
+
+msgctxt "#44133"
+msgid "Enable Extended Art"
+msgstr "Разрешить дополнительные иллюстрации"
+
+msgctxt "#44134"
+msgid "Configure Artworks"
+msgstr "Настроить иллюстации"
+
+msgctxt "#44135"
+msgid "Configure Backgrounds"
+msgstr "Настроить фоны"
+
+msgctxt "#44136"
+msgid "Configure Widgets"
+msgstr "Настроить виджеты"
+
+msgctxt "#44137"
+msgid "Configure Backup"
+msgstr "Настроить резервное копирование"
+
+msgctxt "#44138"
+msgid "ClearLogo"
+msgstr "Логотип"
+
+msgctxt "#44139"
+msgid "Show In Main Menu"
+msgstr "Показывать в главном меню"
+
+msgctxt "#44140"
+msgid "Show In Video Library"
+msgstr "Показывать в видео библиотеке"
+
+msgctxt "#44141"
+msgid "Show In Global Search"
+msgstr "Показывать в поиске"
+
+msgctxt "#44142"
+msgid "Show In Play Window"
+msgstr "Показывать в окне воспроизведения"
+
+msgctxt "#44143"
+msgid "Show In Info Window"
+msgstr "Показывать в окне сведений"
+
+msgctxt "#44144"
+msgid "Additional colors"
+msgstr "Дополнительные цвета"

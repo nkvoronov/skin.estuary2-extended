@@ -33,8 +33,19 @@
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture>$VAR[ListWatchedIconVar]</texture>
+                        <animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
+						<texture colordiffuse="$VAR[ImageColorVar]">$VAR[ListWatchedIconVar]</texture>
 					</control>
+					<control type="image">
+						<left>35</left>
+						<centertop>50%</centertop>
+						<width>32</width>
+						<height>32</height>
+						<texture colordiffuse="$VAR[MainColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
+						<animation effect="fade" time="150">VisibleChange</animation>
+						<visible>!Control.HasFocus(55)</visible>
+					</control>                    
 					<control type="label">
 						<left>105</left>
 						<top>0</top>
@@ -43,7 +54,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -53,7 +64,8 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(games)">
@@ -62,7 +74,7 @@
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[GreyColorVar]">$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -71,7 +83,7 @@
 						<right>40</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -81,7 +93,8 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="list_item_height" condition="!Container.Content(songs) + !Container.Content(addons) + !Container.Content(playlists) + !Container.Content() + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(musicvideos) + !Container.Content(videos)">
@@ -97,8 +110,19 @@
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture>$VAR[ListWatchedIconVar]</texture>
+                        <animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
+						<texture colordiffuse="$VAR[ImageColorVar]">$VAR[ListWatchedIconVar]</texture>
 					</control>
+					<control type="image">
+						<left>35</left>
+						<centertop>50%</centertop>
+						<width>32</width>
+						<height>32</height>
+						<texture colordiffuse="$VAR[MainColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
+						<animation effect="fade" time="150">VisibleChange</animation>
+						<visible>!Control.HasFocus(55)</visible>
+					</control>             
 					<control type="label">
 						<left>105</left>
 						<top>0</top>
@@ -107,7 +131,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -117,7 +141,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="!Container.Content(songs) + !Container.Content(addons) + !Container.Content(playlists) + !Container.Content() + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(musicvideos) + !Container.Content(videos)">
@@ -126,7 +150,7 @@
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[GreyColorVar]">$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -135,7 +159,7 @@
 						<right>40</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -145,7 +169,8 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="list_item_height" condition="Container.Content(playlists) | Container.Content()">
@@ -162,8 +187,19 @@
 						<width>60</width>
 						<bottom>10</bottom>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
 					</control>
+					<control type="image">
+						<left>20</left>
+						<top>10</top>
+						<width>60</width>
+						<bottom>10</bottom>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Icon]</texture>
+						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
+						<animation effect="fade" time="150">VisibleChange</animation>
+						<visible>!Control.HasFocus(55)</visible>
+					</control>                    
 					<control type="label">
 						<left>105</left>
 						<top>0</top>
@@ -172,7 +208,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(playlists) | Container.Content()">
@@ -182,7 +218,7 @@
 						<width>60</width>
 						<bottom>10</bottom>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="grey">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$VAR[GreyColorVar]">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>105</left>
@@ -191,7 +227,7 @@
 						<right>100</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 				<include condition="Window.IsActive(music)">SongsListLayout</include>
@@ -215,7 +251,7 @@
 				<aligny>center</aligny>
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.Label]</label>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 			</control>
 			<control type="image">
 				<left>900</left>
@@ -225,7 +261,7 @@
 				<aligny>right</aligny>
 				<aligny>center</aligny>
 				<aspectratio>keep</aspectratio>
-				<texture fallback="flags/starrating/rating0.png">$INFO[ListItem.UserRating,flags/starrating/,.png]</texture>
+				<texture colordiffuse="$VAR[ImageColorVar]" fallback="flags/starrating/rating0.png">$INFO[ListItem.UserRating,flags/starrating/,.png]</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
@@ -235,7 +271,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label2]</label>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 			</control>
 		</focusedlayout>
 		<itemlayout height="80" condition="Container.Content(songs)">
@@ -245,7 +281,7 @@
 				<right>40</right>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 			</control>
 			<control type="image">
 				<left>900</left>
@@ -255,7 +291,7 @@
 				<aligny>right</aligny>
 				<aligny>center</aligny>
 				<aspectratio>keep</aspectratio>
-				<texture fallback="flags/starrating/rating0.png">$INFO[ListItem.UserRating,flags/starrating/,.png]</texture>
+				<texture colordiffuse="$VAR[ImageColorVar]" fallback="flags/starrating/rating0.png">$INFO[ListItem.UserRating,flags/starrating/,.png]</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
@@ -265,8 +301,8 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label2]</label>
-				<textcolor>grey</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 			</control>
 		</itemlayout>
 	</include>
@@ -284,7 +320,17 @@
 				<top>25</top>
 				<width>32</width>
 				<height>32</height>
-				<texture>$VAR[AddonsListIconVar]</texture>
+				<texture colordiffuse="$VAR[ImageColorVar]">$VAR[AddonsListIconVar]</texture>
+			</control>
+            <control type="image">
+				<left>20</left>
+				<top>25</top>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="$VAR[MainColorVar]">$VAR[AddonsListIconVar]</texture>
+                <animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
+                <animation effect="fade" time="150">VisibleChange</animation>
+                <visible>!Control.HasFocus(55)</visible>
 			</control>
 			<control type="label">
 				<left>75</left>
@@ -302,6 +348,7 @@
 				<aligny>center</aligny>
 				<font>font27</font>
 				<label>$VAR[AddonsLabel2Var]</label>
+                <shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 			</control>
 		</focusedlayout>
 		<itemlayout height="80" condition="Container.Content(addons)">
@@ -310,7 +357,7 @@
 				<top>25</top>
 				<width>32</width>
 				<height>32</height>
-				<texture>$VAR[AddonsListIconVar]</texture>
+				<texture colordiffuse="$VAR[GreyColorVar]">$VAR[AddonsListIconVar]</texture>
 			</control>
 			<control type="label">
 				<left>75</left>
@@ -328,8 +375,8 @@
 				<aligny>center</aligny>
 				<font>font27</font>
 				<label>$VAR[AddonsLabel2Var]</label>
-				<textcolor>grey</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 			</control>
 		</itemlayout>
 	</include>

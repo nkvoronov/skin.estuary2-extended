@@ -70,7 +70,7 @@
 						<right>20</right>
 						<height>65</height>
 						<font>font12</font>
-						<textcolor>grey</textcolor>
+						<textcolor>$VAR[GreyColorVar]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
@@ -128,7 +128,7 @@
 				<height>35</height>
 				<font>font12</font>
 				<align>right</align>
-				<textcolor>grey</textcolor>
+				<textcolor>$VAR[GreyColorVar]</textcolor>
 				<label>$VAR[SelectLabelVar]</label>
 			</control>
 			<control type="grouplist" id="9001">
@@ -166,7 +166,7 @@
 			<control type="image">
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-				<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="bg_desc">dialogs/dialog-bg-nobo.png</texture>
 			</control>
 			<control type="panel" id="11">
 				<top>30</top>
@@ -196,9 +196,9 @@
 							<top>250</top>
 							<width>444</width>
 							<height>80</height>
-							<label>$INFO[ListItem.Label][CR][COLOR grey]$INFO[ListItem.Label2][/COLOR]</label>
+							<label>$INFO[ListItem.Label][CR][COLOR $VAR[GreyColorVar]]$INFO[ListItem.Label2][/COLOR]</label>
 							<font>font37</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 					</control>
@@ -227,9 +227,9 @@
 							<top>250</top>
 							<width>444</width>
 							<height>80</height>
-							<label>$INFO[ListItem.Label][CR][COLOR grey]$INFO[ListItem.Label2][/COLOR]</label>
+							<label>$INFO[ListItem.Label][CR][COLOR $VAR[GreyColorVar]]$INFO[ListItem.Label2][/COLOR]</label>
 							<font>font37</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 						<control type="image">
@@ -249,7 +249,7 @@
 				<height>200</height>
 				<font>font37</font>
 				<align>justify</align>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 		</control>
@@ -272,7 +272,7 @@
 			<control type="image">
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-				<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="bg_desc">dialogs/dialog-bg-nobo.png</texture>
 			</control>
 			<control type="panel" id="11">
 				<top>30</top>
@@ -302,9 +302,9 @@
 							<top>250</top>
 							<width>444</width>
 							<height>40</height>
-							<label>$INFO[ListItem.Label][CR][COLOR grey]$INFO[ListItem.Label2][/COLOR]</label>
+							<label>$INFO[ListItem.Label][CR][COLOR $VAR[GreyColorVar]]$INFO[ListItem.Label2][/COLOR]</label>
 							<font>font37</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 					</control>
@@ -333,9 +333,9 @@
 							<top>250</top>
 							<width>444</width>
 							<height>40</height>
-							<label>$INFO[ListItem.Label][CR][COLOR grey]$INFO[ListItem.Label2][/COLOR]</label>
+							<label>$INFO[ListItem.Label][CR][COLOR $VAR[GreyColorVar]]$INFO[ListItem.Label2][/COLOR]</label>
 							<font>font37</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							<align>center</align>
 						</control>
 						<control type="image">

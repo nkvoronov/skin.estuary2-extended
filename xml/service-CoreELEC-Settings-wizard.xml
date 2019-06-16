@@ -51,8 +51,8 @@
 				<label />
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>$VAR[WhiteColorVar]</textcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			</control>
 			<control type="image">
 				<left>268</left>
@@ -93,7 +93,7 @@
 					<label />
 					<align>left</align>
 					<textcolor>$VAR[MainColorVar]</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				</control>
 				<control type="textbox" id="1400">
 					<left>300</left>
@@ -103,8 +103,8 @@
 					<font>font12</font>
 					<label />
 					<align>left</align>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>$VAR[WhiteColorVar]</textcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				</control>
 				<control type="group" id="1396">
 					<control type="label" id="1403">
@@ -116,7 +116,7 @@
 
 						<align>left</align>
 						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					</control>
 					<control type="radiobutton" id="1406">
 						<left>280</left>
@@ -151,7 +151,7 @@
 						<texturenofocus colordiffuse="71FFFFFF" border="40">buttons/button-alt-nofo.png</texturenofocus>
 						<label />
 						<font>font13_title</font>
-						<textcolor>white</textcolor>
+						<textcolor>$VAR[WhiteColorVar]</textcolor>
 						<align>center</align>
 					</control>
 					<control type="button" id="1402">
@@ -163,7 +163,7 @@
 						<texturenofocus colordiffuse="71FFFFFF" border="40">buttons/button-alt-nofo.png</texturenofocus>
 						<label />
 						<font>font13_title</font>
-						<textcolor>white</textcolor>
+						<textcolor>$VAR[WhiteColorVar]</textcolor>
 						<align>center</align>
 					</control>
 				</control>
@@ -185,7 +185,7 @@
 						<label />
 						<align>left</align>
 						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					</control>
 					<control type="image">
 						<left>278</left>
@@ -270,7 +270,7 @@
 								<font>font12</font>
 								<textcolor>$VAR[MainColorVar]</textcolor>
 								<visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
-								<label>$ADDON[service.libreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+								<label>$ADDON[service.libreelec.settings 602]: [COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(Address)][/COLOR]</label>
 							</control>
 							<!-- State -->
 							<control type="label">
@@ -281,7 +281,7 @@
 								<aligny>center</aligny>
 								<font>font12</font>
 								<textcolor>$VAR[MainColorVar]</textcolor>
-								<label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+								<label>$ADDON[service.libreelec.settings 604]: [COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(State)][/COLOR]</label>
 							</control>
 							<!-- Signal strength -->
 							<control type="progress">
@@ -371,7 +371,7 @@
 								<font>font12</font>
 								<textcolor>$VAR[MainColorVar]</textcolor>
 								<visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
-								<label>$ADDON[service.libreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+								<label>$ADDON[service.libreelec.settings 602]: [COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(Address)][/COLOR]</label>
 							</control>
 							<!-- State -->
 							<control type="label">
@@ -382,7 +382,7 @@
 								<aligny>center</aligny>
 								<font>font12</font>
 								<textcolor>$VAR[MainColorVar]</textcolor>
-								<label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+								<label>$ADDON[service.libreelec.settings 604]: [COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(State)][/COLOR]</label>
 							</control>
 							<!-- Signal strength -->
 							<control type="progress">
@@ -422,7 +422,7 @@
 				<texturenofocus colordiffuse="71FFFFFF" border="40">buttons/button-alt-nofo.png</texturenofocus>
 				<label />
 				<font>font13_title</font>
-				<textcolor>white</textcolor>
+				<textcolor>$VAR[WhiteColorVar]</textcolor>
 				<align>center</align>
 				<onup>1000</onup>
 				<onleft>1000</onleft>
@@ -438,7 +438,7 @@
 				<texturenofocus colordiffuse="71FFFFFF" border="40">buttons/button-alt-nofo.png</texturenofocus>
 				<label />
 				<font>font13_title</font>
-				<textcolor>white</textcolor>
+				<textcolor>$VAR[WhiteColorVar]</textcolor>
 				<align>center</align>
 				<onup>1000</onup>
 				<onleft>1000</onleft>

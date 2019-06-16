@@ -10,29 +10,18 @@
 			<centerleft>50%</centerleft>
 			<width>1920</width>
 			<control type="group">
-				<include>OpenClose_Left</include>
+                <depth>DepthContentPopout</depth>				
 				<top>158</top>
 				<left>40</left>
-				<control type="image">
-					<left>4</left>
-					<top>4</top>
-					<width>607</width>
-					<height>607</height>
-					<aspectratio>scale</aspectratio>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-				</control>
-				<control type="image">
-					<depth>DepthContentPopout</depth>
-					<left>24</left>
-					<top>24</top>
-					<width>567</width>
-					<height>567</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true">$VAR[MusicInfoThumbVar]</texture>
-				</control>
+                <include>OpenClose_Left</include>
+                <include content="SquareLayout">			
+					<param name="width" value="614" />
+					<param name="height" value="614" />
+                    <param name="img_height">97%</param>
+                    <param name="label" value="false" />
+                    <param name="istwolabel" value="false" />
+                    <param name="rating" value="false" />
+				</include>
 			</control>
 			<control type="group">
 				<top>30</top>
@@ -41,8 +30,9 @@
 				<control type="image">
 					<width>300</width>
 					<height>140</height>
-					<texture>$VAR[ItemClearLogoVar]</texture>
+					<texture>$VAR[ListItemClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
+                    <visible>!Skin.HasSetting(hide_logo_info)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -165,7 +155,6 @@
 					<height>240</height>
 					<wrapmultiline>true</wrapmultiline>
 					<label>$VAR[MusicInfoTextboxVar]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 				<control type="panel" id="50">
 					<left>585</left>
@@ -189,8 +178,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label,,.][COLOR white]$INFO[ListItem.Label2][/COLOR]</label>
-							<textcolor>$VAR[MainColorVar]</textcolor>
+							<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label,,.][/COLOR]$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="72.5" width="595" condition="Container.Content(songs)">
@@ -207,8 +195,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label,,.][COLOR white]$INFO[ListItem.Label2][/COLOR]</label>
-							<textcolor>$VAR[MainColorVar]</textcolor>
+							<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label,,.][/COLOR]$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 					<itemlayout height="72.5" width="595" condition="Container.Content(albums)">
@@ -225,8 +212,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
-							<textcolor>$VAR[MainColorVar]</textcolor>
+							<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -250,8 +236,7 @@
 								<height>60</height>
 								<font>font12</font>
 								<aligny>center</aligny>
-								<label>$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
-								<textcolor>$VAR[MainColorVar]</textcolor>
+								<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Label]</label>
 							</control>
 							<control type="group">
 								<left>230</left>
@@ -286,8 +271,7 @@
 							<font>font27_narrow</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2,,[COLOR white] - [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
-							<textcolor>$VAR[MainColorVar]</textcolor>
+							<label>$VAR[ListItemYearLabel3Var]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -325,8 +309,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
-								<label>$INFO[ListItem.Label2,,[COLOR white] - [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</label>
-								<textcolor>$VAR[MainColorVar]</textcolor>
+								<label>$VAR[ListItemYearLabel3Var]$INFO[ListItem.Label]</label>
 							</control>
 							<control type="group">
 								<left>230</left>
@@ -395,7 +378,7 @@
 							<align>center</align>
 						</control>
 						<control type="image">
-							<texture>icons/infodialogs/rating.png</texture>
+							<texture colordiffuse="$VAR[ImageColorVar]">icons/infodialogs/rating.png</texture>
 							<left>107</left>
 							<top>30</top>
 							<width>48</width>
@@ -450,33 +433,45 @@
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-				<include content="InfoDialogTopBarInfo" condition="String.IsEmpty(ListItem.Art(artist.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo))">
-					<param name="main_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
-					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Genre][/COLOR]" />
+				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(hide_logo_info)">
+					<param name="main_label" value="$INFO[ListItem.Artist]" />
+					<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Genre][/COLOR]" />
 					<param name="id" value="33333" />
 				</include>
-				<include content="InfoDialogTopBarInfo" condition="!String.IsEmpty(ListItem.Art(artist.clearlogo)) | !String.IsEmpty(ListItem.Art(clearlogo))">
+				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hide_logo_info)">
 					<param name="posx" value="400" />
-					<param name="main_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
-					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Genre][/COLOR]" />
+					<param name="main_label" value="$INFO[ListItem.Artist]" />
+					<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Genre][/COLOR]" />
 					<param name="id" value="33333" />
 				</include>
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,album)</visible>
-				<include content="InfoDialogTopBarInfo">
-					<param name="main_label" value="[COLOR white]$INFO[ListItem.Album][/COLOR] $INFO[ListItem.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]" />
-					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Artist][/COLOR]" />
+				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(hide_logo_info)">
+					<param name="main_label" value="$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
+					<param name="sub_label" value="$INFO[ListItem.Artist]" />
 					<param name="id" value="33334" />
 				</include>
+				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hide_logo_info)">
+                    <param name="posx" value="400" />
+					<param name="main_label" value="$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
+					<param name="sub_label" value="$INFO[ListItem.Artist]" />
+					<param name="id" value="33334" />
+				</include>                
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicinformation)</visible>
-				<include content="InfoDialogTopBarInfo">
-					<param name="main_label" value="$INFO[ListItem.TrackNumber,,. ][COLOR white]$INFO[ListItem.Title][/COLOR]" />
-					<param name="sub_label" value="[COLOR white]$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album][/COLOR] $INFO[ListItem.Year,[COLOR white]([/COLOR],[COLOR white])[/COLOR]]" />
+				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(hide_logo_info)">
+					<param name="main_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Title]" />
+					<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
 					<param name="id" value="33335" />
 				</include>
+				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hide_logo_info)">
+                    <param name="posx" value="400" />
+					<param name="main_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Title]" />
+					<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
+					<param name="id" value="33335" />
+				</include>                
 			</control>
 		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>

@@ -20,7 +20,7 @@
 				<width>1460</width>
 				<height>100</height>
 				<textoffsetx>60</textoffsetx>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				<hinttext>$LOCALIZE[137]...</hinttext>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
@@ -34,7 +34,7 @@
 				<width>1440</width>
 				<height>68</height>
 				<font>font12</font>
-				<textcolor>grey</textcolor>
+				<textcolor>$VAR[GreyColorVar]</textcolor>
 				<label>$LOCALIZE[19001] $LOCALIZE[19002]</label>
 			</control>
 			<control type="image">

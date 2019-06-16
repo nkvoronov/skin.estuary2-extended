@@ -21,7 +21,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="bg_desc">dialogs/dialog-bg-nobo.png</texture>
 				<visible>Control.IsVisible(51)</visible>
 			</control>
 			<control type="group">
@@ -50,7 +50,7 @@
 						<control type="group">
 							<left>-220</left>
 							<top>18</top>
-							<include>InfoWallMovieLayout</include>
+							<include>PosterLayout</include>
 						</control>
 					</itemlayout>
 					<focusedlayout width="490">
@@ -61,7 +61,7 @@
 								<visible>Container.OnScrollPrevious</visible>
 								<visible>Control.IsVisible(200000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
-								<include>InfoWallMovieLayout</include>
+								<include>PosterLayout</include>
 							</control>
 							<control type="group">
 								<left>-40</left>
@@ -69,7 +69,7 @@
 								<visible>Container.OnScrollNext</visible>
 								<visible>Control.IsVisible(200000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
-								<include>InfoWallMovieLayout</include>
+								<include>PosterLayout</include>
 							</control>
 						</control>
 					</focusedlayout>
@@ -96,7 +96,7 @@
 						<height>40</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font45_title</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<top>400</top>
@@ -105,7 +105,7 @@
 						<label>$INFO[ListItem.Year]</label>
 						<font>font45_title</font>
 						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<align>right</align>
 					</control>
 					<control type="textbox">
@@ -114,27 +114,25 @@
 						<height>250</height>
 						<right>115</right>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$INFO[ListItem.Tagline,[I],[/I][CR]][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][/COLOR]$INFO[ListItem.Plot]</label>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
 					</control>
 				</control>
 			</control>
 		</control>
 		<control type="group">
+            <depth>DepthContentPopout</depth>
 			<top>200</top>
 			<height>670</height>
-			<left>70</left>
-			<depth>DepthContentPopout</depth>
+			<left>70</left>			
 			<visible>Control.IsVisible(51)</visible>
 			<include>OpenClose_Left</include>
 			<include>Visible_Left</include>
-			<include content="InfoWallMovieLayout">
-				<param name="poster">$VAR[PosterVar]</param>
-				<param name="focused" value="true" />
+			<include content="PosterLayout">
 				<param name="width" value="524" />
 				<param name="height" value="764" />
+                <param name="focused"value="true" />
 			</include>
 		</control>
 	</include>

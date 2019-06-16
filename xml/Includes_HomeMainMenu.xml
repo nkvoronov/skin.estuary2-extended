@@ -87,7 +87,7 @@
 							<top>0</top>
 							<width>95</width>
 							<height>95</height>
-							<texture colordiffuse="51FFFFFF">colors/black.png</texture>
+							<texture colordiffuse="mbutton_overlay">colors/black.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasModalDialog">Conditional</animation>
 						</control>
 					</control>
@@ -96,7 +96,7 @@
 						<top>1</top>
 						<width>95</width>
 						<height>95</height>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>104</left>
@@ -106,7 +106,7 @@
 						<aligny>center</aligny>
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>
 				<itemlayout height="95">
@@ -115,7 +115,7 @@
 						<top>1</top>
 						<width>95</width>
 						<height>95</height>
-						<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$VAR[GreyColorVar]">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>104</left>
@@ -125,7 +125,7 @@
 						<aligny>center</aligny>
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</itemlayout>
 				<content>

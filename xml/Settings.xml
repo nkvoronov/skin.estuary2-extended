@@ -3,7 +3,7 @@
 	<defaultcontrol>9000</defaultcontrol>
 	<onload>SetProperty(fanarthometype,settings,home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">

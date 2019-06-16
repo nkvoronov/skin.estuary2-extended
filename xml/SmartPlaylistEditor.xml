@@ -97,7 +97,7 @@
 				<height>348</height>
 				<aligny>top</aligny>
 				<label>$LOCALIZE[31043]</label>
-				<textcolor>grey</textcolor>
+				<textcolor>$VAR[GreyColorVar]</textcolor>
 				<font>font12</font>
 			</control>
 			<control type="grouplist" id="9000">

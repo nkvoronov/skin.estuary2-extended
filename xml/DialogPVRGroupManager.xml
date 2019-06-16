@@ -82,11 +82,10 @@
 					<top>0</top>
 					<width>360</width>
 					<height>70</height>
-					<label>$LOCALIZE[31089]: [COLOR white]$INFO[Container(13).NumItems][/COLOR]</label>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[31089]: [/COLOR]$INFO[Container(13).NumItems]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12</font>
-					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 				<control type="image">
 					<left>0</left>

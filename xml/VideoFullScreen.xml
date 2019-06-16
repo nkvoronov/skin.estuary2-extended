@@ -11,8 +11,8 @@
 			<align>right</align>
 			<aligny>center</aligny>
 			<font>font13</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>$VAR[WhiteColorVar]</textcolor>
+			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			<label>$INFO[System.Time]</label>
 			<visible>Skin.HasSetting(full_screen_clock) + ![Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide) | Window.IsActive(playerprocessinfo)]</visible>
 		</control>
@@ -24,7 +24,7 @@
 				<height>100</height>
 				<label></label>
 				<font>font12</font>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			</control>
 			<control type="label" id="11">
 				<left>45</left>
@@ -33,7 +33,7 @@
 				<height>100</height>
 				<label></label>
 				<font>font12</font>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			</control>
 			<control type="label" id="12">
 				<left>45</left>
@@ -42,7 +42,7 @@
 				<height>100</height>
 				<label></label>
 				<font>font12</font>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			</control>
 		</control>
 		<control type="group" id="1">

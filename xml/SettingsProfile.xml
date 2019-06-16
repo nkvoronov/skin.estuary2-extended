@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload>SetProperty(fanarthometype,settings,home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group" id="9100">
@@ -47,12 +47,22 @@
 						<width>215</width>
 						<height>215</height>
 						<aspectratio>scale</aspectratio>
-						<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
+						<texture  colordiffuse="$VAR[ImageColorVar]">DefaultUser.png</texture>
+                        <visible>String.IsEmpty(ListItem.Icon)</visible>
 					</control>
+					<control type="image">
+						<left>51</left>
+						<top>38</top>
+						<width>215</width>
+						<height>215</height>
+						<aspectratio>scale</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+                        <visible>String.IsEmpty(ListItem.Icon)</visible>
+					</control>                    
 					<control type="label">
-						<left>10</left>
+						<left>25</left>
 						<top>255</top>
-						<width>305</width>
+						<width>280</width>
 						<height>100</height>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -60,7 +70,7 @@
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>290</top>
+						<top>300</top>
 						<width>305</width>
 						<height>100</height>
 						<font>font10</font>
@@ -101,28 +111,38 @@
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
-						<control type="image">
-							<left>51</left>
-							<top>38</top>
-							<width>215</width>
-							<height>215</height>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
-						</control>
+                        <control type="image">
+                            <left>51</left>
+                            <top>38</top>
+                            <width>215</width>
+                            <height>215</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture  colordiffuse="$VAR[ImageColorVar]">DefaultUser.png</texture>
+                            <visible>String.IsEmpty(ListItem.Icon)</visible>
+                        </control>
+                        <control type="image">
+                            <left>51</left>
+                            <top>38</top>
+                            <width>215</width>
+                            <height>215</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                            <visible>String.IsEmpty(ListItem.Icon)</visible>
+                        </control>
 						<control type="label">
-							<left>10</left>
+							<left>25</left>
 							<top>255</top>
-							<width>305</width>
+							<width>280</width>
 							<height>100</height>
 							<align>center</align>
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<left>10</left>
-							<top>290</top>
-							<width>305</width>
-							<height>100</height>
+                        	<left>10</left>
+                            <top>300</top>
+                            <width>305</width>
+                            <height>100</height>
 							<font>font10</font>
 							<align>center</align>
 							<aligny>top</aligny>

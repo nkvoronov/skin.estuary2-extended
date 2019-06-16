@@ -14,7 +14,7 @@
 		<!-- WidgetsAddons01 -->
 		<control type="button" id="$PARAM[id1]01">
 			<label>- $LOCALIZE[24000] [B]1[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].0.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].0.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -27,7 +27,7 @@
 		<!-- WidgetsAddons02 -->
 		<control type="button" id="$PARAM[id1]02">
 			<label>- $LOCALIZE[24000] [B]2[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].1.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].1.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -41,7 +41,7 @@
 		<!-- WidgetsAddons03 -->
 		<control type="button" id="$PARAM[id1]03">
 			<label>- $LOCALIZE[24000] [B]3[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].2.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].2.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -55,7 +55,7 @@
 		<!-- WidgetsAddons04 -->
 		<control type="button" id="$PARAM[id1]04">
 			<label>- $LOCALIZE[24000] [B]4[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].3.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].3.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -69,7 +69,7 @@
 		<!-- WidgetsAddons05 -->
 		<control type="button" id="$PARAM[id1]05">
 			<label>- $LOCALIZE[24000] [B]5[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].4.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].4.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -83,7 +83,7 @@
 		<!-- WidgetsAddons06 -->
 		<control type="button" id="$PARAM[id1]06">
 			<label>- $LOCALIZE[24000] [B]6[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].5.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].5.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -97,7 +97,7 @@
 		<!-- WidgetsAddons07 -->
 		<control type="button" id="$PARAM[id1]07">
 			<label>- $LOCALIZE[24000] [B]7[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].6.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].6.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -111,7 +111,7 @@
 		<!-- WidgetsAddons08 -->
 		<control type="button" id="$PARAM[id1]08">
 			<label>- $LOCALIZE[24000] [B]8[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].7.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].7.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -125,7 +125,7 @@
 		<!-- WidgetsAddons09 -->
 		<control type="button" id="$PARAM[id1]09">
 			<label>- $LOCALIZE[24000] [B]9[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].8.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].8.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -139,7 +139,7 @@
 		<!-- WidgetsAddons10 -->
 		<control type="button" id="$PARAM[id1]10">
 			<label>- $LOCALIZE[24000] [B]10[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].9.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].9.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<include content="HomeMainCustomWidgetsSelectAddons">
 				<param name="type" value="$PARAM[type]" />
@@ -291,7 +291,7 @@
 		<!-- WidgetsChannels01 -->
 		<control type="button" id="$PARAM[id1]01">
 			<label>- $LOCALIZE[43240] [B]1[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].0.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].0.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].0)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -300,7 +300,7 @@
 		<!-- WidgetsChannels02 -->
 		<control type="button" id="$PARAM[id1]02">
 			<label>- $LOCALIZE[43240] [B]2[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].1.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].1.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].1)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -310,7 +310,7 @@
 		<!-- WidgetsChannels03 -->
 		<control type="button" id="$PARAM[id1]03">
 			<label>- $LOCALIZE[43240] [B]3[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].2.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].2.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].2)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -320,7 +320,7 @@
 		<!-- WidgetsChannels04 -->
 		<control type="button" id="$PARAM[id1]04">
 			<label>- $LOCALIZE[43240] [B]4[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].3.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].3.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].3)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -330,7 +330,7 @@
 		<!-- WidgetsChannels05 -->
 		<control type="button" id="$PARAM[id1]05">
 			<label>- $LOCALIZE[43240] [B]5[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].4.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].4.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].4)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -340,7 +340,7 @@
 		<!-- WidgetsChannels06 -->
 		<control type="button" id="$PARAM[id1]06">
 			<label>- $LOCALIZE[43240] [B]6[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].5.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].5.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].5)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -350,7 +350,7 @@
 		<!-- WidgetsChannels07 -->
 		<control type="button" id="$PARAM[id1]07">
 			<label>- $LOCALIZE[43240] [B]7[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].6.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].6.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].6)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -360,7 +360,7 @@
 		<!-- WidgetsChannels08 -->
 		<control type="button" id="$PARAM[id1]08">
 			<label>- $LOCALIZE[43240] [B]8[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].7.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].7.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].7)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -370,7 +370,7 @@
 		<!-- WidgetsChannels09 -->
 		<control type="button" id="$PARAM[id1]09">
 			<label>- $LOCALIZE[43240] [B]9[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].8.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].8.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].8)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -380,7 +380,7 @@
 		<!-- WidgetsChannels10 -->
 		<control type="button" id="$PARAM[id1]10">
 			<label>- $LOCALIZE[43240] [B]10[/B]</label>
-			<label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].9.Label)][/COLOR]</label2>
+			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].9.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].9)</onclick>
 			<visible>Skin.HasSetting($PARAM[flags])</visible>

@@ -2,7 +2,7 @@
 <window>
 	<onload condition="Skin.HasSetting(enable_skin_debug)">Skin.ToggleDebug</onload>
 	<onload condition="Skin.HasSetting(enable_splashscreen) + !String.IsEmpty(Skin.String(splashscreen_path))">RunScript(script.skin.helper.service,action=splashscreen,file=$INFO[Skin.String(splashscreen_path)],duration=$VAR[DurationSplashScreenNameVar])</onload>
-	<onload condition="!Skin.HasSetting(enable_splashscreen)">ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<onload condition="!Skin.HasSetting(enable_splashscreen) + String.IsEmpty(Skin.String(splashscreen_path))">ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<controls>
 		<!-- video control for splash -->
 		<control type="videowindow">

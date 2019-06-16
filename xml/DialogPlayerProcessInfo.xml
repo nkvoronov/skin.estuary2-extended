@@ -24,55 +24,55 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamServiceName,$LOCALIZE[19099]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19099]: [/COLOR]$INFO[PVR.ActStreamServiceName]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamServiceName)</visible>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamProviderName,$LOCALIZE[19101]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19101]: [/COLOR]$INFO[PVR.ActStreamProviderName]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamProviderName)</visible>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamClient,$LOCALIZE[19012]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19012]: [/COLOR]$INFO[PVR.ActStreamClient]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamClient)</visible>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamDevice,$LOCALIZE[19006]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19006]: [/COLOR]$INFO[PVR.ActStreamDevice]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamDevice)</visible>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamStatus,$LOCALIZE[19007]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19007]: [/COLOR]$INFO[PVR.ActStreamStatus]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamStatus)</visible>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamEncryptionName,$LOCALIZE[19015]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19015]: [/COLOR]$INFO[PVR.ActStreamEncryptionName]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamEncryptionName)</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -84,59 +84,61 @@
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamBer,$LOCALIZE[19010]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19010]: [/COLOR]$INFO[PVR.ActStreamBer]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamBer)</visible>
 				</control>
 				<control type="label">
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamUnc,$LOCALIZE[19011]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19011]: [/COLOR]$INFO[PVR.ActStreamUnc]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamUnc)</visible>                    
 				</control>
 				<control type="label">
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamMux,$LOCALIZE[19100]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19100]: [/COLOR]$INFO[PVR.ActStreamMux]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamMux)</visible>                    
 				</control>
 				<control type="label">
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamSignal,$LOCALIZE[19008]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19008]: [/COLOR]$INFO[PVR.ActStreamSignal]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamSignal)</visible>                    
 				</control>
 				<control type="progress">
 					<top>5</top>
 					<width>600</width>
 					<height>18</height>
 					<info>PVR.ActStreamProgrSignal</info>
+                    <visible>!String.IsEmpty(PVR.ActStreamSignal)</visible>                    
 				</control>
 				<control type="label">
 					<top>5</top>
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamSNR,$LOCALIZE[19009]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19009]: [/COLOR]$INFO[PVR.ActStreamSNR]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(PVR.ActStreamSNR)</visible>                    
 				</control>
 				<control type="progress">
 					<top>0</top>
 					<width>600</width>
 					<height>18</height>
 					<info>PVR.ActStreamProgrSNR</info>
+                    <visible>!String.IsEmpty(PVR.ActStreamSNR)</visible>                    
 				</control>
 			</control>
 			<control type="grouplist">
@@ -147,59 +149,59 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videodecoder),$LOCALIZE[31139]: [COLOR white],[/COLOR] ]$VAR[VideoHWDecoderVar, [COLOR white](,)[/COLOR]]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[31139]: [/COLOR]$INFO[Player.Process(videodecoder)]$VAR[VideoHWDecoderVar, (,)]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(Player.Process(videodecoder))</visible>                    
 					<visible>Player.HasVideo</visible>
 				</control>
 				<control type="label">
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(pixformat),$LOCALIZE[31140]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[31140]: [/COLOR]$INFO[Player.Process(pixformat)]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(Player.Process(pixformat))</visible>                  
 					<visible>Player.HasVideo</visible>
 				</control>
 				<control type="label">
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(deintmethod),$LOCALIZE[16038]: [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[16038]: [/COLOR]$INFO[Player.Process(deintmethod)]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(Player.Process(deintmethod))</visible>                    
 					<visible>Player.HasVideo</visible>
 				</control>
 				<control type="label">
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videowidth),$LOCALIZE[38031]: [COLOR white] ,x[/COLOR]][COLOR white]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS][/COLOR]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[38031]: [/COLOR]$INFO[Player.Process(videowidth),,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(Player.Process(videowidth))</visible>                    
 					<visible>Player.HasVideo</visible>
 				</control>
 				<control type="label">
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$LOCALIZE[460]: [COLOR white] $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz][/COLOR]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[460]: [/COLOR]$INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(Player.Process(audiochannels))</visible>                    
 				</control>
 				<control type="label">
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.Memory(used.percent),$LOCALIZE[31030]: [COLOR white] ,  [/COLOR]]$INFO[System.CpuUsage,$LOCALIZE[13271] [COLOR white],[/COLOR] ]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[31030]: [/COLOR]$INFO[System.Memory(used.percent)] [COLOR $VAR[MainColorVar]]$LOCALIZE[13271] [/COLOR]$INFO[System.CpuUsage]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+                    <visible>!String.IsEmpty(Player.Process(used.percent))</visible>                    
 				</control>
 			</control>
 			<control type="grouplist" id="5550">

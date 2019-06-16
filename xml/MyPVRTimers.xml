@@ -43,7 +43,7 @@
 								<right>30</right>
 								<height>30</height>
 								<aligny>top</aligny>
-								<label>$INFO[ListItem.ChannelName][COLOR grey]$INFO[ListItem.Label, - ][/COLOR]</label>
+								<label>$INFO[ListItem.ChannelName][COLOR $VAR[GreyColorVar]]$INFO[ListItem.Label, - ][/COLOR]</label>
 							</control>
 							<control type="label">
 								<left>30</left>
@@ -177,7 +177,7 @@
 			<width>850</width>
 			<height>60</height>
 			<label>$INFO[PVR.NextTimer]</label>
-			<shadowcolor>black</shadowcolor>
+			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			<align>right</align>
 			<aligny>center</aligny>
 			<wrapmultiline>true</wrapmultiline>

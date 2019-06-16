@@ -18,7 +18,7 @@
 				<top>85</top>
 				<width>82%</width>
 				<height>647</height>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				<pagecontrol>3000</pagecontrol>
 				<font>font14</font>
 				<monofont>Mono26</monofont>
@@ -61,7 +61,7 @@
 			<width>330</width>
 			<height>35</height>
 			<font>font12</font>
-			<textcolor>grey</textcolor>
+			<textcolor>$VAR[GreyColorVar]</textcolor>
 			<align>right</align>
 			<aligny>center</aligny>
 			<label>$LOCALIZE[31035] [COLOR $VAR[MainColorVar]]$INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages][/COLOR]</label>

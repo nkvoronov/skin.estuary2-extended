@@ -8,19 +8,25 @@
 	<onload condition="!Skin.HasSetting(smartshortcuts_favorites)">Skin.Reset(SmartShortcuts.favorites)</onload>
 	<onload condition="Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
 	<onload condition="![Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)]">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
+	<onload condition="Skin.HasSetting(extra_posters)">Skin.SetBool(SkinHelper.EnableExtraPoster)</onload>
+	<onload condition="!Skin.HasSetting(extra_posters)">Skin.Reset(SkinHelper.EnableExtraPoster)</onload>
+	<onload condition="Skin.HasSetting(extra_fanarts)">Skin.SetBool(SkinHelper.EnableExtraFanart)</onload>
+	<onload condition="!Skin.HasSetting(extra_fanarts)">Skin.Reset(SkinHelper.EnableExtraFanart)</onload>
+	<onload condition="Skin.HasSetting(enable_pvr_thumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+	<onload condition="!Skin.HasSetting(enable_pvr_thumbs)">Skin.Reset(SkinHelper.EnablePVRThumbs)</onload>
+	<onload condition="Skin.HasSetting(enable_music_art)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+	<onload condition="!Skin.HasSetting(enable_music_art)">Skin.Reset(SkinHelper.EnableMusicArt)</onload>
+	<onload condition="Skin.HasSetting(enable_extended_art)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
+	<onload condition="!Skin.HasSetting(enable_extended_art)">Skin.Reset(SkinHelper.EnableExtendedArt)</onload>
 	<onload condition="Skin.HasSetting(wall_backgrounds)">Skin.SetBool(SkinHelper.EnableWallBackgrounds)</onload>
 	<onload condition="!Skin.HasSetting(wall_backgrounds)">Skin.Reset(SkinHelper.EnableWallBackgrounds)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay, $VAR[RandomFanartDelayVar])</onload>
 	<onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
 	<onload condition="!String.IsEmpty(Window(home).Property(fanarthometype))">ClearProperty(fanarthometype,home)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(homebackground))">ClearProperty(homebackground,home)</onload>
 	<onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<onload condition="Window.Previous(Startup)">Control.Move(9000,$VAR[CustomFocusVar])</onload>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<control type="button" id="200000">
 			<include>HiddenObject</include>
@@ -50,7 +56,7 @@
 				<height>70</height>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
+				<include condition="!Skin.HasSetting(hide_mediaflags_home)" content="MediaFlags">
 					<param name="infolabel_prefix" value="Container." />
 					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
 				</include>
@@ -64,10 +70,10 @@
 					<urlset>1</urlset>
 					<hitrect x="-100" y="0" w="1" h="1" />
 					<titlecolor>$VAR[MainColorVar]</titlecolor>
-					<textcolor>$VAR[MainColorVar]</textcolor>
-					<shadowcolor>text_shadow</shadowcolor>
-					<headlinecolor>FFC0C0C0</headlinecolor>
-					<visible>Skin.HasSetting(hide_mediaflags) | !ControlGroup(2000).HasFocus</visible>
+                    <textcolor>$VAR[MainColorVar]</textcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					<headlinecolor>$VAR[RssHeaderColorVar]</headlinecolor>
+					<visible>Skin.HasSetting(hide_mediaflags_home) | !ControlGroup(2000).HasFocus</visible>
 					<animation effect="fade" time="300">VisibleChange</animation>
 				</control>
 			</control>
@@ -93,7 +99,7 @@
 					<aspectratio>keep</aspectratio>
 					<width>192</width>
 					<height>36</height>
-					<texture>icons/logo-text.png</texture>
+					<texture colordiffuse="$VAR[ImageColorVar]">icons/logo-text.png</texture>
 				</control>
 				<control type="image">
 					<left>-90</left>
@@ -102,7 +108,7 @@
 					<height>140</height>
 					<texture>$VAR[ContainerClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
-					<visible>!Skin.HasSetting(hide_mediaflags) + ControlGroup(2000).HasFocus</visible>
+					<visible>!Skin.HasSetting(hide_logo_home) + ControlGroup(2000).HasFocus</visible>
 				</control>
 				<control type="label">
 					<left>-90</left>
@@ -112,8 +118,7 @@
 					<label>$VAR[InfoBarStatsVar]</label>
 					<font>font12</font>
 					<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
-					<visible>Skin.HasSetting(hide_mediaflags) | !ControlGroup(2000).HasFocus</visible>
-					<visible>Skin.HasSetting(enable_home_stats)</visible>
+					<visible>[Skin.HasSetting(hide_logo_home) | !ControlGroup(2000).HasFocus] + Skin.HasSetting(enable_home_stats)</visible>
 				</control>
 			</control>
 		</control>

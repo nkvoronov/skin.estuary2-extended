@@ -35,7 +35,7 @@
 				<include>OpenClose_Right</include>
 				<top>160</top>
 				<control type="image">
-					<description>background image</description>
+					<description>Background Image</description>
 					<right>70</right>
 					<width>510</width>
 					<height>820</height>
@@ -79,7 +79,7 @@
 								<font>font12</font>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>$VAR[MainColorVar]</textcolor>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>10</left>
@@ -89,7 +89,7 @@
 								<font>font12</font>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label2]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 						</focusedlayout>
 						<itemlayout height="50">
@@ -101,7 +101,7 @@
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
 								<textcolor>$VAR[MainColorVar]</textcolor>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>10</left>
@@ -111,7 +111,7 @@
 								<font>font12</font>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label2]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 						</itemlayout>
 					</control>
@@ -119,8 +119,8 @@
 			</control>
 		</control>
 		<include content="InfoDialogTopBarInfo">
-			<param name="main_label" value="[COLOR white]$INFO[ListItem.Label][/COLOR]" />
-			<param name="sub_label" value="[COLOR white]$INFO[ListItem.PictureDateTime][/COLOR]" />
+			<param name="main_label" value="$INFO[ListItem.Label]" />
+			<param name="sub_label" value="$INFO[ListItem.PictureDateTime]" />
 		</include>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
 	</controls>

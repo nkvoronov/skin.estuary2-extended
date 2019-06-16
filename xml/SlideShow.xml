@@ -8,8 +8,8 @@
 			<width>600</width>
 			<height>25</height>
 			<font>font12</font>
-			<textcolor>grey</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>$VAR[GreyColorVar]</textcolor>
+			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			<scroll>false</scroll>
 			<align>left</align>
 			<aligny>center</aligny>
@@ -25,8 +25,8 @@
 			<align>right</align>
 			<aligny>center</aligny>
 			<font>font13</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>$VAR[WhiteColorVar]</textcolor>
+			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			<label>$INFO[System.Time]</label>
 			<visible>Skin.HasSetting(full_screen_clock)</visible>
 		</control>

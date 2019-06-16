@@ -50,7 +50,7 @@
 					<top>0</top>
 					<bottom>0</bottom>
 					<aligny>center</aligny>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[GreyColorVar]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>

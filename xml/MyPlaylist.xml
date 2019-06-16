@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<onload>SetProperty(fanarthometype,video,home)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/videos.jpg,home)</onload>
 	<views>50</views>
@@ -42,7 +42,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$VAR[PlaylistLabelVar]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -52,7 +52,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$VAR[PlaylistLabel2Var]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="list_item_height">
@@ -63,7 +63,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$VAR[PlaylistLabelVar]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -73,8 +73,8 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$VAR[PlaylistLabel2Var]</label>
-							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
 				</control>
@@ -159,7 +159,7 @@
 			<height>70</height>
 			<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<include condition="!Skin.HasSetting(hide_mediaflags)">MediaFlags</include>
+			<include condition="!Skin.HasSetting(hide_mediaflags_video)">MediaFlags</include>
 		</control>
 	</controls>
 </window>

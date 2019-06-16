@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload>SetProperty(fanarthometype,addons,home)</onload>
 	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/addons.jpg,home)</onload>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[AddonsFanartVar]" />
@@ -104,7 +104,7 @@
 							<left>0</left>
 							<width>95</width>
 							<bottom>0</bottom>
-							<texture colordiffuse="51FFFFFF">colors/black.png</texture>
+							<texture colordiffuse="mbutton_overlay">colors/black.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
 						<control type="image">
@@ -112,7 +112,7 @@
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
-							<texture>$INFO[ListItem.Art(thumb)]</texture>
+							<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
 							<left>104</left>
@@ -121,7 +121,7 @@
 							<aligny>center</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="95" width="462">
@@ -132,14 +132,14 @@
 							<aligny>center</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 						<control type="image">
 							<left>-3</left>
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
-							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
+							<texture colordiffuse="$VAR[GreyColorVar]">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 					</itemlayout>
 					<content>
@@ -238,10 +238,10 @@
 					<radioposy>0</radioposy>
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
-					<textureradioonfocus>icons/submenu/add-ons.png</textureradioonfocus>
-					<textureradioonnofocus>icons/submenu/add-ons.png</textureradioonnofocus>
-					<textureradioofffocus>icons/submenu/add-ons.png</textureradioofffocus>
-					<textureradiooffnofocus>icons/submenu/add-ons.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/submenu/add-ons.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/submenu/add-ons.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/submenu/add-ons.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/submenu/add-ons.png</textureradiooffnofocus>
 				</control>
 				<control type="radiobutton" id="802">
 					<top>5</top>
@@ -261,12 +261,12 @@
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
 					<enable>Integer.IsGreater(Container(8000).NumItems,0)</enable>
-					<textureradioonfocus>icons/submenu/updatelibrary.png</textureradioonfocus>
-					<textureradioonnofocus>icons/submenu/updatelibrary.png</textureradioonnofocus>
-					<textureradioofffocus>icons/submenu/updatelibrary.png</textureradioofffocus>
-					<textureradiooffnofocus>icons/submenu/updatelibrary.png</textureradiooffnofocus>
-					<textureradioondisabled colordiffuse="disabled">icons/submenu/updatelibrary.png</textureradioondisabled>
-					<textureradiooffdisabled colordiffuse="disabled">icons/submenu/updatelibrary.png</textureradiooffdisabled>
+					<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/submenu/updatelibrary.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/submenu/updatelibrary.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/submenu/updatelibrary.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/submenu/updatelibrary.png</textureradiooffnofocus>
+					<textureradioondisabled colordiffuse="$VAR[DisabledColorVar]">icons/submenu/updatelibrary.png</textureradioondisabled>
+					<textureradiooffdisabled colordiffuse="$VAR[DisabledColorVar]">icons/submenu/updatelibrary.png</textureradiooffdisabled>
 				</control>
 				<control type="radiobutton" id="803">
 					<width>120</width>
@@ -284,10 +284,10 @@
 					<radioposy>0</radioposy>
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
-					<textureradioonfocus>icons/settings.png</textureradioonfocus>
-					<textureradioonnofocus>icons/settings.png</textureradioonnofocus>
-					<textureradioofffocus>icons/settings.png</textureradioofffocus>
-					<textureradiooffnofocus>icons/settings.png</textureradiooffnofocus>
+					<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/settings.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/settings.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/settings.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/settings.png</textureradiooffnofocus>
 				</control>
 				<control type="label" id="804">
 					<left>-217</left>
@@ -298,7 +298,7 @@
 					<align>center</align>
 					<font>font32_title</font>
 					<label>$VAR[AddonCountLabelVar]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 				</control>
 			</control>
 			<include content="TopBar">

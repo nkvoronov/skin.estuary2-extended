@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="IconLayout">
+    	<param name="focused">false</param>
+		<param name="fallback_image">DefaultFolder.png</param>
+		<param name="left">0</param>
+		<param name="top">0</param>
+		<param name="width">396</param>
+		<param name="height">245</param>
+		<param name="img_height">80%</param>
+		<param name="txt_height">15%</param>
+		<param name="label">true</param>
+		<param name="border">true</param>
+		<param name="ratio">keep</param>
+		<definition>
+			<control type="group">
+				<description>Picture Layout</description>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<control type="image">
+					<description>Background And Border</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[border]</visible>
+				</control>
+				<control type="image">
+					<description>Background Focused</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[focused]</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+                <control type="image">
+					<description>Parent Folder</description>
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<left>8</left>
+					<right>8</right>
+					<top>8</top>
+					<height>$PARAM[img_height]</height>
+					<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+					<aspectratio>$PARAM[ratio]</aspectratio>
+					<bordersize>20</bordersize>
+					<visible>ListItem.IsParentFolder</visible>
+				</control>
+                <control type="group">
+					<description>File</description>
+					<visible>!ListItem.IsParentFolder</visible>
+                    <control type="group">
+                        <description>File Studios</description>
+                        <visible>Container.Content(studios)</visible>
+                        <control type="image">
+                            <description>File Icon Studios 1</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true" fallback="DefaultStudios.png" colordiffuse="$VAR[ImageColorVar]">$VAR[IconStudiosVar]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                        </control>
+                        <control type="image">
+                            <description>File Icon Studios 2</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true">$VAR[IconStudiosVar]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                        </control>                        
+                    </control>
+                    <control type="group">
+                        <description>File Countries</description>
+                        <visible>Container.Content(countries)</visible>
+                        <control type="image">
+                            <description>File Icon Countries 1</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true" fallback="DefaultCountry.png" colordiffuse="$VAR[ImageColorVar]">$VAR[IconCountriesVar]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                        </control>
+                        <control type="image">
+                            <description>File Icon Countries 2</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true">$VAR[IconCountriesVar]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                        </control>                        
+                    </control>
+                    <control type="group">
+                        <description>File Genres Video</description>
+                        <visible>Container.Content(genres) + Window.IsActive(videos)</visible>
+                        <control type="image">
+                            <description>File Icon Genres Video 1</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true" fallback="DefaultGenre.png" colordiffuse="$VAR[ImageColorVar]">$VAR[IconGenreVar]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                        </control>
+                        <control type="image">
+                            <description>File Icon Genres Video 2</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true">$VAR[IconGenreVar]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                        </control>                        
+                    </control> 
+                    <control type="group">
+                        <description>File Genres Music</description>
+                        <visible>Container.Content(genres) + !Window.IsActive(videos)</visible>
+                        <control type="image">
+                            <description>File Icon Genres Music 1</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true" fallback="DefaultMusicGenres.png" colordiffuse="$VAR[ImageColorVar]">$VAR[IconMusicGenreVar]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                        </control>
+                        <control type="image">
+                            <description>File Icon Genres Music 2</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true">$VAR[IconMusicGenreVar]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                        </control>                        
+                    </control>                    
+                    <control type="group">
+                        <description>File Other</description>
+                        <visible>![Container.Content(studios) | Container.Content(countries) | Container.Content(genres)]</visible>
+                        <control type="image">
+                            <description>File Icon As Fallback Image</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[fallback_image]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                            <visible>String.IsEmpty(ListItem.Icon)</visible>
+                        </control>
+                        <control type="image">
+                            <description>File Icon</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                            <visible>!String.IsEmpty(ListItem.Icon) + !$EXP[default_icon]</visible>
+                        </control>
+                        <control type="image">
+                            <description>File Icon Def</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>50%</centertop>
+                            <left>8</left>
+                            <right>8</right>
+                            <top>8</top>
+                            <height>$PARAM[img_height]</height>
+                            <texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
+                            <aspectratio>$PARAM[ratio]</aspectratio>
+                            <bordersize>20</bordersize>
+                            <visible>!String.IsEmpty(ListItem.Icon) + $EXP[default_icon]</visible>
+                        </control>
+                    </control>
+				</control>
+                <control type="image">
+                    <description>Background Name Item</description>
+					<centerleft>50%</centerleft>
+                    <left>24</left>
+					<right>24</right>
+					<bottom>24</bottom>
+					<height>$PARAM[txt_height]</height>
+                    <texture colordiffuse="border_alpha">colors/black.png</texture>
+                    <visible>$PARAM[label]</visible>
+				</control>
+                <control type="textbox">
+                    <description>Name Item</description>
+					<centerleft>50%</centerleft>
+                    <left>24</left>
+					<right>24</right>
+					<bottom>24</bottom>
+					<height>$PARAM[txt_height]</height>
+                    <font>font12</font>
+                    <align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>$PARAM[focused]</scroll>
+					<visible>$PARAM[label]</visible>
+                </control>                
+            </control> 
+        </definition>
+	</include>
+	<include name="PictureLayout">
+		<param name="focused">false</param>
+		<param name="fallback_image">DefaultAddonImages.png</param>
+		<param name="left">0</param>
+		<param name="top">0</param>
+		<param name="width">316</param>
+		<param name="height">386</param>
+		<param name="img_height">80%</param>
+		<param name="txt_height">19%</param>
+		<param name="label">true</param>
+		<param name="border">true</param>
+		<param name="ratio">keep</param>
+		<definition>
+			<control type="group">
+				<description>Picture Layout</description>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<control type="image">
+					<description>Background And Border</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[border]</visible>
+				</control>
+				<control type="image">
+					<description>Background Focused</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[focused]</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+				<control type="image">
+					<description>Parent Folder</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+					<aspectratio>keep</aspectratio>
+					<bordersize>20</bordersize>
+					<visible>ListItem.IsParentFolder</visible>
+				</control>
+				<control type="group">
+					<description>File</description>
+					<visible>!ListItem.IsParentFolder</visible>
+					<control type="image">
+						<description>File Icon As Fallback Image</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[fallback_image]</texture>
+						<aspectratio>$PARAM[ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>String.IsEmpty(ListItem.Icon)</visible>
+					</control>
+					<control type="image">
+						<description>File Icon</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>$PARAM[ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>!String.IsEmpty(ListItem.Icon) + !$EXP[default_icon]</visible>
+					</control>
+					<control type="image">
+						<description>File Icon Def</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
+						<aspectratio>$PARAM[ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>!String.IsEmpty(ListItem.Icon) + $EXP[default_icon]</visible>
+					</control>
+				</control>
+				<control type="label">
+					<description>Name File Or Folder</description>
+					<centerleft>50%</centerleft>
+					<left>32</left>
+					<right>32</right>
+					<bottom>20</bottom>
+					<height>$PARAM[txt_height]</height>
+					<font>font12</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>$PARAM[focused]</scroll>
+					<visible>$PARAM[label]</visible>
+					<visible>!ListItem.IsParentFolder</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="PosterLayout">
+		<param name="focused">false</param>
+		<param name="fallback_image">DefaultMovies.png</param>
+		<param name="userratingval">ListItem.UserRating</param>
+		<param name="percentplayed">ListItem.PercentPlayed</param>
+		<param name="ispercentplayed">Integer.IsEqual(ListItem.PercentPlayed,0)</param>
+		<param name="istvshows">String.IsEqual(ListItem.DBtype,tvshow)</param>
+		<param name="totalepisodes">ListItem.Property(TotalEpisodes)</param>
+		<param name="watchedepisodes">ListItem.Property(WatchedEpisodes)</param>
+		<param name="overlaybg">ListItem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</param>
+		<param name="watchedicon">$VAR[WallWatchedIconVar]</param>
+		<param name="left">15</param>
+		<param name="top">-10</param>
+		<param name="width">298</param>
+		<param name="height">408</param>
+		<param name="img_height">80%</param>
+		<param name="txt_height">19%</param>
+		<param name="border">true</param>
+		<param name="watched">true</param>
+		<param name="rating">true</param>
+		<param name="progress">true</param>
+		<param name="pratio">scale</param>
+		<param name="ratio">keep</param>
+		<definition>
+			<control type="group">
+				<description>Poster Layout</description>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<control type="group">
+					<description>Not Posters</description>
+					<visible>String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(season.poster)) + String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
+					<control type="image">
+						<description>Background And Border</description>
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture>dialogs/dialog-bg-nobo.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>$PARAM[border]</visible>
+					</control>
+					<control type="image">
+						<description>Background</description>
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture>dialogs/dialog-bg-nobo.png</texture>
+						<bordersize>20</bordersize>
+						<visible>!$PARAM[border]</visible>
+					</control>
+					<control type="image">
+						<description>Background Focused</description>
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+						<bordersize>20</bordersize>
+						<visible>$PARAM[focused]</visible>
+						<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+					</control>
+					<control type="image">
+						<description>Parent Folder</description>
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+						<aspectratio>$PARAM[ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>ListItem.IsParentFolder</visible>
+					</control>
+					<control type="group">
+						<description>File</description>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="image">
+							<description>File Icon As Fallback Image</description>
+							<centerleft>50%</centerleft>
+							<centertop>50%</centertop>
+							<left>8</left>
+							<right>8</right>
+							<top>8</top>
+							<height>$PARAM[img_height]</height>
+							<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[fallback_image]</texture>
+							<aspectratio>$PARAM[ratio]</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>String.IsEmpty(ListItem.Icon)</visible>
+						</control>
+						<control type="image">
+							<description>File Icon</description>
+							<centerleft>50%</centerleft>
+							<centertop>50%</centertop>
+							<left>8</left>
+							<right>8</right>
+							<top>8</top>
+							<height>$PARAM[img_height]</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>$PARAM[ratio]</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>!String.IsEmpty(ListItem.Icon) + !$EXP[default_icon]</visible>
+						</control>
+						<control type="image">
+							<description>File Icon Def</description>
+							<centerleft>50%</centerleft>
+							<centertop>50%</centertop>
+							<left>8</left>
+							<right>8</right>
+							<top>8</top>
+							<height>$PARAM[img_height]</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>$PARAM[ratio]</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>!String.IsEmpty(ListItem.Icon) + $EXP[default_icon]</visible>
+						</control>                        
+					</control>
+					<control type="textbox">
+						<description>Name File Or Folder</description>
+						<left>32</left>
+						<right>32</right>
+						<bottom>20</bottom>
+						<height>$PARAM[txt_height]</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>$PARAM[focused]</scroll>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+				</control>
+				<control type="group">
+					<description>Posters</description>
+					<visible>!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(season.poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
+					<control type="image">
+						<description>Background Focused</description>
+						<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>$PARAM[focused]</visible>
+						<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+					</control>
+					<control type="group">
+						<description>Posters</description>
+						<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+						<control type="image">
+							<description>Poster + Border</description>
+							<top>4</top>
+							<left>4</left>
+							<right>4</right>
+							<bottom>4</bottom>
+							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+							<aspectratio>$PARAM[pratio]</aspectratio>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+							<visible>$PARAM[border]</visible>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<top>4</top>
+							<left>4</left>
+							<right>4</right>
+							<bottom>4</bottom>
+							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+							<aspectratio>$PARAM[pratio]</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>!$PARAM[border]</visible>
+						</control>
+					</control>
+					<control type="group">
+						<description>Animated Posters</description>
+						<visible>!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)</visible>
+						<control type="image">
+							<description>Animated Poster + Border</description>
+							<top>4</top>
+							<left>4</left>
+							<right>4</right>
+							<bottom>4</bottom>
+							<texture background="true">$INFO[ListItem.Art(animatedposter)]</texture>
+							<aspectratio>$PARAM[pratio]</aspectratio>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+							<visible>$PARAM[border]</visible>
+						</control>
+						<control type="image">
+							<description>Animated Poster</description>
+							<top>4</top>
+							<left>4</left>
+							<right>4</right>
+							<bottom>4</bottom>
+							<texture background="true">$INFO[ListItem.Art(animatedposter)]</texture>
+							<aspectratio>$PARAM[pratio]</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>!$PARAM[border]</visible>
+						</control>
+					</control>
+					<control type="group">
+						<description>Tvshow Posters</description>
+						<visible>String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(season.poster)) + !String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
+						<control type="image">
+							<description>Tvshow Poster + Border</description>
+							<top>4</top>
+							<left>4</left>
+							<right>4</right>
+							<bottom>4</bottom>
+							<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+							<aspectratio>$PARAM[pratio]</aspectratio>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+							<visible>$PARAM[border]</visible>
+						</control>
+						<control type="image">
+							<description>Tvshow Poster</description>
+							<top>4</top>
+							<left>4</left>
+							<right>4</right>
+							<bottom>4</bottom>
+							<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+							<aspectratio>$PARAM[pratio]</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>!$PARAM[border]</visible>
+						</control>
+					</control>
+					<control type="group">
+						<description>Season Posters</description>
+						<visible>!String.IsEmpty(ListItem.Art(season.poster))</visible>
+						<control type="image">
+							<description>Season Poster + Border</description>
+							<top>4</top>
+							<left>4</left>
+							<right>4</right>
+							<bottom>4</bottom>
+							<texture background="true">$INFO[ListItem.Art(season.poster)]</texture>
+							<aspectratio>$PARAM[pratio]</aspectratio>
+							<bordertexture border="21">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+							<visible>$PARAM[border]</visible>
+						</control>
+						<control type="image">
+							<description>Season Poster</description>
+							<top>4</top>
+							<left>4</left>
+							<right>4</right>
+							<bottom>4</bottom>
+							<texture background="true">$INFO[ListItem.Art(season.poster)]</texture>
+							<aspectratio>$PARAM[pratio]</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>!$PARAM[border]</visible>
+						</control>
+					</control>
+				</control>
+				<control type="image">
+					<description>Overlay Background</description>
+					<left>24</left>
+					<bottom>24</bottom>
+					<width>80</width>
+					<height>80</height>
+					<texture colordiffuse="bg_image">overlays/overlay-bg.png</texture>
+					<visible>$PARAM[overlaybg]</visible>
+					<visible>$PARAM[watched]</visible>
+				</control>
+				<control type="group">
+					<description>TVshows Total Episodes</description>
+					<visible>$PARAM[istvshows] + !String.IsEmpty($PARAM[totalepisodes])</visible>
+					<control type="image">
+						<description>Overlay Background</description>
+						<left>24</left>
+						<right>24</right>
+						<bottom>24</bottom>
+						<height>50</height>
+						<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+						<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					<control type="label">
+						<description>Total Episodes</description>
+						<right>65</right>
+						<width>244</width>
+						<height>24</height>
+						<bottom>34</bottom>
+						<label>[COLOR $VAR[WhiteColorVar]]$INFO[$PARAM[watchedepisodes]][/COLOR] / [COLOR $VAR[WhiteColorVar]]$INFO[$PARAM[totalepisodes]][/COLOR]</label>
+						<font>font20_title</font>
+						<textcolor>$VAR[MainColorVar]</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<align>right</align>
+					</control>
+					<control type="image">
+						<description>Total Episodes Icon</description>
+						<right>32</right>
+						<width>24</width>
+						<height>24</height>
+						<bottom>32</bottom>
+						<texture colordiffuse="$VAR[ImageColorVar]">lists/played-total.png</texture>
+					</control>
+				</control>
+				<control type="image">
+					<description>Watched Icon</description>
+					<left>24</left>
+					<bottom>24</bottom>
+					<width>32</width>
+					<height>32</height>
+					<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[watchedicon]</texture>
+					<visible>$PARAM[watched] + !$PARAM[istvshows]</visible>
+				</control>
+				<control type="progress">
+					<description>Progress</description>
+					<left>24</left>
+					<right>24</right>
+					<bottom>44</bottom>
+					<height>1</height>
+					<texturebg></texturebg>
+					<midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+					<info>$PARAM[percentplayed]</info>
+					<visible>!$PARAM[ispercentplayed]</visible>
+					<visible>$PARAM[progress]</visible>
+				</control>
+				<control type="group">
+					<description>Rating</description>
+					<centerleft>50%</centerleft>
+					<width>44</width>
+					<top>4</top>
+					<include>RatingCircle</include>
+					<visible>$PARAM[rating]</visible>
+					<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="ThumbLayout">
+		<param name="focused">false</param>
+		<param name="main_label">$INFO[ListItem.Title]</param>
+		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
+		<param name="thumb_label">$VAR[ListItemSeasonXEpisodeLabelVar]</param>
+		<param name="fallback_image">DefaultTVShows.png</param>
+		<param name="userratingval">ListItem.UserRating</param>
+		<param name="percentplayed">ListItem.PercentPlayed</param>
+		<param name="ispercentplayed">Integer.IsEqual(ListItem.PercentPlayed,0)</param>
+		<param name="watchedicon">$VAR[WallWatchedIconVar]</param>
+		<param name="left">0</param>
+		<param name="top">0</param>
+		<param name="width">316</param>
+		<param name="height">288</param>
+		<param name="img_height">75%</param>
+		<param name="txt_height">24%</param>
+		<param name="label">true</param>
+		<param name="border">true</param>
+		<param name="watched">true</param>
+		<param name="watched_bottom">84</param>
+		<param name="thumb_label_bottom">77</param>
+		<param name="rating">true</param>
+		<param name="progress">true</param>
+		<param name="ratio">scale</param>
+		<definition>
+			<control type="group">
+				<description>Thumb Layout</description>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<control type="image">
+					<description>Background And Border</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[border]</visible>
+				</control>
+				<control type="image">
+					<description>Background Focused</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[focused]</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+				<control type="image">
+					<description>Parent Folder</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+					<aspectratio>keep</aspectratio>
+					<bordersize>20</bordersize>
+					<visible>ListItem.IsParentFolder</visible>
+				</control>
+				<control type="group">
+					<description>File</description>
+					<visible>!ListItem.IsParentFolder</visible>
+					<control type="image">
+						<description>File Icon As Fallback Image</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[fallback_image]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>String.IsEmpty(ListItem.Icon) + String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					<control type="image">
+						<description>File Icon</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>$PARAM[ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>!String.IsEmpty(ListItem.Icon) + String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+					<control type="image">
+						<description>File Icon MusicVideo</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+						<aspectratio>$PARAM[ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+					</control>
+				</control>
+				<control type="image">
+					<description>Overlay Background</description>
+					<left>28</left>
+					<right>28</right>
+					<bottom>$PARAM[watched_bottom]</bottom>
+					<height>50</height>
+					<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+					<visible>!ListItem.IsParentFolder</visible>
+					<visible>$PARAM[watched]</visible>
+				</control>
+				<control type="label">
+					<description>Thumb Label</description>
+					<left>34</left>
+					<right>34</right>
+					<bottom>$PARAM[thumb_label_bottom]</bottom>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$PARAM[thumb_label]</label>
+					<font>font20_title</font>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Name Item</description>
+					<centerleft>50%</centerleft>
+					<left>32</left>
+					<right>32</right>
+					<bottom>20</bottom>
+					<height>$PARAM[txt_height]</height>
+					<font>font12</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>$PARAM[focused]</scroll>
+					<visible>Window.IsActive(videos)</visible>
+					<visible>$PARAM[label]</visible>
+					<visible>!ListItem.IsParentFolder</visible>
+				</control>
+				<control type="group">
+					<description>Name File Two Label</description>
+					<centerleft>50%</centerleft>
+					<left>32</left>
+					<right>32</right>
+					<bottom>20</bottom>
+					<height>$PARAM[txt_height]</height>
+					<visible>!Window.IsActive(videos)</visible>
+					<control type="label">
+						<description>Sub Label</description>
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<height>50%</height>
+						<font>font12</font>
+						<align>center</align>
+						<label>$PARAM[sub_label]</label>
+						<scroll>$PARAM[focused]</scroll>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					</control>
+					<control type="label">
+						<description>Main Label</description>
+						<left>0</left>
+						<right>0</right>
+						<bottom>0</bottom>
+						<height>50%</height>
+						<font>font10</font>
+						<align>center</align>
+						<label>$PARAM[main_label]</label>
+						<scroll>$PARAM[focused]</scroll>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					</control>
+				</control>
+				<control type="image">
+					<description>Watched Icon</description>
+					<left>28</left>
+					<bottom>$PARAM[watched_bottom]</bottom>
+					<width>32</width>
+					<height>32</height>
+					<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[watchedicon]</texture>
+					<visible>$PARAM[watched]</visible>
+				</control>
+				<control type="progress">
+					<description>Progress</description>
+					<left>24</left>
+					<right>24</right>
+					<bottom>44</bottom>
+					<height>1</height>
+					<texturebg></texturebg>
+					<midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
+					<info>$PARAM[percentplayed]</info>
+					<visible>!$PARAM[ispercentplayed]</visible>
+					<visible>$PARAM[progress]</visible>
+				</control>
+				<control type="group">
+					<description>Rating</description>
+					<centerleft>50%</centerleft>
+					<width>44</width>
+					<top>4</top>
+					<include>RatingCircle</include>
+					<visible>$PARAM[rating]</visible>
+					<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="SquareLayout">
+		<param name="focused">false</param>
+		<param name="fallback_image">DefaultFolder.png</param>
+		<param name="main_label">$INFO[ListItem.Artist]</param>
+		<param name="sub_label">$INFO[ListItem.Title]</param>
+		<param name="single_label">$INFO[ListItem.Label]</param>
+		<param name="userratingval">ListItem.UserRating</param>
+		<param name="istwolabel">[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</param>
+		<param name="left">0</param>
+		<param name="top">0</param>
+		<param name="width">316</param>
+		<param name="height">386</param>
+        <param name="img_top">8</param>
+		<param name="img_height">80%</param>
+		<param name="txt_height">19%</param>
+		<param name="label">true</param>
+		<param name="border">true</param>
+		<param name="rating">true</param>
+		<param name="ratio">scale</param>
+		<definition>
+			<control type="group">
+				<description>Square Layout</description>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<control type="image">
+					<description>Background And Border</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[border]</visible>
+				</control>
+				<control type="image">
+					<description>Background Focused</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>$PARAM[focused]</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+				<control type="image">
+					<description>Parent Folder</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+					<aspectratio>$PARAM[ratio]</aspectratio>
+					<bordersize>20</bordersize>
+					<visible>ListItem.IsParentFolder</visible>
+				</control>
+				<control type="group">
+					<description>File</description>
+					<visible>!ListItem.IsParentFolder</visible>
+					<control type="image">
+						<description>File Icon As Fallback Image</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>$PARAM[img_top]</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[fallback_image]</texture>
+						<aspectratio>$PARAM[ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>String.IsEmpty(ListItem.Icon) | ![String.EndsWith(ListItem.Icon, .png) | String.EndsWith(ListItem.Icon, .jpg)]</visible>
+					</control>
+					<control type="image">
+						<description>File Icon</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>$PARAM[img_top]</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>$PARAM[ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>!String.IsEmpty(ListItem.Icon) + !$EXP[default_icon]</visible>
+					</control>
+					<control type="image">
+						<description>File Icon Def</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>$PARAM[img_top]</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
+						<aspectratio>$PARAM[ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>!String.IsEmpty(ListItem.Icon) + $EXP[default_icon]</visible>
+					</control>
+				</control>
+				<control type="textbox">
+					<description>Name Item</description>
+					<centerleft>50%</centerleft>
+					<left>32</left>
+					<right>32</right>
+					<bottom>20</bottom>
+					<height>$PARAM[txt_height]</height>
+					<font>font12</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$PARAM[single_label]</label>
+					<scroll>$PARAM[focused]</scroll>
+					<visible>!$PARAM[istwolabel]</visible>
+					<visible>$PARAM[label]</visible>
+					<visible>!ListItem.IsParentFolder</visible>
+				</control>
+				<control type="group">
+					<description>Name Item Two Label</description>
+					<centerleft>50%</centerleft>
+					<left>32</left>
+					<right>32</right>
+					<bottom>20</bottom>
+					<height>$PARAM[txt_height]</height>
+					<visible>$PARAM[istwolabel]</visible>
+					<control type="label">
+						<description>Sub Label</description>
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<height>50%</height>
+						<font>font12</font>
+						<align>center</align>
+						<label>$PARAM[sub_label]</label>
+						<scroll>$PARAM[focused]</scroll>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					</control>
+					<control type="label">
+						<description>Main Label</description>
+						<left>0</left>
+						<right>0</right>
+						<bottom>0</bottom>
+						<height>50%</height>
+						<font>font10</font>
+						<align>center</align>
+						<label>$PARAM[main_label]</label>
+						<scroll>$PARAM[focused]</scroll>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					</control>
+				</control>
+				<control type="group">
+					<description>Rating</description>
+					<centerleft>50%</centerleft>
+					<width>44</width>
+					<top>4</top>
+					<include>RatingCircle</include>
+					<visible>$PARAM[rating]</visible>
+					<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="ListContainer">
+		<param name="left">0</param>
+		<param name="right">0</param>
+		<definition>
+			<control type="fixedlist" id="$PARAM[list_id]">
+				<left>$PARAM[left]</left>
+				<right>$PARAM[right]</right>
+				<top>list_y_offset</top>
+				<bottom>list_y_offset</bottom>
+				<movement>5</movement>
+				<focusposition>6</focusposition>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<orientation>vertical</orientation>
+				<pagecontrol>$PARAM[list_id]600</pagecontrol>
+				<onleft>9000</onleft>
+				<onright>$PARAM[list_id]600</onright>
+				<onup>$PARAM[list_id]</onup>
+				<ondown>$PARAM[list_id]</ondown>
+				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(games) | Window.IsActive(MyPlaylist.xml)</visible>
+				<focusedlayout height="list_item_height">
+					<control type="image">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<visible>Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+					<control type="label">
+						<left>70</left>
+						<right>70</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<aligny>center</aligny>
+						<scroll>true</scroll>
+						<font>font27</font>
+						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<bottom>0</bottom>
+						<left>100</left>
+						<right>20</right>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<label>$VAR[ListLabel2Var]</label>
+						<textcolor>$VAR[MainColorVar]</textcolor>
+						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					</control>
+					<control type="image">
+						<left>21</left>
+						<centertop>50%</centertop>
+						<width>32</width>
+						<height>32</height>
+						<texture colordiffuse="$VAR[ImageColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
+					</control>
+					<control type="image">
+						<left>21</left>
+						<centertop>50%</centertop>
+						<width>32</width>
+						<height>32</height>
+						<texture colordiffuse="$VAR[MainColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
+						<animation effect="fade" time="150">VisibleChange</animation>
+						<visible>!Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+				</focusedlayout>
+				<itemlayout height="list_item_height">
+					<control type="label">
+						<left>70</left>
+						<right>70</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<label>$INFO[ListItem.Label]</label>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<right>20</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<label>$VAR[ListLabel2Var]</label>
+						<textcolor>$VAR[MainColorVar]</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+					</control>
+					<control type="image">
+						<left>21</left>
+						<centertop>50%</centertop>
+						<width>32</width>
+						<height>32</height>
+						<texture colordiffuse="$VAR[GreyColorVar]">$VAR[ListWatchedIconVar]</texture>
+					</control>
+				</itemlayout>
+			</control>
+		</definition>
+	</include>
+	<include name="ListThumbInfoPanel">
+		<param name="fallback_image"></param>
+		<param name="flip_bg">false</param>
+		<definition>
+			<control type="group">
+				<depth>DepthContentPanel</depth>
+				<include content="ContentPanel">
+					<param name="width" value="654" />
+					<param name="flipx" value="$PARAM[flip_bg]" />
+				</include>
+				<control type="group">
+					<visible>Container.Content(images)</visible>
+					<include content="PictureLayout">
+						<param name="top" value="140" />
+						<param name="left" value="30" />
+						<param name="width" value="530" />
+						<param name="height" value="470" />
+						<param name="img_height" value="100%" />
+						<param name="border" value="false" />
+						<param name="label" value="false" />
+					</include>
+					<control type="grouplist">
+						<left>20</left>
+						<top>620</top>
+						<width>570</width>
+						<height>400</height>
+						<orientation>vertical</orientation>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21820]"/>
+							<param name="value" value="ListItem.PictureDatetime" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21805]"/>
+							<param name="value" value="ListItem.PictureResolution" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21826]"/>
+							<param name="value" value="ListItem.PictureAperture" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21863]"/>
+							<param name="value" value="ListItem.PictureAuthor" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21867]"/>
+							<param name="value" value="ListItem.PictureByline" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21868]"/>
+							<param name="value" value="ListItem.PictureBylineTitle" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[31041]"/>
+							<param name="value" value="ListItem.PictureCamMake" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21823]"/>
+							<param name="value" value="ListItem.PictureCamModel" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21862]"/>
+							<param name="value" value="ListItem.PictureCaption" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21866]"/>
+							<param name="value" value="ListItem.PictureCategory" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21839]"/>
+							<param name="value" value="ListItem.PictureCCDWidth" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21873]"/>
+							<param name="value" value="ListItem.PictureCity" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21807]"/>
+							<param name="value" value="ListItem.PictureColour" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21839]"/>
+							<param name="value" value="ListItem.PictureComment" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21871]"/>
+							<param name="value" value="ListItem.PictureCopyrightNotice" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21875]"/>
+							<param name="value" value="ListItem.PictureCountry" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21879]"/>
+							<param name="value" value="ListItem.PictureCountryCode" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21869]"/>
+							<param name="value" value="ListItem.PictureCredit" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21821]"/>
+							<param name="value" value="ListItem.PictureDesc" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21838]"/>
+							<param name="value" value="ListItem.PictureDigitalZoom" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21832]"/>
+							<param name="value" value="ListItem.PictureExpMode" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21829]"/>
+							<param name="value" value="ListItem.PictureExposure" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21831]"/>
+							<param name="value" value="ListItem.PictureExposureBias" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21830]"/>
+							<param name="value" value="ListItem.PictureExpTime" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21833]"/>
+							<param name="value" value="ListItem.PictureFlashUsed" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21827]"/>
+							<param name="value" value="ListItem.PictureFocalLen" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21828]"/>
+							<param name="value" value="ListItem.PictureFocusDist" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21840]"/>
+							<param name="value" value="ListItem.PictureGPSLat" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21841]"/>
+							<param name="value" value="ListItem.PictureGPSLon" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21842]"/>
+							<param name="value" value="ListItem.PictureGPSAlt" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21864]"/>
+							<param name="value" value="ListItem.PictureHeadline" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21858]"/>
+							<param name="value" value="ListItem.PictureImageType" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21837]"/>
+							<param name="value" value="ListItem.PictureISO" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21861]"/>
+							<param name="value" value="ListItem.PictureKeywords" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21843]"/>
+							<param name="value" value="ListItem.PictureOrientation" />
+						</include>
+						<include content="PicsInfoLine">
+							<param name="label" value="$LOCALIZE[21808]"/>
+							<param name="value" value="ListItem.PictureProcess" />
+						</include>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					<include content="PosterLayout">
+						<param name="top" value="116" />
+						<param name="left" value="96" />
+						<param name="width" value="387" />
+						<param name="height" value="517" />
+						<param name="watched" value="false" />
+						<param name="border" value="false" />
+					</include>
+				</control>
+				<control type="group">
+					<visible>Container.Content(episodes) | Container.Content(musicvideos)</visible>
+					<include content="ThumbLayout">
+						<param name="top" value="140" />
+						<param name="left" value="30" />
+						<param name="width" value="530" />
+						<param name="height" value="470" />
+						<param name="img_height" value="100%" />
+						<param name="thumb_label" value="" />
+						<param name="watched" value="false" />
+						<param name="border" value="false" />
+						<param name="label" value="false" />
+						<param name="ratio" value="keep" />
+					</include>
+				</control>
+				<control type="group">
+					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+					<include content="SquareLayout">
+						<param name="fallback_image" value="DefaultMusicArtists.png" />
+						<param name="top" value="140" />
+						<param name="left" value="30" />
+						<param name="width" value="530" />
+						<param name="height" value="470" />
+						<param name="img_height" value="100%" />
+						<param name="border" value="false" />
+						<param name="label" value="false" />
+						<param name="istwolabel" value="false" />
+						<param name="ratio" value="keep" />
+					</include>
+				</control>
+				<control type="group">
+					<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+                    <include content="IconLayout">
+						<param name="top" value="140" />
+						<param name="left" value="30" />
+						<param name="width" value="530" />
+						<param name="height" value="470" />
+						<param name="img_height" value="100%" />
+						<param name="border" value="false" />
+						<param name="label" value="false" />
+						<param name="ratio" value="keep" />
+					</include>                                        
+				</control>
+				<control type="textbox" id="15500">
+					<left>30</left>
+					<top>640</top>
+					<width>525</width>
+					<bottom>117</bottom>
+					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+					<label>$VAR[ListBoxInfoVar]</label>
+					<visible>!Container.Content() | !String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+				<control type="group">
+					<left>20</left>
+					<top>640</top>
+					<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
+					<include content="InfoList">
+						<param name="bottom" value="100" />
+						<param name="width" value="540" />
+						<param name="sortby" value="year" />
+						<param name="sortorder" value="ascending" />
+						<param name="font" value="font13" />
+					</include>
+				</control>
+				<control type="group">
+					<visible>!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)</visible>
+					<control type="textbox">
+						<left>30</left>
+						<top>460</top>
+						<width>530</width>
+						<height>413</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<textcolor>80FFFFFF</textcolor>
+						<label>$LOCALIZE[19055]</label>
+						<visible>!ListItem.IsParentFolder</visible>
+						<visible>!Integer.IsGreater(Container(42000).NumItems,0) + !Integer.IsGreater(Container(43000).NumItems,0)</visible>
+						<visible>!Container.Content(images) | !String.IsEmpty(ListItem.Plot)</visible>
+					</control>
+					<control type="group">
+						<left>20</left>
+						<top>640</top>
+						<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						<include content="InfoList">
+							<param name="list_id" value="42000" />
+							<param name="bottom" value="100" />
+							<param name="width" value="540" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="ascending" />
+							<param name="item_label" value="$VAR[ListItemYearLabel2Var]$INFO[ListItem.Label]" />
+							<param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
+						</include>
+						<include content="InfoList">
+							<param name="list_id" value="43000" />
+							<param name="bottom" value="100" />
+							<param name="width" value="540" />
+							<param name="sortby" value="track" />
+							<param name="sortorder" value="ascending" />
+							<param name="item_label" value="$VAR[ListItemDurationLabel2Var]$INFO[ListItem.Label]" />
+							<param name="visible" value="String.IsEqual(ListItem.DBType,album)" />
+						</include>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="ViewClearList">
+		<include>ViewClearTop</include>
+		<control type="group">
+			<control type="wraplist" id="$PARAM[id]">
+				<top>495</top>
+				<left>-358</left>
+				<width>2736</width>
+				<height>230</height>
+				<onleft>$PARAM[id]</onleft>
+				<onright>$PARAM[id]</onright>
+				<ondown>5199</ondown>
+				<onup>9000</onup>
+				<pagecontrol>5199</pagecontrol>
+				<focusposition>3</focusposition>
+				<preloaditems>1</preloaditems>
+				<orientation>horizontal</orientation>
+				<viewtype label="$LOCALIZE[43201]">bigwide</viewtype>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<visible>$PARAM[condition]</visible>
+				<itemlayout height="230" width="378">
+					<control type="group">
+						<visible>$PARAM[noclear]</visible>
+						<control type="image">
+							<top>18</top>
+							<left>13</left>
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="image">
+							<top>18</top>
+							<left>13</left>
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>scale</aspectratio>
+							<texture colordiffuse="$VAR[ImageColorVar]">DefaultVideo.png</texture>
+							<visible>!ListItem.IsParentFolder + String.IsEmpty(ListItem.Art(fanart))</visible>
+						</control>
+						<control type="image">
+							<top>18</top>
+							<left>13</left>
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>scale</aspectratio>
+							<texture>$VAR[NoClearViewVar]</texture>
+							<visible>!ListItem.IsParentFolder + !String.IsEmpty(ListItem.Art(fanart))</visible>
+						</control>
+						<control type="image">
+							<top>162</top>
+							<left>13</left>
+							<width>344</width>
+							<height>50</height>
+							<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<top>181</top>
+							<left>13</left>
+							<width>344</width>
+							<height>30</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<font>font10</font>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</control>
+					<control type="image">
+						<top>22</top>
+						<left>20</left>
+						<height>186</height>
+						<width>330</width>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$PARAM[clear_icon]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="230" width="378">
+					<control type="group">
+						<visible>$PARAM[noclear]</visible>
+						<control type="image">
+							<top>18</top>
+							<left>13</left>
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="image">
+							<top>18</top>
+							<left>13</left>
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>scale</aspectratio>
+							<texture colordiffuse="$VAR[ImageColorVar]">DefaultVideo.png</texture>
+							<visible>!ListItem.IsParentFolder + String.IsEmpty(ListItem.Art(fanart))</visible>
+						</control>
+						<control type="image">
+							<top>18</top>
+							<left>13</left>
+							<width>344</width>
+							<height>194</height>
+							<aspectratio>scale</aspectratio>
+							<texture>$VAR[NoClearViewVar]</texture>
+							<visible>!ListItem.IsParentFolder + !String.IsEmpty(ListItem.Art(fanart))</visible>
+						</control>
+						<control type="image">
+							<top>162</top>
+							<left>13</left>
+							<width>344</width>
+							<height>50</height>
+							<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<top>181</top>
+							<left>13</left>
+							<width>344</width>
+							<height>30</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<font>font10</font>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</control>
+					<control type="image">
+						<top>22</top>
+						<left>20</left>
+						<height>186</height>
+						<width>330</width>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$PARAM[clear_icon]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+	<include name="ViewClearTop">
+		<control type="image">
+			<left>-500</left>
+			<right>-500</right>
+			<height>200</height>
+			<top>510</top>
+			<texture colordiffuse="bg_desc">dialogs/dialog-bg-nobo.png</texture>
+		</control>
+		<control type="image">
+			<left>766</left>
+			<width>390</width>
+			<height>240</height>
+			<top>490</top>
+			<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+			<bordersize>20</bordersize>
+			<include>Animation_FocusTextureFade</include>
+		</control>
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<top>20</top>
+			<height>430</height>
+			<visible>!ListItem.IsParentFolder</visible>
+			<control type="image">
+				<top>-20</top>
+				<centerleft>50%</centerleft>
+				<width>1700</width>
+				<height>470</height>
+				<texture border="22">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="group">
+				<depth>DepthContentPopout</depth>
+				<top>0</top>
+				<left>108</left>
+				<include content="PosterLayout">
+					<param name="border" value="true" />
+					<param name="width" value="308" />
+					<param name="height" value="448" />
+				</include>
+			</control>
+			<control type="image">
+				<depth>DepthContentPopout</depth>
+				<top>-10</top>
+				<left>1069</left>
+				<height>448</height>
+				<width>730</width>
+				<fadetime>300</fadetime>
+				<texture background="true" fallback="colors/black.png">$VAR[ListInfoBoxImageVar]</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="label">
+				<top>10</top>
+				<left>429</left>
+				<right>10</right>
+				<width>640</width>
+				<height>365</height>
+				<font>font13_title</font>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>ListItem.IsCollection</visible>
+			</control>
+			<control type="textbox">
+				<top>10</top>
+				<left>429</left>
+				<right>10</right>
+				<width>640</width>
+				<height>338</height>
+				<font>font12</font>
+				<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][/COLOR]$INFO[ListItem.Plot]</label>
+				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>!ListItem.IsCollection + String.IsEqual(ListItem.DBType,tvshow)</visible>
+			</control>
+			<control type="textbox">
+				<top>10</top>
+				<left>429</left>
+				<right>10</right>
+				<width>640</width>
+				<height>365</height>
+				<font>font12</font>
+				<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][/COLOR]$INFO[ListItem.Plot]</label>
+				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>!ListItem.IsCollection + !String.IsEqual(ListItem.DBType,tvshow)</visible>
+			</control>
+			<control type="textbox">
+				<top>10</top>
+				<left>429</left>
+				<right>10</right>
+				<width>640</width>
+				<height>365</height>
+				<align>center</align>
+				<font>font24_title</font>
+				<label>$LOCALIZE[19055]</label>
+				<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
+			</control>
+			<control type="group">
+				<top>60</top>
+				<left>429</left>
+				<visible>ListItem.IsCollection</visible>
+				<include content="InfoList">
+					<param name="height" value="305" />
+					<param name="width" value="640" />
+					<param name="item_width" value="640" />
+					<param name="sortby" value="year" />
+					<param name="sortorder" value="descending" />
+					<param name="font" value="font12" />
+					<param name="list_id" value="5600" />
+				</include>
+			</control>
+			<control type="label">
+				<bottom>40</bottom>
+				<left>429</left>
+				<right>10</right>
+				<width>640</width>
+				<height>30</height>
+				<scroll>true</scroll>
+				<font>font12</font>
+				<label>$VAR[ListItemStatusLabelVar]</label>
+				<visible>!String.IsEmpty(ListItem.Status)</visible>
+			</control>
+			<control type="label">
+				<bottom>11</bottom>
+				<left>429</left>
+				<right>10</right>
+				<width>640</width>
+				<height>30</height>
+				<scroll>true</scroll>
+				<font>font12</font>
+				<textcolor>$VAR[MainColorVar]</textcolor>
+				<label>$INFO[ListItem.Genre]</label>
+			</control>
+		</control>
+	</include>
+</includes>

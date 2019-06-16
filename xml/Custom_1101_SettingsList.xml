@@ -141,7 +141,7 @@
 						<width>700</width>
 						<include>DialogSettingButton</include>
 						<label>$LOCALIZE[13376]</label>
-						<label2>[COLOR grey]Select + Right Stick[/COLOR]</label2>
+						<label2>[COLOR $VAR[GreyColorVar]]Select + Right Stick[/COLOR]</label2>
 						<onclick>ActivateWindow(GameVolume)</onclick>
 					</control>
 					<control type="button" id="14103">

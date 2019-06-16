@@ -22,7 +22,7 @@
 				<bottom>0</bottom>
 				<width>100%</width>
 				<height>470</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
 			</control>
 			<control type="label" id="311">
 				<centerleft>50%</centerleft>
@@ -33,14 +33,14 @@
 				<label>$PARAM[header_label]</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			</control>
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<top>184</top>
 				<width>1542</width>
 				<height>100</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
 			</control>
 			<control type="image">
 				<centerleft>50%</centerleft>
@@ -595,7 +595,7 @@
 						<top>0</top>
 						<width>480</width>
 						<height>50</height>
-						<texture colordiffuse="dialog_tint">colors/white.png</texture>
+						<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
 					</control>
 					<control type="label">
 						<textoffsetx>30</textoffsetx>
@@ -604,7 +604,7 @@
 						<height>50</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font12</font>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<aligny>center</aligny>
 					</control>
 				</itemlayout>
@@ -615,7 +615,7 @@
 							<top>0</top>
 							<width>480</width>
 							<height>50</height>
-							<texture colordiffuse="dialog_tint">colors/white.png</texture>
+							<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -631,7 +631,7 @@
 							<height>50</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font12</font>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							<aligny>center</aligny>
 						</control>
 					</control>
@@ -644,7 +644,7 @@
 				<width>1480</width>
 				<height>90</height>
 				<font>font37</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 				<aligny>center</aligny>
 			</control>
 			<control type="group">
@@ -669,7 +669,7 @@
 					<width>1480</width>
 					<height>90</height>
 					<font>font37</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<aligny>center</aligny>
 				</control>
 			</control>

@@ -3,7 +3,7 @@
 	<defaultcontrol>211</defaultcontrol>
 	<onload>SetProperty(fanarthometype,settings,home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group" id="10000">
@@ -142,7 +142,7 @@
 				<control type="image" id="600">
 					<description>Separator image</description>
 					<height>3</height>
-					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 		        </control>
 				<control type="label" id="599">
 					<description>Disable Menu Item Label</description>
@@ -159,7 +159,7 @@
 				<control type="image" id="601">
 					<description>Separator Image</description>
 					<height>3</height>
-					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 		        </control>
 				<control type="button" id="308">
 					<description>Restore Shortcuts</description>
@@ -213,7 +213,7 @@
 						<top>1</top>
 						<width>95</width>
 						<height>95</height>
-						<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$VAR[GreyColorVar]">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>104</left>
@@ -224,8 +224,8 @@
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
-						<shadowcolor>text_shadow</shadowcolor>
-						<textcolor>white</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<textcolor>$VAR[WhiteColorVar]</textcolor>
 						<visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
 					<control type="label">
@@ -237,8 +237,8 @@
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
-						<shadowcolor>text_shadow</shadowcolor>
-						<textcolor>red</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<textcolor>$VAR[RedColorVar]</textcolor>
 						<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
 				</itemlayout>
@@ -266,7 +266,7 @@
 							<top>0</top>
 							<width>95</width>
 							<height>95</height>
-							<texture colordiffuse="51FFFFFF">colors/black.png</texture>
+							<texture colordiffuse="mbutton_overlay">colors/black.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(211)">Conditional</animation>
 						</control>
 					</control>
@@ -275,7 +275,7 @@
 						<top>1</top>
 						<width>95</width>
 						<height>95</height>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>104</left>
@@ -286,8 +286,8 @@
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
-						<shadowcolor>text_shadow</shadowcolor>
-						<textcolor>white</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<textcolor>$VAR[WhiteColorVar]</textcolor>
 						<visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
 					<control type="label">
@@ -299,8 +299,8 @@
 						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
-						<shadowcolor>text_shadow</shadowcolor>
-						<textcolor>red</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<textcolor>$VAR[RedColorVar]</textcolor>
 						<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 					</control>
 				</focusedlayout>
@@ -370,8 +370,7 @@
 			<height>100</height>
 			<font>font12</font>
 			<align>justify</align>
-			<textcolor>$VAR[MainColorVar]</textcolor>
-			<label>$INFO[Container(211).ListItem.Label]</label>
+			<label>[COLOR $VAR[MainColorVar]]$INFO[Container(211).ListItem.Label][/COLOR]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 		</control>
 	</controls>

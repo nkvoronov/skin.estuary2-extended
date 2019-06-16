@@ -805,7 +805,7 @@ msgid "Path:"
 msgstr ""
 
 msgctxt "#43005"
-msgid "Duration"
+msgid "Duration, s"
 msgstr ""
 
 msgctxt "#43006"
@@ -1141,7 +1141,7 @@ msgid "Enable Wall Backgrounds"
 msgstr ""
 
 msgctxt "#44115"
-msgid "Random Fanart Delay"
+msgid "Random Fanart Delay, s"
 msgstr ""
 
 msgctxt "#44116"
@@ -1178,4 +1178,84 @@ msgstr ""
 
 msgctxt "#44124"
 msgid "After launching KODI, move the focus of the main menu to"
+msgstr ""
+
+msgctxt "#44125"
+msgid "Addons options"
+msgstr ""
+
+msgctxt "#44126"
+msgid "Show Info At Playback Start, s"
+msgstr ""
+
+msgctxt "#44127"
+msgid "Auto Close Video OSD, s"
+msgstr ""
+
+msgctxt "#44128"
+msgid "Auto Close Music OSD, s"
+msgstr ""
+
+msgctxt "#44129"
+msgid "Enable Extra Posters"
+msgstr ""
+
+msgctxt "#44130"
+msgid "Enable Extra Fanarts"
+msgstr ""
+
+msgctxt "#44131"
+msgid "Enable PVR Thumbs"
+msgstr ""
+
+msgctxt "#44132"
+msgid "Enable Music Art"
+msgstr ""
+
+msgctxt "#44133"
+msgid "Enable Extended Art"
+msgstr ""
+
+msgctxt "#44134"
+msgid "Configure Artworks"
+msgstr ""
+
+msgctxt "#44135"
+msgid "Configure Backgrounds"
+msgstr ""
+
+msgctxt "#44136"
+msgid "Configure Widgets"
+msgstr ""
+
+msgctxt "#44137"
+msgid "Configure Backup"
+msgstr ""
+
+msgctxt "#44138"
+msgid "ClearLogo"
+msgstr ""
+
+msgctxt "#44139"
+msgid "Show In Main Menu"
+msgstr ""
+
+msgctxt "#44140"
+msgid "Show In Video Library"
+msgstr ""
+
+msgctxt "#44141"
+msgid "Show In Global Search"
+msgstr ""
+
+msgctxt "#44142"
+msgid "Show In Play Window"
+msgstr ""
+
+msgctxt "#44143"
+msgid "Show In Info Window"
+msgstr ""
+
+msgctxt "#44144"
+msgid "Additional colors"
 msgstr ""
