@@ -80,7 +80,7 @@
 					<control type="group">
 						<top>150</top>
 						<include content="SquareLayout">
-                            <param name="fallback_image" value="DefaultMusicArtists.png" />
+                            <param name="img_fallback" value="DefaultMusicArtists.png" />
 						</include>
 					</control>
 				</itemlayout>
@@ -91,8 +91,8 @@
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,350">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,350">UnFocus</animation>
 						<include content="SquareLayout">
-                            <param name="fallback_image" value="DefaultMusicArtists.png" />
-							<param name="focused" value="true" />
+                            <param name="focused" value="true" />
+                            <param name="img_fallback" value="DefaultMusicArtists.png" />					
 						</include>
 					</control>
 				</focusedlayout>
@@ -100,7 +100,7 @@
 					<control type="group">
 						<top>150</top>
 						<include content="SquareLayout">
-							<param name="fallback_image" value="DefaultAddon.png" />
+							<param name="img_fallback" value="DefaultAddon.png" />
 						</include>
 					</control>
 				</itemlayout>
@@ -111,8 +111,8 @@
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="150,350">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="150,350">UnFocus</animation>
 						<include content="SquareLayout">
-							<param name="fallback_image" value="DefaultAddon.png" />
-							<param name="focused" value="true" />
+                            <param name="focused" value="true" />
+							<param name="img_fallback" value="DefaultAddon.png" />							
 						</include>
 					</control>
 				</focusedlayout>

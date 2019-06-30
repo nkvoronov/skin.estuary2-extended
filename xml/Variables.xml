@@ -696,17 +696,20 @@
 		<value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.transparent/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
 		<value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.xzener-flat/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-flat/,.png]</value>
 		<value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.xzener-reflection/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-reflection/,.png]</value>
+        <value condition="String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.users/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.users/,.png]</value>
 		<value>DefaultGenre.png</value>
 	</variable>
 	<variable name="WidgetMusicGenreIconVar">
 		<value condition="String.IsEqual(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.grey/)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.grey/,.jpg]</value>
 		<value condition="String.IsEqual(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.poster/)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.poster/,.jpg]</value>
 		<value condition="String.IsEqual(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.text/)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.text/,.jpg]</value>
+        <value condition="String.IsEqual(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.users/)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.users/,.png]</value>
 		<value>DefaultMusicGenres.png</value>
 	</variable>
 	<variable name="WidgetStudioIconVar">
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
+        <value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.users/)">$INFO[ListItem.Label,resource://resource.images.studios.users/,.png]</value>
 		<value>DefaultStudios.png</value>
 	</variable>
 	<variable name="MediaFlagsSearchStudioIconVar">
@@ -715,6 +718,7 @@
 	</variable>
 	<variable name="WidgetCountryIconVar">
 		<value condition="String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.png]</value>
+        <value condition="String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.users/)">$INFO[ListItem.Label,resource://resource.images.languageflags.users/,.png]</value>
 		<value>DefaultCountry.png</value>
 	</variable>
 	<variable name="InfoDialogPosterVar">

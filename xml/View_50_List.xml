@@ -38,8 +38,8 @@
                         <param name="left" value="15" />					
                         <param name="width" value="607" />
                         <param name="height" value="883" />
-                        <param name="watched" value="false" />
                         <param name="border" value="false" />
+                        <param name="watched" value="false" />                       
                     </include>
 				</control>
 			</control>

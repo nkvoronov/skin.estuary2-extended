@@ -70,7 +70,7 @@
                                 <param name="width" value="344" />
                                 <param name="height" value="484" />
                                 <param name="img_height" value="97%" />
-                                <param name="label" value="false" />
+                                <param name="txt_label" value="false" />
                             </include>
 						</control>
 						<control type="group">
@@ -84,16 +84,16 @@
 						</control>
 						<control type="group">
 							<visible>Container.Content(artists) | Container.Content(albums)</visible>
-                            <include content="SquareLayout">
-                                <param name="fallback_image" value="DefaultMusicArtists.png" />
+                            <include content="SquareLayout">                                
                                 <param name="top" value="88" />
                                 <param name="left" value="13" />
                                 <param name="width" value="344" />
                                 <param name="height" value="484" />
-                                <param name="img_height" value="97%" />
-                                <param name="label" value="false" />
                                 <param name="istwolabel" value="false" />
-                                <param name="ratio" value="keep" />
+                                <param name="img_fallback" value="DefaultMusicArtists.png" />
+                                <param name="img_height" value="97%" />
+                                <param name="img_ratio" value="keep" />
+                                <param name="txt_label" value="false" />                               
                             </include>
 						</control>
 						<control type="group">
@@ -148,9 +148,9 @@
                                 <param name="left" value="13" />
                                 <param name="width" value="344" />
                                 <param name="height" value="484" />
-                                <param name="img_height" value="97%" />
-                                <param name="label" value="false" />
                                 <param name="focused" value="true" />
+                                <param name="img_height" value="97%" />
+                                <param name="txt_label" value="false" />                                
                             </include>
 						</control>
 						<control type="group">
@@ -166,17 +166,17 @@
 						</control>
 						<control type="group">
 							<visible>Container.Content(artists) | Container.Content(albums)</visible>
-                            <include content="SquareLayout">
-                                <param name="fallback_image" value="DefaultMusicArtists.png" />
+                            <include content="SquareLayout">                                
                                 <param name="top" value="88" />
                                 <param name="left" value="13" />
                                 <param name="width" value="344" />
                                 <param name="height" value="484" />
-                                <param name="img_height" value="97%" />
-                                <param name="label" value="false" />
-                                <param name="istwolabel" value="false" />
-                                <param name="ratio" value="keep" />
                                 <param name="focused" value="true" />
+                                <param name="istwolabel" value="false" />
+                                <param name="img_fallback" value="DefaultMusicArtists.png" />
+                                <param name="img_height" value="97%" />
+                                <param name="img_ratio" value="keep" />
+                                <param name="txt_label" value="false" />                                
                             </include>
 						</control>
 						<control type="group">

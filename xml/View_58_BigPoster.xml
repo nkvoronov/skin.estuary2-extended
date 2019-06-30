@@ -73,12 +73,12 @@
                                             <param name="left" value="-8" />
                                             <param name="top" value="-8" />
                                             <param name="width" value="500" />
-                                            <param name="height" value="300" />
-                                            <param name="img_height" value="100%" />
+                                            <param name="height" value="300" />                                            
                                             <param name="border" value="false" />
-                                            <param name="label" value="false" />
-                                            <param name="thumb_label" value="" />
                                             <param name="watched_bottom" value="12" />
+                                            <param name="thumb_label" value="" />
+                                            <param name="img_height" value="100%" />
+                                            <param name="txt_label" value="false" />                                            
                                         </include>
                                         <control type="label">
                                             <top>290</top>
@@ -114,8 +114,8 @@
                                             <param name="top" value="-8" />
                                             <param name="width" value="500" />
                                             <param name="height" value="650" />
-                                            <param name="img_height" value="100%" />
                                             <param name="border" value="false" />
+                                            <param name="img_height" value="100%" />                                            
                                         </include>
                                     </control>
                                 </control>
@@ -157,11 +157,11 @@
                                             <param name="top" value="-8" />
                                             <param name="width" value="500" />
                                             <param name="height" value="300" />
-                                            <param name="img_height" value="100%" />
                                             <param name="border" value="false" />
-                                            <param name="label" value="false" />
-                                            <param name="thumb_label" value="" />
                                             <param name="watched_bottom" value="12" />
+                                            <param name="thumb_label" value="" />
+                                            <param name="img_height" value="100%" />                                            
+                                            <param name="txt_label" value="false" />                                            
                                         </include>
                                         <control type="label">
                                             <top>290</top>
@@ -195,8 +195,8 @@
                                             <param name="top" value="-8" />
                                             <param name="width" value="500" />
                                             <param name="height" value="650" />
-                                            <param name="img_height" value="100%" />
                                             <param name="border" value="false" />
+                                            <param name="img_height" value="100%" />                                            
                                         </include>
                                     </control>
                                 </control>
@@ -223,16 +223,16 @@
                                     <height>655</height>
                                     <control type="group">
                                         <visible>!ListItem.IsParentFolder</visible>
-                                        <include content="SquareLayout">
-                                            <param name="fallback_image" value="DefaultMusicArtists.png" />
+                                        <include content="SquareLayout">                                            
                                             <param name="left" value="-8" />
                                             <param name="top" value="-8" />
                                             <param name="width" value="500" />
                                             <param name="height" value="475" />
-                                            <param name="img_height" value="100%" />
                                             <param name="border" value="false" />
-                                            <param name="label" value="false" />
                                             <param name="istwolabel" value="false" />
+                                            <param name="img_fallback" value="DefaultMusicArtists.png" />
+                                            <param name="img_height" value="100%" />                                            
+                                            <param name="txt_label" value="false" />                                            
                                         </include>
                                         <control type="textbox">
                                             <left>20</left>
@@ -267,14 +267,14 @@
                                     </control>
                                     <control type="group">
                                         <visible>ListItem.IsParentFolder</visible>
-                                        <include content="SquareLayout">
-                                            <param name="fallback_image" value="DefaultMusicArtists.png" />
+                                        <include content="SquareLayout">                                            
                                             <param name="left" value="-8" />
                                             <param name="top" value="-8" />
                                             <param name="width" value="500" />
                                             <param name="height" value="650" />
-                                            <param name="img_height" value="100%" />
                                             <param name="border" value="false" />
+                                            <param name="img_fallback" value="DefaultMusicArtists.png" />
+                                            <param name="img_height" value="100%" />                                            
                                         </include>
                                     </control>
                                 </control>
@@ -311,16 +311,16 @@
                                     <height>655</height>
                                     <control type="group">
                                         <visible>!ListItem.IsParentFolder</visible>
-                                        <include content="SquareLayout">
-                                            <param name="fallback_image" value="DefaultMusicArtists.png" />
+                                        <include content="SquareLayout">                                            
                                             <param name="left" value="-8" />
                                             <param name="top" value="-8" />
                                             <param name="width" value="500" />
                                             <param name="height" value="475" />
-                                            <param name="img_height" value="100%" />
                                             <param name="border" value="false" />
-                                            <param name="label" value="false" />
                                             <param name="istwolabel" value="false" />
+                                            <param name="img_fallback" value="DefaultMusicArtists.png" />
+                                            <param name="img_height" value="100%" />                                            
+                                            <param name="txt_label" value="false" />                                            
                                         </include>
                                         <control type="textbox">
                                             <left>20</left>
@@ -355,14 +355,14 @@
                                     </control>
                                     <control type="group">
                                         <visible>ListItem.IsParentFolder</visible>
-                                        <include content="SquareLayout">
-                                            <param name="fallback_image" value="DefaultMusicArtists.png" />
+                                        <include content="SquareLayout">                                            
                                             <param name="left" value="-8" />
                                             <param name="top" value="-8" />
                                             <param name="width" value="500" />
                                             <param name="height" value="650" />
-                                            <param name="img_height" value="100%" />
                                             <param name="border" value="false" />
+                                            <param name="img_fallback" value="DefaultMusicArtists.png" />
+                                            <param name="img_height" value="100%" />                                            
                                         </include>
                                     </control>
                                 </control>

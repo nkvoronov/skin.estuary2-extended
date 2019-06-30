@@ -23,7 +23,7 @@
 					<control type="group">
 						<top>150</top>
                         <include content="IconLayout">
-                            <param name="fallback_image" value="DefaultFolder.png" />
+                            <param name="img_fallback" value="DefaultFolder.png" />
                         </include>
 					</control>
 				</itemlayout>
@@ -38,8 +38,8 @@
 						</animation>
 						<top>150</top>
                         <include content="IconLayout">
-                            <param name="fallback_image" value="DefaultFolder.png" />
                             <param name="focused" value="true" />
+                            <param name="img_fallback" value="DefaultFolder.png" />                            
                         </include>
 					</control>
 				</focusedlayout>

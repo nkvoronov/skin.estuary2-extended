@@ -87,7 +87,7 @@
 						<top>150</top>
 						<left>40</left>
 						<include content="SquareLayout">
-                            <param name="fallback_image" value="DefaultMusicArtists.png" />
+                            <param name="img_fallback" value="DefaultMusicArtists.png" />
 						</include>
 					</control>
 				</itemlayout>
@@ -99,8 +99,8 @@
 						<top>150</top>
 						<left>40</left>
 						<include content="SquareLayout">
-                            <param name="fallback_image" value="DefaultMusicArtists.png" />
-							<param name="focused" value="true" />
+                            <param name="focused" value="true" />
+                            <param name="img_fallback" value="DefaultMusicArtists.png" />							
 						</include>
 					</control>
 				</focusedlayout>

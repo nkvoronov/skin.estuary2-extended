@@ -259,13 +259,13 @@
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
 						<top>120</top>
-						<include content="PosterLayout">							
+						<include content="PosterLayout">
+                            <param name="focused" value="true" />
 							<param name="istvshows" value="String.IsEqual(ListItem.Property(content),tvshows)" />
 							<param name="percentplayed" value="ListItem.Property(percentplayed)" />
 							<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-                            <param name="focused" value="true" />
+							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>                            
 						</include>
 					</control>
 				</focusedlayout>

@@ -46,7 +46,7 @@
 					<control type="group">
 						<top>10</top>
 						<include content="SquareLayout">
-							<param name="fallback_image" value="DefaultFavourites.png" />
+							<param name="img_fallback" value="DefaultFavourites.png" />
 						</include>
 					</control>
 				</itemlayout>
@@ -54,8 +54,8 @@
 					<control type="group">
 						<top>10</top>
 						<include content="SquareLayout">
-							<param name="fallback_image" value="DefaultFavourites.png" />
-							<param name="focused" value="true" />
+                            <param name="focused" value="true" />
+							<param name="img_fallback" value="DefaultFavourites.png" />							
 						</include>
 					</control>
 				</focusedlayout>

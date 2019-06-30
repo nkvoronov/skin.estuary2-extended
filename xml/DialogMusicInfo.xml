@@ -16,11 +16,11 @@
                 <include>OpenClose_Left</include>
                 <include content="SquareLayout">			
 					<param name="width" value="614" />
-					<param name="height" value="614" />
-                    <param name="img_height">97%</param>
-                    <param name="label" value="false" />
+					<param name="height" value="614" />                   
+                    <param name="rating" value="false" /> 
                     <param name="istwolabel" value="false" />
-                    <param name="rating" value="false" />
+                    <param name="img_height" value="97%" />
+                    <param name="txt_label" value="false" />
 				</include>
 			</control>
 			<control type="group">
