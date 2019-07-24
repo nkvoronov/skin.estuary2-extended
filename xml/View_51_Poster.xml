@@ -122,17 +122,19 @@
 			</control>
 		</control>
 		<control type="group">
-            <depth>DepthContentPopout</depth>
+			<depth>DepthContentPopout</depth>
 			<top>200</top>
 			<height>670</height>
-			<left>70</left>			
+			<left>70</left>
 			<visible>Control.IsVisible(51)</visible>
 			<include>OpenClose_Left</include>
 			<include>Visible_Left</include>
 			<include content="PosterLayout">
 				<param name="width" value="524" />
 				<param name="height" value="764" />
-                <param name="focused"value="true" />
+				<param name="focused"value="true" />
+				<param name="img_height" value="97%" />
+				<param name="txt_label" value="false" />
 			</include>
 		</control>
 	</include>

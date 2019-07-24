@@ -34,7 +34,7 @@
 				<left>330</left>
 				<right>400</right>
 				<aligny>center</aligny>
-				<visible>!Skin.HasSetting(hide_logo_play)</visible>                
+				<visible>!Skin.HasSetting(hide_logo_play)</visible>
 				<visible>!String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
 			</control>
 			<control type="group">

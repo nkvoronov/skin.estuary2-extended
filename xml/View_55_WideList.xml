@@ -64,7 +64,6 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$VAR[ListLabel2Var]</label>
-                        <textcolor>$VAR[MainColorVar]</textcolor>
 						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 				</focusedlayout>

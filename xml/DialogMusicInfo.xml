@@ -10,17 +10,17 @@
 			<centerleft>50%</centerleft>
 			<width>1920</width>
 			<control type="group">
-                <depth>DepthContentPopout</depth>				
+				<depth>DepthContentPopout</depth>
 				<top>158</top>
 				<left>40</left>
-                <include>OpenClose_Left</include>
-                <include content="SquareLayout">			
+				<include>OpenClose_Left</include>
+				<include content="SquareLayout">
 					<param name="width" value="614" />
-					<param name="height" value="614" />                   
-                    <param name="rating" value="false" /> 
-                    <param name="istwolabel" value="false" />
-                    <param name="img_height" value="97%" />
-                    <param name="txt_label" value="false" />
+					<param name="height" value="614" />
+					<param name="rating" value="false" />
+					<param name="istwolabel" value="false" />
+					<param name="img_height" value="97%" />
+					<param name="txt_label" value="false" />
 				</include>
 			</control>
 			<control type="group">
@@ -32,7 +32,7 @@
 					<height>140</height>
 					<texture>$VAR[ListItemClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
-                    <visible>!Skin.HasSetting(hide_logo_info)</visible>
+					<visible>!Skin.HasSetting(hide_logo_info)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -453,11 +453,11 @@
 					<param name="id" value="33334" />
 				</include>
 				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hide_logo_info)">
-                    <param name="posx" value="400" />
+					<param name="posx" value="400" />
 					<param name="main_label" value="$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
 					<param name="sub_label" value="$INFO[ListItem.Artist]" />
 					<param name="id" value="33334" />
-				</include>                
+				</include>
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicinformation)</visible>
@@ -467,11 +467,11 @@
 					<param name="id" value="33335" />
 				</include>
 				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hide_logo_info)">
-                    <param name="posx" value="400" />
+					<param name="posx" value="400" />
 					<param name="main_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber,,. ][/COLOR]$INFO[ListItem.Title]" />
 					<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album] $VAR[ListItemYearLabelVar]" />
 					<param name="id" value="33335" />
-				</include>                
+				</include>
 			</control>
 		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>

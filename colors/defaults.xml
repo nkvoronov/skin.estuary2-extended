@@ -14,22 +14,23 @@
 	<color name="disabled">40FFFFFF</color>
 	<color name="selected">FF11E7B1</color>
 	<color name="invalid">FFFF0000</color>
-    <color name="bg_image">CCFFFFFF</color>    
-    <!-- NEW -->
+	<color name="bg_image">CCFFFFFF</color>
+	<!-- NEW -->
 	<color name="scrollbar">FFAAAAAA</color>
 	<color name="scrollbar_background">29FFFFFF</color>
-    <color name="separator">AAAAAAAA</color>
-    <color name="rssheader">FFC0C0C0</color>
-    <color name="img_color">FFF0F0F0</color>
-    <color name="videoinfopatch">99FFFFFF</color>    
-    <!-- HOW USED? -->
-	<color name="bg_overlay">30FFFFFF</color>    
-    <color name="mbutton_overlay">51FFFFFF</color> 
+	<color name="separator">AAAAAAAA</color>
+	<color name="rssheader">FFC0C0C0</color>
+	<color name="img_color">FFF0F0F0</color>
+	<color name="videoinfopatch">99FFFFFF</color>
+	<!-- TRANSPERENCY -->
+	<color name="bg_overlay">30FFFFFF</color>
+	<color name="mbutton_overlay">51FFFFFF</color>
 	<color name="border_alpha">60FFFFFF</color>
-    <!-- OTHER? -->
-    <color name="bg_desc">E6FFFFFF</color>    
+	<!-- OTHER -->
+	<color name="bg_desc">E6FFFFFF</color>
 	<color name="bg_numeric">32FFFFFF</color>
-    <color name="bg_videoinfo">AAFFFFFF</color>
-    <color name="bg_videoinfo2">FF555555</color>
-    <color name="scrollbar_background2">22FFFFFF</color>
+	<color name="bg_videoinfo">AAFFFFFF</color>
+	<color name="scrollbar_background2">22FFFFFF</color>
+	<!-- -->
+	<color name="bg_videoinfo2">FF555555</color>
 </colors>

@@ -64,71 +64,39 @@
 					<itemlayout width="370">
 						<control type="group">
 							<visible>Container.Content(images)</visible>
-                            <include content="PictureLayout">
-                                <param name="top" value="88" />
-                                <param name="left" value="13" />
-                                <param name="width" value="344" />
-                                <param name="height" value="484" />
-                                <param name="img_height" value="97%" />
-                                <param name="txt_label" value="false" />
-                            </include>
+							<include content="PictureLayout">
+								<param name="top" value="88" />
+								<param name="left" value="13" />
+								<param name="width" value="344" />
+								<param name="height" value="484" />
+								<param name="img_height" value="97%" />
+								<param name="txt_label" value="false" />
+							</include>
 						</control>
 						<control type="group">
 							<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-                            <include content="PosterLayout">
-                                <param name="top" value="88" />
-                                <param name="left" value="13" />
-                                <param name="width" value="344" />
-                                <param name="height" value="484" />
-                            </include>
+							<include content="PosterLayout">
+								<param name="top" value="88" />
+								<param name="left" value="13" />
+								<param name="width" value="344" />
+								<param name="height" value="484" />
+								<param name="img_height" value="97%" />
+								<param name="txt_label" value="false" />
+							</include>
 						</control>
 						<control type="group">
-							<visible>Container.Content(artists) | Container.Content(albums)</visible>
-                            <include content="SquareLayout">                                
-                                <param name="top" value="88" />
-                                <param name="left" value="13" />
-                                <param name="width" value="344" />
-                                <param name="height" value="484" />
-                                <param name="istwolabel" value="false" />
-                                <param name="img_fallback" value="DefaultMusicArtists.png" />
-                                <param name="img_height" value="97%" />
-                                <param name="img_ratio" value="keep" />
-                                <param name="txt_label" value="false" />                               
-                            </include>
-						</control>
-						<control type="group">
-							<visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(images) | Container.Content(artists) | Container.Content(albums)]</visible>
-							<control type="image">
-								<left>0</left>
-								<top>90</top>
-								<width>370</width>
-								<height>480</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
-							<control type="image">
-								<depth>DepthContentPopout</depth>
-								<left>0</left>
-								<top>90</top>
-								<width>370</width>
-								<height>480</height>
-								<aspectratio aligny="center">keep</aspectratio>
-								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-								<bordersize>25</bordersize>
-                                <visible>!ListItem.IsParentFolder</visible>
-							</control>
-							<control type="image">
-								<depth>DepthContentPopout</depth>
-								<left>0</left>
-								<top>90</top>
-								<width>370</width>
-								<height>480</height>
-								<aspectratio aligny="center">keep</aspectratio>
-								<texture fallback="DefaultVideo.png" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
-								<bordersize>25</bordersize>
-								<visible>ListItem.IsParentFolder</visible>
-							</control>
+							<visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(images)]</visible>
+							<include content="SquareLayout">
+								<param name="top" value="88" />
+								<param name="left" value="13" />
+								<param name="width" value="344" />
+								<param name="height" value="484" />
+								<param name="istwolabel" value="false" />
+								<param name="img_fallback" value="DefaultMusicArtists.png" />
+								<param name="img_height" value="97%" />
+								<param name="img_ratio" value="keep" />
+								<param name="txt_label" value="false" />
+							</include>
 						</control>
 						<control type="textbox">
 							<left>20</left>
@@ -141,77 +109,45 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="370">
+						<depth>DepthContentPopout</depth>
 						<control type="group">
 							<visible>Container.Content(images)</visible>
-                            <include content="PictureLayout">
-                                <param name="top" value="88" />
-                                <param name="left" value="13" />
-                                <param name="width" value="344" />
-                                <param name="height" value="484" />
-                                <param name="focused" value="true" />
-                                <param name="img_height" value="97%" />
-                                <param name="txt_label" value="false" />                                
-                            </include>
+							<include content="PictureLayout">
+								<param name="top" value="88" />
+								<param name="left" value="13" />
+								<param name="width" value="344" />
+								<param name="height" value="484" />
+								<param name="focused" value="true" />
+								<param name="img_height" value="97%" />
+								<param name="txt_label" value="false" />
+							</include>
 						</control>
 						<control type="group">
 							<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-                            <depth>DepthContentPopout</depth>
-                            <include content="PosterLayout">
-                                <param name="top" value="88" />
-                                <param name="left" value="13" />
-                                <param name="width" value="344" />
-                                <param name="height" value="484" />
-                                <param name="focused" value="true" />
-                            </include>
+							<include content="PosterLayout">
+								<param name="top" value="88" />
+								<param name="left" value="13" />
+								<param name="width" value="344" />
+								<param name="height" value="484" />
+								<param name="focused" value="true" />
+								<param name="img_height" value="97%" />
+								<param name="txt_label" value="false" />
+							</include>
 						</control>
 						<control type="group">
-							<visible>Container.Content(artists) | Container.Content(albums)</visible>
-                            <include content="SquareLayout">                                
-                                <param name="top" value="88" />
-                                <param name="left" value="13" />
-                                <param name="width" value="344" />
-                                <param name="height" value="484" />
-                                <param name="focused" value="true" />
-                                <param name="istwolabel" value="false" />
-                                <param name="img_fallback" value="DefaultMusicArtists.png" />
-                                <param name="img_height" value="97%" />
-                                <param name="img_ratio" value="keep" />
-                                <param name="txt_label" value="false" />                                
-                            </include>
-						</control>
-						<control type="group">
-							<visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(images) | Container.Content(artists) | Container.Content(albums)]</visible>
-							<control type="image">
-								<left>0</left>
-								<top>90</top>
-								<width>370</width>
-								<height>480</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
-							<control type="image">
-								<depth>DepthContentPopout</depth>
-								<left>0</left>
-								<top>90</top>
-								<width>370</width>
-								<height>480</height>
-								<aspectratio aligny="center">keep</aspectratio>
-								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-								<bordersize>25</bordersize>
-                                <visible>!ListItem.IsParentFolder</visible>
-							</control>
-							<control type="image">
-								<depth>DepthContentPopout</depth>
-								<left>0</left>
-								<top>90</top>
-								<width>370</width>
-								<height>480</height>
-								<aspectratio aligny="center">keep</aspectratio>
-								<texture fallback="DefaultVideo.png" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
-								<bordersize>25</bordersize>
-								<visible>ListItem.IsParentFolder</visible>
-							</control>
+							<visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(images)]</visible>
+							<include content="SquareLayout">
+								<param name="top" value="88" />
+								<param name="left" value="13" />
+								<param name="width" value="344" />
+								<param name="height" value="484" />
+								<param name="focused" value="true" />
+								<param name="istwolabel" value="false" />
+								<param name="img_fallback" value="DefaultMusicArtists.png" />
+								<param name="img_height" value="97%" />
+								<param name="img_ratio" value="keep" />
+								<param name="txt_label" value="false" />
+							</include>
 						</control>
 						<control type="textbox">
 							<left>20</left>
@@ -221,7 +157,6 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 						</control>
 					</focusedlayout>
 				</control>

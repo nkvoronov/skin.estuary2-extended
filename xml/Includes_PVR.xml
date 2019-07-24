@@ -321,7 +321,7 @@
 		</control>
 	</include>
 	<include name="PVRInfo2Panel">
-        <param name="visible">true</param>
+		<param name="visible">true</param>
 		<definition>
 			<control type="group">
 				<bottom>30</bottom>
@@ -359,7 +359,7 @@
 						<height>30</height>
 						<align>right</align>
 						<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
-                        <visible>!String.IsEmpty(ListItem.Genre)</visible>
+						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 					</control>
 				</control>
 				<control type="textbox">
@@ -370,12 +370,12 @@
 					<align>justify</align>
 					<label>$VAR[ListItemSeasonXEpisodeLabelVar]$INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
 					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-                    <visible>!String.IsEmpty(ListItem.Plot)</visible>
+					<visible>!String.IsEmpty(ListItem.Plot)</visible>
 				</control>
-			</control>        
-        </definition>
-    </include>
-    <include name="RDSInfoLine">
+			</control>
+		</definition>
+	</include>
+	<include name="RDSInfoLine">
 		<control type="grouplist">
 			<visible>!String.IsEmpty($PARAM[value])</visible>
 			<height>45</height>

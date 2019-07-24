@@ -70,7 +70,7 @@
 					<urlset>1</urlset>
 					<hitrect x="-100" y="0" w="1" h="1" />
 					<titlecolor>$VAR[MainColorVar]</titlecolor>
-                    <textcolor>$VAR[MainColorVar]</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					<headlinecolor>$VAR[RssHeaderColorVar]</headlinecolor>
 					<visible>Skin.HasSetting(hide_mediaflags_home) | !ControlGroup(2000).HasFocus</visible>

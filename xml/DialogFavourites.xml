@@ -47,6 +47,7 @@
 						<top>10</top>
 						<include content="SquareLayout">
 							<param name="img_fallback" value="DefaultFavourites.png" />
+                            <param name="img_ratio" value="keep" />
 						</include>
 					</control>
 				</itemlayout>
@@ -55,7 +56,8 @@
 						<top>10</top>
 						<include content="SquareLayout">
                             <param name="focused" value="true" />
-							<param name="img_fallback" value="DefaultFavourites.png" />							
+							<param name="img_fallback" value="DefaultFavourites.png" />
+                            <param name="img_ratio" value="keep" />
 						</include>
 					</control>
 				</focusedlayout>

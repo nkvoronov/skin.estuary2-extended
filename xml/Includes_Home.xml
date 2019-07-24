@@ -42,18 +42,18 @@
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultAddon.png"/>
+			<param name="img_fallback" value="DefaultAddon.png"/>
 			<param name="sortby" value="lastused"/>
-			<param name="sortorder" value="descending"/>			
+			<param name="sortorder" value="descending"/>
 		</include>
 	</include>
 	<include name="Widget-AddonsCustom">
 		<include content="Widget-Square">
-            <param name="custom" value="true"/>
+			<param name="custom" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-			<param name="img_fallback" value="DefaultAddon.png"/>            
+			<param name="img_fallback" value="DefaultAddon.png"/>
 		</include>
 	</include>
 	<include name="Widget-TVTimers">
@@ -119,29 +119,29 @@
 		</control>
 	</include>
 	<include name="Widget-PVRChannels">
-		<include content="Widget-Channels">			
+		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
 			<param name="sortby" value="lastplayed"/>
 			<param name="sortorder" value="descending"/>
-            <param name="visible" value="System.HasPVRAddon"/>            
+			<param name="visible" value="System.HasPVRAddon"/>
 		</include>
 	</include>
 	<include name="Widget-PVRChannelsCustom">
 		<include content="Widget-Channels">
-            <param name="visible" value="System.HasPVRAddon"/>
+			<param name="visible" value="System.HasPVRAddon"/>
 			<param name="custom" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-			<param name="label2" value="$INFO[ListItem.Property(Title)]"/>                        
+			<param name="label2" value="$INFO[ListItem.Property(Title)]"/>
 		</include>
 	</include>
 	<include name="Widget-PVRRecordings">
 		<include content="Widget-Channels">
-            <param name="visible" value="System.HasPVRAddon"/>
+			<param name="visible" value="System.HasPVRAddon"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
@@ -149,19 +149,19 @@
 			<param name="label" value="$INFO[ListItem.ChannelName]"/>
 			<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
 			<param name="sortby" value="date"/>
-			<param name="sortorder" value="descending"/>            
+			<param name="sortorder" value="descending"/>
 		</include>
 	</include>
 	<include name="Widget-Movies">
 		<include content="Widget-Posters">
-            <param name="homebackground" value="false"/>
+			<param name="homebackground" value="false"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultMovies.png" />
+			<param name="img_fallback" value="DefaultMovies.png" />
 			<param name="sortby" value="$PARAM[sortby]"/>
-			<param name="sortorder" value="$PARAM[sortorder]"/>			
+			<param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-TVShows">
@@ -170,18 +170,18 @@
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultTVShows.png" />
+			<param name="img_fallback" value="DefaultTVShows.png" />
 			<param name="sortby" value="$PARAM[sortby]"/>
-			<param name="sortorder" value="$PARAM[sortorder]"/>			
+			<param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-Episodes">
 		<include content="Widget-Thumbs">
-            <param name="homebackground" value="false"/>
+			<param name="homebackground" value="false"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
-			<param name="list_id" value="$PARAM[list_id]"/>            
+			<param name="list_id" value="$PARAM[list_id]"/>
 			<param name="img_fallback" value="DefaultTVShows.png" />
 		</include>
 	</include>
@@ -203,9 +203,9 @@
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultMusicAlbums.png"/>
+			<param name="img_fallback" value="DefaultMusicAlbums.png"/>
 			<param name="sortby" value="$PARAM[sortby]"/>
-			<param name="sortorder" value="$PARAM[sortorder]"/>			
+			<param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-Artists">
@@ -214,21 +214,21 @@
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultMusicArtists.png"/>
+			<param name="img_fallback" value="DefaultMusicArtists.png"/>
 			<param name="sortby" value="$PARAM[sortby]"/>
-			<param name="sortorder" value="$PARAM[sortorder]"/>			
+			<param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-Songs">
 		<include content="Widget-Square">
-            <param name="homebackground" value="false"/>
+			<param name="homebackground" value="false"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultMusicSongs.png"/>
+			<param name="img_fallback" value="DefaultMusicSongs.png"/>
 			<param name="sortby" value="$PARAM[sortby]"/>
-			<param name="sortorder" value="$PARAM[sortorder]"/>			
+			<param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-Mixed">
@@ -237,19 +237,19 @@
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultMusicAlbums.png"/>
+			<param name="img_fallback" value="DefaultMusicAlbums.png"/>
 			<param name="sortby" value="$PARAM[sortby]"/>
-			<param name="sortorder" value="$PARAM[sortorder]"/>			
+			<param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-FavouritesList">
 		<include content="Widget-Square">
-            <param name="favourites" value="true"/>
+			<param name="favourites" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
-			<param name="list_id" value="$PARAM[list_id]"/>            
-			<param name="img_fallback" value="DefaultFavourites.png"/>			
+			<param name="list_id" value="$PARAM[list_id]"/>
+			<param name="img_fallback" value="DefaultFavourites.png"/>
 		</include>
 	</include>
 	<include name="Widget-FavouritesFull">
@@ -258,7 +258,7 @@
 		</include>
 	</include>
 	<include name="Widget-Playlists">
-		<include content="Widget-Categories">			
+		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
@@ -267,52 +267,52 @@
 		</include>
 	</include>
 	<include name="Widget-Source">
-		<include content="Widget-Categories">			
+		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultFolder.png"/>
+			<param name="img_fallback" value="DefaultFolder.png"/>
 		</include>
 	</include>
 	<include name="Widget-MovieGenres">
-		<include content="Widget-Categories">			
+		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultGenre.png"/>
-			<param name="img_source" value="$VAR[IconGenreVar]"/>			
+			<param name="img_fallback" value="DefaultGenre.png"/>
+			<param name="img_source" value="$VAR[IconGenreVar]"/>
 		</include>
 	</include>
 	<include name="Widget-MusicGenres">
-		<include content="Widget-Categories">			
+		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultMusicGenres.png"/>
-			<param name="img_source" value="$VAR[IconMusicGenreVar]"/>			
+			<param name="img_fallback" value="DefaultMusicGenres.png"/>
+			<param name="img_source" value="$VAR[IconMusicGenreVar]"/>
 		</include>
 	</include>
 	<include name="Widget-Studios">
-		<include content="Widget-Categories">			
+		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultStudios.png"/>
-			<param name="img_source" value="$VAR[IconStudiosVar]"/>			
+			<param name="img_fallback" value="DefaultStudios.png"/>
+			<param name="img_source" value="$VAR[IconStudiosVar]"/>
 		</include>
 	</include>
 	<include name="Widget-Country">
-		<include content="Widget-Categories">			
+		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultCountry.png"/>
-			<param name="img_source" value="$VAR[IconCountriesVar]"/>			
+			<param name="img_fallback" value="DefaultCountry.png"/>
+			<param name="img_source" value="$VAR[IconCountriesVar]"/>
 		</include>
 	</include>
 	<include name="Widget-Other">
@@ -321,36 +321,36 @@
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-            <param name="img_fallback" value="DefaultFolder.png"/>
+			<param name="img_fallback" value="DefaultFolder.png"/>
 			<param name="sortby" value="$PARAM[sortby]"/>
-			<param name="sortorder" value="$PARAM[sortorder]"/>			
+			<param name="sortorder" value="$PARAM[sortorder]"/>
 		</include>
 	</include>
 	<include name="Widget-SubMenu">
 		<include content="Widget-Categories">
-            <param name="visible" value="$PARAM[visible]"/>
-            <param name="custom" value="$PARAM[custom]"/>
-            <param name="homebackground" value="false"/>
-            <param name="widget_header" value="$PARAM[widget_header]"/>        
-            <param name="content_path" value="$PARAM[content_path]"/>
-            <param name="list_id" value="$PARAM[list_id]"/>						
-			<param name="item_limit" value="20"/>       
+			<param name="visible" value="$PARAM[visible]"/>
+			<param name="custom" value="$PARAM[custom]"/>
+			<param name="homebackground" value="false"/>
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="content_path" value="$PARAM[content_path]"/>
+			<param name="list_id" value="$PARAM[list_id]"/>
+			<param name="item_limit" value="20"/>
 		</include>
 	</include>
 	<include name="Widget-WeatherDaily">
 		<include content="Widget-Weather">
-            <param name="visible" value="$PARAM[visible]" />
-            <param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="content_include" value="DailyItems" />
-			<param name="list_id" value="$PARAM[list_id]" />						
+			<param name="list_id" value="$PARAM[list_id]" />
 		</include>
 	</include>
 	<include name="Widget-WeatherHourly">
 		<include content="Widget-Weather">
-            <param name="visible" value="$PARAM[visible]" />
-            <param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="content_include" value="HourlyItems" />
-            <param name="list_id" value="$PARAM[list_id]" />									
+			<param name="list_id" value="$PARAM[list_id]" />
 		</include>
 	</include>
 	<include name="WidgetGroup-Common">
@@ -469,11 +469,11 @@
 		<param name="custom">false</param>
 		<param name="homebackground">true</param>
 		<param name="type">no</param>
-        <param name="widget_target">no</param>
+		<param name="widget_target">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
-		<param name="img_ratio">keep</param>		
+		<param name="img_ratio">keep</param>
 		<param name="img_fallback">DefaultFolder.png</param>
-        <param name="img_source">$INFO[ListItem.Icon]</param>
+		<param name="img_source">$INFO[ListItem.Icon]</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
 		<definition>
@@ -499,17 +499,17 @@
 				<itemlayout width="310" height="340">
 					<control type="group">
 						<left>70</left>
-                        <include content="IconLayout">
-                            <param name="width" value="316" />
+						<include content="IconLayout">
+							<param name="width" value="316" />
 							<param name="height" value="200" />
-                            <param name="widget" value="true" />
-                            <param name="img_fallback" value="$PARAM[img_fallback]" />
-                            <param name="img_source" value="$PARAM[img_source]" />
-                            <param name="img_height" value="70%" />
-                            <param name="img_ratio" value="$PARAM[img_ratio]" />
-                            <param name="txt_bg" value="false" />
-                            <param name="txt_height" value="30%" />
-                            <param name="txt_font" value="font25_narrow" />                            
+							<param name="widget" value="true" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_source" value="$PARAM[img_source]" />
+							<param name="img_height" value="70%" />
+							<param name="img_ratio" value="$PARAM[img_ratio]" />
+							<param name="txt_bg" value="false" />
+							<param name="txt_height" value="30%" />
+							<param name="txt_font" value="font25_narrow" />
 						</include>
 					</control>
 				</itemlayout>
@@ -530,18 +530,18 @@
 							<texturenofocus />
 							<texturefocus />
 						</control>
-                        <include content="IconLayout">
-                            <param name="width" value="316" />
+						<include content="IconLayout">
+							<param name="width" value="316" />
 							<param name="height" value="200" />
-                            <param name="focused" value="true" />
-                            <param name="widget" value="true" />
-                            <param name="img_fallback" value="$PARAM[img_fallback]" />
-                            <param name="img_source" value="$PARAM[img_source]" />
-                            <param name="img_height" value="70%" />
-                            <param name="img_ratio" value="$PARAM[img_ratio]" />
-                            <param name="txt_bg" value="false" />
-                            <param name="txt_height" value="30%" />
-                            <param name="txt_font" value="font25_narrow" />                            
+							<param name="focused" value="true" />
+							<param name="widget" value="true" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_source" value="$PARAM[img_source]" />
+							<param name="img_height" value="70%" />
+							<param name="img_ratio" value="$PARAM[img_ratio]" />
+							<param name="txt_bg" value="false" />
+							<param name="txt_height" value="30%" />
+							<param name="txt_font" value="font25_narrow" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -615,8 +615,8 @@
 							<texturefocus />
 						</control>
 						<include content="PosterLayout">
-                            <param name="focused" value="true" />
-							<param name="img_fallback" value="$PARAM[img_fallback]" />							
+							<param name="focused" value="true" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -696,11 +696,11 @@
 							<texturefocus />
 						</control>
 						<include content="ThumbLayout">
-                            <param name="focused" value="true" />
+							<param name="focused" value="true" />
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<param name="img_fallback" value="$PARAM[img_fallback]" />							
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -778,11 +778,11 @@
 							<texturefocus />
 						</control>
 						<include content="SquareLayout">
-                            <param name="focused" value="true" />
+							<param name="focused" value="true" />
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="img_fallback" value="$PARAM[img_fallback]" />							
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -824,9 +824,9 @@
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
-                            <param name="focused" value="false" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="img_fallback" value="$PARAM[img_fallback]" />							
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_ratio" value="keep" />
 						</include>
 					</control>
 				</itemlayout>
@@ -847,9 +847,10 @@
 							<texturefocus />
 						</control>
 						<include content="SquareLayout">
-                            <param name="focused" value="true" />
+							<param name="focused" value="true" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="img_fallback" value="$PARAM[img_fallback]" />							
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_ratio" value="keep" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -865,7 +866,7 @@
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
 		<param name="label2">$INFO[ListItem.Title]</param>
-        <param name="img_fallback">DefaultTVShows.png</param>
+		<param name="img_fallback">DefaultTVShows.png</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
 		<definition>
@@ -890,17 +891,17 @@
 				<itemlayout width="310" height="500">
 					<control type="group">
 						<left>70</left>
-                        <include content="SquareLayout">
-                            <param name="width" value="319" />
+						<include content="SquareLayout">
+							<param name="width" value="319" />
 							<param name="height" value="340" />
-                            <param name="istwolabel" value="true" />
+							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-                            <param name="img_top" value="24" />
-                            <param name="img_height" value="70%" />
-                            <param name="img_ratio" value="keep" />
-                            <param name="txt_height" value="20%" />                            
+							<param name="img_top" value="24" />
+							<param name="img_height" value="70%" />
+							<param name="img_ratio" value="keep" />
+							<param name="txt_height" value="20%" />
 						</include>
 						<control type="image">
 							<left>260</left>
@@ -927,18 +928,18 @@
 							<texturenofocus />
 							<texturefocus />
 						</control>
-                        <include content="SquareLayout">
-                            <param name="width" value="319" />
+						<include content="SquareLayout">
+							<param name="width" value="319" />
 							<param name="height" value="340" />
-                            <param name="focused" value="true" />
-                            <param name="istwolabel" value="true" />
+							<param name="focused" value="true" />
+							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-                            <param name="img_top" value="24" />
-                            <param name="img_height" value="70%" />
-                            <param name="img_ratio" value="keep" />
-                            <param name="txt_height" value="20%" />							
+							<param name="img_top" value="24" />
+							<param name="img_height" value="70%" />
+							<param name="img_ratio" value="keep" />
+							<param name="txt_height" value="20%" />
 						</include>
 						<control type="image">
 							<left>260</left>

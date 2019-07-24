@@ -33,14 +33,16 @@
 						<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(50600)">conditional</animation>
 						<hitrect x="-30" y="0" w="120" h="100%" />
 					</control>
-                    <include content="PosterLayout">
-                        <param name="top" value="96" />
-                        <param name="left" value="15" />					
-                        <param name="width" value="607" />
-                        <param name="height" value="883" />
-                        <param name="border" value="false" />
-                        <param name="watched" value="false" />                       
-                    </include>
+					<include content="PosterLayout">
+						<param name="top" value="96" />
+						<param name="left" value="15" />
+						<param name="width" value="607" />
+						<param name="height" value="883" />
+						<param name="border" value="false" />
+						<param name="watched" value="false" />
+						<param name="img_height" value="97%" />
+						<param name="txt_label" value="false" />
+					</include>
 				</control>
 			</control>
 		</control>
