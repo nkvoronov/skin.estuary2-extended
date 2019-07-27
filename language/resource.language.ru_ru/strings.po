@@ -1069,3 +1069,67 @@ msgstr "Показывать в окне сведений"
 msgctxt "#44144"
 msgid "Additional colors"
 msgstr "Дополнительные цвета"
+
+msgctxt "#44145"
+msgid "Color Screen"
+msgstr "Цвет экрана"
+
+msgctxt "#44146"
+msgid "Color Dialogs"
+msgstr "Цвет диалоговых окон"
+
+msgctxt "#44147"
+msgid "Color Images"
+msgstr "Цвет картинок"
+
+msgctxt "#44148"
+msgid "Color Text"
+msgstr "Цвет текста"
+
+msgctxt "#44149"
+msgid "Color Text Shadow"
+msgstr "Цвет тени текста"
+
+msgctxt "#44150"
+msgid "Color Selected"
+msgstr "Цвет выбранного"
+
+msgctxt "#44151"
+msgid "Color Disabled"
+msgstr "Цвет запрещенного"
+
+msgctxt "#44152"
+msgid "Color Invalid"
+msgstr "Цвет неверного"
+
+msgctxt "#44153"
+msgid "Color Scrollbars"
+msgstr "Цвет полос прокрутки"
+
+msgctxt "#44154"
+msgid "Color Scrollbars Background"
+msgstr "Цвет фона полос прокрутки"
+
+msgctxt "#44155"
+msgid "Color Separator"
+msgstr "Цвет разделителей"
+
+msgctxt "#44156"
+msgid "Color RSS headers"
+msgstr "Цвет заголовков RSS"
+
+msgctxt "#44157"
+msgid "Color Grey"
+msgstr "Серый цвет"
+
+msgctxt "#44158"
+msgid "Color Blue"
+msgstr "Синий Цвет"
+
+msgctxt "#44159"
+msgid "Color Red"
+msgstr "Красный Цвет"
+
+msgctxt "#44160"
+msgid "Color Black"
+msgstr "Черный цвет"

@@ -171,20 +171,20 @@
 		<value condition="String.IsEqual(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.text/)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.text/,.jpg]</value>
 		<value condition="String.IsEqual(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.users/)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.users/,.png]</value>
 	</variable>
-    <variable name="DefaultFallBackVar">
-        <value condition="Container.Content(images)">DefaultPicture.png</value>
-        <value condition="Container.Content(movies) | Container.Content(sets)">DefaultMovies.png</value>
-        <value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">DefaultTVShows.png</value>
-        <value condition="Container.Content(musicvideos)">DefaultMusicVideos.png</value>
-        <value condition="Container.Content(videos)">DefaultVideo.png</value>
-        <value condition="Container.Content(artists)">DefaultMusicArtists.png</value>
+	<variable name="DefaultFallBackVar">
+		<value condition="Container.Content(images)">DefaultPicture.png</value>
+		<value condition="Container.Content(movies) | Container.Content(sets)">DefaultMovies.png</value>
+		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">DefaultTVShows.png</value>
+		<value condition="Container.Content(musicvideos)">DefaultMusicVideos.png</value>
+		<value condition="Container.Content(videos)">DefaultVideo.png</value>
+		<value condition="Container.Content(artists)">DefaultMusicArtists.png</value>
 		<value condition="Container.Content(albums)">DefaultMusicAlbums.png</value>
-        <value condition="Container.Content(songs)">DefaultMusicSongs.png</value>
+		<value condition="Container.Content(songs)">DefaultMusicSongs.png</value>
 		<value condition="Container.Content(actors)">DefaultActor.png</value>
-        <value condition="Container.Content(directors)">DefaultDirector.png</value>
-        <value condition="Container.Content(livetv)">DefaultAddonPVRClient.png</value>
-        <value condition="Container.Content(addons)">DefaultAddon.png</value>
-    </variable>
+		<value condition="Container.Content(directors)">DefaultDirector.png</value>
+		<value condition="Container.Content(livetv)">DefaultAddonPVRClient.png</value>
+		<value condition="Container.Content(addons)">DefaultAddon.png</value>
+	</variable>
 	<variable name="ListLabel2Var">
 		<value condition="String.IsEmpty(Container.PluginName) + Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + !String.IsEmpty(ListItem.Property(TotalEpisodes))">[COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(WatchedEpisodes)][/COLOR] / [COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(TotalEpisodes)][/COLOR]</value>
 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>

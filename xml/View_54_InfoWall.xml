@@ -26,7 +26,9 @@
 					<control type="group">
 						<top>150</top>
 						<left>0</left>
-						<include>PictureLayout</include>
+						<include content="PictureLayout">
+							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
+						</include>
 					</control>
 				</itemlayout>
 				<focusedlayout height="410" width="310" condition="Container.Content(images)">
@@ -38,6 +40,7 @@
 						<left>0</left>
 						<include content="PictureLayout">
 							<param name="focused" value="true" />
+							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -45,7 +48,9 @@
 					<control type="group">
 						<left>30</left>
 						<top>120</top>
-						<include>PosterLayout</include>
+						<include content="PosterLayout">
+							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
+						</include>
 					</control>
 				</itemlayout>
 				<focusedlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
@@ -57,6 +62,7 @@
 						<top>120</top>
 						<include content="PosterLayout">
 							<param name="focused" value="true" />
+							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -66,6 +72,7 @@
 						<top>110</top>
 						<include content="ThumbLayout">
 							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label2][/COLOR]" />
+							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -79,6 +86,7 @@
 						<include content="ThumbLayout">
 							<param name="focused" value="true" />
 							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label2][/COLOR]" />
+							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -87,7 +95,7 @@
 						<top>150</top>
 						<left>40</left>
 						<include content="SquareLayout">
-							<param name="img_fallback" value="DefaultMusicArtists.png" />
+							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -100,7 +108,7 @@
 						<left>40</left>
 						<include content="SquareLayout">
 							<param name="focused" value="true" />
-							<param name="img_fallback" value="DefaultMusicArtists.png" />
+							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						</include>
 					</control>
 				</focusedlayout>

@@ -150,7 +150,7 @@
 				<top>710</top>
 				<width>64</width>
 				<height>64</height>
-				<texture>icons/contextmenu.png</texture>
+				<texture colordiffuse="$VAR[ImageColorVar]">icons/contextmenu.png</texture>
 				<visible>!IsEmpty(Window(Home).Property(culrc.haslist))</visible>
 				<visible>!Skin.HasSetting(lrclyrics_alternative_view)</visible>
 			</control>

@@ -38,6 +38,7 @@
 						<param name="left" value="15" />
 						<param name="width" value="607" />
 						<param name="height" value="883" />
+						<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						<param name="border" value="false" />
 						<param name="watched" value="false" />
 						<param name="img_height" value="97%" />

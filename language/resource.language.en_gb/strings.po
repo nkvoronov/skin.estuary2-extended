@@ -1259,3 +1259,68 @@ msgstr ""
 msgctxt "#44144"
 msgid "Additional colors"
 msgstr ""
+
+msgctxt "#44145"
+msgid "Color Screen"
+msgstr ""
+
+msgctxt "#44146"
+msgid "Color Dialogs"
+msgstr ""
+
+msgctxt "#44147"
+msgid "Color Images"
+msgstr ""
+
+msgctxt "#44148"
+msgid "Color Text"
+msgstr ""
+
+msgctxt "#44149"
+msgid "Color Text Shadow"
+msgstr ""
+
+msgctxt "#44150"
+msgid "Color Selected"
+msgstr ""
+
+msgctxt "#44151"
+msgid "Color Disabled"
+msgstr ""
+
+msgctxt "#44152"
+msgid "Color Invalid"
+msgstr ""
+
+msgctxt "#44153"
+msgid "Color Scrollbars"
+msgstr ""
+
+msgctxt "#44154"
+msgid "Color Scrollbars Background"
+msgstr ""
+
+msgctxt "#44155"
+msgid "Color Separator"
+msgstr ""
+
+msgctxt "#44156"
+msgid "Color RSS headers"
+msgstr ""
+
+msgctxt "#44157"
+msgid "Color Grey"
+msgstr ""
+
+msgctxt "#44158"
+msgid "Color Blue"
+msgstr ""
+
+msgctxt "#44159"
+msgid "Color Red"
+msgstr ""
+
+msgctxt "#44160"
+msgid "Color Black"
+msgstr ""
+

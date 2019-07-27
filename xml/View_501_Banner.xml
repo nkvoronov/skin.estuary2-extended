@@ -33,7 +33,7 @@
 							<aspectratio aligny="center">scale</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-                            <visible>!Listitem.IsParentFolder</visible>
+							<visible>!Listitem.IsParentFolder</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -44,7 +44,7 @@
 							<aspectratio aligny="center">keep</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-                            <visible>Listitem.IsParentFolder</visible>
+							<visible>Listitem.IsParentFolder</visible>
 						</control>
 						<control type="label">
 							<left>70</left>
@@ -83,7 +83,7 @@
 							<aspectratio aligny="center">scale</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-                            <visible>!Listitem.IsParentFolder</visible>
+							<visible>!Listitem.IsParentFolder</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -94,7 +94,7 @@
 							<aspectratio aligny="center">keep</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
-                            <visible>Listitem.IsParentFolder</visible>
+							<visible>Listitem.IsParentFolder</visible>
 						</control>
 						<control type="label">
 							<left>70</left>
@@ -178,7 +178,7 @@
 								<align>right</align>
 								<aligny>center</aligny>
 								<label>$VAR[BannerLabel2Var]</label>
-                                <textcolor>$VAR[MainColorVar]</textcolor>
+								<textcolor>$VAR[MainColorVar]</textcolor>
 							</control>
 						</control>
 						<control type="group">

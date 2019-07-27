@@ -211,6 +211,6 @@
 					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 			</control>
-		</control>  
+		</control>
 	</controls>
 </window>

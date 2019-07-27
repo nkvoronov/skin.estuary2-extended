@@ -35,6 +35,7 @@
 							<include content="PosterLayout">
 								<param name="width" value="493" />
 								<param name="height" value="663" />
+                                <param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 							</include>
 						</control>
 					</itemlayout>
@@ -43,9 +44,10 @@
 							<depth>DepthContentPopout</depth>
 							<top>23</top>
 							<include content="PosterLayout">
+                                <param name="focused" value="true" />
 								<param name="width" value="493" />
-								<param name="height" value="663" />
-								<param name="focused" value="true" />
+								<param name="height" value="663" />								
+                                <param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 							</include>
 						</control>
 					</focusedlayout>
@@ -74,6 +76,7 @@
 											<param name="top" value="-8" />
 											<param name="width" value="500" />
 											<param name="height" value="300" />
+                                            <param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 											<param name="border" value="false" />
 											<param name="watched_bottom" value="12" />
 											<param name="thumb_label" value="" />
@@ -158,6 +161,7 @@
 											<param name="width" value="500" />
 											<param name="height" value="300" />
 											<param name="border" value="false" />
+                                            <param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 											<param name="watched_bottom" value="12" />
 											<param name="thumb_label" value="" />
 											<param name="img_height" value="100%" />
@@ -230,7 +234,7 @@
 											<param name="height" value="475" />
 											<param name="border" value="false" />
 											<param name="istwolabel" value="false" />
-											<param name="img_fallback" value="DefaultMusicArtists.png" />
+											<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 											<param name="img_height" value="100%" />
 											<param name="txt_label" value="false" />
 										</include>
@@ -273,7 +277,7 @@
 											<param name="width" value="500" />
 											<param name="height" value="650" />
 											<param name="border" value="false" />
-											<param name="img_fallback" value="DefaultMusicArtists.png" />
+											<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 											<param name="img_height" value="100%" />
 										</include>
 									</control>
@@ -318,7 +322,7 @@
 											<param name="height" value="475" />
 											<param name="border" value="false" />
 											<param name="istwolabel" value="false" />
-											<param name="img_fallback" value="DefaultMusicArtists.png" />
+											<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 											<param name="img_height" value="100%" />
 											<param name="txt_label" value="false" />
 										</include>
@@ -361,7 +365,7 @@
 											<param name="width" value="500" />
 											<param name="height" value="650" />
 											<param name="border" value="false" />
-											<param name="img_fallback" value="DefaultMusicArtists.png" />
+											<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 											<param name="img_height" value="100%" />
 										</include>
 									</control>

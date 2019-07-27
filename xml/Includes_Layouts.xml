@@ -713,6 +713,7 @@
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$VAR[ListItemSeasonXEpisodeLabelVar]</param>
+		<param name="istwolabel">!Window.IsActive(videos)</param>
 		<param name="img_fallback">DefaultTVShows.png</param>
 		<param name="img_height">75%</param>
 		<param name="img_ratio">scale</param>
@@ -848,7 +849,8 @@
 					<right>32</right>
 					<bottom>20</bottom>
 					<height>$PARAM[txt_height]</height>
-					<visible>!Window.IsActive(videos)</visible>
+					<visible>$PARAM[istwolabel]</visible>
+					<visible>$PARAM[txt_label]</visible>
 					<control type="label">
 						<description>Sub Label</description>
 						<left>0</left>
@@ -981,33 +983,38 @@
 						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_fallback]</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
-						<visible>String.IsEmpty(ListItem.Icon) | ![String.EndsWith(ListItem.Icon, .png) | String.EndsWith(ListItem.Icon, .jpg)]</visible>
+						<!-- <visible>String.IsEmpty(ListItem.Icon) | ![String.EndsWith(ListItem.Icon, .png) | String.EndsWith(ListItem.Icon, .jpg)]</visible> -->
+						<visible>String.IsEmpty(ListItem.Icon)</visible>
 					</control>
-					<control type="image">
-						<description>File Icon</description>
-						<centerleft>50%</centerleft>
-						<centertop>50%</centertop>
-						<left>8</left>
-						<right>8</right>
-						<top>$PARAM[img_top]</top>
-						<height>$PARAM[img_height]</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>$PARAM[img_ratio]</aspectratio>
-						<bordersize>20</bordersize>
-						<visible>!String.IsEmpty(ListItem.Icon) + !$EXP[default_icon]</visible>
-					</control>
-					<control type="image">
-						<description>File Icon Def</description>
-						<centerleft>50%</centerleft>
-						<centertop>50%</centertop>
-						<left>8</left>
-						<right>8</right>
-						<top>$PARAM[img_top]</top>
-						<height>$PARAM[img_height]</height>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
-						<aspectratio>$PARAM[img_ratio]</aspectratio>
-						<bordersize>20</bordersize>
-						<visible>!String.IsEmpty(ListItem.Icon) + $EXP[default_icon]</visible>
+					<control type="group">
+						<description>File with Icon</description>
+						<visible>!String.IsEmpty(ListItem.Icon)</visible>
+							<control type="image">
+								<description>File Icon</description>
+								<centerleft>50%</centerleft>
+								<centertop>50%</centertop>
+								<left>8</left>
+								<right>8</right>
+								<top>$PARAM[img_top]</top>
+								<height>$PARAM[img_height]</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio>$PARAM[img_ratio]</aspectratio>
+								<bordersize>20</bordersize>
+								<visible>!$EXP[default_icon]</visible>
+							</control>
+							<control type="image">
+								<description>File Icon Def</description>
+								<centerleft>50%</centerleft>
+								<centertop>50%</centertop>
+								<left>8</left>
+								<right>8</right>
+								<top>$PARAM[img_top]</top>
+								<height>$PARAM[img_height]</height>
+								<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
+								<aspectratio>$PARAM[img_ratio]</aspectratio>
+								<bordersize>20</bordersize>
+								<visible>$EXP[default_icon]</visible>
+							</control>
 					</control>
 				</control>
 				<control type="textbox">
@@ -1034,6 +1041,7 @@
 					<bottom>20</bottom>
 					<height>$PARAM[txt_height]</height>
 					<visible>$PARAM[istwolabel]</visible>
+					<visible>$PARAM[txt_label]</visible>
 					<control type="label">
 						<description>Sub Label</description>
 						<left>0</left>
@@ -1178,7 +1186,7 @@
 	</include>
 	<include name="ListThumbInfoPanel">
 		<param name="fallback_image"></param>
-        <param name="width">654</param>
+		<param name="width">654</param>
 		<param name="flip_bg">false</param>
 		<definition>
 			<control type="group">
@@ -1195,6 +1203,7 @@
 						<param name="width" value="530" />
 						<param name="height" value="470" />
 						<param name="border" value="false" />
+						<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						<param name="img_height" value="100%" />
 						<param name="txt_label" value="false" />
 					</include>
@@ -1359,6 +1368,7 @@
 						<param name="height" value="517" />
 						<param name="border" value="false" />
 						<param name="watched" value="false" />
+						<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						<param name="img_height" value="100%" />
 						<param name="txt_label" value="false" />
 					</include>
@@ -1373,6 +1383,7 @@
 						<param name="watched" value="false" />
 						<param name="border" value="false" />
 						<param name="thumb_label" value="" />
+						<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						<param name="img_height" value="100%" />
 						<param name="img_ratio" value="keep" />
 						<param name="txt_label" value="false" />
@@ -1386,8 +1397,7 @@
 						<param name="width" value="530" />
 						<param name="height" value="470" />
 						<param name="border" value="false" />
-						<param name="istwolabel" value="false" />
-						<param name="img_fallback" value="DefaultMusicArtists.png" />
+						<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						<param name="img_height" value="100%" />
 						<param name="img_ratio" value="keep" />
 						<param name="txt_label" value="false" />
