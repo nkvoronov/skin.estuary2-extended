@@ -69,7 +69,6 @@
 								<param name="left" value="13" />
 								<param name="width" value="344" />
 								<param name="height" value="484" />
-								<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 								<param name="img_height" value="97%" />
 								<param name="txt_label" value="false" />
 							</include>
@@ -81,7 +80,6 @@
 								<param name="left" value="13" />
 								<param name="width" value="344" />
 								<param name="height" value="484" />
-								<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 								<param name="img_height" value="97%" />
 								<param name="txt_label" value="false" />
 							</include>
@@ -94,7 +92,6 @@
 								<param name="width" value="344" />
 								<param name="height" value="484" />
 								<param name="istwolabel" value="false" />
-								<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 								<param name="img_height" value="97%" />
 								<param name="img_ratio" value="keep" />
 								<param name="txt_label" value="false" />
@@ -119,7 +116,6 @@
 								<param name="left" value="13" />
 								<param name="width" value="344" />
 								<param name="height" value="484" />
-								<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 								<param name="focused" value="true" />
 								<param name="img_height" value="97%" />
 								<param name="txt_label" value="false" />
@@ -132,7 +128,6 @@
 								<param name="left" value="13" />
 								<param name="width" value="344" />
 								<param name="height" value="484" />
-								<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 								<param name="focused" value="true" />
 								<param name="img_height" value="97%" />
 								<param name="txt_label" value="false" />
@@ -147,7 +142,6 @@
 								<param name="height" value="484" />
 								<param name="focused" value="true" />
 								<param name="istwolabel" value="false" />
-								<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 								<param name="img_height" value="97%" />
 								<param name="img_ratio" value="keep" />
 								<param name="txt_label" value="false" />

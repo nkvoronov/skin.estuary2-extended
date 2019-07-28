@@ -132,7 +132,6 @@
 			<include content="PosterLayout">
 				<param name="width" value="524" />
 				<param name="height" value="764" />
-				<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 				<param name="focused"value="true" />
 				<param name="img_height" value="97%" />
 				<param name="txt_label" value="false" />

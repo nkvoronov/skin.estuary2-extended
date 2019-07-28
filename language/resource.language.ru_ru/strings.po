@@ -1124,11 +1124,11 @@ msgstr "Серый цвет"
 
 msgctxt "#44158"
 msgid "Color Blue"
-msgstr "Синий Цвет"
+msgstr "Синий цвет"
 
 msgctxt "#44159"
 msgid "Color Red"
-msgstr "Красный Цвет"
+msgstr "Красный цвет"
 
 msgctxt "#44160"
 msgid "Color Black"

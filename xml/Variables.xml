@@ -184,6 +184,7 @@
 		<value condition="Container.Content(directors)">DefaultDirector.png</value>
 		<value condition="Container.Content(livetv)">DefaultAddonPVRClient.png</value>
 		<value condition="Container.Content(addons)">DefaultAddon.png</value>
+		<value>DefaultFolder.png</value>
 	</variable>
 	<variable name="ListLabel2Var">
 		<value condition="String.IsEmpty(Container.PluginName) + Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + !String.IsEmpty(ListItem.Property(TotalEpisodes))">[COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(WatchedEpisodes)][/COLOR] / [COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(TotalEpisodes)][/COLOR]</value>

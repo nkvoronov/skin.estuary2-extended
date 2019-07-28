@@ -8,7 +8,7 @@
 		<param name="focused">false</param>
 		<param name="border">true</param>
 		<param name="widget">false</param>
-		<param name="img_fallback">DefaultFolder.png</param>
+		<param name="img_fallback">$VAR[DefaultFallBackVar]</param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>
 		<param name="img_height">80%</param>
 		<param name="img_ratio">keep</param>
@@ -257,7 +257,7 @@
 		<param name="height">386</param>
 		<param name="focused">false</param>
 		<param name="border">true</param>
-		<param name="img_fallback">DefaultPicture.png</param>
+		<param name="img_fallback">$VAR[DefaultFallBackVar]</param>
 		<param name="img_height">80%</param>
 		<param name="img_ratio">keep</param>
 		<param name="txt_height">19%</param>
@@ -382,7 +382,7 @@
 		<param name="watchedepisodes">ListItem.Property(WatchedEpisodes)</param>
 		<param name="overlaybg">ListItem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</param>
 		<param name="watchedicon">$VAR[WallWatchedIconVar]</param>
-		<param name="img_fallback">DefaultMovies.png</param>
+		<param name="img_fallback">$VAR[DefaultFallBackVar]</param>
 		<param name="img_height">80%</param>
 		<param name="img_pratio">scale</param>
 		<param name="img_ratio">keep</param>
@@ -714,7 +714,7 @@
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="thumb_label">$VAR[ListItemSeasonXEpisodeLabelVar]</param>
 		<param name="istwolabel">!Window.IsActive(videos)</param>
-		<param name="img_fallback">DefaultTVShows.png</param>
+		<param name="img_fallback">$VAR[DefaultFallBackVar]</param>
 		<param name="img_height">75%</param>
 		<param name="img_ratio">scale</param>
 		<param name="txt_height">24%</param>
@@ -922,7 +922,7 @@
 		<param name="single_label">$INFO[ListItem.Label]</param>
 		<param name="userratingval">ListItem.UserRating</param>
 		<param name="istwolabel">[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</param>
-		<param name="img_fallback">DefaultFolder.png</param>
+		<param name="img_fallback">$VAR[DefaultFallBackVar]</param>
 		<param name="img_top">8</param>
 		<param name="img_height">80%</param>
 		<param name="img_ratio">scale</param>
@@ -1203,7 +1203,6 @@
 						<param name="width" value="530" />
 						<param name="height" value="470" />
 						<param name="border" value="false" />
-						<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						<param name="img_height" value="100%" />
 						<param name="txt_label" value="false" />
 					</include>
@@ -1368,7 +1367,6 @@
 						<param name="height" value="517" />
 						<param name="border" value="false" />
 						<param name="watched" value="false" />
-						<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						<param name="img_height" value="100%" />
 						<param name="txt_label" value="false" />
 					</include>
@@ -1383,7 +1381,6 @@
 						<param name="watched" value="false" />
 						<param name="border" value="false" />
 						<param name="thumb_label" value="" />
-						<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						<param name="img_height" value="100%" />
 						<param name="img_ratio" value="keep" />
 						<param name="txt_label" value="false" />
@@ -1397,7 +1394,6 @@
 						<param name="width" value="530" />
 						<param name="height" value="470" />
 						<param name="border" value="false" />
-						<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						<param name="img_height" value="100%" />
 						<param name="img_ratio" value="keep" />
 						<param name="txt_label" value="false" />

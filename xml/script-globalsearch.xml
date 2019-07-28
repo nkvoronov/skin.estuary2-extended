@@ -248,8 +248,7 @@
 							<param name="percentplayed" value="ListItem.Property(percentplayed)" />
 							<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -266,8 +265,7 @@
 							<param name="percentplayed" value="ListItem.Property(percentplayed)" />
 							<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -279,8 +277,7 @@
 							<param name="percentplayed" value="ListItem.Property(percentplayed)" />
 							<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -296,8 +293,7 @@
 							<param name="percentplayed" value="ListItem.Property(percentplayed)" />
 							<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -309,8 +305,7 @@
 							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -326,8 +321,7 @@
 							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -335,9 +329,7 @@
 					<control type="group">
 						<top>150</top>
 						<left>40</left>
-						<include content="SquareLayout">
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
-						</include>
+						<include>SquareLayout</include>
 					</control>
 				</itemlayout>
 				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs)">
@@ -349,7 +341,6 @@
 						<left>40</left>
 						<include content="SquareLayout">
 							<param name="focused" value="true" />
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -358,7 +349,6 @@
 						<top>150</top>
 						<left>40</left>
 						<include content="SquareLayout">
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 							<param name="img_ratio" value="keep" />
 						</include>
 					</control>
@@ -372,7 +362,6 @@
 						<left>40</left>
 						<include content="SquareLayout">
 							<param name="focused" value="true" />
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 							<param name="img_ratio" value="keep" />
 						</include>
 					</control>
@@ -382,7 +371,6 @@
 						<top>150</top>
 						<left>40</left>
 						<include content="SquareLayout">
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 							<param name="img_top" value="24" />
 							<param name="img_height" value="70%" />
 							<param name="img_ratio" value="keep" />
@@ -399,7 +387,6 @@
 						<left>40</left>
 						<include content="SquareLayout">
 							<param name="focused" value="true" />
-							<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 							<param name="img_top" value="24" />
 							<param name="img_height" value="70%" />
 							<param name="img_ratio" value="keep" />
@@ -541,7 +528,6 @@
 								<param name="height" value="517" />
 								<param name="border" value="false" />
 								<param name="watched" value="false" />
-								<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 								<param name="img_height" value="100%" />
 								<param name="txt_label" value="false" />
 							</include>
@@ -556,7 +542,6 @@
 								<param name="watched" value="false" />
 								<param name="border" value="false" />
 								<param name="thumb_label" value="" />
-								<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 								<param name="img_height" value="100%" />
 								<param name="img_ratio" value="keep" />
 								<param name="txt_label" value="false" />
@@ -570,7 +555,6 @@
 								<param name="width" value="530" />
 								<param name="height" value="470" />
 								<param name="border" value="false" />
-								<param name="img_fallback" value="$VAR[DefaultFallBackVar]" />
 								<param name="img_height" value="100%" />
 								<param name="img_ratio" value="keep" />
 								<param name="txt_label" value="false" />
