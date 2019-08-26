@@ -463,6 +463,7 @@
 	<include name="Widget-Categories">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
+		<param name="homebackground">false</param>
 		<param name="type">no</param>
 		<param name="widget_target">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
