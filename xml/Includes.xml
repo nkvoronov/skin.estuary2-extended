@@ -68,7 +68,6 @@
 					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 					<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(531)">conditional</animation>
 					<visible>Control.IsVisible(52) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(501) | Control.IsVisible(54)</visible>
-					<hitrect x="-20" y="0" w="80" bottom="0r" />
 				</control>
 			</control>
 			<control type="group">
@@ -105,6 +104,18 @@
 		<texturenofocus />
 		<label />
 		<font />
+	</include>
+	<include name="WidgetButton">
+		<param name="custom">false</param>
+		<definition>
+			<control type="button">
+				<onfocus condition="!$PARAM[custom]">SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+				<onfocus>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
+				<onfocus>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
+				<texturenofocus />
+				<texturefocus />
+			</control>
+		</definition>
 	</include>
 	<include name="RatingCircle">
 		<param name="animation">False</param>
@@ -327,7 +338,7 @@
 	<include name="MediaFlags">
 		<param name="infolabel_prefix"></param>
 		<param name="resolution_var">$VAR[ResolutionFlagVar]</param>
-        <param name="visible">true</param>
+		<param name="visible">true</param>
 		<definition>
 			<control type="grouplist">
 				<orientation>horizontal</orientation>
@@ -338,7 +349,7 @@
 				<itemgap>28</itemgap>
 				<width>1900</width>
 				<usecontrolcoords>true</usecontrolcoords>
-                <visible>$PARAM[visible]</visible>
+				<visible>$PARAM[visible]</visible>
 				<animation effect="slide" start="0,0" end="140,0" time="0" condition="!$PARAM[infolabel_prefix]ListItem.IsCollection">Conditional</animation>
 				<control type="group">
 					<width>150</width>

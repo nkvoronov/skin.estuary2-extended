@@ -359,6 +359,7 @@
 		<value>dialogs/volume/volume1.png</value>
 	</variable>
 	<variable name="VideoInfoMainLabelVar">
+		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]$VAR[ListItemYearLabelVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]$VAR[ListItemYearLabelVar]</value>
 		<value>$INFO[ListItem.Label]$VAR[ListItemYearLabelVar]</value>
 	</variable>
@@ -367,7 +368,7 @@
 		<value>$LOCALIZE[208]</value>
 	</variable>
 	<variable name="VideoInfoSubLabelVar">
-		<value condition="String.IsEqual(ListItem.DBType,episode)">$VAR[ListItemSeasonXEpisodeLabelVar]$INFO[ListItem.TVShowTitle]</value>
+		<value condition="String.IsEqual(ListItem.DBType,episode)">$VAR[ListItemSeasonXEpisodeLabelVar]$INFO[ListItem.Title]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie)">[I][COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline][/COLOR][/I]</value>
 		<value>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Genre][/COLOR]</value>
 	</variable>
