@@ -7,8 +7,10 @@
 		<param name="height">50</param>
 		<param name="focused">false</param>
 		<param name="focused2">false</param>
+		<param name="img_fallback">DefaultFile.png</param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>
 		<param name="img_ratio">keep</param>
+		<param name="fadetime">0</param>
 		<definition>
 			<control type="group">
 				<description>Picture Layout</description>

@@ -332,13 +332,17 @@
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
-							<control type="image">
+							<control type="group">
 								<right>5</right>
 								<top>25</top>
 								<width>80</width>
 								<height>70</height>
-								<aspectratio align="right">keep</aspectratio>
-								<texture>$INFO[listItem.Icon]</texture>
+								<include content="IconLayout2">
+									<param name="top" value="0" />
+									<param name="left" value="0" />
+									<param name="width" value="80" />
+									<param name="height" value="70" />
+								</include>
 							</control>
 							<control type="image">
 								<right>80</right>
@@ -425,13 +429,18 @@
 									<label>$INFO[ListItem.Label]</label>
 									<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 								</control>
-								<control type="image">
+								<control type="group">
 									<right>5</right>
 									<top>25</top>
 									<width>80</width>
 									<height>70</height>
-									<aspectratio align="right">keep</aspectratio>
-									<texture>$INFO[listItem.Icon]</texture>
+									<include content="IconLayout2">
+										<param name="top" value="0" />
+										<param name="left" value="0" />
+										<param name="width" value="80" />
+										<param name="height" value="70" />
+										<param name="focused" value="true" />
+									</include>
 								</control>
 								<control type="image">
 									<right>80</right>
