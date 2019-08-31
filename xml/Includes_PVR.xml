@@ -198,7 +198,7 @@
 				<param name="height" value="200" />
 				<param name="img_fallback" value="DefaultTVShows.png" />
 				<param name="img_source" value="$VAR[ChannelListEPGIconVar]" />
-				<param name="fadetime" value="200" />
+				<param name="focused" value="true" />
 			</include>
 			<control type="group">
 				<top>120</top>
@@ -301,7 +301,7 @@
 							<height>90</height>
 							<width>830</width>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Date,[COLOR $VAR[GreyColorVar]],[/COLOR][CR]]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+							<label>$VAR[ListItemDateLabelVar]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
@@ -311,7 +311,7 @@
 							<height>90</height>
 							<width>830</width>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Date,[COLOR $VAR[GreyColorVar]],[/COLOR][CR]]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+							<label>$VAR[ListItemDateLabelVar]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
@@ -332,7 +332,8 @@
 					<param name="left" value="30" />
 					<param name="width" value="290" />
 					<param name="height" value="250" />
-					<param name="fadetime" value="400" />
+					<param name="img_fallback" value="DefaultTVShows.png" />
+					<param name="focused" value="true" />
 				</include>
 				<control type="group">
 					<top>0</top>

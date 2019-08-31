@@ -47,6 +47,7 @@
 								<param name="left" value="0" />
 								<param name="width" value="80" />
 								<param name="height" value="70" />
+								<param name="img_fallback" value="DefaultTVShows.png" />
 								<param name="focused" value="true" />
 							</include>
 						</control>
@@ -110,6 +111,7 @@
 								<param name="left" value="0" />
 								<param name="width" value="80" />
 								<param name="height" value="70" />
+								<param name="img_fallback" value="DefaultTVShows.png" />
 							</include>
 						</control>
 						<control type="progress">
@@ -342,6 +344,7 @@
 									<param name="left" value="0" />
 									<param name="width" value="80" />
 									<param name="height" value="70" />
+									<param name="img_fallback" value="DefaultTVShows.png" />
 								</include>
 							</control>
 							<control type="image">
@@ -439,6 +442,7 @@
 										<param name="left" value="0" />
 										<param name="width" value="80" />
 										<param name="height" value="70" />
+										<param name="img_fallback" value="DefaultTVShows.png" />
 										<param name="focused" value="true" />
 									</include>
 								</control>

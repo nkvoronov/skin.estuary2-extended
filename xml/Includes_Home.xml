@@ -432,14 +432,15 @@
 			<height>225</height>
 			<texture border="21">dialogs/dialog-bg.png</texture>
 		</control>
-		<control type="image">
-			<left>55</left>
-			<top>122</top>
-			<width>140</width>
-			<height>140</height>
-			<aspectratio>keep</aspectratio>
-			<texture background="true" fallback="DefaultVideo.png">$PARAM[icon]</texture>
-		</control>
+		<include content="IconLayout2">
+			<param name="top" value="122" />
+			<param name="left" value="55" />
+			<param name="width" value="140" />
+			<param name="height" value="140" />
+			<param name="img_fallback" value="DefaultTVShows.png" />
+			<param name="img_source" value="$PARAM[icon]" />
+			<param name="focused" value="true" />
+		</include>
 		<control type="label">
 			<left>225</left>
 			<top>127</top>

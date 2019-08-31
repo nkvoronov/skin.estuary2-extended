@@ -7,10 +7,9 @@
 		<param name="height">50</param>
 		<param name="focused">false</param>
 		<param name="focused2">false</param>
-		<param name="img_fallback">DefaultFile.png</param>
+		<param name="img_fallback"></param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>
 		<param name="img_ratio">keep</param>
-		<param name="fadetime">0</param>
 		<definition>
 			<control type="group">
 				<description>Picture Layout</description>
@@ -22,6 +21,26 @@
 					<bottom>0</bottom>
 					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 					<visible>$PARAM[focused2]</visible>
+				</control>
+				<control type="image">
+					<description>File Icon Fallback 1</description>
+					<left>$PARAM[left]</left>
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture colordiffuse="$VAR[GreyColorVar]">$PARAM[img_fallback]</texture>
+					<aspectratio>$PARAM[img_ratio]</aspectratio>
+					<visible>!$PARAM[focused]</visible>
+				</control>
+				<control type="image">
+					<description>File Icon Fallback 2</description>
+					<left>$PARAM[left]</left>
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[img_fallback]</texture>
+					<aspectratio>$PARAM[img_ratio]</aspectratio>
+					<visible>$PARAM[focused]</visible>
 				</control>
 				<control type="image">
 					<description>File Icon 1</description>
@@ -378,7 +397,7 @@
 						<visible>String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="image">
-						<description>File Icon</description>
+						<description>File Icon 1</description>
 						<centerleft>50%</centerleft>
 						<centertop>50%</centertop>
 						<left>8</left>
@@ -391,7 +410,7 @@
 						<visible>!String.IsEmpty(ListItem.Icon) + !$EXP[default_icon]</visible>
 					</control>
 					<control type="image">
-						<description>File Icon Def</description>
+						<description>File Icon 2</description>
 						<centerleft>50%</centerleft>
 						<centertop>50%</centertop>
 						<left>8</left>
@@ -1041,38 +1060,36 @@
 						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_fallback]</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
-						<!-- <visible>String.IsEmpty(ListItem.Icon) | ![String.EndsWith(ListItem.Icon, .png) | String.EndsWith(ListItem.Icon, .jpg)]</visible> -->
-						<visible>String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="group">
 						<description>File with Icon</description>
 						<visible>!String.IsEmpty(ListItem.Icon)</visible>
-							<control type="image">
-								<description>File Icon</description>
-								<centerleft>50%</centerleft>
-								<centertop>50%</centertop>
-								<left>8</left>
-								<right>8</right>
-								<top>$PARAM[img_top]</top>
-								<height>$PARAM[img_height]</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<aspectratio>$PARAM[img_ratio]</aspectratio>
-								<bordersize>20</bordersize>
-								<visible>!$EXP[default_icon]</visible>
-							</control>
-							<control type="image">
-								<description>File Icon Def</description>
-								<centerleft>50%</centerleft>
-								<centertop>50%</centertop>
-								<left>8</left>
-								<right>8</right>
-								<top>$PARAM[img_top]</top>
-								<height>$PARAM[img_height]</height>
-								<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
-								<aspectratio>$PARAM[img_ratio]</aspectratio>
-								<bordersize>20</bordersize>
-								<visible>$EXP[default_icon]</visible>
-							</control>
+						<control type="image">
+							<description>File Icon 1</description>
+							<centerleft>50%</centerleft>
+							<centertop>50%</centertop>
+							<left>8</left>
+							<right>8</right>
+							<top>$PARAM[img_top]</top>
+							<height>$PARAM[img_height]</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>$PARAM[img_ratio]</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>!$EXP[default_icon]</visible>
+						</control>
+						<control type="image">
+							<description>File Icon 2</description>
+							<centerleft>50%</centerleft>
+							<centertop>50%</centertop>
+							<left>8</left>
+							<right>8</right>
+							<top>$PARAM[img_top]</top>
+							<height>$PARAM[img_height]</height>
+							<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
+							<aspectratio>$PARAM[img_ratio]</aspectratio>
+							<bordersize>20</bordersize>
+							<visible>$EXP[default_icon]</visible>
+						</control>
 					</control>
 				</control>
 				<control type="textbox">

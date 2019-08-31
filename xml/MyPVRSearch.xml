@@ -40,14 +40,16 @@
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
-							<control type="image">
-								<left>25</left>
-								<top>10</top>
-								<width>80</width>
-								<height>80</height>
-								<texture fallback="DefaultTVShows.png">$INFO[Listitem.ActualIcon]</texture>
-								<aspectratio>keep</aspectratio>
+							<control type="group">
 								<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
+								<include content="IconLayout2">
+									<param name="top" value="10" />
+									<param name="left" value="25" />
+									<param name="width" value="80" />
+									<param name="height" value="80" />
+									<param name="img_fallback" value="DefaultTVShows.png" />
+									<param name="img_source" value="$INFO[Listitem.ActualIcon]" />
+								</include>
 							</control>
 							<control type="label">
 								<left>120</left>
@@ -89,14 +91,17 @@
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
-							<control type="image">
-								<left>25</left>
-								<top>10</top>
-								<width>80</width>
-								<height>80</height>
-								<texture fallback="DefaultTVShows.png">$INFO[Listitem.ActualIcon]</texture>
-								<aspectratio>keep</aspectratio>
+							<control type="group">
 								<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
+								<include content="IconLayout2">
+									<param name="top" value="10" />
+									<param name="left" value="25" />
+									<param name="width" value="80" />
+									<param name="height" value="80" />
+									<param name="img_fallback" value="DefaultTVShows.png" />
+									<param name="img_source" value="$INFO[Listitem.ActualIcon]" />
+									<param name="focused" value="true" />
+								</include>
 							</control>
 							<control type="label">
 								<left>120</left>
