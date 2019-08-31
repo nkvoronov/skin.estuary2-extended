@@ -6,10 +6,9 @@
 	<background label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</background>
 	<background label="smartshortcuts">||BROWSE||special://skin/extras/home-images</background>
 	<backgroundBrowse default="protocol://">True</backgroundBrowse>
-	<icon image="DefaultShortcut.png">resource://resource.images.skinicons.estuary/files.png</icon>
-	<icon image="DefaultAudio.png">resource://resource.images.skinicons.estuary/files.png</icon>
-	<icon image="DefaultPlaylist.png">resource://resource.images.skinicons.estuary/playlists.png</icon>
-	<icon image="DefaultAudio.png" grouping="pvr-radio">resource://resource.images.skinicons.estuary/tvshows.png</icon>
+	<icon image="DefaultShortcut.png">DefaultFile.png</icon>
+	<icon image="DefaultAudio.png">DefaultMusicSongs.png</icon>
+	<icon image="DefaultAudio.png" grouping="pvr-radio">DefaultTVShows.png</icon>
 	<groupoverride group="powermenu" disable_groups="" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
 	<groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</groupoverride>
 	<groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</groupoverride>
@@ -26,12 +25,12 @@
 	<backgrounddefault labelID="addons">special://skin/extras/home-images/addons.jpg</backgrounddefault>
 	<backgrounddefault labelID="favorites">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
 	<backgrounddefault labelID="dvd">special://skin/extras/home-images/dvd.jpg</backgrounddefault>
-	<widget label="43081" icon="resource://resource.images.skinicons.estuary/weather.png">WeatherWidget</widget>
-	<widget label="43082" icon="resource://resource.images.skinicons.estuary/livetv.png">TVWidget</widget>
-	<widget label="43083" icon="resource://resource.images.skinicons.estuary/radio.png">RadioWidget</widget>
-	<widget label="43084" icon="resource://resource.images.skinicons.estuary/addons.png">AddonsWidget</widget>
-	<widget label="43085" icon="resource://resource.images.skinicons.estuary/favourites2.png">FavouritesWidget</widget>
-	<widget label="43086" icon="resource://resource.images.skinicons.estuary/media.png">MediaWidget</widget>
+	<widget label="43081" icon="icons/sidemenu/weather.png">WeatherWidget</widget>
+	<widget label="43082" icon="icons/sidemenu/livetv.png">TVWidget</widget>
+	<widget label="43083" icon="icons/sidemenu/radio.png">RadioWidget</widget>
+	<widget label="43084" icon="icons/sidemenu/addons.png">AddonsWidget</widget>
+	<widget label="43085" icon="icons/sidemenu/favourites.png">FavouritesWidget</widget>
+	<widget label="43086" icon="icons/settings/media.png">MediaWidget</widget>
 	<widgetdefault labelID="weather">WeatherWidget</widgetdefault>
 	<widgetdefault labelID="pictures">MediaWidget</widgetdefault>
 	<widgetdefault labelID="livetv">TVWidget</widgetdefault>
@@ -246,8 +245,8 @@
 		</node>
 		<node label="446">
 			<shortcut label="341" type="446" icon="icons/sidemenu/disc.png">PlayDVD</shortcut>
-			<shortcut label="13391" type="446" icon="resource://resource.images.skinicons.estuary/eject.png">EjectTray()</shortcut>
-			<shortcut label="600" type="446" icon="resource://resource.images.skinicons.estuary/cd.png">RipCD()</shortcut>
+			<shortcut label="13391" type="446" icon="DefaultVCD.png">EjectTray()</shortcut>
+			<shortcut label="600" type="446" icon="DefaultCDDA.png">RipCD()</shortcut>
 		</node>
 		<node label="20389" condition="Library.HasContent(musicvideos)">
 			<shortcut label="20389" type="20389" icon="icons/sidemenu/musicvideos.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
@@ -365,8 +364,8 @@
 		<node label="8" condition="!String.IsEmpty(Weather.Plugin)">
 			<shortcut label="8" type="8" icon="icons/sidemenu/weather.png">ActivateWindow(Weather)</shortcut>
 			<shortcut label="184" type="8" icon="DefaultAddonsUpdates.png">Weather.Refresh</shortcut>
-			<shortcut label="42002" type="8" icon="resource://resource.images.skinicons.estuary/location-previous.png">Weather.LocationPrevious</shortcut>
-			<shortcut label="42003" type="8" icon="resource://resource.images.skinicons.estuary/location-next.png">Weather.LocationNext</shortcut>
+			<shortcut label="42002" type="8" icon="icons/sidemenu/weather.png">Weather.LocationPrevious</shortcut>
+			<shortcut label="42003" type="8" icon="icons/sidemenu/weather.png">Weather.LocationNext</shortcut>
 			<shortcut label="8" type="10004" icon="icons/settings/network.png">ActivateWindow(servicesettings,weather)</shortcut>
 		</node>
 		<node label="10004">
@@ -387,25 +386,25 @@
 			<shortcut label="1" type="10004" icon="icons/settings/player.png">ActivateWindow(playersettings,pictures)</shortcut>
 			<shortcut label="3" type="10004" icon="icons/settings/player.png">ActivateWindow(playersettings,videos)</shortcut>
 			<shortcut label="2" type="10004" icon="icons/settings/player.png">ActivateWindow(playersettings,music)</shortcut>
-			<shortcut label="20183" type="10004" icon="resource://resource.images.skinicons.estuary/reloadskin.png">ReloadSkin()</shortcut>
-			<shortcut label="360" type="10004" icon="resource://resource.images.skinicons.estuary/screensaver.png">ActivateScreensaver()</shortcut>
+			<shortcut label="20183" type="10004" icon="DefaultAddonsUpdates.png">ReloadSkin()</shortcut>
+			<shortcut label="360" type="10004" icon="DefaultAddonScreensaver.png">ActivateScreensaver()</shortcut>
 		</node>
 		<node label="13200">
-			<shortcut label="13200" type="13200" icon="resource://resource.images.skinicons.estuary/profiles.png">ActivateWindow(profiles)</shortcut>
+			<shortcut label="13200" type="13200" icon="DefaultUser.png">ActivateWindow(profiles)</shortcut>
 			<shortcut label="10029" type="13200" icon="DefaultFile.png">ActivateWindow(loginscreen)</shortcut>
-			<shortcut label="20126" type="13200" icon="resource://resource.images.skinicons.estuary/logout.png" condition="System.HasLoginScreen">System.LogOff()</shortcut>
+			<shortcut label="20126" type="13200" icon="DefaultFile.png" condition="System.HasLoginScreen">System.LogOff()</shortcut>
 			<shortcut label="20045" type="13200" icon="DefaultFile.png">Mastermode()</shortcut>
 		</node>
 		<node label="13005">
-			<shortcut label="31072" type="13005" icon="resource://resource.images.skinicons.estuary/power.png">ActivateWindow(shutdownmenu)</shortcut>
-			<shortcut label="13012" type="13005" icon="resource://resource.images.skinicons.estuary/quit.png" condition="System.ShowExitButton">Quit()</shortcut>
-			<shortcut label="13005" type="13005" icon="resource://resource.images.skinicons.estuary/shutdown.png" condition="System.HasShutdown">Shutdown()</shortcut>
-			<shortcut label="13016" type="13005" icon="resource://resource.images.skinicons.estuary/shutdown.png" condition="System.CanPowerDown">Powerdown()</shortcut>
-			<shortcut label="13313" type="13005" icon="resource://resource.images.skinicons.estuary/reboot.png" condition="!System.Platform.Linux.RaspberryPi + [ System.Platform.Windows | System.Platform.Linux.RaspberryPi ]">RestartApp()</shortcut>
-			<shortcut label="13011" type="13005" icon="resource://resource.images.skinicons.estuary/suspend.png" condition="System.CanSuspend">Suspend()</shortcut>
-			<shortcut label="13010" type="13005" icon="resource://resource.images.skinicons.estuary/suspend.png" condition="System.CanHibernate">Hibernate()</shortcut>
-			<shortcut label="13013" type="13005" icon="resource://resource.images.skinicons.estuary/reboot.png" condition="System.CanReboot">Reboot</shortcut>
-			<shortcut label="19026" type="13005" icon="resource://resource.images.skinicons.estuary/shutdowntimer.png">AlarmClock(shutdowntimer,Shutdown())</shortcut>
+			<shortcut label="31072" type="13005" icon="DefaultFile.png">ActivateWindow(shutdownmenu)</shortcut>
+			<shortcut label="13012" type="13005" icon="DefaultFile.png" condition="System.ShowExitButton">Quit()</shortcut>
+			<shortcut label="13005" type="13005" icon="DefaultFile.png" condition="System.HasShutdown">Shutdown()</shortcut>
+			<shortcut label="13016" type="13005" icon="DefaultFile.png" condition="System.CanPowerDown">Powerdown()</shortcut>
+			<shortcut label="13313" type="13005" icon="DefaultFile.png" condition="!System.Platform.Linux.RaspberryPi + [ System.Platform.Windows | System.Platform.Linux.RaspberryPi ]">RestartApp()</shortcut>
+			<shortcut label="13011" type="13005" icon="DefaultFile.png" condition="System.CanSuspend">Suspend()</shortcut>
+			<shortcut label="13010" type="13005" icon="DefaultFile.png" condition="System.CanHibernate">Hibernate()</shortcut>
+			<shortcut label="13013" type="13005" icon="DefaultFile.png" condition="System.CanReboot">Reboot</shortcut>
+			<shortcut label="19026" type="13005" icon="DefaultFile.png">AlarmClock(shutdowntimer,Shutdown())</shortcut>
 			<shortcut label="20151" type="13005" icon="DefaultIconError.png">CancelAlarm(shutdowntimer)</shortcut>
 			<shortcut label="13014" type="13005" icon="DefaultFile.png">Minimize()</shortcut>
 		</node>

@@ -129,8 +129,8 @@
 		<align>left</align>
 	</default>
 	<default type="slider">
-		<texturesliderbar border="10">buttons/slider-back.png</texturesliderbar>
-		<textureslidernib>buttons/slider-nib.png</textureslidernib>
+		<texturesliderbar border="10" colordiffuse="$VAR[ImageColorVar]">buttons/slider-back.png</texturesliderbar>
+		<textureslidernib colordiffuse="$VAR[ImageColorVar]">buttons/slider-nib.png</textureslidernib>
 		<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">buttons/slider-nib.png</textureslidernibfocus>
 		<orientation>horizontal</orientation>
 	</default>
@@ -138,11 +138,11 @@
 		<textoffsetx>7</textoffsetx>
 		<aligny>center</aligny>
 		<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
-		<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
+		<texturenofocus border="40" colordiffuse="$VAR[ImageColorVar]">buttons/button-nofo.png</texturenofocus>
 		<sliderwidth>150</sliderwidth>
 		<sliderheight>28</sliderheight>
-		<texturesliderbar>buttons/slider-back.png</texturesliderbar>
-		<textureslidernib>buttons/slider-nib.png</textureslidernib>
+		<texturesliderbar colordiffuse="$VAR[ImageColorVar]">buttons/slider-back.png</texturesliderbar>
+		<textureslidernib colordiffuse="$VAR[ImageColorVar]">buttons/slider-nib.png</textureslidernib>
 		<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">buttons/slider-nib.png</textureslidernibfocus>
 		<font>font13</font>
 		<textcolor>$VAR[WhiteColorVar]</textcolor>

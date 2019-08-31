@@ -37,13 +37,18 @@
 							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.hasFocus(50)</visible>
 						</control>
-						<control type="image">
+						<control type="group">
 							<right>20</right>
 							<top>10</top>
 							<width>80</width>
 							<height>70</height>
-							<aspectratio align="right">keep</aspectratio>
-							<texture>$INFO[listitem.icon]</texture>
+							<include content="IconLayout2">
+								<param name="top" value="0" />
+								<param name="left" value="0" />
+								<param name="width" value="80" />
+								<param name="height" value="70" />
+								<param name="focused" value="true" />
+							</include>
 						</control>
 						<control type="progress">
 							<left>105</left>
@@ -95,13 +100,17 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="90">
-						<control type="image">
+						<control type="group">
 							<right>20</right>
 							<top>10</top>
 							<width>80</width>
 							<height>70</height>
-							<aspectratio align="right">keep</aspectratio>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<include content="IconLayout2">
+								<param name="top" value="0" />
+								<param name="left" value="0" />
+								<param name="width" value="80" />
+								<param name="height" value="70" />
+							</include>
 						</control>
 						<control type="progress">
 							<left>105</left>
@@ -491,7 +500,7 @@
 				</control>
 				<include>PVRInfoPanel</include>
 			</control>
-            <include content="PVRInfo2Panel">
+			<include content="PVRInfo2Panel">
 				<param name="visible" value="Control.IsVisible(52)" />
 			</include>
 			<control type="group">

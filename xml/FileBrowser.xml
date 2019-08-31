@@ -85,24 +85,12 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="70" width="940">
-					<control type="image">
-						<left>10</left>
-						<top>10</top>
-						<width>50</width>
-						<height>50</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>!$EXP[default_icon]</visible>
-					</control>
-					<control type="image">
-						<left>10</left>
-						<top>10</top>
-						<width>50</width>
-						<height>50</height>
-						<texture colordiffuse="$VAR[GreyColorVar]">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>$EXP[default_icon]</visible>
-					</control>
+					<include content="IconLayout2">
+						<param name="top" value="10" />
+						<param name="left" value="10" />
+						<param name="width" value="50" />
+						<param name="height" value="50" />
+					</include>
 					<control type="label">
 						<left>75</left>
 						<top>0</top>
@@ -114,32 +102,15 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="70" width="940">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<right>0</right>
-						<height>71</height>
-						<visible>Control.HasFocus(450)</visible>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
-					</control>
-					<control type="image">
-						<left>10</left>
-						<top>10</top>
-						<width>50</width>
-						<height>50</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<visible>!$EXP[default_icon]</visible>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="image">
-						<left>10</left>
-						<top>10</top>
-						<width>50</width>
-						<height>50</height>
-						<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
-						<visible>$EXP[default_icon]</visible>
-						<aspectratio>keep</aspectratio>
-					</control>
+					<include content="IconLayout2">
+						<param name="top" value="10" />
+						<param name="left" value="10" />
+						<param name="width" value="50" />
+						<param name="height" value="50" />
+						<param name="width" value="50" />
+						<param name="focused" value="true" />
+						<param name="focused2" value="Control.HasFocus(450)" />
+					</include>
 					<control type="label">
 						<left>75</left>
 						<top>0</top>
@@ -163,24 +134,12 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="70" width="940">
-					<control type="image">
-						<left>10</left>
-						<top>10</top>
-						<width>50</width>
-						<height>50</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<visible>!$EXP[default_icon]</visible>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="image">
-						<left>10</left>
-						<top>10</top>
-						<width>50</width>
-						<height>50</height>
-						<texture colordiffuse="$VAR[GrayColorVar]">$INFO[ListItem.Icon]</texture>
-						<visible>$EXP[default_icon]</visible>
-						<aspectratio>keep</aspectratio>
-					</control>
+					<include content="IconLayout2">
+						<param name="top" value="10" />
+						<param name="left" value="10" />
+						<param name="width" value="50" />
+						<param name="height" value="50" />
+					</include>
 					<control type="label">
 						<left>75</left>
 						<top>0</top>
@@ -192,32 +151,15 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="70" width="940">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<right>0</right>
-						<height>71</height>
-						<visible>Control.HasFocus(451)</visible>
-						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
-					</control>
-					<control type="image">
-						<left>10</left>
-						<top>10</top>
-						<width>50</width>
-						<height>50</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<visible>!$EXP[default_icon]</visible>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="image">
-						<left>10</left>
-						<top>10</top>
-						<width>50</width>
-						<height>50</height>
-						<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
-						<visible>$EXP[default_icon]</visible>
-						<aspectratio>keep</aspectratio>
-					</control>
+					<include content="IconLayout2">
+						<param name="top" value="10" />
+						<param name="left" value="10" />
+						<param name="width" value="50" />
+						<param name="height" value="50" />
+						<param name="width" value="50" />
+						<param name="focused" value="true" />
+						<param name="focused2" value="Control.HasFocus(451)" />
+						</include>
 					<control type="label">
 						<left>75</left>
 						<top>0</top>

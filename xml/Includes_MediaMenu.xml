@@ -29,9 +29,9 @@
 				<radiowidth>40</radiowidth>
 				<radioheight>40</radioheight>
 				<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioonnofocus>
+				<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">$PARAM[icon]</textureradioonnofocus>
 				<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradiooffnofocus>
+				<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">$PARAM[icon]</textureradiooffnofocus>
 				<textureradiooffdisabled colordiffuse="$VAR[MainColorVar]">$PARAM[icon]</textureradiooffdisabled>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TV$PARAM[area])</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(Radio$PARAM[area])</onclick>

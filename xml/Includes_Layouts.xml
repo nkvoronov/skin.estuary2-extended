@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="IconLayout2">
+		<param name="left">10</param>
+		<param name="top">10</param>
+		<param name="width">50</param>
+		<param name="height">50</param>
+		<param name="focused">false</param>
+		<param name="focused2">false</param>
+		<param name="img_source">$INFO[ListItem.Icon]</param>
+		<param name="img_ratio">keep</param>
+		<definition>
+			<control type="group">
+				<description>Picture Layout</description>
+				<control type="image">
+					<description>File Focus</description>
+					<left>0</left>
+					<top>0</top>
+					<right>0</right>
+					<bottom>0</bottom>
+					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+					<visible>$PARAM[focused2]</visible>
+				</control>
+				<control type="image">
+					<description>File Icon 1</description>
+					<left>$PARAM[left]</left>
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture>$PARAM[img_source]</texture>
+					<aspectratio>$PARAM[img_ratio]</aspectratio>
+					<visible>!$EXP[default_icon]</visible>
+				</control>
+				<control type="image">
+					<description>File Icon 2</description>
+					<left>$PARAM[left]</left>
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture colordiffuse="$VAR[GreyColorVar]">$PARAM[img_source]</texture>
+					<aspectratio>$PARAM[img_ratio]</aspectratio>
+					<visible>$EXP[default_icon]</visible>
+					<visible>!$PARAM[focused]</visible>
+				</control>
+				<control type="image">
+					<description>File Icon 2 Focus</description>
+					<left>$PARAM[left]</left>
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[img_source]</texture>
+					<aspectratio>$PARAM[img_ratio]</aspectratio>
+					<visible>$EXP[default_icon]</visible>
+					<visible>$PARAM[focused]</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
 	<include name="IconLayout">
 		<param name="left">0</param>
 		<param name="top">0</param>
