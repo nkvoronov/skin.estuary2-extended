@@ -994,6 +994,7 @@
 		<param name="focused">false</param>
 		<param name="border">true</param>
 		<param name="rating">true</param>
+		<param name="img_source">$INFO[ListItem.Icon]</param>
 		<param name="main_label">$INFO[ListItem.Artist]</param>
 		<param name="sub_label">$INFO[ListItem.Title]</param>
 		<param name="single_label">$INFO[ListItem.Label]</param>
@@ -1005,6 +1006,7 @@
 		<param name="img_ratio">scale</param>
 		<param name="txt_height">19%</param>
 		<param name="txt_label">true</param>
+		<param name="fix_color">false</param>
 		<definition>
 			<control type="group">
 				<description>Square Layout</description>
@@ -1060,6 +1062,7 @@
 						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_fallback]</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
+						<visible>String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="group">
 						<description>File with Icon</description>
@@ -1072,7 +1075,7 @@
 							<right>8</right>
 							<top>$PARAM[img_top]</top>
 							<height>$PARAM[img_height]</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$PARAM[img_source]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
 							<visible>!$EXP[default_icon]</visible>
@@ -1085,10 +1088,10 @@
 							<right>8</right>
 							<top>$PARAM[img_top]</top>
 							<height>$PARAM[img_height]</height>
-							<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
+							<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_source]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
-							<visible>$EXP[default_icon]</visible>
+							<visible>$EXP[default_icon] | $PARAM[fix_color]</visible>
 						</control>
 					</control>
 				</control>

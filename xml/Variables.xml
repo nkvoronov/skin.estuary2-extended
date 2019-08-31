@@ -535,6 +535,7 @@
 	</variable>
 	<variable name="ChannelListEPGIconVar">
 		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
+		<value condition="String.IsEqual(ListItem.Icon, DefaultVideo.png)">DefaultTVShows.png</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="ListInfoBoxImageVar">

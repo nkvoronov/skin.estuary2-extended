@@ -146,10 +146,12 @@
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
+			<param name="img_source" value="DefaultTVShows.png"/>
 			<param name="label" value="$INFO[ListItem.ChannelName]"/>
 			<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
 			<param name="sortby" value="date"/>
 			<param name="sortorder" value="descending"/>
+			<param name="fix_color" value="true"/>
 		</include>
 	</include>
 	<include name="Widget-Movies">
@@ -849,9 +851,11 @@
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
 		<param name="label2">$INFO[ListItem.Title]</param>
+		<param name="img_source">$INFO[ListItem.Icon]</param>
 		<param name="img_fallback">DefaultTVShows.png</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
+		<param name="fix_color">false</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -880,11 +884,13 @@
 							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
+							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 							<param name="img_top" value="24" />
 							<param name="img_height" value="70%" />
 							<param name="img_ratio" value="keep" />
 							<param name="txt_height" value="20%" />
+							<param name="fix_color" value="$PARAM[fix_color]" />
 						</include>
 						<control type="image">
 							<left>260</left>
@@ -916,11 +922,13 @@
 							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
+							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 							<param name="img_top" value="24" />
 							<param name="img_height" value="70%" />
 							<param name="img_ratio" value="keep" />
 							<param name="txt_height" value="20%" />
+							<param name="fix_color" value="$PARAM[fix_color]" />
 						</include>
 						<control type="image">
 							<left>260</left>
