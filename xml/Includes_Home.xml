@@ -463,7 +463,7 @@
 	<include name="Widget-Categories">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="homebackground">false</param>
+		<param name="homebackground">true</param>
 		<param name="type">no</param>
 		<param name="widget_target">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
@@ -521,6 +521,7 @@
 						</animation>
 						<include condition="$PARAM[homebackground]" content="WidgetButton">
 							<param name="custom" value="$PARAM[custom]" />
+							<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 						<include content="IconLayout">
 							<param name="width" value="316" />
@@ -554,7 +555,7 @@
 	<include name="Widget-Posters">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="homebackground">false</param>
+		<param name="homebackground">true</param>
 		<param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="img_fallback">DefaultFolder.png</param>
@@ -601,6 +602,7 @@
 						</animation>
 						<include condition="$PARAM[homebackground]" content="WidgetButton">
 							<param name="custom" value="$PARAM[custom]" />
+							<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 						<include content="PosterLayout">
 							<param name="focused" value="true" />
@@ -625,7 +627,7 @@
 	<include name="Widget-Thumbs">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="homebackground">false</param>
+		<param name="homebackground">true</param>
 		<param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="main_label">$INFO[ListItem.Title]</param>
@@ -678,6 +680,7 @@
 						</animation>
 						<include condition="$PARAM[homebackground]" content="WidgetButton">
 							<param name="custom" value="$PARAM[custom]" />
+							<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 						<include content="ThumbLayout">
 							<param name="focused" value="true" />
@@ -705,7 +708,7 @@
 	<include name="Widget-Square">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="homebackground">false</param>
+		<param name="homebackground">true</param>
 		<param name="favourites">false</param>
 		<param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
@@ -756,6 +759,7 @@
 						</animation>
 						<include condition="$PARAM[homebackground]" content="WidgetButton">
 							<param name="custom" value="$PARAM[custom]" />
+							<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 						<include content="SquareLayout">
 							<param name="focused" value="true" />
@@ -782,7 +786,7 @@
 	</include>
 	<include name="Widget-Square-Favourites">
 		<param name="visible">true</param>
-		<param name="homebackground">false</param>
+		<param name="homebackground">true</param>
 		<param name="sub_label">$INFO[ListItem.Label]</param>
 		<param name="img_fallback">DefaultFavourites.png</param>
 		<definition>
@@ -822,6 +826,7 @@
 						</animation>
 						<include condition="$PARAM[homebackground]" content="WidgetButton">
 							<param name="custom" value="$PARAM[custom]" />
+							<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 						<include content="SquareLayout">
 							<param name="focused" value="true" />
@@ -838,7 +843,7 @@
 	<include name="Widget-Channels">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
-		<param name="homebackground">false</param>
+		<param name="homebackground">true</param>
 		<param name="type">no</param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
@@ -901,6 +906,7 @@
 						</animation>
 						<include condition="$PARAM[homebackground]" content="WidgetButton">
 							<param name="custom" value="$PARAM[custom]" />
+							<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 						<include content="SquareLayout">
 							<param name="width" value="319" />
