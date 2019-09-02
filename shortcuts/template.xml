@@ -15,6 +15,7 @@
 		<property name="widget4_name" tag="property" attribute="name|widgetName.widget4" />
 		<property name="widget5_name" tag="property" attribute="name|widgetName.widget5" />
 		<property name="widget6_name" tag="property" attribute="name|widgetName.widget6" />
+		<property name="widget7_name" tag="property" attribute="name|widgetName.widget7" />
 		<!-- property menu item widget targets -->
 		<property name="widget1_target" tag="property" attribute="name|widgetTarget.widget1" />
 		<property name="widget2_target" tag="property" attribute="name|widgetTarget.widget2" />
@@ -22,6 +23,7 @@
 		<property name="widget4_target" tag="property" attribute="name|widgetTarget.widget4" />
 		<property name="widget5_target" tag="property" attribute="name|widgetTarget.widget5" />
 		<property name="widget6_target" tag="property" attribute="name|widgetTarget.widget6" />
+		<property name="widget7_target" tag="property" attribute="name|widgetTarget.widget7" />
 		<!-- property menu item widget paths -->
 		<property name="widget1_path" tag="property" attribute="name|widgetPath.widget1" />
 		<property name="widget2_path" tag="property" attribute="name|widgetPath.widget2" />
@@ -29,6 +31,7 @@
 		<property name="widget4_path" tag="property" attribute="name|widgetPath.widget4" />
 		<property name="widget5_path" tag="property" attribute="name|widgetPath.widget5" />
 		<property name="widget6_path" tag="property" attribute="name|widgetPath.widget6" />
+		<property name="widget7_path" tag="property" attribute="name|widgetPath.widget7" />
 		<!-- property menu item widget types -->
 		<!-- widget type 1 -->
 		<property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="picture">Pictures</property>
@@ -216,6 +219,37 @@
 		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="weatherdaily">WeatherDaily</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="weatherhourly">WeatherHourly</property>
 		<property name="widget6_type">Other</property>
+		 <!-- widget type 7 -->
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="picture">Pictures</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="video">Videos</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="music">Musics</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="program">Programs</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="addon">Addons</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="custaddon">AddonsCustom</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="tvtimer">TVTimers</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="radiotimer">RadioTimers</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="pvrchannel">PVRChannels</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="custpvrchannel">PVRChannelsCustom</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="pvrrecording">PVRRecordings</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="playlist">Playlists</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="movies">Movies</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="tvshows">TVShows</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="episodes">Episodes</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="musicvideos">MusicVideos</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="albums">Albums</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="artists">Artists</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="songs">Songs</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="mixed">Mixed</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="source">Source</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="moviegenre">MovieGenres</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="musicgenre">MusicGenres</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="studios">Studios</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="country">Country</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="favouriteslist">FavouritesList</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="favouritesfull">FavouritesFull</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="weatherdaily">WeatherDaily</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.widget7" value="weatherhourly">WeatherHourly</property>
+		<property name="widget7_type">Other</property>
 		<controls>
 			<control type="group" id="$PYTHON[10+int($SKINSHORTCUTS[id])]000">
 				<skinshortcuts>visibility</skinshortcuts>
@@ -254,6 +288,10 @@
 					<param name="widget6_type" value="$SKINSHORTCUTS[widget6_type]"/>
 					<param name="widget6_target" value="$SKINSHORTCUTS[widget6_target]"/>
 					<param name="widget6_path" value="$SKINSHORTCUTS[widget6_path]"/>
+					<param name="widget7_name" value="$SKINSHORTCUTS[widget7_name]"/>
+					<param name="widget7_type" value="$SKINSHORTCUTS[widget7_type]"/>
+					<param name="widget7_target" value="$SKINSHORTCUTS[widget7_target]"/>
+					<param name="widget7_path" value="$SKINSHORTCUTS[widget7_path]"/>
 				</include>
 			</control>
 		</controls>

@@ -409,7 +409,7 @@
 			<shortcut label="13014" type="13005" icon="DefaultFile.png">Minimize()</shortcut>
 		</node>
 	</groupings>
-	<widgetRename>True</widgetRename>
+	<widgetRename>False</widgetRename>
 	<widget-groupings>
 		<shortcut label="43081" icon="icons/sidemenu/weather.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="WeatherWidget">WeatherWidget</shortcut>
 		<shortcut label="43082" icon="icons/sidemenu/livetv.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="TVWidget">TVWidget</shortcut>

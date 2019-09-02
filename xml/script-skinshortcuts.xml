@@ -139,11 +139,22 @@
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
 				</control>
+				<control type="button" id="357">
+					<description>Widget 7</description>
+					<include>DefaultSettingButton</include>
+					<label>$ADDON[script.skinshortcuts 32044] 7</label>
+					<label2>$VAR[WidgetName7Label2Var]</label2>
+					<onclick>ClearProperty(WidgetVisibility,home)</onclick>
+					<onclick>SetProperty(widgetID, widget7)</onclick>
+					<onclick>SendClick(312)</onclick>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+				</control>
 				<control type="image" id="600">
 					<description>Separator image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
-		        </control>
+				</control>
 				<control type="label" id="599">
 					<description>Disable Menu Item Label</description>
 					<include>DefaultSettingLabel</include>
@@ -160,7 +171,7 @@
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
-		        </control>
+				</control>
 				<control type="button" id="308">
 					<description>Restore Shortcuts</description>
 					<include>DefaultSettingButton</include>

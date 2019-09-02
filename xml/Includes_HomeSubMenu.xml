@@ -51,6 +51,10 @@
 				<param name="widget6_type" value="$PARAM[widget6_type]"/>
 				<param name="widget6_target" value="$PARAM[widget6_target]"/>
 				<param name="widget6_path" value="$PARAM[widget6_path]"/>
+				<param name="widget7_name" value="$PARAM[widget7_name]"/>
+				<param name="widget7_type" value="$PARAM[widget7_type]"/>
+				<param name="widget7_target" value="$PARAM[widget7_target]"/>
+				<param name="widget7_path" value="$PARAM[widget7_path]"/>
 			</include>
 			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
 				<param name="scrollbar_id" value="$PARAM[submain_id]111"/>

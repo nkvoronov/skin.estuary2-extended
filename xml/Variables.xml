@@ -893,6 +893,10 @@
 		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget6))">$INFO[Container(211).ListItem.Property(widgetName.widget6)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
+	<variable name="WidgetName7Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget7))">$INFO[Container(211).ListItem.Property(widgetName.widget7)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
 	<variable name="SkinShortcutsTitleVar">
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)"> / $ADDON[script.skinshortcuts 32071]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)"> / $LOCALIZE[43020]</value>
