@@ -1,5 +1,4 @@
 <settings>
-	<!-- Opacity -->
 	<setting id="Opacity" value="Default" label="$LOCALIZE[15109]" condition="" icon="DefaultAddon.png" description="$LOCALIZE[15109]"/>
 	<setting id="Opacity" value="0" label="0" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[44001]0%"/>
 	<setting id="Opacity" value="5" label="5" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[44001]5%"/>
@@ -22,7 +21,6 @@
 	<setting id="Opacity" value="90" label="90" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[44001]90%"/>
 	<setting id="Opacity" value="95" label="95" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[44001]95%"/>
 	<setting id="Opacity" value="100" label="100" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[44001]100%"/>
-	<!-- Popup Position -->
 	<setting id="PopupPosition" value="TopLeft" label="$LOCALIZE[44104]" condition="" icon="dialogs/settings/PopupNotification-TopLeft.png" description=""/>
 	<setting id="PopupPosition" value="TopCenter" label="$LOCALIZE[44105]" condition="" icon="dialogs/settings/PopupNotification-TopCenter.png" description=""/>
 	<setting id="PopupPosition" value="TopRight" label="$LOCALIZE[44106]" condition="" icon="dialogs/settings/PopupNotification-TopRight.png" description=""/>

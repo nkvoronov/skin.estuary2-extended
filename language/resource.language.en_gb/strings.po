@@ -813,7 +813,7 @@ msgid "Enable Smart Shortcuts Playlists"
 msgstr ""
 
 msgctxt "#43007"
-msgid "Enable Smart Shortcuts Favorites"
+msgid "Enable Smart Shortcuts Favourites"
 msgstr ""
 
 msgctxt "#43008"
@@ -997,27 +997,39 @@ msgid "Enable"
 msgstr ""
 
 msgctxt "#43081"
-msgid "Weather widgets"
+msgid "Weather Widgets"
 msgstr ""
 
 msgctxt "#43082"
-msgid "LiveTV widgets"
+msgid "Pictures Widgets"
 msgstr ""
 
 msgctxt "#43083"
-msgid "Radio widgets"
+msgid "Video Widgets"
 msgstr ""
 
 msgctxt "#43084"
-msgid "Addons widgets"
+msgid "LiveTV Widgets"
 msgstr ""
 
 msgctxt "#43085"
-msgid "Favorites widget"
+msgid "Radio Widgets"
 msgstr ""
 
 msgctxt "#43086"
-msgid "Media widgets"
+msgid "Movies Widgets"
+msgstr ""
+
+msgctxt "#43087"
+msgid "TVShows Widgets"
+msgstr ""
+
+msgctxt "#43088"
+msgid "Music Videos widgets"
+msgstr ""
+
+msgctxt "#43089"
+msgid "Music Widgets"
 msgstr ""
 
 msgctxt "#43090"
@@ -1034,6 +1046,22 @@ msgstr ""
 
 msgctxt "#43101"
 msgid "Smart Widgets"
+msgstr ""
+
+msgctxt "#43110"
+msgid "Addons Widgets"
+msgstr ""
+
+msgctxt "#43111"
+msgid "Games Widgets"
+msgstr ""
+
+msgctxt "#43112"
+msgid "Favourites Widget"
+msgstr ""
+
+msgctxt "#43113"
+msgid "Media Widgets"
 msgstr ""
 
 msgctxt "#43200"
@@ -1065,11 +1093,11 @@ msgid "Channel"
 msgstr ""
 
 msgctxt "#43241"
-msgid "Favorites TV Channels"
+msgid "Favourites TV Channels"
 msgstr ""
 
 msgctxt "#43242"
-msgid "Favorites Radio Channels"
+msgid "Favourites Radio Channels"
 msgstr ""
 
 msgctxt "#43250"
@@ -1322,5 +1350,41 @@ msgstr ""
 
 msgctxt "#44160"
 msgid "Color Black"
+msgstr ""
+
+msgctxt "#44200"
+msgid "Widget appearence"
+msgstr ""
+
+msgctxt "#44201"
+msgid "Posters"
+msgstr ""
+
+msgctxt "#44202"
+msgid "Thumbs"
+msgstr ""
+
+msgctxt "#44203"
+msgid "Squares"
+msgstr ""
+
+msgctxt "#44204"
+msgid "Categories"
+msgstr ""
+
+msgctxt "#44205"
+msgid "Channels"
+msgstr ""
+
+msgctxt "#44206"
+msgid "Auto"
+msgstr ""
+
+msgctxt "#44210"
+msgid "Sort method of widget"
+msgstr ""
+
+msgctxt "#44220"
+msgid "Sort direction of widget"
 msgstr ""
 

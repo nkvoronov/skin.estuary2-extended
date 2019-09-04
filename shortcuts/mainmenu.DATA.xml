@@ -80,7 +80,7 @@
 	<shortcut>
 		<label>1036</label>
 		<label2>1036</label2>
-		<defaultID>favorites</defaultID>
+		<defaultID>favourites</defaultID>
 		<icon>icons/sidemenu/favourites.png</icon>
 		<action>ActivateWindow(favourites)</action>
 	</shortcut>

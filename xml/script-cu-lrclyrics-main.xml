@@ -16,7 +16,6 @@
 				<param name="header_id" value="2" />
 			</include>
 			<animation effect="slide" end="310,0" time="0" condition="[Player.ShowInfo | Window.IsActive(musicosd)] + Skin.HasSetting(lrclyrics_alternative_view)">conditional</animation>
-			<!-- ** Required ** Do not change <id> or <type> (Lyrics, will autoscroll if lrc based lyrics are shown) -->
 			<control type="list" id="110">
 				<left>10</left>
 				<top>110</top>
@@ -79,7 +78,6 @@
 				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				<visible>Control.IsVisible(120) + !Control.IsVisible(110)</visible>
 			</control>
-			<!-- ** Required ** Do not change <id> or <type> (Lyrics Chooser, if multiple lyrics are available) -->
 			<control type="list" id="120">
 				<left>10</left>
 				<top>110</top>

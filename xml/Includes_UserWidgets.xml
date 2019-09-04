@@ -1,18 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<!-- CustomWidgetsAddonsSettings -->
 	<include name="HomeMainCustomWidgetsAddonsSettings">
-		<!-- WidgetsAddonsEnable -->
 		<control type="radiobutton" id="$PARAM[id1]00">
-			<description>Flags</description>
+			<description>Widgets Addons Enable</description>
 			<include>DefaultSettingButton</include>
 			<label>$PARAM[title]</label>
 			<onclick>Skin.ToggleSetting($PARAM[flags])</onclick>
 			<selected>Skin.HasSetting($PARAM[flags])</selected>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons01 -->
 		<control type="button" id="$PARAM[id1]01">
+			<description>Widgets Addons 01</description>
 			<label>- $LOCALIZE[24000] [B]1[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].0.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -24,8 +22,8 @@
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons02 -->
 		<control type="button" id="$PARAM[id1]02">
+			<description>Widgets Addons 02</description>
 			<label>- $LOCALIZE[24000] [B]2[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].1.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -38,8 +36,8 @@
 			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].0.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons03 -->
 		<control type="button" id="$PARAM[id1]03">
+			<description>Widgets Addons 03</description>
 			<label>- $LOCALIZE[24000] [B]3[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].2.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -52,8 +50,8 @@
 			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].1.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons04 -->
 		<control type="button" id="$PARAM[id1]04">
+			<description>Widgets Addons 04</description>
 			<label>- $LOCALIZE[24000] [B]4[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].3.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -66,8 +64,8 @@
 			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].2.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons05 -->
 		<control type="button" id="$PARAM[id1]05">
+			<description>Widgets Addons 05</description>
 			<label>- $LOCALIZE[24000] [B]5[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].4.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -80,8 +78,8 @@
 			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].3.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons06 -->
 		<control type="button" id="$PARAM[id1]06">
+			<description>Widgets Addons 06</description>
 			<label>- $LOCALIZE[24000] [B]6[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].5.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -94,8 +92,8 @@
 			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].4.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons07 -->
 		<control type="button" id="$PARAM[id1]07">
+			<description>Widgets Addons 07</description>
 			<label>- $LOCALIZE[24000] [B]7[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].6.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -108,8 +106,8 @@
 			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].5.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons08 -->
 		<control type="button" id="$PARAM[id1]08">
+			<description>Widgets Addons 08</description>
 			<label>- $LOCALIZE[24000] [B]8[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].7.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -122,8 +120,8 @@
 			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].6.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons09 -->
 		<control type="button" id="$PARAM[id1]09">
+			<description>Widgets Addons 09</description>
 			<label>- $LOCALIZE[24000] [B]9[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].8.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -136,8 +134,8 @@
 			<visible>!String.IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].7.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsAddons10 -->
 		<control type="button" id="$PARAM[id1]10">
+			<description>Widgets Addons 10</description>
 			<label>- $LOCALIZE[24000] [B]10[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].9.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -151,7 +149,6 @@
 			<visible>$PARAM[visible]</visible>
 		</control>
 	</include>
-	<!-- SelectAddons -->
 	<include name="HomeMainCustomWidgetsSelectAddons">
 		<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 		<onclick>Skin.SetAddon(UsrSelectAddon,$PARAM[type])</onclick>
@@ -159,7 +156,6 @@
 		<onclick>Skin.SetString(AddonSet$PARAM[adonnstype].$PARAM[id1].Name,$INFO[Skin.String(UsrSelectAddon)])</onclick>
 		<onclick>Skin.SetString(AddonSet$PARAM[adonnstype].$PARAM[id1].Icon,$INFO[system.addonicon(Skin.String(UsrSelectAddon))])</onclick>
 	</include>
-	<!-- ContentAddonsWidgets -->
 	<include name="HomeCustomAddonsItems">
 		<item id="1">
 			<label>$INFO[Skin.String(AddonSet$PARAM[id2].0.Label)]</label>
@@ -277,10 +273,9 @@
 			<param name="id2" value="Image" />
 		</include>
 	</include>
-	<!-- CustomWidgetsChannelsSettings -->
 	<include name="HomeMainCustomWidgetsChannelsSettings">
-		<!-- WidgetsChannelsEnable -->
 		<control type="radiobutton" id="$PARAM[id1]00">
+			<description>Widgets Channels Enable</description>
 			<description>Flags</description>
 			<include>DefaultSettingButton</include>
 			<label>$PARAM[title]</label>
@@ -288,8 +283,8 @@
 			<selected>Skin.HasSetting($PARAM[flags])</selected>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels01 -->
 		<control type="button" id="$PARAM[id1]01">
+			<description>Widgets Channels 01</description>
 			<label>- $LOCALIZE[43240] [B]1[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].0.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -297,8 +292,8 @@
 			<visible>Skin.HasSetting($PARAM[flags])</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels02 -->
 		<control type="button" id="$PARAM[id1]02">
+			<description>Widgets Channels 02</description>
 			<label>- $LOCALIZE[43240] [B]2[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].1.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -307,8 +302,8 @@
 			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[setchannelstype].0.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels03 -->
 		<control type="button" id="$PARAM[id1]03">
+			<description>Widgets Channels 03</description>
 			<label>- $LOCALIZE[43240] [B]3[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].2.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -317,8 +312,8 @@
 			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[setchannelstype].1.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels04 -->
 		<control type="button" id="$PARAM[id1]04">
+			<description>Widgets Channels 04</description>
 			<label>- $LOCALIZE[43240] [B]4[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].3.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -327,8 +322,8 @@
 			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[setchannelstype].2.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels05 -->
 		<control type="button" id="$PARAM[id1]05">
+			<description>Widgets Channels 05</description>
 			<label>- $LOCALIZE[43240] [B]5[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].4.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -337,8 +332,8 @@
 			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[setchannelstype].3.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels06 -->
 		<control type="button" id="$PARAM[id1]06">
+			<description>Widgets Channels 06</description>
 			<label>- $LOCALIZE[43240] [B]6[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].5.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -347,8 +342,8 @@
 			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[setchannelstype].4.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels07 -->
 		<control type="button" id="$PARAM[id1]07">
+			<description>Widgets Channels 07</description>
 			<label>- $LOCALIZE[43240] [B]7[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].6.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -357,8 +352,8 @@
 			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[setchannelstype].5.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels08 -->
 		<control type="button" id="$PARAM[id1]08">
+			<description>Widgets Channels 08</description>
 			<label>- $LOCALIZE[43240] [B]8[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].7.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -367,8 +362,8 @@
 			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[setchannelstype].6.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels09 -->
 		<control type="button" id="$PARAM[id1]09">
+			<description>Widgets Channels 09</description>
 			<label>- $LOCALIZE[43240] [B]9[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].8.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -377,8 +372,8 @@
 			<visible>!String.IsEmpty(Skin.String(Channel$PARAM[setchannelstype].7.Label))</visible>
 			<visible>$PARAM[visible]</visible>
 		</control>
-		<!-- WidgetsChannels10 -->
 		<control type="button" id="$PARAM[id1]10">
+			<description>Widgets Channels 10</description>
 			<label>- $LOCALIZE[43240] [B]10[/B]</label>
 			<label2>[COLOR $VAR[SelectedColorVar]]$INFO[Skin.String(Channel$PARAM[setchannelstype].9.Label)][/COLOR]</label2>
 			<include>DefaultSettingButton</include>
@@ -388,7 +383,6 @@
 			<visible>$PARAM[visible]</visible>
 		</control>
 	</include>
-	<!-- ContentChannelsWidgets -->
 	<include name="HomeCustomChannelsItems">
 		<item id="1">
 			<label>$INFO[Skin.String(Channel$PARAM[id2].0.Label)]</label>

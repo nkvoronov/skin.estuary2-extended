@@ -3,11 +3,11 @@
 	<include name="HomeSubMenu">
 		<control type="group" id="2000">
 			<left>462</left>
-			<animation type="Conditional" condition="Control.IsVisible(200000)" reversible="false">
+			<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
 				<effect type="slide" end="0,20" time="60" tween="sine" />
 				<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
 			</animation>
-			<animation type="Conditional" condition="Control.IsVisible(200001)" reversible="false">
+			<animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
 				<effect type="slide" end="0,-20" time="60" tween="sine" />
 				<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
 			</animation>
@@ -17,13 +17,13 @@
 	</include>
 	<include name="HomeSubPanels">
 		<control type="grouplist" id="$PARAM[submain_id]001">
-			<include>WidgetGroup-Common</include>
-			<include content="Widget-SubMenu">
-				<param name="custom" value="true"/>
-				<param name="visible" value="true"/>
-				<param name="content_path" value="$PARAM[submenu_content]"/>
+			<include>Widget-GroupCommon</include>
+			<pagecontrol>$PARAM[submain_id]010</pagecontrol>
+			<include content="Widget-Categories">
 				<param name="widget_header" value="$LOCALIZE[31148]"/>
-				<param name="list_id" value="$PARAM[submain_id]900"/>
+				<param name="content_path" value="$PARAM[submenu_content]"/>
+				<param name="custom" value="true"/>
+				<param name="list_id" value="$PARAM[submain_id]100"/>
 			</include>
 			<include content="$PARAM[widget_content]">
 				<param name="control_id" value="$PARAM[submain_id]" />
@@ -31,33 +31,58 @@
 				<param name="widget1_type" value="$PARAM[widget1_type]"/>
 				<param name="widget1_target" value="$PARAM[widget1_target]"/>
 				<param name="widget1_path" value="$PARAM[widget1_path]"/>
+				<param name="widget1_view" value="$PARAM[widget1_view]"/>
+				<param name="widget1_sortby" value="$PARAM[widget1_sortby]"/>
+				<param name="widget1_sortorder" value="$PARAM[widget1_sortorder]"/>
 				<param name="widget2_name" value="$PARAM[widget2_name]"/>
 				<param name="widget2_type" value="$PARAM[widget2_type]"/>
 				<param name="widget2_target" value="$PARAM[widget2_target]"/>
 				<param name="widget2_path" value="$PARAM[widget2_path]"/>
+				<param name="widget2_view" value="$PARAM[widget2_view]"/>
+				<param name="widget2_sortby" value="$PARAM[widget2_sortby]"/>
+				<param name="widget2_sortorder" value="$PARAM[widget2_sortorder]"/>
 				<param name="widget3_name" value="$PARAM[widget3_name]"/>
 				<param name="widget3_type" value="$PARAM[widget3_type]"/>
 				<param name="widget3_target" value="$PARAM[widget3_target]"/>
 				<param name="widget3_path" value="$PARAM[widget3_path]"/>
+				<param name="widget3_view" value="$PARAM[widget3_view]"/>
+				<param name="widget3_sortby" value="$PARAM[widget3_sortby]"/>
+				<param name="widget3_sortorder" value="$PARAM[widget3_sortorder]"/>
 				<param name="widget4_name" value="$PARAM[widget4_name]"/>
 				<param name="widget4_type" value="$PARAM[widget4_type]"/>
 				<param name="widget4_target" value="$PARAM[widget4_target]"/>
 				<param name="widget4_path" value="$PARAM[widget4_path]"/>
+				<param name="widget4_view" value="$PARAM[widget4_view]"/>
+				<param name="widget4_sortby" value="$PARAM[widget4_sortby]"/>
+				<param name="widget4_sortorder" value="$PARAM[widget4_sortorder]"/>
 				<param name="widget5_name" value="$PARAM[widget5_name]"/>
 				<param name="widget5_type" value="$PARAM[widget5_type]"/>
 				<param name="widget5_target" value="$PARAM[widget5_target]"/>
 				<param name="widget5_path" value="$PARAM[widget5_path]"/>
+				<param name="widget5_view" value="$PARAM[widget5_view]"/>
+				<param name="widget5_sortby" value="$PARAM[widget5_sortby]"/>
+				<param name="widget5_sortorder" value="$PARAM[widget5_sortorder]"/>
 				<param name="widget6_name" value="$PARAM[widget6_name]"/>
 				<param name="widget6_type" value="$PARAM[widget6_type]"/>
 				<param name="widget6_target" value="$PARAM[widget6_target]"/>
 				<param name="widget6_path" value="$PARAM[widget6_path]"/>
+				<param name="widget6_view" value="$PARAM[widget6_view]"/>
+				<param name="widget6_sortby" value="$PARAM[widget6_sortby]"/>
+				<param name="widget6_sortorder" value="$PARAM[widget6_sortorder]"/>
 				<param name="widget7_name" value="$PARAM[widget7_name]"/>
 				<param name="widget7_type" value="$PARAM[widget7_type]"/>
 				<param name="widget7_target" value="$PARAM[widget7_target]"/>
 				<param name="widget7_path" value="$PARAM[widget7_path]"/>
-			</include>
-			<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
-				<param name="scrollbar_id" value="$PARAM[submain_id]111"/>
+				<param name="widget7_view" value="$PARAM[widget7_view]"/>
+				<param name="widget7_sortby" value="$PARAM[widget7_sortby]"/>
+				<param name="widget7_sortorder" value="$PARAM[widget7_sortorder]"/>
+				<param name="widget8_name" value="$PARAM[widget8_name]"/>
+				<param name="widget8_type" value="$PARAM[widget8_type]"/>
+				<param name="widget8_target" value="$PARAM[widget8_target]"/>
+				<param name="widget8_path" value="$PARAM[widget8_path]"/>
+				<param name="widget8_view" value="$PARAM[widget8_view]"/>
+				<param name="widget8_sortby" value="$PARAM[widget8_sortby]"/>
+				<param name="widget8_sortorder" value="$PARAM[widget8_sortorder]"/>
 			</include>
 		</control>
 	</include>

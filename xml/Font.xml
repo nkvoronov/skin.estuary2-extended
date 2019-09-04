@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
 	<fontset id="Default" idloc="15109">
-		<!-- Normal Fonts -->
 		<font>
 			<name>font10</name>
 			<filename>NotoSans-Regular.ttf</filename>
@@ -69,7 +68,6 @@
 			<filename>Roboto-Thin.ttf</filename>
 			<size>70</size>
 		</font>
-		<!-- Title Fonts -->
 		<font>
 			<name>font_flag</name>
 			<filename>NotoSans-Bold.ttf</filename>
@@ -128,7 +126,6 @@
 		</font>
 	</fontset>
 	<fontset id="Arial" idloc="31053">
-		<!-- Arial Font better for non English -->
 		<font>
 			<name>font10</name>
 			<filename>arial.ttf</filename>
@@ -182,7 +179,6 @@
 			<size>70</size>
 			<style>lighten</style>
 		</font>
-		<!-- Title Fonts -->
 		<font>
 			<name>font_flag</name>
 			<filename>arial.ttf</filename>

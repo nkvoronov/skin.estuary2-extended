@@ -58,6 +58,7 @@
 				<movement>6</movement>
 				<focusposition>1</focusposition>
 				<onfocus>ClearProperty(listposition,home)</onfocus>
+				<onfocus>ClearProperty(SkinHelper.WidgetContainer,home)</onfocus>
 				<onright>2000</onright>
 				<onleft>700</onleft>
 				<onup>9000</onup>

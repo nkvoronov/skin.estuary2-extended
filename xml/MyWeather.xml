@@ -145,40 +145,40 @@
 				</control>
 			</control>
 			<include content="Widget-Weather">
-				<param name="content_include" value="DailyItems" />
+				<param name="content_include" value="Widget-DailyItems" />
 				<param name="list_id" value="15100" />
 				<param name="widget_header" value="$LOCALIZE[31019]"/>
 				<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
 				<param name="width" value="258" />
 			</include>
 			<include content="Widget-Weather">
-				<param name="content_include" value="HourlyItems" />
+				<param name="content_include" value="Widget-HourlyItems" />
 				<param name="list_id" value="15200" />
 				<param name="widget_header" value="$LOCALIZE[33036]"/>
 				<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
 				<param name="width" value="258" />
 			</include>
-			<include content="WeatherMapItem">
+			<include content="Widget-WeatherMapItem">
 				<param name="item_id" value="1" />
 				<param name="onup_id" value="15100" />
 				<param name="ondown_id" value="70020" />
 			</include>
-			<include content="WeatherMapItem">
+			<include content="Widget-WeatherMapItem">
 				<param name="item_id" value="2" />
 				<param name="onup_id" value="70010" />
 				<param name="ondown_id" value="70030" />
 			</include>
-			<include content="WeatherMapItem">
+			<include content="Widget-WeatherMapItem">
 				<param name="item_id" value="3" />
 				<param name="onup_id" value="70020" />
 				<param name="ondown_id" value="70040" />
 			</include>
-			<include content="WeatherMapItem">
+			<include content="Widget-WeatherMapItem">
 				<param name="item_id" value="4" />
 				<param name="onup_id" value="70030" />
 				<param name="ondown_id" value="70050" />
 			</include>
-			<include content="WeatherMapItem">
+			<include content="Widget-WeatherMapItem">
 				<param name="item_id" value="5" />
 				<param name="onup_id" value="70040" />
 				<param name="ondown_id" value="20001" />

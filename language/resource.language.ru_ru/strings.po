@@ -623,7 +623,7 @@ msgid "Enable Smart Shortcuts Playlists"
 msgstr "Разрешить Смарт Ярлыки для плейлистов"
 
 msgctxt "#43007"
-msgid "Enable Smart Shortcuts Favorites"
+msgid "Enable Smart Shortcuts Favourites"
 msgstr "Разрешить Смарт Ярлыки для избранного"
 
 msgctxt "#43008"
@@ -807,28 +807,40 @@ msgid "Enable"
 msgstr "Разрешить"
 
 msgctxt "#43081"
-msgid "Weather widgets"
+msgid "Weather Widgets"
 msgstr "Виджеты погоды"
 
 msgctxt "#43082"
-msgid "LiveTV widgets"
-msgstr "Виджеты ТВ"
+msgid "Pictures Widgets"
+msgstr "Виджеты картинок"
 
 msgctxt "#43083"
-msgid "Radio widgets"
-msgstr "Виджеты радио"
+msgid "Video Widgets"
+msgstr "Виджеты видео"
 
 msgctxt "#43084"
-msgid "Addons widgets"
-msgstr "Виджеты дополнений"
+msgid "LiveTV Widgets"
+msgstr "Виджеты ТВ"
 
 msgctxt "#43085"
-msgid "Favorites widget"
-msgstr "Виджет избранного"
+msgid "Radio Widgets"
+msgstr "Виджеты радио"
 
 msgctxt "#43086"
-msgid "Media widgets"
-msgstr "Медиа виджеты"
+msgid "Movies Widgets"
+msgstr "Виджеты фильмов"
+
+msgctxt "#43087"
+msgid "TVShows Widgets"
+msgstr "Виджеты сериалов"
+
+msgctxt "#43088"
+msgid "Music Videos widgets"
+msgstr "Виджеты муз. видео"
+
+msgctxt "#43089"
+msgid "Music Widgets"
+msgstr "Виджеты музыки"
 
 msgctxt "#43090"
 msgid "Most watched music videos"
@@ -846,17 +858,33 @@ msgctxt "#43101"
 msgid "Smart Widgets"
 msgstr "Смарт Виджеты"
 
+msgctxt "#43110"
+msgid "Addons Widgets"
+msgstr "Виджеты дополнений"
+
+msgctxt "#43111"
+msgid "Games Widgets"
+msgstr "Виджеты игр"
+
+msgctxt "#43112"
+msgid "Favourites Widget"
+msgstr "Виджет избранного"
+
+msgctxt "#43113"
+msgid "Media Widgets"
+msgstr "Виджеты медиа"
+
 msgctxt "#43200"
 msgid "Big posters"
 msgstr "Большие постеры"
 
 msgctxt "#43201"
 msgid "Clear Logos"
-msgstr "Логотип 1"
+msgstr "Логотип"
 
 msgctxt "#43202"
 msgid "Clear Arts"
-msgstr "Логотип 2"
+msgstr "Винетка"
 
 msgctxt "#43210"
 msgid "Aired"
@@ -875,11 +903,11 @@ msgid "Channel"
 msgstr "Канал"
 
 msgctxt "#43241"
-msgid "Favorites TV Channels"
+msgid "Favourites TV Channels"
 msgstr "Избранные ТВ каналы"
 
 msgctxt "#43242"
-msgid "Favorites Radio Channels"
+msgid "Favourites Radio Channels"
 msgstr "Избранные Радио каналы"
 
 msgctxt "#43250"
@@ -1133,3 +1161,40 @@ msgstr "Красный цвет"
 msgctxt "#44160"
 msgid "Color Black"
 msgstr "Черный цвет"
+
+msgctxt "#44200"
+msgid "Widget appearence"
+msgstr "Внешний вид виджетов"
+
+msgctxt "#44201"
+msgid "Posters"
+msgstr "Постеры"
+
+msgctxt "#44202"
+msgid "Thumbs"
+msgstr "Эскизы"
+
+msgctxt "#44203"
+msgid "Squares"
+msgstr "Квадраты"
+
+msgctxt "#44204"
+msgid "Categories"
+msgstr "Категории"
+
+msgctxt "#44205"
+msgid "Channels"
+msgstr "Каналы"
+
+msgctxt "#44206"
+msgid "Auto"
+msgstr "Авто"
+
+msgctxt "#44210"
+msgid "Sort method of widget"
+msgstr "Метод сортировки в виджете"
+
+msgctxt "#44220"
+msgid "Sort direction of widget"
+msgstr "Направление сортировки в виджете"
+

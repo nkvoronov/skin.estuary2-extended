@@ -105,18 +105,6 @@
 		<label />
 		<font />
 	</include>
-	<include name="WidgetButton">
-		<param name="custom">false</param>
-		<definition>
-			<control type="button">
-				<onfocus condition="!$PARAM[custom]">SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-				<onfocus>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
-				<onfocus>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
-				<texturenofocus />
-				<texturefocus />
-			</control>
-		</definition>
-	</include>
 	<include name="RatingCircle">
 		<param name="animation">False</param>
 		<definition>
@@ -1232,29 +1220,29 @@
 		<param name="fanart_background">$VAR[FanartBackgroundVar]</param>
 		<param name="fanart_media"></param>
 		<definition>
-			<!-- Video -->
 			<control type="videowindow">
+				<description>Video</description>
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasVideo + !Skin.HasSetting(show_background_video) + !Slideshow.IsActive</visible>
 			</control>
-			<!-- Visualisation -->
 			<control type="visualisation">
+				<description>Visualisation</description>
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + !Slideshow.IsActive + !Skin.HasSetting(show_background_vis)</visible>
 			</control>
-			<!-- Backgrounds -->
 			<control type="group">
+				<description>Backgrounds</description>
 				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
-				<!-- Backgrounds 0 -->
 				<control type="group">
+					<description>Background 0</description>
 					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="!Control.IsVisible(31111)">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(FullscreenGame) | Window.Previous(startup)">WindowOpen</animation>
 					<include>ColoredBackgroundImages</include>
 				</control>
-				<!-- Backgrounds x -->
 				<control type="group" id="31111">
+					<description>Background x</description>
 					<visible>![[Player.HasVideo + !Skin.HasSetting(show_background_video)] | [Player.HasAudio + Visualisation.Enabled + !Skin.HasSetting(show_background_vis) + !String.IsEmpty(Visualisation.Name) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]]</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -1262,8 +1250,8 @@
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<control type="group" id="32111">
 						<visible>!Control.IsVisible(502) | $EXP[infodialog_active] | $EXP[fanart_visible]</visible>
-						<!-- Backgrounds 1 -->
 						<control type="multiimage" id="32211">
+							<description>Background 1</description>
 							<include>FullScreenDimensions</include>
 							<aspectratio>scale</aspectratio>
 							<fadetime>400</fadetime>
@@ -1274,16 +1262,16 @@
 						<control type="group" id="32212">
 							<visible>Skin.HasSetting(separate_background) + String.IsEmpty(Control.GetLabel(32213))</visible>
 							<animation effect="fade" time="400">VisibleChange</animation>
-							<!-- Backgrounds 2 -->
 							<control type="multiimage" id="32221">
+								<description>Background 2</description>
 								<include>FullScreenDimensions</include>
 								<aspectratio>scale</aspectratio>
 								<fadetime>400</fadetime>
 								<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[main_background]</imagepath>
 								<visible>String.IsEmpty(Skin.String(HomeFanart.path)) | String.IsEmpty(Control.GetLabel(32222))</visible>
 							</control>
-							<!-- Backgrounds 3 -->
 							<control type="multiimage" id="32222">
+								<description>Background 3</description>
 								<include>FullScreenDimensions</include>
 								<aspectratio>scale</aspectratio>
 								<fadetime>400</fadetime>
@@ -1291,8 +1279,8 @@
 								<visible>!String.IsEmpty(Skin.String(HomeFanart.path))</visible>
 							</control>
 						</control>
-						<!-- Backgrounds 4 -->
 						<control type="multiimage" id="32213">
+							<description>Background 4</description>
 							<include>FullScreenDimensions</include>
 							<aspectratio>scale</aspectratio>
 							<fadetime>400</fadetime>
@@ -1753,9 +1741,6 @@
 				<label2>$PARAM[label2]</label2>
 				<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 				<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=$PARAM[property]&amp;type=$PARAM[type])</onclick>
-				<!-- Alternative ????
-				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=$PARAM[property],addontype=$PARAM[type])</onclick> -->
 				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
@@ -1922,9 +1907,50 @@
 			</item>
 		</content>
 	</include>
-	<!-- Lrclyrics Dialog -->
 	<include name="Lrclyrics_Dialog">
 		<include>Animation_DialogPopupOpenClose</include>
 		<depth>DepthOSD</depth>
+	</include>
+	<include name="SkinshortcutsWidget">
+		<param name="id">1</param>
+		<param name="num">1</param>
+		<param name="label2"></param>
+		<param name="label2view"></param>
+		<param name="label2sort"></param>
+		<param name="label2sortdir"></param>
+		<definition>
+			<control type="button" id="$PARAM[id]">
+				<description>Widget Num</description>
+				<include>DefaultSettingButton</include>
+				<label>$ADDON[script.skinshortcuts 32044] $PARAM[num]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick>ClearProperty(WidgetVisibility,home)</onclick>
+				<onclick>SetProperty(widgetID, widget$PARAM[num])</onclick>
+				<onclick>SendClick(312)</onclick>
+				<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+				<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+			</control>
+			<control type="button" id="$PARAM[id]1">
+				<description>Widget Num View</description>
+				<include>DefaultSettingButton</include>
+				<label>- $LOCALIZE[44200] $PARAM[num]</label>
+				<label2>$PARAM[label2view]</label2>
+				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.widget$PARAM[num]))]</visible>
+			</control>
+			<control type="button" id="$PARAM[id]2">
+				<description>Widget Num Sort</description>
+				<include>DefaultSettingButton</include>
+				<label>- $LOCALIZE[44210] $PARAM[num]</label>
+				<label2>$PARAM[label2sort]</label2>
+				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.widget$PARAM[num]))]</visible>
+			</control>
+			<control type="button" id="$PARAM[id]3">
+				<description>Widget Num Sort Direction</description>
+				<include>DefaultSettingButton</include>
+				<label>- $LOCALIZE[44220] $PARAM[num]</label>
+				<label2>$PARAM[label2sortdir]</label2>
+				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.widget$PARAM[num]))]</visible>
+			</control>
+		</definition>
 	</include>
 </includes>

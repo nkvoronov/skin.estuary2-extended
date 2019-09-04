@@ -919,12 +919,12 @@
 					<selected>Skin.HasSetting(smartshortcuts_playlists)</selected>
 				</control>
 				<control type="radiobutton" id="718">
-					<description>Enable SmartShortcuts Favorites</description>
+					<description>Enable SmartShortcuts Favourites</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43007]</label>
 					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-					<onclick>Skin.ToggleSetting(smartshortcuts_favorites)</onclick>
-					<selected>Skin.HasSetting(smartshortcuts_favorites)</selected>
+					<onclick>Skin.ToggleSetting(smartshortcuts_favourites)</onclick>
+					<selected>Skin.HasSetting(smartshortcuts_favourites)</selected>
 				</control>
 				<control type="button" id="719">
 					<description>Show Info At Playback Start</description>
@@ -1053,7 +1053,7 @@
 				<include content="ResetSkinSettingsParams">
 					<param name="control_id1" value="735" />
 					<param name="control_id2" value="736" />
-					<param name="action" value="Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(lrclyrics_alternative_view)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favorites)|Skin.Reset(SkinHelper.ShowInfoAtPlaybackStart)|Skin.Reset(SkinHelper.AutoCloseVideoOSD)|Skin.Reset(SkinHelper.AutoCloseMusicOSD)|Skin.Reset(animated_posters)|Skin.Reset(animated_fanarts)|Skin.Reset(extra_posters)|Skin.Reset(extra_fanarts)|Skin.Reset(enable_pvr_thumbs)|Skin.Reset(enable_music_art)|Skin.Reset(enable_extended_art)|Skin.Reset(wall_backgrounds)|Skin.Reset(random_fanart_delay)" />
+					<param name="action" value="Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(lrclyrics_alternative_view)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favourites)|Skin.Reset(SkinHelper.ShowInfoAtPlaybackStart)|Skin.Reset(SkinHelper.AutoCloseVideoOSD)|Skin.Reset(SkinHelper.AutoCloseMusicOSD)|Skin.Reset(animated_posters)|Skin.Reset(animated_fanarts)|Skin.Reset(extra_posters)|Skin.Reset(extra_fanarts)|Skin.Reset(enable_pvr_thumbs)|Skin.Reset(enable_music_art)|Skin.Reset(enable_extended_art)|Skin.Reset(wall_backgrounds)|Skin.Reset(random_fanart_delay)" />
 				</include>
 			</control>
 			<control type="grouplist" id="800">

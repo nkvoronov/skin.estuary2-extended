@@ -1,8 +1,232 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<include name="include-MoviesWidget">
+		<include content="Widget-Movies" condition="Library.HasContent(movies)">
+			<param name="widget_header" value="$LOCALIZE[31010]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="special://skin/extras/playlists/inprogress_movies.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]200"/>
+		</include>
+		<include content="Widget-Movies" condition="Library.HasContent(movies)">
+			<param name="widget_header" value="$LOCALIZE[20386]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="special://skin/extras/playlists/recent_unwatched_movies.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]300"/>
+		</include>
+		<include content="Widget-Movies" condition="Library.HasContent(movies)">
+			<param name="widget_header" value="$LOCALIZE[31007]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="special://skin/extras/playlists/unwatched_movies.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]400"/>
+		</include>
+		<include content="Widget-Movies" condition="Library.HasContent(movies)">
+			<param name="widget_header" value="$LOCALIZE[31006]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="special://skin/extras/playlists/random_movies.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
+		</include>
+		<include content="Widget-MovieGenres" condition="Library.HasContent(movies)">
+			<param name="widget_header" value="$LOCALIZE[135]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="videodb://movies/genres/"/>
+			<param name="list_id" value="$PARAM[control_id]600"/>
+		</include>
+		<include content="Widget-Movies" condition="Library.HasContent(movies)">
+			<param name="widget_header" value="$LOCALIZE[31075]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="videodb://movies/sets/"/>
+			<param name="content_sortby" value="random"/>
+			<param name="list_id" value="$PARAM[control_id]700"/>
+		</include>
+	</include>
+	<include name="include-TVShowsWidget">
+		<include content="Widget-TVShows" condition="Library.HasContent(tvshows)">
+			<param name="widget_header" value="$LOCALIZE[626]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="videodb://inprogresstvshows"/>
+			<param name="content_sortby" value="lastplayed"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]200"/>
+		</include>
+		<include content="Widget-Episodes" condition="Library.HasContent(tvshows)">
+			<param name="widget_header" value="$LOCALIZE[20387]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="special://skin/extras/playlists/recent_unwatched_episodes.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]300"/>
+		</include>
+		<include content="Widget-TVShows" condition="Library.HasContent(tvshows)">
+			<param name="widget_header" value="$LOCALIZE[31122]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="special://skin/extras/playlists/unwatched_tvshows.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]400"/>
+		</include>
+		<include content="Widget-MovieGenres" condition="Library.HasContent(tvshows)">
+			<param name="widget_header" value="$LOCALIZE[135]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="videodb://tvshows/genres/"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
+		</include>
+		<include content="Widget-Studios" condition="Library.HasContent(tvshows)">
+			<param name="widget_header" value="$LOCALIZE[20388]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="videodb://tvshows/studios/"/>
+			<param name="list_id" value="$PARAM[control_id]600"/>
+		</include>
+	</include>
+	<include name="include-MusicWidget">
+		<include content="Widget-Albums" condition="Library.HasContent(music)">
+			<param name="widget_header" value="$LOCALIZE[517]"/>
+			<param name="content_target" value="music"/>
+			<param name="content_path" value="musicdb://recentlyplayedalbums"/>
+			<param name="list_id" value="$PARAM[control_id]200"/>
+		</include>
+		<include content="Widget-Albums" condition="Library.HasContent(music)">
+			<param name="widget_header" value="$LOCALIZE[359]"/>
+			<param name="content_target" value="music"/>
+			<param name="content_path" value="musicdb://recentlyaddedalbums/"/>
+			<param name="list_id" value="$PARAM[control_id]300"/>
+		</include>
+		<include content="Widget-Albums" condition="Library.HasContent(music)">
+			<param name="widget_header" value="$LOCALIZE[31012]"/>
+			<param name="content_target" value="music"/>
+			<param name="content_path" value="special://skin/extras/playlists/random_albums.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]400"/>
+		</include>
+		<include content="Widget-Artists" condition="Library.HasContent(music)">
+			<param name="widget_header" value="$LOCALIZE[31013]"/>
+			<param name="content_target" value="music"/>
+			<param name="content_path" value="special://skin/extras/playlists/random_artists.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
+		</include>
+		<include content="Widget-Albums" condition="Library.HasContent(music)">
+			<param name="widget_header" value="$LOCALIZE[31014]"/>
+			<param name="content_target" value="music"/>
+			<param name="content_path" value="special://skin/extras/playlists/unplayed_albums.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]600"/>
+		</include>
+		<include content="Widget-Albums" condition="Library.HasContent(music)">
+			<param name="widget_header" value="$LOCALIZE[31011]"/>
+			<param name="content_target" value="music"/>
+			<param name="content_path" value="special://skin/extras/playlists/mostplayed_albums.xsp"/>
+			<param name="content_sortby" value="playcount"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]700"/>
+		</include>
+	</include>
+	<include name="include-AddonsWidget">
+		<include content="Widget-Addons">
+			<param name="widget_header" value="$LOCALIZE[1037]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="addons://sources/video/"/>
+			<param name="content_sortby" value="lastused"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]200"/>
+		</include>
+		<include content="Widget-Addons">
+			<param name="widget_header" value="$LOCALIZE[1038]"/>
+			<param name="content_target" value="music"/>
+			<param name="content_path" value="addons://sources/audio/"/>
+			<param name="content_sortby" value="lastused"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]300"/>
+		</include>
+		<include content="Widget-AddonsGame">
+			<param name="widget_header" value="$LOCALIZE[35049]"/>
+			<param name="content_target" value="games"/>
+			<param name="content_path" value="addons://sources/game/"/>
+			<param name="content_sortby" value="lastused"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]400"/>
+		</include>
+		<include content="Widget-Addons">
+			<param name="widget_header" value="$LOCALIZE[1043]"/>
+			<param name="content_target" value="programs"/>
+			<param name="content_path" value="addons://sources/executable/"/>
+			<param name="content_sortby" value="lastused"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
+		</include>
+		<include content="Widget-Addons" condition="System.Platform.Android">
+			<param name="widget_header" value="$LOCALIZE[20244]"/>
+			<param name="content_target" value="programs"/>
+			<param name="content_path" value="androidapp://sources/apps/"/>
+			<param name="content_sortby" value="lastused"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]600"/>
+		</include>
+		<include content="Widget-Addons">
+			<param name="widget_header" value="$LOCALIZE[1039]"/>
+			<param name="content_target" value="pictures"/>
+			<param name="content_path" value="addons://sources/image/"/>
+			<param name="content_sortby" value="lastused"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]700"/>
+		</include>
+	</include>
+	<include name="include-VideosWidget">
+		<include content="Widget-Source">
+			<param name="widget_header" value="$LOCALIZE[20094]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="sources://video/"/>
+			<param name="list_id" value="$PARAM[control_id]200"/>
+		</include>
+		<include content="Widget-Playlists">
+			<param name="widget_header" value="$LOCALIZE[136]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="special://videoplaylists/"/>
+			<param name="list_id" value="$PARAM[control_id]300"/>
+		</include>
+	</include>
+	<include name="include-LiveTVWidget">
+		<include content="Widget-TVTimers">
+			<param name="list_id" value="$PARAM[control_id]200"/>
+		</include>
+		<include content="Widget-PVRChannels" condition="System.HasPVRAddon">
+			<param name="widget_header" value="$LOCALIZE[31016]"/>
+			<param name="content_target" value="pvr"/>
+			<param name="content_path" value="pvr://channels/tv/*?view=lastplayed"/>
+			<param name="content_sortby" value="lastplayed"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]300"/>
+		</include>
+		<include content="Widget-PVRRecordings" condition="System.HasPVRAddon">
+			<param name="widget_header" value="$LOCALIZE[31015]"/>
+			<param name="content_target" value="pvr"/>
+			<param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
+			<param name="content_sortby" value="date"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]400"/>
+		</include>
+	</include>
+	<include name="include-RadioWidget">
+		<include content="Widget-RadioTimers">
+			<param name="list_id" value="$PARAM[control_id]200"/>
+		</include>
+		<include content="Widget-PVRChannels" condition="System.HasPVRAddon">
+			<param name="widget_header" value="$LOCALIZE[31018]"/>
+			<param name="content_target" value="files"/>
+			<param name="content_path" value="pvr://channels/radio/*?view=lastplayed"/>
+			<param name="content_sortby" value="lastplayed"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]300"/>
+		</include>
+		<include content="Widget-PVRRecordings" condition="System.HasPVRAddon">
+			<param name="widget_header" value="$LOCALIZE[31015]"/>
+			<param name="content_target" value="pvr"/>
+			<param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
+			<param name="content_sortby" value="date"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]400"/>
+		</include>
+	</include>
+	<include name="include-FavouritesWidget">
+		<include content="Widget-FavouritesFull">
+			<param name="list_id" value="$PARAM[control_id]200"/>
+		</include>
+	</include>
 	<include name="include-WeatherWidget">
-		<control type="group" id="$PARAM[control_id]102">
-			<description>Weather info</description>
+		<control type="group" id="$PARAM[control_id]200">
+			<description>Weather Info</description>
 			<left>68</left>
 			<right>70</right>
 			<top>102</top>
@@ -30,7 +254,7 @@
 				<height>24</height>
 				<right>60</right>
 				<align>right</align>
-				<font>font12</font>
+				<font>font14</font>
 				<label>$INFO[Weather.Conditions,, ∙ ]$INFO[Weather.Temperature]</label>
 			</control>
 			<control type="grouplist">
@@ -78,133 +302,134 @@
 		<include content="Widget-WeatherDaily" condition="!String.IsEmpty(Weather.Plugin)">
 			<param name="widget_header" value="$LOCALIZE[31019]"/>
 			<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
-			<param name="list_id" value="$PARAM[control_id]103" />
+			<param name="list_id" value="$PARAM[control_id]300" />
 		</include>
 		<include content="Widget-WeatherHourly" condition="!String.IsEmpty(Weather.Plugin)">
 			<param name="widget_header" value="$LOCALIZE[33036]"/>
 			<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
-			<param name="list_id" value="$PARAM[control_id]104" />
+			<param name="list_id" value="$PARAM[control_id]400" />
 		</include>
 	</include>
-	<include name="include-FavouritesWidget">
-		<include content="Widget-FavouritesFull">
-			<param name="list_id" value="$PARAM[control_id]110"/>
+	<include name="include-MusicVideosWidget">
+		<include content="Widget-MusicVideos" condition="Library.HasContent(musicvideos)">
+			<param name="widget_header" value="$LOCALIZE[20390]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="videodb://recentlyaddedmusicvideos/"/>
+			<param name="list_id" value="$PARAM[control_id]200"/>
+		</include>
+		<include content="Widget-MusicVideos" condition="Library.HasContent(musicvideos)">
+			<param name="widget_header" value="$LOCALIZE[31151]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="special://skin/extras/playlists/unwatched_musicvideos.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]300"/>
+		</include>
+		<include content="Widget-Artists" condition="Library.HasContent(musicvideos)">
+			<param name="widget_header" value="$LOCALIZE[31013]"/>
+			<param name="content_target" value="music"/>
+			<param name="content_path" value="special://skin/extras/playlists/random_musicvideo_artists.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]400"/>
+		</include>
+		<include content="Widget-MusicVideos" condition="Library.HasContent(musicvideos)">
+			<param name="widget_header" value="$LOCALIZE[31152]"/>
+			<param name="content_target" value="videos"/>
+			<param name="content_path" value="special://skin/extras/playlists/random_musicvideos.xsp"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
+		</include>
+		<include content="Widget-Studios" condition="Library.HasContent(musicvideos)">
+			<param name="widget_header" value="$LOCALIZE[20388]"/>
+			<param name="content_target" value="music"/>
+			<param name="content_path" value="videodb://musicvideos/studios/"/>
+			<param name="list_id" value="$PARAM[control_id]600"/>
 		</include>
 	</include>
-	<include name="include-TVWidget">
-		<include content="Widget-TVTimers">
-			<param name="list_id" value="$PARAM[control_id]120"/>
-		</include>
-		<include content="Widget-PVRChannels">
-			<param name="content_path" value="pvr://channels/tv/*?view=lastplayed"/>
-			<param name="widget_header" value="$LOCALIZE[31016]"/>
-			<param name="widget_target" value="pvr"/>
-			<param name="list_id" value="$PARAM[control_id]121"/>
-		</include>
-		<include content="Widget-PVRRecordings">
-			<param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
-			<param name="widget_header" value="$LOCALIZE[31015]"/>
-			<param name="widget_target" value="pvr"/>
-			<param name="list_id" value="$PARAM[control_id]122"/>
+	<include name="include-PicturesWidget">
+		<include content="Widget-Source">
+			<param name="widget_header" value="$LOCALIZE[20094]"/>
+			<param name="content_target" value="pictures"/>
+			<param name="content_path" value="sources://pictures/"/>
+			<param name="list_id" value="$PARAM[control_id]200"/>
 		</include>
 	</include>
-	<include name="include-RadioWidget">
-		<include content="Widget-RadioTimers">
-			<param name="list_id" value="$PARAM[control_id]130"/>
-		</include>
-		<include content="Widget-PVRChannels" >
-			<param name="content_path" value="pvr://channels/radio/*?view=lastplayed"/>
-			<param name="widget_header" value="$LOCALIZE[31018]"/>
-			<param name="widget_target" value="files"/>
-			<param name="list_id" value="$PARAM[control_id]131"/>
-		</include>
-		<include content="Widget-PVRRecordings">
-			<param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
-			<param name="widget_header" value="$LOCALIZE[31015]"/>
-			<param name="widget_target" value="pvr"/>
-			<param name="list_id" value="$PARAM[control_id]132"/>
-		</include>
-	</include>
-	<include name="include-AddonsWidget">
-		<include content="Widget-Addons">
-			<param name="content_path" value="addons://sources/video/"/>
-			<param name="widget_header" value="$LOCALIZE[1037]"/>
-			<param name="widget_target" value="videos"/>
-			<param name="list_id" value="$PARAM[control_id]140"/>
-		</include>
-		<include content="Widget-Addons">
-			<param name="content_path" value="addons://sources/audio/"/>
-			<param name="widget_header" value="$LOCALIZE[1038]"/>
-			<param name="widget_target" value="music"/>
-			<param name="list_id" value="$PARAM[control_id]141"/>
-		</include>
-		<include  condition="System.GetBool(gamesgeneral.enable)" content="Widget-Addons">
-			<param name="content_path" value="addons://sources/game/"/>
+	<include name="include-GamesWidget">
+		<include content="Widget-AddonsGame">
 			<param name="widget_header" value="$LOCALIZE[35049]"/>
-			<param name="widget_target" value="games"/>
-			<param name="list_id" value="$PARAM[control_id]142"/>
-		</include>
-		<include content="Widget-Addons">
-			<param name="content_path" value="addons://sources/executable/"/>
-			<param name="widget_header" value="$LOCALIZE[1043]"/>
-			<param name="widget_target" value="programs"/>
-			<param name="list_id" value="$PARAM[control_id]143"/>
-		</include>
-		<include condition="System.Platform.Android" content="Widget-Addons">
-			<param name="content_path" value="androidapp://sources/apps/"/>
-			<param name="widget_header" value="$LOCALIZE[20244]"/>
-			<param name="widget_target" value="programs"/>
-			<param name="list_id" value="$PARAM[control_id]144"/>
-		</include>
-		<include content="Widget-Addons">
-			<param name="content_path" value="addons://sources/image/"/>
-			<param name="widget_header" value="$LOCALIZE[1039]"/>
-			<param name="widget_target" value="pictures"/>
-			<param name="list_id" value="$PARAM[control_id]145"/>
+			<param name="content_target" value="games"/>
+			<param name="content_path" value="addons://sources/game/"/>
+			<param name="content_sortby" value="lastused"/>
+			<param name="content_sortorder" value="descending"/>
+			<param name="list_id" value="$PARAM[control_id]200"/>
 		</include>
 	</include>
 	<include name="include-MediaWidget">
 		<include content="Widget-$PARAM[widget1_type]">
 			<param name="widget_header" value="$PARAM[widget1_name]"/>
-			<param name="widget_target" value="$PARAM[widget1_target]"/>
+			<param name="content_target" value="$PARAM[widget1_target]"/>
 			<param name="content_path" value="$PARAM[widget1_path]"/>
-			<param name="list_id" value="$PARAM[control_id]150"/>
+			<param name="content_sortby" value="$PARAM[widget1_sortby]"/>
+			<param name="content_sortorder" value="$PARAM[widget1_sortorder]"/>
+			<param name="list_id" value="$PARAM[control_id]200"/>
 		</include>
 		<include content="Widget-$PARAM[widget2_type]">
 			<param name="widget_header" value="$PARAM[widget2_name]"/>
-			<param name="widget_target" value="$PARAM[widget2_target]"/>
+			<param name="content_target" value="$PARAM[widget2_target]"/>
 			<param name="content_path" value="$PARAM[widget2_path]"/>
-			<param name="list_id" value="$PARAM[control_id]151"/>
+			<param name="content_sortby" value="$PARAM[widget2_sortby]"/>
+			<param name="content_sortorder" value="$PARAM[widget2_sortorder]"/>
+			<param name="list_id" value="$PARAM[control_id]300"/>
 		</include>
 		<include content="Widget-$PARAM[widget3_type]">
 			<param name="widget_header" value="$PARAM[widget3_name]"/>
-			<param name="widget_target" value="$PARAM[widget3_target]"/>
+			<param name="content_target" value="$PARAM[widget3_target]"/>
 			<param name="content_path" value="$PARAM[widget3_path]"/>
-			<param name="list_id" value="$PARAM[control_id]152"/>
+			<param name="content_sortby" value="$PARAM[widget3_sortby]"/>
+			<param name="content_sortorder" value="$PARAM[widget3_sortorder]"/>
+			<param name="list_id" value="$PARAM[control_id]400"/>
 		</include>
 		<include content="Widget-$PARAM[widget4_type]">
 			<param name="widget_header" value="$PARAM[widget4_name]"/>
-			<param name="widget_target" value="$PARAM[widget4_target]"/>
+			<param name="content_target" value="$PARAM[widget4_target]"/>
 			<param name="content_path" value="$PARAM[widget4_path]"/>
-			<param name="list_id" value="$PARAM[control_id]153"/>
+			<param name="content_sortby" value="$PARAM[widget4_sortby]"/>
+			<param name="content_sortorder" value="$PARAM[widget4_sortorder]"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
 		</include>
 		<include content="Widget-$PARAM[widget5_type]">
 			<param name="widget_header" value="$PARAM[widget5_name]"/>
-			<param name="widget_target" value="$PARAM[widget5_target]"/>
+			<param name="content_target" value="$PARAM[widget5_target]"/>
 			<param name="content_path" value="$PARAM[widget5_path]"/>
-			<param name="list_id" value="$PARAM[control_id]154"/>
+			<param name="content_sortby" value="$PARAM[widget5_sortby]"/>
+			<param name="content_sortorder" value="$PARAM[widget5_sortorder]"/>
+			<param name="list_id" value="$PARAM[control_id]600"/>
 		</include>
 		<include content="Widget-$PARAM[widget6_type]">
 			<param name="widget_header" value="$PARAM[widget6_name]"/>
-			<param name="widget_target" value="$PARAM[widget6_target]"/>
+			<param name="content_target" value="$PARAM[widget6_target]"/>
 			<param name="content_path" value="$PARAM[widget6_path]"/>
-			<param name="list_id" value="$PARAM[control_id]155"/>
+			<param name="content_sortby" value="$PARAM[widget6_sortby]"/>
+			<param name="content_sortorder" value="$PARAM[widget6_sortorder]"/>
+			<param name="list_id" value="$PARAM[control_id]700"/>
+		</include>
+		<include content="Widget-$PARAM[widget7_type]">
+			<param name="widget_header" value="$PARAM[widget7_name]"/>
+			<param name="content_target" value="$PARAM[widget7_target]"/>
+			<param name="content_path" value="$PARAM[widget7_path]"/>
+			<param name="content_sortby" value="$PARAM[widget7_sortby]"/>
+			<param name="content_sortorder" value="$PARAM[widget7_sortorder]"/>
+			<param name="list_id" value="$PARAM[control_id]800"/>
+		</include>
+		<include content="Widget-$PARAM[widget8_type]">
+			<param name="widget_header" value="$PARAM[widget8_name]"/>
+			<param name="content_target" value="$PARAM[widget8_target]"/>
+			<param name="content_path" value="$PARAM[widget8_path]"/>
+			<param name="content_sortby" value="$PARAM[widget8_sortby]"/>
+			<param name="content_sortorder" value="$PARAM[widget8_sortorder]"/>
+			<param name="list_id" value="$PARAM[control_id]900"/>
 		</include>
 	</include>
 	<include name="include-None">
-		<control type="group" id="$PARAM[control_id]160">
-			<onup>$PARAM[control_id]900</onup>
-			<ondown>200001</ondown>
+		<control type="group" id="$PARAM[control_id]200">
+			<onup>$PARAM[control_id]100</onup>
+			<ondown>20001</ondown>
 		</control>
 	</include>
 </includes>
