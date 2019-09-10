@@ -57,7 +57,7 @@
 						<height>215</height>
 						<aspectratio>scale</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
-						<visible>String.IsEmpty(ListItem.Icon)</visible>
+						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="label">
 						<left>25</left>
@@ -127,7 +127,7 @@
 							<height>215</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<visible>String.IsEmpty(ListItem.Icon)</visible>
+							<visible>!String.IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="label">
 							<left>25</left>
