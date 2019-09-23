@@ -204,17 +204,17 @@
 					<width>780</width>
 					<height>170</height>
 					<align>justify</align>
-                    <label>
-                    $INFO[RDS.InfoNews,[COLOR button_focus]$LOCALIZE[29916]:[/COLOR] ,[CR]]
-                    $INFO[RDS.InfoNewsLocal,[COLOR button_focus]$LOCALIZE[29917]:[/COLOR] ,[CR]]
-                    $INFO[RDS.InfoStock,[COLOR button_focus]$LOCALIZE[29920]:[/COLOR] ,[CR]]
-                    $INFO[RDS.InfoSport,[COLOR button_focus]$LOCALIZE[29918]:[/COLOR] ,[CR]]
-                    $INFO[RDS.Infolottery,[COLOR button_focus]$LOCALIZE[29919]:[/COLOR] ,[CR]]
-                    $INFO[RDS.InfoWeather,[COLOR button_focus]$LOCALIZE[400]:[/COLOR] ,[CR]]
-                    $INFO[RDS.InfoCinema,$[COLOR button_focus]LOCALIZE[19602]:[/COLOR] ,[CR]]
-                    $INFO[RDS.InfoHoroscope,[COLOR button_focus]$LOCALIZE[29922]:[/COLOR] ,[CR]]
-                    $INFO[RDS.InfoOther,[COLOR button_focus]$LOCALIZE[29921]:[/COLOR] ,[CR]]
-                    </label>
+					<label>
+					$INFO[RDS.InfoNews,[COLOR button_focus]$LOCALIZE[29916]:[/COLOR] ,[CR]]
+					$INFO[RDS.InfoNewsLocal,[COLOR button_focus]$LOCALIZE[29917]:[/COLOR] ,[CR]]
+					$INFO[RDS.InfoStock,[COLOR button_focus]$LOCALIZE[29920]:[/COLOR] ,[CR]]
+					$INFO[RDS.InfoSport,[COLOR button_focus]$LOCALIZE[29918]:[/COLOR] ,[CR]]
+					$INFO[RDS.Infolottery,[COLOR button_focus]$LOCALIZE[29919]:[/COLOR] ,[CR]]
+					$INFO[RDS.InfoWeather,[COLOR button_focus]$LOCALIZE[400]:[/COLOR] ,[CR]]
+					$INFO[RDS.InfoCinema,$[COLOR button_focus]LOCALIZE[19602]:[/COLOR] ,[CR]]
+					$INFO[RDS.InfoHoroscope,[COLOR button_focus]$LOCALIZE[29922]:[/COLOR] ,[CR]]
+					$INFO[RDS.InfoOther,[COLOR button_focus]$LOCALIZE[29921]:[/COLOR] ,[CR]]
+					</label>
 					<autoscroll delay="5000" time="3000" repeat="10000">true</autoscroll>
 				</control>
 			</control>

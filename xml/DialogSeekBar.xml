@@ -39,7 +39,7 @@
 					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
 					<label>[COLOR $VAR[WhiteColorVar]]$LOCALIZE[21396]:[/COLOR][CR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
-					<visible>player.chaptercount</visible>                    
+					<visible>player.chaptercount</visible>
 				</control>
 				<control type="grouplist">
 					<right>20</right>

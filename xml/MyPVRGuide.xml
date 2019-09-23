@@ -170,7 +170,7 @@
 						</include>
 					</control>
 				</control>
-                <include>PVRInfo2Panel</include>
+				<include>PVRInfo2Panel</include>
 			</control>
 			<include>PVRChannelNumberInput</include>
 			<include content="TopBar">

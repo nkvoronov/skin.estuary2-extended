@@ -84,7 +84,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
-                            <textcolor>$VAR[MainColorVar]</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>

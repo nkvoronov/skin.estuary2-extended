@@ -170,7 +170,6 @@
 			<param name="img_source" value="DefaultTVShows.png"/>
 			<param name="label" value="$INFO[ListItem.ChannelName]"/>
 			<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
-			<param name="fix_color" value="true"/>
 			<param name="visible" value="System.HasPVRAddon"/>
 		</include>
 	</include>
@@ -855,7 +854,6 @@
 		<param name="content_type">no</param>
 		<param name="content_sortby"></param>
 		<param name="content_sortorder"></param>
-		<param name="fix_color">false</param>
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -890,7 +888,6 @@
 							<param name="img_height" value="70%" />
 							<param name="img_ratio" value="keep" />
 							<param name="txt_height" value="20%" />
-							<param name="fix_color" value="$PARAM[fix_color]" />
 						</include>
 						<control type="image">
 							<left>260</left>
@@ -924,7 +921,6 @@
 							<param name="img_height" value="70%" />
 							<param name="img_ratio" value="keep" />
 							<param name="txt_height" value="20%" />
-							<param name="fix_color" value="$PARAM[fix_color]" />
 						</include>
 						<control type="image">
 							<left>260</left>

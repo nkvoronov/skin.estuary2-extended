@@ -1006,7 +1006,6 @@
 		<param name="img_ratio">scale</param>
 		<param name="txt_height">19%</param>
 		<param name="txt_label">true</param>
-		<param name="fix_color">false</param>
 		<definition>
 			<control type="group">
 				<description>Square Layout</description>
@@ -1064,35 +1063,33 @@
 						<bordersize>20</bordersize>
 						<visible>String.IsEmpty(ListItem.Icon)</visible>
 					</control>
-					<control type="group">
-						<description>File with Icon</description>
+					<control type="image">
+						<description>File Icon 1</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>$PARAM[img_top]</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_source]</texture>
+						<aspectratio>$PARAM[img_ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>$EXP[default_icon]</visible>
 						<visible>!String.IsEmpty(ListItem.Icon)</visible>
-						<control type="image">
-							<description>File Icon 1</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>$PARAM[img_top]</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true">$PARAM[img_source]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-							<visible>!$EXP[default_icon]</visible>
-						</control>
-						<control type="image">
-							<description>File Icon 2</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>$PARAM[img_top]</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_source]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-							<visible>$EXP[default_icon] | $PARAM[fix_color]</visible>
-						</control>
+					</control>
+					<control type="image">
+						<description>File Icon 2</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>$PARAM[img_top]</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true">$PARAM[img_source]</texture>
+						<aspectratio>$PARAM[img_ratio]</aspectratio>
+						<bordersize>20</bordersize>
+						<visible>!$EXP[default_icon]</visible>
+						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 				</control>
 				<control type="textbox">

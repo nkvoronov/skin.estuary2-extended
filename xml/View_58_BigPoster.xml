@@ -145,7 +145,7 @@
 									<bordersize>20</bordersize>
 									<include>Animation_FocusTextureFade</include>
 								</control>
-							   <control type="group">
+								<control type="group">
 									<left>15</left>
 									<top>-10</top>
 									<width>485</width>

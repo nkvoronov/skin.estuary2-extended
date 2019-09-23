@@ -469,7 +469,7 @@
 									<top>145</top>
 									<right>20</right>
 									<height>12</height>
-									<midtexture border="3"  colordiffuse="$VAR[ImageColorVar]">progress/texturebg_white.png</midtexture>
+									<midtexture border="3" colordiffuse="$VAR[ImageColorVar]">progress/texturebg_white.png</midtexture>
 									<visible>ListItem.HasEpg</visible>
 									<info>ListItem.Progress</info>
 								</control>
