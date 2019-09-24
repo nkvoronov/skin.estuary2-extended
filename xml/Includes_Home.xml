@@ -3,6 +3,7 @@
 	<include name="Widget-Pictures">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -14,6 +15,7 @@
 	<include name="Widget-Videos">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -25,6 +27,7 @@
 	<include name="Widget-Musics">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -36,6 +39,7 @@
 	<include name="Widget-Programs">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -47,6 +51,7 @@
 	<include name="Widget-Addons">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -58,6 +63,7 @@
 	<include name="Widget-AddonsGame">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -70,6 +76,7 @@
 	<include name="Widget-AddonsCustom">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="custom" value="true"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
@@ -141,6 +148,7 @@
 	<include name="Widget-PVRChannels">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -152,6 +160,7 @@
 	<include name="Widget-PVRChannelsCustom">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="custom" value="true"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
@@ -162,6 +171,7 @@
 	<include name="Widget-PVRRecordings">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -176,6 +186,7 @@
 	<include name="Widget-Movies">
 		<include content="Widget-Posters">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -187,6 +198,7 @@
 	<include name="Widget-TVShows">
 		<include content="Widget-Posters">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -198,6 +210,7 @@
 	<include name="Widget-Episodes">
 		<include content="Widget-Thumbs">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -209,6 +222,7 @@
 	<include name="Widget-MusicVideos">
 		<include content="Widget-Thumbs">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -223,6 +237,7 @@
 	<include name="Widget-Albums">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -234,6 +249,7 @@
 	<include name="Widget-Artists">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -245,6 +261,7 @@
 	<include name="Widget-Songs">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -256,6 +273,7 @@
 	<include name="Widget-Mixed">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_widget_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -268,6 +286,7 @@
 		<include content="Widget-Squares">
 			<param name="favourites" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -284,6 +303,7 @@
 	<include name="Widget-Playlists">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -295,6 +315,7 @@
 	<include name="Widget-Source">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -306,6 +327,7 @@
 	<include name="Widget-MovieGenres">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -318,6 +340,7 @@
 	<include name="Widget-MusicGenres">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -330,6 +353,7 @@
 	<include name="Widget-Studios">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -342,6 +366,7 @@
 	<include name="Widget-Country">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -354,6 +379,7 @@
 	<include name="Widget-Other">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -428,16 +454,51 @@
 	</include>
 	<include name="Widget-CategoryLabel">
 		<param name="visible">true</param>
+		<param name="label_focus"></param>
 		<definition>
-			<control type="label" id="$PARAM[list_id]2">
+			<control type="group" id="$PARAM[list_id]2">
 				<left>55</left>
 				<top>80</top>
-				<width>900</width>
 				<height>90</height>
-				<label>$PARAM[label]</label>
-				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+				<right>55</right>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<control type="image">
+					<top>6</top>
+					<width>25</width>
+					<height>25</height>
+					<texture colordiffuse="$VAR[MainColorVar]">OverlayUnwatched.png</texture>
+				</control>
+				<control type="label">
+					<left>22</left>
+					<top>0</top>
+					<right>2</right>
+					<height>90</height>
+					<label>$PARAM[label]</label>
+					<font>font25_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<visible>Skin.HasSetting(hide_widget_labels)</visible>
+				</control>
+				<control type="label">
+					<left>22</left>
+					<top>0</top>
+					<right>2</right>
+					<height>90</height>
+					<label>$PARAM[label]</label>
+					<font>font25_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<visible>!Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(hide_widget_labels)</visible>
+				</control>
+				<control type="label">
+					<left>22</left>
+					<top>0</top>
+					<right>2</right>
+					<height>90</height>
+					<label>$PARAM[label]$PARAM[label_focus]</label>
+					<font>font25_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<visible>Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(hide_widget_labels)</visible>
+				</control>
 			</control>
 		</definition>
 	</include>
@@ -491,6 +552,7 @@
 	<include name="Widget-Categories">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
+		<param name="small">false</param>
 		<param name="content_type">no</param>
 		<param name="content_target">no</param>
 		<param name="content_sortby"></param>
@@ -502,6 +564,7 @@
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
+				<param name="label_focus">$PARAM[widget_header_focus]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
@@ -510,16 +573,16 @@
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
-				<left>0</left>
 				<top>110</top>
 				<right>0</right>
-				<height>290</height>
+				<include condition="!$PARAM[small]">Widget-Categories-Big</include>
+				<include condition="$PARAM[small]">Widget-Categories-Small</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="340">
+				<itemlayout width="310" height="340" condition="!$PARAM[small]">
 					<control type="group">
 						<left>70</left>
 						<include content="IconLayout">
@@ -536,14 +599,14 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="340">
+				<focusedlayout width="310" height="340" condition="!$PARAM[small]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus">
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
-						<animation type="Unfocus">
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
 						<include content="IconLayout">
@@ -561,6 +624,46 @@
 						</include>
 					</control>
 				</focusedlayout>
+				<itemlayout width="122" height="220" condition="$PARAM[small]">
+					<control type="group">
+						<left>70</left>
+						<include content="IconLayout">
+							<param name="width" value="140" />
+							<param name="height" value="120" />
+							<param name="widget" value="true" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_source" value="$PARAM[img_source]" />
+							<param name="img_height" value="90%" />
+							<param name="img_ratio" value="$PARAM[img_ratio]" />
+							<param name="txt_bg" value="false" />
+							<param name="txt_label" value="false" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="122" height="220" condition="$PARAM[small]">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="140,70" />
+						</animation>
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="140,70" />
+						</animation>
+						<include content="IconLayout">
+							<param name="width" value="140" />
+							<param name="height" value="120" />
+							<param name="focused" value="true" />
+							<param name="widget" value="true" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_source" value="$PARAM[img_source]" />
+							<param name="img_height" value="90%" />
+							<param name="img_ratio" value="$PARAM[img_ratio]" />
+							<param name="txt_bg" value="false" />
+							<param name="txt_label" value="false" />
+						</include>
+					</control>
+				</focusedlayout>
 				<include condition="!$PARAM[custom]" content="Widget-Content">
 					<param name="content_target" value="$PARAM[content_target]"/>
 					<param name="content_path" value="$PARAM[content_path]"/>
@@ -575,6 +678,14 @@
 			</control>
 		</definition>
 	</include>
+	<include name="Widget-Categories-Big">
+		<left>0</left>
+		<height>290</height>
+	</include>
+	<include name="Widget-Categories-Small">
+		<left>-10</left>
+		<height>220</height>
+	</include>
 	<include name="Widget-Posters">
 		<param name="visible">true</param>
 		<param name="custom">false</param>
@@ -586,10 +697,13 @@
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
+				<param name="label_focus">$PARAM[widget_header_focus]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<include content="Widget-BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
 				<param name="posy" value="250"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
@@ -616,10 +730,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>10</top>
-						<animation type="Focus">
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,130" />
 						</animation>
-						<animation type="Unfocus">
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
 						</animation>
 						<include content="PosterLayout">
@@ -656,11 +770,14 @@
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
+				<param name="label_focus">$PARAM[widget_header_focus]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<include content="Widget-BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="200"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
@@ -689,10 +806,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus">
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="230,120" />
 						</animation>
-						<animation type="Unfocus">
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="230,120" />
 						</animation>
 						<include content="ThumbLayout">
@@ -731,11 +848,14 @@
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
+				<param name="label_focus">$PARAM[widget_header_focus]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<include content="Widget-BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="220"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
@@ -763,10 +883,10 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus">
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
 						</animation>
-						<animation type="Unfocus">
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
 						</animation>
 						<include content="SquareLayout">
@@ -825,10 +945,10 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus">
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
 						</animation>
-						<animation type="Unfocus">
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
 						</animation>
 						<include content="SquareLayout">
@@ -857,11 +977,14 @@
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
+				<param name="label_focus">$PARAM[widget_header_focus]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<include content="Widget-BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="200"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
@@ -902,10 +1025,10 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus">
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,100" />
 						</animation>
-						<animation type="Unfocus">
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100" />
 						</animation>
 						<include content="SquareLayout">
@@ -1083,10 +1206,10 @@
 					<control type="group">
 						<left>70</left>
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus">
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="180,140" />
 						</animation>
-						<animation type="Unfocus">
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,140" />
 						</animation>
 						<control type="image">

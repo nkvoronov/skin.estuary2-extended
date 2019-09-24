@@ -246,6 +246,7 @@
 				<align>right</align>
 				<font>font30_title</font>
 				<label>$INFO[Weather.Location]</label>
+				<animation effect="slide" end="-460,0" time="0" condition="Skin.HasSetting(hide_main_menu_with_widgets)">conditional</animation>
 			</control>
 			<control type="label">
 				<left>840</left>
@@ -256,6 +257,7 @@
 				<align>right</align>
 				<font>font14</font>
 				<label>$INFO[Weather.Conditions,, ∙ ]$INFO[Weather.Temperature]</label>
+				<animation effect="slide" end="-460,0" time="0" condition="Skin.HasSetting(hide_main_menu_with_widgets)">conditional</animation>
 			</control>
 			<control type="grouplist">
 				<top>50</top>

@@ -81,44 +81,136 @@
 				<param name="breadcrumbs_label" value="" />
 			</include>
 			<control type="group">
+				<description>KODI logo</description>
 				<depth>DepthBars</depth>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<top>30</top>
 				<left>90</left>
-				<control type="image">
-					<aspectratio>keep</aspectratio>
-					<width>56</width>
-					<height>56</height>
-					<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+				<control type="group">
+					<visible>!Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)</visible>
+					<control type="image">
+						<aspectratio>keep</aspectratio>
+						<width>56</width>
+						<height>56</height>
+						<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+					</control>
+					<control type="image">
+						<left>40</left>
+						<top>10</top>
+						<aspectratio>keep</aspectratio>
+						<width>192</width>
+						<height>36</height>
+						<texture colordiffuse="$VAR[ImageColorVar]">icons/logo-text.png</texture>
+					</control>
 				</control>
-				<control type="image">
-					<left>40</left>
-					<top>10</top>
-					<aspectratio>keep</aspectratio>
-					<width>192</width>
-					<height>36</height>
-					<texture colordiffuse="$VAR[ImageColorVar]">icons/logo-text.png</texture>
+				<control type="group">
+					<visible>Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu) + [ Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
+					<control type="image">
+						<aspectratio>keep</aspectratio>
+						<width>56</width>
+						<height>56</height>
+						<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+					</control>
+					<control type="image">
+						<left>40</left>
+						<top>10</top>
+						<aspectratio>keep</aspectratio>
+						<width>192</width>
+						<height>36</height>
+						<texture colordiffuse="$VAR[ImageColorVar]">icons/logo-text.png</texture>
+					</control>
 				</control>
+				<control type="group">
+					<left>-70</left>
+					<visible>!Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)</visible>
+					<control type="image">
+						<aspectratio>keep</aspectratio>
+						<width>56</width>
+						<height>56</height>
+						<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<left>-70</left>
+					<visible>Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu) + [ Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
+					<control type="image">
+						<aspectratio>keep</aspectratio>
+						<width>56</width>
+						<height>56</height>
+						<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<description>Stats And Logos</description>
+				<depth>DepthBars</depth>
+				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<centerleft>50%</centerleft>
+				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 				<control type="image">
-					<left>-90</left>
-					<top>-30</top>
-					<width>1920</width>
+					<top>0</top>
 					<height>140</height>
 					<texture>$VAR[ContainerClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<visible>!Skin.HasSetting(hide_logo_home) + ControlGroup(2000).HasFocus</visible>
 				</control>
 				<control type="label">
-					<left>-90</left>
-					<top>-15</top>
-					<width>1920</width>
+					<top>15</top>
 					<align>center</align>
 					<label>$VAR[InfoBarStatsVar]</label>
 					<font>font12</font>
-					<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 					<visible>[Skin.HasSetting(hide_logo_home) | !ControlGroup(2000).HasFocus] + Skin.HasSetting(enable_home_stats)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<description>Top Name Item</description>
+				<visible>Skin.HasSetting(minimize_main_menu) + Skin.HasSetting(top_name_item)</visible>
+				<left>115</left>
+				<top>30</top>
+				<height>56</height>
+				<control type="label">
+					<aligny>center</aligny>
+					<font>font30_title</font>
+					<label>$INFO[Container(9000).ListItem.Label]</label>
+					<visible>Control.HasFocus(9000)</visible>
+					<textcolor>$VAR[MainColorVar]</textcolor>
+					<include>OpenClose_Right</include>
+				</control>
+				<control type="label">
+					<aligny>center</aligny>
+					<font>font30_title</font>
+					<label>$LOCALIZE[33060]</label>
+					<visible>Control.HasFocus(804)</visible>
+					<textcolor>$VAR[MainColorVar]</textcolor>
+					<include>OpenClose_Right</include>
+				</control>
+				<control type="label">
+					<aligny>center</aligny>
+					<font>font30_title</font>
+					<label>$LOCALIZE[21417]</label>
+					<visible>Control.HasFocus(802)</visible>
+					<textcolor>$VAR[MainColorVar]</textcolor>
+					<include>OpenClose_Right</include>
+				</control>
+				<control type="label">
+					<aligny>center</aligny>
+					<font>font30_title</font>
+					<label>$LOCALIZE[137]</label>
+					<visible>Control.HasFocus(801)</visible>
+					<textcolor>$VAR[MainColorVar]</textcolor>
+					<include>OpenClose_Right</include>
+				</control>
+				<control type="label">
+					<aligny>center</aligny>
+					<font>font30_title</font>
+					<label>$LOCALIZE[244]</label>
+					<visible>Control.HasFocus(803)</visible>
+					<textcolor>$VAR[MainColorVar]</textcolor>
+					<include>OpenClose_Right</include>
 				</control>
 			</control>
 		</control>

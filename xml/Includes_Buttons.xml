@@ -153,10 +153,13 @@
 	</include>
 	<include name="IconButton">
 		<param name="height">120</param>
+		<param name="width">120</param>
+		<param name="radioposx">40</param>
+		<param name="texturefocus">buttons/roundbutton-fo.png</param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="radiobutton" id="$PARAM[control_id]">
-				<width>120</width>
+				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -165,9 +168,9 @@
 				<onclick>$PARAM[onclick_3]</onclick>
 				<font />
 				<label>$PARAM[label]</label>
-				<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[MainColorVar]">$PARAM[texturefocus]</texturefocus>
 				<texturenofocus />
-				<radioposx>40</radioposx>
+				<radioposx>$PARAM[radioposx]</radioposx>
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
 				<radioheight>40</radioheight>

@@ -207,79 +207,98 @@
 					<onclick>Skin.ToggleSetting(enable_home_stats)</onclick>
 					<selected>Skin.HasSetting(enable_home_stats)</selected>
 				</control>
-				<control type="button" id="204">
+				<control type="image" id="204">
+					<description>Separator Image</description>
+					<height>3</height>
+					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+				</control>
+				<control type="button" id="205">
 					<description>Widget Limit Items</description>
 					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[43032]</label>
+					<label>$LOCALIZE[40316]</label>
 					<label2>$VAR[WidgetLimitItemsVar]</label2>
 					<onclick condition="String.IsEmpty(Skin.String(widget_limititems))">Skin.SetString(widget_limititems,25,)</onclick>
 					<onclick>Skin.SetNumeric(widget_limititems)</onclick>
 				</control>
-				<control type="image" id="205">
+				<control type="radiobutton" id="206">
+					<description>Hide Widget Labels</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[40317]</label>
+					<onclick>Skin.ToggleSetting(hide_widget_labels)</onclick>
+					<selected>!Skin.HasSetting(hide_widget_labels)</selected>
+				</control>
+				<control type="radiobutton" id="207">
+					<description>Use Smaller Categories</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[40318]</label>
+					<onclick>Skin.ToggleSetting(use_smaller_categories)</onclick>
+					<selected>Skin.HasSetting(use_smaller_categories)</selected>
+				</control>
+				<control type="image" id="208">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
 				<include content="ResourceSelect">
-					<param name="control_id" value="206" />
+					<param name="control_id" value="209" />
 					<param name="label" value="$LOCALIZE[43013]" />
 					<param name="label2" value="$VAR[StudiosImagesNameVar]" />
 					<param name="property" value="StudiosImages" />
 					<param name="type" value="resource.images.studios" />
 				</include>
 				<include content="ResourceSelect">
-					<param name="control_id" value="207" />
+					<param name="control_id" value="210" />
 					<param name="label" value="$LOCALIZE[43014]" />
 					<param name="label2" value="$VAR[LanguageFlagsNameVar]" />
 					<param name="property" value="LanguageFlags" />
 					<param name="type" value="resource.images.languageflags" />
 				</include>
 				<include content="ResourceSelect">
-					<param name="control_id" value="208" />
+					<param name="control_id" value="211" />
 					<param name="label" value="$LOCALIZE[43012]" />
 					<param name="label2" value="$VAR[MovieGenreIconsNameVar]" />
 					<param name="property" value="MovieGenreIcons" />
 					<param name="type" value="resource.images.moviegenreicons" />
 				</include>
 				<include content="ResourceSelect">
-					<param name="control_id" value="209" />
+					<param name="control_id" value="212" />
 					<param name="label" value="$LOCALIZE[43033]" />
 					<param name="label2" value="$VAR[MusicGenreIconsNameVar]" />
 					<param name="property" value="MusicGenreIcons" />
 					<param name="type" value="resource.images.musicgenreicons" />
 				</include>
 				<include content="ResourceSelect">
-					<param name="control_id" value="210" />
+					<param name="control_id" value="213" />
 					<param name="label" value="$LOCALIZE[43015]" />
 					<param name="label2" value="$VAR[WeatherIconsNameVar]" />
 					<param name="property" value="WeatherIcons" />
 					<param name="type" value="resource.images.weathericons" />
 				</include>
-				<control type="image" id="211">
+				<control type="image" id="214">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
 				<include content="SetSkinSetting">
-					<param name="control_id" value="212" />
+					<param name="control_id" value="215" />
 					<param name="label" value="$LOCALIZE[44101]" />
 					<param name="label2" value="$VAR[SkinSettingPopupPositionNameVar]" />
 					<param name="property" value="PopupPosition" />
 					<param name="header" value="$LOCALIZE[44101]" />
 				</include>
-				<control type="radiobutton" id="213">
+				<control type="radiobutton" id="216">
 					<description>Hide Popup</description>
 					<label>$LOCALIZE[44102]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(hide_popup)</onclick>
 					<selected>Skin.HasSetting(hide_popup)</selected>
 				</control>
-				<control type="image" id="214">
+				<control type="image" id="217">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="215">
+				<control type="button" id="218">
 					<description>Busy Texture</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43016]</label>
@@ -287,19 +306,19 @@
 					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=busytexture)</onclick>
 				</control>
-				<control type="image" id="216">
+				<control type="image" id="219">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="radiobutton" id="217">
+				<control type="radiobutton" id="220">
 					<description>Enable Custom List Addons</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43017]</label>
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
 				</control>
-				<control type="radiobutton" id="218">
+				<control type="radiobutton" id="221">
 					<description>Enable Custom List Channels</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43018]</label>
@@ -308,12 +327,12 @@
 					<visible>System.HasAddon(script.pvr.favourites)</visible>
 					<visible>PVR.HasTVChannels | PVR.HasRadioChannels</visible>
 				</control>
-				<control type="image" id="219">
+				<control type="image" id="222">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="220">
+				<control type="button" id="223">
 					<description>Startup Focus Control</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44124]</label>
@@ -321,12 +340,12 @@
 					<onclick condition="String.IsEmpty(Skin.String(custom_focus)) | String.IsEqual(Skin.String(custom_focus),0)">Skin.SetString(custom_focus,1,)</onclick>
 					<onclick>Skin.SetNumeric(custom_focus)</onclick>
 				</control>
-				<control type="image" id="221">
+				<control type="image" id="224">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="radiobutton" id="222">
+				<control type="radiobutton" id="225">
 					<description>Skin Toggle Debug</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43019]</label>
@@ -335,9 +354,9 @@
 					<onclick>Skin.ToggleDebug</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
-					<param name="control_id1" value="223" />
-					<param name="control_id2" value="224" />
-					<param name="action" value="Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(custom_focus)|Skin.Reset(enable_skin_debug)" />
+					<param name="control_id1" value="226" />
+					<param name="control_id2" value="227" />
+					<param name="action" value="Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(hide_widget_labels)|Skin.Reset(use_smaller_categories)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(custom_focus)|Skin.Reset(enable_skin_debug)" />
 				</include>
 			</control>
 			<control type="grouplist" id="300">
@@ -352,32 +371,59 @@
 				<onup>300</onup>
 				<ondown>300</ondown>
 				<visible>Container(9000).HasFocus(3)</visible>
-				<control type="button" id="301">
+				<control type="radiobutton" id="301">
+					<description>Minimize Main Menu</description>
+					<label>$LOCALIZE[40310]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(minimize_main_menu)</selected>
+					<onclick>Skin.ToggleSetting(minimize_main_menu)</onclick>
+				</control>
+				<control type="radiobutton" id="302">
+					<description>Top Name Item</description>
+					<label>- $LOCALIZE[40311]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(top_name_item)</selected>
+					<onclick>Skin.ToggleSetting(top_name_item)</onclick>
+					<visible>Skin.HasSetting(minimize_main_menu)</visible>
+				</control>
+				<control type="radiobutton" id="303">
+					<description>Hide MainMenu With Widgets</description>
+					<label>$LOCALIZE[40312]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(hide_main_menu_with_widgets)</selected>
+					<onclick>Skin.ToggleSetting(hide_main_menu_with_widgets)</onclick>
+				</control>
+				<control type="button" id="304">
 					<description>Manage Main Menu</description>
 					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32071]</label>
+					<label>$LOCALIZE[40313]</label>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
 				</control>
-				<control type="button" id="302">
-					<description>Manage Power Menu</description>
+				<control type="button" id="305">
+					<description>Reset Main Menu</description>
 					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[43020]</label>
+					<label>- $LOCALIZE[40314]</label>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
-					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=resetall)</onclick>
 				</control>
-				<control type="image" id="303">
+				<control type="image" id="306">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="304">
-					<description>Reset All Menu</description>
+				<control type="button" id="307">
+					<description>Manage Power Menu</description>
 					<include>DefaultSettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32037]</label>
+					<label>$LOCALIZE[40315]</label>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
-					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=resetall)</onclick>
+					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
 				</control>
+				<include content="ResetSkinSettingsParams">
+					<param name="control_id1" value="308" />
+					<param name="control_id2" value="309" />
+					<param name="action" value="Skin.Reset(minimize_main_menu)|Skin.Reset(top_name_item)|Skin.Reset(hide_main_menu_with_widgets)" />
+				</include>
 			</control>
 			<control type="grouplist" id="400">
 				<description>User Widgets</description>

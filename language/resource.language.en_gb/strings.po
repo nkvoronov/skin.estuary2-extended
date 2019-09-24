@@ -864,10 +864,6 @@ msgctxt "#43019"
 msgid "Debug infos"
 msgstr ""
 
-msgctxt "#43020"
-msgid "Customize power menu"
-msgstr ""
-
 msgctxt "#43021"
 msgid "User list of add-ons"
 msgstr ""
@@ -902,10 +898,6 @@ msgstr ""
 
 msgctxt "#43031"
 msgid "Restory"
-msgstr ""
-
-msgctxt "#43032"
-msgid "Widget Limit Items"
 msgstr ""
 
 msgctxt "#43033"
@@ -1386,5 +1378,41 @@ msgstr ""
 
 msgctxt "#44220"
 msgid "Sort direction of widget"
+msgstr ""
+
+msgctxt "#40310"
+msgid "Minimize main menu"
+msgstr ""
+
+msgctxt "#40311"
+msgid "Show item label on top"
+msgstr ""
+
+msgctxt "#40312"
+msgid "Hide main menu when selecting widgets"
+msgstr ""
+
+msgctxt "#40313"
+msgid "Customize main menu"
+msgstr ""
+
+msgctxt "#40314"
+msgid "Reset main menu settings"
+msgstr ""
+
+msgctxt "#40315"
+msgid "Customize power menu"
+msgstr ""
+
+msgctxt "#40316"
+msgid "Number of items to display on widgets"
+msgstr ""
+
+msgctxt "#40317"
+msgid "Show media names with widgets names"
+msgstr ""
+
+msgctxt "#40318"
+msgid "Show smaller icons for 'Categories' widgets"
 msgstr ""
 

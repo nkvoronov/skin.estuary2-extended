@@ -2,7 +2,10 @@
 <includes>
 	<include name="HomeSubMenu">
 		<control type="group" id="2000">
-			<left>462</left>
+			<include condition="!Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">NormalMainMenu</include>
+			<include condition="Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">HideMainMenu</include>
+			<include condition="Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">HideMainMenu</include>
+			<include condition="!Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">MinimizeMainMenu</include>
 			<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
 				<effect type="slide" end="0,20" time="60" tween="sine" />
 				<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
@@ -11,9 +14,20 @@
 				<effect type="slide" end="0,-20" time="60" tween="sine" />
 				<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
 			</animation>
+			<animation effect="slide" end="502,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">Conditional</animation>
+			<animation effect="slide" end="135,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">Conditional</animation>
 			<include>OpenClose_Right</include>
 			<include>skinshortcuts-template-submenus</include>
 		</control>
+	</include>
+	<include name="NormalMainMenu">
+		<left>462</left>
+	</include>
+	<include name="HideMainMenu">
+		<left>-40</left>
+	</include>
+	<include name="MinimizeMainMenu">
+		<left>95</left>
 	</include>
 	<include name="HomeSubPanels">
 		<control type="grouplist" id="$PARAM[submain_id]001">
@@ -21,7 +35,9 @@
 			<pagecontrol>$PARAM[submain_id]010</pagecontrol>
 			<include content="Widget-Categories">
 				<param name="widget_header" value="$LOCALIZE[31148]"/>
+				<param name="widget_header_focus" value="$INFO[Container($PARAM[submain_id]100).ListItem.Label, | ]"/>
 				<param name="content_path" value="$PARAM[submenu_content]"/>
+				<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
 				<param name="custom" value="true"/>
 				<param name="list_id" value="$PARAM[submain_id]100"/>
 			</include>
