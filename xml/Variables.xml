@@ -245,6 +245,7 @@
 		<value>$INFO[ListItem.AddonCreator,, - ]$INFO[ListItem.AddonVersion]</value>
 	</variable>
 	<variable name="AddonsListIconVar">
+		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
 		<value condition="!String.IsEmpty(ListItem.AddonBroken)">icons/addonstatus/disable.png</value>
 		<value condition="ListItem.Property(Addon.Orphaned)">icons/addonstatus/orphan.png</value>
 		<value condition="ListItem.Property(Addon.Downloading)">icons/addonstatus/install.png</value>
@@ -476,7 +477,7 @@
 	</variable>
 	<variable name="RepeatButtonColordiffuseVar">
 		<value condition="Control.HasFocus(704)">$VAR[MainColorVar]</value>
-		<value>FFFFFFFF</value>
+		<value>white2</value>
 	</variable>
 	<variable name="PVRChannelMgrHeaderVar">
 		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
@@ -1229,14 +1230,6 @@
 	</variable>
 	<variable name="RssHeaderColorNameVar">
 		<value condition="!String.IsEmpty(Skin.String(RssHeaderColor))">$INFO[Skin.String(RssHeaderColor)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
-	<variable name="ImageColorVar">
-		<value condition="!String.IsEmpty(Skin.String(ImageColor))">$INFO[Skin.String(ImageColor)]</value>
-		<value>img_color</value>
-	</variable>
-	<variable name="ImageColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(ImageColor))">$INFO[Skin.String(ImageColor)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="ShowInfoAtPlaybackStartVar">

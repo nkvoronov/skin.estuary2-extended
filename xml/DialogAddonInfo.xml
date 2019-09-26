@@ -41,7 +41,7 @@
 					<control type="image">
 						<width>425</width>
 						<height>260</height>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultNoPreview.png</texture>
+						<texture background="true">DefaultNoPreview.png</texture>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
@@ -50,7 +50,7 @@
 						<left>405</left>
 						<width>425</width>
 						<height>260</height>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultNoPreview.png</texture>
+						<texture background="true">DefaultNoPreview.png</texture>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
@@ -59,7 +59,7 @@
 						<left>810</left>
 						<width>425</width>
 						<height>260</height>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultNoPreview.png</texture>
+						<texture background="true">DefaultNoPreview.png</texture>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
@@ -78,7 +78,7 @@
 							<left>-12</left>
 							<width>425</width>
 							<height>260</height>
-							<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultNoPreview.png</texture>
+							<texture background="true">DefaultNoPreview.png</texture>
 							<aspectratio>scale</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -98,7 +98,7 @@
 							<left>-12</left>
 							<width>425</width>
 							<height>260</height>
-							<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultNoPreview.png</texture>
+							<texture background="true">DefaultNoPreview.png</texture>
 							<aspectratio>scale</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -268,7 +268,7 @@
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<label>[I]$INFO[ListItem.AddonDisclaimer][/I]</label>
-				<textcolor>88FFFFFF</textcolor>
+				<textcolor>white5</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
 			<include content="InfoDialogTopBarInfo">

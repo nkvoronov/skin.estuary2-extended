@@ -433,10 +433,10 @@
 						<ondown>100</ondown>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
-						<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/letters.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/letters.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/symbols.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/symbols.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="white2">icons/keyboard/letters.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="white2">icons/keyboard/letters.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="white2">icons/keyboard/symbols.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="white2">icons/keyboard/symbols.png</textureradiooffnofocus>
 						<radioposx>32l</radioposx>
 						<radiowidth>56</radiowidth>
 						<radioheight>36</radioheight>
@@ -449,10 +449,10 @@
 						<ondown>101</ondown>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
-						<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/capslock.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/capslock.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/capslock.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/capslock.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="white2">icons/keyboard/capslock.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="$VAR[MainColorVar]">icons/keyboard/capslock.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="white2">icons/keyboard/capslock.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="white2">icons/keyboard/capslock.png</textureradiooffnofocus>
 						<radioposx>40</radioposx>
 						<radioposy>42</radioposy>
 						<radiowidth>42</radiowidth>
@@ -466,10 +466,10 @@
 						<ondown>102</ondown>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
-						<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/shift.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/shift.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/shift.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/shift.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="white2">icons/keyboard/shift.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="$VAR[MainColorVar]">icons/keyboard/shift.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="white2">icons/keyboard/shift.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="white2">icons/keyboard/shift.png</textureradiooffnofocus>
 						<radioposx>42</radioposx>
 						<radiowidth>36</radiowidth>
 						<radioheight>36</radioheight>
@@ -482,10 +482,10 @@
 						<ondown>104</ondown>
 						<texturefocus />
 						<texturenofocus />
-						<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/spacebar.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/spacebar.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/spacebar.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/spacebar.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="$VAR[MainColorVar]">icons/keyboard/spacebar.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="white2">icons/keyboard/spacebar.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="$VAR[MainColorVar]">icons/keyboard/spacebar.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="white2">icons/keyboard/spacebar.png</textureradiooffnofocus>
 						<radioposx>34</radioposx>
 						<radiowidth>328</radiowidth>
 						<radioheight>36</radioheight>
@@ -498,10 +498,10 @@
 						<onup>167</onup>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
-						<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/arrowleft.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/arrowleft.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/arrowleft.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/arrowleft.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="white2">icons/keyboard/arrowleft.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="white2">icons/keyboard/arrowleft.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="white2">icons/keyboard/arrowleft.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="white2">icons/keyboard/arrowleft.png</textureradiooffnofocus>
 						<radioposx>38</radioposx>
 						<radiowidth>36</radiowidth>
 						<radioheight>36</radioheight>
@@ -514,10 +514,10 @@
 						<onup>168</onup>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
-						<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/arrowright.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/arrowright.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/arrowright.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/arrowright.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="white2">icons/keyboard/arrowright.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="white2">icons/keyboard/arrowright.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="white2">icons/keyboard/arrowright.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="white2">icons/keyboard/arrowright.png</textureradiooffnofocus>
 						<radioposx>45</radioposx>
 						<radiowidth>36</radiowidth>
 						<radioheight>36</radioheight>
@@ -530,10 +530,10 @@
 						<ondown>109</ondown>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
-						<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/backspace.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/backspace.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/keyboard/backspace.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/keyboard/backspace.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="white2">icons/keyboard/backspace.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="white2">icons/keyboard/backspace.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="white2">icons/keyboard/backspace.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="white2">icons/keyboard/backspace.png</textureradiooffnofocus>
 						<radioposx>31</radioposx>
 						<radiowidth>51</radiowidth>
 						<radioheight>36</radioheight>

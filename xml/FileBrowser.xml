@@ -53,18 +53,6 @@
 				<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 				<bordersize>4</bordersize>
 				<texture border="4" background="true">$INFO[ListItem.Icon]</texture>
-				<visible>!$EXP[default_icon]</visible>
-			</control>
-			<control type="image">
-				<left>1010</left>
-				<top>420</top>
-				<width>260</width>
-				<height>380</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
-				<bordersize>4</bordersize>
-				<texture border="4" background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
-				<visible>$EXP[default_icon]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>

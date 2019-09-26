@@ -52,10 +52,10 @@
 						<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | Player.SeekEnabled</visible>
 					</control>
 					<control type="radiobutton" id="602">
-						<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">osd/fullscreen/buttons/play.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$VAR[ImageColorVar]">osd/fullscreen/buttons/play.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">osd/fullscreen/buttons/pause.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$VAR[ImageColorVar]">osd/fullscreen/buttons/pause.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="$VAR[WhiteColorVar]">osd/fullscreen/buttons/play.png</textureradioonfocus>
+						<textureradioonnofocus>osd/fullscreen/buttons/play.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="$VAR[WhiteColorVar]">osd/fullscreen/buttons/pause.png</textureradioofffocus>
+						<textureradiooffnofocus>osd/fullscreen/buttons/pause.png</textureradiooffnofocus>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">osd/fullscreen/buttons/button-fo.png</texturefocus>
 						<width>76</width>
 						<animation center="38,38" effect="zoom" end="100" reversible="false" start="95" time="480" tween="back">Focus</animation>
@@ -91,10 +91,10 @@
 						<visible>VideoPlayer.HasMenu</visible>
 					</control>
 					<control type="radiobutton" id="606">
-						<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">osd/fullscreen/buttons/record-white.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$VAR[ImageColorVar]">osd/fullscreen/buttons/record-white.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">osd/fullscreen/buttons/record.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$VAR[ImageColorVar]">osd/fullscreen/buttons/record.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="$VAR[WhiteColorVar]">osd/fullscreen/buttons/record-white.png</textureradioonfocus>
+						<textureradioonnofocus>osd/fullscreen/buttons/record-white.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="$VAR[WhiteColorVar]">osd/fullscreen/buttons/record.png</textureradioofffocus>
+						<textureradiooffnofocus>osd/fullscreen/buttons/record.png</textureradiooffnofocus>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">osd/fullscreen/buttons/button-fo.png</texturefocus>
 						<width>76</width>
 						<animation center="38,38" effect="zoom" end="100" reversible="false" start="95" time="480" tween="back">Focus</animation>
@@ -206,7 +206,7 @@
 					<left>0</left>
 					<width>100%</width>
 					<height>26</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
 					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>Player.Progress</info>
@@ -218,7 +218,7 @@
 					<left>0</left>
 					<width>100%</width>
 					<height>26</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
 					<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>Player.Progress</info>
@@ -230,7 +230,7 @@
 					<left>0</left>
 					<width>100%</width>
 					<height>26</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
 					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>PVR.TimeshiftProgressPlayPos</info>
@@ -242,7 +242,7 @@
 					<left>0</left>
 					<width>100%</width>
 					<height>26</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
 					<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>PVR.TimeshiftProgressPlayPos</info>

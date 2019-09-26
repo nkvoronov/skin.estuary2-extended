@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="OSDButton">
-		<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">$PARAM[texture]</textureradioonfocus>
-		<textureradioonnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[texture]</textureradioonnofocus>
-		<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">$PARAM[texture]</textureradioofffocus>
-		<textureradiooffnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[texture]</textureradiooffnofocus>
+		<textureradioonfocus colordiffuse="$VAR[WhiteColorVar]">$PARAM[texture]</textureradioonfocus>
+		<textureradioonnofocus>$PARAM[texture]</textureradioonnofocus>
+		<textureradioofffocus colordiffuse="$VAR[WhiteColorVar]">$PARAM[texture]</textureradioofffocus>
+		<textureradiooffnofocus>$PARAM[texture]</textureradiooffnofocus>
 		<textureradioondisabled colordiffuse="$VAR[DisabledColorVar]">$PARAM[texture]</textureradioondisabled>
 		<textureradiooffdisabled colordiffuse="$VAR[DisabledColorVar]">$PARAM[texture]</textureradiooffdisabled>
 		<texturefocus colordiffuse="$VAR[MainColorVar]">osd/fullscreen/buttons/button-fo.png</texturefocus>
@@ -174,9 +174,9 @@
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
 				<radioheight>40</radioheight>
-				<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioonfocus>
+				<textureradioonfocus>$PARAM[icon]</textureradioonfocus>
 				<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">$PARAM[icon]</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioofffocus>
+				<textureradioofffocus>$PARAM[icon]</textureradioofffocus>
 				<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">$PARAM[icon]</textureradiooffnofocus>
 				<visible>$PARAM[visible]</visible>
 			</control>
@@ -222,10 +222,10 @@
 			<radioposy>13</radioposy>
 			<radiowidth>48</radiowidth>
 			<font>font12</font>
-			<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioonfocus>
-			<textureradioonnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioonnofocus>
-			<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioofffocus>
-			<textureradiooffnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradiooffnofocus>
+			<textureradioonfocus colordiffuse="white3">$PARAM[icon]</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="white3">$PARAM[icon]</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="white3">$PARAM[icon]</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="white3">$PARAM[icon]</textureradiooffnofocus>
 			<textureradiooffdisabled colordiffuse="$VAR[DisabledColorVar]">$PARAM[icon]</textureradiooffdisabled>
 			<textureradioondisabled colordiffuse="$VAR[DisabledColorVar]">$PARAM[icon]</textureradioondisabled>
 		</definition>
@@ -246,10 +246,10 @@
 				<radioposy>16</radioposy>
 				<radiowidth>48</radiowidth>
 				<font>font12</font>
-				<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon]</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="white3">$PARAM[icon]</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="white3">$PARAM[icon]</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="white3">$PARAM[icon]</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="white3">$PARAM[icon]</textureradiooffnofocus>
 				<textureradiooffdisabled colordiffuse="$VAR[DisabledColorVar]">$PARAM[icon]</textureradiooffdisabled>
 				<textureradioondisabled colordiffuse="$VAR[DisabledColorVar]">$PARAM[icon]</textureradioondisabled>
 				<label>$PARAM[label]</label>
@@ -276,10 +276,10 @@
 				<radioposy>16</radioposy>
 				<radiowidth>48</radiowidth>
 				<font>font12</font>
-				<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon_on]</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon_on]</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon_off]</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="$VAR[ImageColorVar]">$PARAM[icon_off]</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="white3">$PARAM[icon_on]</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="white3">$PARAM[icon_on]</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="white3">$PARAM[icon_off]</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="white3">$PARAM[icon_off]</textureradiooffnofocus>
 				<textureradiooffdisabled colordiffuse="$VAR[DisabledColorVar]">$PARAM[icon_off]</textureradiooffdisabled>
 				<textureradioondisabled colordiffuse="$VAR[DisabledColorVar]">$PARAM[icon_on]</textureradioondisabled>
 				<selected>$PARAM[selected]</selected>

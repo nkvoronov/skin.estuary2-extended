@@ -116,6 +116,7 @@
 											<param name="height" value="650" />
 											<param name="border" value="false" />
 											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
 										</include>
 									</control>
 								</control>
@@ -197,6 +198,7 @@
 											<param name="height" value="650" />
 											<param name="border" value="false" />
 											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
 										</include>
 									</control>
 								</control>
@@ -270,10 +272,20 @@
 											<param name="left" value="-8" />
 											<param name="top" value="-8" />
 											<param name="width" value="500" />
-											<param name="height" value="650" />
+											<param name="height" value="475" />
 											<param name="border" value="false" />
 											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
 										</include>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>..</label>
+											<align>center</align>
+											<aligny>center</aligny>
+										</control>
 									</control>
 								</control>
 							</control>
@@ -356,10 +368,20 @@
 											<param name="left" value="-8" />
 											<param name="top" value="-8" />
 											<param name="width" value="500" />
-											<param name="height" value="650" />
+											<param name="height" value="475" />
 											<param name="border" value="false" />
 											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
 										</include>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>..</label>
+											<align>center</align>
+											<aligny>center</aligny>
+										</control>
 									</control>
 								</control>
 							</control>

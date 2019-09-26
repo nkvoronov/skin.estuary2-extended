@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="View_51_Poster">
-		<control type="button" id="200000">
+		<control type="button" id="20000">
 			<description>Dummy button to get animations right (hide focusedlayout on animations)</description>
 			<include>HiddenObject</include>
 			<animation effect="fade" delay="500" time="0" start="100" end="0">Visible</animation>

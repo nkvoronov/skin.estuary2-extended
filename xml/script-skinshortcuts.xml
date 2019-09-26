@@ -273,7 +273,7 @@
 						<top>1</top>
 						<width>95</width>
 						<height>95</height>
-						<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>104</left>

@@ -47,22 +47,12 @@
 						<width>215</width>
 						<height>215</height>
 						<aspectratio>scale</aspectratio>
-						<texture  colordiffuse="$VAR[ImageColorVar]">DefaultUser.png</texture>
-						<visible>String.IsEmpty(ListItem.Icon)</visible>
-					</control>
-					<control type="image">
-						<left>51</left>
-						<top>38</top>
-						<width>215</width>
-						<height>215</height>
-						<aspectratio>scale</aspectratio>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<visible>!String.IsEmpty(ListItem.Icon)</visible>
+						<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="label">
-						<left>25</left>
+						<left>10</left>
 						<top>255</top>
-						<width>280</width>
+						<width>305</width>
 						<height>100</height>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -70,7 +60,7 @@
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>300</top>
+						<top>290</top>
 						<width>305</width>
 						<height>100</height>
 						<font>font10</font>
@@ -117,22 +107,12 @@
 							<width>215</width>
 							<height>215</height>
 							<aspectratio>scale</aspectratio>
-							<texture  colordiffuse="$VAR[ImageColorVar]">DefaultUser.png</texture>
-							<visible>String.IsEmpty(ListItem.Icon)</visible>
-						</control>
-						<control type="image">
-							<left>51</left>
-							<top>38</top>
-							<width>215</width>
-							<height>215</height>
-							<aspectratio>scale</aspectratio>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<visible>!String.IsEmpty(ListItem.Icon)</visible>
+							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 						</control>
 						<control type="label">
-							<left>25</left>
+							<left>10</left>
 							<top>255</top>
-							<width>280</width>
+							<width>305</width>
 							<height>100</height>
 							<align>center</align>
 							<aligny>top</aligny>
@@ -140,7 +120,7 @@
 						</control>
 						<control type="label">
 							<left>10</left>
-							<top>300</top>
+							<top>290</top>
 							<width>305</width>
 							<height>100</height>
 							<font>font10</font>

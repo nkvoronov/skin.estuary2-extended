@@ -98,7 +98,7 @@
 				<left>25</left>
 				<width>14</width>
 				<height>14</height>
-				<texture flipx="true" colordiffuse="$VAR[ImageColorVar]">overlays/arrowright.png</texture>
+				<texture flipx="true">overlays/arrowright.png</texture>
 				<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
@@ -107,7 +107,7 @@
 				<left>56</left>
 				<width>14</width>
 				<height>14</height>
-				<texture colordiffuse="$VAR[ImageColorVar]">overlays/arrowright.png</texture>
+				<texture>overlays/arrowright.png</texture>
 				<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
@@ -186,7 +186,7 @@
 						<top>1</top>
 						<width>95</width>
 						<height>95</height>
-						<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>104</left>

@@ -40,7 +40,7 @@
 							<top>0</top>
 							<width>860</width>
 							<height>195</height>
-							<texture fallback="dialogs/dialog-bg-nobo.png" background="true" colordiffuse="$VAR[ImageColorVar]">$VAR[BannerArtVar]</texture>
+							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">$VAR[BannerArtVar]</texture>
 							<aspectratio aligny="center">keep</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -90,7 +90,7 @@
 							<top>0</top>
 							<width>860</width>
 							<height>195</height>
-							<texture fallback="dialogs/dialog-bg-nobo.png" background="true" colordiffuse="$VAR[ImageColorVar]">$VAR[BannerArtVar]</texture>
+							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">$VAR[BannerArtVar]</texture>
 							<aspectratio aligny="center">keep</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -130,7 +130,7 @@
 								<top>138</top>
 								<width>32</width>
 								<height>32</height>
-								<texture colordiffuse="$VAR[ImageColorVar]">$VAR[ListWatchedIconVar]</texture>
+								<texture>$VAR[ListWatchedIconVar]</texture>
 							</control>
 							<control type="label">
 								<left>80</left>
@@ -147,7 +147,7 @@
 								<top>143</top>
 								<width>22</width>
 								<height>22</height>
-								<texture colordiffuse="$VAR[ImageColorVar]">lists/rating.png</texture>
+								<texture>lists/rating.png</texture>
 								<visible>!String.IsEmpty(ListItem.Rating)</visible>
 							</control>
 							<control type="label">
@@ -166,7 +166,7 @@
 								<top>143</top>
 								<width>22</width>
 								<height>22</height>
-								<texture colordiffuse="$VAR[ImageColorVar]">lists/played-total.png</texture>
+								<texture>lists/played-total.png</texture>
 								<visible>String.IsEqual(Listitem.dbtype,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 							</control>
 							<control type="label">

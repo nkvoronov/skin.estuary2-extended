@@ -112,7 +112,7 @@
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
-							<texture colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Art(thumb)]</texture>
+							<texture>$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
 							<left>104</left>
@@ -139,7 +139,7 @@
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
-							<texture colordiffuse="$VAR[GreyColorVar]">$INFO[ListItem.Art(thumb)]</texture>
+							<texture colordiffuse="bg_addonlauncher">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 					</itemlayout>
 					<content>
@@ -238,10 +238,10 @@
 					<radioposy>0</radioposy>
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
-					<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/submenu/add-ons.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/submenu/add-ons.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/submenu/add-ons.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/submenu/add-ons.png</textureradiooffnofocus>
+					<textureradioonfocus>icons/submenu/add-ons.png</textureradioonfocus>
+					<textureradioonnofocus>icons/submenu/add-ons.png</textureradioonnofocus>
+					<textureradioofffocus>icons/submenu/add-ons.png</textureradioofffocus>
+					<textureradiooffnofocus>icons/submenu/add-ons.png</textureradiooffnofocus>
 				</control>
 				<control type="radiobutton" id="802">
 					<top>5</top>
@@ -261,10 +261,10 @@
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
 					<enable>Integer.IsGreater(Container(8000).NumItems,0)</enable>
-					<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/submenu/updatelibrary.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/submenu/updatelibrary.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/submenu/updatelibrary.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/submenu/updatelibrary.png</textureradiooffnofocus>
+					<textureradioonfocus>icons/submenu/updatelibrary.png</textureradioonfocus>
+					<textureradioonnofocus>icons/submenu/updatelibrary.png</textureradioonnofocus>
+					<textureradioofffocus>icons/submenu/updatelibrary.png</textureradioofffocus>
+					<textureradiooffnofocus>icons/submenu/updatelibrary.png</textureradiooffnofocus>
 					<textureradioondisabled colordiffuse="$VAR[DisabledColorVar]">icons/submenu/updatelibrary.png</textureradioondisabled>
 					<textureradiooffdisabled colordiffuse="$VAR[DisabledColorVar]">icons/submenu/updatelibrary.png</textureradiooffdisabled>
 				</control>
@@ -284,10 +284,10 @@
 					<radioposy>0</radioposy>
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
-					<textureradioonfocus colordiffuse="$VAR[ImageColorVar]">icons/settings.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/settings.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="$VAR[ImageColorVar]">icons/settings.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/settings.png</textureradiooffnofocus>
+					<textureradioonfocus>icons/settings.png</textureradioonfocus>
+					<textureradioonnofocus>icons/settings.png</textureradioonnofocus>
+					<textureradioofffocus>icons/settings.png</textureradioofffocus>
+					<textureradiooffnofocus>icons/settings.png</textureradiooffnofocus>
 				</control>
 				<control type="label" id="804">
 					<left>-217</left>

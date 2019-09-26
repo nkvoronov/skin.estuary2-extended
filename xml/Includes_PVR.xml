@@ -148,7 +148,7 @@
 					<height>$PARAM[epg_bar_height]</height>
 					<info2>PVR.TimeshiftProgressEpgStart</info2>
 					<info>PVR.TimeshiftProgressPlayPos</info>
-					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 					<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
 				</control>
 				<control type="progress">
@@ -158,7 +158,7 @@
 					<height>$PARAM[epg_bar_height]</height>
 					<info2>PVR.TimeshiftProgressPlayPos</info2>
 					<info>PVR.TimeshiftProgressEpgEnd</info>
-					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+					<texturebg border="3" colordiffuse="white6">colors/white50.png</texturebg>
 					<midtexture>colors/white50.png</midtexture>
 				</control>
 			</control>
@@ -169,7 +169,7 @@
 				<height>$PARAM[ts_bar_height]</height>
 				<info2>PVR.TimeshiftProgressBufferStart</info2>
 				<info>PVR.TimeshiftProgressBufferEnd</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 				<midtexture>colors/white70.png</midtexture>
 				<visible>Player.SeekEnabled</visible>
 			</control>
@@ -183,7 +183,7 @@
 				<width>100%</width>
 				<height>16</height>
 				<info>PVR.EpgEventProgress</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 				<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
 			</control>
 		</control>
@@ -229,14 +229,14 @@
 					<control type="progress">
 						<top>50</top>
 						<height>12</height>
-						<colordiffuse>88FFFFFF</colordiffuse>
+						<colordiffuse>white5</colordiffuse>
 						<info>ListItem.Progress</info>
 					</control>
 				</control>
 				<control type="progress">
 					<top>200</top>
 					<height>12</height>
-					<colordiffuse>88FFFFFF</colordiffuse>
+					<colordiffuse>white5</colordiffuse>
 					<info>ListItem.PercentPlayed</info>
 					<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 				</control>
@@ -511,7 +511,7 @@
 						<top>35</top>
 						<width>20</width>
 						<height>20</height>
-						<texture colordiffuse="$VAR[ImageColorVar]">$VAR[PVRTimerIconVar]</texture>
+						<texture>$VAR[PVRTimerIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="62" width="60">

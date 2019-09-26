@@ -148,7 +148,7 @@
 	<include name="Widget-PVRChannels">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Title, - ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -160,7 +160,7 @@
 	<include name="Widget-PVRChannelsCustom">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Title, - ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="custom" value="true"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
@@ -171,7 +171,7 @@
 	<include name="Widget-PVRRecordings">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.ChannelName, | ]$INFO[ListItem.Title, - ]$INFO[ListItem.EpisodeName, (,)]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -210,7 +210,7 @@
 	<include name="Widget-Episodes">
 		<include content="Widget-Thumbs">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle, | ]$INFO[Container($PARAM[list_id]).ListItem.Title, - ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -222,7 +222,7 @@
 	<include name="Widget-MusicVideos">
 		<include content="Widget-Thumbs">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Artist, - ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -237,7 +237,7 @@
 	<include name="Widget-Albums">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Artist, - ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -261,7 +261,7 @@
 	<include name="Widget-Songs">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Artist, - ]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -446,7 +446,7 @@
 					<width>100</width>
 					<height>100</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture colordiffuse="$VAR[ImageColorVar]">dialogs/extendedprogress/loading.png</texture>
+					<texture>dialogs/extendedprogress/loading.png</texture>
 					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
 				</control>
 			</control>
@@ -575,14 +575,16 @@
 			<control type="panel" id="$PARAM[list_id]">
 				<top>110</top>
 				<right>0</right>
-				<include condition="!$PARAM[small]">Widget-Categories-Big</include>
+				<left>0</left>
+				<include condition="!$PARAM[small] + Skin.HasSetting(hide_widget_labels)">Widget-Categories-Big1</include>
+				<include condition="!$PARAM[small] + !Skin.HasSetting(hide_widget_labels)">Widget-Categories-Big2</include>
 				<include condition="$PARAM[small]">Widget-Categories-Small</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="340" condition="!$PARAM[small]">
+				<itemlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<left>70</left>
 						<include content="IconLayout">
@@ -599,7 +601,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="340" condition="!$PARAM[small]">
+				<focusedlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -621,6 +623,46 @@
 							<param name="txt_bg" value="false" />
 							<param name="txt_height" value="30%" />
 							<param name="txt_font" value="font25_narrow" />
+						</include>
+					</control>
+				</focusedlayout>
+				<itemlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<left>70</left>
+						<include content="IconLayout">
+							<param name="width" value="316" />
+							<param name="height" value="180" />
+							<param name="widget" value="true" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_source" value="$PARAM[img_source]" />
+							<param name="img_height" value="90%" />
+							<param name="img_ratio" value="$PARAM[img_ratio]" />
+							<param name="txt_bg" value="false" />
+							<param name="txt_label" value="false" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="228,70" />
+						</animation>
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
+						</animation>
+						<include content="IconLayout">
+							<param name="width" value="316" />
+							<param name="height" value="180" />
+							<param name="focused" value="true" />
+							<param name="widget" value="true" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_source" value="$PARAM[img_source]" />
+							<param name="img_height" value="90%" />
+							<param name="img_ratio" value="$PARAM[img_ratio]" />
+							<param name="txt_bg" value="false" />
+							<param name="txt_label" value="false" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -678,12 +720,13 @@
 			</control>
 		</definition>
 	</include>
-	<include name="Widget-Categories-Big">
-		<left>0</left>
+	<include name="Widget-Categories-Big1">
 		<height>290</height>
 	</include>
+	<include name="Widget-Categories-Big2">
+		<height>270</height>
+	</include>
 	<include name="Widget-Categories-Small">
-		<left>-10</left>
 		<height>220</height>
 	</include>
 	<include name="Widget-Posters">
@@ -781,15 +824,16 @@
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>105</top>
+				<top>110</top>
 				<right>0</right>
-				<height>410</height>
+				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Thumbs-Big1</include>
+				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Thumbs-Big2</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
+				<itemlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
@@ -801,7 +845,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500">
+				<focusedlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -821,6 +865,48 @@
 						</include>
 					</control>
 				</focusedlayout>
+				<itemlayout width="310" height="440" condition="!Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<left>70</left>
+						<top>5</top>
+						<include content="ThumbLayout">
+							<param name="height" value="228" />
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="thumb_label" value="$PARAM[thumb_label]" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_height" value="93%" />
+							<param name="txt_label" value="false" />
+							<param name="txt_bottom" value="20" />
+							<param name="watched_bottom" value="27" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="310" height="440" condition="!Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<top>5</top>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="230,120" />
+						</animation>
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="230,120" />
+						</animation>
+						<include content="ThumbLayout">
+							<param name="focused" value="true" />
+							<param name="height" value="228" />
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="thumb_label" value="$PARAM[thumb_label]" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_height" value="93%" />
+							<param name="txt_label" value="false" />
+							<param name="txt_bottom" value="20" />
+							<param name="watched_bottom" value="27" />
+						</include>
+					</control>
+				</focusedlayout>
 				<include condition="!$PARAM[custom]" content="Widget-Content">
 					<param name="content_target" value="$PARAM[content_target]"/>
 					<param name="content_path" value="$PARAM[content_path]"/>
@@ -834,6 +920,12 @@
 				</include>
 			</control>
 		</definition>
+	</include>
+	<include name="Widget-Thumbs-Big1">
+		<height>390</height>
+	</include>
+	<include name="Widget-Thumbs-Big2">
+		<height>330</height>
 	</include>
 	<include name="Widget-Squares">
 		<param name="visible">true</param>
@@ -861,14 +953,15 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<height>500</height>
+				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Squares-Big1</include>
+				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Squares-Big2</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<onclick condition="$PARAM[favourites]">$INFO[ListItem.FileNameAndPath]</onclick>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
+				<itemlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
@@ -879,7 +972,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500">
+				<focusedlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -898,6 +991,42 @@
 						</include>
 					</control>
 				</focusedlayout>
+				<itemlayout width="310" height="500" condition="!Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<left>70</left>
+						<include content="SquareLayout">
+							<param name="height" value="326" />
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="single_label" value="$PARAM[single_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_height" value="95%" />
+							<param name="txt_label" value="false" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
+						</animation>
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
+						</animation>
+						<include content="SquareLayout">
+							<param name="focused" value="true" />
+							<param name="height" value="326" />
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="single_label" value="$PARAM[single_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_height" value="95%" />
+							<param name="txt_label" value="false" />
+						</include>
+					</control>
+				</focusedlayout>
 				<include condition="!$PARAM[custom]" content="Widget-Content">
 					<param name="content_target" value="$PARAM[content_target]"/>
 					<param name="content_path" value="$PARAM[content_path]"/>
@@ -911,6 +1040,12 @@
 				</include>
 			</control>
 		</definition>
+	</include>
+	<include name="Widget-Squares-Big1">
+		<height>500</height>
+	</include>
+	<include name="Widget-Squares-Big2">
+		<height>430</height>
 	</include>
 	<include name="Widget-SquaresFavourites">
 		<param name="visible">true</param>
@@ -990,38 +1125,34 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<height>430</height>
+				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Channels-Big1</include>
+				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Channels-Big2</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="500">
+				<itemlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
-							<param name="width" value="319" />
-							<param name="height" value="340" />
 							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_top" value="24" />
-							<param name="img_height" value="70%" />
-							<param name="img_ratio" value="keep" />
-							<param name="txt_height" value="20%" />
+							<param name="img_ratio" value="stretch" />
 						</include>
 						<control type="image">
-							<left>260</left>
-							<top>30</top>
-							<width>32</width>
-							<height>32</height>
-							<texture colordiffuse="$VAR[ImageColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<left>245</left>
+							<top>25</top>
+							<width>50</width>
+							<height>50</height>
+							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="500">
+				<focusedlayout width="310" height="500" condition="Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -1032,25 +1163,74 @@
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100" />
 						</animation>
 						<include content="SquareLayout">
-							<param name="width" value="319" />
-							<param name="height" value="340" />
 							<param name="focused" value="true" />
 							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_top" value="24" />
-							<param name="img_height" value="70%" />
-							<param name="img_ratio" value="keep" />
-							<param name="txt_height" value="20%" />
+							<param name="img_ratio" value="stretch" />
 						</include>
 						<control type="image">
-							<left>260</left>
-							<top>30</top>
-							<width>32</width>
-							<height>32</height>
-							<texture colordiffuse="$VAR[ImageColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<left>245</left>
+							<top>25</top>
+							<width>50</width>
+							<height>50</height>
+							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+						</control>
+					</control>
+				</focusedlayout>
+				<itemlayout width="310" height="500" condition="!Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<left>70</left>
+						<include content="SquareLayout">
+							<param name="height" value="326" />
+							<param name="istwolabel" value="true" />
+							<param name="main_label" value="$PARAM[label2]" />
+							<param name="sub_label" value="$PARAM[label]" />
+							<param name="img_source" value="$PARAM[img_source]" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_ratio" value="stretch" />
+							<param name="img_height" value="95%" />
+							<param name="txt_label" value="false" />
+						</include>
+						<control type="image">
+							<left>245</left>
+							<top>25</top>
+							<width>50</width>
+							<height>50</height>
+							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="310" height="500" condition="!Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,100" />
+						</animation>
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100" />
+						</animation>
+						<include content="SquareLayout">
+							<param name="focused" value="true" />
+							<param name="height" value="326" />
+							<param name="istwolabel" value="true" />
+							<param name="main_label" value="$PARAM[label2]" />
+							<param name="sub_label" value="$PARAM[label]" />
+							<param name="img_source" value="$PARAM[img_source]" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+							<param name="img_ratio" value="stretch" />
+							<param name="img_height" value="95%" />
+							<param name="txt_label" value="false" />
+						</include>
+						<control type="image">
+							<left>245</left>
+							<top>25</top>
+							<width>50</width>
+							<height>50</height>
+							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
 				</focusedlayout>
@@ -1067,6 +1247,12 @@
 				</include>
 			</control>
 		</definition>
+	</include>
+	<include name="Widget-Channels-Big1">
+		<height>500</height>
+	</include>
+	<include name="Widget-Channels-Big2">
+		<height>430</height>
 	</include>
 	<include name="Widget-Image">
 		<param name="visible">true</param>

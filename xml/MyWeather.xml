@@ -79,7 +79,7 @@
 					<textoffsety>0</textoffsety>
 					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus />
-					<onup>200000</onup>
+					<onup>20000</onup>
 					<ondown>15100</ondown>
 					<font>font12</font>
 					<onclick>Weather.LocationNext</onclick>

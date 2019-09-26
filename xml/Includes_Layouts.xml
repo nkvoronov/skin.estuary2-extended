@@ -23,22 +23,12 @@
 					<visible>$PARAM[focused2]</visible>
 				</control>
 				<control type="image">
-					<description>File Icon Fallback 1</description>
+					<description>File Icon Fallback</description>
 					<left>$PARAM[left]</left>
 					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture colordiffuse="$VAR[GreyColorVar]">$PARAM[img_fallback]</texture>
-					<aspectratio>$PARAM[img_ratio]</aspectratio>
-					<visible>!$PARAM[focused]</visible>
-				</control>
-				<control type="image">
-					<description>File Icon Fallback 2</description>
-					<left>$PARAM[left]</left>
-					<top>$PARAM[top]</top>
-					<width>$PARAM[width]</width>
-					<height>$PARAM[height]</height>
-					<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[img_fallback]</texture>
+					<texture>$PARAM[img_fallback]</texture>
 					<aspectratio>$PARAM[img_ratio]</aspectratio>
 					<visible>$PARAM[focused]</visible>
 				</control>
@@ -50,28 +40,15 @@
 					<height>$PARAM[height]</height>
 					<texture>$PARAM[img_source]</texture>
 					<aspectratio>$PARAM[img_ratio]</aspectratio>
-					<visible>!$EXP[default_icon]</visible>
 				</control>
 				<control type="image">
-					<description>File Icon 2</description>
+					<description>File Icon Focus</description>
 					<left>$PARAM[left]</left>
 					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture colordiffuse="$VAR[GreyColorVar]">$PARAM[img_source]</texture>
+					<texture>$PARAM[img_source]</texture>
 					<aspectratio>$PARAM[img_ratio]</aspectratio>
-					<visible>$EXP[default_icon]</visible>
-					<visible>!$PARAM[focused]</visible>
-				</control>
-				<control type="image">
-					<description>File Icon 2 Focus</description>
-					<left>$PARAM[left]</left>
-					<top>$PARAM[top]</top>
-					<width>$PARAM[width]</width>
-					<height>$PARAM[height]</height>
-					<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[img_source]</texture>
-					<aspectratio>$PARAM[img_ratio]</aspectratio>
-					<visible>$EXP[default_icon]</visible>
 					<visible>$PARAM[focused]</visible>
 				</control>
 			</control>
@@ -87,7 +64,7 @@
 		<param name="widget">false</param>
 		<param name="img_fallback">$VAR[DefaultFallBackVar]</param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>
-		<param name="img_height">80%</param>
+		<param name="img_height">73%</param>
 		<param name="img_ratio">keep</param>
 		<param name="txt_height">20%</param>
 		<param name="txt_bottom">24</param>
@@ -131,7 +108,7 @@
 					<right>8</right>
 					<top>8</top>
 					<height>$PARAM[img_height]</height>
-					<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+					<texture background="true">DefaultFolderBack.png</texture>
 					<aspectratio>$PARAM[img_ratio]</aspectratio>
 					<bordersize>20</bordersize>
 					<visible>ListItem.IsParentFolder</visible>
@@ -151,7 +128,7 @@
 							<right>8</right>
 							<top>8</top>
 							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="DefaultStudios.png" colordiffuse="$VAR[ImageColorVar]">$VAR[IconStudiosVar]</texture>
+							<texture background="true" fallback="DefaultStudios.png">$VAR[IconStudiosVar]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
 						</control>
@@ -180,7 +157,7 @@
 							<right>8</right>
 							<top>8</top>
 							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="DefaultCountry.png" colordiffuse="$VAR[ImageColorVar]">$VAR[IconCountriesVar]</texture>
+							<texture background="true" fallback="DefaultCountry.png">$VAR[IconCountriesVar]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
 						</control>
@@ -209,7 +186,7 @@
 							<right>8</right>
 							<top>8</top>
 							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="DefaultGenre.png" colordiffuse="$VAR[ImageColorVar]">$VAR[IconGenreVar]</texture>
+							<texture background="true" fallback="DefaultGenre.png">$VAR[IconGenreVar]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
 						</control>
@@ -238,7 +215,7 @@
 							<right>8</right>
 							<top>8</top>
 							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="DefaultMusicGenres.png" colordiffuse="$VAR[ImageColorVar]">$VAR[IconMusicGenreVar]</texture>
+							<texture background="true" fallback="DefaultMusicGenres.png">$VAR[IconMusicGenreVar]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
 						</control>
@@ -266,10 +243,9 @@
 							<right>8</right>
 							<top>8</top>
 							<height>$PARAM[img_height]</height>
-							<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
-							<visible>$EXP[default_icon]</visible>
 						</control>
 						<control type="image">
 							<description>File Icon</description>
@@ -279,10 +255,9 @@
 							<right>8</right>
 							<top>8</top>
 							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="$PARAM[img_fallback]" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_source]</texture>
+							<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
-							<visible>!$EXP[default_icon]</visible>
 						</control>
 						<control type="image">
 							<description>File Icon Def</description>
@@ -295,7 +270,6 @@
 							<texture background="true">$PARAM[img_source]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
-							<visible>!$EXP[default_icon]</visible>
 						</control>
 					</control>
 				</control>
@@ -375,7 +349,7 @@
 					<left>4</left>
 					<right>4</right>
 					<bottom>4</bottom>
-					<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+					<texture background="true">DefaultFolderBack.png</texture>
 					<aspectratio>keep</aspectratio>
 					<bordersize>20</bordersize>
 					<visible>ListItem.IsParentFolder</visible>
@@ -391,13 +365,13 @@
 						<right>8</right>
 						<top>8</top>
 						<height>$PARAM[img_height]</height>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_fallback]</texture>
+						<texture background="true">$PARAM[img_fallback]</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
 						<visible>String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="image">
-						<description>File Icon 1</description>
+						<description>File Icon</description>
 						<centerleft>50%</centerleft>
 						<centertop>50%</centertop>
 						<left>8</left>
@@ -407,20 +381,7 @@
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
-						<visible>!String.IsEmpty(ListItem.Icon) + !$EXP[default_icon]</visible>
-					</control>
-					<control type="image">
-						<description>File Icon 2</description>
-						<centerleft>50%</centerleft>
-						<centertop>50%</centertop>
-						<left>8</left>
-						<right>8</right>
-						<top>8</top>
-						<height>$PARAM[img_height]</height>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
-						<aspectratio>$PARAM[img_ratio]</aspectratio>
-						<bordersize>20</bordersize>
-						<visible>!String.IsEmpty(ListItem.Icon) + $EXP[default_icon]</visible>
+						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 				</control>
 				<control type="label">
@@ -513,7 +474,7 @@
 						<left>4</left>
 						<right>4</right>
 						<bottom>4</bottom>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+						<texture background="true">DefaultFolderBack.png</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
 						<visible>ListItem.IsParentFolder</visible>
@@ -529,7 +490,7 @@
 							<right>8</right>
 							<top>8</top>
 							<height>$PARAM[img_height]</height>
-							<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_fallback]</texture>
+							<texture background="true">$PARAM[img_fallback]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
 							<visible>String.IsEmpty(ListItem.Icon)</visible>
@@ -545,20 +506,7 @@
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>$PARAM[img_ratio]</aspectratio>
 							<bordersize>20</bordersize>
-							<visible>!String.IsEmpty(ListItem.Icon) + !$EXP[default_icon]</visible>
-						</control>
-						<control type="image">
-							<description>File Icon Def</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true" colordiffuse="$VAR[ImageColorVar]">$INFO[ListItem.Icon]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-							<visible>!String.IsEmpty(ListItem.Icon) + $EXP[default_icon]</visible>
+							<visible>!String.IsEmpty(ListItem.Icon)</visible>
 						</control>
 					</control>
 					<control type="textbox">
@@ -736,7 +684,7 @@
 						<width>24</width>
 						<height>24</height>
 						<bottom>32</bottom>
-						<texture colordiffuse="$VAR[ImageColorVar]">lists/played-total.png</texture>
+						<texture>lists/played-total.png</texture>
 					</control>
 				</control>
 				<control type="image">
@@ -745,7 +693,7 @@
 					<bottom>24</bottom>
 					<width>32</width>
 					<height>32</height>
-					<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[watchedicon]</texture>
+					<texture>$PARAM[watchedicon]</texture>
 					<visible>$PARAM[watched] + !$PARAM[istvshows]</visible>
 				</control>
 				<control type="progress">
@@ -829,11 +777,13 @@
 				</control>
 				<control type="image">
 					<description>Parent Folder</description>
-					<top>4</top>
-					<left>4</left>
-					<right>4</right>
-					<bottom>4</bottom>
-					<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<left>8</left>
+					<right>8</right>
+					<top>8</top>
+					<height>$PARAM[img_height]</height>
+					<texture background="true">DefaultFolderBack.png</texture>
 					<aspectratio>keep</aspectratio>
 					<bordersize>20</bordersize>
 					<visible>ListItem.IsParentFolder</visible>
@@ -849,7 +799,7 @@
 						<right>8</right>
 						<top>8</top>
 						<height>$PARAM[img_height]</height>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_fallback]</texture>
+						<texture background="true">$PARAM[img_fallback]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordersize>20</bordersize>
 						<visible>String.IsEmpty(ListItem.Icon) + String.IsEmpty(ListItem.Art(poster))</visible>
@@ -917,7 +867,6 @@
 					<scroll>$PARAM[focused]</scroll>
 					<visible>Window.IsActive(videos)</visible>
 					<visible>$PARAM[txt_label]</visible>
-					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="group">
 					<description>Name File Two Label</description>
@@ -959,7 +908,7 @@
 					<bottom>$PARAM[watched_bottom]</bottom>
 					<width>32</width>
 					<height>32</height>
-					<texture colordiffuse="$VAR[ImageColorVar]">$PARAM[watchedicon]</texture>
+					<texture>$PARAM[watchedicon]</texture>
 					<visible>$PARAM[watched]</visible>
 				</control>
 				<control type="progress">
@@ -1038,11 +987,13 @@
 				</control>
 				<control type="image">
 					<description>Parent Folder</description>
-					<top>4</top>
-					<left>4</left>
-					<right>4</right>
-					<bottom>4</bottom>
-					<texture background="true" colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<left>8</left>
+					<right>8</right>
+					<top>$PARAM[img_top]</top>
+					<height>$PARAM[img_height]</height>
+					<texture background="true">DefaultFolderBack.png</texture>
 					<aspectratio>$PARAM[img_ratio]</aspectratio>
 					<bordersize>20</bordersize>
 					<visible>ListItem.IsParentFolder</visible>
@@ -1058,7 +1009,7 @@
 						<right>8</right>
 						<top>$PARAM[img_top]</top>
 						<height>$PARAM[img_height]</height>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_fallback]</texture>
+						<texture background="true">$PARAM[img_fallback]</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
 						<visible>String.IsEmpty(ListItem.Icon)</visible>
@@ -1071,24 +1022,9 @@
 						<right>8</right>
 						<top>$PARAM[img_top]</top>
 						<height>$PARAM[img_height]</height>
-						<texture background="true" colordiffuse="$VAR[ImageColorVar]">$PARAM[img_source]</texture>
-						<aspectratio>$PARAM[img_ratio]</aspectratio>
-						<bordersize>20</bordersize>
-						<visible>$EXP[default_icon]</visible>
-						<visible>!String.IsEmpty(ListItem.Icon)</visible>
-					</control>
-					<control type="image">
-						<description>File Icon 2</description>
-						<centerleft>50%</centerleft>
-						<centertop>50%</centertop>
-						<left>8</left>
-						<right>8</right>
-						<top>$PARAM[img_top]</top>
-						<height>$PARAM[img_height]</height>
 						<texture background="true">$PARAM[img_source]</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
-						<visible>!$EXP[default_icon]</visible>
 						<visible>!String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 				</control>
@@ -1106,7 +1042,6 @@
 					<scroll>$PARAM[focused]</scroll>
 					<visible>!$PARAM[istwolabel]</visible>
 					<visible>$PARAM[txt_label]</visible>
-					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="group">
 					<description>Name Item Two Label</description>
@@ -1211,7 +1146,7 @@
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture colordiffuse="$VAR[ImageColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture>$VAR[ListWatchedIconVar]</texture>
 						<animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
 					</control>
 					<control type="image">
@@ -1579,7 +1514,7 @@
 							<width>344</width>
 							<height>194</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+							<texture>DefaultFolderBack.png</texture>
 							<visible>ListItem.IsParentFolder</visible>
 						</control>
 						<control type="image">
@@ -1588,7 +1523,7 @@
 							<width>344</width>
 							<height>194</height>
 							<aspectratio>scale</aspectratio>
-							<texture colordiffuse="$VAR[ImageColorVar]">DefaultVideo.png</texture>
+							<texture>DefaultVideo.png</texture>
 							<visible>!ListItem.IsParentFolder + String.IsEmpty(ListItem.Art(fanart))</visible>
 						</control>
 						<control type="image">
@@ -1639,7 +1574,7 @@
 							<width>344</width>
 							<height>194</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ImageColorVar]">DefaultFolderBack.png</texture>
+							<texture>DefaultFolderBack.png</texture>
 							<visible>ListItem.IsParentFolder</visible>
 						</control>
 						<control type="image">
@@ -1648,7 +1583,7 @@
 							<width>344</width>
 							<height>194</height>
 							<aspectratio>scale</aspectratio>
-							<texture colordiffuse="$VAR[ImageColorVar]">DefaultVideo.png</texture>
+							<texture>DefaultVideo.png</texture>
 							<visible>!ListItem.IsParentFolder + String.IsEmpty(ListItem.Art(fanart))</visible>
 						</control>
 						<control type="image">

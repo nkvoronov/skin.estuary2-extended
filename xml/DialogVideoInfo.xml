@@ -281,7 +281,7 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture colordiffuse="$VAR[ImageColorVar]">DefaultActorSolid.png</texture>
+								<texture>DefaultActorSolid.png</texture>
 								<aspectratio aligny="center">scale</aspectratio>
 								<bordertexture border="21">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
@@ -333,7 +333,7 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture colordiffuse="$VAR[ImageColorVar]">DefaultActorSolid.png</texture>
+								<texture>DefaultActorSolid.png</texture>
 								<aspectratio aligny="center">scale</aspectratio>
 								<bordertexture border="21">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
@@ -457,7 +457,7 @@
 							<align>center</align>
 						</control>
 						<control type="image">
-							<texture colordiffuse="$VAR[ImageColorVar]">icons/infodialogs/rating.png</texture>
+							<texture>icons/infodialogs/rating.png</texture>
 							<left>107</left>
 							<top>30</top>
 							<width>48</width>

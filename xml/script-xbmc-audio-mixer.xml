@@ -14,7 +14,7 @@
 			<height>6000</height>
 			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<texture colordiffuse="C2FFFFFF">colors/black.png</texture>
+			<texture colordiffuse="white4">colors/black.png</texture>
 		</control>
 		<control type="button">
 			<left>-2000</left>

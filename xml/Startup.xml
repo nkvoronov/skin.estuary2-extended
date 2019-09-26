@@ -18,6 +18,6 @@
 			<onfocus condition="Skin.String(splashscreen_path) + !Skin.HasSetting(enable_splashscreen)">RunScript(script.skin.helper.service,action=splashscreen,file=$INFO[Skin.String(splashscreen_path)],duration=$VAR[DurationSplashScreenNameVar])</onfocus>
 			<onfocus condition="!Skin.String(splashscreen_path) + !Skin.HasSetting(enable_splashscreen)">AlarmClock(GoHome,ReplaceWindow($INFO[System.StartupWindow]),00:01,silent,false)</onfocus>
 			<visible allowhiddenfocus="true">false</visible>
-		</control>        
+		</control>
 	</controls>
 </window>
