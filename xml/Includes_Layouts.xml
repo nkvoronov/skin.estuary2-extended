@@ -470,10 +470,12 @@
 					</control>
 					<control type="image">
 						<description>Parent Folder</description>
-						<top>4</top>
-						<left>4</left>
-						<right>4</right>
-						<bottom>4</bottom>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
 						<texture background="true">DefaultFolderBack.png</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
@@ -521,7 +523,6 @@
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>$PARAM[focused]</scroll>
 						<visible>$PARAM[txt_label]</visible>
-						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -722,9 +723,9 @@
 	</include>
 	<include name="ThumbLayout">
 		<param name="left">0</param>
-		<param name="top">0</param>
-		<param name="width">316</param>
-		<param name="height">288</param>
+		<param name="top">10</param>
+		<param name="width">324</param>
+		<param name="height">296</param>
 		<param name="focused">false</param>
 		<param name="border">true</param>
 		<param name="watched">true</param>
@@ -938,8 +939,8 @@
 	<include name="SquareLayout">
 		<param name="left">0</param>
 		<param name="top">0</param>
-		<param name="width">316</param>
-		<param name="height">386</param>
+		<param name="width">324</param>
+		<param name="height">394</param>
 		<param name="focused">false</param>
 		<param name="border">true</param>
 		<param name="rating">true</param>
