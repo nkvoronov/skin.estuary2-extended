@@ -426,6 +426,7 @@
 					<param name="submenu_content" value="skinshortcuts-group-$SKINSHORTCUTS[submenu]" />
 					<param name="widget_content" value="include-$SKINSHORTCUTS[widget]" />
 					<param name="widget1_name" value="$SKINSHORTCUTS[widget1_name]"/>
+					<param name="widget1_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]200]"/>
 					<param name="widget1_type" value="$SKINSHORTCUTS[widget1_type]"/>
 					<param name="widget1_target" value="$SKINSHORTCUTS[widget1_target]"/>
 					<param name="widget1_path" value="$SKINSHORTCUTS[widget1_path]"/>
@@ -433,6 +434,7 @@
 					<param name="widget1_sortby" value="$SKINSHORTCUTS[widget1_sortby]"/>
 					<param name="widget1_sortorder" value="$SKINSHORTCUTS[widget1_sortorder]"/>
 					<param name="widget2_name" value="$SKINSHORTCUTS[widget2_name]"/>
+					<param name="widget2_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]300]"/>
 					<param name="widget2_type" value="$SKINSHORTCUTS[widget2_type]"/>
 					<param name="widget2_target" value="$SKINSHORTCUTS[widget2_target]"/>
 					<param name="widget2_path" value="$SKINSHORTCUTS[widget2_path]"/>
@@ -440,6 +442,7 @@
 					<param name="widget2_sortby" value="$SKINSHORTCUTS[widget2_sortby]"/>
 					<param name="widget2_sortorder" value="$SKINSHORTCUTS[widget2_sortorder]"/>
 					<param name="widget3_name" value="$SKINSHORTCUTS[widget3_name]"/>
+					<param name="widget3_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]400]"/>
 					<param name="widget3_type" value="$SKINSHORTCUTS[widget3_type]"/>
 					<param name="widget3_target" value="$SKINSHORTCUTS[widget3_target]"/>
 					<param name="widget3_path" value="$SKINSHORTCUTS[widget3_path]"/>
@@ -447,6 +450,7 @@
 					<param name="widget3_sortby" value="$SKINSHORTCUTS[widget3_sortby]"/>
 					<param name="widget3_sortorder" value="$SKINSHORTCUTS[widget3_sortorder]"/>
 					<param name="widget4_name" value="$SKINSHORTCUTS[widget4_name]"/>
+					<param name="widget4_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]500]"/>
 					<param name="widget4_type" value="$SKINSHORTCUTS[widget4_type]"/>
 					<param name="widget4_target" value="$SKINSHORTCUTS[widget4_target]"/>
 					<param name="widget4_path" value="$SKINSHORTCUTS[widget4_path]"/>
@@ -454,6 +458,7 @@
 					<param name="widget4_sortby" value="$SKINSHORTCUTS[widget4_sortby]"/>
 					<param name="widget4_sortorder" value="$SKINSHORTCUTS[widget4_sortorder]"/>
 					<param name="widget5_name" value="$SKINSHORTCUTS[widget5_name]"/>
+					<param name="widget5_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]600]"/>
 					<param name="widget5_type" value="$SKINSHORTCUTS[widget5_type]"/>
 					<param name="widget5_target" value="$SKINSHORTCUTS[widget5_target]"/>
 					<param name="widget5_path" value="$SKINSHORTCUTS[widget5_path]"/>
@@ -461,6 +466,7 @@
 					<param name="widget5_sortby" value="$SKINSHORTCUTS[widget5_sortby]"/>
 					<param name="widget5_sortorder" value="$SKINSHORTCUTS[widget5_sortorder]"/>
 					<param name="widget6_name" value="$SKINSHORTCUTS[widget6_name]"/>
+					<param name="widget6_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]700]"/>
 					<param name="widget6_type" value="$SKINSHORTCUTS[widget6_type]"/>
 					<param name="widget6_target" value="$SKINSHORTCUTS[widget6_target]"/>
 					<param name="widget6_path" value="$SKINSHORTCUTS[widget6_path]"/>
@@ -468,6 +474,7 @@
 					<param name="widget6_sortby" value="$SKINSHORTCUTS[widget6_sortby]"/>
 					<param name="widget6_sortorder" value="$SKINSHORTCUTS[widget6_sortorder]"/>
 					<param name="widget7_name" value="$SKINSHORTCUTS[widget7_name]"/>
+					<param name="widget7_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]800]"/>
 					<param name="widget7_type" value="$SKINSHORTCUTS[widget7_type]"/>
 					<param name="widget7_target" value="$SKINSHORTCUTS[widget7_target]"/>
 					<param name="widget7_path" value="$SKINSHORTCUTS[widget7_path]"/>
@@ -475,6 +482,7 @@
 					<param name="widget7_sortby" value="$SKINSHORTCUTS[widget7_sortby]"/>
 					<param name="widget7_sortorder" value="$SKINSHORTCUTS[widget7_sortorder]"/>
 					<param name="widget8_name" value="$SKINSHORTCUTS[widget8_name]"/>
+					<param name="widget8_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]900]"/>
 					<param name="widget8_type" value="$SKINSHORTCUTS[widget8_type]"/>
 					<param name="widget8_target" value="$SKINSHORTCUTS[widget8_target]"/>
 					<param name="widget8_path" value="$SKINSHORTCUTS[widget8_path]"/>
@@ -487,5 +495,95 @@
 				</include>
 			</control>
 		</controls>
+		<variables>
+			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]200">
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,episode)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.TVShowTitle, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,tvshow)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,musicvideo)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,song)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Album,, - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,album)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,artist)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Artist, | , ]$VAR[AlbumsCount]</value>
+				<value condition="!String.IsEmpty(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Label)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Label, | ]</value>
+			</variable>
+			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]300">
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.dbtype,episode)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.TVShowTitle, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.dbtype,tvshow)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.dbtype,musicvideo)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.dbtype,song)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Album,, - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.dbtype,album)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.dbtype,artist)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Artist, | , ]$VAR[AlbumsCount]</value>
+				<value condition="!String.IsEmpty(Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Label)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]300).ListItem.Label, | ]</value>
+			</variable>
+			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]400">
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.dbtype,episode)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.TVShowTitle, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.dbtype,tvshow)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.dbtype,musicvideo)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.dbtype,song)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Album,, - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.dbtype,album)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.dbtype,artist)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Artist, | , ]$VAR[AlbumsCount]</value>
+				<value condition="!String.IsEmpty(Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Label)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]400).ListItem.Label, | ]</value>
+			</variable>
+			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]500">
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.dbtype,episode)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.TVShowTitle, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.dbtype,tvshow)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.dbtype,musicvideo)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.dbtype,song)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Album,, - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.dbtype,album)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.dbtype,artist)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Artist, | , ]$VAR[AlbumsCount]</value>
+				<value condition="!String.IsEmpty(Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Label)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]500).ListItem.Label, | ]</value>
+			</variable>
+			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]600">
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.dbtype,episode)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.TVShowTitle, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.dbtype,tvshow)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.dbtype,musicvideo)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.dbtype,song)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Album,, - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.dbtype,album)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.dbtype,artist)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Artist, | , ]$VAR[AlbumsCount]</value>
+				<value condition="!String.IsEmpty(Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Label)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]600).ListItem.Label, | ]</value>
+			</variable>
+			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]700">
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.dbtype,episode)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.TVShowTitle, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.dbtype,tvshow)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.dbtype,musicvideo)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.dbtype,song)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Album,, - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.dbtype,album)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.dbtype,artist)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Artist, | , ]$VAR[AlbumsCount]</value>
+				<value condition="!String.IsEmpty(Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Label)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]700).ListItem.Label, | ]</value>
+			</variable>
+			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]800">
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.dbtype,episode)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.TVShowTitle, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.dbtype,tvshow)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.dbtype,musicvideo)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.dbtype,song)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Album,, - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.dbtype,album)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.dbtype,artist)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Artist, | , ]$VAR[AlbumsCount]</value>
+				<value condition="!String.IsEmpty(Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Label)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]800).ListItem.Label, | ]</value>
+			</variable>
+			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]900">
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.dbtype,episode)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.TVShowTitle, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.dbtype,tvshow)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.dbtype,musicvideo)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.dbtype,song)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Album,, - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.dbtype,album)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.dbtype,artist)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Artist, | , ]$VAR[AlbumsCount]</value>
+				<value condition="!String.IsEmpty(Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Label)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]900).ListItem.Label, | ]</value>
+			</variable>
+		</variables>
 	</other>
 </template>

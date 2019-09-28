@@ -10,8 +10,9 @@
 	<icon image="DefaultAudio.png">DefaultMusicSongs.png</icon>
 	<icon image="DefaultAudio.png" grouping="pvr-radio">DefaultTVShows.png</icon>
 	<groupoverride group="powermenu" disable_groups="" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
-	<groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</groupoverride>
-	<groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</groupoverride>
+	<override action="dialog.close(all,true)">
+		<action>System.LogOff</action>
+	</override>
 	<backgrounddefault labelID="weather">special://skin/extras/home-images/weather.jpg</backgrounddefault>
 	<backgrounddefault labelID="pictures">special://skin/extras/home-images/pictures.jpg</backgrounddefault>
 	<backgrounddefault labelID="livetv">special://skin/extras/home-images/livetv.jpg</backgrounddefault>

@@ -1248,4 +1248,8 @@
 		<value condition="!String.IsEmpty(Skin.String(random_fanart_delay))">$INFO[Skin.String(random_fanart_delay)]</value>
 		<value>30</value>
 	</variable>
+	<variable name="AlbumsCount">
+		<value condition="Integer.IsLessOrEqual(Window(Home).Property(SkinHelper.ListItem.AlbumCount),1)">$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),(, $LOCALIZE[36918])]</value>
+		<value>$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),(, $LOCALIZE[36919])]</value>
+	</variable>
 </includes>

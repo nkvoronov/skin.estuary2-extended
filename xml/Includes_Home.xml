@@ -3,7 +3,7 @@
 	<include name="Widget-Pictures">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -13,9 +13,9 @@
 		</include>
 	</include>
 	<include name="Widget-Videos">
-		<include content="Widget-Squares">
+		<include content="Widget-Posters">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -27,7 +27,7 @@
 	<include name="Widget-Musics">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -39,7 +39,7 @@
 	<include name="Widget-Programs">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -51,7 +51,7 @@
 	<include name="Widget-Addons">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -63,7 +63,7 @@
 	<include name="Widget-AddonsGame">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -76,7 +76,7 @@
 	<include name="Widget-AddonsCustom">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="widget_target" value="$PARAM[widget_target]"/>
 			<param name="custom" value="true"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
@@ -148,7 +148,7 @@
 	<include name="Widget-PVRChannels">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Title, - ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -160,7 +160,7 @@
 	<include name="Widget-PVRChannelsCustom">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Title, - ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="custom" value="true"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
@@ -171,7 +171,7 @@
 	<include name="Widget-PVRRecordings">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.ChannelName, | ]$INFO[ListItem.Title, - ]$INFO[ListItem.EpisodeName, (,)]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -186,7 +186,7 @@
 	<include name="Widget-Movies">
 		<include content="Widget-Posters">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -198,7 +198,7 @@
 	<include name="Widget-TVShows">
 		<include content="Widget-Posters">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -210,7 +210,7 @@
 	<include name="Widget-Episodes">
 		<include content="Widget-Thumbs">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle, | ]$INFO[Container($PARAM[list_id]).ListItem.Title, - ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -222,7 +222,7 @@
 	<include name="Widget-MusicVideos">
 		<include content="Widget-Thumbs">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Artist, - ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -237,7 +237,7 @@
 	<include name="Widget-Albums">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Artist, - ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -249,7 +249,7 @@
 	<include name="Widget-Artists">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -261,7 +261,7 @@
 	<include name="Widget-Songs">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Artist, - ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -273,7 +273,7 @@
 	<include name="Widget-Mixed">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_widget_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -286,7 +286,7 @@
 		<include content="Widget-Squares">
 			<param name="favourites" value="true"/>
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -303,7 +303,7 @@
 	<include name="Widget-Playlists">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -315,7 +315,7 @@
 	<include name="Widget-Source">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -327,7 +327,7 @@
 	<include name="Widget-MovieGenres">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -340,7 +340,7 @@
 	<include name="Widget-MusicGenres">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -353,7 +353,7 @@
 	<include name="Widget-Studios">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -366,7 +366,7 @@
 	<include name="Widget-Country">
 		<include content="Widget-Categories">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -379,7 +379,7 @@
 	<include name="Widget-Other">
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
-			<param name="widget_header_focus" value="$INFO[Container($PARAM[list_id]).ListItem.Label, | ]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
 			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
@@ -561,6 +561,7 @@
 		<param name="img_ratio">keep</param>
 		<param name="img_fallback">DefaultFolder.png</param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>
+		<param name="widget_header_focus">$INFO[Container($PARAM[list_id]).ListItem.Label, | ]</param>
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -737,6 +738,7 @@
 		<param name="content_type">no</param>
 		<param name="content_sortby"></param>
 		<param name="content_sortorder"></param>
+		<param name="widget_header_focus">$INFO[Container($PARAM[list_id]).ListItem.Label, | ]</param>
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -810,6 +812,7 @@
 		<param name="content_type">no</param>
 		<param name="content_sortby"></param>
 		<param name="content_sortorder"></param>
+		<param name="widget_header_focus">$INFO[Container($PARAM[list_id]).ListItem.Label, | ]</param>
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -937,6 +940,7 @@
 		<param name="content_type">no</param>
 		<param name="content_sortby"></param>
 		<param name="content_sortorder"></param>
+		<param name="widget_header_focus">$INFO[Container($PARAM[list_id]).ListItem.Label, | ]</param>
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -1109,6 +1113,7 @@
 		<param name="content_type">no</param>
 		<param name="content_sortby"></param>
 		<param name="content_sortorder"></param>
+		<param name="widget_header_focus">$INFO[Container($PARAM[list_id]).ListItem.Label, | ]$INFO[Container($PARAM[list_id]).ListItem.Title, - ]</param>
 		<definition>
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
