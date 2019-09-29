@@ -421,81 +421,102 @@
 					<param name="home" value="true"/>
 					<param name="id" value="$SKINSHORTCUTS[id]"/>
 				</include>
-				<include content="HomeSubPanels">
-					<param name="submain_id" value="$PYTHON[22+int($SKINSHORTCUTS[id])]" />
-					<param name="submenu_content" value="skinshortcuts-group-$SKINSHORTCUTS[submenu]" />
-					<param name="widget_content" value="include-$SKINSHORTCUTS[widget]" />
-					<param name="widget1_name" value="$SKINSHORTCUTS[widget1_name]"/>
-					<param name="widget1_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]200Var]"/>
-					<param name="widget1_type" value="$SKINSHORTCUTS[widget1_type]"/>
-					<param name="widget1_target" value="$SKINSHORTCUTS[widget1_target]"/>
-					<param name="widget1_path" value="$SKINSHORTCUTS[widget1_path]"/>
-					<param name="widget1_view" value="$SKINSHORTCUTS[widget1_view]"/>
-					<param name="widget1_sortby" value="$SKINSHORTCUTS[widget1_sortby]"/>
-					<param name="widget1_sortorder" value="$SKINSHORTCUTS[widget1_sortorder]"/>
-					<param name="widget2_name" value="$SKINSHORTCUTS[widget2_name]"/>
-					<param name="widget2_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]300Var]"/>
-					<param name="widget2_type" value="$SKINSHORTCUTS[widget2_type]"/>
-					<param name="widget2_target" value="$SKINSHORTCUTS[widget2_target]"/>
-					<param name="widget2_path" value="$SKINSHORTCUTS[widget2_path]"/>
-					<param name="widget2_view" value="$SKINSHORTCUTS[widget2_view]"/>
-					<param name="widget2_sortby" value="$SKINSHORTCUTS[widget2_sortby]"/>
-					<param name="widget2_sortorder" value="$SKINSHORTCUTS[widget2_sortorder]"/>
-					<param name="widget3_name" value="$SKINSHORTCUTS[widget3_name]"/>
-					<param name="widget3_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]400Var]"/>
-					<param name="widget3_type" value="$SKINSHORTCUTS[widget3_type]"/>
-					<param name="widget3_target" value="$SKINSHORTCUTS[widget3_target]"/>
-					<param name="widget3_path" value="$SKINSHORTCUTS[widget3_path]"/>
-					<param name="widget3_view" value="$SKINSHORTCUTS[widget3_view]"/>
-					<param name="widget3_sortby" value="$SKINSHORTCUTS[widget3_sortby]"/>
-					<param name="widget3_sortorder" value="$SKINSHORTCUTS[widget3_sortorder]"/>
-					<param name="widget4_name" value="$SKINSHORTCUTS[widget4_name]"/>
-					<param name="widget4_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]500Var]"/>
-					<param name="widget4_type" value="$SKINSHORTCUTS[widget4_type]"/>
-					<param name="widget4_target" value="$SKINSHORTCUTS[widget4_target]"/>
-					<param name="widget4_path" value="$SKINSHORTCUTS[widget4_path]"/>
-					<param name="widget4_view" value="$SKINSHORTCUTS[widget4_view]"/>
-					<param name="widget4_sortby" value="$SKINSHORTCUTS[widget4_sortby]"/>
-					<param name="widget4_sortorder" value="$SKINSHORTCUTS[widget4_sortorder]"/>
-					<param name="widget5_name" value="$SKINSHORTCUTS[widget5_name]"/>
-					<param name="widget5_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]600Var]"/>
-					<param name="widget5_type" value="$SKINSHORTCUTS[widget5_type]"/>
-					<param name="widget5_target" value="$SKINSHORTCUTS[widget5_target]"/>
-					<param name="widget5_path" value="$SKINSHORTCUTS[widget5_path]"/>
-					<param name="widget5_view" value="$SKINSHORTCUTS[widget5_view]"/>
-					<param name="widget5_sortby" value="$SKINSHORTCUTS[widget5_sortby]"/>
-					<param name="widget5_sortorder" value="$SKINSHORTCUTS[widget5_sortorder]"/>
-					<param name="widget6_name" value="$SKINSHORTCUTS[widget6_name]"/>
-					<param name="widget6_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]700Var]"/>
-					<param name="widget6_type" value="$SKINSHORTCUTS[widget6_type]"/>
-					<param name="widget6_target" value="$SKINSHORTCUTS[widget6_target]"/>
-					<param name="widget6_path" value="$SKINSHORTCUTS[widget6_path]"/>
-					<param name="widget6_view" value="$SKINSHORTCUTS[widget6_view]"/>
-					<param name="widget6_sortby" value="$SKINSHORTCUTS[widget6_sortby]"/>
-					<param name="widget6_sortorder" value="$SKINSHORTCUTS[widget6_sortorder]"/>
-					<param name="widget7_name" value="$SKINSHORTCUTS[widget7_name]"/>
-					<param name="widget7_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]800Var]"/>
-					<param name="widget7_type" value="$SKINSHORTCUTS[widget7_type]"/>
-					<param name="widget7_target" value="$SKINSHORTCUTS[widget7_target]"/>
-					<param name="widget7_path" value="$SKINSHORTCUTS[widget7_path]"/>
-					<param name="widget7_view" value="$SKINSHORTCUTS[widget7_view]"/>
-					<param name="widget7_sortby" value="$SKINSHORTCUTS[widget7_sortby]"/>
-					<param name="widget7_sortorder" value="$SKINSHORTCUTS[widget7_sortorder]"/>
-					<param name="widget8_name" value="$SKINSHORTCUTS[widget8_name]"/>
-					<param name="widget8_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]900Var]"/>
-					<param name="widget8_type" value="$SKINSHORTCUTS[widget8_type]"/>
-					<param name="widget8_target" value="$SKINSHORTCUTS[widget8_target]"/>
-					<param name="widget8_path" value="$SKINSHORTCUTS[widget8_path]"/>
-					<param name="widget8_view" value="$SKINSHORTCUTS[widget8_view]"/>
-					<param name="widget8_sortby" value="$SKINSHORTCUTS[widget8_sortby]"/>
-					<param name="widget8_sortorder" value="$SKINSHORTCUTS[widget8_sortorder]"/>
-				</include>
+				<control type="grouplist" id="$PYTHON[22+int($SKINSHORTCUTS[id])]001">
+					<include>Widget-GroupCommon</include>
+					<pagecontrol>$PYTHON[22+int($SKINSHORTCUTS[id])]010</pagecontrol>
+					<include content="Widget-Categories">
+						<param name="widget_header" value="$LOCALIZE[31148]"/>
+						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]100Var]"/>
+						<param name="content_path" value="skinshortcuts-group-$SKINSHORTCUTS[submenu]"/>
+						<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
+						<param name="custom" value="true"/>
+						<param name="list_id" value="$PYTHON[22+int($SKINSHORTCUTS[id])]100"/>
+					</include>
+					<include content="include-$SKINSHORTCUTS[widget]">
+						<param name="control_id" value="$PYTHON[22+int($SKINSHORTCUTS[id])]" />
+						<param name="widget1_name" value="$SKINSHORTCUTS[widget1_name]"/>
+						<param name="widget1_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]200Var]"/>
+						<param name="widget1_type" value="$SKINSHORTCUTS[widget1_type]"/>
+						<param name="widget1_target" value="$SKINSHORTCUTS[widget1_target]"/>
+						<param name="widget1_path" value="$SKINSHORTCUTS[widget1_path]"/>
+						<param name="widget1_view" value="$SKINSHORTCUTS[widget1_view]"/>
+						<param name="widget1_sortby" value="$SKINSHORTCUTS[widget1_sortby]"/>
+						<param name="widget1_sortorder" value="$SKINSHORTCUTS[widget1_sortorder]"/>
+						<param name="widget2_name" value="$SKINSHORTCUTS[widget2_name]"/>
+						<param name="widget2_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]300Var]"/>
+						<param name="widget2_type" value="$SKINSHORTCUTS[widget2_type]"/>
+						<param name="widget2_target" value="$SKINSHORTCUTS[widget2_target]"/>
+						<param name="widget2_path" value="$SKINSHORTCUTS[widget2_path]"/>
+						<param name="widget2_view" value="$SKINSHORTCUTS[widget2_view]"/>
+						<param name="widget2_sortby" value="$SKINSHORTCUTS[widget2_sortby]"/>
+						<param name="widget2_sortorder" value="$SKINSHORTCUTS[widget2_sortorder]"/>
+						<param name="widget3_name" value="$SKINSHORTCUTS[widget3_name]"/>
+						<param name="widget3_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]400Var]"/>
+						<param name="widget3_type" value="$SKINSHORTCUTS[widget3_type]"/>
+						<param name="widget3_target" value="$SKINSHORTCUTS[widget3_target]"/>
+						<param name="widget3_path" value="$SKINSHORTCUTS[widget3_path]"/>
+						<param name="widget3_view" value="$SKINSHORTCUTS[widget3_view]"/>
+						<param name="widget3_sortby" value="$SKINSHORTCUTS[widget3_sortby]"/>
+						<param name="widget3_sortorder" value="$SKINSHORTCUTS[widget3_sortorder]"/>
+						<param name="widget4_name" value="$SKINSHORTCUTS[widget4_name]"/>
+						<param name="widget4_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]500Var]"/>
+						<param name="widget4_type" value="$SKINSHORTCUTS[widget4_type]"/>
+						<param name="widget4_target" value="$SKINSHORTCUTS[widget4_target]"/>
+						<param name="widget4_path" value="$SKINSHORTCUTS[widget4_path]"/>
+						<param name="widget4_view" value="$SKINSHORTCUTS[widget4_view]"/>
+						<param name="widget4_sortby" value="$SKINSHORTCUTS[widget4_sortby]"/>
+						<param name="widget4_sortorder" value="$SKINSHORTCUTS[widget4_sortorder]"/>
+						<param name="widget5_name" value="$SKINSHORTCUTS[widget5_name]"/>
+						<param name="widget5_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]600Var]"/>
+						<param name="widget5_type" value="$SKINSHORTCUTS[widget5_type]"/>
+						<param name="widget5_target" value="$SKINSHORTCUTS[widget5_target]"/>
+						<param name="widget5_path" value="$SKINSHORTCUTS[widget5_path]"/>
+						<param name="widget5_view" value="$SKINSHORTCUTS[widget5_view]"/>
+						<param name="widget5_sortby" value="$SKINSHORTCUTS[widget5_sortby]"/>
+						<param name="widget5_sortorder" value="$SKINSHORTCUTS[widget5_sortorder]"/>
+						<param name="widget6_name" value="$SKINSHORTCUTS[widget6_name]"/>
+						<param name="widget6_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]700Var]"/>
+						<param name="widget6_type" value="$SKINSHORTCUTS[widget6_type]"/>
+						<param name="widget6_target" value="$SKINSHORTCUTS[widget6_target]"/>
+						<param name="widget6_path" value="$SKINSHORTCUTS[widget6_path]"/>
+						<param name="widget6_view" value="$SKINSHORTCUTS[widget6_view]"/>
+						<param name="widget6_sortby" value="$SKINSHORTCUTS[widget6_sortby]"/>
+						<param name="widget6_sortorder" value="$SKINSHORTCUTS[widget6_sortorder]"/>
+						<param name="widget7_name" value="$SKINSHORTCUTS[widget7_name]"/>
+						<param name="widget7_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]800Var]"/>
+						<param name="widget7_type" value="$SKINSHORTCUTS[widget7_type]"/>
+						<param name="widget7_target" value="$SKINSHORTCUTS[widget7_target]"/>
+						<param name="widget7_path" value="$SKINSHORTCUTS[widget7_path]"/>
+						<param name="widget7_view" value="$SKINSHORTCUTS[widget7_view]"/>
+						<param name="widget7_sortby" value="$SKINSHORTCUTS[widget7_sortby]"/>
+						<param name="widget7_sortorder" value="$SKINSHORTCUTS[widget7_sortorder]"/>
+						<param name="widget8_name" value="$SKINSHORTCUTS[widget8_name]"/>
+						<param name="widget8_name_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]900Var]"/>
+						<param name="widget8_type" value="$SKINSHORTCUTS[widget8_type]"/>
+						<param name="widget8_target" value="$SKINSHORTCUTS[widget8_target]"/>
+						<param name="widget8_path" value="$SKINSHORTCUTS[widget8_path]"/>
+						<param name="widget8_view" value="$SKINSHORTCUTS[widget8_view]"/>
+						<param name="widget8_sortby" value="$SKINSHORTCUTS[widget8_sortby]"/>
+						<param name="widget8_sortorder" value="$SKINSHORTCUTS[widget8_sortorder]"/>
+					</include>
+				</control>
 				<include content="Widget-Scrollbar" condition="Skin.HasSetting(touchmode)">
 					<param name="scrollbar_id" value="$PYTHON[22+int($SKINSHORTCUTS[id])]010"/>
 				</include>
 			</control>
 		</controls>
 		<variables>
+			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]100Var">
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.dbtype,episode)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.TVShowTitle, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.dbtype,tvshow)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.dbtype,musicvideo)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.dbtype,song)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Album,, - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.dbtype,album)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Artist, | , - ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Title]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Year, (,)]</value>
+				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.dbtype,artist)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Artist, | , ]$VAR[AlbumsCountVar]</value>
+				<value condition="!String.IsEmpty(Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Label)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]100).ListItem.Label, | ]</value>
+			</variable>
 			<variable name="WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]200Var">
 				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,set)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Title, | ]$INFO[Window(Home).Property(SkinHelper.ListItem.Years), (,)]</value>
 				<value condition="String.IsEqual(Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.dbtype,movie)">$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Title, | ]$INFO[Container($PYTHON[22+int($SKINSHORTCUTS[id])]200).ListItem.Year, (,)]</value>
