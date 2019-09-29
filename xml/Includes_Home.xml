@@ -420,8 +420,8 @@
 		<onback>9000</onback>
 		<onright/>
 		<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id],Home)</onfocus>
-		<onfocus>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</onfocus>
-		<onfocus>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</onfocus>
+		<onfocus>SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],Home)</onfocus>
+		<onfocus>SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],Home)</onfocus>
 		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
 		<preloaditems>2</preloaditems>
 	</include>
@@ -577,8 +577,8 @@
 				<top>110</top>
 				<right>0</right>
 				<left>0</left>
-				<include condition="!$PARAM[small] + Skin.HasSetting(hide_widget_labels)">Widget-Categories-Big1</include>
-				<include condition="!$PARAM[small] + !Skin.HasSetting(hide_widget_labels)">Widget-Categories-Big2</include>
+				<include condition="!$PARAM[small] + Skin.HasSetting(hide_widget_labels)">Widget-Categories-HeightMax</include>
+				<include condition="!$PARAM[small] + !Skin.HasSetting(hide_widget_labels)">Widget-Categories-HeightMin</include>
 				<include condition="$PARAM[small]">Widget-Categories-Small</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -721,10 +721,10 @@
 			</control>
 		</definition>
 	</include>
-	<include name="Widget-Categories-Big1">
+	<include name="Widget-Categories-HeightMax">
 		<height>290</height>
 	</include>
-	<include name="Widget-Categories-Big2">
+	<include name="Widget-Categories-HeightMin">
 		<height>270</height>
 	</include>
 	<include name="Widget-Categories-Small">
@@ -829,8 +829,8 @@
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
-				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Thumbs-Big1</include>
-				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Thumbs-Big2</include>
+				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Thumbs-HeightMax</include>
+				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Thumbs-HeightMin</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -924,10 +924,10 @@
 			</control>
 		</definition>
 	</include>
-	<include name="Widget-Thumbs-Big1">
+	<include name="Widget-Thumbs-HeightMax">
 		<height>390</height>
 	</include>
-	<include name="Widget-Thumbs-Big2">
+	<include name="Widget-Thumbs-HeightMin">
 		<height>330</height>
 	</include>
 	<include name="Widget-Squares">
@@ -957,8 +957,8 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Squares-Big1</include>
-				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Squares-Big2</include>
+				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Squares-HeightMax</include>
+				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Squares-HeightMin</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -1045,10 +1045,10 @@
 			</control>
 		</definition>
 	</include>
-	<include name="Widget-Squares-Big1">
+	<include name="Widget-Squares-HeightMax">
 		<height>500</height>
 	</include>
-	<include name="Widget-Squares-Big2">
+	<include name="Widget-Squares-HeightMin">
 		<height>430</height>
 	</include>
 	<include name="Widget-SquaresFavourites">
@@ -1130,8 +1130,8 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Channels-Big1</include>
-				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Channels-Big2</include>
+				<include condition="Skin.HasSetting(hide_widget_labels)">Widget-Channels-HeightMax</include>
+				<include condition="!Skin.HasSetting(hide_widget_labels)">Widget-Channels-HeightMin</include>
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -1253,10 +1253,10 @@
 			</control>
 		</definition>
 	</include>
-	<include name="Widget-Channels-Big1">
+	<include name="Widget-Channels-HeightMax">
 		<height>500</height>
 	</include>
-	<include name="Widget-Channels-Big2">
+	<include name="Widget-Channels-HeightMin">
 		<height>430</height>
 	</include>
 	<include name="Widget-Image">

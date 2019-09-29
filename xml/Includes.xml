@@ -1917,7 +1917,7 @@
 				<label>$ADDON[script.skinshortcuts 32044] $PARAM[num]</label>
 				<label2>$PARAM[label2]</label2>
 				<onclick>ClearProperty(WidgetVisibility,home)</onclick>
-				<onclick>SetProperty(widgetID, widget$PARAM[num])</onclick>
+				<onclick>SetProperty(widgetID, $PARAM[num])</onclick>
 				<onclick>SendClick(312)</onclick>
 				<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
@@ -1927,21 +1927,21 @@
 				<include>DefaultSettingButton</include>
 				<label>- $LOCALIZE[44200] $PARAM[num]</label>
 				<label2>$PARAM[label2view]</label2>
-				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.widget$PARAM[num]))]</visible>
+				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.$PARAM[num]))]</visible>
 			</control> -->
 			<control type="button" id="$PARAM[id]2">
 				<description>Widget Num Sort</description>
 				<include>DefaultSettingButton</include>
 				<label>- $LOCALIZE[44210] $PARAM[num]</label>
 				<label2>$PARAM[label2sort]</label2>
-				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.widget$PARAM[num]))]</visible>
+				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.$PARAM[num]))]</visible>
 			</control>
 			<control type="button" id="$PARAM[id]3">
 				<description>Widget Num Sort Direction</description>
 				<include>DefaultSettingButton</include>
 				<label>- $LOCALIZE[44220] $PARAM[num]</label>
 				<label2>$PARAM[label2sortdir]</label2>
-				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.widget$PARAM[num]))]</visible>
+				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.$PARAM[num]))]</visible>
 			</control>
 		</definition>
 	</include>
