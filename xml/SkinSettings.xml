@@ -1013,22 +1013,6 @@
 					<selected>Skin.HasSetting(animated_fanarts)</selected>
 				</control>
 				<control type="radiobutton" id="725">
-					<description>Enable Extra Poster</description>
-					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[44129]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-					<onclick>Skin.ToggleSetting(extra_posters)</onclick>
-					<selected>Skin.HasSetting(extra_posters)</selected>
-				</control>
-				<control type="radiobutton" id="726">
-					<description>Enable Extra Fanart</description>
-					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[44130]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-					<onclick>Skin.ToggleSetting(extra_fanarts)</onclick>
-					<selected>Skin.HasSetting(extra_fanarts)</selected>
-				</control>
-				<control type="radiobutton" id="727">
 					<description>Enable PVR Thumbs</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44131]</label>
@@ -1036,7 +1020,7 @@
 					<onclick>Skin.ToggleSetting(enable_pvr_thumbs)</onclick>
 					<selected>Skin.HasSetting(enable_pvr_thumbs)</selected>
 				</control>
-				<control type="radiobutton" id="728">
+				<control type="radiobutton" id="726">
 					<description>Enable Music Art</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44132]</label>
@@ -1044,7 +1028,7 @@
 					<onclick>Skin.ToggleSetting(enable_music_art)</onclick>
 					<selected>Skin.HasSetting(enable_music_art)</selected>
 				</control>
-				<control type="radiobutton" id="729">
+				<control type="radiobutton" id="727">
 					<description>Enable Extended Art</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44133]</label>
@@ -1052,14 +1036,14 @@
 					<onclick>Skin.ToggleSetting(enable_extended_art)</onclick>
 					<selected>Skin.HasSetting(enable_extended_art)</selected>
 				</control>
-				<control type="button" id="730">
+				<control type="button" id="728">
 					<description>Settings Skin Helper Service Backgrounds</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[44135]</label>
 					<onclick condition="!System.HasAddon(script.skin.helper.backgrounds)">InstallAddon(script.skin.helper.backgrounds)</onclick>
 					<onclick>Addon.OpenSettings(script.skin.helper.backgrounds)</onclick>
 				</control>
-				<control type="radiobutton" id="731">
+				<control type="radiobutton" id="729">
 					<description>Enable Wall Backgrounds</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44114]</label>
@@ -1067,7 +1051,7 @@
 					<onclick>Skin.ToggleSetting(wall_backgrounds)</onclick>
 					<selected>Skin.HasSetting(wall_backgrounds)</selected>
 				</control>
-				<control type="button" id="732">
+				<control type="button" id="730">
 					<description>Random Fanart Delay</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44115]</label>
@@ -1075,14 +1059,14 @@
 					<onclick condition="String.IsEmpty(Skin.String(random_fanart_delay))">Skin.SetString(random_fanart_delay,30,)</onclick>
 					<onclick>Skin.SetNumeric(random_fanart_delay)</onclick>
 				</control>
-				<control type="button" id="733">
+				<control type="button" id="731">
 					<description>Settings Skin Helper Service Widgets</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[44136]</label>
 					<onclick condition="!System.HasAddon(script.skin.helper.widgets)">InstallAddon(script.skin.helper.widgets)</onclick>
 					<onclick>Addon.OpenSettings(script.skin.helper.widgets)</onclick>
 				</control>
-				<control type="button" id="734">
+				<control type="button" id="732">
 					<description>Settings Skin Helper Service Skin Backup</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[44137]</label>
@@ -1090,9 +1074,9 @@
 					<onclick>Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
-					<param name="control_id1" value="735" />
-					<param name="control_id2" value="736" />
-					<param name="action" value="Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(lrclyrics_alternative_view)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favourites)|Skin.Reset(SkinHelper.ShowInfoAtPlaybackStart)|Skin.Reset(SkinHelper.AutoCloseVideoOSD)|Skin.Reset(SkinHelper.AutoCloseMusicOSD)|Skin.Reset(animated_posters)|Skin.Reset(animated_fanarts)|Skin.Reset(extra_posters)|Skin.Reset(extra_fanarts)|Skin.Reset(enable_pvr_thumbs)|Skin.Reset(enable_music_art)|Skin.Reset(enable_extended_art)|Skin.Reset(wall_backgrounds)|Skin.Reset(random_fanart_delay)" />
+					<param name="control_id1" value="733" />
+					<param name="control_id2" value="734" />
+					<param name="action" value="Skin.Reset(enable_globalsearch)|Skin.Reset(enable_watchitlater)|Skin.Reset(lrclyrics_alternative_view)|Skin.Reset(smartshortcuts_playlists)|Skin.Reset(smartshortcuts_favourites)|Skin.Reset(SkinHelper.ShowInfoAtPlaybackStart)|Skin.Reset(SkinHelper.AutoCloseVideoOSD)|Skin.Reset(SkinHelper.AutoCloseMusicOSD)|Skin.Reset(animated_posters)|Skin.Reset(animated_fanarts)|Skin.Reset(enable_pvr_thumbs)|Skin.Reset(enable_music_art)|Skin.Reset(enable_extended_art)|Skin.Reset(wall_backgrounds)|Skin.Reset(random_fanart_delay)" />
 				</include>
 			</control>
 			<control type="grouplist" id="800">

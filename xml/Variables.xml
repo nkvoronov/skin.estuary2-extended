@@ -1249,7 +1249,6 @@
 		<value>30</value>
 	</variable>
 	<variable name="AlbumsCountVar">
-		<value condition="Integer.IsLessOrEqual(Window(Home).Property(SkinHelper.ListItem.AlbumCount),1)">$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),(, $LOCALIZE[36918])]</value>
-		<value>$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),(, $LOCALIZE[36919])]</value>
+		<value>$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),($LOCALIZE[36919]: ,)]</value>
 	</variable>
 </includes>

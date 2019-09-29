@@ -252,28 +252,8 @@
 				<bottom>90</bottom>
 				<width>100%</width>
 				<texture border="21">dialogs/dialog-bg.png</texture>
-			</control>
-			<control type="label">
-				<left>840</left>
-				<top>60</top>
-				<aligny>center</aligny>
-				<height>24</height>
-				<right>60</right>
-				<align>right</align>
-				<font>font30_title</font>
-				<label>$INFO[Weather.Location]</label>
-				<animation effect="slide" end="-460,0" time="0" condition="Skin.HasSetting(hide_main_menu_with_widgets)">conditional</animation>
-			</control>
-			<control type="label">
-				<left>840</left>
-				<top>120</top>
-				<aligny>center</aligny>
-				<height>24</height>
-				<right>60</right>
-				<align>right</align>
-				<font>font14</font>
-				<label>$INFO[Weather.Conditions,, ∙ ]$INFO[Weather.Temperature]</label>
-				<animation effect="slide" end="-460,0" time="0" condition="Skin.HasSetting(hide_main_menu_with_widgets)">conditional</animation>
+				<animation effect="zoom" start="100,100" end="72.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">Conditional</animation>
+				<animation effect="zoom" start="100,100" end="92.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">Conditional</animation>
 			</control>
 			<control type="grouplist">
 				<top>50</top>
@@ -315,6 +295,39 @@
 					<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
 					<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
 				</include>
+				<control type="group">
+					<width>350</width>
+					<control type="label">
+						<top>10</top>
+						<aligny>center</aligny>
+						<height>24</height>
+						<align>right</align>
+						<font>font30_title</font>
+						<label>$INFO[Weather.Location]</label>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<top>80</top>
+						<aligny>center</aligny>
+						<height>24</height>
+						<align>right</align>
+						<font>font14</font>
+						<label>$INFO[Weather.Conditions,, ∙ ]$INFO[Weather.Temperature]</label>
+						<scroll>true</scroll>
+					</control>
+				</control>
+				<control type="group">
+					<width>450</width>
+					<control type="label">
+						<top>40</top>
+						<aligny>center</aligny>
+						<height>24</height>
+						<align>right</align>
+						<font>WeatherTemp</font>
+						<label>$INFO[Weather.Temperature]</label>
+						<visible>Skin.HasSetting(minimize_main_menu) | ![Control.HasFocus(9000) | ControlGroup(700).HasFocus]</visible>
+					</control>
+				</control>
 			</control>
 		</control>
 		<include content="Widget-WeatherDaily" condition="!String.IsEmpty(Weather.Plugin)">

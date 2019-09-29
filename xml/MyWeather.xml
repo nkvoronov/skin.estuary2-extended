@@ -2,23 +2,23 @@
 <window>
 	<defaultcontrol always="true">15100</defaultcontrol>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
-	<onload>SetProperty(fanarthometype,weather,home)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/weather.jpg,home)</onload>
+	<onload>SetProperty(fanarthometype,weather,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/weather.jpg,home)</onload>
 	<menucontrol>10000</menucontrol>
 	<controls>
-		<control type="button" id="200000">
+		<control type="button" id="20000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
 			<onclick>noop</onclick>
-			<visible allowhiddenfocus="true">Control.HasFocus(200000)</visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(20000)</visible>
 		</control>
-		<control type="button" id="200001">
+		<control type="button" id="20001">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
 			<onclick>noop</onclick>
-			<visible allowhiddenfocus="true">Control.HasFocus(200001)</visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
 		</control>
 		<control type="button" id="10000">
 			<include>HiddenObject</include>
@@ -47,13 +47,13 @@
 			<include>OpenClose_Right</include>
 			<itemgap>-160</itemgap>
 			<control type="group" id="567">
-				<description>Weather info</description>
+				<description>Weather Info</description>
 				<height>410</height>
 				<left>22</left>
 				<control type="image">
 					<left>2.5%</left>
 					<top>100</top>
-					<width>95%</width>
+					<width>94%</width>
 					<height>220</height>
 					<texture border="21">dialogs/dialog-bg.png</texture>
 				</control>
@@ -71,7 +71,7 @@
 				<control type="button" id="20">
 					<left>2.5%</left>
 					<top>100</top>
-					<width>95%</width>
+					<width>94%</width>
 					<height>220</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -83,32 +83,14 @@
 					<ondown>15100</ondown>
 					<font>font12</font>
 					<onclick>Weather.LocationNext</onclick>
-					<label></label>
-				</control>
-				<control type="label">
-					<right>100</right>
-					<top>194</top>
-					<aligny>center</aligny>
-					<height>24</height>
-					<width>500</width>
-					<align>right</align>
-					<font>WeatherTemp</font>
-					<label>$INFO[Weather.Temperature]</label>
-				</control>
-				<control type="label">
-					<right>340</right>
-					<top>174</top>
-					<align>right</align>
-					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I][CR]$INFO[Weather.Conditions]</label>
-					<font>font12</font>
-					<width>630</width>
+					<label />
 				</control>
 				<control type="grouplist">
 					<top>154</top>
 					<left>90</left>
-					<orientation>horizontal</orientation>
 					<align>left</align>
 					<itemgap>-65</itemgap>
+					<orientation>horizontal</orientation>
 					<include content="WeatherIcon">
 						<param name="label" value="Window(weather).Property(Current.Wind)" />
 						<param name="texture" value="icons/weather/wind.png" />
@@ -136,12 +118,41 @@
 					</include>
 					<include content="WeatherIcons">
 						<param name="left" value="0" />
-						<param name="top" value="-10" />
+						<param name="top" value="-5" />
 						<param name="width" value="130" />
 						<param name="height" value="130" />
 						<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
 						<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
 					</include>
+					<control type="group">
+						<width>350</width>
+						<control type="label">
+							<top>25</top>
+							<align>right</align>
+							<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
+							<font>font12</font>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<top>50</top>
+							<align>right</align>
+							<label>$INFO[Weather.Conditions]</label>
+							<font>font12</font>
+							<scroll>true</scroll>
+						</control>
+					</control>
+					<control type="group">
+						<width>350</width>
+						<control type="label">
+							<top>40</top>
+							<aligny>center</aligny>
+							<height>24</height>
+							<align>right</align>
+							<font>WeatherTemp</font>
+							<label>$INFO[Weather.Temperature]</label>
+							<scroll>true</scroll>
+						</control>
+					</control>
 				</control>
 			</control>
 			<include content="Widget-Weather">

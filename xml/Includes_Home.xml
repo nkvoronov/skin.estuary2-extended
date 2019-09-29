@@ -761,7 +761,7 @@
 				<include content="Widget-Common">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-				<itemlayout width="310" height="486">
+				<itemlayout width="310" height="486" condition="Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<left>68</left>
 						<top>10</top>
@@ -770,7 +770,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="486">
+				<focusedlayout width="310" height="486" condition="Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
@@ -783,6 +783,36 @@
 						</animation>
 						<include content="PosterLayout">
 							<param name="focused" value="true" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+						</include>
+					</control>
+				</focusedlayout>
+				<itemlayout width="310" height="486" condition="!Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<left>68</left>
+						<top>10</top>
+						<include content="PosterLayout">
+							<param name="img_height" value="95%" />
+							<param name="txt_label" value="false" />
+							<param name="img_fallback" value="$PARAM[img_fallback]" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="310" height="486" condition="!Skin.HasSetting(hide_widget_labels)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>68</left>
+						<top>10</top>
+						<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,130" />
+						</animation>
+						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
+						</animation>
+						<include content="PosterLayout">
+							<param name="focused" value="true" />
+							<param name="img_height" value="95%" />
+							<param name="txt_label" value="false" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 						</include>
 					</control>
