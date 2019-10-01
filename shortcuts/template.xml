@@ -3,6 +3,7 @@
 	<other include="submenus">
 		<property name="id" tag="mainmenuid" />
 		<property name="submenu" tag="property" attribute="name|submenuVisibility" />
+		<property name="submenu">none</property>
 		<property name="widget" tag="property" attribute="name|widget" />
 		<property name="widget">None</property>
 		<property name="widget_name" tag="property" attribute="name|widgetName" />

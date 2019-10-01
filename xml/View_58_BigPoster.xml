@@ -46,6 +46,9 @@
 								<param name="focused" value="true" />
 								<param name="width" value="493" />
 								<param name="height" value="663" />
+								<param name="cd_art_right" value="0" />
+								<param name="cd_art_size" value="300" />
+								<param name="cd_art_size_overlay" value="302" />
 							</include>
 						</control>
 					</focusedlayout>
@@ -102,8 +105,7 @@
 											<right>30</right>
 											<bottom>30</bottom>
 											<font>font12</font>
-											<label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
-											<textcolor>$VAR[MainColorVar]</textcolor>
+											<label>$VAR[PlotAndTagVar]</label>
 											<autoscroll>false</autoscroll>
 										</control>
 									</control>
@@ -177,7 +179,7 @@
 											<right>30</right>
 											<height>24</height>
 											<font>font12</font>
-											<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , • ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
+											<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , X ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
 										</control>
 										<control type="textbox">
 											<top>365</top>
@@ -185,8 +187,8 @@
 											<right>30</right>
 											<bottom>30</bottom>
 											<font>font12</font>
-											<label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot]</label>
-											<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+											<label>$VAR[PlotAndTagVar]</label>
+											<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										</control>
 									</control>
 									<control type="group">

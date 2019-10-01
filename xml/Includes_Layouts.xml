@@ -426,6 +426,11 @@
 		<param name="img_ratio">keep</param>
 		<param name="txt_height">19%</param>
 		<param name="txt_label">true</param>
+		<param name="cd_art_visible">false</param>
+		<param name="cd_art_bottom">25</param>
+		<param name="cd_art_right">10</param>
+		<param name="cd_art_size">170</param>
+		<param name="cd_art_size_overlay">172</param>
 		<definition>
 			<control type="group">
 				<description>Poster Layout</description>
@@ -717,6 +722,34 @@
 					<include>RatingCircle</include>
 					<visible>$PARAM[rating]</visible>
 					<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
+				</control>
+				<control type="group">
+					<bottom>$PARAM[cd_art_bottom]</bottom>
+					<right>$PARAM[cd_art_right]</right>
+					<visible>[!Skin.HasSetting(hide_disc_art_library) + !Window.IsVisible(Home)] | [!Skin.HasSetting(hide_disc_art_home) + Window.IsVisible(Home)]</visible>
+					<visible>$PARAM[focused] | $PARAM[cd_art_visible]</visible>
+					<visible>!String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
+					<visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
+					<animation effect="slide" start="0,50" end="0,0" time="300" tween="cubic" easing="out" reversible="false">Focus</animation>
+					<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
+					<animation effect="slide" end="10,0" time="0" condition="Control.IsVisible(51)">Conditional</animation>
+					<control type="image">
+						<right>0</right>
+						<bottom>0</bottom>
+						<width>$PARAM[cd_art_size_overlay]</width>
+						<height>$PARAM[cd_art_size_overlay]</height>
+						<texture background="true" colordiffuse="$VAR[MainColorVar]">overlays/circle-$PARAM[cd_art_size_overlay].png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>[!Skin.HasSetting(library_disc_art_overlay) + !Window.IsVisible(Home)] | [!Skin.HasSetting(home_disc_art_overlay) + Window.IsVisible(Home)]</visible>
+					</control>
+					<control type="image">
+						<right>1</right>
+						<bottom>1</bottom>
+						<width>$PARAM[cd_art_size]</width>
+						<height>$PARAM[cd_art_size]</height>
+						<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
 				</control>
 			</control>
 		</definition>
@@ -1380,6 +1413,9 @@
 						<param name="watched" value="false" />
 						<param name="img_height" value="100%" />
 						<param name="txt_label" value="false" />
+						<param name="cd_art_size" value="200" />
+						<param name="cd_art_size_overlay" value="202" />
+						<param name="cd_art_visible" value="true" />
 					</include>
 				</control>
 				<control type="group">
@@ -1411,7 +1447,37 @@
 					</include>
 				</control>
 				<control type="group">
-					<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+					<visible>Container.Content(games)</visible>
+					<include content="SquareLayout">
+						<param name="top" value="140" />
+						<param name="left" value="30" />
+						<param name="width" value="530" />
+						<param name="height" value="470" />
+						<param name="border" value="false" />
+						<param name="img_height" value="100%" />
+						<param name="img_ratio" value="keep" />
+						<param name="txt_label" value="false" />
+						<param name="img_fallback" value="DefaultAddonGame.png" />
+						<param name="img_source" value="$INFO[ListItem.FileNameAndPath,,.jpg]" />
+					</include>
+				</control>
+				<control type="group">
+					<visible>Container.Content(directors)</visible>
+					<include content="IconLayout">
+						<param name="top" value="140" />
+						<param name="left" value="30" />
+						<param name="width" value="530" />
+						<param name="height" value="470" />
+						<param name="border" value="false" />
+						<param name="img_height" value="100%" />
+						<param name="txt_ratio" value="keep" />
+						<param name="txt_label" value="false" />
+						<param name="img_fallback" value="DefaultDirector.png" />
+						<param name="img_source" value="http://localhost:52307/getthumb&title=$ESCINFO[Container.ListItem.Label,, imdb]" />
+					</include>
+				</control>
+				<control type="group">
+					<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(games) | Container.Content(directors)]</visible>
 					<include content="IconLayout">
 						<param name="top" value="140" />
 						<param name="left" value="30" />
@@ -1423,26 +1489,97 @@
 						<param name="txt_label" value="false" />
 					</include>
 				</control>
-				<control type="textbox" id="15500">
-					<left>30</left>
-					<top>640</top>
-					<width>525</width>
-					<bottom>117</bottom>
-					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-					<label>$VAR[ListBoxInfoVar]</label>
+				<control type="group">
 					<visible>!Container.Content() | !String.IsEmpty(ListItem.Plot)</visible>
+					<visible>!ListItem.IsCollection</visible>
+					<left>30</left>
+					<control type="textbox" id="15500">
+						<top>640</top>
+						<width>535</width>
+						<bottom>112</bottom>
+						<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist)</visible>
+						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					<control type="textbox" id="15500">
+						<top>640</top>
+						<width>535</width>
+						<bottom>120</bottom>
+						<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist)</visible>
+						<visible>String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					<control type="textbox" id="15501">
+						<top>495</top>
+						<width>535</width>
+						<bottom>130</bottom>
+						<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					<control type="textbox" id="15501">
+						<top>495</top>
+						<width>535</width>
+						<bottom>80</bottom>
+						<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+						<visible>String.IsEqual(Skin.Font, Arial)</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<bottom>80</bottom>
+						<width>537</width>
+						<height>25</height>
+						<align>center</align>
+						<label>$INFO[ListItem.Genre]</label>
+						<font>font12</font>
+						<scroll>true</scroll>
+						<textcolor>$VAR[MainColorVar]</textcolor>
+						<visible>String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)</visible>
+					</control>
 				</control>
 				<control type="group">
-					<left>20</left>
-					<top>640</top>
-					<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
-					<include content="InfoList">
-						<param name="bottom" value="100" />
-						<param name="width" value="540" />
-						<param name="sortby" value="year" />
-						<param name="sortorder" value="ascending" />
-						<param name="font" value="font13" />
-					</include>
+					<visible>ListItem.IsCollection</visible>
+					<control type="group">
+						<left>20</left>
+						<top>640</top>
+						<visible>!String.IsEmpty(ListItem.Plot)</visible>
+						<include content="InfoList">
+							<param name="bottom" value="100" />
+							<param name="width" value="540" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="ascending" />
+							<param name="list_id" value="5830" />
+						</include>
+					</control>
+					<control type="group">
+						<left>30</left>
+						<bottom>150</bottom>
+						<height>270</height>
+						<visible>String.IsEmpty(ListItem.Plot)</visible>
+						<include content="InfoListPics">
+							<param name="width" value="516" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="ascending" />
+							<param name="list_id" value="6130" />
+							<param name="slide" value="true" />
+						</include>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<bottom>80</bottom>
+						<width>537</width>
+						<height>25</height>
+						<align>center</align>
+						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
+						<font>font12</font>
+						<textcolor>$VAR[MainColorVar]</textcolor>
+						<scroll>true</scroll>
+					</control>
 				</control>
 				<control type="group">
 					<visible>!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)</visible>
@@ -1667,6 +1804,7 @@
 					<param name="height" value="448" />
 					<param name="img_height" value="97%" />
 					<param name="txt_label" value="false" />
+					<param name="cd_art_visible" value="true" />
 				</include>
 			</control>
 			<control type="image">
@@ -1680,38 +1818,6 @@
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
-			<control type="label">
-				<top>10</top>
-				<left>429</left>
-				<right>10</right>
-				<width>640</width>
-				<height>365</height>
-				<font>font13_title</font>
-				<label>$INFO[ListItem.Label]</label>
-				<visible>ListItem.IsCollection</visible>
-			</control>
-			<control type="textbox">
-				<top>10</top>
-				<left>429</left>
-				<right>10</right>
-				<width>640</width>
-				<height>338</height>
-				<font>font12</font>
-				<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][/COLOR]$INFO[ListItem.Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>!ListItem.IsCollection + String.IsEqual(ListItem.DBType,tvshow)</visible>
-			</control>
-			<control type="textbox">
-				<top>10</top>
-				<left>429</left>
-				<right>10</right>
-				<width>640</width>
-				<height>365</height>
-				<font>font12</font>
-				<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][/COLOR]$INFO[ListItem.Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>!ListItem.IsCollection + !String.IsEqual(ListItem.DBType,tvshow)</visible>
-			</control>
 			<control type="textbox">
 				<top>10</top>
 				<left>429</left>
@@ -1724,40 +1830,100 @@
 				<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="group">
-				<top>60</top>
-				<left>429</left>
+				<visible>!ListItem.IsCollection</visible>
+				<control type="textbox">
+					<top>10</top>
+					<left>429</left>
+					<right>10</right>
+					<width>640</width>
+					<height>338</height>
+					<font>font12</font>
+					<label>$VAR[PlotAndTagVar]</label>
+					<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+					<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
+				</control>
+				<control type="textbox">
+					<top>10</top>
+					<left>429</left>
+					<right>10</right>
+					<width>640</width>
+					<height>365</height>
+					<font>font12</font>
+					<label>$VAR[PlotAndTagVar]</label>
+					<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+					<visible>!String.IsEqual(ListItem.DBType,tvshow)</visible>
+				</control>
+				<control type="label">
+					<bottom>40</bottom>
+					<left>429</left>
+					<right>10</right>
+					<width>640</width>
+					<height>30</height>
+					<scroll>true</scroll>
+					<font>font12</font>
+					<label>$VAR[ListItemStatusLabelVar]</label>
+					<visible>!String.IsEmpty(ListItem.Status)</visible>
+				</control>
+				<control type="label">
+					<bottom>11</bottom>
+					<left>429</left>
+					<right>10</right>
+					<width>640</width>
+					<height>30</height>
+					<scroll>true</scroll>
+					<font>font12</font>
+					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>$INFO[ListItem.Genre]</label>
+				</control>
+			</control>
+			<control type="group">
 				<visible>ListItem.IsCollection</visible>
-				<include content="InfoList">
-					<param name="height" value="305" />
-					<param name="width" value="640" />
-					<param name="item_width" value="640" />
-					<param name="sortby" value="year" />
-					<param name="sortorder" value="descending" />
-					<param name="font" value="font12" />
-					<param name="list_id" value="5600" />
-				</include>
-			</control>
-			<control type="label">
-				<bottom>40</bottom>
-				<left>429</left>
-				<right>10</right>
-				<width>640</width>
-				<height>30</height>
-				<scroll>true</scroll>
-				<font>font12</font>
-				<label>$VAR[ListItemStatusLabelVar]</label>
-				<visible>!String.IsEmpty(ListItem.Status)</visible>
-			</control>
-			<control type="label">
-				<bottom>11</bottom>
-				<left>429</left>
-				<right>10</right>
-				<width>640</width>
-				<height>30</height>
-				<scroll>true</scroll>
-				<font>font12</font>
-				<textcolor>$VAR[MainColorVar]</textcolor>
-				<label>$INFO[ListItem.Genre]</label>
+				<control type="label">
+					<top>10</top>
+					<left>429</left>
+					<right>10</right>
+					<width>640</width>
+					<height>365</height>
+					<font>font13_title</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="group">
+					<top>60</top>
+					<left>429</left>
+					<visible>!Skin.HasSetting(hide_collections_text)</visible>
+					<include content="InfoList">
+						<param name="height" value="305" />
+						<param name="width" value="640" />
+						<param name="item_width" value="640" />
+						<param name="sortby" value="year" />
+						<param name="sortorder" value="ascending" />
+						<param name="font" value="font12" />
+						<param name="list_id" value="5600" />
+					</include>
+				</control>
+				<control type="group">
+					<top>65</top>
+					<left>425</left>
+					<visible>Skin.HasSetting(hide_collections_text)</visible>
+					<include content="InfoListPics">
+						<param name="bottom" value="0" />
+						<param name="width" value="650" />
+						<param name="sortby" value="year" />
+						<param name="sortorder" value="ascending" />
+						<param name="list_id" value="6100" />
+					</include>
+				</control>
+				<control type="label">
+					<bottom>11</bottom>
+					<left>429</left>
+					<right>10</right>
+					<width>640</width>
+					<height>30</height>
+					<scroll>true</scroll>
+					<font>font12</font>
+					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
+				</control>
 			</control>
 		</control>
 	</include>

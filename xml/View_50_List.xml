@@ -41,6 +41,9 @@
 						<param name="watched" value="false" />
 						<param name="img_height" value="97%" />
 						<param name="txt_label" value="false" />
+						<param name="cd_art_visible" value="true" />
+						<param name="cd_art_size" value="300" />
+						<param name="cd_art_size_overlay" value="302" />
 					</include>
 				</control>
 			</control>

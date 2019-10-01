@@ -44,44 +44,171 @@
 					<control type="textbox">
 						<top>120</top>
 						<left>30</left>
-						<width>550</width>
+						<width>537</width>
 						<aligny>center</aligny>
+						<align>center</align>
 						<height>110</height>
 						<font>font36_title</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[TitleAndYearVar]</label>
 					</control>
-					<control type="textbox">
+					<control type="image">
+						<depth>DepthContentPopout</depth>
 						<left>30</left>
-						<top>240</top>
-						<width>525</width>
-						<bottom>100</bottom>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Genre,,[CR][CR]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][/COLOR]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						<bottom>110</bottom>
+						<width max="537">auto</width>
+						<height>99</height>
+						<aspectratio align="bottom" aligny="center">keep</aspectratio>
+						<texture background="true">$VAR[LibraryBannerVar]</texture>
+						<bordertexture>colors/white.png</bordertexture>
+						<bordersize>1</bordersize>
+						<visible>!ListItem.IsParentFolder</visible>
 					</control>
-					<control type="textbox">
-						<left>30</left>
-						<top>360</top>
-						<width>530</width>
-						<height>413</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font27</font>
-						<textcolor>80FFFFFF</textcolor>
-						<label>$LOCALIZE[19055]</label>
-						<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
+					<control type="group">
+						<visible>!ListItem.IsCollection</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="textbox">
+							<left>30</left>
+							<top>240</top>
+							<width>537</width>
+							<bottom>100</bottom>
+							<label>$VAR[PlotAndTagVar][CR][CR]</label>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>[String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+						</control>
+						<control type="textbox">
+							<left>30</left>
+							<top>240</top>
+							<width>537</width>
+							<bottom>225</bottom>
+							<label>$VAR[PlotAndTagVar][CR][CR]</label>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+						</control>
+						<control type="textbox">
+							<left>30</left>
+							<top>240</top>
+							<width>537</width>
+							<bottom>116</bottom>
+							<label>$VAR[PlotAndTagVar][CR][CR]</label>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>[String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+							<visible>String.IsEqual(Skin.Font, Arial)</visible>
+						</control>
+						<control type="textbox">
+							<left>30</left>
+							<top>240</top>
+							<width>537</width>
+							<bottom>240</bottom>
+							<label>$VAR[PlotAndTagVar][CR][CR]</label>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))+ String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+							<visible>String.IsEqual(Skin.Font, Arial)</visible>
+						</control>
+						<control type="textbox">
+							<left>30</left>
+							<top>401</top>
+							<width>537</width>
+							<height>372</height>
+							<label>$LOCALIZE[19055]</label>
+							<visible>String.IsEmpty(ListItem.Plot) + String.IsEmpty(ListItem.Tagline)</visible>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<bottom>80</bottom>
+							<width>537</width>
+							<height>25</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Genre]</label>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorVar]</textcolor>
+							<scroll>true</scroll>
+						</control>
 					</control>
 					<control type="group">
 						<left>20</left>
-						<top>245</top>
-						<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
-						<include content="InfoList">
-							<param name="bottom" value="108" />
-							<param name="width" value="540" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="ascending" />
-							<param name="font" value="font13" />
-						</include>
+						<top>240</top>
+						<visible>ListItem.IsCollection</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="textbox">
+							<left>10</left>
+							<top>0</top>
+							<width>537</width>
+							<bottom>462</bottom>
+							<label>$VAR[SetNumberVar]$INFO[ListItem.Plot][CR][CR]</label>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="textbox">
+							<left>10</left>
+							<top>0</top>
+							<width>537</width>
+							<bottom>462</bottom>
+							<label>$VAR[SetNumberVar]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][CR][CR]</label>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="textbox">
+							<left>10</left>
+							<top>0</top>
+							<width>537</width>
+							<bottom>457</bottom>
+							<label>$VAR[SetNumberVar]$INFO[ListItem.Plot][CR][CR]</label>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="textbox">
+							<left>10</left>
+							<top>0</top>
+							<width>537</width>
+							<bottom>457</bottom>
+							<label>$VAR[SetNumberVar]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][CR][CR]</label>
+							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="textbox">
+							<left>10</left>
+							<top>41</top>
+							<width>537</width>
+							<bottom>341</bottom>
+							<label>$LOCALIZE[19055]</label>
+							<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="group">
+							<left>10</left>
+							<bottom>160</bottom>
+							<height>260</height>
+							<visible>!Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoList">
+								<param name="width" value="540" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+							</include>
+						</control>
+						<control type="group">
+							<left>20</left>
+							<bottom>150</bottom>
+							<height>270</height>
+							<visible>Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoListPics">
+								<param name="width" value="516" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="slide" value="true" />
+							</include>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<bottom>80</bottom>
+							<width>537</width>
+							<height>25</height>
+							<align>center</align>
+							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorVar]</textcolor>
+							<scroll>true</scroll>
+						</control>
 					</control>
 				</control>
 			</control>
@@ -92,12 +219,24 @@
 				<param name="info_visible" value="true" />
 			</include>
 			<control type="group">
+				<centerleft>50%</centerleft>
+				<control type="image">
+					<top>0</top>
+					<height>140</height>
+					<texture>$VAR[LibraryClearLogoVar]</texture>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+					<visible>!Skin.HasSetting(hide_logo_library)</visible>
+					<visible>![Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]</visible>
+					<visible>!ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+				</control>
+			</control>
+			<control type="group">
 				<depth>DepthBars</depth>
 				<bottom>0</bottom>
 				<height>70</height>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<include condition="!Skin.HasSetting(hide_mediaflags_video)">MediaFlags</include>
+				<include condition="!Skin.HasSetting(hide_mediaflags_library)">MediaFlags</include>
 			</control>
 			<include>CommonScrollbars</include>
 			<include>MediaMenuMouseOverlay</include>

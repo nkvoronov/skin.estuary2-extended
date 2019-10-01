@@ -475,4 +475,8 @@
 			<ondown>20001</ondown>
 		</control>
 	</include>
+	<include name="skinshortcuts-group-none">
+		<item id="0">
+		</item>
+	</include>
 </includes>

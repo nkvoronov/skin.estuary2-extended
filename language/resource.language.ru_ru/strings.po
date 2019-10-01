@@ -1071,8 +1071,8 @@ msgid "Show In Main Menu"
 msgstr "Показывать в главном меню"
 
 msgctxt "#44140"
-msgid "Show In Video Library"
-msgstr "Показывать в видео библиотеке"
+msgid "Show In Library"
+msgstr "Показывать в библиотеке"
 
 msgctxt "#44141"
 msgid "Show In Global Search"
@@ -1097,10 +1097,6 @@ msgstr "Цвет экрана"
 msgctxt "#44146"
 msgid "Color Dialogs"
 msgstr "Цвет диалоговых окон"
-
-msgctxt "#44147"
-msgid "Color Images"
-msgstr "Цвет картинок"
 
 msgctxt "#44148"
 msgid "Color Text"
@@ -1225,3 +1221,15 @@ msgstr "Отображать название медиа вместе с наз�
 msgctxt "#40318"
 msgid "Show smaller icons for 'Categories' widgets"
 msgstr "Отображать маленькие иконки для виджета 'Категории'"
+
+msgctxt "#40319"
+msgid "Disk Art"
+msgstr "Изображение диска"
+
+msgctxt "#40320"
+msgid "Show colored outline"
+msgstr "Отображать цветные контуры"
+
+msgctxt "#40321"
+msgid "List Movies In Set as Text"
+msgstr "Список фильмов в коллекции как текст"

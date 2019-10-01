@@ -1261,7 +1261,7 @@ msgid "Show In Main Menu"
 msgstr ""
 
 msgctxt "#44140"
-msgid "Show In Video Library"
+msgid "Show In Library"
 msgstr ""
 
 msgctxt "#44141"
@@ -1286,10 +1286,6 @@ msgstr ""
 
 msgctxt "#44146"
 msgid "Color Dialogs"
-msgstr ""
-
-msgctxt "#44147"
-msgid "Color Images"
 msgstr ""
 
 msgctxt "#44148"
@@ -1414,5 +1410,17 @@ msgstr ""
 
 msgctxt "#40318"
 msgid "Show smaller icons for 'Categories' widgets"
+msgstr ""
+
+msgctxt "#40319"
+msgid "Disk Art"
+msgstr ""
+
+msgctxt "#40320"
+msgid "Show colored outline"
+msgstr ""
+
+msgctxt "#40321"
+msgid "List Movies In Set as Text"
 msgstr ""
 

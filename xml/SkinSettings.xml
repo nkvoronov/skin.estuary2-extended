@@ -89,11 +89,11 @@
 					<selected>!Skin.HasSetting(hide_mediaflags_home)</selected>
 				</control>
 				<control type="radiobutton" id="111">
-					<description>Hide Mediaflags Video Library</description>
+					<description>Hide Mediaflags Library</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44140]</label>
-					<onclick>Skin.ToggleSetting(hide_mediaflags_video)</onclick>
-					<selected>!Skin.HasSetting(hide_mediaflags_video)</selected>
+					<onclick>Skin.ToggleSetting(hide_mediaflags_library)</onclick>
+					<selected>!Skin.HasSetting(hide_mediaflags_library)</selected>
 				</control>
 				<control type="radiobutton" id="112">
 					<description>Hide Mediaflags Global Search</description>
@@ -109,49 +109,18 @@
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
 				<control type="label" id="114">
-					<description>Logo label</description>
-					<include>DefaultSettingLabel</include>
-					<label>$LOCALIZE[44138]</label>
-				</control>
-				<control type="radiobutton" id="115">
-					<description>Hide Logo Home</description>
-					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[44139]</label>
-					<onclick>Skin.ToggleSetting(hide_logo_home)</onclick>
-					<selected>!Skin.HasSetting(hide_logo_home)</selected>
-				</control>
-				<control type="radiobutton" id="116">
-					<description>Hide Logo Play</description>
-					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[44142]</label>
-					<onclick>Skin.ToggleSetting(hide_logo_play)</onclick>
-					<selected>!Skin.HasSetting(hide_logo_play)</selected>
-				</control>
-				<control type="radiobutton" id="117">
-					<description>Hide Logo Info</description>
-					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[44143]</label>
-					<onclick>Skin.ToggleSetting(hide_logo_info)</onclick>
-					<selected>!Skin.HasSetting(hide_logo_info)</selected>
-				</control>
-				<control type="image" id="118">
-					<description>Separator Image</description>
-					<height>3</height>
-					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
-				</control>
-				<control type="label" id="119">
 					<description>Splash Screen label</description>
 					<include>DefaultSettingLabel</include>
 					<label>$LOCALIZE[512]</label>
 				</control>
-				<control type="radiobutton" id="120">
+				<control type="radiobutton" id="115">
 					<description>Enable Splash Screen (photo, video or music)</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43003]</label>
 					<onclick>Skin.ToggleSetting(enable_splashscreen)</onclick>
 					<selected>Skin.HasSetting(enable_splashscreen)</selected>
 				</control>
-				<control type="button" id="121">
+				<control type="button" id="116">
 					<description>Startup SplashScreen Path</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[43004]</label>
@@ -159,7 +128,7 @@
 					<onclick>Skin.SetFile(splashscreen_path)</onclick>
 					<enable>Skin.HasSetting(enable_splashscreen)</enable>
 				</control>
-				<control type="button" id="122">
+				<control type="button" id="117">
 					<description>Duration Splash Screen</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[43005]</label>
@@ -169,9 +138,9 @@
 					<enable>Skin.HasSetting(enable_splashscreen)</enable>
 				</control>
 				<include content="ResetSkinSettingsParams">
-					<param name="control_id1" value="123" />
-					<param name="control_id2" value="124" />
-					<param name="action" value="Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_time)|Skin.Reset(show_weatherinfo)|Skin.SetBool(circle_rating)|Skin.Reset(circle_userrating)|Skin.Reset(circle_none)|Skin.SetBool(show_profilename)|Skin.Reset(show_profileavatar)|Skin.Reset(show_none)|Skin.Reset(hide_mediaflags_home)|Skin.Reset(hide_mediaflags_video)|Skin.Reset(hide_mediaflags_search)|Skin.Reset(hide_logo_home)|Skin.Reset(hide_logo_play)|Skin.Reset(hide_logo_info)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)" />
+					<param name="control_id1" value="118" />
+					<param name="control_id2" value="119" />
+					<param name="action" value="Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_time)|Skin.Reset(show_weatherinfo)|Skin.SetBool(circle_rating)|Skin.Reset(circle_userrating)|Skin.Reset(circle_none)|Skin.SetBool(show_profilename)|Skin.Reset(show_profileavatar)|Skin.Reset(show_none)|Skin.Reset(hide_mediaflags_home)|Skin.Reset(hide_mediaflags_library)|Skin.Reset(hide_mediaflags_search)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)" />
 				</include>
 			</control>
 			<control type="grouplist" id="200">
@@ -345,7 +314,104 @@
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="radiobutton" id="225">
+				<control type="label" id="225">
+					<description>Logo Label</description>
+					<include>DefaultSettingLabel</include>
+					<label>$LOCALIZE[44138]</label>
+				</control>
+				<control type="radiobutton" id="226">
+					<description>Hide Logo Home</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44139]</label>
+					<onclick>Skin.ToggleSetting(hide_logo_home)</onclick>
+					<selected>!Skin.HasSetting(hide_logo_home)</selected>
+				</control>
+				<control type="radiobutton" id="227">
+					<description>Hide Logo Play</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44142]</label>
+					<onclick>Skin.ToggleSetting(hide_logo_play)</onclick>
+					<selected>!Skin.HasSetting(hide_logo_play)</selected>
+				</control>
+				<control type="radiobutton" id="228">
+					<description>Hide Logo Info</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44143]</label>
+					<onclick>Skin.ToggleSetting(hide_logo_info)</onclick>
+					<selected>!Skin.HasSetting(hide_logo_info)</selected>
+				</control>
+				<control type="radiobutton" id="229">
+					<description>Hide Logo Library</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44140]</label>
+					<onclick>Skin.ToggleSetting(hide_logo_library)</onclick>
+					<selected>!Skin.HasSetting(hide_logo_library)</selected>
+				</control>
+				<control type="radiobutton" id="230">
+					<description>Hide Logo Global Search</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44141]</label>
+					<onclick>Skin.ToggleSetting(hide_logo_search)</onclick>
+					<selected>!Skin.HasSetting(hide_logo_search)</selected>
+				</control>
+				<control type="image" id="231">
+					<description>Separator Image</description>
+					<height>3</height>
+					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+				</control>
+				<control type="label" id="232">
+					<description>Disc Art Label</description>
+					<include>DefaultSettingLabel</include>
+					<label>$LOCALIZE[40319]</label>
+				</control>
+				<control type="radiobutton" id="233">
+					<description>Hide Disc Art Home</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44139]</label>
+					<onclick>Skin.ToggleSetting(hide_disc_art_home)</onclick>
+					<selected>!Skin.HasSetting(hide_disc_art_home)</selected>
+				</control>
+				<control type="radiobutton" id="234">
+					<description>Disc Art Home Overlay</description>
+					<include>DefaultSettingButton</include>
+					<label>- $LOCALIZE[40320]</label>
+					<onclick>Skin.ToggleSetting(home_disc_art_overlay)</onclick>
+					<selected>!Skin.HasSetting(home_disc_art_overlay)</selected>
+					<visible>!Skin.HasSetting(hide_disc_art_home)</visible>
+				</control>
+				<control type="radiobutton" id="235">
+					<description>Hide Disc Art Library</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44140]</label>
+					<onclick>Skin.ToggleSetting(hide_disc_art_library)</onclick>
+					<selected>!Skin.HasSetting(hide_disc_art_library)</selected>
+				</control>
+				<control type="radiobutton" id="236">
+					<description>Disc Art Library Overlay</description>
+					<include>DefaultSettingButton</include>
+					<label>- $LOCALIZE[40320]</label>
+					<onclick>Skin.ToggleSetting(library_disc_art_overlay)</onclick>
+					<selected>!Skin.HasSetting(library_disc_art_overlay)</selected>
+					<visible>!Skin.HasSetting(hide_disc_art_library)</visible>
+				</control>
+				<control type="image" id="237">
+					<description>Separator Image</description>
+					<height>3</height>
+					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+				</control>
+				<control type="radiobutton" id="238">
+					<description>Std List Set</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[40321]</label>
+					<onclick>Skin.ToggleSetting(hide_collections_text)</onclick>
+					<selected>!Skin.HasSetting(hide_collections_text)</selected>
+				</control>
+				<control type="image" id="240">
+					<description>Separator Image</description>
+					<height>3</height>
+					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+				</control>
+				<control type="radiobutton" id="241">
 					<description>Skin Toggle Debug</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43019]</label>
@@ -354,9 +420,9 @@
 					<onclick>Skin.ToggleDebug</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
-					<param name="control_id1" value="226" />
-					<param name="control_id2" value="227" />
-					<param name="action" value="Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(hide_widget_labels)|Skin.Reset(use_smaller_categories)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(custom_focus)|Skin.Reset(enable_skin_debug)" />
+					<param name="control_id1" value="243" />
+					<param name="control_id2" value="244" />
+					<param name="action" value="Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(hide_widget_labels)|Skin.Reset(use_smaller_categories)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(custom_focus)|Skin.Reset(hide_logo_home)|Skin.Reset(hide_logo_play)|Skin.Reset(hide_logo_info)|Skin.Reset(hide_logo_library)|Skin.Reset(hide_logo_search)|Skin.Reset(hide_disc_art_home)|Skin.Reset(home_disc_art_overlay)|Skin.Reset(hide_disc_art_library)|Skin.Reset(library_disc_art_overlay)|Skin.Reset(hide_collections_text)|Skin.Reset(enable_skin_debug)" />
 				</include>
 			</control>
 			<control type="grouplist" id="300">

@@ -78,7 +78,7 @@
 				<control type="image">
 					<width>300</width>
 					<height>140</height>
-					<texture>$VAR[ListItemClearLogoVar]</texture>
+					<texture>$VAR[ViewClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<visible>!Skin.HasSetting(hide_logo_info)</visible>
 				</control>
@@ -260,7 +260,7 @@
 					<height>283</height>
 					<fadetime>150</fadetime>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[BannerVar]</texture>
+					<texture>$VAR[LibraryBannerVar]</texture>
 					<visible>Integer.IsEqual(Container(50).NumItems,0)</visible>
 				</control>
 				<control type="panel" id="50">

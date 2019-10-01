@@ -159,12 +159,13 @@
 		<param name="orientation">vertical</param>
 		<param name="visible">true</param>
 		<definition>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="list" id="$PARAM[list_id]">
 				<top>0</top>
 				<width>$PARAM[width]</width>
 				<bottom>$PARAM[bottom]</bottom>
 				<orientation>$PARAM[orientation]</orientation>
 				<visible>$PARAM[visible]</visible>
+				<autoscroll time="1500">true</autoscroll>
 				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
 					<control type="label">
 						<left>10</left>
@@ -185,6 +186,60 @@
 						<label>$PARAM[item_label]</label>
 						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						<font>$PARAM[font]</font>
+					</control>
+				</itemlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
+			</control>
+		</definition>
+	</include>
+	<include name="InfoListPics">
+		<param name="img_source">$INFO[ListItem.Art(poster)]</param>
+		<param name="img_fallback">DefaultVideoCover.png</param>
+		<param name="path">$VAR[InfoListPathVar]</param>
+		<param name="item_height">170</param>
+		<param name="item_width">129</param>
+		<param name="bottom">100</param>
+		<param name="width">516</param>
+		<param name="list_id">6000</param>
+		<param name="sortby"></param>
+		<param name="sortorder">ascending</param>
+		<param name="orientation">horizontal</param>
+		<param name="slide">false</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="list" id="$PARAM[list_id]">
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<bottom>$PARAM[bottom]</bottom>
+				<orientation>$PARAM[orientation]</orientation>
+				<visible>$PARAM[visible]</visible>
+				<autoscroll time="1500">true</autoscroll>
+				<itemgap>5</itemgap>
+				<animation effect="slide" end="193.5,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,1) + $PARAM[slide]">conditional</animation>
+				<animation effect="slide" end="129,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,2) + $PARAM[slide]">conditional</animation>
+				<animation effect="slide" end="64.5,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,3) + $PARAM[slide]">conditional</animation>
+				<focusedlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
+					<control type="image">
+						<left>5</left>
+						<top>0</top>
+						<right>5</right>
+						<bottom>0</bottom>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
+						<bordertexture>colors/white.png</bordertexture>
+						<bordersize>1</bordersize>
+					</control>
+				</focusedlayout>
+				<itemlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
+					<control type="image">
+						<left>5</left>
+						<top>0</top>
+						<right>5</right>
+						<bottom>0</bottom>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
+						<bordertexture>colors/white.png</bordertexture>
+						<bordersize>1</bordersize>
 					</control>
 				</itemlayout>
 				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
@@ -385,7 +440,7 @@
 				<include content="InfoList">
 					<param name="width" value="1" />
 					<param name="item_height" value="1" />
-					<param name="list_id" value="5800" />
+					<param name="list_id" value="5700" />
 				</include>
 				<control type="group">
 					<top>10</top>
@@ -393,7 +448,7 @@
 					<include content="InfoFlag">
 						<param name="visible" value="$PARAM[infolabel_prefix]ListItem.IsCollection" />
 						<param name="icon" value="overlays/set.png" />
-						<param name="label" value="$INFO[Container(5800).NumItems]" />
+						<param name="label" value="$INFO[Container(5700).NumItems]" />
 					</include>
 				</control>
 			</control>

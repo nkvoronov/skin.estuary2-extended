@@ -48,7 +48,7 @@
 					<left>-150</left>
 					<top>0</top>
 					<width>111%</width>
-					<height>695</height>
+					<height>710</height>
 					<focusposition>1</focusposition>
 					<movement>0</movement>
 					<pagecontrol>5199</pagecontrol>
@@ -97,6 +97,16 @@
 								<param name="txt_label" value="false" />
 							</include>
 						</control>
+						<control type="image">
+							<left>20</left>
+							<top>605</top>
+							<width>330</width>
+							<height>100</height>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture>$VAR[ViewClearLogoVar]</texture>
+							<visible>!ListItem.IsParentFolder</visible>
+							<visible>!Skin.HasSetting(hide_logo_library)</visible>
+						</control>
 						<control type="textbox">
 							<left>20</left>
 							<top>603</top>
@@ -105,6 +115,19 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
+							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+							<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo)) + !Skin.HasSetting(hide_logo_library)</visible>
+						</control>
+						<control type="textbox">
+							<left>20</left>
+							<top>603</top>
+							<width>330</width>
+							<height>105</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+							<visible>Skin.HasSetting(hide_logo_library)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="370">
@@ -147,6 +170,16 @@
 								<param name="txt_label" value="false" />
 							</include>
 						</control>
+						<control type="image">
+							<left>20</left>
+							<top>605</top>
+							<width>330</width>
+							<height>100</height>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture>$VAR[ViewClearLogoVar]</texture>
+							<visible>!ListItem.IsParentFolder</visible>
+							<visible>!Skin.HasSetting(hide_logo_library)</visible>
+						</control>
 						<control type="textbox">
 							<left>20</left>
 							<top>603</top>
@@ -155,6 +188,19 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
+							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+							<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo)) + String.IsEmpty(ListItem.Art(clearlogo)) + !Skin.HasSetting(hide_logo_library)</visible>
+						</control>
+						<control type="textbox">
+							<left>20</left>
+							<top>603</top>
+							<width>330</width>
+							<height>105</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+							<visible>Skin.HasSetting(hide_logo_library)</visible>
 						</control>
 					</focusedlayout>
 				</control>
@@ -178,35 +224,35 @@
 						<param name="textbox_content" value="$VAR[ShiftRightTextBoxVar]" />
 					</include>
 				</control>
-				<control type="panel">
-					<left>20</left>
-					<top>48</top>
-					<width>1880</width>
-					<height>180</height>
-					<orientation>horizontal</orientation>
+				<control type="group">
 					<visible>ListItem.IsCollection</visible>
-					<animation effect="fade" time="200">VisibleChange</animation>
-					<focusedlayout height="40" width="940">
-						<control type="label">
-							<textoffsetx>10</textoffsetx>
-							<height>40</height>
-							<width>940</width>
-							<aligny>center</aligny>
-							<label>$VAR[ListItemYearLabel2Var]$INFO[ListItem.Title]</label>
-							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-						</control>
-					</focusedlayout>
-					<itemlayout height="40" width="940">
-						<control type="label">
-							<textoffsetx>10</textoffsetx>
-							<height>40</height>
-							<width>940</width>
-							<aligny>center</aligny>
-							<label>$VAR[ListItemYearLabel2Var]$INFO[ListItem.Title]</label>
-							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
-						</control>
-					</itemlayout>
-					<content sortby="year" sortorder="ascending">$VAR[InfoListPathVar]</content>
+					<visible>!ListItem.IsParentFolder</visible>
+					<control type="group">
+						<left>20</left>
+						<top>45</top>
+						<height>170</height>
+						<visible>!Skin.HasSetting(hide_collections_text)</visible>
+						<include content="InfoList">
+							<param name="bottom" value="0" />
+							<param name="width" value="903" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="ascending" />
+							<param name="list_id" value="5810" />
+						</include>
+					</control>
+					<control type="group">
+						<left>20</left>
+						<top>45</top>
+						<height>245</height>
+						<visible>Skin.HasSetting(hide_collections_text)</visible>
+						<include content="InfoListPics">
+							<param name="bottom" value="0" />
+							<param name="width" value="903" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="ascending" />
+							<param name="list_id" value="6110" />
+						</include>
+					</control>
 				</control>
 			</control>
 		</control>
@@ -219,9 +265,21 @@
 				<left>30</left>
 				<top>45</top>
 				<right>30</right>
-				<height>163</height>
+				<height>168</height>
 				<label>$PARAM[textbox_content]</label>
 				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+			</control>
+			<control type="textbox" id="$PARAM[textbox_id]">
+				<left>30</left>
+				<top>45</top>
+				<right>30</right>
+				<height>165</height>
+				<label>$PARAM[textbox_content]</label>
+				<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+				<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>String.IsEqual(Skin.Font, Arial)</visible>
 			</control>
 		</control>
 	</include>

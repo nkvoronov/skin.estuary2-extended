@@ -389,11 +389,11 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<centerleft>50%</centerleft>
-				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+				<visible>!Window.IsVisible(extendedprogressdialog) + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 				<control type="image">
 					<top>0</top>
 					<height>140</height>
-					<texture>$VAR[ContainerClearLogoVar]</texture>
+					<texture>$VAR[HomeClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<visible>!Skin.HasSetting(hide_logo_home) + ControlGroup(2000).HasFocus</visible>
 				</control>

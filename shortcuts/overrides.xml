@@ -13,6 +13,8 @@
 	<override action="dialog.close(all,true)">
 		<action>System.LogOff</action>
 	</override>
+	<groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</groupoverride>
+	<groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</groupoverride>
 	<backgrounddefault labelID="weather">special://skin/extras/home-images/weather.jpg</backgrounddefault>
 	<backgrounddefault labelID="pictures">special://skin/extras/home-images/pictures.jpg</backgrounddefault>
 	<backgrounddefault labelID="livetv">special://skin/extras/home-images/livetv.jpg</backgrounddefault>

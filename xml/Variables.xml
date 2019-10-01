@@ -144,6 +144,12 @@
 		<value condition="String.IsEmpty(ListItem.Icon) + Container.Content(albums)">DefaultMusicAlbums.png</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
+	<variable name="IconWallPosterVar">
+		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)">$INFO[ListItem.Art(animatedposter)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [Container.Content(episodes) | Container.Content(seasons)]">$INFO[ListItem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + [Container.Content(episodes) | Container.Content(seasons)]">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value>$INFO[Listitem.Art(poster)]</value>
+	</variable>
 	<variable name="IconStudiosVar">
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
@@ -203,8 +209,14 @@
 		<value condition="Window.IsActive(pictures)">$VAR[ListItemSizeLabelVar]$VAR[ListItemPictureApertureLabelVar]$VAR[ListItemPictureFocalLenLabelVar]$VAR[ListItemPictureExpTimeLabelVar]$VAR[ListItemDateLabelVar]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="!String.IsEmpty(ListItem.Plot)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][/COLOR]$INFO[ListItem.Plot]</value>
-		<value condition="!ListItem.IsParentFolder + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
+		<value condition="!ListItem.IsParentFolder">$VAR[SetNumberVar]$VAR[PlotAndTagVar]</value>
+	</variable>
+	<variable name="PlotAndTagVar">
+		<value condition="!String.IsEmpty(ListItem.Plot)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR]][/COLOR]$INFO[ListItem.Plot]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
+	</variable>
+	<variable name="SetNumberVar">
+		<value>[COLOR $VAR[MainColorVar]]$INFO[Window(Home).Property(SkinHelper.ListItem.Count),$LOCALIZE[36901]: ,[CR]][/COLOR]</value>
 	</variable>
 	<variable name="MusicInfoTextArtistVar">
 		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
@@ -231,7 +243,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,video)">$VAR[ListItemGenreLabelVar]$INFO[ListItem.Plot]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$VAR[MusicInfoTextArtistVar]</value>
-		<value condition="!String.IsEmpty(ListItem.Plot)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR][CR]][/COLOR]$INFO[ListItem.Plot]</value>
+		<value condition="!String.IsEmpty(ListItem.Plot)">$VAR[PlotAndTagVar]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song)">$VAR[MusicTrackInfoVar]$VAR[ListItemArtistLabelVar]$VAR[ListItemAlbumLabelVar]$VAR[ListItemDiscNumberLabelVar]$VAR[ListItemYearLabel4Var]$VAR[ListItemGenreLabelVar]$VAR[ListItemDurationLabelVar]$VAR[ListItemPlaycountLabelVar]</value>
 		<value>$VAR[ListItemGenreLabelVar]</value>
 	</variable>
@@ -400,28 +412,74 @@
 		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$VAR[VideoPlayerChannelNumberLabelVar]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.EpisodeName, (,)]</value>
 		<value>[COLOR $VAR[MainColorVar]]$INFO[VideoPlayer.Genre][/COLOR]</value>
 	</variable>
+	<variable name="PlayerInfoClearLogoVar">
+		<value condition="!String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
+		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
+		<value condition="!String.IsEmpty(Player.Art(artist.clearlogo))">$INFO[Player.Art(artist.clearlogo)]</value>
+		<value>$INFO[Window(Home).Property(SkinHelper.Player.Art.Clearlogo)]</value>
+	</variable>
+	<variable name="PlayerInfoClearArtVar">
+		<value condition="!String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(artist.clearart))">$INFO[Player.Art(artist.clearart)]</value>
+		<value>$INFO[Window(Home).Property(SkinHelper.Player.Art.Clearart)]</value>
+	</variable>
+	<variable name="PlayerInfoDiscArtVar">
+		<value condition="!String.IsEmpty(Player.Art(discart))">$INFO[Player.Art(discart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(album.discart))">$INFO[Player.Art(album.discart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Discart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Discart)]</value>
+	</variable>
+	<variable name="PlayerClearArtVar">
+		<value condition="!String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
+		<value condition="!String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
+		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
+	</variable>
 	<variable name="PlayerClearLogoVar">
 		<value condition="!String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(artist.clearlogo))">$INFO[Player.Art(artist.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
-		<value condition="Skin.HasSetting(enable_pvr_thumbs) | Skin.HasSetting(enable_music_art) |Skin.HasSetting(enable_extended_art)">$INFO[Window(Home).Property(SkinHelper.Player.Art.Clearlogo)]</value>
 	</variable>
-	<variable name="ContainerClearLogoVar">
+	<variable name="LibraryClearLogoVar">
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(artist.clearlogo))">$INFO[ListItem.Art(artist.clearlogo)]</value>
+		<value condition="!String.IsEmpty(Container.Art(artist.clearlogo))">$INFO[Container.Art(artist.clearlogo)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo)]</value>
+	</variable>
+	<variable name="HomeClearLogoVar">
 		<value condition="!String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo))">$INFO[Container.ListItem.Art(tvshow.clearlogo)]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.Art(artist.clearlogo))">$INFO[Container.ListItem.Art(artist.clearlogo)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(clearlogo))">$INFO[Container.ListItem.Art(clearlogo)]</value>
-		<value condition="Skin.HasSetting(enable_music_art) | Skin.HasSetting(enable_extended_art)">http://localhost:52307/getmusicart/?artist=$ESCINFO[Container.ListItem.Artist]&amp;album=$ESCINFO[Container.ListItem.Album]&amp;type=clearlogo</value>
-		<value condition="Skin.HasSetting(enable_pvr_thumbs) + SubString(Container.ListItem.FolderPath,pvr://)">http://localhost:52307/getpvrthumb/?title=$ESCINFO[Container.ListItem.Title]&amp;channel=$ESCINFO[Container.ListItem.ChannelName]&amp;type=clearlogo</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(artist.clearlogo))">$INFO[Container.ListItem.Art(artist.clearlogo)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo)]</value>
 	</variable>
-	<variable name="ListItemClearLogoVar">
+	<variable name="ViewClearLogoVar">
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(artist.clearlogo))">$INFO[ListItem.Art(artist.clearlogo)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
-		<value condition="Skin.HasSetting(enable_pvr_thumbs) | Skin.HasSetting(enable_music_art) |Skin.HasSetting(enable_extended_art)">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo)]</value>
 	</variable>
-	<variable name="ItemArtistBannerVar">
-		<value condition="!String.IsEmpty(ListItem.Art(artist.banner))">$INFO[ListItem.Art(artist.banner)]</value>
+	<variable name="ViewClearArtVar">
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearart))">$INFO[ListItem.Art(tvshow.clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(artist.clearart))">$INFO[ListItem.Art(artist.clearart)]</value>
+		<value condition="!String.IsEmpty(Container.Art(artist.clearart))">$INFO[Container.Art(artist.clearart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(artist.clearlogo))">$INFO[ListItem.Art(artist.clearlogo)]</value>
+		<value condition="!String.IsEmpty(Container.Art(artist.clearlogo))">$INFO[Container.Art(artist.clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo)]</value>
+	</variable>
+	<variable name="InfoClearArtVar">
+		<value condition="!String.IsEmpty(ListItem.Art(artist.clearart))">$INFO[ListItem.Art(artist.clearart)]</value>
+		<value condition="!String.IsEmpty(Container.Art(artist.clearart))">$INFO[Container.Art(artist.clearart)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearart)]</value>
+	</variable>
+	<variable name="LibraryBannerVar">
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(artist.banner))">$INFO[ListItem.Art(artist.banner)]</value>
+		<value condition="!String.IsEmpty(Container.Art(artist.banner))">$INFO[Container.Art(artist.banner)]</value>
+		<value>$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Banner)]</value>
 	</variable>
 	<variable name="ListWatchedIconVar">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
@@ -1250,5 +1308,9 @@
 	</variable>
 	<variable name="AlbumsCountVar">
 		<value>$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),($LOCALIZE[36919]: ,)]</value>
+	</variable>
+	<variable name="TitleAndYearVar">
+		<value condition="!ListItem.IsCollection">$INFO[ListItem.Label]$VAR[ListItemYearLabelVar]</value>
+		<value condition="ListItem.IsCollection">$INFO[ListItem.Label]</value>
 	</variable>
 </includes>
