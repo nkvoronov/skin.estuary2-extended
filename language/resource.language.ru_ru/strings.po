@@ -876,7 +876,7 @@ msgstr "Логотип"
 
 msgctxt "#43202"
 msgid "Clear Arts"
-msgstr "Винетка"
+msgstr "Виньетка"
 
 msgctxt "#43210"
 msgid "Aired"
@@ -1149,6 +1149,18 @@ msgstr "Красный цвет"
 msgctxt "#44160"
 msgid "Color Black"
 msgstr "Черный цвет"
+
+msgctxt "#44161"
+msgid "Color media flags"
+msgstr "Цвет медиафлагов"
+
+msgctxt "#44162"
+msgid "Color media border"
+msgstr "Цвет границы"
+
+msgctxt "#44170"
+msgid "Show border for media"
+msgstr "Показывать границу для медиа"
 
 msgctxt "#44200"
 msgid "Widget appearence"

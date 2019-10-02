@@ -118,6 +118,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$VAR[BannerLabel2Var]</label>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="progress">
 							<left>20</left>

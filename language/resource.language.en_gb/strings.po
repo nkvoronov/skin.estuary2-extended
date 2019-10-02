@@ -1340,6 +1340,18 @@ msgctxt "#44160"
 msgid "Color Black"
 msgstr ""
 
+msgctxt "#44161"
+msgid "Color media flags"
+msgstr ""
+
+msgctxt "#44162"
+msgid "Color media border"
+msgstr ""
+
+msgctxt "#44170"
+msgid "Show border for media"
+msgstr ""
+
 msgctxt "#44200"
 msgid "Widget appearence"
 msgstr ""

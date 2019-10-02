@@ -48,6 +48,7 @@
 			</control>
 			<include content="ViewClearList">
 				<param name="id" value="56" />
+				<param name="label" value="$LOCALIZE[43201]" />
 				<param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
 				<param name="noclear" value="String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))" />
 				<param name="clear_icon" value="$VAR[ClearLogoViewVar]" />

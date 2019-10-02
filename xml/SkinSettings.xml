@@ -306,7 +306,7 @@
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44124]</label>
 					<label2>$VAR[CustomFocusNameVar]</label2>
-					<onclick condition="String.IsEmpty(Skin.String(custom_focus)) | String.IsEqual(Skin.String(custom_focus),0)">Skin.SetString(custom_focus,1,)</onclick>
+					<onclick condition="String.IsEmpty(Skin.String(custom_focus))">Skin.SetString(custom_focus,-1,)</onclick>
 					<onclick>Skin.SetNumeric(custom_focus)</onclick>
 				</control>
 				<control type="image" id="224">
@@ -405,6 +405,13 @@
 					<label>$LOCALIZE[40321]</label>
 					<onclick>Skin.ToggleSetting(hide_collections_text)</onclick>
 					<selected>!Skin.HasSetting(hide_collections_text)</selected>
+				</control>
+				<control type="radiobutton" id="239">
+					<description>Show Borders</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44170]</label>
+					<onclick>Skin.ToggleSetting(show_borders)</onclick>
+					<selected>!Skin.HasSetting(show_borders)</selected>
 				</control>
 				<control type="image" id="240">
 					<description>Separator Image</description>
@@ -769,141 +776,160 @@
 					<param name="control_id2" value="602" />
 					<param name="label" value="$LOCALIZE[43028] (button_focus)" />
 					<param name="label2" value="[COLOR $VAR[MainColorVar]]$VAR[MainColorNameVar][/COLOR]" />
-					<param name="property" value="MainColor" />
+					<param name="property" value="main_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="603" />
 					<param name="control_id2" value="604" />
 					<param name="label" value="$LOCALIZE[43026] (primary_background)" />
 					<param name="label2" value="[COLOR $VAR[PrimaryBackgroundColorVar]]$VAR[PrimaryBackgroundColorNameVar][/COLOR]" />
-					<param name="property" value="PrimaryBackgroundColor" />
+					<param name="property" value="primary_background_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="605" />
 					<param name="control_id2" value="606" />
 					<param name="label" value="$LOCALIZE[43027] (secondary_background)" />
 					<param name="label2" value="[COLOR $VAR[SecondaryBackgroundColorVar]]$VAR[SecondaryBackgroundColorNameVar][/COLOR]" />
-					<param name="property" value="SecondaryBackgroundColor" />
+					<param name="property" value="secondary_background_color" />
 				</include>
 				<control type="image" id="607">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="label" id="608">
+				<include content="ColorSkinSetting">
+					<param name="control_id1" value="608" />
+					<param name="control_id2" value="609" />
+					<param name="label" value="$LOCALIZE[44161]" />
+					<param name="label2" value="[COLOR $VAR[MediaFlagsColorVar]]$VAR[MediaFlagsColorNameVar][/COLOR]" />
+					<param name="property" value="media_flags_color" />
+				</include>
+				<include content="ColorSkinSetting">
+					<param name="control_id1" value="610" />
+					<param name="control_id2" value="611" />
+					<param name="label" value="$LOCALIZE[44162]" />
+					<param name="label2" value="[COLOR $VAR[BorderMediaColorVar]]$VAR[BorderMediaColorNameVar][/COLOR]" />
+					<param name="property" value="border_media_color" />
+				</include>
+				<include content="ColorSkinSetting">
+					<param name="control_id1" value="617" />
+					<param name="control_id2" value="618" />
+					<param name="label" value="$LOCALIZE[44156]" />
+					<param name="label2" value="[COLOR $VAR[RssHeaderColorVar]]$VAR[RssHeaderColorNameVar][/COLOR]" />
+					<param name="property" value="rss_header_color" />
+				</include>
+				<control type="image" id="619">
+					<description>Separator Image</description>
+					<height>3</height>
+					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+				</control>
+				<control type="label" id="620">
 					<description>Additions Color Label</description>
 					<include>DefaultSettingLabel</include>
 					<label>$LOCALIZE[44144]</label>
 				</control>
 				<include content="ColorSkinSetting">
-					<param name="control_id1" value="609" />
-					<param name="control_id2" value="610" />
-					<param name="label" value="$LOCALIZE[44145] (background)" />
-					<param name="label2" value="[COLOR $VAR[BackgroundColorVar]]$VAR[BackgroundColorNameVar][/COLOR]" />
-					<param name="property" value="BackgroundColor" />
-				</include>
-				<include content="ColorSkinSetting">
-					<param name="control_id1" value="611" />
-					<param name="control_id2" value="612" />
-					<param name="label" value="$LOCALIZE[44146] (dialog_tint)" />
-					<param name="label2" value="[COLOR $VAR[DialogTintColorVar]]$VAR[DialogTintColorNameVar][/COLOR]" />
-					<param name="property" value="DialogTintColor" />
-				</include>
-				<include content="ColorSkinSetting">
-					<param name="control_id1" value="613" />
-					<param name="control_id2" value="614" />
-					<param name="label" value="$LOCALIZE[44148] (white)" />
-					<param name="label2" value="[COLOR $VAR[WhiteColorVar]]$VAR[WhiteColorNameVar][/COLOR]" />
-					<param name="property" value="WhiteColor" />
-				</include>
-				<include content="ColorSkinSetting">
-					<param name="control_id1" value="615" />
-					<param name="control_id2" value="616" />
-					<param name="label" value="$LOCALIZE[44149] (text_shadow)" />
-					<param name="label2" value="[COLOR $VAR[TextShadowColorVar]]$VAR[TextShadowColorNameVar][/COLOR]" />
-					<param name="property" value="TextShadowColor" />
-				</include>
-				<include content="ColorSkinSetting">
-					<param name="control_id1" value="617" />
-					<param name="control_id2" value="618" />
-					<param name="label" value="$LOCALIZE[44150] (selected)" />
-					<param name="label2" value="[COLOR $VAR[SelectedColorVar]]$VAR[SelectedColorNameVar][/COLOR]" />
-					<param name="property" value="SelectedColor" />
-				</include>
-				<include content="ColorSkinSetting">
-					<param name="control_id1" value="619" />
-					<param name="control_id2" value="620" />
-					<param name="label" value="$LOCALIZE[44151] (disabled)" />
-					<param name="label2" value="[COLOR $VAR[DisabledColorVar]]$VAR[DisabledColorNameVar][/COLOR]" />
-					<param name="property" value="DisabledColor" />
-				</include>
-				<include content="ColorSkinSetting">
 					<param name="control_id1" value="621" />
 					<param name="control_id2" value="622" />
-					<param name="label" value="$LOCALIZE[44152] (invalid)" />
-					<param name="label2" value="[COLOR $VAR[InvalidColorVar]]$VAR[InvalidColorNameVar][/COLOR]" />
-					<param name="property" value="InvalidColor" />
+					<param name="label" value="$LOCALIZE[44145] (background)" />
+					<param name="label2" value="[COLOR $VAR[BackgroundColorVar]]$VAR[BackgroundColorNameVar][/COLOR]" />
+					<param name="property" value="background_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="623" />
 					<param name="control_id2" value="624" />
-					<param name="label" value="$LOCALIZE[44153] (scrollbar)" />
-					<param name="label2" value="[COLOR $VAR[ScrollbarColorVar]]$VAR[ScrollbarColorNameVar][/COLOR]" />
-					<param name="property" value="ScrollbarColor" />
+					<param name="label" value="$LOCALIZE[44146] (dialog_tint)" />
+					<param name="label2" value="[COLOR $VAR[DialogTintColorVar]]$VAR[DialogTintColorNameVar][/COLOR]" />
+					<param name="property" value="dialog_tint_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="625" />
 					<param name="control_id2" value="626" />
-					<param name="label" value="$LOCALIZE[44154] (scrollbar_background)" />
-					<param name="label2" value="[COLOR $VAR[ScrollbarBackgroundColorVar]]$VAR[ScrollbarBackgroundColorNameVar][/COLOR]" />
-					<param name="property" value="ScrollbarBackgroundColor" />
+					<param name="label" value="$LOCALIZE[44148] (white)" />
+					<param name="label2" value="[COLOR $VAR[WhiteColorVar]]$VAR[WhiteColorNameVar][/COLOR]" />
+					<param name="property" value="white_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="627" />
 					<param name="control_id2" value="628" />
-					<param name="label" value="$LOCALIZE[44155] (separator)" />
-					<param name="label2" value="[COLOR $VAR[SeparatorColorVar]]$VAR[SeparatorColorNameVar][/COLOR]" />
-					<param name="property" value="SeparatorColor" />
+					<param name="label" value="$LOCALIZE[44149] (text_shadow)" />
+					<param name="label2" value="[COLOR $VAR[TextShadowColorVar]]$VAR[TextShadowColorNameVar][/COLOR]" />
+					<param name="property" value="text_shadow_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="629" />
 					<param name="control_id2" value="630" />
-					<param name="label" value="$LOCALIZE[44156] (rssheader)" />
-					<param name="label2" value="[COLOR $VAR[RssHeaderColorVar]]$VAR[RssHeaderColorNameVar][/COLOR]" />
-					<param name="property" value="RssHeaderColor" />
+					<param name="label" value="$LOCALIZE[44150] (selected)" />
+					<param name="label2" value="[COLOR $VAR[SelectedColorVar]]$VAR[SelectedColorNameVar][/COLOR]" />
+					<param name="property" value="selected_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="631" />
 					<param name="control_id2" value="632" />
-					<param name="label" value="$LOCALIZE[44157] (grey)" />
-					<param name="label2" value="[COLOR $VAR[GreyColorVar]]$VAR[GreyColorNameVar][/COLOR]" />
-					<param name="property" value="GreyColor" />
+					<param name="label" value="$LOCALIZE[44151] (disabled)" />
+					<param name="label2" value="[COLOR $VAR[DisabledColorVar]]$VAR[DisabledColorNameVar][/COLOR]" />
+					<param name="property" value="disabled_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="633" />
 					<param name="control_id2" value="634" />
-					<param name="label" value="$LOCALIZE[44158] (blue)" />
-					<param name="label2" value="[COLOR $VAR[BlueColorVar]]$VAR[BlueColorNameVar][/COLOR]" />
-					<param name="property" value="BlueColor" />
+					<param name="label" value="$LOCALIZE[44152] (invalid)" />
+					<param name="label2" value="[COLOR $VAR[InvalidColorVar]]$VAR[InvalidColorNameVar][/COLOR]" />
+					<param name="property" value="invalid_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="635" />
 					<param name="control_id2" value="636" />
-					<param name="label" value="$LOCALIZE[44159] (red)" />
-					<param name="label2" value="[COLOR $VAR[RedColorVar]]$VAR[RedColorNameVar][/COLOR]" />
-					<param name="property" value="RedColor" />
+					<param name="label" value="$LOCALIZE[44153] (scrollbar)" />
+					<param name="label2" value="[COLOR $VAR[ScrollbarColorVar]]$VAR[ScrollbarColorNameVar][/COLOR]" />
+					<param name="property" value="scrollbar_color" />
 				</include>
 				<include content="ColorSkinSetting">
 					<param name="control_id1" value="637" />
 					<param name="control_id2" value="638" />
-					<param name="label" value="$LOCALIZE[44160] (black)" />
-					<param name="label2" value="[COLOR $VAR[BlackColorVar]]$VAR[BlackColorNameVar][/COLOR]" />
-					<param name="property" value="BlackColor" />
+					<param name="label" value="$LOCALIZE[44154] (scrollbar_background)" />
+					<param name="label2" value="[COLOR $VAR[ScrollbarBackgroundColorVar]]$VAR[ScrollbarBackgroundColorNameVar][/COLOR]" />
+					<param name="property" value="scrollbar_background_color" />
 				</include>
-				<include content="ResetSkinSettingsParams">
+				<include content="ColorSkinSetting">
 					<param name="control_id1" value="639" />
 					<param name="control_id2" value="640" />
-					<param name="action" value="Skin.Reset(MainColor)|Skin.Reset(PrimaryBackgroundColor)|Skin.Reset(SecondaryBackgroundColor)|Skin.Reset(BackgroundColor)|Skin.Reset(DialogTintColor)|Skin.Reset(WhiteColor)|Skin.Reset(TextShadowColor)|Skin.Reset(SelectedColor)|Skin.Reset(DisabledColor)|Skin.Reset(InvalidColor)|Skin.Reset(ScrollbarColor)|Skin.Reset(ScrollbarBackgroundColor)|Skin.Reset(Separator)|Skin.Reset(RssHeaderColor)|Skin.Reset(GreyColor)|Skin.Reset(BlueColor)|Skin.Reset(RedColor)|Skin.Reset(BlackColor)" />
+					<param name="label" value="$LOCALIZE[44155] (separator)" />
+					<param name="label2" value="[COLOR $VAR[SeparatorColorVar]]$VAR[SeparatorColorNameVar][/COLOR]" />
+					<param name="property" value="separator_color" />
+				</include>
+				<include content="ColorSkinSetting">
+					<param name="control_id1" value="641" />
+					<param name="control_id2" value="642" />
+					<param name="label" value="$LOCALIZE[44157] (grey)" />
+					<param name="label2" value="[COLOR $VAR[GreyColorVar]]$VAR[GreyColorNameVar][/COLOR]" />
+					<param name="property" value="grey_color" />
+				</include>
+				<include content="ColorSkinSetting">
+					<param name="control_id1" value="643" />
+					<param name="control_id2" value="644" />
+					<param name="label" value="$LOCALIZE[44158] (blue)" />
+					<param name="label2" value="[COLOR $VAR[BlueColorVar]]$VAR[BlueColorNameVar][/COLOR]" />
+					<param name="property" value="blue_color" />
+				</include>
+				<include content="ColorSkinSetting">
+					<param name="control_id1" value="645" />
+					<param name="control_id2" value="646" />
+					<param name="label" value="$LOCALIZE[44159] (red)" />
+					<param name="label2" value="[COLOR $VAR[RedColorVar]]$VAR[RedColorNameVar][/COLOR]" />
+					<param name="property" value="red_color" />
+				</include>
+				<include content="ColorSkinSetting">
+					<param name="control_id1" value="647" />
+					<param name="control_id2" value="648" />
+					<param name="label" value="$LOCALIZE[44160] (black)" />
+					<param name="label2" value="[COLOR $VAR[BlackColorVar]]$VAR[BlackColorNameVar][/COLOR]" />
+					<param name="property" value="black_color" />
+				</include>
+				<include content="ResetSkinSettingsParams">
+					<param name="control_id1" value="649" />
+					<param name="control_id2" value="650" />
+					<param name="action" value="Skin.Reset(main_color)|Skin.Reset(primary_background_color)|Skin.Reset(secondary_background_color)|Skin.Reset(media_flags_color)|Skin.Reset(border_media_color)|Skin.Reset(rss_header_color)|Skin.Reset(background_color)|Skin.Reset(dialog_tint_color)|Skin.Reset(white_color)|Skin.Reset(text_shadow_color)|Skin.Reset(selected_color)|Skin.Reset(disabled_color)|Skin.Reset(invalid_color)|Skin.Reset(scrollbar_color)|Skin.Reset(scrollbar_background_color)|Skin.Reset(separator_color)|Skin.Reset(grey_color)|Skin.Reset(blue_color)|Skin.Reset(red_color)|Skin.Reset(black_color)" />
 				</include>
 			</control>
 			<control type="grouplist" id="700">

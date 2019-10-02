@@ -332,6 +332,7 @@
 					<aligny>center</aligny>
 					<label>$PARAM[label]</label>
 					<font>font_flag</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 				</control>
 				<include content="MediaFlag">
 					<param name="texture" value="flags/flag.png" />
@@ -348,7 +349,7 @@
 				<left>0</left>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="$VAR[WhiteColorVar]">$PARAM[icon]</texture>
+				<texture colordiffuse="$VAR[MediaFlagsColorVar]">$PARAM[icon]</texture>
 			</control>
 			<control type="label">
 				<left>50</left>
@@ -357,6 +358,7 @@
 				<aligny>center</aligny>
 				<font>font12</font>
 				<label>$PARAM[label]</label>
+				<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 			</control>
 		</control>
 	</include>
@@ -364,7 +366,17 @@
 		<param name="width">115</param>
 		<param name="height">60</param>
 		<param name="visible">true</param>
+		<param name="colordef">true</param>
 		<definition>
+			<control type="image">
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<fadetime>0</fadetime>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture colordiffuse="$VAR[MediaFlagsColorVar]">$PARAM[texture]</texture>
+				<visible>$PARAM[visible]</visible>
+				<visible>$PARAM[colordef]</visible>
+			</control>
 			<control type="image">
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
@@ -372,6 +384,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture>$PARAM[texture]</texture>
 				<visible>$PARAM[visible]</visible>
+				<visible>!$PARAM[colordef]</visible>
 			</control>
 		</definition>
 	</include>

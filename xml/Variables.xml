@@ -903,34 +903,32 @@
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="CustomFocusNameVar">
-		<value condition="String.IsEmpty(Skin.String(custom_focus)) | String.IsEqual(Skin.String(custom_focus),0)">1</value>
+		<value condition="String.IsEmpty(Skin.String(custom_focus))">1</value>
 		<value condition="!String.IsEmpty(Skin.String(custom_focus))">$INFO[Skin.String(custom_focus)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="CustomFocusVar">
 		<value condition="String.IsEmpty(Skin.String(custom_focus))">-1</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),0)">-1</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),1)">-1</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),2)">0</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),3)">1</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),4)">2</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),5)">3</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),6)">4</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),7)">5</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),8)">6</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),9)">7</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),10)">8</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),11)">9</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),12)">10</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),13)">11</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),14)">12</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),15)">13</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),16)">14</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),17)">15</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),18)">16</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),19)">17</value>
-		<value condition="String.IsEqual(Skin.String(custom_focus),20)">18</value>
-		<value>-1</value>
+		<value condition="Integer.IsLess(Skin.String(custom_focus),2)">-1</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),2)">0</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),3)">1</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),4)">2</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),5)">3</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),6)">4</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),7)">5</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),8)">6</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),9)">7</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),10)">8</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),11)">9</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),12)">10</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),13)">11</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),14)">12</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),15)">13</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),16)">14</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),17)">15</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),18)">16</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),19)">17</value>
+		<value condition="Integer.IsEqual(Skin.String(custom_focus),20)">18</value>
 	</variable>
 	<variable name="SkinSettingWidgetNameVar">
 		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
@@ -1147,147 +1145,163 @@
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="PrimaryBackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(PrimaryBackgroundColor))">$INFO[Skin.String(PrimaryBackgroundColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(primary_background_color))">$INFO[Skin.String(primary_background_color)]</value>
 		<value>primary_background</value>
 	</variable>
 	<variable name="PrimaryBackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(PrimaryBackgroundColor))">$INFO[Skin.String(PrimaryBackgroundColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(primary_background_color))">$INFO[Skin.String(primary_background_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="SecondaryBackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(SecondaryBackgroundColor))">$INFO[Skin.String(SecondaryBackgroundColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(secondary_background_color))">$INFO[Skin.String(secondary_background_color)]</value>
 		<value>secondary_background</value>
 	</variable>
 	<variable name="SecondaryBackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(SecondaryBackgroundColor))">$INFO[Skin.String(SecondaryBackgroundColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(secondary_background_color))">$INFO[Skin.String(secondary_background_color)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="MediaFlagsColorVar">
+		<value condition="!String.IsEmpty(Skin.String(media_flags_color))">$INFO[Skin.String(media_flags_color)]</value>
+		<value>white</value>
+	</variable>
+	<variable name="MediaFlagsColorNameVar">
+		<value condition="!String.IsEmpty(Skin.String(media_flags_color))">$INFO[Skin.String(media_flags_color)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BorderMediaColorVar">
+		<value condition="!String.IsEmpty(Skin.String(media_flags_color))">$INFO[Skin.String(media_flags_color)]</value>
+		<value>white</value>
+	</variable>
+	<variable name="BorderMediaColorNameVar">
+		<value condition="!String.IsEmpty(Skin.String(border_media_color))">$INFO[Skin.String(border_media_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="DialogTintColorVar">
-		<value condition="!String.IsEmpty(Skin.String(DialogTintColor))">$INFO[Skin.String(DialogTintColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(dialog_tint_color))">$INFO[Skin.String(dialog_tint_color)]</value>
 		<value>dialog_tint</value>
 	</variable>
 	<variable name="DialogTintColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(DialogTintColor))">$INFO[Skin.String(DialogTintColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(dialog_tint_color))">$INFO[Skin.String(dialog_tint_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="BackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundColor))">$INFO[Skin.String(BackgroundColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(background_color))">$INFO[Skin.String(background_color)]</value>
 		<value>background</value>
 	</variable>
 	<variable name="BackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BackgroundColor))">$INFO[Skin.String(BackgroundColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(background_color))">$INFO[Skin.String(background_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="BlackColorVar">
-		<value condition="!String.IsEmpty(Skin.String(BlackColor))">$INFO[Skin.String(BlackColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(black_color))">$INFO[Skin.String(black_color)]</value>
 		<value>black</value>
 	</variable>
 	<variable name="BlackColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BlackColor))">$INFO[Skin.String(BlackColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(black_color))">$INFO[Skin.String(black_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="WhiteColorVar">
-		<value condition="!String.IsEmpty(Skin.String(WhiteColor))">$INFO[Skin.String(WhiteColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(white_color))">$INFO[Skin.String(white_color)]</value>
 		<value>white</value>
 	</variable>
 	<variable name="WhiteColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(WhiteColor))">$INFO[Skin.String(WhiteColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(white_color))">$INFO[Skin.String(white_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="GreyColorVar">
-		<value condition="!String.IsEmpty(Skin.String(GreyColor))">$INFO[Skin.String(GreyColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(grey_color))">$INFO[Skin.String(grey_color)]</value>
 		<value>grey</value>
 	</variable>
 	<variable name="GreyColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(GreyColor))">$INFO[Skin.String(GreyColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(grey_color))">$INFO[Skin.String(grey_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="BlueColorVar">
-		<value condition="!String.IsEmpty(Skin.String(BlueColor))">$INFO[Skin.String(BlueColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(blue_color))">$INFO[Skin.String(blue_color)]</value>
 		<value>blue</value>
 	</variable>
 	<variable name="BlueColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(BlueColor))">$INFO[Skin.String(BlueColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(blue_color))">$INFO[Skin.String(blue_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="RedColorVar">
-		<value condition="!String.IsEmpty(Skin.String(RedColor))">$INFO[Skin.String(RedColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(red_color))">$INFO[Skin.String(red_color)]</value>
 		<value>red</value>
 	</variable>
 	<variable name="RedColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(RedColor))">$INFO[Skin.String(RedColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(red_color))">$INFO[Skin.String(red_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="MainColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MainColor))">$INFO[Skin.String(MainColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(main_color))">$INFO[Skin.String(main_color)]</value>
 		<value>button_focus</value>
 	</variable>
 	<variable name="MainColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MainColor))">$INFO[Skin.String(MainColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(main_color))">$INFO[Skin.String(main_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="TextShadowColorVar">
-		<value condition="!String.IsEmpty(Skin.String(TextShadowColor))">$INFO[Skin.String(TextShadowColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(text_shadow_color))">$INFO[Skin.String(text_shadow_color)]</value>
 		<value>text_shadow</value>
 	</variable>
 	<variable name="TextShadowColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(TextShadowColor))">$INFO[Skin.String(TextShadowColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(text_shadow_color))">$INFO[Skin.String(text_shadow_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="DisabledColorVar">
-		<value condition="!String.IsEmpty(Skin.String(DisabledColor))">$INFO[Skin.String(DisabledColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(disabled_color))">$INFO[Skin.String(disabled_color)]</value>
 		<value>disabled</value>
 	</variable>
 	<variable name="DisabledColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(DisabledColor))">$INFO[Skin.String(DisabledColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(disabled_color))">$INFO[Skin.String(disabled_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="SelectedColorVar">
-		<value condition="!String.IsEmpty(Skin.String(SelectedColor))">$INFO[Skin.String(SelectedColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(selected_color))">$INFO[Skin.String(selected_color)]</value>
 		<value>selected</value>
 	</variable>
 	<variable name="SelectedColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(SelectedColor))">$INFO[Skin.String(SelectedColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(selected_color))">$INFO[Skin.String(selected_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="InvalidColorVar">
-		<value condition="!String.IsEmpty(Skin.String(InvalidColor))">$INFO[Skin.String(InvalidColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(invalid_color))">$INFO[Skin.String(invalid_color)]</value>
 		<value>invalid</value>
 	</variable>
 	<variable name="InvalidColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(InvalidColor))">$INFO[Skin.String(InvalidColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(invalid_color))">$INFO[Skin.String(invalid_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="ScrollbarColorVar">
-		<value condition="!String.IsEmpty(Skin.String(ScrollbarColor))">$INFO[Skin.String(ScrollbarColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(scrollbar_color))">$INFO[Skin.String(scrollbar_color)]</value>
 		<value>scrollbar</value>
 	</variable>
 	<variable name="ScrollbarColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(ScrollbarColor))">$INFO[Skin.String(ScrollbarColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(scrollbar_color))">$INFO[Skin.String(scrollbar_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="ScrollbarBackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(ScrollbarBackgroundColor))">$INFO[Skin.String(ScrollbarBackgroundColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(scrollbar_background_color))">$INFO[Skin.String(scrollbar_background_color)]</value>
 		<value>scrollbar_background</value>
 	</variable>
 	<variable name="ScrollbarBackgroundColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(ScrollbarBackgroundColor))">$INFO[Skin.String(ScrollbarBackgroundColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(scrollbar_background_color))">$INFO[Skin.String(scrollbar_background_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="SeparatorColorVar">
-		<value condition="!String.IsEmpty(Skin.String(SeparatorColor))">$INFO[Skin.String(SeparatorColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(separator_color))">$INFO[Skin.String(separator_color)]</value>
 		<value>separator</value>
 	</variable>
 	<variable name="SeparatorColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(SeparatorColor))">$INFO[Skin.String(SeparatorColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(separator_color))">$INFO[Skin.String(separator_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="RssHeaderColorVar">
-		<value condition="!String.IsEmpty(Skin.String(RssHeaderColor))">$INFO[Skin.String(RssHeaderColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(rss_header_color))">$INFO[Skin.String(rss_header_color)]</value>
 		<value>rssheader</value>
 	</variable>
 	<variable name="RssHeaderColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(RssHeaderColor))">$INFO[Skin.String(RssHeaderColor)]</value>
+		<value condition="!String.IsEmpty(Skin.String(rss_header_color))">$INFO[Skin.String(rss_header_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="ShowInfoAtPlaybackStartVar">
