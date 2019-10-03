@@ -1169,7 +1169,7 @@
 		<value>$LOCALIZE[15109]</value>
 	</variable>
 	<variable name="BorderMediaColorVar">
-		<value condition="!String.IsEmpty(Skin.String(media_flags_color))">$INFO[Skin.String(media_flags_color)]</value>
+		<value condition="!String.IsEmpty(Skin.String(border_media_color))">$INFO[Skin.String(border_media_color)]</value>
 		<value>white</value>
 	</variable>
 	<variable name="BorderMediaColorNameVar">

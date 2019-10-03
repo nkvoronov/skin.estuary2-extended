@@ -332,6 +332,19 @@
 					<visible>$PARAM[border]</visible>
 				</control>
 				<control type="image">
+					<description>Media Border</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture colordiffuse="$VAR[BorderMediaColorVar]">dialogs/border-square.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>Skin.HasSetting(show_borders)</visible>
+					<visible>$PARAM[border]</visible>
+				</control>
+				<control type="image">
 					<description>Background Focused</description>
 					<top>4</top>
 					<left>4</left>
@@ -463,6 +476,19 @@
 						<visible>$PARAM[border]</visible>
 					</control>
 					<control type="image">
+						<description>Media Border</description>
+						<top>4</top>
+						<left>4</left>
+						<right>4</right>
+						<bottom>4</bottom>
+						<texture colordiffuse="$VAR[BorderMediaColorVar]">dialogs/border-poster.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>Skin.HasSetting(show_borders)</visible>
+						<visible>$PARAM[border]</visible>
+					</control>
+					<control type="image">
 						<description>Background Focused</description>
 						<top>4</top>
 						<left>4</left>
@@ -533,6 +559,15 @@
 				<control type="group">
 					<description>Posters</description>
 					<visible>!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(season.poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
+					<control type="image">
+						<description>Media Border</description>
+						<texture colordiffuse="$VAR[BorderMediaColorVar]">dialogs/border-poster.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>Skin.HasSetting(show_borders)</visible>
+						<visible>$PARAM[border]</visible>
+					</control>
 					<control type="image">
 						<description>Background Focused</description>
 						<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
@@ -798,6 +833,19 @@
 					<visible>$PARAM[border]</visible>
 				</control>
 				<control type="image">
+					<description>Media Border</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture colordiffuse="$VAR[BorderMediaColorVar]">dialogs/border-thumb.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>Skin.HasSetting(show_borders)</visible>
+					<visible>$PARAM[border]</visible>
+				</control>
+				<control type="image">
 					<description>Background Focused</description>
 					<top>4</top>
 					<left>4</left>
@@ -1005,6 +1053,19 @@
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
+					<visible>$PARAM[border]</visible>
+				</control>
+				<control type="image">
+					<description>Media Border</description>
+					<top>4</top>
+					<left>4</left>
+					<right>4</right>
+					<bottom>4</bottom>
+					<texture colordiffuse="$VAR[BorderMediaColorVar]">dialogs/border-square.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<visible>Skin.HasSetting(show_borders)</visible>
 					<visible>$PARAM[border]</visible>
 				</control>
 				<control type="image">
@@ -1246,7 +1307,7 @@
 						<param name="left" value="30" />
 						<param name="width" value="530" />
 						<param name="height" value="470" />
-						<param name="border" value="false" />
+						<param name="border" value="true" />
 						<param name="img_height" value="100%" />
 						<param name="txt_label" value="false" />
 					</include>
@@ -1409,7 +1470,7 @@
 						<param name="left" value="96" />
 						<param name="width" value="387" />
 						<param name="height" value="517" />
-						<param name="border" value="false" />
+						<param name="border" value="true" />
 						<param name="watched" value="false" />
 						<param name="img_height" value="100%" />
 						<param name="txt_label" value="false" />
@@ -1426,7 +1487,7 @@
 						<param name="width" value="530" />
 						<param name="height" value="470" />
 						<param name="watched" value="false" />
-						<param name="border" value="false" />
+						<param name="border" value="true" />
 						<param name="thumb_label" value="" />
 						<param name="img_height" value="100%" />
 						<param name="img_ratio" value="keep" />
@@ -1440,7 +1501,7 @@
 						<param name="left" value="30" />
 						<param name="width" value="530" />
 						<param name="height" value="470" />
-						<param name="border" value="false" />
+						<param name="border" value="true" />
 						<param name="img_height" value="100%" />
 						<param name="img_ratio" value="keep" />
 						<param name="txt_label" value="false" />
@@ -1453,7 +1514,7 @@
 						<param name="left" value="30" />
 						<param name="width" value="530" />
 						<param name="height" value="470" />
-						<param name="border" value="false" />
+						<param name="border" value="true" />
 						<param name="img_height" value="100%" />
 						<param name="img_ratio" value="keep" />
 						<param name="txt_label" value="false" />
@@ -1468,7 +1529,7 @@
 						<param name="left" value="30" />
 						<param name="width" value="530" />
 						<param name="height" value="470" />
-						<param name="border" value="false" />
+						<param name="border" value="true" />
 						<param name="img_height" value="100%" />
 						<param name="txt_ratio" value="keep" />
 						<param name="txt_label" value="false" />
