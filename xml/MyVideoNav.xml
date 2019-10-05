@@ -111,6 +111,10 @@
 							<top>401</top>
 							<width>537</width>
 							<height>372</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font27</font>
+							<textcolor>80FFFFFF</textcolor>
 							<label>$LOCALIZE[19055]</label>
 							<visible>String.IsEmpty(ListItem.Plot) + String.IsEmpty(ListItem.Tagline)</visible>
 						</control>
@@ -172,6 +176,10 @@
 							<top>41</top>
 							<width>537</width>
 							<bottom>341</bottom>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font27</font>
+							<textcolor>80FFFFFF</textcolor>
 							<label>$LOCALIZE[19055]</label>
 							<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
 						</control>

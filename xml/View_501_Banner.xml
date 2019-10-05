@@ -75,9 +75,9 @@
 							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>860</width>
+							<left>4</left>
+							<top>4</top>
+							<width>852</width>
 							<height>195</height>
 							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">DefaultBackBanner.png</texture>
 							<aspectratio aligny="center">scale</aspectratio>
@@ -220,9 +220,9 @@
 							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>860</width>
+							<left>4</left>
+							<top>4</top>
+							<width>852</width>
 							<height>195</height>
 							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">DefaultBackBanner.png</texture>
 							<aspectratio aligny="center">scale</aspectratio>

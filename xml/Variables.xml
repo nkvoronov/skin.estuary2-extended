@@ -245,7 +245,6 @@
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$VAR[MusicInfoTextArtistVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$VAR[PlotAndTagVar]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song)">$VAR[MusicTrackInfoVar]$VAR[ListItemArtistLabelVar]$VAR[ListItemAlbumLabelVar]$VAR[ListItemDiscNumberLabelVar]$VAR[ListItemYearLabel4Var]$VAR[ListItemGenreLabelVar]$VAR[ListItemDurationLabelVar]$VAR[ListItemPlaycountLabelVar]</value>
-		<value>$VAR[ListItemGenreLabelVar]</value>
 	</variable>
 	<variable name="MusicTrackInfoVar">
 		<value condition="String.IsEmpty(ListItem.Title)">$VAR[ListItemTrackNumberLabel2Var,,[CR]]</value>

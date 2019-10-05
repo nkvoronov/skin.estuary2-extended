@@ -96,7 +96,7 @@
 											<right>30</right>
 											<height>24</height>
 											<font>font12</font>
-											<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]•[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
+											<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
 											<textcolor>$VAR[MainColorVar]</textcolor>
 										</control>
 										<control type="textbox">
@@ -107,6 +107,29 @@
 											<font>font12</font>
 											<label>$VAR[PlotAndTagVar]</label>
 											<autoscroll>false</autoscroll>
+											<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>50</bottom>
+											<font>font12</font>
+											<label>$VAR[PlotAndTagVar]</label>
+											<autoscroll>false</autoscroll>
+											<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>40</bottom>
+											<align>center</align>
+											<aligny>center</aligny>
+											<font>font27</font>
+											<textcolor>80FFFFFF</textcolor>
+											<label>$LOCALIZE[19055]</label>
+											<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
 										</control>
 									</control>
 									<control type="group">
@@ -179,7 +202,7 @@
 											<right>30</right>
 											<height>24</height>
 											<font>font12</font>
-											<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , X ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
+											<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
 										</control>
 										<control type="textbox">
 											<top>365</top>
@@ -189,6 +212,29 @@
 											<font>font12</font>
 											<label>$VAR[PlotAndTagVar]</label>
 											<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+											<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>50</bottom>
+											<font>font12</font>
+											<label>$VAR[PlotAndTagVar]</label>
+											<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+											<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>40</bottom>
+											<align>center</align>
+											<aligny>center</aligny>
+											<font>font27</font>
+											<textcolor>80FFFFFF</textcolor>
+											<label>$LOCALIZE[19055]</label>
+											<visible>String.IsEmpty(ListItem.Plot)</visible>
 										</control>
 									</control>
 									<control type="group">

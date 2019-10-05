@@ -1308,7 +1308,7 @@
 						<param name="width" value="530" />
 						<param name="height" value="470" />
 						<param name="border" value="true" />
-						<param name="img_height" value="100%" />
+						<param name="img_height" value="96.5%" />
 						<param name="txt_label" value="false" />
 					</include>
 					<control type="grouplist">
@@ -1485,12 +1485,12 @@
 						<param name="top" value="140" />
 						<param name="left" value="30" />
 						<param name="width" value="530" />
-						<param name="height" value="470" />
+						<param name="height" value="360" />
 						<param name="watched" value="false" />
 						<param name="border" value="true" />
 						<param name="thumb_label" value="" />
-						<param name="img_height" value="100%" />
-						<param name="img_ratio" value="keep" />
+						<param name="img_height" value="95.5%" />
+						<param name="img_ratio" value="scale" />
 						<param name="txt_label" value="false" />
 					</include>
 				</control>
@@ -1502,8 +1502,8 @@
 						<param name="width" value="530" />
 						<param name="height" value="470" />
 						<param name="border" value="true" />
-						<param name="img_height" value="100%" />
-						<param name="img_ratio" value="keep" />
+						<param name="img_height" value="96.5%" />
+						<param name="img_ratio" value="scale" />
 						<param name="txt_label" value="false" />
 					</include>
 				</control>
@@ -1643,7 +1643,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)</visible>
+					<visible>!ListItem.IsCollection + [[String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)] | [String.IsEmpty(Control.GetLabel(15501)) + Control.IsVisible(15501)]]</visible>
 					<control type="textbox">
 						<left>30</left>
 						<top>460</top>
@@ -1887,6 +1887,7 @@
 				<height>365</height>
 				<align>center</align>
 				<font>font24_title</font>
+				<textcolor>80FFFFFF</textcolor>
 				<label>$LOCALIZE[19055]</label>
 				<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 			</control>

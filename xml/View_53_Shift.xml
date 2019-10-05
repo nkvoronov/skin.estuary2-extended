@@ -69,7 +69,7 @@
 								<param name="left" value="13" />
 								<param name="width" value="344" />
 								<param name="height" value="484" />
-								<param name="img_height" value="97%" />
+								<param name="img_height" value="96.5%" />
 								<param name="txt_label" value="false" />
 							</include>
 						</control>
@@ -140,7 +140,7 @@
 								<param name="width" value="344" />
 								<param name="height" value="484" />
 								<param name="focused" value="true" />
-								<param name="img_height" value="97%" />
+								<param name="img_height" value="96.5%" />
 								<param name="txt_label" value="false" />
 							</include>
 						</control>

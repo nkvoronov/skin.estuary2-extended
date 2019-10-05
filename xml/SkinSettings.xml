@@ -411,7 +411,7 @@
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44170]</label>
 					<onclick>Skin.ToggleSetting(show_borders)</onclick>
-					<selected>!Skin.HasSetting(show_borders)</selected>
+					<selected>Skin.HasSetting(show_borders)</selected>
 				</control>
 				<control type="image" id="240">
 					<description>Separator Image</description>
