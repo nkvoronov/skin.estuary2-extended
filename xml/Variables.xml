@@ -200,9 +200,9 @@
 	</variable>
 	<variable name="ShiftLeftTextBoxVar">
 		<value condition="Window.IsActive(pictures)">$VAR[ListItemDescriptionLabelVar]$VAR[ListItemPictureDateTimeLabelVar]$VAR[ListItemPictureResolutionLabelVar]$VAR[ListItemPictureCamMakeLabelVar]$VAR[ListItemPictureCamModelLabelVar]</value>
-		<value condition="String.IsEqual(listitem.DBType,artist)">$VAR[ListItemGenreLabelVar]$VAR[ListItemArtistYearsActiveLabelVar]$VAR[ListItemArtistStyleLabelVar]</value>
-		<value condition="String.IsEqual(listitem.DBType,album)">$VAR[ListItemYearLabel4Var]$VAR[ListItemGenreLabelVar]$VAR[ListItemAlbumLabelLabelVar]$VAR[ListItemAlbumStyleLabelVar]</value>
-		<value condition="String.IsEqual(Listitem.DBType,season) | String.IsEqual(Listitem.DBType,tvshow)">$VAR[ListItemGenreLabelVar]$VAR[ListItemPremieredLabelVar]$VAR[ListItemNumEpisodesLabelVar]$VAR[ListItemStatusLabelVar]</value>
+		<value condition="String.IsEqual(listItem.DBType,artist)">$VAR[ListItemGenreLabelVar]$VAR[ListItemArtistYearsActiveLabelVar]$VAR[ListItemArtistStyleLabelVar]</value>
+		<value condition="String.IsEqual(listItem.DBType,album)">$VAR[ListItemYearLabel4Var]$VAR[ListItemGenreLabelVar]$VAR[ListItemAlbumLabelLabelVar]$VAR[ListItemAlbumStyleLabelVar]</value>
+		<value condition="String.IsEqual(ListItem.DBType,season) | String.IsEqual(Listitem.DBType,tvshow)">$VAR[ListItemGenreLabelVar]$VAR[ListItemPremieredLabelVar]$VAR[ListItemNumEpisodesLabelVar]$VAR[ListItemStatusLabelVar]</value>
 		<value>$VAR[ListItemGenreLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDurationLabelVar]$VAR[ListItemPremieredLabelVar]</value>
 	</variable>
 	<variable name="ShiftRightTextBoxVar">
@@ -380,7 +380,7 @@
 		<value>$LOCALIZE[208]</value>
 	</variable>
 	<variable name="VideoInfoSubLabelVar">
-		<value condition="String.IsEqual(ListItem.DBType,episode)">$VAR[ListItemSeasonXEpisodeLabelVar]$INFO[ListItem.Title]</value>
+		<value condition="String.IsEqual(ListItem.DBType,episode)">$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.Title]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie)">[I][COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline][/COLOR][/I]</value>
 		<value>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Genre][/COLOR]</value>
 	</variable>
@@ -730,8 +730,8 @@
 		<value condition="!String.IsEmpty(ListItem.StartTime)">[COLOR $VAR[MainColorVar]]$LOCALIZE[555]: [/COLOR][COLOR $VAR[GreyColorVar]]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime][/COLOR] ([COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR])</value>
 	</variable>
 	<variable name="ListItemSeasonXEpisodeLabelVar">
-		<value condition="![String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)]">$INFO[ListItem.Season][COLOR $VAR[MainColorVar]]x[/COLOR]$INFO[ListItem.Episode] </value>
-		<value condition="String.IsEmpty(ListItem.Season) + !String.IsEmpty(ListItem.Episode)">$INFO[ListItem.Episode] </value>
+		<value condition="![String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode)]">$INFO[ListItem.Season][COLOR $VAR[MainColorVar]]x[/COLOR]$INFO[ListItem.Episode]</value>
+		<value condition="String.IsEmpty(ListItem.Season) + !String.IsEmpty(ListItem.Episode)">$INFO[ListItem.Episode]</value>
 	</variable>
 	<variable name="VideoPlayerSeasonXEpisodeLabelVar">
 		<value condition="![String.IsEmpty(VideoPlayer.Season) + String.IsEmpty(VideoPlayer.Episode)]">$INFO[VideoPlayer.Season][COLOR $VAR[MainColorVar]]x[/COLOR]$INFO[VideoPlayer.Episode] </value>

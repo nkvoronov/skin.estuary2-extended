@@ -792,7 +792,7 @@
 						<left>68</left>
 						<top>10</top>
 						<include content="PosterLayout">
-							<param name="img_height" value="95%" />
+							<param name="img_height" value="97%" />
 							<param name="txt_label" value="false" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 						</include>
@@ -811,7 +811,7 @@
 						</animation>
 						<include content="PosterLayout">
 							<param name="focused" value="true" />
-							<param name="img_height" value="95%" />
+							<param name="img_height" value="97%" />
 							<param name="txt_label" value="false" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 						</include>
@@ -908,10 +908,10 @@
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_height" value="93%" />
+							<param name="img_height" value="96%" />
 							<param name="txt_label" value="false" />
-							<param name="txt_bottom" value="20" />
-							<param name="watched_bottom" value="27" />
+							<param name="txt_bottom" value="18" />
+							<param name="watched_bottom" value="25" />
 						</include>
 					</control>
 				</itemlayout>
@@ -933,10 +933,10 @@
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_height" value="93%" />
+							<param name="img_height" value="96%" />
 							<param name="txt_label" value="false" />
-							<param name="txt_bottom" value="20" />
-							<param name="watched_bottom" value="27" />
+							<param name="txt_bottom" value="18" />
+							<param name="watched_bottom" value="25" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -1034,7 +1034,7 @@
 							<param name="single_label" value="$PARAM[single_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_height" value="95%" />
+							<param name="img_height" value="98%" />
 							<param name="txt_label" value="false" />
 						</include>
 					</control>
@@ -1056,7 +1056,7 @@
 							<param name="single_label" value="$PARAM[single_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_height" value="95%" />
+							<param name="img_height" value="98%" />
 							<param name="txt_label" value="false" />
 						</include>
 					</control>

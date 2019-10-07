@@ -73,9 +73,9 @@
 									<control type="group">
 										<visible>!ListItem.IsParentFolder</visible>
 										<include content="ThumbLayout">
-											<param name="left" value="-8" />
-											<param name="top" value="-8" />
-											<param name="width" value="500" />
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
 											<param name="height" value="300" />
 											<param name="border" value="false" />
 											<param name="watched_bottom" value="12" />
@@ -135,9 +135,9 @@
 									<control type="group">
 										<visible>ListItem.IsParentFolder</visible>
 										<include content="ThumbLayout">
-											<param name="left" value="-8" />
-											<param name="top" value="-8" />
-											<param name="width" value="500" />
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
 											<param name="height" value="650" />
 											<param name="border" value="false" />
 											<param name="img_height" value="100%" />
@@ -179,9 +179,9 @@
 									<control type="group">
 										<visible>!ListItem.IsParentFolder</visible>
 										<include content="ThumbLayout">
-											<param name="left" value="-8" />
-											<param name="top" value="-8" />
-											<param name="width" value="500" />
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
 											<param name="height" value="300" />
 											<param name="border" value="false" />
 											<param name="watched_bottom" value="12" />
@@ -240,9 +240,9 @@
 									<control type="group">
 										<visible>ListItem.IsParentFolder</visible>
 										<include content="ThumbLayout">
-											<param name="left" value="-8" />
-											<param name="top" value="-8" />
-											<param name="width" value="500" />
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
 											<param name="height" value="650" />
 											<param name="border" value="false" />
 											<param name="img_height" value="100%" />
@@ -274,9 +274,9 @@
 									<control type="group">
 										<visible>!ListItem.IsParentFolder</visible>
 										<include content="SquareLayout">
-											<param name="left" value="-8" />
-											<param name="top" value="-8" />
-											<param name="width" value="500" />
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
 											<param name="height" value="475" />
 											<param name="border" value="false" />
 											<param name="istwolabel" value="false" />
@@ -317,9 +317,9 @@
 									<control type="group">
 										<visible>ListItem.IsParentFolder</visible>
 										<include content="SquareLayout">
-											<param name="left" value="-8" />
-											<param name="top" value="-8" />
-											<param name="width" value="500" />
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
 											<param name="height" value="475" />
 											<param name="border" value="false" />
 											<param name="img_height" value="100%" />
@@ -370,9 +370,9 @@
 									<control type="group">
 										<visible>!ListItem.IsParentFolder</visible>
 										<include content="SquareLayout">
-											<param name="left" value="-8" />
-											<param name="top" value="-8" />
-											<param name="width" value="500" />
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
 											<param name="height" value="475" />
 											<param name="border" value="false" />
 											<param name="istwolabel" value="false" />
@@ -413,9 +413,9 @@
 									<control type="group">
 										<visible>ListItem.IsParentFolder</visible>
 										<include content="SquareLayout">
-											<param name="left" value="-8" />
-											<param name="top" value="-8" />
-											<param name="width" value="500" />
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
 											<param name="height" value="475" />
 											<param name="border" value="false" />
 											<param name="img_height" value="100%" />

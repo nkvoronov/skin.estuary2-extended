@@ -47,18 +47,18 @@
 							<visible>Skin.HasSetting(show_borders)</visible>
 						</control>
 						<control type="image">
-							<left>4</left>
-							<top>4</top>
-							<width>852</width>
+							<left>2</left>
+							<top>2</top>
+							<width>856</width>
 							<height>195</height>
 							<texture background="true">$INFO[ListItem.Art(banner)]</texture>
 							<aspectratio aligny="center">scale</aspectratio>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
-							<left>4</left>
-							<top>4</top>
-							<width>852</width>
+							<left>2</left>
+							<top>2</top>
+							<width>856</width>
 							<height>195</height>
 							<texture background="true" fallback="DefaultBanner.png">$INFO[ListItem.Art(fanart)]</texture>
 							<aspectratio aligny="center" align="center">scale</aspectratio>
@@ -75,9 +75,9 @@
 							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
 						</control>
 						<control type="image">
-							<left>4</left>
-							<top>4</top>
-							<width>852</width>
+							<left>2</left>
+							<top>2</top>
+							<width>856</width>
 							<height>195</height>
 							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">DefaultBackBanner.png</texture>
 							<aspectratio aligny="center">scale</aspectratio>
@@ -220,9 +220,9 @@
 							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
 						</control>
 						<control type="image">
-							<left>4</left>
-							<top>4</top>
-							<width>852</width>
+							<left>2</left>
+							<top>2</top>
+							<width>856</width>
 							<height>195</height>
 							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">DefaultBackBanner.png</texture>
 							<aspectratio aligny="center">scale</aspectratio>

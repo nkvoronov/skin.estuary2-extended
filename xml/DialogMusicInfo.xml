@@ -19,7 +19,8 @@
 					<param name="height" value="614" />
 					<param name="rating" value="false" />
 					<param name="istwolabel" value="false" />
-					<param name="img_height" value="97%" />
+					<param name="img_height" value="98%" />
+					<param name="img_ratio" value="scale" />
 					<param name="txt_label" value="false" />
 				</include>
 			</control>

@@ -33,7 +33,7 @@
 						<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(50600)">conditional</animation>
 					</control>
 					<include content="PosterLayout">
-						<param name="top" value="96" />
+						<param name="top" value="115" />
 						<param name="left" value="15" />
 						<param name="width" value="607" />
 						<param name="height" value="883" />

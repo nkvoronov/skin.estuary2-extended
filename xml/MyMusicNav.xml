@@ -31,6 +31,17 @@
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
 			</include>
+			<control type="group">
+				<centerleft>50%</centerleft>
+				<control type="image">
+					<top>0</top>
+					<height>140</height>
+					<texture>$VAR[LibraryClearLogoVar]</texture>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+					<visible>!Skin.HasSetting(hide_logo_library)</visible>
+					<visible>!ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+				</control>
+			</control>
 			<include>CommonScrollbars</include>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">

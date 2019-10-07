@@ -47,9 +47,10 @@
 						<width>537</width>
 						<aligny>center</aligny>
 						<align>center</align>
-						<height>110</height>
+						<height>100</height>
 						<font>font36_title</font>
 						<label>$VAR[TitleAndYearVar]</label>
+						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="image">
 						<depth>DepthContentPopout</depth>
@@ -234,7 +235,7 @@
 					<texture>$VAR[LibraryClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<visible>!Skin.HasSetting(hide_logo_library)</visible>
-					<visible>![Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]</visible>
+					<visible>![Control.IsVisible(56) | Control.IsVisible(57)]</visible>
 					<visible>!ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 				</control>
 			</control>
@@ -265,7 +266,7 @@
 						<label>$LOCALIZE[31020]</label>
 					</control>
 					<control type="radiobutton" id="16">
-						<description>PartyMode</description>
+						<description>Party Mode</description>
 						<label>$LOCALIZE[589]</label>
 						<include>MediaMenuItemsCommon</include>
 						<visible>Container.Content(MusicVideos)</visible>
@@ -279,7 +280,7 @@
 						<visible>system.haslocks</visible>
 					</control>
 					<control type="togglebutton" id="619">
-						<description>Update library</description>
+						<description>Update Library</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[653]</label>
 						<onclick>UpdateLibrary(video)</onclick>
@@ -288,14 +289,14 @@
 						<usealttexture>library.isscanningvideo</usealttexture>
 					</control>
 					<control type="button" id="612">
-						<description>Go to playlist</description>
+						<description>Go To Playlist</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[31056]</label>
 						<onclick>ActivateWindow(videoplaylist)</onclick>
 						<visible>Integer.IsGreater(Playlist.Length(video),0)</visible>
 					</control>
 					<control type="button" id="621">
-						<description>Get more</description>
+						<description>Get More</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[21452]</label>
 						<onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>

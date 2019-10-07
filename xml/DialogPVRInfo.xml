@@ -48,7 +48,7 @@
 					<width>1050</width>
 					<height>425</height>
 					<align>justify</align>
-					<label>$VAR[ListItemDateLabelVar]$VAR[ListItemStartTimeLabelVar]$VAR[ListItemExpirationDateTimeLabelVar]$VAR[ListItemGenreLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemCastLabelVar][CR]$VAR[ListItemSeasonXEpisodeLabelVar]$INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>                   
+					<label>$VAR[ListItemDateLabelVar]$VAR[ListItemStartTimeLabelVar]$VAR[ListItemExpirationDateTimeLabelVar]$VAR[ListItemGenreLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemCastLabelVar][CR]$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="grouplist" id="9000">
