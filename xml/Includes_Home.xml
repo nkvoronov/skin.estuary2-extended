@@ -1171,18 +1171,24 @@
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
+							<param name="width" value="319" />
+							<param name="height" value="340" />
 							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_ratio" value="stretch" />
+							<param name="img_top" value="24" />
+							<param name="img_height" value="70%" />
+							<param name="img_ratio" value="keep" />
+							<param name="txt_height" value="20%" />
+							<param name="progress" value="true" />
 						</include>
 						<control type="image">
-							<left>245</left>
-							<top>25</top>
-							<width>50</width>
-							<height>50</height>
+							<left>260</left>
+							<top>30</top>
+							<width>32</width>
+							<height>32</height>
 							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
@@ -1198,19 +1204,25 @@
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100" />
 						</animation>
 						<include content="SquareLayout">
+							<param name="width" value="319" />
+							<param name="height" value="340" />
 							<param name="focused" value="true" />
 							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_ratio" value="stretch" />
+							<param name="img_top" value="24" />
+							<param name="img_height" value="70%" />
+							<param name="img_ratio" value="keep" />
+							<param name="txt_height" value="20%" />
+							<param name="progress" value="true" />
 						</include>
 						<control type="image">
-							<left>245</left>
-							<top>25</top>
-							<width>50</width>
-							<height>50</height>
+							<left>260</left>
+							<top>30</top>
+							<width>32</width>
+							<height>32</height>
 							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
@@ -1219,21 +1231,24 @@
 					<control type="group">
 						<left>70</left>
 						<include content="SquareLayout">
-							<param name="height" value="326" />
+							<param name="width" value="319" />
+							<param name="height" value="300" />
 							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_ratio" value="stretch" />
-							<param name="img_height" value="95%" />
+							<param name="img_top" value="26" />
+							<param name="img_height" value="80%" />
+							<param name="img_ratio" value="keep" />
 							<param name="txt_label" value="false" />
+							<param name="progress" value="true" />
 						</include>
 						<control type="image">
-							<left>245</left>
-							<top>25</top>
-							<width>50</width>
-							<height>50</height>
+							<left>260</left>
+							<top>32</top>
+							<width>32</width>
+							<height>32</height>
 							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
@@ -1249,22 +1264,25 @@
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,100" />
 						</animation>
 						<include content="SquareLayout">
+							<param name="width" value="319" />
+							<param name="height" value="300" />
 							<param name="focused" value="true" />
-							<param name="height" value="326" />
 							<param name="istwolabel" value="true" />
 							<param name="main_label" value="$PARAM[label2]" />
 							<param name="sub_label" value="$PARAM[label]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
-							<param name="img_ratio" value="stretch" />
-							<param name="img_height" value="95%" />
+							<param name="img_top" value="26" />
+							<param name="img_height" value="80%" />
+							<param name="img_ratio" value="keep" />
 							<param name="txt_label" value="false" />
+							<param name="progress" value="true" />
 						</include>
 						<control type="image">
-							<left>245</left>
-							<top>25</top>
-							<width>50</width>
-							<height>50</height>
+							<left>260</left>
+							<top>32</top>
+							<width>32</width>
+							<height>32</height>
 							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
@@ -1284,10 +1302,10 @@
 		</definition>
 	</include>
 	<include name="Widget-Channels-HeightMax">
-		<height>500</height>
+		<height>430</height>
 	</include>
 	<include name="Widget-Channels-HeightMin">
-		<height>430</height>
+		<height>390</height>
 	</include>
 	<include name="Widget-Image">
 		<param name="visible">true</param>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">8000</defaultcontrol>
-	<onload condition="Skin.HasSetting(enable_skin_debug)">Skin.ToggleDebug</onload>
 	<controls>
 		<control type="videowindow">
 			<description>Video Control For Splash</description>

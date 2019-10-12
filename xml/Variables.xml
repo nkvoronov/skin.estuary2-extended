@@ -200,14 +200,14 @@
 	</variable>
 	<variable name="ShiftLeftTextBoxVar">
 		<value condition="Window.IsActive(pictures)">$VAR[ListItemDescriptionLabelVar]$VAR[ListItemPictureDateTimeLabelVar]$VAR[ListItemPictureResolutionLabelVar]$VAR[ListItemPictureCamMakeLabelVar]$VAR[ListItemPictureCamModelLabelVar]</value>
-		<value condition="String.IsEqual(listItem.DBType,artist)">$VAR[ListItemGenreLabelVar]$VAR[ListItemArtistYearsActiveLabelVar]$VAR[ListItemArtistStyleLabelVar]</value>
+		<value condition="String.IsEqual(listItem.DBType,artist)"></value>
 		<value condition="String.IsEqual(listItem.DBType,album)">$VAR[ListItemYearLabel4Var]$VAR[ListItemGenreLabelVar]$VAR[ListItemAlbumLabelLabelVar]$VAR[ListItemAlbumStyleLabelVar]</value>
 		<value condition="String.IsEqual(ListItem.DBType,season) | String.IsEqual(Listitem.DBType,tvshow)">$VAR[ListItemGenreLabelVar]$VAR[ListItemPremieredLabelVar]$VAR[ListItemNumEpisodesLabelVar]$VAR[ListItemStatusLabelVar]</value>
 		<value>$VAR[ListItemGenreLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDurationLabelVar]$VAR[ListItemPremieredLabelVar]</value>
 	</variable>
 	<variable name="ShiftRightTextBoxVar">
 		<value condition="Window.IsActive(pictures)">$VAR[ListItemSizeLabelVar]$VAR[ListItemPictureApertureLabelVar]$VAR[ListItemPictureFocalLenLabelVar]$VAR[ListItemPictureExpTimeLabelVar]$VAR[ListItemDateLabelVar]</value>
-		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$VAR[MusicInfoTextArtistVar]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="!ListItem.IsParentFolder">$VAR[SetNumberVar]$VAR[PlotAndTagVar]</value>
 	</variable>
@@ -219,8 +219,8 @@
 		<value>[COLOR $VAR[MainColorVar]]$INFO[Window(Home).Property(SkinHelper.ListItem.Count),$LOCALIZE[36901]: ,[CR]][/COLOR]</value>
 	</variable>
 	<variable name="MusicInfoTextArtistVar">
-		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="String.IsEmpty(ListItem.Property(Artist_Description)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">[COLOR $VAR[MainColorVar]]$VAR[AlbumsCountVar,,[CR]][/COLOR]$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="String.IsEmpty(ListItem.Property(Artist_Description)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">[COLOR $VAR[MainColorVar]]$VAR[AlbumsCountVar,,[CR]][/COLOR]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
 	</variable>
 	<variable name="FileBrowserSelectLabelVar">
 		<value condition="Control.IsVisible(450)">[COLOR $VAR[MainColorVar]]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
@@ -795,7 +795,7 @@
 		<value condition="!String.IsEmpty(ListItem.Duration)">[COLOR $VAR[MainColorVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration][CR]</value>
 	</variable>
 	<variable name="ListItemDurationLabel2Var">
-		<value condition="!String.IsEmpty(ListItem.Duration)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration] [/COLOR]</value>
+		<value condition="!String.IsEmpty(ListItem.Duration)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR]</value>
 	</variable>
 	<variable name="ListItemExpirationDateTimeLabelVar">
 		<value condition="!String.IsEmpty(ListItem.ExpirationDate)">[COLOR $VAR[MainColorVar]]$LOCALIZE[19299]: [/COLOR]$INFO[ListItem.ExpirationDate] $INFO[ListItem.ExpirationTime][CR]</value>
@@ -849,7 +849,7 @@
 		<value condition="!String.IsEmpty(ListItem.Property(Artist_Style))">[COLOR $VAR[MainColorVar]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(Artist_Style)][CR]</value>
 	</variable>
 	<variable name="ListItemAlbumLabelLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Property(Album_Label))">[COLOR $VAR[MainColorVar]]$LOCALIZE[21898]: [/COLOR]$INFO[ListItem.Property(Album_Label)][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Album_Label))">[COLOR $VAR[MainColorVar]]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(Album_Label)][CR]</value>
 	</variable>
 	<variable name="ListItemAlbumStyleLabelVar">
 		<value condition="!String.IsEmpty(ListItem.Property(Album_Style))">[COLOR $VAR[MainColorVar]]$LOCALIZE[736]: [/COLOR]$INFO[ListItem.Property(Album_Style)][CR]</value>

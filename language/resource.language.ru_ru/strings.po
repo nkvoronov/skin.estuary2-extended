@@ -1245,3 +1245,7 @@ msgstr "Отображать цветные контуры"
 msgctxt "#40321"
 msgid "List Movies In Set as Text"
 msgstr "Список фильмов в коллекции как текст"
+
+msgctxt "#40322"
+msgid "List Albums as Text"
+msgstr "Список альбомов как текст"

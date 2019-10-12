@@ -407,29 +407,36 @@
 					<selected>!Skin.HasSetting(hide_collections_text)</selected>
 				</control>
 				<control type="radiobutton" id="239">
+					<description>Std Albums List</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[40322]</label>
+					<onclick>Skin.ToggleSetting(hide_albums_text)</onclick>
+					<selected>!Skin.HasSetting(hide_albums_text)</selected>
+				</control>
+				<control type="radiobutton" id="240">
 					<description>Show Borders</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44170]</label>
 					<onclick>Skin.ToggleSetting(show_borders)</onclick>
 					<selected>Skin.HasSetting(show_borders)</selected>
 				</control>
-				<control type="image" id="240">
+				<control type="image" id="241">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="radiobutton" id="241">
+				<control type="radiobutton" id="242">
 					<description>Skin Toggle Debug</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43019]</label>
-					<selected>Skin.HasSetting(enable_skin_debug)</selected>
-					<onclick>Skin.ToggleSetting(enable_skin_debug)</onclick>
+					<selected>Skin.HasSetting(Skin.ToggleDebug)</selected>
+					<onclick>Skin.ToggleSetting(Skin.ToggleDebug)</onclick>
 					<onclick>Skin.ToggleDebug</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
 					<param name="control_id1" value="243" />
 					<param name="control_id2" value="244" />
-					<param name="action" value="Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(hide_widget_labels)|Skin.Reset(use_smaller_categories)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(custom_focus)|Skin.Reset(hide_logo_home)|Skin.Reset(hide_logo_play)|Skin.Reset(hide_logo_info)|Skin.Reset(hide_logo_library)|Skin.Reset(hide_logo_search)|Skin.Reset(hide_disc_art_home)|Skin.Reset(home_disc_art_overlay)|Skin.Reset(hide_disc_art_library)|Skin.Reset(library_disc_art_overlay)|Skin.Reset(hide_collections_text)|Skin.Reset(enable_skin_debug)" />
+					<param name="action" value="Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(hide_widget_labels)|Skin.Reset(use_smaller_categories)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(custom_focus)|Skin.Reset(hide_logo_home)|Skin.Reset(hide_logo_play)|Skin.Reset(hide_logo_info)|Skin.Reset(hide_logo_library)|Skin.Reset(hide_logo_search)|Skin.Reset(hide_disc_art_home)|Skin.Reset(home_disc_art_overlay)|Skin.Reset(hide_disc_art_library)|Skin.Reset(library_disc_art_overlay)|Skin.Reset(hide_collections_text)|Skin.Reset(hide_albums_text)|Skin.Reset(show_borders)|Skin.Reset(Skin.ToggleDebug)" />
 				</include>
 			</control>
 			<control type="grouplist" id="300">

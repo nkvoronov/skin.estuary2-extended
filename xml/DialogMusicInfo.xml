@@ -330,9 +330,9 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>10</left>
+					<left>-80</left>
 					<top>820</top>
-					<width>1740</width>
+					<width>1920</width>
 					<height>300</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>

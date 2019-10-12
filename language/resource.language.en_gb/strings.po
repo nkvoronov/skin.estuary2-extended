@@ -1436,3 +1436,7 @@ msgctxt "#40321"
 msgid "List Movies In Set as Text"
 msgstr ""
 
+msgctxt "#40322"
+msgid "List Albums as Text"
+msgstr ""
+

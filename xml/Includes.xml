@@ -205,6 +205,7 @@
 		<param name="sortorder">ascending</param>
 		<param name="orientation">horizontal</param>
 		<param name="slide">false</param>
+		<param name="slide2">false</param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="list" id="$PARAM[list_id]">
@@ -218,6 +219,8 @@
 				<animation effect="slide" end="193.5,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,1) + $PARAM[slide]">conditional</animation>
 				<animation effect="slide" end="129,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,2) + $PARAM[slide]">conditional</animation>
 				<animation effect="slide" end="64.5,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,3) + $PARAM[slide]">conditional</animation>
+				<animation effect="slide" end="180,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,1) + $PARAM[slide2]">conditional</animation>
+				<animation effect="slide" end="90,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,2) + $PARAM[slide2]">conditional</animation>
 				<focusedlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
 					<control type="image">
 						<left>5</left>

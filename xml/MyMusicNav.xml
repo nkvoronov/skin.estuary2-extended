@@ -33,13 +33,21 @@
 			</include>
 			<control type="group">
 				<centerleft>50%</centerleft>
+				<visible>!Skin.HasSetting(hide_logo_library)</visible>
+				<visible>!ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 				<control type="image">
 					<top>0</top>
 					<height>140</height>
 					<texture>$VAR[LibraryClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
-					<visible>!Skin.HasSetting(hide_logo_library)</visible>
-					<visible>!ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+					<visible>!Control.IsVisible(53)</visible>
+				</control>
+				<control type="image">
+					<top>0</top>
+					<height>140</height>
+					<texture>$VAR[ViewClearArtVar]</texture>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+					<visible>Control.IsVisible(53)</visible>
 				</control>
 			</control>
 			<include>CommonScrollbars</include>

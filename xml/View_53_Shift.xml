@@ -236,7 +236,7 @@
 					<control type="group">
 						<left>20</left>
 						<top>45</top>
-						<height>170</height>
+						<height>166</height>
 						<visible>!Skin.HasSetting(hide_collections_text)</visible>
 						<include content="InfoList">
 							<param name="bottom" value="0" />
@@ -257,6 +257,41 @@
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="ascending" />
 							<param name="list_id" value="6110" />
+						</include>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!String.IsEmpty(ListItem.DBID)</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
+					<control type="group">
+						<left>20</left>
+						<top>45</top>
+						<height>166</height>
+						<visible>!Skin.HasSetting(hide_albums_text)</visible>
+						<include content="InfoList">
+							<param name="bottom" value="0" />
+							<param name="width" value="903" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="ascending" />
+							<param name="list_id" value="5810" />
+							<param name="item_label" value="$VAR[ListItemYearLabel2Var]$INFO[ListItem.Label]" />
+						</include>
+					</control>
+					<control type="group">
+						<left>20</left>
+						<top>45</top>
+						<height>245</height>
+						<visible>Skin.HasSetting(hide_albums_text)</visible>
+						<include content="InfoListPics">
+							<param name="bottom" value="0" />
+							<param name="width" value="903" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="ascending" />
+							<param name="list_id" value="6110" />
+							<param name="item_width" value="180" />
+							<param name="img_source" value="$INFO[ListItem.Thumb]" />
+							<param name="img_fallback" value="DefaultAudio.png" />
 						</include>
 					</control>
 				</control>
