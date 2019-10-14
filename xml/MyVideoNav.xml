@@ -29,178 +29,14 @@
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(55)</visible>
 				<include>Visible_Left</include>
-				<include>ListThumbInfoPanel</include>
+				<include>ListThumbInfoPanelA</include>
 			</control>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(50) | Control.Isvisible(54) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9)]</visible>
 				<include>Visible_Left</include>
-				<include content="ContentPanel">
-					<param name="width" value="656" />
-				</include>
-				<control type="group">
-					<width>550</width>
-					<control type="textbox">
-						<top>120</top>
-						<left>30</left>
-						<width>537</width>
-						<aligny>center</aligny>
-						<align>center</align>
-						<height>100</height>
-						<font>font36_title</font>
-						<label>$VAR[TitleAndYearVar]</label>
-						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-					<control type="image">
-						<depth>DepthContentPopout</depth>
-						<left>30</left>
-						<bottom>110</bottom>
-						<width max="537">auto</width>
-						<height>99</height>
-						<aspectratio align="bottom" aligny="center">keep</aspectratio>
-						<texture background="true">$VAR[LibraryBannerVar]</texture>
-						<bordertexture>colors/white.png</bordertexture>
-						<bordersize>1</bordersize>
-						<visible>!ListItem.IsParentFolder</visible>
-					</control>
-					<control type="group">
-						<visible>!ListItem.IsCollection</visible>
-						<visible>!ListItem.IsParentFolder</visible>
-						<left>30</left>
-						<top>240</top>
-						<control type="textbox" id="16500">
-							<width>537</width>
-							<bottom>100</bottom>
-							<label>$VAR[PlotAndTagVar][CR][CR]</label>
-							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>[String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
-							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-						</control>
-						<control type="textbox" id="16500">
-							<width>537</width>
-							<bottom>116</bottom>
-							<label>$VAR[PlotAndTagVar][CR][CR]</label>
-							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>[String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
-							<visible>String.IsEqual(Skin.Font, Arial)</visible>
-						</control>
-						<control type="textbox" id="16501">
-							<width>537</width>
-							<bottom>225</bottom>
-							<label>$VAR[PlotAndTagVar][CR][CR]</label>
-							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
-							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-						</control>
-						<control type="textbox" id="16501">
-							<width>537</width>
-							<bottom>240</bottom>
-							<label>$VAR[PlotAndTagVar][CR][CR]</label>
-							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))+ String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
-							<visible>String.IsEqual(Skin.Font, Arial)</visible>
-						</control>
-						<control type="textbox">
-							<top>161</top>
-							<width>537</width>
-							<height>372</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font27</font>
-							<textcolor>80FFFFFF</textcolor>
-							<label>$LOCALIZE[19055]</label>
-							<visible>[[String.IsEmpty(Control.GetLabel(16500)) + Control.IsVisible(16500)] | [String.IsEmpty(Control.GetLabel(16501)) + Control.IsVisible(16501)]]</visible>
-						</control>
-						<control type="label">
-							<bottom>80</bottom>
-							<width>537</width>
-							<height>25</height>
-							<align>center</align>
-							<label>$INFO[ListItem.Genre]</label>
-							<font>font12</font>
-							<textcolor>$VAR[MainColorVar]</textcolor>
-							<scroll>true</scroll>
-						</control>
-					</control>
-					<control type="group">
-						<left>30</left>
-						<top>240</top>
-						<visible>ListItem.IsCollection</visible>
-						<visible>!ListItem.IsParentFolder</visible>
-						<control type="textbox" id="16502">
-							<width>537</width>
-							<bottom>424</bottom>
-							<label>$VAR[SetNumberVar]$INFO[ListItem.Plot][CR][CR]</label>
-							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
-						</control>
-						<control type="textbox" id="16502">
-							<width>537</width>
-							<bottom>426</bottom>
-							<label>$VAR[SetNumberVar]$INFO[ListItem.Plot][CR][CR]</label>
-							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
-						</control>
-						<control type="textbox" id="16503">
-							<width>537</width>
-							<bottom>424</bottom>
-							<label>$VAR[SetNumberVar]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][CR][CR]</label>
-							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-						</control>
-						<control type="textbox" id="16503">
-							<width>537</width>
-							<bottom>426</bottom>
-							<label>$VAR[SetNumberVar]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][CR][CR]</label>
-							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-							<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-						</control>
-						<control type="textbox">
-							<top>41</top>
-							<width>537</width>
-							<bottom>341</bottom>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font27</font>
-							<textcolor>80FFFFFF</textcolor>
-							<label>$LOCALIZE[19055]</label>
-							<visible>[[String.IsEmpty(Control.GetLabel(16502)) + Control.IsVisible(16502)] | [String.IsEmpty(Control.GetLabel(16503)) + Control.IsVisible(16503)]]</visible>
-						</control>
-						<control type="group">
-							<top>450</top>
-							<visible>!Skin.HasSetting(hide_collections_text)</visible>
-							<include content="InfoList">
-								<param name="bottom" value="225" />
-								<param name="width" value="545" />
-								<param name="sortby" value="year" />
-								<param name="sortorder" value="ascending" />
-							</include>
-						</control>
-						<control type="group">
-							<top>450</top>
-							<left>12</left>
-							<visible>Skin.HasSetting(hide_collections_text)</visible>
-							<include content="InfoListPics">
-								<param name="bottom" value="220" />
-								<param name="width" value="516" />
-								<param name="sortby" value="year" />
-								<param name="sortorder" value="ascending" />
-								<param name="slide" value="true" />
-							</include>
-						</control>
-						<control type="label">
-							<bottom>80</bottom>
-							<width>537</width>
-							<height>25</height>
-							<align>center</align>
-							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
-							<font>font12</font>
-							<textcolor>$VAR[MainColorVar]</textcolor>
-							<scroll>true</scroll>
-						</control>
-					</control>
-				</control>
+				<include>ListThumbInfoPanelB</include>
 			</control>
 			<include content="TopBar">
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
@@ -211,13 +47,13 @@
 			<control type="group">
 				<centerleft>50%</centerleft>
 				<visible>!Skin.HasSetting(hide_logo_library)</visible>
-				<visible>!ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 				<control type="image">
 					<top>0</top>
 					<height>140</height>
 					<texture>$VAR[LibraryClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
-					<visible>![Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]</visible>
+					<visible>![Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]</visible>
 				</control>
 				<control type="image">
 					<top>0</top>

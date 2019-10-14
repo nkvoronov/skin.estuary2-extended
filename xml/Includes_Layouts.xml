@@ -1308,340 +1308,615 @@
 			</control>
 		</definition>
 	</include>
-	<include name="ListThumbInfoPanel">
+	<include name="ListThumbInfoPanelA">
 		<param name="fallback_image"></param>
-		<param name="width">654</param>
+		<param name="width">656</param>
 		<param name="flip_bg">false</param>
 		<definition>
 			<control type="group">
+				<description>ListThumbInfoPanel 55</description>
 				<depth>DepthContentPanel</depth>
 				<include content="ContentPanel">
 					<param name="width" value="$PARAM[width]" />
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
 				<control type="group">
-					<visible>Container.Content(images)</visible>
-					<include content="PictureLayout">
-						<param name="top" value="140" />
-						<param name="left" value="30" />
-						<param name="width" value="530" />
-						<param name="height" value="470" />
-						<param name="border" value="true" />
-						<param name="img_height" value="97.8%" />
-						<param name="txt_label" value="false" />
-					</include>
-					<control type="grouplist">
-						<left>20</left>
-						<top>620</top>
-						<width>570</width>
-						<height>400</height>
-						<orientation>vertical</orientation>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21820]"/>
-							<param name="value" value="ListItem.PictureDatetime" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21805]"/>
-							<param name="value" value="ListItem.PictureResolution" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21826]"/>
-							<param name="value" value="ListItem.PictureAperture" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21863]"/>
-							<param name="value" value="ListItem.PictureAuthor" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21867]"/>
-							<param name="value" value="ListItem.PictureByline" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21868]"/>
-							<param name="value" value="ListItem.PictureBylineTitle" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[31041]"/>
-							<param name="value" value="ListItem.PictureCamMake" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21823]"/>
-							<param name="value" value="ListItem.PictureCamModel" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21862]"/>
-							<param name="value" value="ListItem.PictureCaption" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21866]"/>
-							<param name="value" value="ListItem.PictureCategory" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21839]"/>
-							<param name="value" value="ListItem.PictureCCDWidth" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21873]"/>
-							<param name="value" value="ListItem.PictureCity" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21807]"/>
-							<param name="value" value="ListItem.PictureColour" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21839]"/>
-							<param name="value" value="ListItem.PictureComment" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21871]"/>
-							<param name="value" value="ListItem.PictureCopyrightNotice" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21875]"/>
-							<param name="value" value="ListItem.PictureCountry" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21879]"/>
-							<param name="value" value="ListItem.PictureCountryCode" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21869]"/>
-							<param name="value" value="ListItem.PictureCredit" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21821]"/>
-							<param name="value" value="ListItem.PictureDesc" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21838]"/>
-							<param name="value" value="ListItem.PictureDigitalZoom" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21832]"/>
-							<param name="value" value="ListItem.PictureExpMode" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21829]"/>
-							<param name="value" value="ListItem.PictureExposure" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21831]"/>
-							<param name="value" value="ListItem.PictureExposureBias" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21830]"/>
-							<param name="value" value="ListItem.PictureExpTime" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21833]"/>
-							<param name="value" value="ListItem.PictureFlashUsed" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21827]"/>
-							<param name="value" value="ListItem.PictureFocalLen" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21828]"/>
-							<param name="value" value="ListItem.PictureFocusDist" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21840]"/>
-							<param name="value" value="ListItem.PictureGPSLat" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21841]"/>
-							<param name="value" value="ListItem.PictureGPSLon" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21842]"/>
-							<param name="value" value="ListItem.PictureGPSAlt" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21864]"/>
-							<param name="value" value="ListItem.PictureHeadline" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21858]"/>
-							<param name="value" value="ListItem.PictureImageType" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21837]"/>
-							<param name="value" value="ListItem.PictureISO" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21861]"/>
-							<param name="value" value="ListItem.PictureKeywords" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21843]"/>
-							<param name="value" value="ListItem.PictureOrientation" />
-						</include>
-						<include content="PicsInfoLine">
-							<param name="label" value="$LOCALIZE[21808]"/>
-							<param name="value" value="ListItem.PictureProcess" />
-						</include>
-					</control>
-				</control>
-				<control type="group">
-					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-					<include content="PosterLayout">
-						<param name="top" value="116" />
-						<param name="left" value="96" />
-						<param name="width" value="387" />
-						<param name="height" value="517" />
-						<param name="border" value="true" />
-						<param name="watched" value="false" />
-						<param name="img_height" value="100%" />
-						<param name="txt_label" value="false" />
-						<param name="cd_art_size" value="200" />
-						<param name="cd_art_size_overlay" value="202" />
-						<param name="cd_art_visible" value="true" />
-					</include>
-				</control>
-				<control type="group">
-					<visible>Container.Content(episodes) | Container.Content(musicvideos)</visible>
-					<include content="ThumbLayout">
-						<param name="top" value="140" />
-						<param name="left" value="30" />
-						<param name="width" value="530" />
-						<param name="height" value="360" />
-						<param name="watched" value="false" />
-						<param name="border" value="true" />
-						<param name="thumb_label" value="" />
-						<param name="img_height" value="97.8%" />
-						<param name="img_ratio" value="scale" />
-						<param name="txt_label" value="false" />
-					</include>
-				</control>
-				<control type="group">
-					<visible>[Container.Content(artists) + Control.Isvisible(55)] | [Container.Content(albums) + Control.Isvisible(55)] | Container.Content(songs)</visible>
-					<include content="SquareLayout">
-						<param name="top" value="100" />
-						<param name="left" value="60" />
-						<param name="width" value="470" />
-						<param name="height" value="470" />
-						<param name="border" value="true" />
-						<param name="img_height" value="98%" />
-						<param name="img_ratio" value="scale" />
-						<param name="txt_label" value="false" />
-					</include>
-				</control>
-				<control type="group">
-					<visible>Container.Content(games)</visible>
-					<include content="SquareLayout">
-						<param name="top" value="140" />
-						<param name="left" value="30" />
-						<param name="width" value="530" />
-						<param name="height" value="470" />
-						<param name="border" value="true" />
-						<param name="img_height" value="100%" />
-						<param name="img_ratio" value="keep" />
-						<param name="txt_label" value="false" />
-						<param name="img_fallback" value="DefaultAddonGame.png" />
-						<param name="img_source" value="$INFO[ListItem.FileNameAndPath,,.jpg]" />
-					</include>
-				</control>
-				<control type="group">
-					<visible>Container.Content(directors)</visible>
-					<include content="IconLayout">
-						<param name="top" value="140" />
-						<param name="left" value="30" />
-						<param name="width" value="530" />
-						<param name="height" value="470" />
-						<param name="border" value="true" />
-						<param name="img_height" value="100%" />
-						<param name="txt_ratio" value="keep" />
-						<param name="txt_label" value="false" />
-						<param name="img_fallback" value="DefaultDirector.png" />
-						<param name="img_source" value="http://localhost:52307/getthumb&title=$ESCINFO[Container.ListItem.Label,, imdb]" />
-					</include>
-				</control>
-				<control type="group">
-					<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(games) | Container.Content(directors)]</visible>
-					<include content="IconLayout">
-						<param name="top" value="140" />
-						<param name="left" value="30" />
-						<param name="width" value="530" />
-						<param name="height" value="470" />
-						<param name="border" value="false" />
-						<param name="img_height" value="100%" />
-						<param name="txt_ratio" value="keep" />
-						<param name="txt_label" value="false" />
-					</include>
-				</control>
-				<control type="group">
-					<visible>!Container.Content() | !String.IsEmpty(ListItem.Plot)</visible>
-					<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
-					<visible>!ListItem.IsCollection</visible>
-					<left>30</left>
-					<control type="textbox" id="15500">
-						<top>640</top>
-						<width>535</width>
-						<bottom>112</bottom>
-						<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-						<label>$VAR[ListBoxInfoVar]</label>
-						<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
-						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-					</control>
-					<control type="textbox" id="15500">
-						<top>640</top>
-						<width>535</width>
-						<bottom>120</bottom>
-						<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-						<label>$VAR[ListBoxInfoVar]</label>
-						<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
-						<visible>String.IsEqual(Skin.Font, Arial)</visible>
-					</control>
-					<control type="textbox" id="15501">
-						<top>495</top>
-						<width>535</width>
-						<bottom>130</bottom>
-						<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-						<label>$VAR[ListBoxInfoVar]</label>
-						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
-						<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-					</control>
-					<control type="textbox" id="15501">
-						<top>495</top>
-						<width>535</width>
-						<bottom>110</bottom>
-						<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-						<label>$VAR[ListBoxInfoVar]</label>
-						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
-						<visible>String.IsEqual(Skin.Font, Arial)</visible>
-					</control>
-					<control type="label">
-						<left>0</left>
-						<bottom>80</bottom>
-						<width>537</width>
-						<height>25</height>
-						<align>center</align>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>font12</font>
-						<scroll>true</scroll>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<visible>String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode))</visible>
-					</control>
-				</control>
-				<control type="group">
-					<left>30</left>
-					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+					<description>Preview picture</description>
 					<control type="group">
-						<visible>Control.Isvisible(54)</visible>
+						<description>Images</description>
+						<visible>Container.Content(images)</visible>
+						<include content="PictureLayout">
+							<param name="top" value="140" />
+							<param name="left" value="30" />
+							<param name="width" value="530" />
+							<param name="height" value="470" />
+							<param name="border" value="true" />
+							<param name="img_height" value="97.8%" />
+							<param name="txt_label" value="false" />
+						</include>
+					</control>
+					<control type="group">
+						<description>Movies, Sets, Tvshows and Seasons</description>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+						<include content="PosterLayout">
+							<param name="top" value="116" />
+							<param name="left" value="96" />
+							<param name="width" value="387" />
+							<param name="height" value="517" />
+							<param name="border" value="true" />
+							<param name="watched" value="false" />
+							<param name="img_height" value="100%" />
+							<param name="txt_label" value="false" />
+							<param name="cd_art_size" value="200" />
+							<param name="cd_art_size_overlay" value="202" />
+							<param name="cd_art_visible" value="true" />
+						</include>
+					</control>
+					<control type="group">
+						<description>Episodes and Musicvideos</description>
+						<visible>Container.Content(episodes) | Container.Content(musicvideos)</visible>
+						<include content="ThumbLayout">
+							<param name="top" value="140" />
+							<param name="left" value="30" />
+							<param name="width" value="530" />
+							<param name="height" value="360" />
+							<param name="watched" value="false" />
+							<param name="border" value="true" />
+							<param name="thumb_label" value="" />
+							<param name="img_height" value="97.8%" />
+							<param name="img_ratio" value="scale" />
+							<param name="txt_label" value="false" />
+						</include>
+					</control>
+					<control type="group">
+						<description>Artists, Albums and Songs</description>
+						<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+						<include content="SquareLayout">
+							<param name="top" value="100" />
+							<param name="left" value="60" />
+							<param name="width" value="470" />
+							<param name="height" value="470" />
+							<param name="border" value="true" />
+							<param name="img_height" value="98%" />
+							<param name="img_ratio" value="scale" />
+							<param name="txt_label" value="false" />
+						</include>
+					</control>
+					<control type="group">
+						<description>Games</description>
+						<visible>Container.Content(games)</visible>
+						<include content="SquareLayout">
+							<param name="top" value="140" />
+							<param name="left" value="30" />
+							<param name="width" value="530" />
+							<param name="height" value="470" />
+							<param name="border" value="true" />
+							<param name="img_height" value="100%" />
+							<param name="img_ratio" value="keep" />
+							<param name="txt_label" value="false" />
+							<param name="img_fallback" value="DefaultAddonGame.png" />
+							<param name="img_source" value="$INFO[ListItem.FileNameAndPath,,.jpg]" />
+						</include>
+					</control>
+					<control type="group">
+						<description>Directors</description>
+						<visible>Container.Content(directors)</visible>
+						<include content="IconLayout">
+							<param name="top" value="140" />
+							<param name="left" value="30" />
+							<param name="width" value="530" />
+							<param name="height" value="470" />
+							<param name="border" value="true" />
+							<param name="img_height" value="100%" />
+							<param name="txt_ratio" value="keep" />
+							<param name="txt_label" value="false" />
+							<param name="img_fallback" value="DefaultDirector.png" />
+							<param name="img_source" value="http://localhost:52307/getthumb&title=$ESCINFO[Container.ListItem.Label,, imdb]" />
+						</include>
+					</control>
+					<control type="group">
+						<description>Other</description>
+						<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(games) | Container.Content(directors)]</visible>
+						<include content="IconLayout">
+							<param name="top" value="140" />
+							<param name="left" value="30" />
+							<param name="width" value="530" />
+							<param name="height" value="470" />
+							<param name="border" value="false" />
+							<param name="img_height" value="100%" />
+							<param name="txt_ratio" value="keep" />
+							<param name="txt_label" value="false" />
+						</include>
+					</control>
+				</control>
+				<control type="group">
+					<width>550</width>
+					<left>30</left>
+					<control type="group">
+						<description>Contents</description>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="group">
+							<top>640</top>
+							<visible>!ListItem.IsCollection</visible>
+							<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+							<control type="textbox" id="15500">
+								<width>537</width>
+								<bottom>112</bottom>
+								<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
+								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox" id="15500">
+								<width>537</width>
+								<bottom>120</bottom>
+								<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
+								<visible>String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox" id="15501">
+								<top>-145</top>
+								<width>537</width>
+								<bottom>130</bottom>
+								<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox" id="15501">
+								<top>-145</top>
+								<width>537</width>
+								<bottom>110</bottom>
+								<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+								<visible>String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox">
+								<description>No Content</description>
+								<width>537</width>
+								<bottom>115</bottom>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font27</font>
+								<textcolor>80FFFFFF</textcolor>
+								<label>$LOCALIZE[19055]</label>
+								<visible>[String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)] | [String.IsEmpty(Control.GetLabel(15501)) + Control.IsVisible(15501)]</visible>
+							</control>
+						</control>
+						<control type="group">
+							<top>640</top>
+							<visible>ListItem.IsCollection</visible>
+							<visible>Container.Content(movies) | Container.Content(sets)</visible>
+							<control type="textbox" id="15502">
+								<width>537</width>
+								<bottom>310</bottom>
+								<label>$INFO[ListItem.Plot]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+							</control>
+							<control type="textbox" id="15502">
+								<width>537</width>
+								<bottom>310</bottom>
+								<label>$INFO[ListItem.Plot]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+							</control>
+							<control type="textbox" id="15503">
+								<width>537</width>
+								<bottom>310</bottom>
+								<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+							</control>
+							<control type="textbox" id="15503">
+								<width>537</width>
+								<bottom>310</bottom>
+								<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
+								<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+							</control>
+							<control type="textbox">
+								<description>No Content</description>
+								<width>537</width>
+								<bottom>115</bottom>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font27</font>
+								<textcolor>80FFFFFF</textcolor>
+								<label>$LOCALIZE[19055]</label>
+								<visible>[String.IsEmpty(Control.GetLabel(15502)) + Control.IsVisible(15502)] | [String.IsEmpty(Control.GetLabel(15503)) + Control.IsVisible(15503)]</visible>
+							</control>
+						</control>
+						<control type="group">
+							<top>570</top>
+							<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+							<control type="textbox" id="15504">
+								<width>537</width>
+								<bottom>300</bottom>
+								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+								<visible>Container.Content(artists)</visible>
+							</control>
+							<control type="textbox" id="15504">
+								<width>537</width>
+								<bottom>300</bottom>
+								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>String.IsEqual(Skin.Font, Arial)</visible>
+								<visible>Container.Content(artists)</visible>
+							</control>
+							<control type="textbox" id="15505">
+								<width>537</width>
+								<bottom>105</bottom>
+								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+								<visible>!Container.Content(artists)</visible>
+							</control>
+							<control type="textbox" id="15505">
+								<width>537</width>
+								<bottom>105</bottom>
+								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>String.IsEqual(Skin.Font, Arial)</visible>
+								<visible>!Container.Content(artists)</visible>
+							</control>
+							<control type="textbox">
+								<description>No Content</description>
+								<width>537</width>
+								<bottom>300</bottom>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font27</font>
+								<textcolor>80FFFFFF</textcolor>
+								<label>$LOCALIZE[19055]</label>
+								<visible>!ListItem.IsParentFolder</visible>
+								<visible>[String.IsEmpty(Control.GetLabel(15504)) + Control.IsVisible(15504)]</visible>
+							</control>
+						</control>
+						<control type="group">
+							<top>640</top>
+							<visible>Container.Content(images)</visible>
+							<control type="textbox">
+								<width>537</width>
+								<bottom>115</bottom>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font27</font>
+								<textcolor>80FFFFFF</textcolor>
+								<label>$LOCALIZE[19055]</label>
+								<visible>ListItem.IsFolder</visible>
+							</control>
+							<control type="grouplist">
+								<width>537</width>
+								<height>400</height>
+								<orientation>vertical</orientation>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21820]"/>
+									<param name="value" value="ListItem.PictureDatetime" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21805]"/>
+									<param name="value" value="ListItem.PictureResolution" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21826]"/>
+									<param name="value" value="ListItem.PictureAperture" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21863]"/>
+									<param name="value" value="ListItem.PictureAuthor" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21867]"/>
+									<param name="value" value="ListItem.PictureByline" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21868]"/>
+									<param name="value" value="ListItem.PictureBylineTitle" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[31041]"/>
+									<param name="value" value="ListItem.PictureCamMake" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21823]"/>
+									<param name="value" value="ListItem.PictureCamModel" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21862]"/>
+									<param name="value" value="ListItem.PictureCaption" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21866]"/>
+									<param name="value" value="ListItem.PictureCategory" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21839]"/>
+									<param name="value" value="ListItem.PictureCCDWidth" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21873]"/>
+									<param name="value" value="ListItem.PictureCity" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21807]"/>
+									<param name="value" value="ListItem.PictureColour" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21839]"/>
+									<param name="value" value="ListItem.PictureComment" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21871]"/>
+									<param name="value" value="ListItem.PictureCopyrightNotice" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21875]"/>
+									<param name="value" value="ListItem.PictureCountry" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21879]"/>
+									<param name="value" value="ListItem.PictureCountryCode" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21869]"/>
+									<param name="value" value="ListItem.PictureCredit" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21821]"/>
+									<param name="value" value="ListItem.PictureDesc" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21838]"/>
+									<param name="value" value="ListItem.PictureDigitalZoom" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21832]"/>
+									<param name="value" value="ListItem.PictureExpMode" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21829]"/>
+									<param name="value" value="ListItem.PictureExposure" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21831]"/>
+									<param name="value" value="ListItem.PictureExposureBias" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21830]"/>
+									<param name="value" value="ListItem.PictureExpTime" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21833]"/>
+									<param name="value" value="ListItem.PictureFlashUsed" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21827]"/>
+									<param name="value" value="ListItem.PictureFocalLen" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21828]"/>
+									<param name="value" value="ListItem.PictureFocusDist" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21840]"/>
+									<param name="value" value="ListItem.PictureGPSLat" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21841]"/>
+									<param name="value" value="ListItem.PictureGPSLon" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21842]"/>
+									<param name="value" value="ListItem.PictureGPSAlt" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21864]"/>
+									<param name="value" value="ListItem.PictureHeadline" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21858]"/>
+									<param name="value" value="ListItem.PictureImageType" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21837]"/>
+									<param name="value" value="ListItem.PictureISO" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21861]"/>
+									<param name="value" value="ListItem.PictureKeywords" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21843]"/>
+									<param name="value" value="ListItem.PictureOrientation" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21808]"/>
+									<param name="value" value="ListItem.PictureProcess" />
+								</include>
+							</control>
+						</control>
+						<control type="group">
+							<top>640</top>
+							<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+							<control type="textbox" id="15506">
+								<width>537</width>
+								<bottom>110</bottom>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox" id="15506">
+								<width>537</width>
+								<bottom>110</bottom>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox">
+								<description>No Content</description>
+								<width>537</width>
+								<bottom>110</bottom>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font27</font>
+								<textcolor>80FFFFFF</textcolor>
+								<label>$LOCALIZE[19055]</label>
+								<visible>String.IsEmpty(Control.GetLabel(15506)) + Control.IsVisible(15506)</visible>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<description>List Albums in Artist</description>
+						<top>800</top>
+						<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						<visible>String.IsEqual(ListItem.DBType,artist)</visible>
+						<control type="group">
+							<description>List Albums in Artist Text</description>
+							<visible>!Skin.HasSetting(hide_albums_text)</visible>
+							<include content="InfoList">
+								<param name="bottom" value="115" />
+								<param name="width" value="545" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="list_id" value="42000" />
+								<param name="item_label" value="$VAR[ListItemYearLabel2Var]$INFO[ListItem.Label]" />
+							</include>
+						</control>
+						<control type="group">
+							<description>List Albums in Artist Thumb</description>
+							<visible>Skin.HasSetting(hide_albums_text)</visible>
+							<include content="InfoListPics">
+								<param name="bottom" value="110" />
+								<param name="width" value="540" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="list_id" value="42002" />
+								<param name="slide2" value="true" />
+								<param name="item_width" value="180" />
+								<param name="img_source" value="$INFO[ListItem.Thumb]" />
+								<param name="img_fallback" value="DefaultAudio.png" />
+							</include>
+						</control>
+					</control>
+					<control type="group">
+						<description>List Songs in Albums</description>
+						<top>560</top>
+						<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						<visible>String.IsEqual(ListItem.DBType,album)</visible>
+						<visible>String.IsEmpty(Control.GetLabel(15505)) + Control.IsVisible(15505)</visible>
+						<include content="InfoList">
+							<param name="list_id" value="43000" />
+							<param name="bottom" value="112" />
+							<param name="width" value="540" />
+							<param name="sortby" value="track" />
+							<param name="sortorder" value="ascending" />
+							<param name="item_label" value="$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]$VAR[ListItemDurationLabel2Var, (,)]" />
+						</include>
+					</control>
+					<control type="group">
+						<description>List Movies in Set</description>
+						<top>800</top>
+						<visible>ListItem.IsCollection</visible>
+						<control type="group">
+							<description>List Movies in Set Text</description>
+							<visible>!Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoList">
+								<param name="bottom" value="115" />
+								<param name="width" value="545" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="list_id" value="5830" />
+							</include>
+						</control>
+						<control type="group">
+							<description>List Movies in Set Posters</description>
+							<left>12</left>
+							<visible>Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoListPics">
+								<param name="bottom" value="110" />
+								<param name="width" value="516" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="list_id" value="6130" />
+								<param name="slide" value="true" />
+							</include>
+						</control>
+					</control>
+					<control type="group">
+						<description>Genre</description>
+						<width>537</width>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="label">
+							<description>Genre</description>
+							<bottom>80</bottom>
+							<height>25</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Genre]</label>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorVar]</textcolor>
+							<visible>!ListItem.IsCollection</visible>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Genre for Collection</description>
+							<bottom>80</bottom>
+							<height>25</height>
+							<align>center</align>
+							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorVar]</textcolor>
+							<visible>ListItem.IsCollection</visible>
+							<scroll>true</scroll>
+						</control>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="ListThumbInfoPanelB">
+		<param name="fallback_image"></param>
+		<param name="width">656</param>
+		<param name="flip_bg">false</param>
+		<definition>
+			<control type="group">
+				<description>ListThumbInfoPanel 54, 50 and other</description>
+				<depth>DepthContentPanel</depth>
+				<include content="ContentPanel">
+					<param name="width" value="$PARAM[width]" />
+					<param name="flipx" value="$PARAM[flip_bg]" />
+				</include>
+				<control type="group">
+					<width>550</width>
+					<left>30</left>
+					<control type="group">
+						<description>Titles</description>
+						<top>120</top>
+						<width>537</width>
 						<control type="textbox">
-							<top>120</top>
-							<width>537</width>
+							<aligny>center</aligny>
+							<align>center</align>
+							<height>100</height>
+							<font>font36_title</font>
+							<label>$VAR[TitleAndYearVar]</label>
+							<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						</control>
+						<control type="textbox">
 							<aligny>center</aligny>
 							<align>center</align>
 							<height>100</height>
 							<font>font36_title</font>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Container.Content(artists)</visible>
+							<visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(albums)]</visible>
 							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
 						<control type="textbox">
-							<top>120</top>
-							<width>537</width>
 							<aligny>center</aligny>
 							<align>center</align>
 							<height>100</height>
@@ -1650,306 +1925,429 @@
 							<visible>Container.Content(albums)</visible>
 							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
-						<control type="textbox" id="15502">
-							<top>240</top>
-							<width>535</width>
-							<bottom>422</bottom>
-							<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-							<label>$VAR[ListBoxInfoVar]</label>
-							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-							<visible>Container.Content(artists)</visible>
-						</control>
-						<control type="textbox" id="15502">
-							<top>240</top>
-							<width>535</width>
-							<bottom>422</bottom>
-							<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-							<label>$VAR[ListBoxInfoVar]</label>
-							<visible>String.IsEqual(Skin.Font, Arial)</visible>
-							<visible>Container.Content(artists)</visible>
-						</control>
-						<control type="textbox" id="15503">
-							<top>240</top>
-							<width>535</width>
-							<bottom>230</bottom>
-							<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-							<label>$VAR[ListBoxInfoVar]</label>
-							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-							<visible>Container.Content(albums)</visible>
-						</control>
-						<control type="textbox" id="15503">
-							<top>240</top>
-							<width>535</width>
-							<bottom>230</bottom>
-							<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-							<label>$VAR[ListBoxInfoVar]</label>
-							<visible>String.IsEqual(Skin.Font, Arial)</visible>
-							<visible>Container.Content(albums)</visible>
-						</control>
-						<control type="textbox">
-							<top>220</top>
-							<width>530</width>
-							<height>413</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font27</font>
-							<textcolor>80FFFFFF</textcolor>
-							<label>$LOCALIZE[19055]</label>
-							<visible>!ListItem.IsParentFolder</visible>
-							<visible>String.IsEmpty(Control.GetLabel(15502)) + Control.IsVisible(15502)</visible>
-							<visible>Container.Content(artists)</visible>
-						</control>
-						<control type="group">
-							<top>240</top>
-							<visible>!String.IsEmpty(ListItem.DBID)</visible>
-							<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-							<control type="group">
-								<top>450</top>
-								<visible>!Skin.HasSetting(hide_albums_text)</visible>						
-								<include content="InfoList">
-									<param name="list_id" value="42000" />
-									<param name="bottom" value="225" />
-									<param name="width" value="545" />
-									<param name="sortby" value="year" />
-									<param name="sortorder" value="ascending" />
-									<param name="item_label" value="$VAR[ListItemYearLabel2Var]$INFO[ListItem.Label]" />
-								</include>
-							</control>
-							<control type="group">
-								<top>450</top>
-								<visible>Skin.HasSetting(hide_albums_text)</visible>
-								<include content="InfoListPics">
-									<param name="bottom" value="220" />
-									<param name="width" value="540" />
-									<param name="sortby" value="year" />
-									<param name="sortorder" value="ascending" />
-									<param name="list_id" value="42001" />
-									<param name="slide2" value="true" />
-									<param name="item_width" value="180" />
-									<param name="img_source" value="$INFO[ListItem.Thumb]" />
-									<param name="img_fallback" value="DefaultAudio.png" />
-								</include>
-							</control>
-						</control>
-						<control type="group">
-							<top>240</top>
-							<visible>!String.IsEmpty(ListItem.DBID)</visible>
-							<visible>String.IsEqual(ListItem.DBType,album)</visible>
-							<visible>String.IsEmpty(Control.GetLabel(15503)) + Control.IsVisible(15503)</visible>
-							<include content="InfoList">
-								<param name="list_id" value="43000" />
-								<param name="bottom" value="232" />
-								<param name="width" value="540" />
-								<param name="sortby" value="track" />
-								<param name="sortorder" value="ascending" />
-								<param name="item_label" value="$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]$VAR[ListItemDurationLabel2Var, (,)]" />
-							</include>
-						</control>
-						<control type="image">
-							<depth>DepthContentPopout</depth>
-							<bottom>110</bottom>
-							<width max="537">auto</width>
-							<height>99</height>
-							<aspectratio align="bottom" aligny="center">keep</aspectratio>
-							<texture background="true">$VAR[LibraryBannerVar]</texture>
-							<bordertexture>colors/white.png</bordertexture>
-							<bordersize>1</bordersize>
-							<visible>!ListItem.IsParentFolder</visible>
-							<visible>!Container.Content(songs)</visible>
-						</control>
 					</control>
 					<control type="group">
-						<visible>!Control.Isvisible(54)</visible>
-						<control type="textbox" id="15504">
-							<top>570</top>
-							<width>535</width>
-							<bottom>300</bottom>
-							<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-							<label>$VAR[ListBoxInfoVar]</label>
-							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-							<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-						</control>
-						<control type="textbox" id="15504">
-							<top>570</top>
-							<width>535</width>
-							<bottom>300</bottom>
-							<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-							<label>$VAR[ListBoxInfoVar]</label>
-							<visible>String.IsEqual(Skin.Font, Arial)</visible>
-							<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-						</control>
-						<control type="textbox" id="15505">
-							<top>570</top>
-							<width>535</width>
-							<bottom>115</bottom>
-							<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-							<label>$VAR[ListBoxInfoVar]</label>
-							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-							<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
-						</control>
-						<control type="textbox" id="15505">
-							<top>570</top>
-							<width>535</width>
-							<bottom>115</bottom>
-							<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-							<label>$VAR[ListBoxInfoVar]</label>
-							<visible>String.IsEqual(Skin.Font, Arial)</visible>
-							<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
-						</control>
-						<control type="textbox">
-							<top>460</top>
-							<width>530</width>
-							<height>413</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font27</font>
-							<textcolor>80FFFFFF</textcolor>
-							<label>$LOCALIZE[19055]</label>
-							<visible>!ListItem.IsParentFolder</visible>
-							<visible>String.IsEmpty(Control.GetLabel(15504)) + Control.IsVisible(15504)</visible>
-							<visible>Container.Content(artists)</visible>
-						</control>
-						<control type="group">
-							<top>560</top>
-							<visible>!String.IsEmpty(ListItem.DBID)</visible>
-							<visible>String.IsEqual(ListItem.DBType,artist)</visible>
-							<control type="group">
-								<top>240</top>
-								<visible>!Skin.HasSetting(hide_albums_text)</visible>
-								<include content="InfoList">
-									<param name="bottom" value="115" />
-									<param name="width" value="545" />
-									<param name="sortby" value="year" />
-									<param name="sortorder" value="ascending" />
-									<param name="list_id" value="42000" />
-									<param name="item_label" value="$VAR[ListItemYearLabel2Var]$INFO[ListItem.Label]" />
-								</include>
-							</control>
-							<control type="group">
-								<top>240</top>
-								<visible>Skin.HasSetting(hide_albums_text)</visible>
-								<include content="InfoListPics">
-									<param name="bottom" value="110" />
-									<param name="width" value="540" />
-									<param name="sortby" value="year" />
-									<param name="sortorder" value="ascending" />
-									<param name="list_id" value="42002" />
-									<param name="slide2" value="true" />
-									<param name="item_width" value="180" />
-									<param name="img_source" value="$INFO[ListItem.Thumb]" />
-									<param name="img_fallback" value="DefaultAudio.png" />
-								</include>
-							</control>
-						</control>
-						<control type="group">
-							<top>560</top>
-							<visible>!String.IsEmpty(ListItem.DBID)</visible>
-							<visible>String.IsEqual(ListItem.DBType,album)</visible>
-							<visible>String.IsEmpty(Control.GetLabel(15505)) + Control.IsVisible(15505)</visible>
-							<include content="InfoList">
-								<param name="list_id" value="43000" />
-								<param name="bottom" value="112" />
-								<param name="width" value="540" />
-								<param name="sortby" value="track" />
-								<param name="sortorder" value="ascending" />
-								<param name="item_label" value="$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]$VAR[ListItemDurationLabel2Var, (,)]" />
-							</include>
-						</control>
-					</control>
-					<control type="label">
-						<bottom>80</bottom>
-						<width>537</width>
-						<height>25</height>
-						<align>center</align>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>font12</font>
-						<scroll>true</scroll>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<visible>!Container.Content(songs)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<left>30</left>
-					<top>620</top>
-					<visible>ListItem.IsCollection</visible>
-					<control type="textbox" id="15500">
-						<width>537</width>
-						<bottom>300</bottom>
-						<label>$VAR[SetNumberVar]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-						<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="textbox" id="15500">
-						<width>537</width>
-						<bottom>298</bottom>
-						<label>$VAR[SetNumberVar]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-						<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="textbox" id="15501">
-						<width>537</width>
-						<bottom>300</bottom>
-						<label>$VAR[SetNumberVar]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][CR][CR]</label>
-						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-						<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="textbox" id="15501">
-						<width>537</width>
-						<bottom>298</bottom>
-						<label>$VAR[SetNumberVar]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][CR][CR]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-						<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="group">
-						<top>180</top>
-						<visible>!Skin.HasSetting(hide_collections_text)</visible>
-						<include content="InfoList">
-							<param name="bottom" value="115" />
-							<param name="width" value="545" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="ascending" />
-							<param name="list_id" value="5830" />
-						</include>
-					</control>
-					<control type="group">
-						<top>180</top>
-						<left>12</left>
-						<visible>Skin.HasSetting(hide_collections_text)</visible>
-						<include content="InfoListPics">
-							<param name="bottom" value="110" />
-							<param name="width" value="516" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="ascending" />
-							<param name="list_id" value="6130" />
-							<param name="slide" value="true" />
-						</include>
-					</control>
-					<control type="label">
-						<bottom>80</bottom>
-						<width>537</width>
-						<height>25</height>
-						<align>center</align>
-						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
-						<font>font12</font>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<scroll>true</scroll>
-					</control>
-				</control>
-				<control type="group">
-					<visible>!ListItem.IsCollection + [[String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)] | [String.IsEmpty(Control.GetLabel(15501)) + Control.IsVisible(15501)]]</visible>
-					<control type="textbox">
-						<left>30</left>
-						<top>460</top>
-						<width>530</width>
-						<height>413</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font27</font>
-						<textcolor>80FFFFFF</textcolor>
-						<label>$LOCALIZE[19055]</label>
+						<description>Contents</description>
+						<top>240</top>
 						<visible>!ListItem.IsParentFolder</visible>
-						<visible>!Container.Content(images) | !String.IsEmpty(ListItem.Plot)</visible>
-						<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
+						<control type="group">
+							<visible>!ListItem.IsCollection</visible>
+							<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+							<control type="textbox" id="16500">
+								<width>537</width>
+								<bottom>100</bottom>
+								<label>$VAR[PlotAndTagVar]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>[String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox" id="16500">
+								<width>537</width>
+								<bottom>116</bottom>
+								<label>$VAR[PlotAndTagVar]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>[String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+								<visible>String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox" id="16501">
+								<width>537</width>
+								<bottom>225</bottom>
+								<label>$VAR[PlotAndTagVar]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox" id="16501">
+								<width>537</width>
+								<bottom>240</bottom>
+								<label>$VAR[PlotAndTagVar]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>![String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))+ String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
+								<visible>String.IsEqual(Skin.Font, Arial)</visible>
+							</control>
+							<control type="textbox">
+								<top>-100</top>
+								<description>No Content</description>
+								<width>537</width>
+								<bottom>341</bottom>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font27</font>
+								<textcolor>80FFFFFF</textcolor>
+								<label>$LOCALIZE[19055]</label>
+								<visible>[String.IsEmpty(Control.GetLabel(16500)) + Control.IsVisible(16500)] | [String.IsEmpty(Control.GetLabel(16501)) + Control.IsVisible(16501)]</visible>
+							</control>
+						</control>
+						<control type="group">
+							<visible>ListItem.IsCollection</visible>
+							<visible>Container.Content(movies) | Container.Content(sets)</visible>
+							<control type="textbox" id="16502">
+								<width>537</width>
+								<bottom>424</bottom>
+								<label>$INFO[ListItem.Plot]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+							</control>
+							<control type="textbox" id="16502">
+								<width>537</width>
+								<bottom>426</bottom>
+								<label>$INFO[ListItem.Plot]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+							</control>
+							<control type="textbox" id="16503">
+								<width>537</width>
+								<bottom>424</bottom>
+								<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
+								<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+							</control>
+							<control type="textbox" id="16503">
+								<width>537</width>
+								<bottom>426</bottom>
+								<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
+								<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+								<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+							</control>
+							<control type="textbox">
+								<description>No Content</description>
+								<width>537</width>
+								<bottom>115</bottom>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font27</font>
+								<textcolor>80FFFFFF</textcolor>
+								<label>$LOCALIZE[19055]</label>
+								<visible>[String.IsEmpty(Control.GetLabel(16502)) + Control.IsVisible(16502)] | [String.IsEmpty(Control.GetLabel(16503)) + Control.IsVisible(16503)]</visible>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(artists) | Container.Content(albums)</visible>
+							<control type="textbox" id="16504">
+								<width>537</width>
+								<bottom>422</bottom>
+								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+								<visible>Container.Content(artists)</visible>
+							</control>
+							<control type="textbox" id="16504">
+								<width>537</width>
+								<bottom>422</bottom>
+								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>String.IsEqual(Skin.Font, Arial)</visible>
+								<visible>Container.Content(artists)</visible>
+							</control>
+							<control type="textbox" id="16505">
+								<width>537</width>
+								<bottom>230</bottom>
+								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+								<visible>Container.Content(albums)</visible>
+							</control>
+							<control type="textbox" id="16505">
+								<width>537</width>
+								<bottom>230</bottom>
+								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+								<label>$VAR[ListBoxInfoVar]</label>
+								<visible>String.IsEqual(Skin.Font, Arial)</visible>
+								<visible>Container.Content(albums)</visible>
+							</control>
+							<control type="textbox">
+								<description>No Content</description>
+								<width>537</width>
+								<bottom>422</bottom>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font27</font>
+								<textcolor>80FFFFFF</textcolor>
+								<label>$LOCALIZE[19055]</label>
+								<visible>String.IsEmpty(Control.GetLabel(16504)) + Control.IsVisible(16504)</visible>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(images)</visible>
+							<control type="textbox">
+								<width>537</width>
+								<bottom>341</bottom>
+								<height>413</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font27</font>
+								<textcolor>80FFFFFF</textcolor>
+								<label>$LOCALIZE[19055]</label>
+								<visible>ListItem.IsFolder</visible>
+							</control>
+							<control type="grouplist">
+								<width>537</width>
+								<height>760</height>
+								<orientation>vertical</orientation>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21820]"/>
+									<param name="value" value="ListItem.PictureDatetime" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21805]"/>
+									<param name="value" value="ListItem.PictureResolution" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21826]"/>
+									<param name="value" value="ListItem.PictureAperture" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21863]"/>
+									<param name="value" value="ListItem.PictureAuthor" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21867]"/>
+									<param name="value" value="ListItem.PictureByline" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21868]"/>
+									<param name="value" value="ListItem.PictureBylineTitle" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[31041]"/>
+									<param name="value" value="ListItem.PictureCamMake" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21823]"/>
+									<param name="value" value="ListItem.PictureCamModel" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21862]"/>
+									<param name="value" value="ListItem.PictureCaption" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21866]"/>
+									<param name="value" value="ListItem.PictureCategory" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21839]"/>
+									<param name="value" value="ListItem.PictureCCDWidth" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21873]"/>
+									<param name="value" value="ListItem.PictureCity" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21807]"/>
+									<param name="value" value="ListItem.PictureColour" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21839]"/>
+									<param name="value" value="ListItem.PictureComment" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21871]"/>
+									<param name="value" value="ListItem.PictureCopyrightNotice" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21875]"/>
+									<param name="value" value="ListItem.PictureCountry" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21879]"/>
+									<param name="value" value="ListItem.PictureCountryCode" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21869]"/>
+									<param name="value" value="ListItem.PictureCredit" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21821]"/>
+									<param name="value" value="ListItem.PictureDesc" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21838]"/>
+									<param name="value" value="ListItem.PictureDigitalZoom" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21832]"/>
+									<param name="value" value="ListItem.PictureExpMode" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21829]"/>
+									<param name="value" value="ListItem.PictureExposure" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21831]"/>
+									<param name="value" value="ListItem.PictureExposureBias" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21830]"/>
+									<param name="value" value="ListItem.PictureExpTime" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21833]"/>
+									<param name="value" value="ListItem.PictureFlashUsed" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21827]"/>
+									<param name="value" value="ListItem.PictureFocalLen" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21828]"/>
+									<param name="value" value="ListItem.PictureFocusDist" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21840]"/>
+									<param name="value" value="ListItem.PictureGPSLat" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21841]"/>
+									<param name="value" value="ListItem.PictureGPSLon" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21842]"/>
+									<param name="value" value="ListItem.PictureGPSAlt" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21864]"/>
+									<param name="value" value="ListItem.PictureHeadline" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21858]"/>
+									<param name="value" value="ListItem.PictureImageType" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21837]"/>
+									<param name="value" value="ListItem.PictureISO" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21861]"/>
+									<param name="value" value="ListItem.PictureKeywords" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21843]"/>
+									<param name="value" value="ListItem.PictureOrientation" />
+								</include>
+								<include content="PicsInfoLine">
+									<param name="label" value="$LOCALIZE[21808]"/>
+									<param name="value" value="ListItem.PictureProcess" />
+								</include>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<description>List Albums in Artist</description>
+						<top>690</top>
+						<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						<visible>String.IsEqual(ListItem.DBType,artist)</visible>
+						<control type="group">
+							<description>List Albums in Artist Text</description>
+							<visible>!Skin.HasSetting(hide_albums_text)</visible>
+							<include content="InfoList">
+								<param name="list_id" value="42000" />
+								<param name="bottom" value="225" />
+								<param name="width" value="545" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="item_label" value="$VAR[ListItemYearLabel2Var]$INFO[ListItem.Label]" />
+							</include>
+						</control>
+						<control type="group">
+							<description>List Albums in Artist Thumb</description>
+							<visible>Skin.HasSetting(hide_albums_text)</visible>
+							<include content="InfoListPics">
+								<param name="bottom" value="220" />
+								<param name="width" value="540" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="list_id" value="42001" />
+								<param name="slide2" value="true" />
+								<param name="item_width" value="180" />
+								<param name="img_source" value="$INFO[ListItem.Thumb]" />
+								<param name="img_fallback" value="DefaultAudio.png" />
+							</include>
+						</control>
+					</control>
+					<control type="group">
+						<description>List Songs in Albums</description>
+						<top>240</top>
+						<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						<visible>String.IsEqual(ListItem.DBType,album)</visible>
+						<visible>String.IsEmpty(Control.GetLabel(16505)) + Control.IsVisible(16505)</visible>
+						<include content="InfoList">
+							<param name="list_id" value="43000" />
+							<param name="bottom" value="232" />
+							<param name="width" value="540" />
+							<param name="sortby" value="track" />
+							<param name="sortorder" value="ascending" />
+							<param name="item_label" value="$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]$VAR[ListItemDurationLabel2Var, (,)]" />
+						</include>
+					</control>
+					<control type="group">
+						<description>List Movies in Set</description>
+						<top>690</top>
+						<visible>ListItem.IsCollection</visible>
+						<visible>Container.Content(movies) | Container.Content(sets)</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="group">
+							<description>List Movies in Set Text</description>
+							<visible>!Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoList">
+								<param name="bottom" value="225" />
+								<param name="width" value="545" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+							</include>
+						</control>
+						<control type="group">
+							<description>List Movies in Set Posters</description>
+							<left>12</left>
+							<visible>Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoListPics">
+								<param name="bottom" value="220" />
+								<param name="width" value="516" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="slide" value="true" />
+							</include>
+						</control>
+					</control>
+					<control type="image">
+						<description>Banner</description>
+						<depth>DepthContentPopout</depth>
+						<bottom>110</bottom>
+						<width max="537">auto</width>
+						<height>99</height>
+						<aspectratio align="bottom" aligny="center">keep</aspectratio>
+						<texture background="true">$VAR[LibraryBannerVar]</texture>
+						<bordertexture>colors/white.png</bordertexture>
+						<bordersize>1</bordersize>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="group">
+						<description>Genre</description>
+						<width>537</width>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="label">
+							<description>Genre</description>
+							<bottom>80</bottom>
+							<height>25</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Genre]</label>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorVar]</textcolor>
+							<visible>!ListItem.IsCollection</visible>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Genre for Collection</description>
+							<bottom>80</bottom>
+							<height>25</height>
+							<align>center</align>
+							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
+							<font>font12</font>
+							<textcolor>$VAR[MainColorVar]</textcolor>
+							<visible>ListItem.IsCollection</visible>
+							<scroll>true</scroll>
+						</control>
 					</control>
 				</control>
 			</control>
@@ -2225,7 +2623,7 @@
 					<right>10</right>
 					<width>640</width>
 					<bottom>238</bottom>
-					<label>$VAR[SetNumberVar]$INFO[ListItem.Plot][CR][CR]</label>
+					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 				</control>
@@ -2235,7 +2633,7 @@
 					<right>10</right>
 					<width>640</width>
 					<bottom>235</bottom>
-					<label>$VAR[SetNumberVar]$INFO[ListItem.Plot][CR][CR]</label>
+					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 				</control>
@@ -2245,7 +2643,7 @@
 					<right>10</right>
 					<width>640</width>
 					<bottom>238</bottom>
-					<label>$VAR[SetNumberVar]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][CR][CR]</label>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
 					<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
 				</control>
@@ -2255,7 +2653,7 @@
 					<right>10</right>
 					<width>640</width>
 					<bottom>235</bottom>
-					<label>$VAR[SetNumberVar]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][CR][CR]</label>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
 					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
 				</control>

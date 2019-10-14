@@ -209,18 +209,15 @@
 		<value condition="Window.IsActive(pictures)">$VAR[ListItemSizeLabelVar]$VAR[ListItemPictureApertureLabelVar]$VAR[ListItemPictureFocalLenLabelVar]$VAR[ListItemPictureExpTimeLabelVar]$VAR[ListItemDateLabelVar]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$VAR[MusicInfoTextArtistVar]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="!ListItem.IsParentFolder">$VAR[SetNumberVar]$VAR[PlotAndTagVar]</value>
+		<value condition="!ListItem.IsParentFolder">$VAR[PlotAndTagVar]</value>
 	</variable>
 	<variable name="PlotAndTagVar">
 		<value condition="!String.IsEmpty(ListItem.Plot)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR]][/COLOR]$INFO[ListItem.Plot]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
 	</variable>
-	<variable name="SetNumberVar">
-		<value>[COLOR $VAR[MainColorVar]]$INFO[Window(Home).Property(SkinHelper.ListItem.Count),$LOCALIZE[36901]: ,[CR]][/COLOR]</value>
-	</variable>
 	<variable name="MusicInfoTextArtistVar">
-		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">[COLOR $VAR[MainColorVar]]$VAR[AlbumsCountVar,,[CR]][/COLOR]$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="String.IsEmpty(ListItem.Property(Artist_Description)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">[COLOR $VAR[MainColorVar]]$VAR[AlbumsCountVar,,[CR]][/COLOR]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="String.IsEmpty(ListItem.Property(Artist_Description)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
 	</variable>
 	<variable name="FileBrowserSelectLabelVar">
 		<value condition="Control.IsVisible(450)">[COLOR $VAR[MainColorVar]]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
@@ -874,6 +871,10 @@
 	</variable>
 	<variable name="StudiosImagesNameVar">
 		<value condition="!String.IsEmpty(Skin.String(StudiosImages.name))">$INFO[Skin.String(StudiosImages.name)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="RecordLabelsNameVar">
+		<value condition="!String.IsEmpty(Skin.String(RecordLabels.name))">$INFO[Skin.String(RecordLabels.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="LanguageFlagsNameVar">

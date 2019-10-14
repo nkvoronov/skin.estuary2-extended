@@ -686,6 +686,10 @@ msgctxt "#43023"
 msgid "Choose background pattern"
 msgstr "Выберите шаблон фона"
 
+msgctxt "#43024"
+msgid "Choose Records labels icons pack"
+msgstr "Выбрать пакет иконок звукозаписывающих лейблов"
+
 msgctxt "#43026"
 msgid "Color Primary Background"
 msgstr "Цвет фона"

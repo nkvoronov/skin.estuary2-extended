@@ -876,6 +876,10 @@ msgctxt "#43023"
 msgid "Choose background pattern"
 msgstr ""
 
+msgctxt "#43024"
+msgid "Choose Records labels icons pack"
+msgstr ""
+
 msgctxt "#43026"
 msgid "Color Primary Background"
 msgstr ""

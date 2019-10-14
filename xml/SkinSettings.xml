@@ -217,57 +217,64 @@
 				</include>
 				<include content="ResourceSelect">
 					<param name="control_id" value="210" />
+					<param name="label" value="$LOCALIZE[43024]" />
+					<param name="label2" value="$VAR[RecordLabelsNameVar]" />
+					<param name="property" value="RecordLabels" />
+					<param name="type" value="resource.images.recordlabels" />
+				</include>				
+				<include content="ResourceSelect">
+					<param name="control_id" value="211" />
 					<param name="label" value="$LOCALIZE[43014]" />
 					<param name="label2" value="$VAR[LanguageFlagsNameVar]" />
 					<param name="property" value="LanguageFlags" />
 					<param name="type" value="resource.images.languageflags" />
 				</include>
 				<include content="ResourceSelect">
-					<param name="control_id" value="211" />
+					<param name="control_id" value="212" />
 					<param name="label" value="$LOCALIZE[43012]" />
 					<param name="label2" value="$VAR[MovieGenreIconsNameVar]" />
 					<param name="property" value="MovieGenreIcons" />
 					<param name="type" value="resource.images.moviegenreicons" />
 				</include>
 				<include content="ResourceSelect">
-					<param name="control_id" value="212" />
+					<param name="control_id" value="213" />
 					<param name="label" value="$LOCALIZE[43033]" />
 					<param name="label2" value="$VAR[MusicGenreIconsNameVar]" />
 					<param name="property" value="MusicGenreIcons" />
 					<param name="type" value="resource.images.musicgenreicons" />
 				</include>
 				<include content="ResourceSelect">
-					<param name="control_id" value="213" />
+					<param name="control_id" value="214" />
 					<param name="label" value="$LOCALIZE[43015]" />
 					<param name="label2" value="$VAR[WeatherIconsNameVar]" />
 					<param name="property" value="WeatherIcons" />
 					<param name="type" value="resource.images.weathericons" />
 				</include>
-				<control type="image" id="214">
+				<control type="image" id="215">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
 				<include content="SetSkinSetting">
-					<param name="control_id" value="215" />
+					<param name="control_id" value="216" />
 					<param name="label" value="$LOCALIZE[44101]" />
 					<param name="label2" value="$VAR[SkinSettingPopupPositionNameVar]" />
 					<param name="property" value="PopupPosition" />
 					<param name="header" value="$LOCALIZE[44101]" />
 				</include>
-				<control type="radiobutton" id="216">
+				<control type="radiobutton" id="217">
 					<description>Hide Popup</description>
 					<label>$LOCALIZE[44102]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(hide_popup)</onclick>
 					<selected>Skin.HasSetting(hide_popup)</selected>
 				</control>
-				<control type="image" id="217">
+				<control type="image" id="218">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="218">
+				<control type="button" id="219">
 					<description>Busy Texture</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43016]</label>
@@ -275,19 +282,19 @@
 					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=busytexture)</onclick>
 				</control>
-				<control type="image" id="219">
+				<control type="image" id="220">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="radiobutton" id="220">
+				<control type="radiobutton" id="221">
 					<description>Enable Custom List Addons</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43017]</label>
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
 				</control>
-				<control type="radiobutton" id="221">
+				<control type="radiobutton" id="222">
 					<description>Enable Custom List Channels</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43018]</label>
@@ -296,12 +303,12 @@
 					<visible>System.HasAddon(script.pvr.favourites)</visible>
 					<visible>PVR.HasTVChannels | PVR.HasRadioChannels</visible>
 				</control>
-				<control type="image" id="222">
+				<control type="image" id="223">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="223">
+				<control type="button" id="224">
 					<description>Startup Focus Control</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44124]</label>
@@ -309,69 +316,69 @@
 					<onclick condition="String.IsEmpty(Skin.String(custom_focus))">Skin.SetString(custom_focus,-1,)</onclick>
 					<onclick>Skin.SetNumeric(custom_focus)</onclick>
 				</control>
-				<control type="image" id="224">
+				<control type="image" id="225">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="label" id="225">
+				<control type="label" id="226">
 					<description>Logo Label</description>
 					<include>DefaultSettingLabel</include>
 					<label>$LOCALIZE[44138]</label>
 				</control>
-				<control type="radiobutton" id="226">
+				<control type="radiobutton" id="227">
 					<description>Hide Logo Home</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44139]</label>
 					<onclick>Skin.ToggleSetting(hide_logo_home)</onclick>
 					<selected>!Skin.HasSetting(hide_logo_home)</selected>
 				</control>
-				<control type="radiobutton" id="227">
+				<control type="radiobutton" id="228">
 					<description>Hide Logo Play</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44142]</label>
 					<onclick>Skin.ToggleSetting(hide_logo_play)</onclick>
 					<selected>!Skin.HasSetting(hide_logo_play)</selected>
 				</control>
-				<control type="radiobutton" id="228">
+				<control type="radiobutton" id="229">
 					<description>Hide Logo Info</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44143]</label>
 					<onclick>Skin.ToggleSetting(hide_logo_info)</onclick>
 					<selected>!Skin.HasSetting(hide_logo_info)</selected>
 				</control>
-				<control type="radiobutton" id="229">
+				<control type="radiobutton" id="230">
 					<description>Hide Logo Library</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44140]</label>
 					<onclick>Skin.ToggleSetting(hide_logo_library)</onclick>
 					<selected>!Skin.HasSetting(hide_logo_library)</selected>
 				</control>
-				<control type="radiobutton" id="230">
+				<control type="radiobutton" id="231">
 					<description>Hide Logo Global Search</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44141]</label>
 					<onclick>Skin.ToggleSetting(hide_logo_search)</onclick>
 					<selected>!Skin.HasSetting(hide_logo_search)</selected>
 				</control>
-				<control type="image" id="231">
+				<control type="image" id="232">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="label" id="232">
+				<control type="label" id="233">
 					<description>Disc Art Label</description>
 					<include>DefaultSettingLabel</include>
 					<label>$LOCALIZE[40319]</label>
 				</control>
-				<control type="radiobutton" id="233">
+				<control type="radiobutton" id="234">
 					<description>Hide Disc Art Home</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44139]</label>
 					<onclick>Skin.ToggleSetting(hide_disc_art_home)</onclick>
 					<selected>!Skin.HasSetting(hide_disc_art_home)</selected>
 				</control>
-				<control type="radiobutton" id="234">
+				<control type="radiobutton" id="235">
 					<description>Disc Art Home Overlay</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[40320]</label>
@@ -379,14 +386,14 @@
 					<selected>!Skin.HasSetting(home_disc_art_overlay)</selected>
 					<visible>!Skin.HasSetting(hide_disc_art_home)</visible>
 				</control>
-				<control type="radiobutton" id="235">
+				<control type="radiobutton" id="236">
 					<description>Hide Disc Art Library</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44140]</label>
 					<onclick>Skin.ToggleSetting(hide_disc_art_library)</onclick>
 					<selected>!Skin.HasSetting(hide_disc_art_library)</selected>
 				</control>
-				<control type="radiobutton" id="236">
+				<control type="radiobutton" id="237">
 					<description>Disc Art Library Overlay</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[40320]</label>
@@ -394,38 +401,38 @@
 					<selected>!Skin.HasSetting(library_disc_art_overlay)</selected>
 					<visible>!Skin.HasSetting(hide_disc_art_library)</visible>
 				</control>
-				<control type="image" id="237">
+				<control type="image" id="238">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="radiobutton" id="238">
+				<control type="radiobutton" id="239">
 					<description>Std List Set</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40321]</label>
 					<onclick>Skin.ToggleSetting(hide_collections_text)</onclick>
 					<selected>!Skin.HasSetting(hide_collections_text)</selected>
 				</control>
-				<control type="radiobutton" id="239">
+				<control type="radiobutton" id="240">
 					<description>Std Albums List</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40322]</label>
 					<onclick>Skin.ToggleSetting(hide_albums_text)</onclick>
 					<selected>!Skin.HasSetting(hide_albums_text)</selected>
 				</control>
-				<control type="radiobutton" id="240">
+				<control type="radiobutton" id="241">
 					<description>Show Borders</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44170]</label>
 					<onclick>Skin.ToggleSetting(show_borders)</onclick>
 					<selected>Skin.HasSetting(show_borders)</selected>
 				</control>
-				<control type="image" id="241">
+				<control type="image" id="242">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="radiobutton" id="242">
+				<control type="radiobutton" id="243">
 					<description>Skin Toggle Debug</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43019]</label>
@@ -434,9 +441,9 @@
 					<onclick>Skin.ToggleDebug</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
-					<param name="control_id1" value="243" />
-					<param name="control_id2" value="244" />
-					<param name="action" value="Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(hide_widget_labels)|Skin.Reset(use_smaller_categories)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(custom_focus)|Skin.Reset(hide_logo_home)|Skin.Reset(hide_logo_play)|Skin.Reset(hide_logo_info)|Skin.Reset(hide_logo_library)|Skin.Reset(hide_logo_search)|Skin.Reset(hide_disc_art_home)|Skin.Reset(home_disc_art_overlay)|Skin.Reset(hide_disc_art_library)|Skin.Reset(library_disc_art_overlay)|Skin.Reset(hide_collections_text)|Skin.Reset(hide_albums_text)|Skin.Reset(show_borders)|Skin.Reset(Skin.ToggleDebug)" />
+					<param name="control_id1" value="244" />
+					<param name="control_id2" value="245" />
+					<param name="action" value="Skin.Reset(full_screen_clock)|Skin.Reset(slideshow_info)|Skin.Reset(enable_home_stats)|Skin.Reset(widget_limititems)|Skin.Reset(hide_widget_labels)|Skin.Reset(use_smaller_categories)|Skin.Reset(StudiosImages.name)|Skin.Reset(StudiosImages.ext)|Skin.Reset(StudiosImages.path)|Skin.Reset(RecordLabels.name)|Skin.Reset(RecordLabels.ext)|Skin.Reset(RecordLabels.path)|Skin.Reset(LanguageFlags.name)|Skin.Reset(LanguageFlags.ext)|Skin.Reset(LanguageFlags.path)|Skin.Reset(MovieGenreIcons.name)|Skin.Reset(MovieGenreIcons.ext)|Skin.Reset(MovieGenreIcons.path)|Skin.Reset(MusicGenreIcons.name)|Skin.Reset(MusicGenreIcons.ext)|Skin.Reset(MusicGenreIcons.path)|Skin.Reset(WeatherIcons.name)|Skin.Reset(WeatherIcons.ext)|Skin.Reset(WeatherIcons.path)|Skin.Reset(WeatherIcons.multi)|Skin.Reset(PopupPosition)|Skin.Reset(PopupPosition.label)|Skin.Reset(hide_popup)|RunScript(script.skin.helper.service,action=reset,filter=SpinnerTexture,silent=true)|Skin.Reset(enable_custom_list_addons)|Skin.Reset(enable_custom_list_channels)|Skin.Reset(custom_focus)|Skin.Reset(hide_logo_home)|Skin.Reset(hide_logo_play)|Skin.Reset(hide_logo_info)|Skin.Reset(hide_logo_library)|Skin.Reset(hide_logo_search)|Skin.Reset(hide_disc_art_home)|Skin.Reset(home_disc_art_overlay)|Skin.Reset(hide_disc_art_library)|Skin.Reset(library_disc_art_overlay)|Skin.Reset(hide_collections_text)|Skin.Reset(hide_albums_text)|Skin.Reset(show_borders)|Skin.Reset(Skin.ToggleDebug)" />
 				</include>
 			</control>
 			<control type="grouplist" id="300">

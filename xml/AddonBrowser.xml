@@ -19,7 +19,7 @@
 				<visible>Control.IsVisible(55)</visible>
 				<visible>Container.Content(addons) | Container.Content()</visible>
 				<include>Visible_Left</include>
-				<include content="ListThumbInfoPanel">
+				<include content="ListThumbInfoPanelA">
 					<param name="fallback_image" value="DefaultAddon.png" />
 				</include>
 			</control>

@@ -128,7 +128,7 @@
 				<right>0</right>
 				<width>593</width>
 				<include>OpenClose_Right</include>
-				<include content="ListThumbInfoPanel">
+				<include content="ListThumbInfoPanelA">
 					<param name="flip_bg" value="true" />
 				</include>
 				<control type="scrollbar" id="60">
