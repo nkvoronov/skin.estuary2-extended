@@ -54,6 +54,7 @@
 					<texture>$VAR[LibraryClearLogoVar]</texture>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<visible>![Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]</visible>
+					<visible>!Container.Content()</visible>
 				</control>
 				<control type="image">
 					<top>0</top>
