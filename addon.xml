@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary2-extended-s" version="2.0.25.230" name="Estuary v2 Extended Shortcuts" provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON, Guilouz">
+<addon id="skin.estuary2-extended-s" version="2.0.25.231" name="Estuary v2 Extended Shortcuts" provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON, Guilouz">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 		<import addon="script.pvr.favourites" version="2.0.0"/>
@@ -29,6 +29,9 @@
 		<summary lang="uk_UA">Обкладинка Estuary v2 Extended Shortcuts від phil65, Piers, YLLOW_DRAGON, Guilouz.</summary>
 		<description lang="en_GB">Estuary v2 Extended Shortcuts  - is the modernized skin for Kodi.</description>
 		<description lang="ru_RU">Estuary v2 Extended Shortcuts - это модернизированная обложка KODI.</description>
+		<description lang="uk_UA">Estuary v2 Extended Shortcuts — це модернізована обкладинка KODI.</description>
+		<disclaimer lang="en_GB">Estuary v2 Extended Shortcuts  - is the modernized skin for Kodi.</disclaimer>
+		<disclaimer lang="ru_RU">Estuary v2 Extended Shortcuts - это модернизированная обложка KODI.</disclaimer>
 		<disclaimer lang="uk_UA">Estuary v2 Extended Shortcuts — це модернізована обкладинка KODI.</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
