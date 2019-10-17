@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: Estuary v2 Extended Shortcuts
 # Addon id: skin.estuary2-extended-s
-# Addon Provider: phil65, Ichabod Fletchman, YLLOW_DRAGON
+# Addon Provider: phil65, Ichabod Fletchman, YLLOW_DRAGON, Guilouz
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"

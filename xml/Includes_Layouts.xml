@@ -1310,18 +1310,30 @@
 	</include>
 	<include name="ListThumbInfoPanelA">
 		<param name="fallback_image"></param>
+		<param name="left_image">0</param>
+		<param name="left_text">30</param>
+		<param name="top">-20</param>
+		<param name="left">0</param>
 		<param name="width">656</param>
 		<param name="flip_bg">false</param>
+		<param name="search">false</param>
 		<definition>
 			<control type="group">
 				<description>ListThumbInfoPanel 55</description>
 				<depth>DepthContentPanel</depth>
-				<include content="ContentPanel">
+				<include content="ContentPanel" condition="!$PARAM[search]">
+					<param name="width" value="$PARAM[width]" />
+					<param name="flipx" value="$PARAM[flip_bg]" />
+				</include>
+				<include content="ContentPanel" condition="$PARAM[search]">
+					<param name="top" value="$PARAM[top]" />
+					<param name="left" value="$PARAM[left]" />
 					<param name="width" value="$PARAM[width]" />
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
 				<control type="group">
 					<description>Preview picture</description>
+					<left>$PARAM[left_image]</left>
 					<control type="group">
 						<description>Images</description>
 						<visible>Container.Content(images)</visible>
@@ -1431,7 +1443,7 @@
 				</control>
 				<control type="group">
 					<width>550</width>
-					<left>30</left>
+					<left>$PARAM[left_text]</left>
 					<control type="group">
 						<description>Contents</description>
 						<visible>!ListItem.IsParentFolder</visible>

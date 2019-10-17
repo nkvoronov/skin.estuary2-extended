@@ -349,6 +349,7 @@
 						<top>150</top>
 						<left>40</left>
 						<include content="SquareLayout">
+							<param name="img_top" value="8" />
 							<param name="img_ratio" value="keep" />
 						</include>
 					</control>
@@ -362,6 +363,7 @@
 						<left>40</left>
 						<include content="SquareLayout">
 							<param name="focused" value="true" />
+							<param name="img_top" value="8" />
 							<param name="img_ratio" value="keep" />
 						</include>
 					</control>
@@ -375,6 +377,7 @@
 							<param name="img_height" value="70%" />
 							<param name="img_ratio" value="keep" />
 							<param name="txt_height" value="20%" />
+							<param name="progress" value="true" />
 						</include>
 					</control>
 				</itemlayout>
@@ -391,6 +394,7 @@
 							<param name="img_height" value="70%" />
 							<param name="img_ratio" value="keep" />
 							<param name="txt_height" value="20%" />
+							<param name="progress" value="true" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -496,15 +500,17 @@
 			</control>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
+				<include>OpenClose_Right</include>
 				<visible>Control.IsVisible(51)</visible>
 				<control type="group">
 					<right>-20</right>
 					<width>634</width>
-					<include content="ContentPanel">
-						<param name="left" value="0" />
-						<param name="top" value="-20" />
+					<include content="ListThumbInfoPanelA">
+						<param name="left_image" value="30" />
+						<param name="left_text" value="60" />
 						<param name="width" value="656" />
 						<param name="flipx" value="true" />
+						<param name="search" value="true" />
 					</include>
 					<control type="scrollbar" id="51600">
 						<left>20</left>
@@ -516,84 +522,6 @@
 						<orientation>vertical</orientation>
 						<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(51600)">conditional</animation>
 						<hitrect x="-30" y="0" w="120" h="100%" />
-					</control>
-					<control type="group">
-						<left>30</left>
-						<control type="group">
-							<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-							<include content="PosterLayout">
-								<param name="top" value="116" />
-								<param name="left" value="96" />
-								<param name="width" value="387" />
-								<param name="height" value="517" />
-								<param name="border" value="false" />
-								<param name="watched" value="false" />
-								<param name="img_height" value="100%" />
-								<param name="txt_label" value="false" />
-							</include>
-						</control>
-						<control type="group">
-							<visible>Container.Content(episodes) | Container.Content(musicvideos)</visible>
-							<include content="ThumbLayout">
-								<param name="top" value="140" />
-								<param name="left" value="30" />
-								<param name="width" value="530" />
-								<param name="height" value="470" />
-								<param name="watched" value="false" />
-								<param name="border" value="false" />
-								<param name="thumb_label" value="" />
-								<param name="img_height" value="100%" />
-								<param name="img_ratio" value="keep" />
-								<param name="txt_label" value="false" />
-							</include>
-						</control>
-						<control type="group">
-							<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
-							<include content="SquareLayout">
-								<param name="top" value="140" />
-								<param name="left" value="30" />
-								<param name="width" value="530" />
-								<param name="height" value="470" />
-								<param name="border" value="false" />
-								<param name="img_height" value="100%" />
-								<param name="img_ratio" value="keep" />
-								<param name="txt_label" value="false" />
-							</include>
-						</control>
-						<control type="group">
-							<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
-							<include content="IconLayout">
-								<param name="top" value="140" />
-								<param name="left" value="30" />
-								<param name="width" value="530" />
-								<param name="height" value="470" />
-								<param name="border" value="false" />
-								<param name="img_height" value="100%" />
-								<param name="txt_ratio" value="keep" />
-								<param name="txt_label" value="false" />
-							</include>
-						</control>
-						<control type="textbox" id="15500">
-							<left>30</left>
-							<top>640</top>
-							<width>525</width>
-							<bottom>117</bottom>
-							<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
-							<label>$VAR[ListBoxInfoVar]</label>
-							<visible>!Container.Content() | !String.IsEmpty(ListItem.Plot)</visible>
-						</control>
-						<control type="textbox">
-							<left>30</left>
-							<top>460</top>
-							<width>530</width>
-							<height>413</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font27</font>
-							<textcolor>80FFFFFF</textcolor>
-							<label>$LOCALIZE[19055]</label>
-							<visible>String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)</visible>
-						 </control>
 					</control>
 				</control>
 			</control>
@@ -612,6 +540,18 @@
 			<param name="breadcrumbs_label" value="$LOCALIZE[137]" />
 		</include>
 		<include>BottomBar</include>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<visible>!Skin.HasSetting(hide_logo_search)</visible>
+			<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+			<control type="image">
+				<top>0</top>
+				<height>140</height>
+				<texture>$VAR[LibraryClearLogoVar]</texture>
+				<aspectratio aligny="center" align="center">keep</aspectratio>
+				<visible>!Container.Content()</visible>
+			</control>
+		</control>
 		<control type="group">
 			<depth>DepthBars</depth>
 			<bottom>0</bottom>
