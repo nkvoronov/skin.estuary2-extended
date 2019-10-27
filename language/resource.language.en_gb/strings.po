@@ -1443,4 +1443,3 @@ msgstr ""
 msgctxt "#40322"
 msgid "List Albums as Text"
 msgstr ""
-
