@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onunload>ClearProperty(infobackground,home)</onunload>
+	<onunload>ClearProperty(infobackground,Home)</onunload>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">

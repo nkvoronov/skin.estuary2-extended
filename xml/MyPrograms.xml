@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">52</defaultcontrol>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
-	<onload>SetProperty(fanarthometype,addons,home)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/addons.jpg,home)</onload>
+	<onload>SetProperty(fanarthometype,addons,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundAddonsVar],Home)</onload>
 	<views>50,52,55,500</views>
 	<menucontrol>9000</menucontrol>
 	<controls>

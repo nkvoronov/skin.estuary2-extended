@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
-	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
-	<onunload>ClearProperty(infobackground,home)</onunload>
+	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],Home)</onload>
+	<onunload>ClearProperty(infobackground,Home)</onunload>
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
@@ -21,8 +21,8 @@
 					<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
 					<onup>50</onup>
 					<ondown>9000</ondown>
-					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31141] $INFO[ListItem.AddonVersion],home)</onclick>
-					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.AddonNews],home)</onclick>
+					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31141] $INFO[ListItem.AddonVersion],Home)</onclick>
+					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.AddonNews],Home)</onclick>
 					<onclick>ActivateWindow(1102)</onclick>
 					<enable>!String.IsEmpty(ListItem.AddonNews)</enable>
 				</control>

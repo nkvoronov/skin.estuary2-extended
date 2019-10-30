@@ -77,7 +77,7 @@
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
-			<param name="widget_target" value="$PARAM[widget_target]"/>
+			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="custom" value="true"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
 			<param name="img_fallback" value="DefaultAddon.png"/>
@@ -274,7 +274,7 @@
 		<include content="Widget-Squares">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
 			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
-			<param name="content_widget_target" value="$PARAM[content_target]"/>
+			<param name="content_target" value="$PARAM[content_target]"/>
 			<param name="content_path" value="$PARAM[content_path]"/>
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
 			<param name="content_sortorder" value="$PARAM[content_sortorder]"/>
@@ -1069,8 +1069,8 @@
 					<param name="item_limit" value="$PARAM[item_limit]"/>
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
-					<param name="content_path" value="CustomAddons$PARAM[widget_target]"/>
-					<param name="content_type" value="$PARAM[content_type]"/>
+					<param name="content_path" value="CustomAddons$PARAM[content_target]"/>
+					<param name="content_type" value="$PARAM[content_target]"/>
 				</include>
 			</control>
 		</definition>
@@ -1295,8 +1295,8 @@
 					<param name="item_limit" value="$PARAM[item_limit]"/>
 				</include>
 				<include condition="$PARAM[custom]" content="Widget-ContentCustom">
-					<param name="content_path" value="CustomChannels$PARAM[widget_target]"/>
-					<param name="content_type" value="$PARAM[content_type]"/>
+					<param name="content_path" value="CustomChannels$PARAM[content_target]"/>
+					<param name="content_type" value="$PARAM[content_target]"/>
 				</include>
 			</control>
 		</definition>

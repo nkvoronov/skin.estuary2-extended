@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
-	<onload>SetProperty(fanarthometype,settings,home)</onload>
-	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
+	<onload>SetProperty(fanarthometype,settings,Home)</onload>
+	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
 	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onunload>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
@@ -221,7 +221,7 @@
 					<param name="label2" value="$VAR[RecordLabelsNameVar]" />
 					<param name="property" value="RecordLabels" />
 					<param name="type" value="resource.images.recordlabels" />
-				</include>				
+				</include>
 				<include content="ResourceSelect">
 					<param name="control_id" value="211" />
 					<param name="label" value="$LOCALIZE[43014]" />
@@ -480,26 +480,32 @@
 					<selected>Skin.HasSetting(hide_main_menu_with_widgets)</selected>
 					<onclick>Skin.ToggleSetting(hide_main_menu_with_widgets)</onclick>
 				</control>
-				<control type="button" id="304">
+				<control type="radiobutton" id="304">
+					<label>$LOCALIZE[31008]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(home_no_categories_widget)</selected>
+					<onclick>Skin.ToggleSetting(home_no_categories_widget)</onclick>
+				</control>
+				<control type="button" id="305">
 					<description>Manage Main Menu</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40313]</label>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
 				</control>
-				<control type="button" id="305">
+				<control type="button" id="306">
 					<description>Reset Main Menu</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[40314]</label>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=resetall)</onclick>
 				</control>
-				<control type="image" id="306">
+				<control type="image" id="307">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="button" id="307">
+				<control type="button" id="308">
 					<description>Manage Power Menu</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40315]</label>
@@ -507,9 +513,9 @@
 					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
-					<param name="control_id1" value="308" />
-					<param name="control_id2" value="309" />
-					<param name="action" value="Skin.Reset(minimize_main_menu)|Skin.Reset(top_name_item)|Skin.Reset(hide_main_menu_with_widgets)" />
+					<param name="control_id1" value="309" />
+					<param name="control_id2" value="310" />
+					<param name="action" value="Skin.Reset(minimize_main_menu)|Skin.Reset(top_name_item)|Skin.Reset(hide_main_menu_with_widgets)|home_no_categories_widget" />
 				</include>
 			</control>
 			<control type="grouplist" id="400">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="HomeFanartMediaVar">
-		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
+		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(Home).Property(infobackground)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Property(FanartCode))">$VAR[WeatherFanartValueVar]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart)) + String.IsEmpty(Container.ListItem.Art(animatedfanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)">$INFO[Container.ListItem.Art(animatedfanart)]</value>
@@ -34,20 +34,20 @@
 	</variable>
 	<variable name="MainBackgroundVar">
 		<value condition="Window.IsActive(script-globalsearch.xml)">$VAR[BackgroundSearchVar]</value>
-		<value condition="Window.IsVisible(home) + Control.HasFocus(801)">$VAR[BackgroundPowerVar]</value>
-		<value condition="Window.IsVisible(home) + Control.HasFocus(802)">$VAR[BackgroundSettingsVar]</value>
-		<value condition="Window.IsVisible(home) + Control.HasFocus(803)">$VAR[BackgroundSearchVar]</value>
-		<value condition="Window.IsVisible(home) + !String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
-		<value condition="!Window.IsVisible(home) + !String.IsEmpty(Window(home).Property(homebackground))">$INFO[Window(home).Property(homebackground)]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(801)">$VAR[BackgroundPowerVar]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(802)">$VAR[BackgroundSettingsVar]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(803)">$VAR[BackgroundSearchVar]</value>
+		<value condition="Window.IsVisible(Home) + !String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
+		<value condition="!Window.IsVisible(Home) + !String.IsEmpty(Window(Home).Property(homebackground))">$INFO[Window(Home).Property(homebackground)]</value>
 		<value></value>
 	</variable>
 	<variable name="FanartBackgroundVar">
 		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="Window.IsVisible(home) + Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="Window.IsVisible(home) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="Window.IsVisible(home) + Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="Window.IsVisible(home)">$INFO[Skin.String(HomeFanart.path)]$VAR[HomeMenuTypeVar]$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="!Window.IsVisible(home) + !String.IsEmpty(Window(home).Property(fanarthometype))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(home).Property(fanarthometype)]$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="Window.IsVisible(Home)">$INFO[Skin.String(HomeFanart.path)]$VAR[HomeMenuTypeVar]$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!Window.IsVisible(Home) + !String.IsEmpty(Window(Home).Property(fanarthometype))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(Home).Property(fanarthometype)]$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value></value>
 	</variable>
 	<variable name="WeatherFanartValueVar">
@@ -63,7 +63,7 @@
 		<value></value>
 	</variable>
 	<variable name="AddonsFanartVar">
-		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
+		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(Home).Property(infobackground)]</value>
 		<value condition="!String.IsEmpty(Container(50050).ListItem.Art(fanart)) + Control.HasFocus(50050)">$INFO[Container(50050).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(50150).ListItem.Art(fanart)) + Control.HasFocus(50150)">$INFO[Container(50150).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(50250).ListItem.Art(fanart)) + Control.HasFocus(50250)">$INFO[Container(50250).ListItem.Art(fanart)]</value>
@@ -71,7 +71,7 @@
 		<value></value>
 	</variable>
 	<variable name="MediaFanartVar">
-		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
+		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(Home).Property(infobackground)]</value>
 		<value condition="Window.IsActive(videos) + Container.Content(genres) + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$INFO[ListItem.Label]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
 		<value condition="Window.IsActive(pictures) + String.IsEmpty(ListItem.Art(fanart)) + !ListItem.IsFolder">$INFO[ListItem.FolderPath]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + [!String.IsEmpty(ListItem.Art(animatedfanart)) + Skin.HasSetting(animated_fanarts)]">$INFO[ListItem.Art(animatedfanart)]</value>
@@ -897,11 +897,6 @@
 		<value condition="!String.IsEmpty(Skin.String(PopupPosition.label))">$INFO[Skin.String(PopupPosition.label)]</value>
 		<value>$LOCALIZE[44106]</value>
 	</variable>
-	<variable name="SkinSettingSpinnerVar">
-		<value condition="Skin.String(SkinHelper.SpinnerTexture.Path,None)">$LOCALIZE[15109]</value>
-		<value condition="!String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path))">$INFO[Skin.String(SkinHelper.SpinnerTexture.Path)]</value>
-		<value>$LOCALIZE[15109]</value>
-	</variable>
 	<variable name="CustomFocusNameVar">
 		<value condition="String.IsEmpty(Skin.String(custom_focus))">1</value>
 		<value condition="!String.IsEmpty(Skin.String(custom_focus))">$INFO[Skin.String(custom_focus)]</value>
@@ -929,143 +924,6 @@
 		<value condition="Integer.IsEqual(Skin.String(custom_focus),18)">16</value>
 		<value condition="Integer.IsEqual(Skin.String(custom_focus),19)">17</value>
 		<value condition="Integer.IsEqual(Skin.String(custom_focus),20)">18</value>
-	</variable>
-	<variable name="SkinSettingWidgetNameVar">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetName1Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.1))">$INFO[Container(211).ListItem.Property(widgetName.1)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetsView1Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.1))">$INFO[Container(211).ListItem.Property(widgetView.1)]</value>
-		<value>$LOCALIZE[44206]</value>
-	</variable>
-	<variable name="WidgetSortBy1Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.1))">$INFO[Container(211).ListItem.Property(widgetSortBy.1)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetSortDirection1Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.1))">$INFO[Container(211).ListItem.Property(widgetSortDirection.1)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetName2Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.2))">$INFO[Container(211).ListItem.Property(widgetName.2)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetsView2Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.2))">$INFO[Container(211).ListItem.Property(widgetView.2)]</value>
-		<value>$LOCALIZE[44206]</value>
-	</variable>
-	<variable name="WidgetSortBy2Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.2))">$INFO[Container(211).ListItem.Property(widgetSortBy.2)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetSortDirection2Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.2))">$INFO[Container(211).ListItem.Property(widgetSortDirection.2)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetName3Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.3))">$INFO[Container(211).ListItem.Property(widgetName.3)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetsView3Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.3))">$INFO[Container(211).ListItem.Property(widgetView.3)]</value>
-		<value>$LOCALIZE[44206]</value>
-	</variable>
-	<variable name="WidgetSortBy3Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.3))">$INFO[Container(211).ListItem.Property(widgetSortBy.3)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetSortDirection3Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.3))">$INFO[Container(211).ListItem.Property(widgetSortDirection.3)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetName4Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.4))">$INFO[Container(211).ListItem.Property(widgetName.4)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetsView4Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.4))">$INFO[Container(211).ListItem.Property(widgetView.4)]</value>
-		<value>$LOCALIZE[44206]</value>
-	</variable>
-	<variable name="WidgetSortBy4Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.4))">$INFO[Container(211).ListItem.Property(widgetSortBy.4)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetSortDirection4Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.4))">$INFO[Container(211).ListItem.Property(widgetSortDirection.4)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetName5Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.5))">$INFO[Container(211).ListItem.Property(widgetName.5)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetsView5Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.5))">$INFO[Container(211).ListItem.Property(widgetView.5)]</value>
-		<value>$LOCALIZE[44206]</value>
-	</variable>
-	<variable name="WidgetSortBy5Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.5))">$INFO[Container(211).ListItem.Property(widgetSortBy.5)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetSortDirection5Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.5))">$INFO[Container(211).ListItem.Property(widgetSortDirection.5)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetName6Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.6))">$INFO[Container(211).ListItem.Property(widgetName.6)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetsView6Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.6))">$INFO[Container(211).ListItem.Property(widgetView.6)]</value>
-		<value>$LOCALIZE[44206]</value>
-	</variable>
-	<variable name="WidgetSortBy6Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.6))">$INFO[Container(211).ListItem.Property(widgetSortBy.6)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetSortDirection6Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.6))">$INFO[Container(211).ListItem.Property(widgetSortDirection.6)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetName7Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.7))">$INFO[Container(211).ListItem.Property(widgetName.7)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetsView7Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.7))">$INFO[Container(211).ListItem.Property(widgetView.7)]</value>
-		<value>$LOCALIZE[44206]</value>
-	</variable>
-	<variable name="WidgetSortBy7Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.7))">$INFO[Container(211).ListItem.Property(widgetSortBy.7)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetSortDirection7Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.7))">$INFO[Container(211).ListItem.Property(widgetSortDirection.7)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetName8Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.8))">$INFO[Container(211).ListItem.Property(widgetName.8)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetsView8Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.8))">$INFO[Container(211).ListItem.Property(widgetView.8)]</value>
-		<value>$LOCALIZE[44206]</value>
-	</variable>
-	<variable name="WidgetSortBy8Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.8))">$INFO[Container(211).ListItem.Property(widgetSortBy.8)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="WidgetSortDirection8Label2Var">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.8))">$INFO[Container(211).ListItem.Property(widgetSortDirection.8)]</value>
-		<value>$LOCALIZE[231]</value>
-	</variable>
-	<variable name="SkinShortcutsTitleVar">
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)"> / $ADDON[script.skinshortcuts 32071]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)"> / $LOCALIZE[43020]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)"> / $ADDON[script.skinshortcuts 32072]</value>
 	</variable>
 	<variable name="BackgroundOverlayTypeNameVar">
 		<value condition="String.IsEqual(Skin.String(background_overlay),0) | String.IsEmpty(Skin.String(background_overlay)) ">$LOCALIZE[231]</value>
@@ -1304,6 +1162,256 @@
 		<value condition="!String.IsEmpty(Skin.String(rss_header_color))">$INFO[Skin.String(rss_header_color)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
+	<variable name="TitleAndYearVar">
+		<value condition="!ListItem.IsCollection">$INFO[ListItem.Label]$VAR[ListItemYearLabelVar]</value>
+		<value condition="ListItem.IsCollection">$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="BackgroundMoviesVar">
+		<value condition="!String.IsEmpty(Skin.String(background_movies))">$INFO[Skin.String(background_movies)]</value>
+		<value>special://skin/extras/home-images/movies.jpg</value>
+	</variable>
+	<variable name="BackgroundMoviesNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_movies))">$INFO[Skin.String(background_movies)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundTVShowsVar">
+		<value condition="!String.IsEmpty(Skin.String(background_tvshows))">$INFO[Skin.String(background_tvshows)]</value>
+		<value>special://skin/extras/home-images/tvshows.jpg</value>
+	</variable>
+	<variable name="BackgroundTVShowsNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_tvshows))">$INFO[Skin.String(background_tvshows)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundMusicVar">
+		<value condition="!String.IsEmpty(Skin.String(background_music))">$INFO[Skin.String(background_music)]</value>
+		<value>special://skin/extras/home-images/music.jpg</value>
+	</variable>
+	<variable name="BackgroundMusicNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_music))">$INFO[Skin.String(background_music)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundDVDVar">
+		<value condition="!String.IsEmpty(Skin.String(background_dvd))">$INFO[Skin.String(background_dvd)]</value>
+		<value>special://skin/extras/home-images/dvd.jpg</value>
+	</variable>
+	<variable name="BackgroundDVDNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_dvd))">$INFO[Skin.String(background_dvd)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundMusicVideosVar">
+		<value condition="!String.IsEmpty(Skin.String(background_musicvideos))">$INFO[Skin.String(background_musicvideos)]</value>
+		<value>special://skin/extras/home-images/musicvideo.jpg</value>
+	</variable>
+	<variable name="BackgroundMusicVideosNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_musicvideos))">$INFO[Skin.String(background_musicvideos)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundLiveTVVar">
+		<value condition="!String.IsEmpty(Skin.String(background_livetv))">$INFO[Skin.String(background_livetv)]</value>
+		<value>special://skin/extras/home-images/livetv.jpg</value>
+	</variable>
+	<variable name="BackgroundLiveTVNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_livetv))">$INFO[Skin.String(background_livetv)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundRadioVar">
+		<value condition="!String.IsEmpty(Skin.String(background_radio))">$INFO[Skin.String(background_radio)]</value>
+		<value>special://skin/extras/home-images/radio.jpg</value>
+	</variable>
+	<variable name="BackgroundRadioNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_radio))">$INFO[Skin.String(background_radio)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundGamesVar">
+		<value condition="!String.IsEmpty(Skin.String(background_games))">$INFO[Skin.String(background_games)]</value>
+		<value>special://skin/extras/home-images/games.jpg</value>
+	</variable>
+	<variable name="BackgroundGamesNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_games))">$INFO[Skin.String(background_games)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundAddonsVar">
+		<value condition="!String.IsEmpty(Skin.String(background_addons))">$INFO[Skin.String(background_addons)]</value>
+		<value>special://skin/extras/home-images/addons.jpg</value>
+	</variable>
+	<variable name="BackgroundAddonsNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_addons))">$INFO[Skin.String(background_addons)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundPicturesVar">
+		<value condition="!String.IsEmpty(Skin.String(background_pictures))">$INFO[Skin.String(background_pictures)]</value>
+		<value>special://skin/extras/home-images/pictures.jpg</value>
+	</variable>
+	<variable name="BackgroundPicturesNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_pictures))">$INFO[Skin.String(background_pictures)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundVideosVar">
+		<value condition="!String.IsEmpty(Skin.String(background_videos))">$INFO[Skin.String(background_videos)]</value>
+		<value>special://skin/extras/home-images/videos.jpg</value>
+	</variable>
+	<variable name="BackgroundVideosNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_videos))">$INFO[Skin.String(background_videos)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundFavouritesVar">
+		<value condition="!String.IsEmpty(Skin.String(background_favourites))">$INFO[Skin.String(background_favourites)]</value>
+		<value>special://skin/extras/home-images/favorites.jpg</value>
+	</variable>
+	<variable name="BackgroundFavouritesNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_favourites))">$INFO[Skin.String(background_favourites)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="BackgroundWeatherVar">
+		<value condition="!String.IsEmpty(Skin.String(background_weather))">$INFO[Skin.String(background_weather)]</value>
+		<value>special://skin/extras/home-images/weather.jpg</value>
+	</variable>
+	<variable name="BackgroundWeatherNameVar">
+		<value condition="!String.IsEmpty(Skin.String(background_weather))">$INFO[Skin.String(background_weather)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="SkinSettingSpinnerVar">
+		<value condition="Skin.String(SkinHelper.SpinnerTexture.Path,None)">$LOCALIZE[15109]</value>
+		<value condition="!String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path))">$INFO[Skin.String(SkinHelper.SpinnerTexture.Path)]</value>
+		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="SkinSettingWidgetNameVar">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetName1Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.1))">$INFO[Container(211).ListItem.Property(widgetName.1)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetsView1Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.1))">$INFO[Container(211).ListItem.Property(widgetView.1)]</value>
+		<value>$LOCALIZE[44206]</value>
+	</variable>
+	<variable name="WidgetSortBy1Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.1))">$INFO[Container(211).ListItem.Property(widgetSortBy.1)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetSortDirection1Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.1))">$INFO[Container(211).ListItem.Property(widgetSortDirection.1)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetName2Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.2))">$INFO[Container(211).ListItem.Property(widgetName.2)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetsView2Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.2))">$INFO[Container(211).ListItem.Property(widgetView.2)]</value>
+		<value>$LOCALIZE[44206]</value>
+	</variable>
+	<variable name="WidgetSortBy2Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.2))">$INFO[Container(211).ListItem.Property(widgetSortBy.2)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetSortDirection2Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.2))">$INFO[Container(211).ListItem.Property(widgetSortDirection.2)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetName3Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.3))">$INFO[Container(211).ListItem.Property(widgetName.3)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetsView3Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.3))">$INFO[Container(211).ListItem.Property(widgetView.3)]</value>
+		<value>$LOCALIZE[44206]</value>
+	</variable>
+	<variable name="WidgetSortBy3Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.3))">$INFO[Container(211).ListItem.Property(widgetSortBy.3)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetSortDirection3Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.3))">$INFO[Container(211).ListItem.Property(widgetSortDirection.3)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetName4Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.4))">$INFO[Container(211).ListItem.Property(widgetName.4)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetsView4Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.4))">$INFO[Container(211).ListItem.Property(widgetView.4)]</value>
+		<value>$LOCALIZE[44206]</value>
+	</variable>
+	<variable name="WidgetSortBy4Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.4))">$INFO[Container(211).ListItem.Property(widgetSortBy.4)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetSortDirection4Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.4))">$INFO[Container(211).ListItem.Property(widgetSortDirection.4)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetName5Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.5))">$INFO[Container(211).ListItem.Property(widgetName.5)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetsView5Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.5))">$INFO[Container(211).ListItem.Property(widgetView.5)]</value>
+		<value>$LOCALIZE[44206]</value>
+	</variable>
+	<variable name="WidgetSortBy5Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.5))">$INFO[Container(211).ListItem.Property(widgetSortBy.5)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetSortDirection5Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.5))">$INFO[Container(211).ListItem.Property(widgetSortDirection.5)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetName6Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.6))">$INFO[Container(211).ListItem.Property(widgetName.6)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetsView6Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.6))">$INFO[Container(211).ListItem.Property(widgetView.6)]</value>
+		<value>$LOCALIZE[44206]</value>
+	</variable>
+	<variable name="WidgetSortBy6Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.6))">$INFO[Container(211).ListItem.Property(widgetSortBy.6)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetSortDirection6Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.6))">$INFO[Container(211).ListItem.Property(widgetSortDirection.6)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetName7Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.7))">$INFO[Container(211).ListItem.Property(widgetName.7)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetsView7Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.7))">$INFO[Container(211).ListItem.Property(widgetView.7)]</value>
+		<value>$LOCALIZE[44206]</value>
+	</variable>
+	<variable name="WidgetSortBy7Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.7))">$INFO[Container(211).ListItem.Property(widgetSortBy.7)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetSortDirection7Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.7))">$INFO[Container(211).ListItem.Property(widgetSortDirection.7)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetName8Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.8))">$INFO[Container(211).ListItem.Property(widgetName.8)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetsView8Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetView.8))">$INFO[Container(211).ListItem.Property(widgetView.8)]</value>
+		<value>$LOCALIZE[44206]</value>
+	</variable>
+	<variable name="WidgetSortBy8Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortBy.8))">$INFO[Container(211).ListItem.Property(widgetSortBy.8)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="WidgetSortDirection8Label2Var">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirection.8))">$INFO[Container(211).ListItem.Property(widgetSortDirection.8)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+	<variable name="SkinShortcutsTitleVar">
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)"> / $ADDON[script.skinshortcuts 32071]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)"> / $LOCALIZE[43020]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)"> / $ADDON[script.skinshortcuts 32072]</value>
+	</variable>
 	<variable name="ShowInfoAtPlaybackStartVar">
 		<value condition="!String.IsEmpty(Skin.String(SkinHelper.ShowInfoAtPlaybackStart))">$INFO[Skin.String(SkinHelper.ShowInfoAtPlaybackStart)]</value>
 		<value>0</value>
@@ -1322,9 +1430,5 @@
 	</variable>
 	<variable name="AlbumsCountVar">
 		<value>$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),($LOCALIZE[36919]: ,)]</value>
-	</variable>
-	<variable name="TitleAndYearVar">
-		<value condition="!ListItem.IsCollection">$INFO[ListItem.Label]$VAR[ListItemYearLabelVar]</value>
-		<value condition="ListItem.IsCollection">$INFO[ListItem.Label]</value>
 	</variable>
 </includes>

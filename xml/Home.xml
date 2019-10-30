@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
+	<onload condition="!String.IsEmpty(Window(Home).Property(fanarthometype))">ClearProperty(fanarthometype,Home)</onload>
+	<onload condition="!String.IsEmpty(Window(Home).Property(homebackground))">ClearProperty(homebackground,Home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
 	<onload condition="Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
 	<onload condition="![Skin.HasSetting(animated_posters) | Skin.HasSetting(animated_fanarts)]">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
@@ -18,11 +20,9 @@
 	<onload condition="Skin.HasSetting(smartshortcuts_favourites)">Skin.SetBool(SmartShortcuts.favorites)</onload>
 	<onload condition="!Skin.HasSetting(smartshortcuts_favourites)">Skin.Reset(SmartShortcuts.favorites)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay, $VAR[RandomFanartDelayVar])</onload>
-	<onunload>ClearProperty(SkinHelper.WidgetContainer,Home)</onunload>
-	<onload condition="!String.IsEmpty(Window(home).Property(fanarthometype))">ClearProperty(fanarthometype,Home)</onload>
-	<onload condition="!String.IsEmpty(Window(home).Property(homebackground))">ClearProperty(homebackground,Home)</onload>
 	<onload condition="System.HasAddon(script.pvr.favourites) + Skin.HasSetting(enable_custom_list_channels) + [Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<onload condition="Window.Previous(Startup)">Control.Move(9000,$VAR[CustomFocusVar])</onload>
+	<onunload>ClearProperty(SkinHelper.WidgetContainer,Home)</onunload>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<control type="button" id="20000">
@@ -185,16 +185,16 @@
 					<visible>!Skin.HasSetting(minimize_main_menu)</visible>
 					<include content="IconButton">
 						<param name="control_id" value="801" />
-						<param name="onclick" value="SetProperty(fanarthometype,power,home)" />
-						<param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundPowerVar],home)" />
+						<param name="onclick" value="SetProperty(fanarthometype,power,Home)" />
+						<param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundPowerVar],Home)" />
 						<param name="onclick_3" value="ActivateWindow(shutdownmenu)" />
 						<param name="icon" value="icons/power.png" />
 						<param name="label" value="$LOCALIZE[33060]" />
 					</include>
 					<include content="IconButton">
 						<param name="control_id" value="802" />
-						<param name="onclick" value="SetProperty(fanarthometype,settings,home)" />
-						<param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)" />
+						<param name="onclick" value="SetProperty(fanarthometype,settings,Home)" />
+						<param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)" />
 						<param name="onclick_3" value="ActivateWindow(settings)" />
 						<param name="icon" value="icons/settings.png" />
 						<param name="label" value="$LOCALIZE[21417]" />
@@ -224,8 +224,8 @@
 					<visible>Skin.HasSetting(minimize_main_menu)</visible>
 					<include content="IconButton">
 						<param name="control_id" value="801" />
-						<param name="onclick" value="SetProperty(fanarthometype,power,home)" />
-						<param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundPowerVar],home)" />
+						<param name="onclick" value="SetProperty(fanarthometype,power,Home)" />
+						<param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundPowerVar],Home)" />
 						<param name="onclick_3" value="ActivateWindow(shutdownmenu)" />
 						<param name="icon" value="icons/power.png" />
 						<param name="label" value="$LOCALIZE[33060]" />
@@ -235,8 +235,8 @@
 					</include>
 					<include content="IconButton">
 						<param name="control_id" value="802" />
-						<param name="onclick" value="SetProperty(fanarthometype,settings,home)" />
-						<param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)" />
+						<param name="onclick" value="SetProperty(fanarthometype,settings,Home)" />
+						<param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)" />
 						<param name="onclick_3" value="ActivateWindow(settings)" />
 						<param name="icon" value="icons/settings.png" />
 						<param name="label" value="$LOCALIZE[21417]" />

@@ -693,7 +693,7 @@
 					<visible>$PARAM[watched]</visible>
 				</control>
 				<control type="group">
-					<description>TVshows Total Episodes</description>
+					<description>TVShows Total Episodes</description>
 					<visible>$PARAM[istvshows] + !String.IsEmpty($PARAM[totalepisodes])</visible>
 					<control type="image">
 						<description>Overlay Background</description>

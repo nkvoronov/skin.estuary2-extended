@@ -1110,7 +1110,7 @@
 					<height>100</height>
 					<label></label>
 					<onclick>Action(Back)</onclick>
-					<visible>!Window.IsActive(home)</visible>
+					<visible>!Window.IsActive(Home)</visible>
 					<texturefocus />
 					<texturenofocus />
 				</control>
@@ -1280,7 +1280,7 @@
 					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				</control>
 			</control>
-			<include condition="Skin.HasSetting(touchmode) + !Window.IsActive(home)">TouchBackButton</include>
+			<include condition="Skin.HasSetting(touchmode) + !Window.IsActive(Home)">TouchBackButton</include>
 		</definition>
 	</include>
 	<include name="BreadcrumbsLabel">
@@ -1612,9 +1612,9 @@
 		<control type="grouplist" id="700">
 			<orientation>horizontal</orientation>
 			<visible>Skin.HasSetting(touchmode)</visible>
-			<visible>!Window.IsActive(home) + !Window.IsActive(filemanager)</visible>
-			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(home)">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Window.IsActive(Home) + !Window.IsActive(filemanager)</visible>
+			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
 			<itemgap>0</itemgap>
 			<left>-8</left>
 			<width>480</width>
@@ -1675,8 +1675,8 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<onclick>Action(Back)</onclick>
-			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(home)">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(home)">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="400" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
 			<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 			<texturenofocus />
 			<radioposx>30</radioposx>
@@ -1761,37 +1761,6 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="ColorSkinSetting">
-		<definition>
-			<control type="button" id="$PARAM[control_id1]">
-				<description>Color Value</description>
-				<include>DefaultSettingButton</include>
-				<label>$PARAM[label]</label>
-				<label2>$PARAM[label2]</label2>
-				<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
-				<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=$PARAM[property])</onclick>
-			</control>
-			<control type="button" id="$PARAM[control_id2]">
-				<description>Reset Color</description>
-				<include>DefaultSettingButton</include>
-				<label>- $LOCALIZE[13007]</label>
-				<onclick>Skin.Reset($PARAM[property])</onclick>
-				<visible>!String.IsEmpty(Skin.String($PARAM[property]))</visible>
-			</control>
-		</definition>
-	</include>
-	<include name="SetSkinSetting">
-		<definition>
-			<control type="button" id="$PARAM[control_id]">
-				<description>Set Skin Setting</description>
-				<include>DefaultSettingButton</include>
-				<label>$PARAM[label]</label>
-				<label2>$PARAM[label2]</label2>
-				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=$PARAM[property],header=$PARAM[header])</onclick>
-			</control>
-		</definition>
-	</include>
 	<include name="SelectBackground">
 		<param name="enable">true</param>
 		<definition>
@@ -1800,7 +1769,7 @@
 				<include>DefaultSettingButton</include>
 				<label>- $PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
-				<onclick>SetProperty(setbackgrounds,$PARAM[property],home)</onclick>
+				<onclick>SetProperty(setbackgrounds,$PARAM[property],Home)</onclick>
 				<onclick>ActivateWindow(1202)</onclick>
 				<enable>$PARAM[enable]</enable>
 			</control>
@@ -1977,7 +1946,7 @@
 				<icon>DefaultAddon.png</icon>
 				<label>$LOCALIZE[15109]</label>
 				<label2></label2>
-				<onclick>Skin.Reset($INFO[Window(home).Property(setbackgrounds)])</onclick>
+				<onclick>Skin.Reset($INFO[Window(Home).Property(setbackgrounds)])</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="2">
@@ -1985,7 +1954,7 @@
 				<icon>DefaultFile.png</icon>
 				<label>$LOCALIZE[44111]</label>
 				<label2></label2>
-				<onclick>Skin.SetImage($INFO[Window(home).Property(setbackgrounds)])</onclick>
+				<onclick>Skin.SetImage($INFO[Window(Home).Property(setbackgrounds)])</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="3">
@@ -1993,7 +1962,7 @@
 				<icon>DefaultFolder.png</icon>
 				<label>$LOCALIZE[44112]</label>
 				<label2></label2>
-				<onclick>Skin.SetPath($INFO[Window(home).Property(setbackgrounds)])</onclick>
+				<onclick>Skin.SetPath($INFO[Window(Home).Property(setbackgrounds)])</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 		</content>
@@ -2001,6 +1970,37 @@
 	<include name="Lrclyrics_Dialog">
 		<include>Animation_DialogPopupOpenClose</include>
 		<depth>DepthOSD</depth>
+	</include>
+	<include name="ColorSkinSetting">
+		<definition>
+			<control type="button" id="$PARAM[control_id1]">
+				<description>Color Value</description>
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=$PARAM[property])</onclick>
+			</control>
+			<control type="button" id="$PARAM[control_id2]">
+				<description>Reset Color</description>
+				<include>DefaultSettingButton</include>
+				<label>- $LOCALIZE[13007]</label>
+				<onclick>Skin.Reset($PARAM[property])</onclick>
+				<visible>!String.IsEmpty(Skin.String($PARAM[property]))</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="SetSkinSetting">
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Set Skin Setting</description>
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=$PARAM[property],header=$PARAM[header])</onclick>
+			</control>
+		</definition>
 	</include>
 	<include name="SkinshortcutsWidget">
 		<param name="id">1</param>

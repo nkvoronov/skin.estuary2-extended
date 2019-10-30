@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">6</defaultcontrol>
 	<views>50</views>
 	<menucontrol>9000</menucontrol>
-	<onload>SetProperty(fanarthometype,music,home)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(homebackground))">SetProperty(homebackground,special://skin/extras/home-images/music.jpg,home)</onload>
+	<onload>SetProperty(fanarthometype,music,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundMusicVar],Home)</onload>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">

@@ -2,8 +2,8 @@
 <window>
 	<depth>DepthOSD</depth>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload>SetProperty(infobackground,$ESCINFO[ListItem.FolderPath],home)</onload>
-	<onunload>ClearProperty(infobackground,home)</onunload>
+	<onload>SetProperty(infobackground,$ESCINFO[ListItem.FolderPath],Home)</onload>
+	<onunload>ClearProperty(infobackground,Home)</onunload>
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
