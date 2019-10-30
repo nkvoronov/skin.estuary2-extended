@@ -24,14 +24,14 @@
 			<control type="group">
 				<left>17</left>
 				<top>16</top>
-				<!-- Window Title -->
 				<control type="label" id="1700">
+					<description>Window Title</description>
 					<left>20</left>
 					<top>10</top>
 					<width>540</width>
 					<height>30</height>
 					<font>font12</font>
-					<textcolor>white</textcolor>
+					<textcolor>$VAR[WhiteColorVar]</textcolor>
 					<label />
 					<align>center</align>
 					<visible>true</visible>

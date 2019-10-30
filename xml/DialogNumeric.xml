@@ -20,7 +20,7 @@
 				<top>181</top>
 				<width>457</width>
 				<height>60</height>
-				<texture colordiffuse="32FFFFFF" border="2">colors/white.png</texture>
+				<texture colordiffuse="bg_numeric" border="2">colors/white.png</texture>
 			</control>
 			<control type="label" id="4">
 				<description>Edit Text</description>
@@ -170,10 +170,10 @@
 						<height>125</height>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
-						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/arrowleft.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="FFFFFFFF">icons/keyboard/arrowleft.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="FFFFFFFF">icons/keyboard/arrowleft.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="FFFFFFFF">icons/keyboard/arrowleft.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="white2">icons/keyboard/arrowleft.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="white2">icons/keyboard/arrowleft.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="white2">icons/keyboard/arrowleft.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="white2">icons/keyboard/arrowleft.png</textureradiooffnofocus>
 						<radioposx>40</radioposx>
 						<radiowidth>36</radiowidth>
 						<radioheight>36</radioheight>
@@ -193,10 +193,10 @@
 						<height>125</height>
 						<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
-						<textureradioonfocus colordiffuse="FFFFFFFF">icons/keyboard/arrowright.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="FFFFFFFF">icons/keyboard/arrowright.png</textureradioonnofocus>
-						<textureradioofffocus colordiffuse="FFFFFFFF">icons/keyboard/arrowright.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="FFFFFFFF">icons/keyboard/arrowright.png</textureradiooffnofocus>
+						<textureradioonfocus colordiffuse="white2">icons/keyboard/arrowright.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="white2">icons/keyboard/arrowright.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="white2">icons/keyboard/arrowright.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="white2">icons/keyboard/arrowright.png</textureradiooffnofocus>
 						<radioposx>45</radioposx>
 						<radiowidth>36</radiowidth>
 						<radioheight>36</radioheight>

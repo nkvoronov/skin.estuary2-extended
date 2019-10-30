@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
-	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
-	<onunload>ClearProperty(infobackground,home)</onunload>
+	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],Home)</onload>
+	<onunload>ClearProperty(infobackground,Home)</onunload>
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
@@ -21,8 +21,8 @@
 					<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
 					<onup>50</onup>
 					<ondown>9000</ondown>
-					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31141] $INFO[ListItem.AddonVersion],home)</onclick>
-					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.AddonNews],home)</onclick>
+					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31141] $INFO[ListItem.AddonVersion],Home)</onclick>
+					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.AddonNews],Home)</onclick>
 					<onclick>ActivateWindow(1102)</onclick>
 					<enable>!String.IsEmpty(ListItem.AddonNews)</enable>
 				</control>
@@ -31,8 +31,7 @@
 					<top>435</top>
 					<width>1050</width>
 					<height>365</height>
-					<label>$INFO[ListItem.AddonSummary,[B],[/B][CR]][COLOR white]$INFO[ListItem.AddonDescription][/COLOR][COLOR white][CR][/COLOR]$VAR[AddonNewsVar,[CR][CR]]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.AddonSummary,[B],[/B][CR]][/COLOR]$INFO[ListItem.AddonDescription][CR][COLOR $VAR[MainColorVar]]$VAR[AddonNewsVar,[CR][CR]][/COLOR]</label>
 					<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 				</control>
 				<control type="group">
@@ -248,16 +247,14 @@
 					<control type="label">
 						<width>470</width>
 						<height>40</height>
-						<label>$INFO[ListItem.AddonSize,$LOCALIZE[22031]:[COLOR white] ,[/COLOR][CR] ]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
+						<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[22031]:[/COLOR] $INFO[ListItem.AddonSize][CR]</label>
 						<visible>!String.IsEmpty(ListItem.AddonSize)</visible>
 					</control>
 					<control type="label">
 						<width>470</width>
 						<height>40</height>
-						<label>$INFO[ListItem.AddonOrigin,$LOCALIZE[31150]:[COLOR white] ,[/COLOR] ]</label>
-						<visible>!String.IsEmpty(ListItem.AddonOrigin) + ListItem.Property(addon.isinstalled)</visible>
-						<textcolor>$VAR[MainColorVar]</textcolor>
+						<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[31150]:[/COLOR] $INFO[ListItem.AddonOrigin]</label>
+						<visible>!String.IsEmpty(ListItem.AddonOrigin) + ListItem.Property(addon.isinstalled)</visible>					
 					</control>
 				</control>
 			</control>
@@ -271,12 +268,12 @@
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<label>[I]$INFO[ListItem.AddonDisclaimer][/I]</label>
-				<textcolor>88FFFFFF</textcolor>
+				<textcolor>white5</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
 			<include content="InfoDialogTopBarInfo">
-				<param name="main_label" value="[COLOR white]$INFO[ListItem.AddonName][/COLOR]" />
-				<param name="sub_label" value="$INFO[ListItem.AddonVersion][COLOR white]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ][/COLOR]" />
+				<param name="main_label" value="$INFO[ListItem.AddonName]" />
+				<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.AddonVersion][/COLOR]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ]" />
 			</include>
 		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>

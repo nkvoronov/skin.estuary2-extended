@@ -27,14 +27,14 @@
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
-			<animation effect="slide" end="-225" time="0" condition="Window.IsActive(home)">conditional</animation>
+			<animation effect="slide" end="-225" time="0" condition="Window.IsActive(Home)">conditional</animation>
 			<control type="image" id="999">
 				<description>background image</description>
 				<left>0</left>
 				<top>0</top>
 				<width>450</width>
 				<height>780</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
 			</control>
 			<control type="grouplist" id="996">
 				<description>grouplist for context buttons</description>

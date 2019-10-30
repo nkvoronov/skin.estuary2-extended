@@ -46,9 +46,9 @@
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="image" id="11">
-				<description>separator image</description>
+				<description>Separator Image</description>
 				<height>3</height>
-				<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="edit" id="12">
 				<include>DefaultSettingButton</include>

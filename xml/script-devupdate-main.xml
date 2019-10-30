@@ -56,7 +56,7 @@
 						<width>400</width>
 						<left>10</left>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
+						<textcolor>$VAR[WhiteColorVar]</textcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
@@ -80,7 +80,7 @@
 						<width>400</width>
 						<left>10</left>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
+						<textcolor>$VAR[WhiteColorVar]</textcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</focusedlayout>
@@ -203,7 +203,7 @@
 					</include>
 				</control>
 				<control type="label" id="100">
-					<description>Build type label</description>
+					<description>Build Type Label</description>
 					<top>690</top>
 					<right>20</right>
 					<align>right</align>
@@ -211,6 +211,6 @@
 					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 			</control>
-		</control>  
+		</control>
 	</controls>
 </window>

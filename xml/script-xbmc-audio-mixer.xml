@@ -14,7 +14,7 @@
 			<height>6000</height>
 			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<texture colordiffuse="C2FFFFFF">colors/black.png</texture>
+			<texture colordiffuse="white4">colors/black.png</texture>
 		</control>
 		<control type="button">
 			<left>-2000</left>
@@ -32,7 +32,7 @@
 				<top>0</top>
 				<right>0</right>
 				<height>820</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -49,7 +49,7 @@
 				<font>font32_title</font>
 				<label>$ADDON[script.xbmc.audio.mixer 30001]</label>
 				<aligny>center</aligny>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				</control>
 			<control type="button" id="32002">
 				<description>button overlay to avoid closing in dialog area</description>
@@ -1759,7 +1759,7 @@
 			<height>90</height>
 			<label>$LOCALIZE[186]</label>
 			<font>font12_title</font>
-			<textcolor>white</textcolor>
+			<textcolor>$VAR[WhiteColorVar]</textcolor>
 			<textoffsetx>20</textoffsetx>
 			<align>center</align>
 			<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>

@@ -86,7 +86,7 @@
 								<right>20</right>
 								<height>65</height>
 								<font>font12</font>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
 								<label>$INFO[ListItem.Label2]</label>
 							</control>
 						</itemlayout>
@@ -96,7 +96,7 @@
 								<top>0</top>
 								<right>0</right>
 								<bottom>0</bottom>
-								<texture colordiffuse="button_focus">lists/focus.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 								<visible>Control.HasFocus(22)</visible>
 							</control>
 							<control type="image">
@@ -203,7 +203,7 @@
 								<right>20</right>
 								<height>65</height>
 								<font>font12</font>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
 								<label>$INFO[ListItem.Label2]</label>
 							</control>
 						</itemlayout>
@@ -213,7 +213,7 @@
 								<top>0</top>
 								<right>0</right>
 								<bottom>0</bottom>
-								<texture colordiffuse="button_focus">lists/focus.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 								<visible>Control.HasFocus(26)</visible>
 							</control>
 							<control type="image">

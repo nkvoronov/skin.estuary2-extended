@@ -23,7 +23,7 @@
 					<height>40</height>
 					<label>$VAR[PlayerLabel1Var]</label>
 					<font>font45</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<scroll>true</scroll>
 				</control>
@@ -33,7 +33,7 @@
 					<height>40</height>
 					<label>$VAR[PlayerLabel2Var]</label>
 					<font>font37</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<scroll>true</scroll>
 				</control>
@@ -43,8 +43,8 @@
 					<height>40</height>
 					<label>$VAR[PlayerLabel3Var]</label>
 					<font>font37</font>
-					<shadowcolor>black</shadowcolor>
-					<textcolor>grey</textcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
+					<textcolor>$VAR[GreyColorVar]</textcolor>
 					<scroll>true</scroll>
 				</control>
 			</control>
@@ -59,7 +59,7 @@
 					<aligny>bottom</aligny>
 					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 					<font>font14</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				</control>
 				<include content="FocusableProgressBar">
 					<param name="width" value="800"/>
@@ -83,9 +83,9 @@
 					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="radiobutton" id="602">
-					<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/play.png</textureradioonfocus>
+					<textureradioonfocus colordiffuse="$VAR[WhiteColorVar]">osd/fullscreen/buttons/play.png</textureradioonfocus>
 					<textureradioonnofocus>osd/fullscreen/buttons/play.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="white">osd/fullscreen/buttons/pause.png</textureradioofffocus>
+					<textureradioofffocus colordiffuse="$VAR[WhiteColorVar]">osd/fullscreen/buttons/pause.png</textureradioofffocus>
 					<textureradiooffnofocus>osd/fullscreen/buttons/pause.png</textureradiooffnofocus>
 					<texturefocus colordiffuse="$VAR[MainColorVar]">osd/fullscreen/buttons/button-fo.png</texturefocus>
 					<width>76</width>
@@ -147,8 +147,8 @@
 					<textureradioonnofocus>osd/fullscreen/buttons/random-on.png</textureradioonnofocus>
 					<textureradioofffocus colordiffuse="$VAR[MainColorVar]">osd/fullscreen/buttons/random-off.png</textureradioofffocus>
 					<textureradiooffnofocus>osd/fullscreen/buttons/random-off.png</textureradiooffnofocus>
-					<textureradioondisabled colordiffuse="disabled">osd/fullscreen/buttons/random-on.png</textureradioondisabled>
-					<textureradiooffdisabled colordiffuse="disabled">osd/fullscreen/buttons/random-off.png</textureradiooffdisabled>
+					<textureradioondisabled colordiffuse="$VAR[DisabledColorVar]">osd/fullscreen/buttons/random-on.png</textureradioondisabled>
+					<textureradiooffdisabled colordiffuse="$VAR[DisabledColorVar]">osd/fullscreen/buttons/random-off.png</textureradiooffdisabled>
 					<texturefocus />
 					<width>125</width>
 					<height>123</height>

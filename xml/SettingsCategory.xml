@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<onload>SetProperty(fanarthometype,settings,home)</onload>
-	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
-	<backgroundcolor>background</backgroundcolor>
+	<onload>SetProperty(fanarthometype,settings,Home)</onload>
+	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<control type="grouplist" id="5">
-				<description>control area</description>
+				<description>Control Area</description>
 				<top>163</top>
 				<left>470</left>
 				<pagecontrol>60</pagecontrol>
@@ -54,9 +54,9 @@
 			<aligny>center</aligny>
 		</control>
 		<control type="image" id="11">
-			<description>separator image</description>
+			<description>Separator Image</description>
 			<height>3</height>
-			<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+			<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 		</control>
 		<control type="label" id="14">
 			<description>Default Label</description>
@@ -68,8 +68,8 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font25_title</font>
-			<textcolor>grey</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>$VAR[GreyColorVar]</textcolor>
+			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 		</control>
 		<control type="group">
 			<depth>DepthContentPanel</depth>
@@ -154,7 +154,7 @@
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<control type="textbox" id="6">
-				<description>description area</description>
+				<description>Description Area</description>
 				<left>510</left>
 				<bottom>25</bottom>
 				<right>60</right>

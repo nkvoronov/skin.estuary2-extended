@@ -103,7 +103,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
 							</control>
 						</itemlayout>
 						<itemlayout condition="Control.IsVisible(2200)" width="688" height="80">
@@ -131,7 +131,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout condition="!Control.IsVisible(2200)" width="700" height="80">
@@ -163,7 +163,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
 							</control>
 						</focusedlayout>
 						<focusedlayout condition="Control.IsVisible(2200)" width="688" height="80">
@@ -195,7 +195,7 @@
 								<font>font13</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>grey</textcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
 							</control>
 						</focusedlayout>
 						<content>
@@ -223,8 +223,8 @@
 								<description>Settings button</description>
 								<label>$LOCALIZE[5]</label>
 								<icon>osd/fullscreen/buttons/settings.png</icon>
-								<onclick>SetProperty(settingslist_content,games,home)</onclick>
-								<onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
+								<onclick>SetProperty(settingslist_content,games,Home)</onclick>
+								<onclick>SetProperty(settingslist_header,$LOCALIZE[5],Home)</onclick>
 								<onclick>ActivateWindow(1101)</onclick>
 							</item>
 						</content>

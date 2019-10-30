@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="View_51_Poster">
-		<control type="button" id="200000">
+		<control type="button" id="20000">
 			<description>Dummy button to get animations right (hide focusedlayout on animations)</description>
 			<include>HiddenObject</include>
 			<animation effect="fade" delay="500" time="0" start="100" end="0">Visible</animation>
 			<animation effect="fade" delay="500" time="0" start="100" end="0">WindowOpen</animation>
-			<onclick>noop</onclick>
 			<visible>Control.IsVisible(51)</visible>
 		</control>
 		<control type="group">
@@ -21,7 +20,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="bg_desc">dialogs/dialog-bg-nobo.png</texture>
 				<visible>Control.IsVisible(51)</visible>
 			</control>
 			<control type="group">
@@ -50,7 +49,7 @@
 						<control type="group">
 							<left>-220</left>
 							<top>18</top>
-							<include>InfoWallMovieLayout</include>
+							<include>PosterLayout</include>
 						</control>
 					</itemlayout>
 					<focusedlayout width="490">
@@ -59,17 +58,17 @@
 								<left>-220</left>
 								<top>18</top>
 								<visible>Container.OnScrollPrevious</visible>
-								<visible>Control.IsVisible(200000)</visible>
+								<visible>Control.IsVisible(20000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
-								<include>InfoWallMovieLayout</include>
+								<include>PosterLayout</include>
 							</control>
 							<control type="group">
 								<left>-40</left>
 								<top>18</top>
 								<visible>Container.OnScrollNext</visible>
-								<visible>Control.IsVisible(200000)</visible>
+								<visible>Control.IsVisible(20000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
-								<include>InfoWallMovieLayout</include>
+								<include>PosterLayout</include>
 							</control>
 						</control>
 					</focusedlayout>
@@ -77,64 +76,89 @@
 				<control type="group">
 					<top>25</top>
 					<left>-25</left>
+					<control type="label">
+						<left>645</left>
+						<top>400</top>
+						<right>25</right>
+						<height>40</height>
+						<label>$VAR[TitleAndYearVar]</label>
+						<font>font45_title</font>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<scroll>true</scroll>
+					</control>
 					<control type="group">
-						<left>635</left>
-						<top>480</top>
-						<height>245</height>
-						<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
-						<include content="InfoList">
-							<param name="bottom" value="0" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="ascending" />
-							<param name="font" value="font13" />
-						</include>
+						<visible>!ListItem.IsCollection</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="textbox">
+							<left>645</left>
+							<top>470</top>
+							<height>250</height>
+							<right>25</right>
+							<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+							<label>$VAR[PlotAndTagVar]</label>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<visible>!String.IsEqual(Skin.Font, Arial)</visible>
+						</control>
+						<control type="textbox">
+							<left>645</left>
+							<top>470</top>
+							<height>255</height>
+							<right>25</right>
+							<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
+							<label>$VAR[PlotAndTagVar]</label>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<visible>String.IsEqual(Skin.Font, Arial)</visible>
+						</control>
 					</control>
-					<control type="label">
-						<left>645</left>
-						<top>400</top>
-						<width>950</width>
-						<height>40</height>
-						<label>$INFO[ListItem.Label]</label>
-						<font>font45_title</font>
-						<shadowcolor>text_shadow</shadowcolor>
-					</control>
-					<control type="label">
-						<top>400</top>
-						<right>150</right>
-						<height>40</height>
-						<label>$INFO[ListItem.Year]</label>
-						<font>font45_title</font>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
-						<align>right</align>
-					</control>
-					<control type="textbox">
-						<left>645</left>
-						<top>480</top>
-						<height>250</height>
-						<right>115</right>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$INFO[ListItem.Tagline,[I],[/I][CR]][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
+					<control type="group">
+						<visible>ListItem.IsCollection</visible>
+						<visible>!ListItem.IsParentFolder</visible>
+						<control type="group">
+							<left>635</left>
+							<top>470</top>
+							<height>245</height>
+							<visible>!Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoList">
+								<param name="bottom" value="0" />
+								<param name="width" value="1032" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="list_id" value="5800" />
+							</include>
+						</control>
+						<control type="group">
+							<left>643</left>
+							<top>480</top>
+							<height>245</height>
+							<visible>Skin.HasSetting(hide_collections_text)</visible>
+							<include content="InfoListPics">
+								<param name="bottom" value="0" />
+								<param name="width" value="1032" />
+								<param name="sortby" value="year" />
+								<param name="sortorder" value="ascending" />
+								<param name="list_id" value="6100" />
+							</include>
+						</control>
 					</control>
 				</control>
 			</control>
 		</control>
 		<control type="group">
+			<depth>DepthContentPopout</depth>
 			<top>200</top>
 			<height>670</height>
 			<left>70</left>
-			<depth>DepthContentPopout</depth>
 			<visible>Control.IsVisible(51)</visible>
 			<include>OpenClose_Left</include>
 			<include>Visible_Left</include>
-			<include content="InfoWallMovieLayout">
-				<param name="poster">$VAR[PosterVar]</param>
-				<param name="focused" value="true" />
+			<include content="PosterLayout">
 				<param name="width" value="524" />
 				<param name="height" value="764" />
+				<param name="focused"value="true" />
+				<param name="img_height" value="97%" />
+				<param name="txt_label" value="false" />
+				<param name="cd_art_size" value="300" />
+				<param name="cd_art_size_overlay" value="302" />
 			</include>
 		</control>
 	</include>

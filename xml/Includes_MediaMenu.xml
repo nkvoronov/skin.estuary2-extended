@@ -7,7 +7,7 @@
 		<height>80</height>
 		<radioposx>370</radioposx>
 		<aligny>center</aligny>
-		<invalidcolor>invalid</invalidcolor>
+		<invalidcolor>$VAR[InvalidColorVar]</invalidcolor>
 		<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 		<texturenofocus />
 		<alttexturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</alttexturefocus>
@@ -70,7 +70,7 @@
 						<font>font12</font>
 						<align>right</align>
 						<aligny>top</aligny>
-						<textcolor>grey</textcolor>
+						<textcolor>$VAR[GreyColorVar]</textcolor>
 						<label>$VAR[PVRAreaVar]</label>
 					</control>
 				</control>
@@ -358,11 +358,12 @@
 				<visible>Control.IsEnabled(4)</visible>
 				<onclick>SendClick(4)</onclick>
 			</control>
+			<include condition="Window.IsVisible(Videos) | Window.IsVisible(Music)">MediaMenuSearchButton</include>
 			<control type="button" id="19">
 				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 				<include>MediaMenuItemsCommon</include>
 				<onclick>right</onclick>
-				<label>$LOCALIZE[137]</label>
+				<label>$LOCALIZE[587]</label>
 			</control>
 			<control type="button" id="199">
 				<visible>Container.CanFilterAdvanced</visible>
@@ -373,9 +374,15 @@
 			</control>
 		</definition>
 	</include>
+	<include name="MediaMenuSearchButton">
+		<control type="button" id="8">
+			<include>MediaMenuItemsCommon</include>
+			<label>$LOCALIZE[137]</label>
+		</control>
+	</include>
 	<include name="MediaMenuMouseOverlay">
 		<control type="button" id="6130">
-			<label></label>
+			<label />
 			<left>-50</left>
 			<top>200</top>
 			<bottom>0</bottom>

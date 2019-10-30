@@ -19,7 +19,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>$VAR[MainColorVar]</textcolor>
-				<label>: [COLOR white]$INFO[Container($PARAM[list_id]).Numitems][/COLOR]</label>
+				<label>: [COLOR $VAR[WhiteColorVar]]$INFO[Container($PARAM[list_id]).Numitems][/COLOR]</label>
 			</control>
 		</control>
 		<control type="image">
@@ -57,7 +57,7 @@
 					<height>70</height>
 					<aligny>center</aligny>
 					<font>font27</font>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[GreyColorVar]</textcolor>
 					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
 				</control>
 			</itemlayout>
@@ -148,7 +148,7 @@
 					<height>$PARAM[epg_bar_height]</height>
 					<info2>PVR.TimeshiftProgressEpgStart</info2>
 					<info>PVR.TimeshiftProgressPlayPos</info>
-					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 					<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
 				</control>
 				<control type="progress">
@@ -158,7 +158,7 @@
 					<height>$PARAM[epg_bar_height]</height>
 					<info2>PVR.TimeshiftProgressPlayPos</info2>
 					<info>PVR.TimeshiftProgressEpgEnd</info>
-					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+					<texturebg border="3" colordiffuse="white6">colors/white50.png</texturebg>
 					<midtexture>colors/white50.png</midtexture>
 				</control>
 			</control>
@@ -169,7 +169,7 @@
 				<height>$PARAM[ts_bar_height]</height>
 				<info2>PVR.TimeshiftProgressBufferStart</info2>
 				<info>PVR.TimeshiftProgressBufferEnd</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 				<midtexture>colors/white70.png</midtexture>
 				<visible>Player.SeekEnabled</visible>
 			</control>
@@ -183,7 +183,7 @@
 				<width>100%</width>
 				<height>16</height>
 				<info>PVR.EpgEventProgress</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 				<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
 			</control>
 		</control>
@@ -191,15 +191,15 @@
 	<include name="PVRInfoPanel">
 		<control type="group">
 			<visible>!ListItem.IsFolder</visible>
-			<control type="image">
-				<top>135</top>
-				<left>630</left>
-				<width>200</width>
-				<height>200</height>
-				<aspectratio align="center" aligny="top">keep</aspectratio>
-				<texture fallback="DefaultTVShows.png">$VAR[ChannelListEPGIconVar]</texture>
-				<fadetime>200</fadetime>
-			</control>
+			<include content="IconLayout2">
+				<param name="top" value="135" />
+				<param name="left" value="630" />
+				<param name="width" value="200" />
+				<param name="height" value="200" />
+				<param name="img_fallback" value="DefaultTVShows.png" />
+				<param name="img_source" value="$VAR[ChannelListEPGIconVar]" />
+				<param name="focused" value="true" />
+			</include>
 			<control type="group">
 				<top>120</top>
 				<left>0</left>
@@ -213,8 +213,7 @@
 					<top>60</top>
 					<height>200</height>
 					<wrapmultiline>true</wrapmultiline>
-					<label>$INFO[ListItem.Date,$LOCALIZE[552]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180]: [COLOR white],[/COLOR][CR]]$VAR[ExpirationDateTimeLabel]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>$VAR[ListItemDateLabelVar]$VAR[ListItemDurationLabelVar]$VAR[ListItemExpirationDateTimeLabelVar]</label>
 				</control>
 				<control type="group">
 					<visible>Integer.IsGreater(ListItem.Progress,0)</visible>
@@ -230,14 +229,14 @@
 					<control type="progress">
 						<top>50</top>
 						<height>12</height>
-						<colordiffuse>88FFFFFF</colordiffuse>
+						<colordiffuse>white5</colordiffuse>
 						<info>ListItem.Progress</info>
 					</control>
 				</control>
 				<control type="progress">
 					<top>200</top>
 					<height>12</height>
-					<colordiffuse>88FFFFFF</colordiffuse>
+					<colordiffuse>white5</colordiffuse>
 					<info>ListItem.PercentPlayed</info>
 					<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 				</control>
@@ -258,17 +257,11 @@
 				<label>$INFO[ListItem.EpgEventTitle]</label>
 				<visible>PVR.HasEpg</visible>
 			</control>
-			<control type="label">
+			<control type="textbox">
 				<top>435</top>
 				<width>830</width>
-				<height>70</height>
-				<label>[I]$VAR[SeasonEpisodeLabel]$INFO[ListItem.EpisodeName][/I]</label>
-			</control>
-			<control type="textbox">
-				<top>490</top>
-				<width>830</width>
 				<bottom>75</bottom>
-				<label>$INFO[ListItem.Plot]</label>
+				<label>$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 			<control type="textbox">
@@ -277,7 +270,7 @@
 				<height>340</height>
 				<align>center</align>
 				<font>font27</font>
-				<textcolor>80FFFFFF</textcolor>
+				<textcolor>$VAR[GreyColorVar]</textcolor>
 				<label>$LOCALIZE[19055]</label>
 				<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Genre)</visible>
 			</control>
@@ -308,8 +301,8 @@
 							<height>90</height>
 							<width>830</width>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Date,[COLOR grey],[/COLOR][CR]]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<label>$VAR[ListItemDateLabelVar]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="100" width="780">
@@ -318,14 +311,68 @@
 							<height>90</height>
 							<width>830</width>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Date,[COLOR grey],[/COLOR][CR]]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<label>$VAR[ListItemDateLabelVar]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
 					<content sortby="date" sortorder="$PARAM[folder_sortorder]">$INFO[ListItem.FilenameAndPath]</content>
 				</control>
 			</control>
 		</control>
+	</include>
+	<include name="PVRInfo2Panel">
+		<param name="visible">true</param>
+		<definition>
+			<control type="group">
+				<bottom>30</bottom>
+				<height>300</height>
+				<visible>$PARAM[visible]</visible>
+				<include content="IconLayout2">
+					<param name="top" value="10" />
+					<param name="left" value="30" />
+					<param name="width" value="290" />
+					<param name="height" value="250" />
+					<param name="img_fallback" value="DefaultTVShows.png" />
+					<param name="focused" value="true" />
+				</include>
+				<control type="group">
+					<top>0</top>
+					<left>350</left>
+					<control type="label">
+						<width>70%</width>
+						<height>30</height>
+						<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<right>30</right>
+						<width>30%</width>
+						<height>30</height>
+						<align>right</align>
+						<label>$VAR[ListItemStartTimeLabel2Var]</label>
+					</control>
+					<control type="label">
+						<top>35</top>
+						<right>30</right>
+						<width>40%</width>
+						<height>30</height>
+						<align>right</align>
+						<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
+						<visible>!String.IsEmpty(ListItem.Genre)</visible>
+					</control>
+				</control>
+				<control type="textbox">
+					<left>350</left>
+					<top>85</top>
+					<right>30</right>
+					<height>170</height>
+					<align>justify</align>
+					<label>$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+			</control>
+		</definition>
 	</include>
 	<include name="RDSInfoLine">
 		<control type="grouplist">
@@ -357,7 +404,7 @@
 			<width>100%</width>
 			<height>100%</height>
 			<label>$INFO[PVR.ChannelNumberInput]</label>
-			<shadowcolor>black</shadowcolor>
+			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			<align>center</align>
 			<font>WeatherTemp</font>
 			<aligny>center</aligny>
@@ -432,7 +479,6 @@
 						<height>60</height>
 						<font>font32_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
@@ -442,7 +488,6 @@
 						<height>60</height>
 						<font>font13</font>
 						<label>$INFO[ListItem.ChannelName]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
 						<aligny>center</aligny>
 						<textoffsetx>10</textoffsetx>
 					</control>
@@ -515,7 +560,7 @@
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<orientation>vertical</orientation>
-				<texturesliderbackground colordiffuse="22FFFFFF">colors/white.png</texturesliderbackground>
+				<texturesliderbackground colordiffuse="scrollbar_background2">colors/white.png</texturesliderbackground>
 				<animation effect="fade" start="100" end="40" time="0" condition="!system.getbool(input.enablemouse)">Conditional</animation>
 				<visible>Control.IsVisible($PARAM[control_id])</visible>
 			</control>

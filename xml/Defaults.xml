@@ -14,24 +14,24 @@
 		<label></label>
 		<align>left</align>
 		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
-		<selectedcolor>selected</selectedcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
+		<disabledcolor>$VAR[DisabledColorVar]</disabledcolor>
+		<selectedcolor>$VAR[SelectedColorVar]</selectedcolor>
 		<scroll>false</scroll>
 		<scrollspeed>40</scrollspeed>
 	</default>
 	<default type="fadelabel">
 		<align>left</align>
 		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
+		<disabledcolor>$VAR[DisabledColorVar]</disabledcolor>
 	</default>
 	<default type="button">
 		<texturefocus border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 		<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
+		<disabledcolor>$VAR[DisabledColorVar]</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
@@ -41,14 +41,14 @@
 		<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 		<alttexturefocus border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</alttexturefocus>
 		<alttexturenofocus border="21">buttons/button-nofo.png</alttexturenofocus>
-		<textcolor>white</textcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
 		<font>font13</font>
-		<disabledcolor>disabled</disabledcolor>
+		<disabledcolor>$VAR[DisabledColorVar]</disabledcolor>
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="textbox">
 		<align>left</align>
-		<textcolor>white</textcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
 		<font>font13</font>
 	</default>
 	<default type="progress">
@@ -59,19 +59,19 @@
 		<overlaytexture></overlaytexture>
 	</default>
 	<default type="spincontrol">
-		<textureup colordiffuse="disabled">buttons/spinctrl/arrow-light-up.png</textureup>
-		<texturedown colordiffuse="disabled">buttons/spinctrl/arrow-light-down.png</texturedown>
+		<textureup colordiffuse="$VAR[DisabledColorVar]">buttons/spinctrl/arrow-light-up.png</textureup>
+		<texturedown colordiffuse="$VAR[DisabledColorVar]">buttons/spinctrl/arrow-light-down.png</texturedown>
 		<textureupfocus>buttons/spinctrl/arrow-light-up.png</textureupfocus>
 		<texturedownfocus>buttons/spinctrl/arrow-light-down.png</texturedownfocus>
-		<textureupdisabled colordiffuse="disabled">buttons/spinctrl/arrow-light-up.png</textureupdisabled>
-		<texturedowndisabled colordiffuse="disabled">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
+		<textureupdisabled colordiffuse="$VAR[DisabledColorVar]">buttons/spinctrl/arrow-light-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="$VAR[DisabledColorVar]">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
 		<align>right</align>
 		<width>77</width>
 		<height>33</height>
 		<font>font13</font>
 		<reverse>yes</reverse>
-		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
+		<disabledcolor>$VAR[DisabledColorVar]</disabledcolor>
 		<subtype>text</subtype>
 		<textoffsetx>-5</textoffsetx>
 		<textoffsety>0</textoffsety>
@@ -82,15 +82,15 @@
 		<spinheight>60</spinheight>
 		<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 		<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
-		<textureup colordiffuse="disabled">buttons/spinctrl/arrow-light-up.png</textureup>
-		<texturedown colordiffuse="disabled">buttons/spinctrl/arrow-light-down.png</texturedown>
+		<textureup colordiffuse="$VAR[DisabledColorVar]">buttons/spinctrl/arrow-light-up.png</textureup>
+		<texturedown colordiffuse="$VAR[DisabledColorVar]">buttons/spinctrl/arrow-light-down.png</texturedown>
 		<textureupfocus>buttons/spinctrl/arrow-light-up.png</textureupfocus>
 		<texturedownfocus>buttons/spinctrl/arrow-light-down.png</texturedownfocus>
-		<textureupdisabled colordiffuse="disabled">buttons/spinctrl/arrow-light-up.png</textureupdisabled>
-		<texturedowndisabled colordiffuse="disabled">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
+		<textureupdisabled colordiffuse="$VAR[DisabledColorVar]">buttons/spinctrl/arrow-light-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="$VAR[DisabledColorVar]">buttons/spinctrl/arrow-light-down.png</texturedowndisabled>
 		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
+		<disabledcolor>$VAR[DisabledColorVar]</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<aligny>center</aligny>
 		<reverse>yes</reverse>
@@ -103,21 +103,21 @@
 		<textureradioonnofocus>buttons/radio-button-on.png</textureradioonnofocus>
 		<textureradioofffocus>buttons/radio-button-off.png</textureradioofffocus>
 		<textureradiooffnofocus>buttons/radio-button-off.png</textureradiooffnofocus>
-		<textureradioondisabled colordiffuse="disabled">buttons/radio-button-on.png</textureradioondisabled>
-		<textureradiooffdisabled colordiffuse="disabled">buttons/radio-button-off.png</textureradiooffdisabled>
+		<textureradioondisabled colordiffuse="$VAR[DisabledColorVar]">buttons/radio-button-on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="$VAR[DisabledColorVar]">buttons/radio-button-off.png</textureradiooffdisabled>
 		<texturefocus border="21" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 		<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
+		<disabledcolor>$VAR[DisabledColorVar]</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<align>left</align>
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="scrollbar">
-		<texturesliderbackground colordiffuse="29FFFFFF">colors/white.png</texturesliderbackground>
-		<texturesliderbar colordiffuse="FFAAAAAA">colors/white.png</texturesliderbar>
+		<texturesliderbackground colordiffuse="$VAR[ScrollbarBackgroundColorVar]">colors/white.png</texturesliderbackground>
+		<texturesliderbar colordiffuse="$VAR[ScrollbarColorVar]">colors/white.png</texturesliderbar>
 		<texturesliderbarfocus colordiffuse="$VAR[MainColorVar]">colors/white.png</texturesliderbarfocus>
 		<textureslidernib></textureslidernib>
 		<textureslidernibfocus></textureslidernibfocus>
@@ -145,8 +145,8 @@
 		<textureslidernib>buttons/slider-nib.png</textureslidernib>
 		<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">buttons/slider-nib.png</textureslidernibfocus>
 		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
+		<disabledcolor>$VAR[DisabledColorVar]</disabledcolor>
 	</default>
 	<default type="mover">
 		<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
@@ -160,9 +160,9 @@
 		<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
 		<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>disabled</disabledcolor>
-		<invalidcolor>invalid</invalidcolor>
+		<textcolor>$VAR[WhiteColorVar]</textcolor>
+		<disabledcolor>$VAR[DisabledColorVar]</disabledcolor>
+		<invalidcolor>$VAR[InvalidColorVar]</invalidcolor>
 		<textoffsetx>7</textoffsetx>
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>

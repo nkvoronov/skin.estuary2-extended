@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
-	<onload condition="String.IsEmpty(Window(home).Property(fanarthometype)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(fanarthometype,livetv,home)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(homebackground,$VAR[BackgroundLiveTVVar],home)</onload>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground)) | ![String.IsEqual(window(Home).Property(fanarthometype),livetv) | String.IsEqual(window(Home).Property(fanarthometype),radio)]">SetProperty(fanarthometype,livetv,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground)) | ![String.IsEqual(window(Home).Property(fanarthometype),livetv) | String.IsEqual(window(Home).Property(fanarthometype),radio)]">SetProperty(homebackground,$VAR[BackgroundLiveTVVar],Home)</onload>
 	<views>50,51,52</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
@@ -37,13 +37,19 @@
 							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.hasFocus(50)</visible>
 						</control>
-						<control type="image">
+						<control type="group">
 							<right>20</right>
 							<top>10</top>
 							<width>80</width>
 							<height>70</height>
-							<aspectratio align="right">keep</aspectratio>
-							<texture>$INFO[listitem.icon]</texture>
+							<include content="IconLayout2">
+								<param name="top" value="0" />
+								<param name="left" value="0" />
+								<param name="width" value="80" />
+								<param name="height" value="70" />
+								<param name="img_fallback" value="DefaultTVShows.png" />
+								<param name="focused" value="true" />
+							</include>
 						</control>
 						<control type="progress">
 							<left>105</left>
@@ -70,7 +76,7 @@
 							<font>font14</font>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>165</left>
@@ -80,7 +86,7 @@
 							<aligny>top</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Title]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -91,24 +97,29 @@
 							<aligny>center</aligny>
 							<font>font32_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="90">
-						<control type="image">
+						<control type="group">
 							<right>20</right>
 							<top>10</top>
 							<width>80</width>
 							<height>70</height>
-							<aspectratio align="right">keep</aspectratio>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<include content="IconLayout2">
+								<param name="top" value="0" />
+								<param name="left" value="0" />
+								<param name="width" value="80" />
+								<param name="height" value="70" />
+								<param name="img_fallback" value="DefaultTVShows.png" />
+							</include>
 						</control>
 						<control type="progress">
 							<left>105</left>
 							<top>58</top>
 							<width>50</width>
 							<height>12</height>
-							<colordiffuse>88FFFFFF</colordiffuse>
+							<colordiffuse>white5</colordiffuse>
 							<visible>ListItem.HasEpg</visible>
 							<info>ListItem.Progress</info>
 						</control>
@@ -128,7 +139,7 @@
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>165</left>
@@ -138,8 +149,8 @@
 							<aligny>top</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Title]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<textcolor>grey</textcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -150,8 +161,8 @@
 							<aligny>center</aligny>
 							<font>font32_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
-							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
 				</control>
@@ -185,7 +196,7 @@
 							<top>25</top>
 							<width>50</width>
 							<height>12</height>
-							<colordiffuse>88FFFFFF</colordiffuse>
+							<colordiffuse>white5</colordiffuse>
 							<midtexture border="3">progress/texturebg_white.png</midtexture>
 							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
 							<info>ListItem.Progress</info>
@@ -223,7 +234,7 @@
 							<aligny>center</aligny>
 							<font>font32_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="70">
@@ -232,7 +243,7 @@
 							<top>25</top>
 							<width>50</width>
 							<height>12</height>
-							<colordiffuse>88FFFFFF</colordiffuse>
+							<colordiffuse>white5</colordiffuse>
 							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
 							<info>ListItem.Progress</info>
 						</control>
@@ -250,7 +261,7 @@
 							<right>90</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 						<control type="label">
 							<left>320</left>
@@ -260,8 +271,8 @@
 							<aligny>center</aligny>
 							<align>right</align>
 							<label>$INFO[ListItem.Title]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<textcolor>grey</textcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -272,8 +283,8 @@
 							<aligny>center</aligny>
 							<font>font32_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
-							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
 				</control>
@@ -311,8 +322,8 @@
 								<aligny>center</aligny>
 								<font>font32_title</font>
 								<label>$INFO[ListItem.ChannelNumberLabel]</label>
-								<textcolor>grey</textcolor>
-								<shadowcolor>text_shadow</shadowcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>100</left>
@@ -322,15 +333,20 @@
 								<aligny>center</aligny>
 								<font>font14</font>
 								<label>$INFO[ListItem.Label]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
-							<control type="image">
+							<control type="group">
 								<right>5</right>
 								<top>25</top>
 								<width>80</width>
 								<height>70</height>
-								<aspectratio align="right">keep</aspectratio>
-								<texture>$INFO[listitem.icon]</texture>
+								<include content="IconLayout2">
+									<param name="top" value="0" />
+									<param name="left" value="0" />
+									<param name="width" value="80" />
+									<param name="height" value="70" />
+									<param name="img_fallback" value="DefaultTVShows.png" />
+								</include>
 							</control>
 							<control type="image">
 								<right>80</right>
@@ -347,15 +363,15 @@
 								<aligny>center</aligny>
 								<font>font12</font>
 								<label>$INFO[ListItem.Title]</label>
-								<shadowcolor>text_shadow</shadowcolor>
-								<textcolor>grey</textcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+								<textcolor>$VAR[GreyColorVar]</textcolor>
 							</control>
 							<control type="progress">
 								<left>30</left>
 								<top>145</top>
 								<right>20</right>
 								<height>12</height>
-								<colordiffuse>88FFFFFF</colordiffuse>
+								<colordiffuse>white5</colordiffuse>
 								<visible>ListItem.HasEpg</visible>
 								<info>ListItem.Progress</info>
 							</control>
@@ -366,9 +382,8 @@
 								<right>20</right>
 								<aligny>center</aligny>
 								<font>font12</font>
-								<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]:[COLOR gray] ,[/COLOR]]</label>
-								<shadowcolor>text_shadow</shadowcolor>
-								<textcolor>$VAR[MainColorVar]</textcolor>
+								<label>$VAR[ListItemNextTitleLabelVar]</label>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 						</control>
 					</itemlayout>
@@ -406,7 +421,7 @@
 									<aligny>center</aligny>
 									<font>font32_title</font>
 									<label>$INFO[ListItem.ChannelNumberLabel]</label>
-									<shadowcolor>text_shadow</shadowcolor>
+									<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 								</control>
 								<control type="label">
 									<left>100</left>
@@ -416,15 +431,21 @@
 									<aligny>center</aligny>
 									<font>font14</font>
 									<label>$INFO[ListItem.Label]</label>
-									<shadowcolor>text_shadow</shadowcolor>
+									<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 								</control>
-								<control type="image">
+								<control type="group">
 									<right>5</right>
 									<top>25</top>
 									<width>80</width>
 									<height>70</height>
-									<aspectratio align="right">keep</aspectratio>
-									<texture>$INFO[listitem.icon]</texture>
+									<include content="IconLayout2">
+										<param name="top" value="0" />
+										<param name="left" value="0" />
+										<param name="width" value="80" />
+										<param name="height" value="70" />
+										<param name="img_fallback" value="DefaultTVShows.png" />
+										<param name="focused" value="true" />
+									</include>
 								</control>
 								<control type="image">
 									<right>80</right>
@@ -441,7 +462,7 @@
 									<aligny>center</aligny>
 									<font>font12</font>
 									<label>$INFO[ListItem.Title]</label>
-									<shadowcolor>text_shadow</shadowcolor>
+									<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 									<scroll>true</scroll>
 								</control>
 								<control type="progress">
@@ -460,8 +481,8 @@
 									<right>20</right>
 									<aligny>center</aligny>
 									<font>font12</font>
-									<label>$INFO[ListItem.NextTitle,$LOCALIZE[19031]:[COLOR white] ,[/COLOR]]</label>
-									<shadowcolor>text_shadow</shadowcolor>
+									<label>$VAR[ListItemNextTitleLabelVar]</label>
+									<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 									<scroll>true</scroll>
 								</control>
 							</control>
@@ -493,62 +514,9 @@
 				</control>
 				<include>PVRInfoPanel</include>
 			</control>
-			<control type="group">
-				<bottom>30</bottom>
-				<height>300</height>
-				<visible>Control.IsVisible(52)</visible>
-				<control type="image">
-					<top>10</top>
-					<left>30</left>
-					<width>290</width>
-					<height>250</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<fadetime>400</fadetime>
-					<texture>$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="group">
-					<top>0</top>
-					<left>350</left>
-					<control type="label">
-						<width>70%</width>
-						<height>30</height>
-						<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
-					</control>
-					<control type="label">
-						<top>0</top>
-						<right>30</right>
-						<width>30%</width>
-						<height>30</height>
-						<align>right</align>
-						<label>$INFO[ListItem.StartTime,$LOCALIZE[555]: [COLOR grey],[/COLOR]]$INFO[ListItem.EndTime,[COLOR grey] - ,[/COLOR]]$INFO[ListItem.Duration,[COLOR white] ([/COLOR],[COLOR white])[/COLOR]]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-					</control>
-					<control type="label">
-						<top>35</top>
-						<width>60%</width>
-						<height>30</height>
-						<label>[I][COLOR grey]$VAR[SeasonEpisodeLabelVar][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white],[/COLOR]][/I]</label>
-					</control>
-					<control type="label">
-						<top>35</top>
-						<right>30</right>
-						<width>40%</width>
-						<height>30</height>
-						<align>right</align>
-						<label>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR]]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-					</control>
-				</control>
-				<control type="textbox">
-					<left>350</left>
-					<top>85</top>
-					<right>30</right>
-					<height>170</height>
-					<align>justify</align>
-					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-				</control>
-			</control>
+			<include content="PVRInfo2Panel">
+				<param name="visible" value="Control.IsVisible(52)" />
+			</include>
 			<control type="group">
 				<right>0</right>
 				<top>140</top>
@@ -583,13 +551,12 @@
 				<width>850</width>
 				<height>60</height>
 				<visible>!String.IsEmpty(ListItem.NextTitle)</visible>
-				<label>$LOCALIZE[19031]: $INFO[ListItem.NextStartTime,[COLOR grey],[/COLOR]]$INFO[ListItem.NextTitle,[COLOR white]. ,[/COLOR]]</label>
-				<shadowcolor>black</shadowcolor>
+				<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19031]: [/COLOR]$VAR[ListItemNextStartTimeLabelVar]$INFO[ListItem.NextTitle]</label>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 				<wrapmultiline>true</wrapmultiline>
 				<font>font27</font>
-				<textcolor>$VAR[MainColorVar]</textcolor>
 				<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
 			</control>
 			<include>PVRChannelNumberInput</include>

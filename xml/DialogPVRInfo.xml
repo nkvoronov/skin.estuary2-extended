@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
-	<onunload>ClearProperty(infobackground,home)</onunload>
+	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],Home)</onload>
+	<onunload>ClearProperty(infobackground,Home)</onunload>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="0" end="100" time="100">WindowOpen</animation>
@@ -38,8 +38,8 @@
 					<onright>61</onright>
 					<ondown>9000</ondown>
 					<onup>9000</onup>
-					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[207],home)</onclick>
-					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.Plot],home)</onclick>
+					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[207],Home)</onclick>
+					<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.Plot],Home)</onclick>
 					<onclick>ActivateWindow(1102)</onclick>
 				</control>
 				<control type="textbox" id="400">
@@ -48,8 +48,7 @@
 					<width>1050</width>
 					<height>425</height>
 					<align>justify</align>
-					<label>$INFO[ListItem.StartDate][CR]$INFO[ListItem.StartTime,$LOCALIZE[555]: [COLOR grey],[/COLOR]]$INFO[ListItem.EndTime,[COLOR grey] - ,[/COLOR]][COLOR white] ([/COLOR]$INFO[ListItem.Duration][COLOR white])[/COLOR][CR]$INFO[ListItem.Season,[COLOR white],[/COLOR]x]$INFO[ListItem.Episode,[COLOR white],[/COLOR]: ]$INFO[ListItem.EpisodeName,[B][COLOR white],[/COLOR][/B][CR]]$INFO[ListItem.Genre,$LOCALIZE[515]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Writer,$LOCALIZE[20417]:[COLOR white],[/COLOR][CR]]$INFO[ListItem.Director,$LOCALIZE[20339]:[COLOR white],[/COLOR][CR]]$INFO[ListItem.Cast,$LOCALIZE[206]:[COLOR white],[/COLOR][CR]][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-					<textcolor>$VAR[MainColorVar]</textcolor>
+					<label>$VAR[ListItemDateLabelVar]$VAR[ListItemStartTimeLabelVar]$VAR[ListItemExpirationDateTimeLabelVar]$VAR[ListItemGenreLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemCastLabelVar][CR]$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="grouplist" id="9000">
@@ -118,8 +117,8 @@
 				</control>
 			</control>
 			<include content="InfoDialogTopBarInfo">
-				<param name="main_label" value="[COLOR white]$INFO[ListItem.Title][/COLOR]$INFO[ListItem.Season, ]$INFO[ListItem.Episode,x]" />
-				<param name="sub_label" value="[COLOR white]$INFO[ListItem.ChannelName][/COLOR]" />
+				<param name="main_label" value="$INFO[ListItem.Title]" />
+				<param name="sub_label" value="$INFO[ListItem.ChannelName]" />
 				<param name="posy" value="40" />
 			</include>
 		</control>

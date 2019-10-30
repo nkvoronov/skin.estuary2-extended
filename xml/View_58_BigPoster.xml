@@ -9,502 +9,421 @@
 			<left>93</left>
 			<right>93</right>
 			<height>700</height>
-			<include content="View_BigPoster">
-				<param name="width" value="2800" />
-				<param name="id" value="58" />
-				<param name="condition" value="Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
-			</include>
-		</control>
-	</include>
-	<include name="View_BigPoster">
-		<control type="group">
-			<control type="fixedlist" id="$PARAM[id]">
-				<animation effect="slide" start="0" end="237" condition="Container($PARAM[id]).Position(0) | Container($PARAM[id]).Position(1)" time="400" tween="quadratic">Conditional</animation>
-				<animation effect="slide" start="0" end="-237" condition="Container($PARAM[id]).Position(3) | Container($PARAM[id]).Position(4)" time="400" tween="quadratic">Conditional</animation>
-				<top>0</top>
-				<left>-362</left>
-				<width>$PARAM[width]</width>
-				<height>700</height>
-				<onleft>$PARAM[id]</onleft>
-				<onright>$PARAM[id]</onright>
-				<onup>9000</onup>
-				<ondown>5199</ondown>
-				<pagecontrol>5199</pagecontrol>
-				<focusposition>2</focusposition>
-				<movement>1</movement>
-				<preloaditems>2</preloaditems>
-				<orientation>horizontal</orientation>
-				<viewtype label="$LOCALIZE[43200]">bigicons</viewtype>
-				<scrolltime tween="quadratic">400</scrolltime>
-				<visible>$PARAM[condition]</visible>
-				<itemlayout height="700" width="495" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
-					<control type="group">
-						<top>23</top>
-						<include content="InfoWallMovieLayout">
-							<param name="width" value="493" />
-							<param name="height" value="663" />
-						</include>
-					</control>
-				</itemlayout>
-				<focusedlayout height="700" width="495" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
-					<control type="group">
-						<top>23</top>
-						<include content="InfoWallMovieLayout">
-							<param name="focused" value="true" />
-							<param name="width" value="493" />
-							<param name="height" value="663" />
-						</include>
-					</control>
-				</focusedlayout>
-				<itemlayout height="700" width="495" condition="Container.Content(episodes)">
-					<control type="group">
-						<top>23</top>
+			<control type="group">
+				<control type="fixedlist" id="58">
+					<animation effect="slide" start="0" end="237" condition="Container($PARAM[id]).Position(0) | Container($PARAM[id]).Position(1)" time="400" tween="quadratic">Conditional</animation>
+					<animation effect="slide" start="0" end="-237" condition="Container($PARAM[id]).Position(3) | Container($PARAM[id]).Position(4)" time="400" tween="quadratic">Conditional</animation>
+					<top>0</top>
+					<left>-362</left>
+					<width>2800</width>
+					<height>700</height>
+					<onleft>58</onleft>
+					<onright>58</onright>
+					<onup>9000</onup>
+					<ondown>5199</ondown>
+					<pagecontrol>5199</pagecontrol>
+					<focusposition>2</focusposition>
+					<movement>1</movement>
+					<preloaditems>2</preloaditems>
+					<orientation>horizontal</orientation>
+					<viewtype label="$LOCALIZE[43200]">bigicons</viewtype>
+					<scrolltime tween="quadratic">400</scrolltime>
+					<visible>Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)</visible>
+					<itemlayout height="700" width="495" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
 						<control type="group">
-							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
-							<control type="image">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
-							<control type="textbox">
-								<left>40</left>
-								<top>535</top>
-								<width>405</width>
-								<height>120</height>
-								<font>font27</font>
-								<align>center</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-								<autoscroll time="2000" delay="3000" repeat="5000">false</autoscroll>
-								<visible>!ListItem.IsParentFolder</visible>
-							</control>
-							<control type="image">
-								<left>30</left>
-								<top>105</top>
-								<width>445</width>
-								<height>445</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
-								<aspectratio>scale</aspectratio>
-								<bordersize>20</bordersize>
-								<visible>!ListItem.IsParentFolder</visible>
-							</control>
-							<control type="image">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
-								<aspectratio>keep</aspectratio>
-								<bordersize>20</bordersize>
-								<visible>ListItem.IsParentFolder</visible>
-							</control>
+							<top>23</top>
+							<include content="PosterLayout">
+								<param name="width" value="493" />
+								<param name="height" value="663" />
+							</include>
 						</control>
+					</itemlayout>
+					<focusedlayout height="700" width="495" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)">
 						<control type="group">
-							<visible>!String.IsEmpty(ListItem.Art(thumb))</visible>
-							<control type="image">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
+							<depth>DepthContentPopout</depth>
+							<top>23</top>
+							<include content="PosterLayout">
+								<param name="focused" value="true" />
+								<param name="width" value="493" />
+								<param name="height" value="663" />
+								<param name="cd_art_right" value="0" />
+								<param name="cd_art_size" value="300" />
+								<param name="cd_art_size_overlay" value="302" />
+							</include>
+						</control>
+					</focusedlayout>
+					<itemlayout height="700" width="495" condition="Container.Content(episodes)">
+						<control type="group">
+							<top>23</top>
 							<control type="group">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
 								<control type="image">
-									<left>5</left>
-									<right>5</right>
-									<top>5</top>
-									<height>300</height>
-									<aspectratio align="center" aligny="top">scale</aspectratio>
-									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
-									<bordersize>15</bordersize>
-								</control>
-								<control type="image">
-									<left>20</left>
-									<top>210</top>
-									<width>80</width>
-									<height>80</height>
-									<texture>overlays/overlay-bg.png</texture>
-									<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-								</control>
-								<control type="image">
-									<left>20</left>
-									<top>260</top>
-									<height>32</height>
-									<width>32</width>
-									<texture>$VAR[WallWatchedIconVar]</texture>
-								</control>
-								<control type="label">
-									<top>290</top>
-									<left>30</left>
-									<right>30</right>
-									<height>36</height>
-									<label>[B]$INFO[ListItem.Title][/B]</label>
-								</control>
-								<control type="label">
-									<top>330</top>
-									<left>30</left>
-									<right>30</right>
-									<height>24</height>
-									<font>font12</font>
-									<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]•[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
-									<textcolor>$VAR[MainColorVar]</textcolor>
-								</control>
-								<control type="textbox">
-									<top>365</top>
-									<left>30</left>
-									<right>30</right>
-									<bottom>30</bottom>
-									<font>font12</font>
-									<label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
-									<textcolor>$VAR[MainColorVar]</textcolor>
-									<autoscroll>false</autoscroll>
-								</control>
-							</control>
-						</control>
-						<control type="group">
-							<left>231</left>
-							<top>-8</top>
-							<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
-							<include>RatingCircle</include>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout height="700" width="495" condition="Container.Content(episodes)">
-					<control type="group">
-						<top>23</top>
-						<control type="group">
-							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
-							<control type="image">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
-							<control type="image">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-								<bordersize>20</bordersize>
-								<include>Animation_FocusTextureFade</include>
-							</control>
-							<control type="textbox">
-								<left>40</left>
-								<top>535</top>
-								<width>405</width>
-								<height>120</height>
-								<font>font27</font>
-								<align>center</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-								<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
-								<visible>!ListItem.IsParentFolder</visible>
-							</control>
-							<control type="image">
-								<left>30</left>
-								<top>105</top>
-								<width>445</width>
-								<height>445</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
-								<aspectratio>scale</aspectratio>
-								<bordersize>20</bordersize>
-								<visible>!ListItem.IsParentFolder</visible>
-							</control>
-							<control type="image">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
-								<aspectratio>keep</aspectratio>
-								<bordersize>20</bordersize>
-								<visible>ListItem.IsParentFolder</visible>
-							</control>
-						</control>
-						<control type="group">
-							<visible>!String.IsEmpty(ListItem.Art(thumb))</visible>
-							<control type="image">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
-							<control type="image">
-								<left>11</left>
-								<top>-14</top>
-								<width>493</width>
-								<height>663</height>
-								<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-								<include>Animation_FocusTextureFade</include>
-							</control>
-							<control type="group">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<control type="image">
-									<left>5</left>
-									<right>5</right>
-									<top>5</top>
-									<height>300</height>
-									<aspectratio align="center" aligny="top">scale</aspectratio>
-									<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
-									<bordersize>15</bordersize>
-								</control>
-								<control type="image">
-									<left>20</left>
-									<top>210</top>
-									<width>80</width>
-									<height>80</height>
-									<texture>overlays/overlay-bg.png</texture>
-									<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
-								</control>
-								<control type="image">
-									<left>20</left>
-									<top>260</top>
-									<height>32</height>
-									<width>32</width>
-									<texture>$VAR[WallWatchedIconVar]</texture>
-								</control>
-								<control type="label">
-									<top>290</top>
-									<left>30</left>
-									<right>30</right>
-									<height>36</height>
-									<label>[B]$INFO[ListItem.Title][/B]</label>
-								</control>
-								<control type="label">
-									<top>330</top>
-									<left>30</left>
-									<right>30</right>
-									<height>24</height>
-									<font>font12</font>
-									<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , • ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
-								</control>
-								<control type="textbox">
-									<top>365</top>
-									<left>30</left>
-									<right>30</right>
-									<bottom>30</bottom>
-									<font>font12</font>
-									<label>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot]</label>
-									<autoscroll delay="10000" time="4000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-								</control>
-							</control>
-						</control>
-						<control type="group">
-							<left>231</left>
-							<top>-8</top>
-							<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
-							<include>RatingCircle</include>
-						</control>
-					</control>
-				</focusedlayout>
-				<itemlayout height="700" width="495" condition="Container.Content(artists) | Container.Content(albums)">
-					<control type="group">
-						<top>23</top>
-						<control type="group">
-							<control type="image">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
-							<control type="group">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<control type="image">
-									<left>5</left>
-									<right>5</right>
-									<top>5</top>
-									<height>475</height>
-									<texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
-									<bordersize>15</bordersize>
-									<aspectratio>keep</aspectratio>
-									<visible>Container.Content(artists) + !ListItem.IsParentFolder</visible>
-								</control>
-								<control type="image">
-									<left>5</left>
-									<right>5</right>
-									<top>5</top>
-									<height>475</height>
-									<texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
-									<bordersize>15</bordersize>
-									<aspectratio>keep</aspectratio>
-									<visible>Container.Content(albums) + !ListItem.IsParentFolder</visible>
-								</control>
-								<control type="image">
-									<left>5</left>
-									<right>5</right>
-									<top>5</top>
+									<left>15</left>
+									<top>-10</top>
+									<width>485</width>
 									<height>655</height>
-									<texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
-									<bordersize>15</bordersize>
-									<aspectratio>keep</aspectratio>
-									<visible>ListItem.IsParentFolder + [ Container.Content(albums) | Container.Content(artists) ]</visible>
+									<texture>dialogs/dialog-bg-nobo.png</texture>
+									<bordertexture border="21">overlays/shadow.png</bordertexture>
+									<bordersize>20</bordersize>
 								</control>
-								<control type="textbox">
-									<left>20</left>
-									<right>20</right>
-									<top>460</top>
-									<bottom>20</bottom>
-									<label>$INFO[ListItem.Artist,[B],[/B]]</label>
-									<align>center</align>
-									<aligny>center</aligny>
-									<visible>Container.Content(artists)</visible>
-								</control>
-								<control type="textbox">
-									<left>20</left>
-									<right>20</right>
-									<top>460</top>
-									<bottom>20</bottom>
-									<label>$INFO[ListItem.Album,[COLOR white][B],[/B][/COLOR]] $INFO[ListItem.Year,[B][COLOR white]([/COLOR],[COLOR white])[/COLOR][/B]][CR]$INFO[ListItem.Artist,[COLOR white][I],[/I][/COLOR]]</label>
-									<align>center</align>
-									<aligny>center</aligny>
-									<textcolor>$VAR[MainColorVar]</textcolor>
-									<visible>Container.Content(albums)</visible>
-								</control>
-								<control type="textbox">
-									<left>20</left>
-									<right>20</right>
-									<top>460</top>
-									<bottom>20</bottom>
-									<label>$INFO[ListItem.Label]</label>
-									<align>center</align>
-									<aligny>center</aligny>
-									<visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year) + !ListItem.IsParentFolder</visible>
-								</control>
-							</control>
-						</control>
-						<control type="group">
-							<left>231</left>
-							<top>-8</top>
-							<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
-							<include>RatingCircle</include>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout height="700" width="495" condition="Container.Content(artists) | Container.Content(albums)">
-					<control type="group">
-						<top>23</top>
-						<control type="group">
-							<control type="image">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<texture>dialogs/dialog-bg-nobo.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-							</control>
-							<control type="image">
-								<left>11</left>
-								<top>-14</top>
-								<width>493</width>
-								<height>663</height>
-								<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
-								<include>Animation_FocusTextureFade</include>
-							</control>
-							<control type="group">
-								<left>15</left>
-								<top>-10</top>
-								<width>485</width>
-								<height>655</height>
-								<control type="image">
-									<left>5</left>
-									<right>5</right>
-									<top>5</top>
-									<height>475</height>
-									<texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
-									<bordersize>15</bordersize>
-									<aspectratio>keep</aspectratio>
-									<visible>Container.Content(artists) + !ListItem.IsParentFolder</visible>
-								</control>
-								<control type="image">
-									<left>5</left>
-									<right>5</right>
-									<top>5</top>
-									<height>475</height>
-									<texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
-									<bordersize>15</bordersize>
-									<aspectratio>keep</aspectratio>
-									<visible>Container.Content(albums) + !ListItem.IsParentFolder</visible>
-								</control>
-								<control type="image">
-									<left>5</left>
-									<right>5</right>
-									<top>5</top>
+								<control type="group">
+									<left>15</left>
+									<top>-10</top>
+									<width>485</width>
 									<height>655</height>
-									<texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
-									<bordersize>15</bordersize>
-									<aspectratio>keep</aspectratio>
-									<visible>ListItem.IsParentFolder + [ Container.Content(albums) | Container.Content(artists) ]</visible>
-								</control>
-								<control type="textbox">
-									<left>20</left>
-									<right>20</right>
-									<top>460</top>
-									<bottom>20</bottom>
-									<label>$INFO[ListItem.Artist,[B],[/B]]</label>
-									<align>center</align>
-									<aligny>center</aligny>
-									<visible>Container.Content(artists)</visible>
-								</control>
-								<control type="textbox">
-									<left>20</left>
-									<right>20</right>
-									<top>460</top>
-									<bottom>20</bottom>
-									<label>$INFO[ListItem.Album,[B],[/B]] $INFO[ListItem.Year,[B](,)[/B]][CR]$INFO[ListItem.Artist,[I],[/I]]</label>
-									<align>center</align>
-									<aligny>center</aligny>
-									<visible>Container.Content(albums)</visible>
-								</control>
-								<control type="textbox">
-									<left>20</left>
-									<right>20</right>
-									<top>460</top>
-									<bottom>20</bottom>
-									<label>$INFO[ListItem.Label]</label>
-									<align>center</align>
-									<aligny>center</aligny>
-									<visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year) + !ListItem.IsParentFolder</visible>
+									<control type="group">
+										<visible>!ListItem.IsParentFolder</visible>
+										<include content="ThumbLayout">
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
+											<param name="height" value="300" />
+											<param name="border" value="false" />
+											<param name="watched_bottom" value="12" />
+											<param name="thumb_label" value="" />
+											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
+										</include>
+										<control type="label">
+											<top>290</top>
+											<left>30</left>
+											<right>30</right>
+											<height>36</height>
+											<label>[B]$INFO[ListItem.Title][/B]</label>
+										</control>
+										<control type="label">
+											<top>330</top>
+											<left>30</left>
+											<right>30</right>
+											<height>24</height>
+											<font>font12</font>
+											<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
+											<textcolor>$VAR[MainColorVar]</textcolor>
+										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>30</bottom>
+											<font>font12</font>
+											<label>$VAR[PlotAndTagVar]</label>
+											<autoscroll>false</autoscroll>
+											<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>50</bottom>
+											<font>font12</font>
+											<label>$VAR[PlotAndTagVar]</label>
+											<autoscroll>false</autoscroll>
+											<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+										</control>
+									</control>
+									<control type="group">
+										<visible>ListItem.IsParentFolder</visible>
+										<include content="ThumbLayout">
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
+											<param name="height" value="650" />
+											<param name="border" value="false" />
+											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
+										</include>
+									</control>
 								</control>
 							</control>
 						</control>
+					</itemlayout>
+					<focusedlayout height="700" width="495" condition="Container.Content(episodes)">
 						<control type="group">
-							<left>231</left>
-							<top>-8</top>
-							<include>RatingCircle</include>
+							<top>23</top>
+							<control type="group">
+								 <control type="image">
+									<left>15</left>
+									<top>-10</top>
+									<width>485</width>
+									<height>655</height>
+									<texture>dialogs/dialog-bg-nobo.png</texture>
+									<bordertexture border="21">overlays/shadow.png</bordertexture>
+									<bordersize>20</bordersize>
+								</control>
+								<control type="image">
+									<left>11</left>
+									<top>-14</top>
+									<width>493</width>
+									<height>663</height>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+									<bordertexture border="21">overlays/shadow.png</bordertexture>
+									<bordersize>20</bordersize>
+									<include>Animation_FocusTextureFade</include>
+								</control>
+								<control type="group">
+									<left>15</left>
+									<top>-10</top>
+									<width>485</width>
+									<height>655</height>
+									<control type="group">
+										<visible>!ListItem.IsParentFolder</visible>
+										<include content="ThumbLayout">
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
+											<param name="height" value="300" />
+											<param name="border" value="false" />
+											<param name="watched_bottom" value="12" />
+											<param name="thumb_label" value="" />
+											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
+										</include>
+										<control type="label">
+											<top>290</top>
+											<left>30</left>
+											<right>30</right>
+											<height>36</height>
+											<label>[B]$INFO[ListItem.Title][/B]</label>
+										</control>
+										<control type="label">
+											<top>330</top>
+											<left>30</left>
+											<right>30</right>
+											<height>24</height>
+											<font>font12</font>
+											<label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
+										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>30</bottom>
+											<font>font12</font>
+											<label>$VAR[PlotAndTagVar]</label>
+											<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+											<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>50</bottom>
+											<font>font12</font>
+											<label>$VAR[PlotAndTagVar]</label>
+											<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+											<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>40</bottom>
+											<align>center</align>
+											<aligny>center</aligny>
+											<font>font27</font>
+											<textcolor>80FFFFFF</textcolor>
+											<label>$LOCALIZE[19055]</label>
+											<visible>String.IsEmpty(ListItem.Plot)</visible>
+										</control>
+									</control>
+									<control type="group">
+										<visible>ListItem.IsParentFolder</visible>
+										<include content="ThumbLayout">
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
+											<param name="height" value="650" />
+											<param name="border" value="false" />
+											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
+										</include>
+									</control>
+								</control>
+							</control>
 						</control>
-					</control>
-				</focusedlayout>
+					</focusedlayout>
+					<itemlayout height="700" width="495" condition="Container.Content(artists) | Container.Content(albums)">
+						<control type="group">
+							<top>23</top>
+							<control type="group">
+								<control type="image">
+									<left>15</left>
+									<top>-10</top>
+									<width>485</width>
+									<height>655</height>
+									<texture>dialogs/dialog-bg-nobo.png</texture>
+									<bordertexture border="21">overlays/shadow.png</bordertexture>
+									<bordersize>20</bordersize>
+								</control>
+								<control type="group">
+									<left>15</left>
+									<top>-10</top>
+									<width>485</width>
+									<height>655</height>
+									<control type="group">
+										<visible>!ListItem.IsParentFolder</visible>
+										<include content="SquareLayout">
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
+											<param name="height" value="475" />
+											<param name="border" value="false" />
+											<param name="istwolabel" value="false" />
+											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
+										</include>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>$INFO[ListItem.Artist,[B],[/B]]</label>
+											<align>center</align>
+											<aligny>center</aligny>
+											<visible>Container.Content(artists)</visible>
+										</control>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>$INFO[ListItem.Album,[B],[/B]]$VAR[ListItemYearLabelVar,[B],[/B]][CR]$INFO[ListItem.Artist,[I],[/I]]</label>
+											<align>center</align>
+											<aligny>center</aligny>
+											<visible>Container.Content(albums)</visible>
+										</control>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>$INFO[ListItem.Label]</label>
+											<align>center</align>
+											<aligny>center</aligny>
+											<visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year) + !ListItem.IsParentFolder</visible>
+										</control>
+									</control>
+									<control type="group">
+										<visible>ListItem.IsParentFolder</visible>
+										<include content="SquareLayout">
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
+											<param name="height" value="475" />
+											<param name="border" value="false" />
+											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
+										</include>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>..</label>
+											<align>center</align>
+											<aligny>center</aligny>
+										</control>
+									</control>
+								</control>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="700" width="495" condition="Container.Content(artists) | Container.Content(albums)">
+						<control type="group">
+							<top>23</top>
+							<control type="group">
+								<control type="image">
+									<left>15</left>
+									<top>-10</top>
+									<width>485</width>
+									<height>655</height>
+									<texture>dialogs/dialog-bg-nobo.png</texture>
+									<bordertexture border="21">overlays/shadow.png</bordertexture>
+									<bordersize>20</bordersize>
+								</control>
+								<control type="image">
+									<left>11</left>
+									<top>-14</top>
+									<width>493</width>
+									<height>663</height>
+									<texture colordiffuse="$VAR[MainColorVar]">colors/grey.png</texture>
+									<bordertexture border="21">overlays/shadow.png</bordertexture>
+									<bordersize>20</bordersize>
+									<include>Animation_FocusTextureFade</include>
+								</control>
+								<control type="group">
+									<left>15</left>
+									<top>-10</top>
+									<width>485</width>
+									<height>655</height>
+									<control type="group">
+										<visible>!ListItem.IsParentFolder</visible>
+										<include content="SquareLayout">
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
+											<param name="height" value="475" />
+											<param name="border" value="false" />
+											<param name="istwolabel" value="false" />
+											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
+										</include>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>$INFO[ListItem.Artist,[B],[/B]]</label>
+											<align>center</align>
+											<aligny>center</aligny>
+											<visible>Container.Content(artists)</visible>
+										</control>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>$INFO[ListItem.Album,[B],[/B]] $VAR[ListItemYearLabelVar,[B],[/B]][CR]$INFO[ListItem.Artist,[I],[/I]]</label>
+											<align>center</align>
+											<aligny>center</aligny>
+											<visible>Container.Content(albums)</visible>
+										</control>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>$INFO[ListItem.Label]</label>
+											<align>center</align>
+											<aligny>center</aligny>
+											<visible>String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Year) + !ListItem.IsParentFolder</visible>
+										</control>
+									</control>
+									<control type="group">
+										<visible>ListItem.IsParentFolder</visible>
+										<include content="SquareLayout">
+											<param name="left" value="-4" />
+											<param name="top" value="-4" />
+											<param name="width" value="492" />
+											<param name="height" value="475" />
+											<param name="border" value="false" />
+											<param name="img_height" value="100%" />
+											<param name="txt_label" value="false" />
+										</include>
+										<control type="textbox">
+											<left>20</left>
+											<right>20</right>
+											<top>460</top>
+											<bottom>20</bottom>
+											<label>..</label>
+											<align>center</align>
+											<aligny>center</aligny>
+										</control>
+									</control>
+								</control>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
 			</control>
 		</control>
 	</include>

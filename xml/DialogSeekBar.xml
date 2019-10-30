@@ -38,9 +38,8 @@
 					<aligny>center</aligny>
 					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
-					<label>$LOCALIZE[21396]:[CR][COLOR white]$INFO[player.chapter]$INFO[player.chaptercount, / ][/COLOR]</label>
+					<label>[COLOR $VAR[WhiteColorVar]]$LOCALIZE[21396]:[/COLOR][CR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
 					<visible>player.chaptercount</visible>
-					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 				<control type="grouplist">
 					<right>20</right>
@@ -131,9 +130,8 @@
 					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<label>$INFO[Player.TimeRemaining,$LOCALIZE[31134]:[CR][COLOR white],[/COLOR]]</label>
+					<label>$VAR[PlayerTimeRemainingLabelVar]</label>
 					<visible>![Player.ShowInfo | Window.IsVisible(playerprocessinfo) | VideoPlayer.HasEpg]</visible>
-					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 				<control type="label">
 					<top>110</top>
@@ -145,8 +143,8 @@
 					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<label>$INFO[PVR.EpgEventRemainingTime,[COLOR button_focus]$LOCALIZE[31134]:[CR][/COLOR]]</label>
-					<visible>![Player.ShowInfo | Window.IsVisible(playerprocessinfo)] + VideoPlayer.HasEpg</visible>
+					<label>$VAR[PVREpgEventRemainingTimeLabelVar]</label>
+					<visible>![Player.ShowInfo | Window.IsVisible(playerprocessinfo)] + VideoPlayer.HasEpg</visible>                    
 				</control>
 			</control>
 			<control type="label">
@@ -159,7 +157,7 @@
 				<animation delay="0" effect="slide" time="120" start="0,0" end="0,-20" tween="sine" easing="inout" condition="!String.IsEmpty(Control.GetLabel(40000))">Conditional</animation>
 				<label>$VAR[SeekTimeLabelVar]</label>
 				<font>font45</font>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				<visible>!Player.ChannelPreviewActive | VideoPlayer.HasEpg</visible>
 			</control>
 			<control type="label" id="40000">
@@ -170,7 +168,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$VAR[SeekLabelVar]</label>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 			</control>
 			<control type="group">
 				<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -206,7 +204,7 @@
 					<top>65</top>
 					<width>100%</width>
 					<height>26</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
+					<texturesliderbar colordiffuse="white6">osd/progress/nub_bar.png</texturesliderbar>
 					<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_bar.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled + !Player.ChannelPreviewActive</visible>
@@ -220,7 +218,7 @@
 					<width>100%</width>
 					<height>16</height>
 					<info>Player.ProgressCache</info>
-					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+					<texturebg border="3" colordiffuse="white6">colors/white50.png</texturebg>
 					<midtexture>colors/white50.png</midtexture>
 				</control>
 				<control type="progress">
@@ -229,7 +227,7 @@
 					<width>100%</width>
 					<height>16</height>
 					<info>Player.Progress</info>
-					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 					<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
 				</control>
 				<control type="slider" id="401">
@@ -237,7 +235,7 @@
 					<top>65</top>
 					<width>100%</width>
 					<height>26</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
+					<texturesliderbar colordiffuse="white6">osd/progress/nub_bar.png</texturesliderbar>
 					<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_bar.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled</visible>
@@ -257,7 +255,7 @@
 				<top>-80</top>
 				<height>25</height>
 				<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				<align>center</align>
 				<font>WeatherTemp</font>
 				<aligny>center</aligny>
@@ -309,15 +307,14 @@
 				<left>260</left>
 				<top>180</top>
 				<height>25</height>
-				<label>$LOCALIZE[19031]: $INFO[VideoPlayer.NextStartTime,[COLOR grey], - [/COLOR]]$INFO[VideoPlayer.NextEndTime,[COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextTitle,[COLOR white]. ,[/COLOR]]</label>
+				<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19031]: [/COLOR]$VAR[VideoPlayerNextStartTimeLabelVar]$INFO[VideoPlayer.NextTitle]</label>
 				<visible>VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
-				<textcolor>$VAR[MainColorVar]</textcolor>
 			</control>
 			<control type="label">
 				<left>260</left>
 				<top>180</top>
 				<height>25</height>
-				<label>[COLOR grey]$LOCALIZE[14304]: [/COLOR]$INFO[RDS.GetLine(0)]</label>
+				<label>[COLOR $VAR[GreyColorVar]]$LOCALIZE[14304]: [/COLOR]$INFO[RDS.GetLine(0)]</label>
 				<visible>RDS.HasRadioText</visible>
 			</control>
 		</control>

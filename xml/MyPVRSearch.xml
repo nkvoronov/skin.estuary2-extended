@@ -2,8 +2,8 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(fanarthometype,livetv,home)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(homebackground)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(homebackground,$VAR[BackgroundLiveTVVar],home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground)) | ![String.IsEqual(window(Home).Property(fanarthometype),livetv) | String.IsEqual(window(Home).Property(fanarthometype),radio)]">SetProperty(fanarthometype,livetv,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground)) | ![String.IsEqual(window(Home).Property(fanarthometype),livetv) | String.IsEqual(window(Home).Property(fanarthometype),radio)]">SetProperty(homebackground,$VAR[BackgroundLiveTVVar],Home)</onload>
 	<views>50</views>
 	<menucontrol>6053</menucontrol>
 	<controls>
@@ -40,14 +40,16 @@
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
-							<control type="image">
-								<left>25</left>
-								<top>10</top>
-								<width>80</width>
-								<height>80</height>
-								<texture fallback="DefaultTVShows.png">$INFO[Listitem.ActualIcon]</texture>
-								<aspectratio>keep</aspectratio>
+							<control type="group">
 								<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
+								<include content="IconLayout2">
+									<param name="top" value="10" />
+									<param name="left" value="25" />
+									<param name="width" value="80" />
+									<param name="height" value="80" />
+									<param name="img_fallback" value="DefaultTVShows.png" />
+									<param name="img_source" value="$INFO[Listitem.ActualIcon]" />
+								</include>
 							</control>
 							<control type="label">
 								<left>120</left>
@@ -55,7 +57,7 @@
 								<right>30</right>
 								<height>100</height>
 								<aligny>top</aligny>
-								<label>$INFO[ListItem.ChannelName][COLOR grey]$INFO[ListItem.Label, - ][/COLOR]</label>
+								<label>$INFO[ListItem.ChannelName][COLOR $VAR[GreyColorVar]]$INFO[ListItem.Label, - ][/COLOR]</label>
 							</control>
 							<control type="label">
 								<left>120</left>
@@ -89,14 +91,17 @@
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
-							<control type="image">
-								<left>25</left>
-								<top>10</top>
-								<width>80</width>
-								<height>80</height>
-								<texture fallback="DefaultTVShows.png">$INFO[Listitem.ActualIcon]</texture>
-								<aspectratio>keep</aspectratio>
+							<control type="group">
 								<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
+								<include content="IconLayout2">
+									<param name="top" value="10" />
+									<param name="left" value="25" />
+									<param name="width" value="80" />
+									<param name="height" value="80" />
+									<param name="img_fallback" value="DefaultTVShows.png" />
+									<param name="img_source" value="$INFO[Listitem.ActualIcon]" />
+									<param name="focused" value="true" />
+								</include>
 							</control>
 							<control type="label">
 								<left>120</left>

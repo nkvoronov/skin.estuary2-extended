@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol></defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<onload condition="System.HasAddon(script.artistslideshow) + !Skin.HasSetting(hide_background_fanart)">RunScript(script.artistslideshow)</onload>
 	<controls>
 		<control type="group">
@@ -29,7 +29,7 @@
 			<fadetime>400</fadetime>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<texture background="true" colordiffuse="88FFFFFF">$INFO[Player.Art(fanart)]</texture>
+			<texture background="true" colordiffuse="white5">$INFO[Player.Art(fanart)]</texture>
 			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(hide_visualization_fanart)</visible>
 		</control>
 		<control type="group">
@@ -56,7 +56,7 @@
 				<height>100</height>
 				<texture>$VAR[PlayerClearLogoVar]</texture>
 				<aspectratio aligny="top" align="left">keep</aspectratio>
-				<visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !MusicPlayer.Content(livetv)</visible>
+				<visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !MusicPlayer.Content(livetv) + !Skin.HasSetting(hide_logo_play)</visible>
 			</control>
 			<control type="label">
 				<description>Clock label</description>
@@ -67,8 +67,8 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font13</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>$VAR[WhiteColorVar]</textcolor>
+				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				<label>$INFO[System.Time]</label>
 				<visible>Skin.HasSetting(full_screen_clock) + ![Player.ShowInfo | Window.IsActive(musicosd)]</visible>
 			</control>
@@ -83,31 +83,27 @@
 						<top>0</top>
 						<width>1600</width>
 						<height>40</height>
-						<label>[COLOR white]$INFO[MusicPlayer.Artist][/COLOR]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
+						<label>$INFO[MusicPlayer.Artist]</label>
 						<font>font60</font>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 						<scroll>true</scroll>
-						<!-- <visible>String.IsEmpty(Player.Art(artist.clearlogo))</visible> -->
 					</control>
 					<control type="label">
 						<top>80</top>
 						<width>1600</width>
 						<height>40</height>
-						<label>[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
+						<label>$INFO[MusicPlayer.Album] $VAR[MusicPlayerYearLabelVar]</label>
 						<font>font37</font>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
 						<top>127</top>
 						<width>1600</width>
 						<height>40</height>
-						<label>$INFO[MusicPlayer.TrackNumber,,. ][COLOR white]$INFO[MusicPlayer.Title][/COLOR]</label>
+						<label>[COLOR $VAR[MainColorVar]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.Title]</label>
 						<font>font45</font>
-						<shadowcolor>black</shadowcolor>
-						<textcolor>$VAR[MainColorVar]</textcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 						<scroll>true</scroll>
 					</control>
 				</control>

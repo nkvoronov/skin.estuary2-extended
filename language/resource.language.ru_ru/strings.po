@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: Estuary v2 Extended
 # Addon id: skin.estuary2-extended
-# Addon Provider: phil65, Ichabod Fletchman, YLLOW_DRAGON
+# Addon Provider: phil65, Ichabod Fletchman, YLLOW_DRAGON, Guilouz
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -646,9 +646,10 @@ msgctxt "#43023"
 msgid "Choose background pattern"
 msgstr "Выберите шаблон фона"
 
-msgctxt "#43032"
-msgid "Widget Limit Items"
-msgstr "Виджеты лимит элементов"
+msgctxt "#43024"
+msgid "Choose Records labels icons pack"
+msgstr "Выбрать пакет иконок звукозаписывающих лейблов"
+
 
 msgctxt "#43033"
 msgid "Choose music genre icons pack"
@@ -682,6 +683,10 @@ msgctxt "#43061"
 msgid "Hide disabled"
 msgstr "Скрыть запрещенные"
 
+msgctxt "#43072"
+msgid "Enable"
+msgstr "Разрешить"
+
 msgctxt "#43090"
 msgid "Most watched music videos"
 msgstr "Самые просматриваемые муз. видео"
@@ -696,11 +701,11 @@ msgstr "Большие постеры"
 
 msgctxt "#43201"
 msgid "Clear Logos"
-msgstr "Логотип 1"
+msgstr "Логотип"
 
 msgctxt "#43202"
 msgid "Clear Arts"
-msgstr "Логотип 2"
+msgstr "Виньетка"
 
 msgctxt "#43210"
 msgid "Aired"
@@ -719,11 +724,11 @@ msgid "Channel"
 msgstr "Канал"
 
 msgctxt "#43241"
-msgid "Favorites TV Channels"
+msgid "Favourites TV Channels"
 msgstr "Избранные ТВ каналы"
 
 msgctxt "#43242"
-msgid "Favorites Radio Channels"
+msgid "Favourites Radio Channels"
 msgstr "Избранные Радио каналы"
 
 msgctxt "#43250"
@@ -825,3 +830,75 @@ msgstr "Список без Иконок"
 msgctxt "#44124"
 msgid "After launching KODI, move the focus of the main menu to"
 msgstr "После запуска KODI, переместить фокус главного меню на пункт"
+
+msgctxt "#44125"
+msgid "Addons options"
+msgstr "Параметры дополнений"
+
+msgctxt "#44138"
+msgid "ClearLogo"
+msgstr "Логотип"
+
+msgctxt "#44139"
+msgid "Show In Main Menu"
+msgstr "Показывать в главном меню"
+
+msgctxt "#44140"
+msgid "Show In Library"
+msgstr "Показывать в библиотеке"
+
+msgctxt "#44141"
+msgid "Show In Global Search"
+msgstr "Показывать в поиске"
+
+msgctxt "#44142"
+msgid "Show In Play Window"
+msgstr "Показывать в окне воспроизведения"
+
+msgctxt "#44143"
+msgid "Show In Info Window"
+msgstr "Показывать в окне сведений"
+
+msgctxt "#44170"
+msgid "Show border for media"
+msgstr "Показывать границу для медиа"
+
+msgctxt "#40310"
+msgid "Minimize main menu"
+msgstr "Минимизировать главное меню"
+
+msgctxt "#40311"
+msgid "Show item label on top"
+msgstr "Показывать заголовок элемента вверху"
+
+msgctxt "#40312"
+msgid "Hide main menu when selecting widgets"
+msgstr "Скрывать главное меню при выборе виджетов"
+
+msgctxt "#40316"
+msgid "Number of items to display on widgets"
+msgstr "Количество элементов для отображения в виджете"
+
+msgctxt "#40317"
+msgid "Show media names with widgets names"
+msgstr "Отображать название медиа вместе с названием виджета"
+
+msgctxt "#40318"
+msgid "Show smaller icons for 'Categories' widgets"
+msgstr "Отображать маленькие иконки для виджета 'Категории'"
+
+msgctxt "#40319"
+msgid "Disk Art"
+msgstr "Изображение диска"
+
+msgctxt "#40320"
+msgid "Show colored outline"
+msgstr "Отображать цветные контуры"
+
+msgctxt "#40321"
+msgid "List Movies In Set as Text"
+msgstr "Список фильмов в коллекции как текст"
+
+msgctxt "#40322"
+msgid "List Albums as Text"
+msgstr "Список альбомов как текст"

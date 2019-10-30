@@ -43,7 +43,7 @@
 				<top>29</top>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="white">$VAR[VolumeIconVar]</texture>
+				<texture colordiffuse="$VAR[WhiteColorVar]">$VAR[VolumeIconVar]</texture>
 			</control>
 		</control>
 	</controls>

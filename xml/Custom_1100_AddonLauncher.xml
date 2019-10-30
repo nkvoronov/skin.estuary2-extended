@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1100">
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload>SetProperty(fanarthometype,addons,home)</onload>
-	<onload>SetProperty(homebackground,$VAR[BackgroundAddonsVar],home)</onload>
-	<backgroundcolor>background</backgroundcolor>
+	<onload>SetProperty(fanarthometype,addons,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundAddonsVar],Home)</onload>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[AddonsFanartVar]" />
@@ -104,7 +104,7 @@
 							<left>0</left>
 							<width>95</width>
 							<bottom>0</bottom>
-							<texture colordiffuse="51FFFFFF">colors/black.png</texture>
+							<texture colordiffuse="mbutton_overlay">colors/black.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
 						<control type="image">
@@ -121,7 +121,7 @@
 							<aligny>center</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="95" width="462">
@@ -132,14 +132,14 @@
 							<aligny>center</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
+							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 						<control type="image">
 							<left>-3</left>
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
-							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
+							<texture colordiffuse="bg_addonlauncher">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 					</itemlayout>
 					<content>
@@ -265,8 +265,8 @@
 					<textureradioonnofocus>icons/submenu/updatelibrary.png</textureradioonnofocus>
 					<textureradioofffocus>icons/submenu/updatelibrary.png</textureradioofffocus>
 					<textureradiooffnofocus>icons/submenu/updatelibrary.png</textureradiooffnofocus>
-					<textureradioondisabled colordiffuse="disabled">icons/submenu/updatelibrary.png</textureradioondisabled>
-					<textureradiooffdisabled colordiffuse="disabled">icons/submenu/updatelibrary.png</textureradiooffdisabled>
+					<textureradioondisabled colordiffuse="$VAR[DisabledColorVar]">icons/submenu/updatelibrary.png</textureradioondisabled>
+					<textureradiooffdisabled colordiffuse="$VAR[DisabledColorVar]">icons/submenu/updatelibrary.png</textureradiooffdisabled>
 				</control>
 				<control type="radiobutton" id="803">
 					<width>120</width>
@@ -298,7 +298,7 @@
 					<align>center</align>
 					<font>font32_title</font>
 					<label>$VAR[AddonCountLabelVar]</label>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 				</control>
 			</control>
 			<include content="TopBar">

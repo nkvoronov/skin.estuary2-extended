@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">95</defaultcontrol>
-	<onload>SetProperty(fanarthometype,settings,home)</onload>
-	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
+	<onload>SetProperty(fanarthometype,settings,Home)</onload>
+	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
@@ -127,7 +127,7 @@
 						<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
 						<aligny>top</aligny>
 						<textoffsety>40</textoffsety>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 						<font>font27</font>
 					</control>
 					<control type="progress">
@@ -142,7 +142,7 @@
 						<height>40</height>
 						<label>$LOCALIZE[31030]: $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)]</label>
 						<aligny>center</aligny>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 						<font>font27</font>
 					</control>
 					<control type="progress">
@@ -160,7 +160,7 @@
 					<aligny>bottom</aligny>
 					<textoffsety>10</textoffsety>
 					<label>$LOCALIZE[31031]:</label>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					<font>font25_title</font>
 				</control>
 				<control type="grouplist">
@@ -179,7 +179,7 @@
 						<font>font12</font>
 						<textoffsety>10</textoffsety>
 						<label>$LOCALIZE[144]</label>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					</control>
 					<control type="label" id="52">
 						<description>Kodi Build Version</description>
@@ -189,7 +189,7 @@
 						<font>font12</font>
 						<width>auto</width>
 						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -205,14 +205,14 @@
 						<height>25</height>
 						<label>$LOCALIZE[174]</label>
 						<font>font12</font>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					</control>
 					<control type="label" id="53">
 						<description>Kodi Build Date</description>
 						<width>auto</width>
 						<font>font12</font>
 						<textcolor>$VAR[MainColorVar]</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					</control>
 				</control>
 			</control>

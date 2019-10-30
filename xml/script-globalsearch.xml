@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<views>50,51</views>
 	<controls>
 		<include content="DefaultBackground">
@@ -28,7 +28,7 @@
 					<top>60</top>
 					<width>40</width>
 					<height>40</height>
-					<texture colordiffuse="FFA0A0A0">icons/search.png</texture>
+					<texture colordiffuse="$VAR[GreyColorVar]">icons/search.png</texture>
 					<visible>Control.IsVisible(990) + !Control.HasFocus(990)</visible>
 				</control>
 				<control type="image">
@@ -36,7 +36,7 @@
 					<top>60</top>
 					<width>40</width>
 					<height>40</height>
-					<texture colordiffuse="FFF0F0F0">icons/search.png</texture>
+					<texture>icons/search.png</texture>
 					<visible>Control.HasFocus(990)</visible>
 				</control>
 				<control type="grouplist">
@@ -158,7 +158,7 @@
 									<top>0</top>
 									<width>95</width>
 									<height>95</height>
-									<texture colordiffuse="51FFFFFF">colors/black.png</texture>
+									<texture colordiffuse="mbutton_overlay">colors/black.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasModalDialog">Conditional</animation>
 								</control>
 							</control>
@@ -177,7 +177,7 @@
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>104</left>
@@ -188,7 +188,7 @@
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label2]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 						</focusedlayout>
 						<itemlayout height="95" width="462">
@@ -197,7 +197,7 @@
 								<top>1</top>
 								<width>95</width>
 								<height>95</height>
-								<texture colordiffuse="44FFFFFF">$VAR[SearchIconVar]</texture>
+								<texture colordiffuse="$VAR[GreyColorVar]">$VAR[SearchIconVar]</texture>
 							</control>
 							<control type="label">
 								<left>104</left>
@@ -207,7 +207,7 @@
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 							<control type="label">
 								<left>104</left>
@@ -218,7 +218,7 @@
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label2]</label>
-								<shadowcolor>text_shadow</shadowcolor>
+								<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 							</control>
 						</itemlayout>
 					</control>
@@ -243,13 +243,12 @@
 					<control type="group">
 						<left>30</left>
 						<top>120</top>
-						<include>InfoWallMovieLayout</include>
-						<include content="InfoWallMovieLayout">
+						<include content="PosterLayout">
 							<param name="istvshows" value="String.IsEqual(ListItem.Property(content),tvshows)" />
 							<param name="percentplayed" value="ListItem.Property(percentplayed)" />
 							<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -260,13 +259,13 @@
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
 						<top>120</top>
-						<include content="InfoWallMovieLayout">
+						<include content="PosterLayout">
 							<param name="focused" value="true" />
 							<param name="istvshows" value="String.IsEqual(ListItem.Property(content),tvshows)" />
 							<param name="percentplayed" value="ListItem.Property(percentplayed)" />
 							<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -274,11 +273,11 @@
 					<control type="group">
 						<left>64</left>
 						<top>110</top>
-						<include content="InfoWallEpisodeLayout">
+						<include content="ThumbLayout">
 							<param name="percentplayed" value="ListItem.Property(percentplayed)" />
 							<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -289,12 +288,12 @@
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
 						<left>64</left>
 						<top>110</top>
-						<include content="InfoWallEpisodeLayout">
+						<include content="ThumbLayout">
 							<param name="focused" value="true" />
 							<param name="percentplayed" value="ListItem.Property(percentplayed)" />
 							<param name="ispercentplayed" value="Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -302,11 +301,11 @@
 					<control type="group">
 						<left>64</left>
 						<top>110</top>
-						<include content="InfoWallEpisodeLayout">
-							<param name="thumb_label" value="$INFO[ListItem.Duration]" />
+						<include content="ThumbLayout">
+							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -317,31 +316,85 @@
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
 						<left>64</left>
 						<top>110</top>
-						<include content="InfoWallEpisodeLayout">
+						<include content="ThumbLayout">
 							<param name="focused" value="true" />
-							<param name="thumb_label" value="$INFO[ListItem.Duration]" />
+							<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR]" />
 							<param name="sub_label" value="$INFO[ListItem.Artist]" />
 							<param name="overlaybg" value="!Integer.IsEqual(ListItem.Property(percentplayed),0) | Integer.IsGreater(ListItem.Property(playcount),0)" />
-							<param name="watchedicon">$VAR[WallWatchedSearhIconVar]</param>
+							<param name="watchedicon" value="$VAR[WallWatchedSearhIconVar]" />
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(directors) | Container.Content(livetv)">
+				<itemlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs)">
 					<control type="group">
 						<top>150</top>
 						<left>40</left>
-						<include>InfoWallMusicLayout</include>
+						<include>SquareLayout</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(directors) | Container.Content(livetv)">
+				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
 						<animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
 						<top>150</top>
 						<left>40</left>
-						<include content="InfoWallMusicLayout">
+						<include content="SquareLayout">
 							<param name="focused" value="true" />
+						</include>
+					</control>
+				</focusedlayout>
+				<itemlayout height="410" width="310" condition="Container.Content(actors) | Container.Content(directors)">
+					<control type="group">
+						<top>150</top>
+						<left>40</left>
+						<include content="SquareLayout">
+							<param name="img_top" value="8" />
+							<param name="img_ratio" value="keep" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout height="410" width="310" condition="Container.Content(actors) | Container.Content(directors)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
+						<animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
+						<top>150</top>
+						<left>40</left>
+						<include content="SquareLayout">
+							<param name="focused" value="true" />
+							<param name="img_top" value="8" />
+							<param name="img_ratio" value="keep" />
+						</include>
+					</control>
+				</focusedlayout>
+				<itemlayout height="410" width="310" condition="Container.Content(livetv)">
+					<control type="group">
+						<top>150</top>
+						<left>40</left>
+						<include content="SquareLayout">
+							<param name="img_top" value="24" />
+							<param name="img_height" value="70%" />
+							<param name="img_ratio" value="keep" />
+							<param name="txt_height" value="20%" />
+							<param name="progress" value="true" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout height="410" width="310" condition="Container.Content(livetv)">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
+						<animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
+						<top>150</top>
+						<left>40</left>
+						<include content="SquareLayout">
+							<param name="focused" value="true" />
+							<param name="img_top" value="24" />
+							<param name="img_height" value="70%" />
+							<param name="img_ratio" value="keep" />
+							<param name="txt_height" value="20%" />
+							<param name="progress" value="true" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -359,7 +412,7 @@
 				<onright>51600</onright>
 				<onup>51</onup>
 				<ondown>51</ondown>
-				<viewtype label="535">biglist</viewtype>
+				<viewtype label="535">list</viewtype>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<focusedlayout height="list_item_height">
@@ -368,7 +421,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus(51)</visible>
 					</control>
 					<control type="label">
@@ -380,7 +433,7 @@
 						<scroll>true</scroll>
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<top>0</top>
@@ -392,7 +445,7 @@
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="image">
 						<left>21</left>
@@ -407,7 +460,7 @@
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture colordiffuse="button_focus">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">$VAR[ListWatchedIconVar]</texture>
 						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 						<animation effect="fade" time="150">VisibleChange</animation>
 						<visible>!Control.HasFocus(51)</visible>
@@ -422,7 +475,7 @@
 						<aligny>center</aligny>
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>20</left>
@@ -433,146 +486,42 @@
 						<aligny>center</aligny>
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
-						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 					</control>
 					<control type="image">
 						<left>21</left>
 						<centertop>50%</centertop>
 						<width>32</width>
 						<height>32</height>
-						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[GreyColorVar]">$VAR[ListWatchedIconVar]</texture>
 					</control>
 				</itemlayout>
 			</control>
 			<control type="group">
-				<visible>Control.IsVisible(51)</visible>
 				<depth>DepthContentPanel</depth>
+				<include>OpenClose_Right</include>
+				<visible>Control.IsVisible(51)</visible>
 				<control type="group">
 					<right>-20</right>
 					<width>634</width>
-					<include content="ContentPanel">
-						<param name="left" value="0" />
-						<param name="top" value="-20" />
+					<include content="ListThumbInfoPanelA">
+						<param name="left_image" value="30" />
+						<param name="left_text" value="60" />
 						<param name="width" value="656" />
 						<param name="flipx" value="true" />
+						<param name="search" value="true" />
 					</include>
 					<control type="scrollbar" id="51600">
 						<left>20</left>
 						<top>list_y_offset</top>
 						<width>12</width>
 						<bottom>list_y_offset</bottom>
-						<onleft>50</onleft>
-						<onright>50</onright>
+						<onleft>51</onleft>
+						<onright>51</onright>
 						<orientation>vertical</orientation>
 						<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(51600)">conditional</animation>
 						<hitrect x="-30" y="0" w="120" h="100%" />
-					</control>
-					<control type="group">
-						<left>20</left>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-						<control type="image">
-							<left>120</left>
-							<top>140</top>
-							<width>340</width>
-							<height>470</height>
-							<aspectratio>scale</aspectratio>
-							<fadetime>300</fadetime>
-							<texture background="true">$VAR[IconWallThumbVar]</texture>
-							<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
-						</control>
-						<control type="image">
-							<left>30</left>
-							<top>140</top>
-							<width>530</width>
-							<height>470</height>
-							<aspectratio aligny="center">keep</aspectratio>
-							<fadetime>300</fadetime>
-							<texture background="true">$VAR[IconWallThumbVar]</texture>
-							<visible>String.IsEmpty(ListItem.Art(poster))</visible>
-						</control>
-						<control type="group">
-							<left>268</left>
-							<top>120</top>
-							<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
-							<include>RatingCircle</include>
-						</control>
-						<control type="progress">
-							<left>120</left>
-							<top>590</top>
-							<width>340</width>
-							<height>1</height>
-							<texturebg></texturebg>
-							<midtexture colordiffuse="$VAR[MainColorVar]" border="3">progress/texturebg_alt_white.png</midtexture>
-							<info>ListItem.Property(percentplayed)</info>
-							<visible>!Integer.IsEqual(ListItem.Property(percentplayed),0)</visible>
-						</control>
-					</control>
-					<control type="group">
-						<left>20</left>
-						<visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
-						<control type="image">
-							<left>30</left>
-							<top>140</top>
-							<width>530</width>
-							<height>470</height>
-							<aspectratio aligny="center">keep</aspectratio>
-							<fadetime>300</fadetime>
-							<texture background="true">$VAR[IconWallThumbVar]</texture>
-						</control>
-						<control type="group">
-							<left>268</left>
-							<top>120</top>
-							<visible>Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)</visible>
-							<include>RatingCircle</include>
-						</control>
-					</control>
-					<control type="textbox">
-						<left>50</left>
-						<top>640</top>
-						<width>525</width>
-						<bottom>117</bottom>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$VAR[ListBoxInfoVar]</label>
-						<textcolor>$VAR[MainColorVar]</textcolor>
-						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
-						<visible>!String.IsEmpty(ListItem.Plot)</visible>
-					</control>
-					<control type="textbox">
-						<left>50</left>
-						<top>640</top>
-						<width>525</width>
-						<bottom>117</bottom>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$INFO[ListItem.Property(Plot)]</label>
-						<visible>Container.Content(livetv)</visible>
-					</control>
-					<control type="textbox">
-						<left>50</left>
-						<top>640</top>
-						<width>525</width>
-						<bottom>117</bottom>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$INFO[ListItem.Property(Artist_Description)]</label>
-						<visible>Container.Content(artists)</visible>
-					</control>
-					<control type="textbox">
-						<left>50</left>
-						<top>640</top>
-						<width>525</width>
-						<bottom>117</bottom>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$INFO[ListItem.Property(Album_Description)]</label>
-						<visible>Container.Content(albums)</visible>
-					</control>
-					<control type="textbox">
-						<left>50</left>
-						<top>640</top>
-						<width>525</width>
-						<bottom>117</bottom>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$INFO[ListItem.Comment]</label>
-						<visible>Container.Content(songs)</visible>
 					</control>
 				</control>
 			</control>
@@ -592,12 +541,25 @@
 		</include>
 		<include>BottomBar</include>
 		<control type="group">
+			<centerleft>50%</centerleft>
+			<visible>!Skin.HasSetting(hide_logo_search)</visible>
+			<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+			<control type="image">
+				<top>0</top>
+				<height>140</height>
+				<texture>$VAR[LibraryClearLogoVar]</texture>
+				<aspectratio aligny="center" align="center">keep</aspectratio>
+				<visible>!Container.Content()</visible>
+			</control>
+		</control>
+		<control type="group">
 			<depth>DepthBars</depth>
 			<bottom>0</bottom>
 			<height>70</height>
 			<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
+			<include condition="!Skin.HasSetting(hide_mediaflags_search)" content="MediaFlags">
+				<param name="visible" value="!Container.Content(songs)" />
 				<param name="infolabel_prefix" value="Container." />
 				<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
 			</include>

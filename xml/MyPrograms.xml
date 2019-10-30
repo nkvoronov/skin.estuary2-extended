@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">52</defaultcontrol>
-	<backgroundcolor>background</backgroundcolor>
-	<onload>SetProperty(fanarthometype,addons,home)</onload>
-	<onload>SetProperty(homebackground,$VAR[BackgroundAddonsVar],home)</onload>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<onload>SetProperty(fanarthometype,addons,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundAddonsVar],Home)</onload>
 	<views>50,52,55,500</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
@@ -18,7 +18,7 @@
 				<include>OpenClose_Left</include>
 				<include>Visible_Left</include>
 				<visible>Control.IsVisible(55)</visible>
-				<include>ListThumbInfoPanel</include>
+				<include>ListThumbInfoPanelA</include>
 			</control>
 			<include content="TopBar">
 				<param name="breadcrumbs_label" value="$LOCALIZE[10001]" />

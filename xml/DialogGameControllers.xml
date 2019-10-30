@@ -15,13 +15,13 @@
 				<param name="header_id" value="2" />
 			</include>
 			<control type="group">
-				<description>Controller list</description>
+				<description>Controller List</description>
 				<top>90</top>
 				<left>30</left>
 				<width>410</width>
 				<height>580</height>
 				<control type="label">
-					<description>Controller profiles grouplist heading</description>
+					<description>Controller Profiles Grouplist Heading</description>
 					<height>25</height>
 					<right>20</right>
 					<font>font12</font>
@@ -31,7 +31,7 @@
 					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 				<control type="image">
-					<description>Controller profiles grouplist background</description>
+					<description>Controller Profiles Grouplist Background</description>
 					<top>20</top>
 					<bottom>-20</bottom>
 					<left>-20</left>
@@ -39,7 +39,7 @@
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="grouplist" id="3">
-					<description>Controller profiles grouplist</description>
+					<description>Controller Profiles Grouplist</description>
 					<top>40</top>
 					<right>20</right>
 					<onleft>9001</onleft>
@@ -55,7 +55,7 @@
 					<orientation>vertical</orientation>
 				</control>
 				<control type="button" id="10">
-					<description>Default controller button</description>
+					<description>Default Controller Button</description>
 					<width>390</width>
 					<height>60</height>
 					<align>center</align>
@@ -71,23 +71,14 @@
 				<width>540</width>
 				<height>540</height>
 			</control>
-			<!--
-			<control type="image">
-				<top>110</top>
-				<left>440</left>
-				<width>580</width>
-				<height>580</height>
-				<texture border="40">buttons/dialogbutton-nofo.png</texture>
-			</control>
-			-->
 			<control type="group">
-				<description>Feature list</description>
+				<description>Feature List</description>
 				<top>90</top>
 				<left>1040</left>
 				<width>410</width>
 				<height>580</height>
 				<control type="label">
-					<description>Feature list heading</description>
+					<description>Feature List Heading</description>
 					<height>25</height>
 					<font>font12</font>
 					<label>$LOCALIZE[35059]</label>
@@ -103,7 +94,7 @@
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="grouplist" id="5">
-					<description>Features grouplist</description>
+					<description>Features Grouplist</description>
 					<top>40</top>
 					<right>20</right>
 					<onleft>3</onleft>
@@ -119,7 +110,7 @@
 					<orientation>vertical</orientation>
 				</control>
 				<control type="button" id="7">
-					<description>Default feature button</description>
+					<description>Default Feature Button</description>
 					<width>390</width>
 					<height>60</height>
 					<left>20</left>
@@ -131,19 +122,19 @@
 					<texturenofocus />
 				</control>
 				<control type="label" id="8">
-					<description>Feature group title</description>
+					<description>Feature Group Title</description>
 					<width>390</width>
 					<height>40</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font20_title</font>
-					<textcolor>grey</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>$VAR[GreyColorVar]</textcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				</control>
 				<control type="image" id="9">
-					<description>Feature separator image</description>
+					<description>Feature Separator Image</description>
 					<height>3</height>
-					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="9001">
@@ -185,13 +176,13 @@
 				</include>
 			</control>
 			<control type="group">
-				<description>Bottom controller description</description>
+				<description>Bottom Controller Description</description>
 				<bottom>30</bottom>
 				<left>30</left>
 				<right>30</right>
 				<height>140</height>
 				<control type="image">
-					<description>Controller description background image</description>
+					<description>Controller Description Background Image</description>
 					<top>-20</top>
 					<bottom>-20</bottom>
 					<left>-20</left>
@@ -203,8 +194,8 @@
 					<bottom>5</bottom>
 					<left>10</left>
 					<right>10</right>
-					<description>Controller description</description>
-					<textcolor>grey</textcolor>
+					<description>Controller Description</description>
+					<textcolor>$VAR[GreyColorVar]</textcolor>
 				</control>
 			</control>
 		</control>

@@ -19,7 +19,7 @@
 				<left>29</left>
 				<top>80</top>
 				<width>400</width>
-				<height>685</height>
+				<height>690</height>
 				<itemgap>-25</itemgap>
 				<orientation>vertical</orientation>
 				<onleft>9000</onleft>
@@ -45,7 +45,7 @@
 				<texture border="40">buttons/dialogbutton-nofo.png</texture>
 			</control>
 			<control type="grouplist" id="5">
-				<description>control area</description>
+				<description>Control Area</description>
 				<left>429</left>
 				<top>100</top>
 				<width>1060</width>
@@ -56,14 +56,14 @@
 				<ondown>5</ondown>
 			</control>
 			<control type="textbox" id="6">
-				<description>description area</description>
+				<description>Description Area</description>
 				<left>50</left>
 				<top>815</top>
 				<right>50</right>
 				<height>70</height>
 				<font>font12</font>
 				<align>justify</align>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="button" id="7">
@@ -73,15 +73,16 @@
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
 				<include>DefaultSettingButton</include>
+				<textwidth>880</textwidth>
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="image" id="11">
-				<description>separator image</description>
+				<description>Separator Image</description>
 				<height>3</height>
-				<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+				<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="edit" id="12">
 				<include>DefaultSettingButton</include>

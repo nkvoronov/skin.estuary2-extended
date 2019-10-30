@@ -45,17 +45,19 @@
 				<itemlayout width="300" height="380">
 					<control type="group">
 						<top>10</top>
-						<include content="InfoWallMusicLayout">
-							<param name="fallback_image" value="DefaultFavourites.png" />
+						<include content="SquareLayout">
+							<param name="img_fallback" value="DefaultFavourites.png" />
+							<param name="img_ratio" value="keep" />
 						</include>
 					</control>
 				</itemlayout>
 				<focusedlayout width="300">
 					<control type="group">
 						<top>10</top>
-						<include content="InfoWallMusicLayout">
-							<param name="fallback_image" value="DefaultFavourites.png" />
+						<include content="SquareLayout">
 							<param name="focused" value="true" />
+							<param name="img_fallback" value="DefaultFavourites.png" />
+							<param name="img_ratio" value="keep" />
 						</include>
 					</control>
 				</focusedlayout>
