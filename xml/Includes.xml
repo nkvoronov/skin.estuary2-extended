@@ -793,7 +793,7 @@
 						<param name="button_id" value="$PARAM[group_id]333"/>
 						<param name="visible_2" value="false"/>
 						<param name="visible" value="![Integer.IsGreater(Container($PARAM[group_id]50).NumItems,0) | Container($PARAM[group_id]50).IsUpdating]"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
+						<param name="button2_onclick" value=""/>
 					</include>
 				</control>
 			</control>
@@ -1761,7 +1761,9 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="SelectBackground">
+	<include name="CustomSelectDialog">
+		<param name="header">$LOCALIZE[33069]</param>
+		<param name="content">BackgroundsSelVal</param>
 		<param name="enable">true</param>
 		<definition>
 			<control type="button" id="$PARAM[control_id]">
@@ -1769,8 +1771,10 @@
 				<include>DefaultSettingButton</include>
 				<label>- $PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
-				<onclick>SetProperty(setbackgrounds,$PARAM[property],Home)</onclick>
-				<onclick>ActivateWindow(1202)</onclick>
+				<onclick>SetProperty(dlg_title,$PARAM[header],Home)</onclick>
+				<onclick>SetProperty(dlg_content,$PARAM[content],Home)</onclick>
+				<onclick>SetProperty(dlg_property,$PARAM[property],Home)</onclick>
+				<onclick>ActivateWindow(1200)</onclick>
 				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
@@ -1805,7 +1809,11 @@
 			</control>
 		</definition>
 	</include>
-	<include name="DialogSelectValue">
+	<include name="Lrclyrics_Dialog">
+		<include>Animation_DialogPopupOpenClose</include>
+		<depth>DepthOSD</depth>
+	</include>
+	<include name="SelectDialog">
 		<definition>
 			<control type="group">
 				<centertop>50%</centertop>
@@ -1815,7 +1823,7 @@
 				<include content="DialogBackgroundCommons">
 					<param name="width" value="1220" />
 					<param name="height" value="742" />
-					<param name="header_label" value="$PARAM[dialogheaderlabel]" />
+					<param name="header_label" value="$PARAM[dialogheaderlab]" />
 					<param name="header_id" value="1" />
 				</include>
 				<control type="image">
@@ -1900,9 +1908,11 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
-					<include content="$PARAM[dialogincludeselectval]">
-						<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
-					</include>
+					<content>
+						<include content="BackgroundsSelVal" condition="String.IsEqual(Window(Home).Property(dlg_content),BackgroundsSelVal)">
+							<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
+						</include>
+					</content>
 				</control>
 				<control type="scrollbar" id="61">
 					<left>910</left>
@@ -1940,36 +1950,30 @@
 		</definition>
 	</include>
 	<include name="BackgroundsSelVal">
-		<content>
-			<item id="1">
-				<description>Reset Background</description>
-				<icon>DefaultAddon.png</icon>
-				<label>$LOCALIZE[15109]</label>
-				<label2></label2>
-				<onclick>Skin.Reset($INFO[Window(Home).Property(setbackgrounds)])</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="2">
-				<description>Own Background</description>
-				<icon>DefaultFile.png</icon>
-				<label>$LOCALIZE[44111]</label>
-				<label2></label2>
-				<onclick>Skin.SetImage($INFO[Window(Home).Property(setbackgrounds)])</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="3">
-				<description>Multi Background</description>
-				<icon>DefaultFolder.png</icon>
-				<label>$LOCALIZE[44112]</label>
-				<label2></label2>
-				<onclick>Skin.SetPath($INFO[Window(Home).Property(setbackgrounds)])</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-		</content>
-	</include>
-	<include name="Lrclyrics_Dialog">
-		<include>Animation_DialogPopupOpenClose</include>
-		<depth>DepthOSD</depth>
+		<item id="1">
+			<description>Reset Background</description>
+			<icon>DefaultAddon.png</icon>
+			<label>$LOCALIZE[15109]</label>
+			<label2></label2>
+			<onclick>Skin.Reset($PARAM[dialogsettingval])</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="2">
+			<description>Own Background</description>
+			<icon>DefaultFile.png</icon>
+			<label>$LOCALIZE[44111]</label>
+			<label2></label2>
+			<onclick>Skin.SetImage($PARAM[dialogsettingval])</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="3">
+			<description>Multi Background</description>
+			<icon>DefaultFolder.png</icon>
+			<label>$LOCALIZE[44112]</label>
+			<label2></label2>
+			<onclick>Skin.SetPath($PARAM[dialogsettingval])</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
 	</include>
 	<include name="ColorSkinSetting">
 		<definition>

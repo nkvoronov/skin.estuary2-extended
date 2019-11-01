@@ -297,6 +297,7 @@
 				</include>
 				<control type="group">
 					<width>350</width>
+					<visible>Weather.IsFetched</visible>
 					<control type="label">
 						<top>10</top>
 						<aligny>center</aligny>
@@ -318,6 +319,7 @@
 				</control>
 				<control type="group">
 					<width>450</width>
+					<visible>Weather.IsFetched</visible>
 					<control type="label">
 						<top>40</top>
 						<aligny>center</aligny>

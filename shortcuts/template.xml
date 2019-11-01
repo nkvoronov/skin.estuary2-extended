@@ -425,7 +425,7 @@
 				<control type="grouplist" id="$PYTHON[22+int($SKINSHORTCUTS[id])]001">
 					<include>Widget-GroupCommon</include>
 					<pagecontrol>$PYTHON[22+int($SKINSHORTCUTS[id])]010</pagecontrol>
-					<include content="Widget-Categories">
+					<include content="Widget-Categories" condition="!Skin.HasSetting(home_no_categories_widget)">
 						<param name="widget_header" value="$LOCALIZE[31148]"/>
 						<param name="widget_header_focus" value="$VAR[WidgetLabelFocus$PYTHON[22+int($SKINSHORTCUTS[id])]100Var]"/>
 						<param name="content_path" value="skinshortcuts-group-$SKINSHORTCUTS[submenu]"/>

@@ -89,13 +89,20 @@
 					<selected>!Skin.HasSetting(hide_mediaflags_home)</selected>
 				</control>
 				<control type="radiobutton" id="111">
+					<description>Hide Mediaflags Info</description>
+					<include>DefaultSettingButton</include>
+					<label>$LOCALIZE[44143]</label>
+					<onclick>Skin.ToggleSetting(hide_mediaflags_info)</onclick>
+					<selected>!Skin.HasSetting(hide_mediaflags_info)</selected>
+				</control>
+				<control type="radiobutton" id="112">
 					<description>Hide Mediaflags Library</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44140]</label>
 					<onclick>Skin.ToggleSetting(hide_mediaflags_library)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags_library)</selected>
 				</control>
-				<control type="radiobutton" id="112">
+				<control type="radiobutton" id="113">
 					<description>Hide Mediaflags Global Search</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44141]</label>
@@ -103,24 +110,24 @@
 					<selected>!Skin.HasSetting(hide_mediaflags_search)</selected>
 					<enable>Skin.HasSetting(enable_globalsearch)</enable>
 				</control>
-				<control type="image" id="113">
+				<control type="image" id="114">
 					<description>Separator Image</description>
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<control type="label" id="114">
+				<control type="label" id="115">
 					<description>Splash Screen label</description>
 					<include>DefaultSettingLabel</include>
 					<label>$LOCALIZE[512]</label>
 				</control>
-				<control type="radiobutton" id="115">
+				<control type="radiobutton" id="116">
 					<description>Enable Splash Screen (photo, video or music)</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43003]</label>
 					<onclick>Skin.ToggleSetting(enable_splashscreen)</onclick>
 					<selected>Skin.HasSetting(enable_splashscreen)</selected>
 				</control>
-				<control type="button" id="116">
+				<control type="button" id="117">
 					<description>Startup SplashScreen Path</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[43004]</label>
@@ -128,7 +135,7 @@
 					<onclick>Skin.SetFile(splashscreen_path)</onclick>
 					<enable>Skin.HasSetting(enable_splashscreen)</enable>
 				</control>
-				<control type="button" id="117">
+				<control type="button" id="118">
 					<description>Duration Splash Screen</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[43005]</label>
@@ -138,9 +145,9 @@
 					<enable>Skin.HasSetting(enable_splashscreen)</enable>
 				</control>
 				<include content="ResetSkinSettingsParams">
-					<param name="control_id1" value="118" />
-					<param name="control_id2" value="119" />
-					<param name="action" value="Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_time)|Skin.Reset(show_weatherinfo)|Skin.SetBool(circle_rating)|Skin.Reset(circle_userrating)|Skin.Reset(circle_none)|Skin.SetBool(show_profilename)|Skin.Reset(show_profileavatar)|Skin.Reset(show_none)|Skin.Reset(hide_mediaflags_home)|Skin.Reset(hide_mediaflags_library)|Skin.Reset(hide_mediaflags_search)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)" />
+					<param name="control_id1" value="119" />
+					<param name="control_id2" value="120" />
+					<param name="action" value="Skin.Reset(no_slide_animations)|Skin.Reset(autoscroll)|Skin.Reset(touchmode)|Skin.Reset(hide_time)|Skin.Reset(show_weatherinfo)|Skin.SetBool(circle_rating)|Skin.Reset(circle_userrating)|Skin.Reset(circle_none)|Skin.SetBool(show_profilename)|Skin.Reset(show_profileavatar)|Skin.Reset(show_none)|Skin.Reset(hide_mediaflags_home)|Skin.Reset(hide_mediaflags_info)|Skin.Reset(hide_mediaflags_library)|Skin.Reset(hide_mediaflags_search)|Skin.Reset(enable_splashscreen)|Skin.Reset(splashscreen_path)|Skin.Reset(duration_splashscreen)" />
 				</include>
 			</control>
 			<control type="grouplist" id="200">
@@ -486,31 +493,31 @@
 					<selected>!Skin.HasSetting(home_no_categories_widget)</selected>
 					<onclick>Skin.ToggleSetting(home_no_categories_widget)</onclick>
 				</control>
-				<control type="button" id="305">
+				<control type="image" id="305">
+					<description>Separator Image</description>
+					<height>3</height>
+					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+				</control>
+				<control type="button" id="306">
 					<description>Manage Main Menu</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40313]</label>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
 				</control>
-				<control type="button" id="306">
-					<description>Reset Main Menu</description>
-					<include>DefaultSettingButton</include>
-					<label>- $LOCALIZE[40314]</label>
-					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
-					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=resetall)</onclick>
-				</control>
-				<control type="image" id="307">
-					<description>Separator Image</description>
-					<height>3</height>
-					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
-				</control>
-				<control type="button" id="308">
+				<control type="button" id="307">
 					<description>Manage Power Menu</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40315]</label>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+				</control>
+				<control type="button" id="308">
+					<description>Reset Main Menu</description>
+					<include>DefaultSettingButton</include>
+					<label>- $LOCALIZE[40314]</label>
+					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
+					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=resetall)</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
 					<param name="control_id1" value="309" />
@@ -704,7 +711,7 @@
 					<selected>Skin.HasSetting(use_custom_bg)</selected>
 					<enable>!Skin.HasSetting(separate_background)</enable>
 				</control>
-				<include content="SelectBackground">
+				<include content="CustomSelectDialog">
 					<param name="control_id" value="511" />
 					<param name="label" value="$LOCALIZE[42001]" />
 					<param name="label2" value="$INFO[Skin.String(custom_background)]" />
@@ -716,28 +723,28 @@
 					<height>3</height>
 					<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
 				</control>
-				<include content="SelectBackground">
+				<include content="CustomSelectDialog">
 					<param name="control_id" value="513" />
 					<param name="label" value="$LOCALIZE[33060]" />
 					<param name="label2" value="$VAR[BackgroundPowerNameVar]" />
 					<param name="property" value="background_power" />
 					<param name="enable" value="Skin.HasSetting(separate_background)" />
 				</include>
-				<include content="SelectBackground">
+				<include content="CustomSelectDialog">
 					<param name="control_id" value="514" />
 					<param name="label" value="$LOCALIZE[21417]" />
 					<param name="label2" value="$VAR[BackgroundSettingsNameVar]" />
 					<param name="property" value="$VAR[BackgroundSettingsVar]" />
 					<param name="enable" value="Skin.HasSetting(separate_background)" />
 				</include>
-				<include content="SelectBackground">
+				<include content="CustomSelectDialog">
 					<param name="control_id" value="515" />
 					<param name="label" value="$LOCALIZE[137]" />
 					<param name="label2" value="$VAR[BackgroundSearchNameVar]" />
 					<param name="property" value="background_search" />
 					<param name="enable" value="Skin.HasSetting(separate_background)" />
 				</include>
-				<include content="SelectBackground">
+				<include content="CustomSelectDialog">
 					<param name="control_id" value="516" />
 					<param name="label" value="$LOCALIZE[44120]" />
 					<param name="label2" value="$VAR[BackgroundAudioNameVar]" />

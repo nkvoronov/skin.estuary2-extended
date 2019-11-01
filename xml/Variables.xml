@@ -57,6 +57,7 @@
 	</variable>
 	<variable name="WeatherFanartVar">
 		<value condition="!String.IsEmpty(Container.ListItem.Property(FanartCode))">$VAR[WeatherFanartValueVar]</value>
+		<value>$VAR[BackgroundWeatherVar]</value>
 	</variable>
 	<variable name="SearchFanartVar">
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
@@ -1408,8 +1409,8 @@
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="SkinShortcutsTitleVar">
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)"> / $ADDON[script.skinshortcuts 32071]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)"> / $LOCALIZE[43020]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)"> / $LOCALIZE[40313]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)"> / $LOCALIZE[40315]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)"> / $ADDON[script.skinshortcuts 32072]</value>
 	</variable>
 	<variable name="ShowInfoAtPlaybackStartVar">

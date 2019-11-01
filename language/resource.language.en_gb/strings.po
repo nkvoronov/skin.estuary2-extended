@@ -1409,7 +1409,7 @@ msgid "Customize main menu"
 msgstr ""
 
 msgctxt "#40314"
-msgid "Reset main menu settings"
+msgid "Reset menus settings"
 msgstr ""
 
 msgctxt "#40315"

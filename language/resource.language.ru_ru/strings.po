@@ -1219,12 +1219,12 @@ msgid "Customize main menu"
 msgstr "Настроить главное меню"
 
 msgctxt "#40314"
-msgid "Reset main menu settings"
-msgstr "Сбросить настройки главного меню"
+msgid "Reset menus settings"
+msgstr "Сбросить настройки меню"
 
 msgctxt "#40315"
 msgid "Customize power menu"
-msgstr "Настройка меню питания"
+msgstr "Настроить меню питания"
 
 msgctxt "#40316"
 msgid "Number of items to display on widgets"
