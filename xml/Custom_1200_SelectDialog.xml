@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1200">
+	<onunload>ClearProperty(dlg_title,Home)</onunload>
+	<onunload>ClearProperty(dlg_content,Home)</onunload>
+	<onunload>ClearProperty(dlg_property,Home)</onunload>
+	<defaultcontrol always="true">6</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<depth>DepthOSD</depth>
+	<controls>
+		<include content="SelectDialog">
+			<param name="dialogheaderlab" value="$INFO[Window(Home).Property(dlg_title)]" />
+			<param name="dialogsettingval" value="$INFO[Window(Home).Property(dlg_property)]" />
+		</include>
+	</controls>
+</window>
+

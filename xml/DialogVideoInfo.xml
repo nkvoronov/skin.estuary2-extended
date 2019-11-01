@@ -587,7 +587,7 @@
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
 			<bottom>0</bottom>
 			<height>70</height>
-			<include>MediaFlags</include>
+			<include condition="!Skin.HasSetting(hide_mediaflags_info)">MediaFlags</include>
 			<control type="group">
 				<visible>Control.HasFocus(50)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>

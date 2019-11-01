@@ -39,6 +39,7 @@
 	</variable>
 	<variable name="WeatherFanartVar">
 		<value condition="!String.IsEmpty(Container.ListItem.Property(FanartCode))">$VAR[WeatherFanartValueVar]</value>
+		<value>$VAR[BackgroundWeatherVar]</value>
 	</variable>
 	<variable name="SearchFanartVar">
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
@@ -1233,5 +1234,9 @@
 	<variable name="BackgroundWeatherNameVar">
 		<value condition="!String.IsEmpty(Skin.String(background_weather))">$INFO[Skin.String(background_weather)]</value>
 		<value>$LOCALIZE[15109]</value>
+	</variable>
+	<variable name="MasterModeLabelVar">
+		<value condition="!System.IsMaster">$LOCALIZE[20045]</value>
+		<value>$LOCALIZE[20046]</value>
 	</variable>
 </includes>

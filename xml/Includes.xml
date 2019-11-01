@@ -1760,7 +1760,9 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="SelectBackground">
+	<include name="CustomSelectDialog">
+		<param name="header">$LOCALIZE[33069]</param>
+		<param name="content">BackgroundsSelVal</param>
 		<param name="enable">true</param>
 		<definition>
 			<control type="button" id="$PARAM[control_id]">
@@ -1768,13 +1770,18 @@
 				<include>DefaultSettingButton</include>
 				<label>- $PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
-				<onclick>SetProperty(setbackgrounds,$PARAM[property],Home)</onclick>
-				<onclick>ActivateWindow(1202)</onclick>
+				<onclick>SetProperty(dlg_title,$PARAM[header],Home)</onclick>
+				<onclick>SetProperty(dlg_content,$PARAM[content],Home)</onclick>
+				<onclick>SetProperty(dlg_property,$PARAM[property],Home)</onclick>
+				<onclick>ActivateWindow(1200)</onclick>
 				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
 	</include>
 	<include name="ResetSkinSettingsParams">
+		<param name="header">$LOCALIZE[13007]</param>
+		<param name="text">$LOCALIZE[10042]</param>
+		<param name="content"></param>
 		<definition>
 			<control type="image" id="$PARAM[control_id1]">
 				<description>Separator Image</description>
@@ -1785,7 +1792,10 @@
 				<description>Reset Section</description>
 				<include>DefaultSettingButton</include>
 				<label>$LOCALIZE[10041]</label>
-				<onclick>ActivateWindow($PARAM[dlg_id])</onclick>
+				<onclick>SetProperty(dlg_title,$PARAM[header],Home)</onclick>
+				<onclick>SetProperty(dlg_text,$PARAM[text],Home)</onclick>
+				<onclick>SetProperty(dlg_content,$PARAM[content],Home)</onclick>
+				<onclick>ActivateWindow(1300)</onclick>
 			</control>
 		</definition>
 	</include>
@@ -1807,7 +1817,7 @@
 		<include>Animation_DialogPopupOpenClose</include>
 		<depth>DepthOSD</depth>
 	</include>
-	<include name="DialogSelectValue">
+	<include name="SelectDialog">
 		<definition>
 			<control type="group">
 				<centertop>50%</centertop>
@@ -1817,7 +1827,7 @@
 				<include content="DialogBackgroundCommons">
 					<param name="width" value="1220" />
 					<param name="height" value="742" />
-					<param name="header_label" value="$PARAM[dialogheaderlabel]" />
+					<param name="header_label" value="$PARAM[dialogheaderlab]" />
 					<param name="header_id" value="1" />
 				</include>
 				<control type="image">
@@ -1902,9 +1912,17 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
-					<include content="$PARAM[dialogincludeselectval]">
-						<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
-					</include>
+					<content>
+						<include content="BackgroundsSelVal" condition="String.IsEqual(Window(Home).Property(dlg_content),BackgroundsSelVal)">
+							<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
+						</include>
+						<include content="PopupPositionVal" condition="String.IsEqual(Window(Home).Property(dlg_content),PopupPositionVal)">
+							<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
+						</include>
+						<include content="BackgroundOpacityVal" condition="String.IsEqual(Window(Home).Property(dlg_content),BackgroundOpacityVal)">
+							<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
+						</include>
+					</content>
 				</control>
 				<control type="scrollbar" id="61">
 					<left>910</left>
@@ -1941,7 +1959,289 @@
 			</control>
 		</definition>
 	</include>
-	<include name="DialogYesNo">
+	<include name="BackgroundsSelVal">
+		<item id="1">
+			<description>Reset Background</description>
+			<icon>DefaultAddon.png</icon>
+			<label>$LOCALIZE[15109]</label>
+			<label2></label2>
+			<onclick>Skin.Reset($PARAM[dialogsettingval])</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="2">
+			<description>Own Background</description>
+			<icon>DefaultFile.png</icon>
+			<label>$LOCALIZE[44111]</label>
+			<label2></label2>
+			<onclick>Skin.SetImage($PARAM[dialogsettingval])</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="3">
+			<description>Multi Background</description>
+			<icon>DefaultFolder.png</icon>
+			<label>$LOCALIZE[44112]</label>
+			<label2></label2>
+			<onclick>Skin.SetPath($PARAM[dialogsettingval])</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+	</include>
+	<include name="PopupPositionVal">
+		<item id="1">
+			<description>TopLeft</description>
+			<icon>dialogs/settings/PopupNotification-TopLeft.png</icon>
+			<label>$LOCALIZE[44104]</label>
+			<label2></label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],TopLeft,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44104],)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="2">
+			<description>TopCenter</description>
+			<icon>dialogs/settings/PopupNotification-TopCenter.png</icon>
+			<label>$LOCALIZE[44105]</label>
+			<label2></label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],TopCenter,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44105],)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="3">
+			<description>TopRight</description>
+			<icon>dialogs/settings/PopupNotification-TopRight.png</icon>
+			<label>$LOCALIZE[44106]</label>
+			<label2></label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],TopRight,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44106],)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="4">
+			<description>BottomLeft</description>
+			<icon>dialogs/settings/PopupNotification-BottomLeft.png</icon>
+			<label>$LOCALIZE[44107]</label>
+			<label2></label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],BottomLeft,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44107],)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="5">
+			<description>BottomCenter</description>
+			<icon>dialogs/settings/PopupNotification-BottomCenter.png</icon>
+			<label>$LOCALIZE[44108]</label>
+			<label2></label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],BottomCenter,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44108],)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="6">
+			<description>BottomRight</description>
+			<icon>dialogs/settings/PopupNotification-BottomRight.png</icon>
+			<label>$LOCALIZE[44109]</label>
+			<label2></label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],BottomRight,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44109],)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+	</include>
+	<include name="BackgroundOpacityVal">
+		<item id="1">
+			<description>Opacity Default</description>
+			<icon>DefaultAddon.png</icon>
+			<label>$LOCALIZE[15109]</label>
+			<label2>$LOCALIZE[15109]</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],Default,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[15109],)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="2">
+			<description>Opacity 0</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[0]</label>
+			<label2>$LOCALIZE[44001]0%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],0,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]0,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="3">
+			<description>Opacity 5</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[5]</label>
+			<label2>$LOCALIZE[44001]5%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],5,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]5,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="4">
+			<description>Opacity 10</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[10]</label>
+			<label2>$LOCALIZE[44001]10%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],10,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]10,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="5">
+			<description>Opacity 15</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[15]</label>
+			<label2>$LOCALIZE[44001]15%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],15,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]15,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="6">
+			<description>Opacity 20</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[20]</label>
+			<label2>$LOCALIZE[44001]20%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],20,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]20,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="7">
+			<description>Opacity 25</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[25]</label>
+			<label2>$LOCALIZE[44001]25%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],25,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]25,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="8">
+			<description>Opacity 30</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[30]</label>
+			<label2>$LOCALIZE[44001]30%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],30,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]30,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="9">
+			<description>Opacity 35</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[35]</label>
+			<label2>$LOCALIZE[44001]35%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],35,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]35,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="10">
+			<description>Opacity 40</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[40]</label>
+			<label2>$LOCALIZE[44001]40%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],40,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]40,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="11">
+			<description>Opacity 45</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[45]</label>
+			<label2>$LOCALIZE[44001]45%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],45,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]45,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="12">
+			<description>Opacity 50</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[50]</label>
+			<label2>$LOCALIZE[44001]50%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],50,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]50,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="13">
+			<description>Opacity 55</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[55]</label>
+			<label2>$LOCALIZE[44001]55%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],55,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]55,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="14">
+			<description>Opacity 60</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[60]</label>
+			<label2>$LOCALIZE[44001]60%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],60,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]60,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="15">
+			<description>Opacity 65</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[65]</label>
+			<label2>$LOCALIZE[44001]65%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],65,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]65,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="16">
+			<description>Opacity 70</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[70]</label>
+			<label2>$LOCALIZE[44001]70%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],70,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]70,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="17">
+			<description>Opacity 75</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[75]</label>
+			<label2>$LOCALIZE[44001]75%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],75,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]75,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="18">
+			<description>Opacity 80</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[80]</label>
+			<label2>$LOCALIZE[44001]80%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],80,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]80,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="19">
+			<description>Opacity 85</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[85]</label>
+			<label2>$LOCALIZE[44001]85%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],85,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]85,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="20">
+			<description>Opacity 90</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[90]</label>
+			<label2>$LOCALIZE[44001]90%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],90,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]90,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="21">
+			<description>Opacity 95</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[95]</label>
+			<label2>$LOCALIZE[44001]95%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],95,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]95,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="22">
+			<description>Opacity 100</description>
+			<icon>DefaultAddonLookAndFeel.png</icon>
+			<label>$NUMBER[100]</label>
+			<label2>$LOCALIZE[44001]100%</label2>
+			<onclick>Skin.SetString($PARAM[dialogsettingval],100,)</onclick>
+			<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]100,)</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+	</include>
+	<include name="YesNoDialog">
 		<param name="dialogincludeno">DialogClickNo</param>
 		<definition>
 			<control type="group">
@@ -1952,7 +2252,7 @@
 				<include content="DialogBackgroundCommons">
 					<param name="width" value="915" />
 					<param name="height" value="380" />
-					<param name="header_label" value="$PARAM[dialogheaderlabel]" />
+					<param name="header_label" value="$PARAM[dialogheaderlab]" />
 					<param name="header_id" value="1" />
 				</include>
 				<control type="textbox" id="9">
@@ -1969,11 +2269,47 @@
 					<top>280</top>
 					<width>915</width>
 					<align>center</align>
-					<include content="DefaultDialogButton">
+					<include content="DefaultDialogButton" condition="String.IsEqual(Window(Home).Property(dlg_content),DialogResetGeneral)">
 						<param name="id" value="11" />
 						<param name="label" value="$LOCALIZE[107]" />
 						<param name="isincludeclick" value="true" />
-						<param name="onclickinclude" value="$PARAM[dialogincludeyes]" />
+						<param name="onclickinclude" value="DialogResetGeneral" />
+					</include>
+					<include content="DefaultDialogButton" condition="String.IsEqual(Window(Home).Property(dlg_content),DialogResetOptions)">
+						<param name="id" value="11" />
+						<param name="label" value="$LOCALIZE[107]" />
+						<param name="isincludeclick" value="true" />
+						<param name="onclickinclude" value="DialogResetOptions" />
+					</include>
+					<include content="DefaultDialogButton" condition="String.IsEqual(Window(Home).Property(dlg_content),DialogResetMainMenu)">
+						<param name="id" value="11" />
+						<param name="label" value="$LOCALIZE[107]" />
+						<param name="isincludeclick" value="true" />
+						<param name="onclickinclude" value="DialogResetMainMenu" />
+					</include>
+					<include content="DefaultDialogButton" condition="String.IsEqual(Window(Home).Property(dlg_content),DialogResetUserWidgets)">
+						<param name="id" value="11" />
+						<param name="label" value="$LOCALIZE[107]" />
+						<param name="isincludeclick" value="true" />
+						<param name="onclickinclude" value="DialogResetUserWidgets" />
+					</include>
+					<include content="DefaultDialogButton" condition="String.IsEqual(Window(Home).Property(dlg_content),DialogResetBackgrounds)">
+						<param name="id" value="11" />
+						<param name="label" value="$LOCALIZE[107]" />
+						<param name="isincludeclick" value="true" />
+						<param name="onclickinclude" value="DialogResetBackgrounds" />
+					</include>
+					<include content="DefaultDialogButton" condition="String.IsEqual(Window(Home).Property(dlg_content),DialogResetAddons)">
+						<param name="id" value="11" />
+						<param name="label" value="$LOCALIZE[107]" />
+						<param name="isincludeclick" value="true" />
+						<param name="onclickinclude" value="DialogResetAddons" />
+					</include>
+					<include content="DefaultDialogButton" condition="String.IsEqual(Window(Home).Property(dlg_content),DialogResetSkin)">
+						<param name="id" value="11" />
+						<param name="label" value="$LOCALIZE[107]" />
+						<param name="isincludeclick" value="true" />
+						<param name="onclickinclude" value="DialogResetSkin" />
 					</include>
 					<include content="DefaultDialogButton">
 						<param name="id" value="10" />
@@ -1984,294 +2320,6 @@
 				</control>
 			</control>
 		</definition>
-	</include>	
-	<include name="BackgroundsSelVal">
-		<content>
-			<item id="1">
-				<description>Reset Background</description>
-				<icon>DefaultAddon.png</icon>
-				<label>$LOCALIZE[15109]</label>
-				<label2></label2>
-				<onclick>Skin.Reset($INFO[Window(Home).Property(setbackgrounds)])</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="2">
-				<description>Own Background</description>
-				<icon>DefaultFile.png</icon>
-				<label>$LOCALIZE[44111]</label>
-				<label2></label2>
-				<onclick>Skin.SetImage($INFO[Window(Home).Property(setbackgrounds)])</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="3">
-				<description>Multi Background</description>
-				<icon>DefaultFolder.png</icon>
-				<label>$LOCALIZE[44112]</label>
-				<label2></label2>
-				<onclick>Skin.SetPath($INFO[Window(Home).Property(setbackgrounds)])</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-		</content>
-	</include>
-	<include name="PopupPositionVal">
-		<content>
-			<item id="1">
-				<description>TopLeft</description>
-				<icon>dialogs/settings/PopupNotification-TopLeft.png</icon>
-				<label>$LOCALIZE[44104]</label>
-				<label2></label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],TopLeft,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44104],)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="2">
-				<description>TopCenter</description>
-				<icon>dialogs/settings/PopupNotification-TopCenter.png</icon>
-				<label>$LOCALIZE[44105]</label>
-				<label2></label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],TopCenter,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44105],)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="3">
-				<description>TopRight</description>
-				<icon>dialogs/settings/PopupNotification-TopRight.png</icon>
-				<label>$LOCALIZE[44106]</label>
-				<label2></label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],TopRight,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44106],)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="4">
-				<description>BottomLeft</description>
-				<icon>dialogs/settings/PopupNotification-BottomLeft.png</icon>
-				<label>$LOCALIZE[44107]</label>
-				<label2></label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],BottomLeft,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44107],)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="5">
-				<description>BottomCenter</description>
-				<icon>dialogs/settings/PopupNotification-BottomCenter.png</icon>
-				<label>$LOCALIZE[44108]</label>
-				<label2></label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],BottomCenter,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44108],)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="6">
-				<description>BottomRight</description>
-				<icon>dialogs/settings/PopupNotification-BottomRight.png</icon>
-				<label>$LOCALIZE[44109]</label>
-				<label2></label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],BottomRight,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44109],)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-		</content>
-	</include>
-	<include name="BackgroundOpacityVal">
-		<content>
-			<item id="1">
-				<description>Opacity Default</description>
-				<icon>DefaultAddon.png</icon>
-				<label>$LOCALIZE[15109]</label>
-				<label2>$LOCALIZE[15109]</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],Default,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[15109],)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="2">
-				<description>Opacity 0</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[0]</label>
-				<label2>$LOCALIZE[44001]0%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],0,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]0,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="3">
-				<description>Opacity 5</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[5]</label>
-				<label2>$LOCALIZE[44001]5%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],5,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]5,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="4">
-				<description>Opacity 10</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[10]</label>
-				<label2>$LOCALIZE[44001]10%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],10,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]10,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="5">
-				<description>Opacity 15</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[15]</label>
-				<label2>$LOCALIZE[44001]15%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],15,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]15,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="6">
-				<description>Opacity 20</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[20]</label>
-				<label2>$LOCALIZE[44001]20%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],20,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]20,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="7">
-				<description>Opacity 25</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[25]</label>
-				<label2>$LOCALIZE[44001]25%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],25,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]25,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="8">
-				<description>Opacity 30</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[30]</label>
-				<label2>$LOCALIZE[44001]30%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],30,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]30,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="9">
-				<description>Opacity 35</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[35]</label>
-				<label2>$LOCALIZE[44001]35%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],35,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]35,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="10">
-				<description>Opacity 40</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[40]</label>
-				<label2>$LOCALIZE[44001]40%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],40,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]40,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="11">
-				<description>Opacity 45</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[45]</label>
-				<label2>$LOCALIZE[44001]45%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],45,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]45,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="12">
-				<description>Opacity 50</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[50]</label>
-				<label2>$LOCALIZE[44001]50%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],50,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]50,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="13">
-				<description>Opacity 55</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[55]</label>
-				<label2>$LOCALIZE[44001]55%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],55,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]55,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="14">
-				<description>Opacity 60</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[60]</label>
-				<label2>$LOCALIZE[44001]60%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],60,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]60,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="15">
-				<description>Opacity 65</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[65]</label>
-				<label2>$LOCALIZE[44001]65%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],65,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]65,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="16">
-				<description>Opacity 70</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[70]</label>
-				<label2>$LOCALIZE[44001]70%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],70,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]70,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="17">
-				<description>Opacity 75</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[75]</label>
-				<label2>$LOCALIZE[44001]75%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],75,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]75,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="18">
-				<description>Opacity 80</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[80]</label>
-				<label2>$LOCALIZE[44001]80%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],80,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]80,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="19">
-				<description>Opacity 85</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[85]</label>
-				<label2>$LOCALIZE[44001]85%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],85,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]85,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="20">
-				<description>Opacity 90</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[90]</label>
-				<label2>$LOCALIZE[44001]90%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],90,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]90,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="21">
-				<description>Opacity 95</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[95]</label>
-				<label2>$LOCALIZE[44001]95%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],95,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]95,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="22">
-				<description>Opacity 100</description>
-				<icon>DefaultAddonLookAndFeel.png</icon>
-				<label>$NUMBER[100]</label>
-				<label2>$LOCALIZE[44001]100%</label2>
-				<onclick>Skin.SetString($PARAM[dialogsettingval],100,)</onclick>
-				<onclick>Skin.SetString($PARAM[dialogsettingval].label,$LOCALIZE[44001]100,)</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-		</content>
 	</include>
 	<include name="DialogResetGeneral">
 		<onclick>Skin.Reset(no_slide_animations)</onclick>
@@ -2286,6 +2334,7 @@
 		<onclick>Skin.Reset(show_profileavatar)</onclick>
 		<onclick>Skin.Reset(show_none)</onclick>
 		<onclick>Skin.Reset(hide_mediaflags_home)</onclick>
+		<onclick>Skin.Reset(hide_mediaflags_info)</onclick>
 		<onclick>Skin.Reset(hide_mediaflags_library)</onclick>
 		<onclick>Skin.Reset(hide_mediaflags_search)</onclick>
 		<include>DialogClickNo</include>
@@ -2331,13 +2380,13 @@
 		<onclick>Skin.Reset(home_disc_art_overlay)</onclick>
 		<onclick>Skin.Reset(hide_disc_art_library)</onclick>
 		<onclick>Skin.Reset(library_disc_art_overlay)</onclick>
-		<onclick>Skin.Reset(hide_collections_text)</onclick>		
+		<onclick>Skin.Reset(hide_collections_text)</onclick>
 		<onclick>Skin.Reset(hide_albums_text)</onclick>
 		<onclick>Skin.Reset(show_borders)</onclick>
 		<onclick>Skin.Reset(hide_reload_skin_button)</onclick>
 		<include>DialogClickNo</include>
 	</include>
-	<include name="DialogMainMenu">
+	<include name="DialogResetMainMenu">
 		<onclick>Skin.Reset(minimize_main_menu)</onclick>
 		<onclick>Skin.Reset(top_name_item)</onclick>
 		<onclick>Skin.Reset(hide_main_menu_with_widgets)</onclick>
@@ -2356,7 +2405,7 @@
 		<onclick>Skin.Reset(home_no_weather_button)</onclick>
 		<include>DialogClickNo</include>
 	</include>
-	<include name="DialogUserWidgets">
+	<include name="DialogResetUserWidgets">
 		<onclick>Skin.Reset(enable_custom_list_addons_video)</onclick>
 		<onclick>Skin.Reset(AddonSetVideo.0.Label)</onclick>
 		<onclick>Skin.Reset(AddonSetVideo.0.Name)</onclick>
@@ -2577,7 +2626,7 @@
 		<onclick>Skin.Reset(ChannelRadio.9.Icon)</onclick>
 		<include>DialogClickNo</include>
 	</include>
-	<include name="DialogBackgrounds">
+	<include name="DialogResetBackgrounds">
 		<onclick>Skin.Reset(no_fanart)</onclick>
 		<onclick>Skin.Reset(hide_visualization_fanart)</onclick>
 		<onclick>Skin.Reset(show_background_video)</onclick>
@@ -2618,7 +2667,7 @@
 		<onclick>SetProperty(homebackground,special://skin/extras/home-images/settings.jpg,Home))</onclick>
 		<include>DialogClickNo</include>
 	</include>
-	<include name="DialogAddons">
+	<include name="DialogResetAddons">
 		<!-- <onclick>Skin.Reset(enable_splashscreen)</onclick> -->
 		<onclick>Skin.Reset(enable_globalsearch)</onclick>
 		<onclick>Skin.Reset(enable_watchitlater)</onclick>
