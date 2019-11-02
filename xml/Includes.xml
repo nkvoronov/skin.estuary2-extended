@@ -1547,7 +1547,7 @@
 				<width>$PARAM[width]</width>
 				<height>15</height>
 				<info>Player.Progress</info>
-				<texturebg border="3" colordiffuse="80FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="white8">colors/white50.png</texturebg>
 				<midtexture colordiffuse="$VAR[MainColorVar]">colors/white.png</midtexture>
 			</control>
 			<control type="button" id="87">
@@ -1780,6 +1780,9 @@
 		</definition>
 	</include>
 	<include name="ResetSkinSettingsParams">
+		<param name="header">$LOCALIZE[13007]</param>
+		<param name="text">$LOCALIZE[10042]</param>
+		<param name="action"></param>
 		<definition>
 			<control type="image" id="$PARAM[control_id1]">
 				<description>Separator Image</description>
@@ -1791,7 +1794,7 @@
 				<include>DefaultSettingButton</include>
 				<label>$LOCALIZE[10041]</label>
 				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=$PARAM[action])</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=dialogyesno,header=$PARAM[header],message=$PARAM[text],yesaction=$PARAM[action])</onclick>
 			</control>
 		</definition>
 	</include>

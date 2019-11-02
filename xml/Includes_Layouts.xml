@@ -1479,7 +1479,7 @@
 							<control type="textbox" id="15501">
 								<top>-145</top>
 								<width>537</width>
-								<bottom>110</bottom>
+								<bottom>130</bottom>
 								<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
 								<visible>String.IsEqual(ListItem.DbType,episode)</visible>
@@ -1492,7 +1492,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
-								<textcolor>80FFFFFF</textcolor>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>[String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)] | [String.IsEmpty(Control.GetLabel(15501)) + Control.IsVisible(15501)]</visible>
 							</control>
@@ -1532,11 +1532,11 @@
 							<control type="textbox">
 								<description>No Content</description>
 								<width>537</width>
-								<bottom>115</bottom>
+								<bottom>310</bottom>
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
-								<textcolor>80FFFFFF</textcolor>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>[String.IsEmpty(Control.GetLabel(15502)) + Control.IsVisible(15502)] | [String.IsEmpty(Control.GetLabel(15503)) + Control.IsVisible(15503)]</visible>
 							</control>
@@ -1583,7 +1583,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
-								<textcolor>80FFFFFF</textcolor>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>!ListItem.IsParentFolder</visible>
 								<visible>[String.IsEmpty(Control.GetLabel(15504)) + Control.IsVisible(15504)]</visible>
@@ -1598,7 +1598,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
-								<textcolor>80FFFFFF</textcolor>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>ListItem.IsFolder</visible>
 							</control>
@@ -1776,7 +1776,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
-								<textcolor>80FFFFFF</textcolor>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>String.IsEmpty(Control.GetLabel(15506)) + Control.IsVisible(15506)</visible>
 							</control>
@@ -1985,7 +1985,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
-								<textcolor>80FFFFFF</textcolor>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>[String.IsEmpty(Control.GetLabel(16500)) + Control.IsVisible(16500)] | [String.IsEmpty(Control.GetLabel(16501)) + Control.IsVisible(16501)]</visible>
 							</control>
@@ -2024,11 +2024,11 @@
 							<control type="textbox">
 								<description>No Content</description>
 								<width>537</width>
-								<bottom>115</bottom>
+								<bottom>424</bottom>
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
-								<textcolor>80FFFFFF</textcolor>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>[String.IsEmpty(Control.GetLabel(16502)) + Control.IsVisible(16502)] | [String.IsEmpty(Control.GetLabel(16503)) + Control.IsVisible(16503)]</visible>
 							</control>
@@ -2074,7 +2074,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
-								<textcolor>80FFFFFF</textcolor>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>String.IsEmpty(Control.GetLabel(16504)) + Control.IsVisible(16504)</visible>
 							</control>
@@ -2088,7 +2088,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
-								<textcolor>80FFFFFF</textcolor>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 								<visible>ListItem.IsFolder</visible>
 							</control>
@@ -2567,7 +2567,7 @@
 				<height>365</height>
 				<align>center</align>
 				<font>font24_title</font>
-				<textcolor>80FFFFFF</textcolor>
+				<textcolor>white8</textcolor>
 				<label>$LOCALIZE[19055]</label>
 				<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 			</control>

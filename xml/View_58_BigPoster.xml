@@ -127,7 +127,7 @@
 											<align>center</align>
 											<aligny>center</aligny>
 											<font>font27</font>
-											<textcolor>80FFFFFF</textcolor>
+											<textcolor>white8</textcolor>
 											<label>$LOCALIZE[19055]</label>
 											<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + String.IsEmpty(ListItem.Plot)</visible>
 										</control>
@@ -232,7 +232,7 @@
 											<align>center</align>
 											<aligny>center</aligny>
 											<font>font27</font>
-											<textcolor>80FFFFFF</textcolor>
+											<textcolor>white8</textcolor>
 											<label>$LOCALIZE[19055]</label>
 											<visible>String.IsEmpty(ListItem.Plot)</visible>
 										</control>

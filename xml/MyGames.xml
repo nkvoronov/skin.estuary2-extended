@@ -63,7 +63,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font27</font>
-						<textcolor>80FFFFFF</textcolor>
+						<textcolor>white8</textcolor>
 						<label>$LOCALIZE[19055]</label>
 						<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 					</control>

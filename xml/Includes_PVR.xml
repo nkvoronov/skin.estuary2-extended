@@ -270,7 +270,7 @@
 				<height>340</height>
 				<align>center</align>
 				<font>font27</font>
-				<textcolor>$VAR[GreyColorVar]</textcolor>
+				<textcolor>white8</textcolor>
 				<label>$LOCALIZE[19055]</label>
 				<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Genre)</visible>
 			</control>
@@ -365,11 +365,23 @@
 					<left>350</left>
 					<top>85</top>
 					<right>30</right>
-					<height>170</height>
-					<align>justify</align>
+					<height>165</height>
 					<label>$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
 					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+				<control type="textbox">
+					<description>No Content</description>
+					<left>350</left>
+					<top>85</top>
+					<right>30</right>
+					<height>165</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font27</font>
+					<textcolor>white8</textcolor>
+					<label>$LOCALIZE[19055]</label>
+					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 			</control>
 		</definition>
