@@ -119,6 +119,18 @@
 											<autoscroll>false</autoscroll>
 											<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
 										</control>
+										<control type="textbox">
+											<top>365</top>
+											<left>30</left>
+											<right>30</right>
+											<bottom>40</bottom>
+											<align>center</align>
+											<aligny>center</aligny>
+											<font>font27</font>
+											<textcolor>white8</textcolor>
+											<label>$LOCALIZE[19055]</label>
+											<visible>String.IsEmpty(ListItem.Plot)</visible>
+										</control>
 									</control>
 									<control type="group">
 										<visible>ListItem.IsParentFolder</visible>
@@ -220,7 +232,7 @@
 											<align>center</align>
 											<aligny>center</aligny>
 											<font>font27</font>
-											<textcolor>80FFFFFF</textcolor>
+											<textcolor>white8</textcolor>
 											<label>$LOCALIZE[19055]</label>
 											<visible>String.IsEmpty(ListItem.Plot)</visible>
 										</control>

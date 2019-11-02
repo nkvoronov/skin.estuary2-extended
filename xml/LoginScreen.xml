@@ -110,7 +110,7 @@
 				<top>860</top>
 				<height>45</height>
 				<font>font25_narrow</font>
-				<textcolor>80FFFFFF</textcolor>
+				<textcolor>white8</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.label2]</label>

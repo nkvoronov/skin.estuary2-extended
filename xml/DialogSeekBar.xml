@@ -251,12 +251,12 @@
 			<height>380</height>
 			<control type="label">
 				<left>20</left>
-				<width>220</width>
+				<width>300</width>
 				<top>-80</top>
 				<height>25</height>
 				<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
 				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
-				<align>center</align>
+				<align>right</align>
 				<font>WeatherTemp</font>
 				<aligny>center</aligny>
 			</control>
@@ -279,8 +279,7 @@
 				<top>10</top>
 				<right>30</right>
 				<height>160</height>
-				<label fallback="19055">$INFO[VideoPlayer.Plot]</label>
-				<align>justify</align>
+				<label>$INFO[VideoPlayer.Plot]</label>
 				<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 				<visible>String.IsEmpty(PVR.EpgEventIcon)</visible>
 			</control>
@@ -289,10 +288,22 @@
 				<top>10</top>
 				<right>260</right>
 				<height>160</height>
-				<label fallback="19055">$INFO[VideoPlayer.Plot]</label>
-				<align>justify</align>
+				<label>$INFO[VideoPlayer.Plot]</label>
 				<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 				<visible>!String.IsEmpty(PVR.EpgEventIcon)</visible>
+			</control>
+			<control type="textbox">
+				<description>No Content</description>
+				<left>260</left>
+				<top>10</top>
+				<right>260</right>
+				<height>160</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font27</font>
+				<textcolor>white8</textcolor>
+				<label>$LOCALIZE[19055]</label>
+				<visible>String.IsEmpty(VideoPlayer.Plot)</visible>
 			</control>
 			<control type="image">
 				<right>30</right>

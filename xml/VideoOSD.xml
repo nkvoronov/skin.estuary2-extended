@@ -6,7 +6,7 @@
 	<depth>DepthOSD</depth>
 	<controls>
 		<control type="button">
-			<description>background close area</description>
+			<description>Background Close Area</description>
 			<left>0</left>
 			<top>0</top>
 			<width>100%</width>

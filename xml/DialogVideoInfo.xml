@@ -138,7 +138,7 @@
 						<top>25</top>
 						<width>670</width>
 						<height>363</height>
-						<label fallback="19055">$INFO[ListItem.Plot]</label>
+						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
@@ -147,9 +147,22 @@
 						<top>25</top>
 						<width>1165</width>
 						<height>363</height>
-						<label fallback="19055">$INFO[ListItem.Plot]</label>
+						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>!Integer.IsGreater(Container(4000).NumItems,0)</visible>
+					</control>
+					<control type="textbox">
+						<description>No Content</description>
+						<left>40</left>
+						<top>25</top>
+						<width>1165</width>
+						<height>363</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<textcolor>white8</textcolor>
+						<label>$LOCALIZE[19055]</label>
+						<visible>String.IsEmpty(ListItem.Plot)</visible>
 					</control>
 				</control>
 				<control type="grouplist" id="4000">

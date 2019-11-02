@@ -64,7 +64,7 @@
 				<width>750</width>
 				<height>120</height>
 				<font>font12</font>
-				<textcolor>80FFFFFF</textcolor>
+				<textcolor>white8</textcolor>
 				<align>right</align>
 			</control>
 			<control type="progress" id="32">
