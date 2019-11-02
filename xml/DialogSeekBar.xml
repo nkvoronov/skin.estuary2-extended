@@ -256,7 +256,7 @@
 				<height>25</height>
 				<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
 				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
-				<align>right</align>
+				<align>left</align>
 				<font>WeatherTemp</font>
 				<aligny>center</aligny>
 			</control>
