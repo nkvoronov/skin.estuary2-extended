@@ -553,8 +553,8 @@
 		<param name="visible">true</param>
 		<param name="custom">false</param>
 		<param name="small">false</param>
-		<param name="content_type">no</param>
-		<param name="content_target">no</param>
+		<param name="content_type"></param>
+		<param name="content_target"></param>
 		<param name="content_sortby"></param>
 		<param name="content_sortorder"></param>
 		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
