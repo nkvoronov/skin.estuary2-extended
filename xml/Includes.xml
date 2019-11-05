@@ -2683,38 +2683,6 @@
 	<include name="DialogClickNo">
 		<onclick>PreviousMenu</onclick>
 	</include>
-	<include name="AddonSubMenuContent">
-		<item>
-			<label>$LOCALIZE[24998]</label>
-			<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
-			<thumb>DefaultAddonsInstalled.png</thumb>
-		</item>
-		<item>
-			<label>$LOCALIZE[24043]</label>
-			<onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
-			<thumb>DefaultAddonsUpdates.png</thumb>
-		</item>
-		<item>
-			<label>$LOCALIZE[24004]</label>
-			<onclick>ActivateWindow(addonbrowser,addons://recently_updated/,return)</onclick>
-			<thumb>DefaultAddonsRecentlyUpdated.png</thumb>
-		</item>
-		<item>
-			<label>$LOCALIZE[24033]</label>
-			<onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
-			<thumb>DefaultAddonsRepo.png</thumb>
-		</item>
-		<item>
-			<label>$LOCALIZE[24041]</label>
-			<onclick>InstallFromZip</onclick>
-			<thumb>DefaultAddonsZip.png</thumb>
-		</item>
-		<item>
-			<label>$LOCALIZE[137]</label>
-			<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
-			<thumb>DefaultAddonsSearch.png</thumb>
-		</item>
-	</include>
 	<include name="PVRSubMenuContent">
 		<item>
 			<label>$LOCALIZE[19019]</label>

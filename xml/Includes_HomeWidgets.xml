@@ -26,6 +26,7 @@
 				<pagecontrol>5010</pagecontrol>
 				<include content="Widget-Categories" condition="Library.HasContent(movies) + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="content_target" value="videos"/>
 					<param name="content_path" value="library://video/movies/"/>
 					<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
 					<param name="list_id" value="5900"/>
@@ -96,6 +97,7 @@
 				<pagecontrol>6010</pagecontrol>
 				<include content="Widget-Categories" condition="Library.HasContent(tvshows) + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="content_target" value="videos"/>
 					<param name="content_path" value="library://video/tvshows/"/>
 					<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
 					<param name="list_id" value="6900"/>
@@ -158,6 +160,7 @@
 				<include>Widget-GroupCommon</include>
 				<include content="Widget-Categories" condition="Library.HasContent(music) + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="content_target" value="music"/>
 					<param name="content_path" value="library://music/"/>
 					<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
 					<param name="list_id" value="7900"/>
@@ -230,8 +233,8 @@
 				<pagecontrol>8010</pagecontrol>
 				<include content="Widget-Categories" condition="!Skin.HasSetting(home_no_categories_widget)">
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
-					<param name="content_path" value="AddonSubMenuContent"/>
-					<param name="custom" value="true"/>
+					<param name="content_target" value="addonbrowser"/>
+					<param name="content_path" value="addons://"/>
 					<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
 					<param name="list_id" value="8900"/>
 					<param name="visible" value="Integer.IsGreater(Container(8100).NumItems,0) | Integer.IsGreater(Container(8200).NumItems,0) | Integer.IsGreater(Container(8300).NumItems,0) | Integer.IsGreater(Container(8400).NumItems,0) | Integer.IsGreater(Container(8500).NumItems,0)"/>
@@ -335,6 +338,7 @@
 				<pagecontrol>11010</pagecontrol>
 				<include content="Widget-Categories" condition="!Skin.HasSetting(home_no_categories_widget)">
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="content_target" value="videos"/>
 					<param name="content_path" value="library://video/"/>
 					<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
 					<param name="list_id" value="11900"/>
@@ -379,7 +383,7 @@
 				</include>
 				<include content="Widget-Categories" condition="System.HasPVRAddon + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
-					<param name="type" value="TV"/>
+					<param name="content_type" value="TV"/>
 					<param name="content_path" value="PVRSubMenuContent"/>
 					<param name="custom" value="true"/>
 					<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
@@ -434,7 +438,7 @@
 				</include>
 				<include content="Widget-Categories" condition="System.HasPVRAddon + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
-					<param name="type" value="Radio"/>
+					<param name="content_type" value="Radio"/>
 					<param name="content_path" value="PVRSubMenuContent"/>
 					<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
 					<param name="custom" value="true"/>
@@ -631,6 +635,7 @@
 				<pagecontrol>16010</pagecontrol>
 				<include content="Widget-Categories" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(home_no_categories_widget)">
 					<param name="widget_header" value="$LOCALIZE[31148]"/>
+					<param name="content_target" value="videos"/>
 					<param name="content_path" value="library://video/musicvideos/"/>
 					<param name="small" value="Skin.HasSetting(use_smaller_categories)"/>
 					<param name="list_id" value="16900"/>
