@@ -98,6 +98,7 @@
 		<value>$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
 	</variable>
 	<variable name="InfoListPathVar">
+		<value condition="!String.IsEmpty(ListItem.Property(FolderPath)) ">$INFO[ListItem.Property(FolderPath)]</value>
 		<value condition="String.IsEmpty(Container.PluginName)">$INFO[ListItem.FolderPath]</value>
 		<value></value>
 	</variable>
@@ -242,6 +243,7 @@
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,video)">$VAR[ListItemGenreLabelVar]$INFO[ListItem.Plot]</value>
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$VAR[MusicInfoTextArtistVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$VAR[PlotAndTagVar]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Plot))">$INFO[ListItem.Property(Plot)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song)">$VAR[MusicTrackInfoVar]$VAR[ListItemArtistLabelVar]$VAR[ListItemAlbumLabelVar]$VAR[ListItemDiscNumberLabelVar]$VAR[ListItemYearLabel4Var]$VAR[ListItemGenreLabelVar]$VAR[ListItemDurationLabelVar]$VAR[ListItemPlaycountLabelVar]</value>
 	</variable>
 	<variable name="MusicTrackInfoVar">
@@ -1432,4 +1434,8 @@
 	<variable name="AlbumsCountVar">
 		<value>$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),($LOCALIZE[36919]: ,)]</value>
 	</variable>
+	<variable name="GenreVar">
+		<value condition="!String.IsEmpty(ListItem.Property(Genre))">$INFO[ListItem.Property(Genre)]</value>
+		<value>$INFO[ListItem.Genre]</value>
+	</variable>	
 </includes>

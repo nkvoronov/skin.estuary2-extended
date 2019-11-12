@@ -543,7 +543,7 @@
 		<control type="group">
 			<centerleft>50%</centerleft>
 			<visible>!Skin.HasSetting(hide_logo_search)</visible>
-			<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+			<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + ![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)] + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 			<control type="image">
 				<top>0</top>
 				<height>140</height>
