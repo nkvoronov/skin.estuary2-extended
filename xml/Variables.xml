@@ -1437,5 +1437,5 @@
 	<variable name="GenreVar">
 		<value condition="!String.IsEmpty(ListItem.Property(Genre))">$INFO[ListItem.Property(Genre)]</value>
 		<value>$INFO[ListItem.Genre]</value>
-	</variable>	
+	</variable>
 </includes>
