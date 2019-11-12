@@ -1384,23 +1384,8 @@
 						</include>
 					</control>
 					<control type="group">
-						<description>Directors</description>
-						<visible>Container.Content(directors)</visible>
-						<include content="IconLayout">
-							<param name="top" value="140" />
-							<param name="left" value="30" />
-							<param name="width" value="530" />
-							<param name="height" value="470" />
-							<param name="border" value="true" />
-							<param name="img_height" value="100%" />
-							<param name="txt_ratio" value="keep" />
-							<param name="txt_label" value="false" />
-							<param name="img_fallback" value="DefaultDirector.png" />
-						</include>
-					</control>
-					<control type="group">
 						<description>Other</description>
-						<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(games) | Container.Content(directors)]</visible>
+						<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(games)]</visible>
 						<include content="IconLayout">
 							<param name="top" value="140" />
 							<param name="left" value="30" />
@@ -1827,7 +1812,7 @@
 							<bottom>80</bottom>
 							<height>25</height>
 							<align>center</align>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$VAR[GenreVar]</label>
 							<font>font12</font>
 							<textcolor>$VAR[MainColorVar]</textcolor>
 							<visible>!ListItem.IsCollection</visible>

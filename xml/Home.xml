@@ -190,7 +190,7 @@
 						<param name="control_id" value="804" />
 						<param name="onclick" value="Fullscreen" />
 						<param name="icon" value="icons/now-playing/fullscreen.png" />
-						<param name="label" value="$LOCALIZE[31000]" />
+						<param name="label" value="$LOCALIZE[244]" />
 						<param name="visible" value="Player.HasMedia" />
 					</include>
 				</control>
@@ -238,7 +238,7 @@
 						<param name="control_id" value="804" />
 						<param name="onclick" value="Fullscreen" />
 						<param name="icon" value="icons/now-playing/fullscreen.png" />
-						<param name="label" value="$LOCALIZE[31000]" />
+						<param name="label" value="$LOCALIZE[244]" />
 						<param name="visible" value="Player.HasMedia" />
 						<param name="height" value="95" />
 						<param name="width" value="95" />
@@ -404,7 +404,7 @@
 					<aligny>center</aligny>
 					<font>font30_title</font>
 					<label>$LOCALIZE[33060]</label>
-					<visible>Control.HasFocus(804)</visible>
+					<visible>Control.HasFocus(801)</visible>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<include>OpenClose_Right</include>
 				</control>
@@ -420,7 +420,7 @@
 					<aligny>center</aligny>
 					<font>font30_title</font>
 					<label>$LOCALIZE[137]</label>
-					<visible>Control.HasFocus(801)</visible>
+					<visible>Control.HasFocus(803)</visible>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<include>OpenClose_Right</include>
 				</control>
@@ -428,7 +428,7 @@
 					<aligny>center</aligny>
 					<font>font30_title</font>
 					<label>$LOCALIZE[244]</label>
-					<visible>Control.HasFocus(803)</visible>
+					<visible>Control.HasFocus(804)</visible>
 					<textcolor>$VAR[MainColorVar]</textcolor>
 					<include>OpenClose_Right</include>
 				</control>

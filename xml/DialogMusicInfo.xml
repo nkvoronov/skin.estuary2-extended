@@ -436,13 +436,13 @@
 				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 				<include content="InfoDialogTopBarInfo" condition="Skin.HasSetting(hide_logo_info)">
 					<param name="main_label" value="$INFO[ListItem.Artist]" />
-					<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Genre][/COLOR]" />
+					<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$VAR[GenreVar][/COLOR]" />
 					<param name="id" value="33333" />
 				</include>
 				<include content="InfoDialogTopBarInfo" condition="!Skin.HasSetting(hide_logo_info)">
 					<param name="posx" value="400" />
 					<param name="main_label" value="$INFO[ListItem.Artist]" />
-					<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Genre][/COLOR]" />
+					<param name="sub_label" value="[COLOR $VAR[MainColorVar]]$VAR[GenreVar][/COLOR]" />
 					<param name="id" value="33333" />
 				</include>
 			</control>
