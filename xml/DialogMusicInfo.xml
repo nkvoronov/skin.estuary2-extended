@@ -165,7 +165,7 @@
 					<ondown>130</ondown>
 					<onup>9000</onup>
 					<orientation>horizontal</orientation>
-					<itemlayout height="72.5" width="595" condition="Container.Content(songs)">
+					<itemlayout height="72.5" width="595" condition="String.IsEqual(ListItem.DBType,song)">
 						<control type="image">
 							<top>-10</top>
 							<width>595</width>
@@ -182,7 +182,7 @@
 							<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label,,.][/COLOR]$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="72.5" width="595" condition="Container.Content(songs)">
+					<focusedlayout height="72.5" width="595" condition="String.IsEqual(ListItem.DBType,song)">
 						<control type="image">
 							<top>-10</top>
 							<width>595</width>
@@ -199,7 +199,7 @@
 							<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label,,.][/COLOR]$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
-					<itemlayout height="72.5" width="595" condition="Container.Content(albums)">
+					<itemlayout height="72.5" width="595" condition="String.IsEqual(ListItem.DBType,album)">
 						<control type="image">
 							<top>-10</top>
 							<width>595</width>
@@ -222,7 +222,7 @@
 							<include>RatingCircle</include>
 						</control>
 					</itemlayout>
-					<focusedlayout height="72.5" width="595" condition="Container.Content(albums)">
+					<focusedlayout height="72.5" width="595" condition="String.IsEqual(ListItem.DBType,album)">
 						<control type="group">
 							<control type="image">
 								<top>-10</top>
@@ -247,7 +247,7 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<itemlayout height="360" width="236" condition="Container.Content(artists)">
+					<itemlayout height="360" width="236" condition="String.IsEqual(ListItem.DBType,artist)">
 						<control type="image">
 							<top>-10</top>
 							<width>250</width>
@@ -281,7 +281,7 @@
 							<include>RatingCircle</include>
 						</control>
 					</itemlayout>
-					<focusedlayout height="360" width="236" condition="Container.Content(artists)">
+					<focusedlayout height="360" width="236" condition="String.IsEqual(ListItem.DBType,artist)">
 						<control type="group">
 							<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="160,180">Focus</animation>
 							<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="160,180">UnFocus</animation>
@@ -328,6 +328,13 @@
 							</control>
 						</control>
 					</focusedlayout>
+					<include condition="!String.IsEmpty(Window(Home).Property(Search))" content="Widget-Content">
+						<param name="content_target" value=""/>
+						<param name="content_path" value="$VAR[InfoListPathVar]"/>
+						<param name="content_sortby" value=""/>
+						<param name="content_sortorder" value="ascending"/>
+						<param name="item_limit" value=""/>
+					</include>
 				</control>
 				<control type="grouplist" id="9000">
 					<left>-80</left>
@@ -422,6 +429,7 @@
 						<param name="id" value="12" />
 						<param name="icon" value="icons/infodialogs/info.png" />
 						<param name="label" value="$LOCALIZE[20413]" />
+						<param name="visible" value="String.IsEmpty(Window(Home).Property(Search))" />
 					</include>
 				</control>
 				<include content="LeftRightArrows">

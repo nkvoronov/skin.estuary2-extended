@@ -80,7 +80,6 @@
 		<value>$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
 	</variable>
 	<variable name="InfoListPathVar">
-		<value condition="!String.IsEmpty(ListItem.Property(FolderPath)) ">$INFO[ListItem.Property(FolderPath)]</value>
 		<value condition="String.IsEmpty(Container.PluginName)">$INFO[ListItem.FolderPath]</value>
 		<value></value>
 	</variable>
@@ -726,7 +725,8 @@
 		<value condition="!String.IsEmpty(ListItem.Year)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]  -  </value>
 	</variable>
 	<variable name="ListItemYearLabel3Var">
-		<value condition="!String.IsEmpty(ListItem.Label2)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label2][/COLOR]  -  </value>
+		<value condition="!String.IsEmpty(ListItem.Label2) + String.IsEmpty(Window(Home).Property(Search))">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Label2][/COLOR]  -  </value>
+		<value condition="!String.IsEmpty(ListItem.Year) + !String.IsEmpty(Window(Home).Property(Search))">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]  -  </value>
 	</variable>
 	<variable name="ListItemYearLabel4Var">
 		<value condition="!String.IsEmpty(ListItem.Year)">[COLOR $VAR[MainColorVar]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year][CR]</value>
