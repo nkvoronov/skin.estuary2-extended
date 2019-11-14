@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<onload>SetProperty(Search,yes,Home)</onload>
+	<onunload>ClearProperty(Search,Home)</onunload>
 	<views>50,51</views>
 	<controls>
 		<include content="DefaultBackground">
