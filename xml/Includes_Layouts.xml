@@ -2327,7 +2327,7 @@
 							<bottom>80</bottom>
 							<height>25</height>
 							<align>center</align>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$VAR[GenreVar]</label>
 							<font>font12</font>
 							<textcolor>$VAR[MainColorVar]</textcolor>
 							<visible>!ListItem.IsCollection</visible>

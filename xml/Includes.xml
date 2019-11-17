@@ -111,6 +111,12 @@
 	<include name="MinimizeMainMenu">
 		<left>95</left>
 	</include>
+	<include name="Right_50">
+		<right>594</right>
+	</include>
+	<include name="Right_55">
+		<right>0</right>
+	</include>
 	<include name="RatingCircle">
 		<param name="animation">False</param>
 		<definition>
