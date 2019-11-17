@@ -328,7 +328,7 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<include condition="!String.IsEmpty(Window(Home).Property(Search))" content="Widget-Content">
+					<include condition="!String.IsEmpty(Window(Home).Property(GlobalSearch))" content="Widget-Content">
 						<param name="content_target" value=""/>
 						<param name="content_path" value="$VAR[InfoListPathVar]"/>
 						<param name="content_sortby" value=""/>
@@ -429,7 +429,7 @@
 						<param name="id" value="12" />
 						<param name="icon" value="icons/infodialogs/info.png" />
 						<param name="label" value="$LOCALIZE[20413]" />
-						<param name="visible" value="String.IsEmpty(Window(Home).Property(Search))" />
+						<param name="visible" value="String.IsEmpty(Window(Home).Property(GlobalSearch))" />
 					</include>
 				</control>
 				<include content="LeftRightArrows">
