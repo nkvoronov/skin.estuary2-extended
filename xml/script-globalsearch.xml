@@ -2,6 +2,7 @@
 <window>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<views>50,54</views>
+	<menucontrol>9000</menucontrol>
 	<controls>
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[SearchFanartVar]" />

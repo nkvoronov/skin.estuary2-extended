@@ -1962,10 +1962,9 @@
 								<visible>String.IsEqual(Skin.Font, Arial)</visible>
 							</control>
 							<control type="textbox">
-								<top>-100</top>
 								<description>No Content</description>
 								<width>537</width>
-								<bottom>341</bottom>
+								<bottom>120</bottom>
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font27</font>
