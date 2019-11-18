@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
-	<onload>SetProperty(GlobalSearch,yes,Home)</onload>
-	<onunload>ClearProperty(GlobalSearch,Home)</onunload>
 	<views>50,54</views>
 	<controls>
 		<include content="DefaultBackground">
@@ -384,7 +382,7 @@
 				<label>$LOCALIZE[284]</label>
 			</control>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$LOCALIZE[137]" />
+				<param name="breadcrumbs_label" value="$LOCALIZE[137]$INFO[Window(Home).Property(GlobalSearch.SearchString), - ,]" />
 			</include>
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
