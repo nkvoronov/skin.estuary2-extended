@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">500</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<views>500</views>
+	<menucontrol>9000</menucontrol>
+	<controls>
+		<include content="DefaultBackground">
+			<param name="fanart_media" value="$VAR[SearchYoutubeFanartVar]" />
+		</include>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<control type="group">
+				<include>OpenClose_Right</include>
+				<left>50</left>
+				<top>0</top>
+				<include>Visible_Right</include>
+				<control type="panel" id="500">
+					<left>0</left>
+					<top>0</top>
+					<width>98%</width>
+					<height>100%</height>
+					<onleft>9000</onleft>
+					<onright>72</onright>
+					<viewtype label="31102">icon</viewtype>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>72</pagecontrol>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<onup>700</onup>
+					<ondown>600</ondown>
+					<orientation>vertical</orientation>
+					<itemlayout height="301" width="300">
+						<control type="group">
+							<top>110</top>
+							<include content="ThumbLayout">
+								<param name="main_label" value="$INFO[ListItem.Property(viewcount),, $ADDON[script.extendedinfo 32061]]" />
+								<param name="sub_label" value="$INFO[ListItem.label]" />
+								<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Premiered][/COLOR]" />
+							</include>
+						</control>
+					</itemlayout>
+					<focusedlayout height="301" width="300">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,280">Focus</animation>
+							<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,280">UnFocus</animation>
+							<top>110</top>
+							<include content="ThumbLayout">
+								<param name="focused" value="true" />
+								<param name="main_label" value="$INFO[ListItem.Property(viewcount),, $ADDON[script.extendedinfo 32061]]" />
+								<param name="sub_label" value="$INFO[ListItem.label]" />
+								<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Premiered][/COLOR]" />
+							</include>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="button" id="600">
+					<onfocus>SetFocus(500)</onfocus>
+					<width>1</width>
+					<height>1</height>
+					<left>-1000</left>
+				</control>
+				<control type="button" id="700">
+					<onfocus>SetFocus(500)</onfocus>
+					<width>1</width>
+					<height>1</height>
+					<left>-1000</left>
+				</control>
+			</control>
+			<control type="scrollbar" id="72">
+				<right>0</right>
+				<top>110</top>
+				<bottom>list_y_offset</bottom>
+				<width>12</width>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(72)">conditional</animation>
+				<onleft>500</onleft>
+				<onright>500</onright>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<visible>Control.IsVisible(500)</visible>
+			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="Youtube $INFO[Window.Property(Filter_Label)]" />
+				<param name="sublabel" value="$INFO[Window.Property(Sort_Label),$LOCALIZE[31022]: ,  ∙  ]$INFO[Window.Property(CurrentPage),, / ]$INFO[Window.Property(TotalPages)]" />
+				<param name="width" value="100%" />
+			</include>
+			<control type="group">
+				<depth>DepthBars</depth>
+				<bottom>0</bottom>
+				<control type="image">
+					<left>0</left>
+					<bottom>0</bottom>
+					<width>110%</width>
+					<height>115</height>
+					<texture flipy="true">frame/InfoBar.png</texture>
+				</control>
+				<control type="group">
+					<visible>!Skin.HasSetting(touchmode)</visible>
+					<animation effect="fade" time="400">VisibleChange</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+					<control type="button">
+						<bottom>20</bottom>
+						<left>12</left>
+						<width>36</width>
+						<height>36</height>
+						<texturefocus colordiffuse="$VAR[MainColorVar]">frame/menu-nofo.png</texturefocus>
+						<texturenofocus>frame/menu-nofo.png</texturenofocus>
+						<animation effect="fade" time="200">VisibleChange</animation>
+						<onclick>SetFocus(9000)</onclick>
+					</control>
+					<control type="button">
+						<bottom>16</bottom>
+						<left>64</left>
+						<width>300</width>
+						<height>44</height>
+						<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
+						<label>$LOCALIZE[33063]</label>
+						<onclick>SetFocus(9000)</onclick>
+						<texturefocus />
+						<texturenofocus />
+					</control>
+				</control>
+				<include>TouchButtons</include>
+			</control>
+			<include>MediaMenuMouseOverlay</include>
+			<control type="group">
+				<include>OpenClose_Left</include>
+				<depth>DepthSideBlade</depth>
+				<left>-520</left>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6000) | Control.HasFocus(7000)">
+					<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="out" />
+				</animation>
+				<control type="image">
+					<width>4000</width>
+					<height>100%</height>
+					<aspectratio>scale</aspectratio>
+					<texture colordiffuse="white8">colors/black.png</texture>
+					<visible>ControlGroup(9000).HasFocus | Control.HasFocus(6000) | Control.HasFocus(7000)</visible>
+					<animation effect="fade" time="200">VisibleChange</animation>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>520</width>
+					<height>100%</height>
+					<texture border="0,0,52,0">lists/panel-mediamenu.png</texture>
+				</control>
+				<control type="button" id="6131">
+					<left>0</left>
+					<top>0</top>
+					<width>500</width>
+					<height>100%</height>
+					<label/>
+					<texturefocus />
+					<texturenofocus />
+				</control>
+				<control type="button" id="3">
+					<description>Viewtype Toggle</description>
+					<include>HiddenObject</include>
+				</control>
+				<control type="button" id="4">
+					<description>Order Toggle</description>
+					<include>HiddenObject</include>
+				</control>
+				<control type="radiobutton" id="6000">
+					<left>332</left>
+					<top>60</top>
+					<width>120</width>
+					<height>120</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font/>
+					<label/>
+					<texturefocus colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texturefocus>
+					<texturenofocus />
+					<radioposx>40</radioposx>
+					<radioposy>0</radioposy>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<textureradioonfocus>icons/search.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="$VAR[GreyColorVar]">icons/search.png</textureradioonnofocus>
+					<textureradioofffocus>icons/search.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="$VAR[GreyColorVar]">icons/search.png</textureradiooffnofocus>
+					<ondown>SetFocus(7000)</ondown>
+					<onright>50</onright>
+					<onleft>6001</onleft>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>90</top>
+					<width>330</width>
+					<height>55</height>
+					<aligny>center</aligny>
+					<align>right</align>
+					<font>font13</font>
+					<label>$LOCALIZE[137]</label>
+				</control>
+				<control type="button" id="7000">
+					<top>170</top>
+					<include>MediaMenuItemsCommon</include>
+					<ondown>9000</ondown>
+					<onup>6000</onup>
+					<onright>500</onright>
+					<onleft>500</onleft>
+					<label>$ADDON[script.extendedinfo 32024]</label>
+				</control>
+				<control type="grouplist" id="9000">
+					<top>250</top>
+					<width>470</width>
+					<height>830</height>
+					<orientation>vertical</orientation>
+					<scroll>true</scroll>
+					<onup>7000</onup>
+					<ondown>9000</ondown>
+					<onright>500</onright>
+					<onleft>500</onleft>
+					<onback>500</onback>
+					<control type="label" id="200">
+						<include>MediaMenuLabelCommon</include>
+						<label>$LOCALIZE[14018]</label>
+					</control>
+					<control type="button" id="5001">
+						<include>MediaMenuItemsCommon</include>
+						<onup>6000</onup>
+						<label>$ADDON[script.extendedinfo 32104]</label>
+						<label2>[B]$INFO[Window.Property(Sort_Label)][/B]</label2>
+					</control>
+					<control type="button" id="5007">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[467]</label>
+						<label2>[B]$INFO[Window.Property(Type)][/B]</label2>
+					</control>
+					<control type="label" id="5333">
+						<include>MediaMenuLabelCommon</include>
+						<label>$ADDON[script.extendedinfo 32023]</label>
+					</control>
+					<control type="button" id="5002">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[172]</label>
+					</control>
+					<control type="button" id="5003">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[248]</label>
+					</control>
+					<control type="button" id="5006">
+						<include>MediaMenuItemsCommon</include>
+						<label>$ADDON[script.extendedinfo 32066]</label>
+					</control>
+					<control type="button" id="5008">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[180]</label>
+					</control>
+					<control type="button" id="5009">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[287]</label>
+					</control>
+					<control type="button" id="5012">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[169]</label>
+					</control>
+					<control type="button" id="5013">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[564]</label>
+					</control>
+					<control type="button" id="5005">
+						<include>MediaMenuItemsCommon</include>
+						<label>$ADDON[script.extendedinfo 32022]</label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

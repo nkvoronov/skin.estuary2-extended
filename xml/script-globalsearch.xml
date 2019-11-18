@@ -2,6 +2,7 @@
 <window>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<views>50,54</views>
+	<menucontrol>9000</menucontrol>
 	<controls>
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[SearchFanartVar]" />
@@ -507,7 +508,7 @@
 						<aligny>center</aligny>
 						<font>font14</font>
 						<textoffsetx>20</textoffsetx>
-						<texturenofocus></texturenofocus>
+						<texturenofocus />
 						<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 						<onup>990</onup>
 						<ondown>SetFocus(9000,0,absolute)</ondown>
