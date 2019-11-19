@@ -6,7 +6,7 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include content="DefaultBackground">
-			<param name="fanart_media" value="$VAR[SearchFanartVar]" />
+			<param name="fanart_media" value="$VAR[SearchMovieDBFanartVar]" />
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -81,14 +81,6 @@
 							<animation effect="fade" time="150">VisibleChange</animation>
 							<visible>!Control.HasFocus(50)</visible>
 						</control>
-						<control type="image">
-							<width>40</width>
-							<height>40</height>
-							<centertop>50%</centertop>
-							<right>20</right>
-							<texture>icons/extendedinfo/database.png</texture>
-							<visible>!String.IsEmpty(ListItem.DBID)</visible>
-						</control>
 					</focusedlayout>
 					<itemlayout height="list_item_height">
 						<control type="label">
@@ -119,14 +111,6 @@
 							<width>32</width>
 							<height>32</height>
 							<texture colordiffuse="$VAR[GreyColorVar]">$VAR[ListWatchedIconVar]</texture>
-						</control>
-						<control type="image">
-							<width>40</width>
-							<height>40</height>
-							<centertop>50%</centertop>
-							<right>20</right>
-							<texture>icons/extendedinfo/database.png</texture>
-							<visible>!String.IsEmpty(ListItem.DBID)</visible>
 						</control>
 					</itemlayout>
 				</control>
@@ -184,11 +168,6 @@
 					<preloaditems>2</preloaditems>
 					<pagecontrol>72</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
-					<include>OpenClose_Right</include>
-					<include>Visible_Right</include>
-					<include content="Visible_Right_Delayed">
-						<param name="id" value="54"/>
-					</include>
 					<itemlayout height="445" width="320">
 						<control type="group">
 							<left>30</left>
@@ -374,12 +353,31 @@
 				</control>
 				<include>TouchButtons</include>
 			</control>
+			<control type="group">
+				<centerleft>50%</centerleft>
+				<visible>!Skin.HasSetting(hide_logo_search) + !String.IsEmpty(ListItem.DBID)</visible>
+				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+				<control type="image">
+					<top>0</top>
+					<height>140</height>
+					<texture>$VAR[LibraryClearLogoVar]</texture>
+					<aspectratio aligny="center" align="center">keep</aspectratio>
+				</control>
+			</control>
+			<control type="group">
+				<depth>DepthBars</depth>
+				<bottom>0</bottom>
+				<height>70</height>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<include condition="!Skin.HasSetting(hide_mediaflags_search) + !String.IsEmpty(ListItem.DBID)">MediaFlags</include>
+			</control>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<depth>DepthSideBlade</depth>
 				<left>-520</left>
-				<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6000) | Control.HasFocus(6001) | Control.HasFocus(7000)" reversible="true">
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6000) | Control.HasFocus(7000)">
 					<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="out" />
 				</animation>
 				<control type="image">

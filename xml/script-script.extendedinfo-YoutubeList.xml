@@ -11,9 +11,10 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group">
-				<include>OpenClose_Right</include>
 				<left>50</left>
 				<top>0</top>
+				<include>OpenClose_Right</include>
+				<visible>Control.IsVisible(500)</visible>
 				<include>Visible_Right</include>
 				<control type="panel" id="500">
 					<left>0</left>
@@ -140,6 +141,7 @@
 					<height>100%</height>
 					<aspectratio>scale</aspectratio>
 					<texture colordiffuse="white8">colors/black.png</texture>
+					<visible>!System.HasActiveModalDialog</visible>
 					<visible>ControlGroup(9000).HasFocus | Control.HasFocus(6000) | Control.HasFocus(7000)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
 				</control>
