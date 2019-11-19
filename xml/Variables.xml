@@ -33,7 +33,7 @@
 		<value></value>
 	</variable>
 	<variable name="MainBackgroundVar">
-		<value condition="Window.IsActive(script-globalsearch.xml)">$VAR[BackgroundSearchVar]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml) | Window.IsActive(script-script.extendedinfo-VideoList.xml) | Window.IsActive(script-script.extendedinfo-YoutubeList.xml)">$VAR[BackgroundSearchVar]</value>
 		<value condition="Window.IsVisible(Home) + Control.HasFocus(801)">$VAR[BackgroundPowerVar]</value>
 		<value condition="Window.IsVisible(Home) + Control.HasFocus(802)">$VAR[BackgroundSettingsVar]</value>
 		<value condition="Window.IsVisible(Home) + Control.HasFocus(803)">$VAR[BackgroundSearchVar]</value>
@@ -42,7 +42,7 @@
 		<value></value>
 	</variable>
 	<variable name="FanartBackgroundVar">
-		<value condition="Window.IsActive(script-globalsearch.xml)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml) | Window.IsActive(script-script.extendedinfo-VideoList.xml) | Window.IsActive(script-script.extendedinfo-YoutubeList.xml)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="Window.IsVisible(Home) + Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="Window.IsVisible(Home) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="Window.IsVisible(Home) + Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
@@ -60,10 +60,12 @@
 		<value>$VAR[BackgroundWeatherVar]</value>
 	</variable>
 	<variable name="SearchFanartVar">
+		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$INFO[Window(Home).Property(infobackground)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value></value>
 	</variable>
 	<variable name="SearchYoutubeFanartVar">
+		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$INFO[Window(Home).Property(infobackground)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEqual(Window.Property(type),channel)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb)) + !String.IsEqual(Window.Property(type),channel)">$INFO[ListItem.Art(thumb)]</value>
 		<value></value>
