@@ -1253,3 +1253,7 @@ msgstr "Список фильмов в коллекции как текст"
 msgctxt "#40322"
 msgid "List Albums as Text"
 msgstr "Список альбомов как текст"
+
+msgctxt "#40323"
+msgid "Watch It Later"
+msgstr "Посмотреть позже"

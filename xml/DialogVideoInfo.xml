@@ -156,6 +156,19 @@
 						<description>No Content</description>
 						<left>40</left>
 						<top>25</top>
+						<width>670</width>
+						<height>363</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<textcolor>white8</textcolor>
+						<label>$LOCALIZE[19055]</label>
+						<visible>String.IsEmpty(ListItem.Plot) + Integer.IsGreater(Container(4000).NumItems,0)</visible>
+					</control>
+					<control type="textbox">
+						<description>No Content</description>
+						<left>40</left>
+						<top>25</top>
 						<width>1165</width>
 						<height>363</height>
 						<align>center</align>
@@ -163,7 +176,7 @@
 						<font>font27</font>
 						<textcolor>white8</textcolor>
 						<label>$LOCALIZE[19055]</label>
-						<visible>String.IsEmpty(ListItem.Plot)</visible>
+						<visible>String.IsEmpty(ListItem.Plot) + !Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 				</control>
 				<control type="grouplist" id="4000">
@@ -436,7 +449,7 @@
 						<param name="label" value="$LOCALIZE[31090]" />
 						<param name="onclick_1" value="Action(close)" />
 						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="441" />
@@ -487,7 +500,7 @@
 						<param name="icon" value="icons/infodialogs/info.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
 						<param name="onclick_1" value="RunScript(script.extendedinfo,info=openinfodialog)" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="102" />

@@ -1443,3 +1443,7 @@ msgstr ""
 msgctxt "#40322"
 msgid "List Albums as Text"
 msgstr ""
+
+msgctxt "#40323"
+msgid "Watch It Later"
+msgstr ""

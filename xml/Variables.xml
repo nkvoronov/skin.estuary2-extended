@@ -789,7 +789,7 @@
 		<value condition="!String.IsEmpty(VideoPlayer.Year)"> ([COLOR $VAR[MainColorVar]]$INFO[VideoPlayer.Year][/COLOR])</value>
 	</variable>
 	<variable name="MusicPlayerYearLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Year)">([COLOR $VAR[MainColorVar]]$INFO[MusicPlayer.Year][/COLOR])</value>
+		<value condition="!String.IsEmpty(MusicPlayer.Year)">([COLOR $VAR[MainColorVar]]$INFO[MusicPlayer.Year][/COLOR])</value>
 	</variable>
 	<variable name="VideoPlayerNextStartTimeLabelVar">
 		<value condition="!String.IsEmpty(VideoPlayer.NextStartTime)">[COLOR $VAR[GreyColorVar]]$INFO[VideoPlayer.NextStartTime,, - ]$INFO[VideoPlayer.NextEndTime] [/COLOR]</value>
