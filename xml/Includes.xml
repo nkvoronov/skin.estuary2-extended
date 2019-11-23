@@ -2675,7 +2675,6 @@
 	</include>
 	<include name="DialogResetBackgrounds">
 		<onclick>Skin.Reset(no_fanart)</onclick>
-		<onclick>Skin.Reset(hide_visualization_fanart)</onclick>
 		<onclick>Skin.Reset(show_background_video)</onclick>
 		<onclick>Skin.Reset(show_background_vis)</onclick>
 		<onclick>Skin.SetString(background_overlay,0)</onclick>
@@ -2715,12 +2714,12 @@
 		<include>DialogClickNo</include>
 	</include>
 	<include name="DialogResetAddons">
-		<!-- <onclick>Skin.Reset(enable_splashscreen)</onclick> -->
 		<onclick>Skin.Reset(enable_globalsearch)</onclick>
+		<onclick>Skin.Reset(enable_extendedinfo)</onclick>
 		<onclick>Skin.Reset(enable_watchitlater)</onclick>
 		<onclick>Skin.Reset(lrclyrics_alternative_view)</onclick>
 		<include>DialogClickNo</include>
-	</include>		
+	</include>
 	<include name="DialogResetSkin">
 		<onclick>Skin.ResetSettings</onclick>
 		<onclick>ReloadSkin()</onclick>
