@@ -6,7 +6,7 @@
 	<background label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</background>
 	<background label="smartshortcuts">||BROWSE||special://skin/extras/home-images</background>
 	<backgroundBrowse default="protocol://">True</backgroundBrowse>
-	<icon image="DefaultShortcut.png">DefaultFile.png</icon>
+	<icon image="DefaultShortcut.png">DefaultAddSource.png</icon>
 	<icon image="DefaultAudio.png">DefaultMusicSongs.png</icon>
 	<icon image="DefaultAudio.png" grouping="pvr-radio">DefaultTVShows.png</icon>
 	<groupoverride group="powermenu" disable_groups="" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
