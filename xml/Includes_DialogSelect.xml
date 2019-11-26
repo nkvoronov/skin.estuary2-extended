@@ -47,13 +47,14 @@
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="125" width="880">
-					<include content="IconLayout2">
-						<param name="top" value="7" />
-						<param name="left" value="12" />
-						<param name="width" value="110" />
-						<param name="height" value="110" />
-						<param name="img_source" value="$VAR[InfoWallThumbVar]" />
-					</include>
+					<control type="image">
+						<left>12</left>
+						<top>7</top>
+						<width>110</width>
+						<height>110</height>
+						<texture fallback="DefaultAddSource.png">$INFO[Listitem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
 					<control type="label">
 						<left>135</left>
 						<top>0</top>
@@ -74,15 +75,22 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="125" width="880">
-					<include content="IconLayout2">
-						<param name="top" value="7" />
-						<param name="left" value="12" />
-						<param name="width" value="110" />
-						<param name="height" value="110" />
-						<param name="img_source" value="$VAR[InfoWallThumbVar]" />
-						<param name="focused" value="true" />
-						<param name="focused2" value="Control.HasFocus(6)" />
-					</include>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<right>0</right>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+						<visible>Control.HasFocus(6)</visible>
+					</control>
+					<control type="image">
+						<left>12</left>
+						<top>7</top>
+						<width>110</width>
+						<height>110</height>
+						<texture fallback="DefaultAddSource.png">$INFO[Listitem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
 					<control type="label">
 						<left>135</left>
 						<top>0</top>
