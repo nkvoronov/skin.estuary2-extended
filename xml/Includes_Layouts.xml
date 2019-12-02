@@ -601,7 +601,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<description>Tvshow Posters</description>
+						<description>TVShow Posters</description>
 						<visible>String.IsEmpty(ListItem.Art(poster)) + String.IsEmpty(ListItem.Art(season.poster)) + !String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
 						<control type="image">
 							<description>Tvshow Poster + Border</description>
