@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">4000</defaultcontrol>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="5042,0" end="0,0" time="1500" tween="sine">WindowOpen</animation>
+			<animation effect="slide" end="1242,0" time="450" tween="sine" condition="Control.HasFocus(132) | ControlGroup(5000).HasFocus">WindowClose</animation>
+			<animation effect="slide" end="0,1080" time="450" tween="sine" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">WindowClose</animation>
+			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">Conditional</animation>
+			<control type="group">
+				<left>729</left>
+				<width>1950</width>
+				<height>1080</height>
+				<include>ColoredBackgroundImages</include>
+			</control>
+			<control type="button" id="20000">
+				<height>0</height>
+				<width>0</width>
+				<texturefocus/>
+				<left>-5000</left>
+				<onfocus>SetFocus(132)</onfocus>
+				<onclick/>
+				<visible allowhiddenfocus="true">Control.HasFocus(20000)</visible>
+			</control>
+			<control type="button" id="20001">
+				<height>0</height>
+				<width>0</width>
+				<texturefocus/>
+				<left>-5000</left>
+				<onclick/>
+				<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
+			</control>
+			<control type="group">
+				<left>-40</left>
+				<control type="grouplist" id="4000">
+					<orientation>vertical</orientation>
+					<scrolltime tween="sine">400</scrolltime>
+					<left>800</left>
+					<top>184</top>
+					<itemgap>20</itemgap>
+					<animation type="Conditional" condition="!String.IsEmpty(Window.Property(Bounce.Down))" reversible="false">
+						<effect type="slide" end="0,20" time="60" tween="sine" />
+						<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
+					</animation>
+					<animation type="Conditional" condition="!String.IsEmpty(Window.Property(Bounce.Up))" reversible="false">
+						<effect type="slide" end="0,-20" time="60" tween="sine" />
+						<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
+					</animation>
+					<width>2100</width>
+					<height>896</height>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[MainColorVar]]$ADDON[script.extendedinfo 32016]:[/COLOR] $INFO[Window.Property(AlsoKnownAs)]</label>
+						<visible>!String.isEmpty(Window.Property(AlsoKnownAs))</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[MainColorVar]]$ADDON[script.extendedinfo 32012]:[/COLOR] $INFO[Window.Property(Birthday)]  [COLOR $VAR[MainColorVar]]$ADDON[script.extendedinfo 32020]:[/COLOR] $INFO[Window.Property(Age)]</label>
+						<visible>!String.isEmpty(Window.Property(Birthday))</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[MainColorVar]]$ADDON[script.extendedinfo 32014]:[/COLOR] $INFO[Window.Property(PlaceOfBirth)]</label>
+						<visible>!String.isEmpty(Window.Property(PlaceOfBirth))</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[MainColorVar]]$ADDON[script.extendedinfo 32011]:[/COLOR] $INFO[Window.Property(TotalMovies)]</label>
+						<visible>!String.isEmpty(Window.Property(TotalMovies))</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[MainColorVar]]$ADDON[script.extendedinfo 32021]:[/COLOR] $INFO[Window.Property(DBMovies)]</label>
+						<visible>!String.isEmpty(Window.Property(DBMovies))</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>10</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[MainColorVar]]$ADDON[script.extendedinfo 32017]:[/COLOR] $INFO[Window.Property(Homepage)]</label>
+						<visible>!String.isEmpty(Window.Property(Homepage))</visible>
+					</control>
+					<control type="label">
+						<align>left</align>
+						<aligny>center</aligny>
+						<left>20</left>
+						<top>0</top>
+						<width>1000</width>
+						<height>25</height>
+						<font>font12</font>
+						<label>[COLOR $VAR[MainColorVar]]$ADDON[script.extendedinfo 32013]:[/COLOR] $INFO[Window.Property(Deathday)]</label>
+						<visible>!String.isEmpty(Window.Property(Deathday))</visible>
+					</control>
+					<control type="group" id="140">
+						<height>255</height>
+						<control type="button" id="132">
+							<top>0</top>
+							<left>0</left>
+							<width>1120</width>
+							<height>255</height>
+							<ondown>150</ondown>
+							<onup>SetFocus(20000)</onup>
+							<label/>
+							<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
+						</control>
+						<control type="textbox" id="800">
+							<left>55</left>
+							<top>30</top>
+							<width>980</width>
+							<height>178</height>
+							<textoffsetx>40</textoffsetx>
+							<textoffsety>20</textoffsety>
+							<aligny>bottom</aligny>
+							<label>$INFO[Window.Property(Biography)]</label>
+							<font>font12</font>
+							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<visible>!String.IsEmpty(Window.Property(Biography))</visible>
+						</control>
+						<control type="textbox">
+							<description>No Content</description>
+							<left>55</left>
+							<top>30</top>
+							<width>980</width>
+							<height>178</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font27</font>
+							<textcolor>white8</textcolor>
+							<label>$LOCALIZE[19055]</label>
+							<visible>String.IsEmpty(Window.Property(Biography))</visible>
+						</control>
+					</control>
+					<control type="group" id="1500">
+						<description>Movies</description>
+						<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
+						<height>530</height>
+						<control type="label">
+							<left>25</left>
+							<top>6</top>
+							<width>1000</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$ADDON[script.extendedinfo 32120]$INFO[Container(150).NumItems, (,)]</label>
+						</control>
+						<control type="image">
+							<left>-10</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(150).HasPrevious + Control.HasFocus(150)</visible>
+						</control>
+						<control type="image">
+							<left>1882</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(150).HasNext + Control.HasFocus(150)</visible>
+						</control>
+						<control type="panel" id="150">
+							<top>30</top>
+							<left>-45</left>
+							<width>1950</width>
+							<height>500</height>
+							<onleft>150</onleft>
+							<onright>150</onright>
+							<onup>132</onup>
+							<ondown>250</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<top>20</top>
+										<left>20</left>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<description>Overlay Background</description>
+										<left>20</left>
+										<width>240</width>
+										<bottom>130</bottom>
+										<height>50</height>
+										<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+										<visible>!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<width>235</width>
+										<bottom>120</bottom>
+										<height>50</height>
+										<align>right</align>
+										<aligny>center</aligny>
+										<font>font20_title</font>
+										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<bottom>130</bottom>
+										<width>32</width>
+										<height>32</height>
+										<texture>icons/extendedinfo/media.png</texture>
+										<visible>!String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>240</width>
+										<height>110</height>
+										<top>360</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label][CR][COLOR white8]$INFO[ListItem.Property(Character)][/COLOR]</label>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<top>20</top>
+										<left>20</left>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<description>Overlay Background</description>
+										<left>20</left>
+										<width>240</width>
+										<bottom>130</bottom>
+										<height>50</height>
+										<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+										<visible>!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<width>235</width>
+										<bottom>120</bottom>
+										<height>50</height>
+										<align>right</align>
+										<aligny>center</aligny>
+										<font>font20_title</font>
+										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<bottom>130</bottom>
+										<width>32</width>
+										<height>32</height>
+										<texture>icons/extendedinfo/media.png</texture>
+										<visible>!String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="image">
+										<left>16</left>
+										<top>16</top>
+										<width>248</width>
+										<height>348</height>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>240</width>
+										<height>110</height>
+										<top>360</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label][CR][COLOR white8]$INFO[ListItem.Property(Character)][/COLOR]</label>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<control type="group" id="2500">
+						<description>TVShows</description>
+						<height>530</height>
+						<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
+						<control type="label">
+							<top>6</top>
+							<left>25</left>
+							<width>1000</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$ADDON[script.extendedinfo 32121]$INFO[Container(250).NumItems, (,)]</label>
+						</control>
+						<control type="image">
+							<left>-10</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(250).HasPrevious + Control.HasFocus(250)</visible>
+						</control>
+						<control type="image">
+							<left>1882</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(250).HasNext + Control.HasFocus(250)</visible>
+						</control>
+						<control type="panel" id="250">
+							<top>30</top>
+							<left>-45</left>
+							<width>1950</width>
+							<height>500</height>
+							<onleft>250</onleft>
+							<onright>250</onright>
+							<onup>150</onup>
+							<ondown>550</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<top>20</top>
+										<left>20</left>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<description>Overlay Background</description>
+										<left>20</left>
+										<width>240</width>
+										<bottom>130</bottom>
+										<height>50</height>
+										<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+										<visible>!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<width>235</width>
+										<bottom>120</bottom>
+										<height>50</height>
+										<align>right</align>
+										<aligny>center</aligny>
+										<font>font20_title</font>
+										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<bottom>130</bottom>
+										<width>32</width>
+										<height>32</height>
+										<texture>icons/extendedinfo/media.png</texture>
+										<visible>!String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>240</width>
+										<height>110</height>
+										<top>360</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label][CR][COLOR white8]$INFO[ListItem.Property(Character)][/COLOR]</label>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<top>20</top>
+										<left>20</left>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<description>Overlay Background</description>
+										<left>20</left>
+										<width>240</width>
+										<bottom>130</bottom>
+										<height>50</height>
+										<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+										<visible>!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<width>235</width>
+										<bottom>120</bottom>
+										<height>50</height>
+										<align>right</align>
+										<aligny>center</aligny>
+										<font>font20_title</font>
+										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<bottom>130</bottom>
+										<width>32</width>
+										<height>32</height>
+										<texture>icons/extendedinfo/media.png</texture>
+										<visible>!String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="image">
+										<left>16</left>
+										<top>16</top>
+										<width>248</width>
+										<height>348</height>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>240</width>
+										<height>110</height>
+										<top>360</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label][CR][COLOR white8]$INFO[ListItem.Property(Character)][/COLOR]</label>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<control type="group" id="5500">
+						<description>Movies Crew</description>
+						<visible>Integer.IsGreater(Container(550).NumItems,0)</visible>
+						<height>530</height>
+						<control type="label">
+							<top>6</top>
+							<left>25</left>
+							<width>1000</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$ADDON[script.extendedinfo 32122]$INFO[Container(550).NumItems, (,)]</label>
+						</control>
+						<control type="image">
+							<left>-10</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(550).HasPrevious + Control.HasFocus(550)</visible>
+						</control>
+						<control type="image">
+							<left>1882</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(550).HasNext + Control.HasFocus(550)</visible>
+						</control>
+						<control type="panel" id="550">
+							<top>30</top>
+							<left>-45</left>
+							<width>1950</width>
+							<height>500</height>
+							<onleft>550</onleft>
+							<onright>550</onright>
+							<onup>250</onup>
+							<ondown>650</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<top>20</top>
+										<left>20</left>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<description>Overlay Background</description>
+										<left>20</left>
+										<width>240</width>
+										<bottom>130</bottom>
+										<height>50</height>
+										<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+										<visible>!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<width>235</width>
+										<bottom>120</bottom>
+										<height>50</height>
+										<align>right</align>
+										<aligny>center</aligny>
+										<font>font20_title</font>
+										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<bottom>130</bottom>
+										<width>32</width>
+										<height>32</height>
+										<texture>icons/extendedinfo/media.png</texture>
+										<visible>!String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>240</width>
+										<height>110</height>
+										<top>360</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label][CR][COLOR white8]$INFO[ListItem.Property(Job)][/COLOR]</label>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<top>20</top>
+										<left>20</left>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<description>Overlay Background</description>
+										<left>20</left>
+										<width>240</width>
+										<bottom>130</bottom>
+										<height>50</height>
+										<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+										<visible>!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<width>235</width>
+										<bottom>120</bottom>
+										<height>50</height>
+										<align>right</align>
+										<aligny>center</aligny>
+										<font>font20_title</font>
+										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<bottom>130</bottom>
+										<width>32</width>
+										<height>32</height>
+										<texture>icons/extendedinfo/media.png</texture>
+										<visible>!String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="image">
+										<left>16</left>
+										<top>16</top>
+										<width>248</width>
+										<height>348</height>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>240</width>
+										<height>110</height>
+										<top>360</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label][CR][COLOR white8]$INFO[ListItem.Property(Job)][/COLOR]</label>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<control type="group" id="6500">
+						<description>TVShows Crew</description>
+						<height>530</height>
+						<visible>Integer.IsGreater(Container(650).NumItems,0)</visible>
+						<control type="label">
+							<top>6</top>
+							<left>25</left>
+							<width>1000</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$ADDON[script.extendedinfo 32123]$INFO[Container(650).NumItems, (,)]</label>
+						</control>
+						<control type="image">
+							<left>-10</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(650).HasPrevious + Control.HasFocus(650)</visible>
+						</control>
+						<control type="image">
+							<left>1882</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(650).HasNext + Control.HasFocus(650)</visible>
+						</control>
+						<control type="panel" id="650">
+							<top>30</top>
+							<left>-45</left>
+							<width>1950</width>
+							<height>500</height>
+							<onleft>650</onleft>
+							<onright>650</onright>
+							<onup>550</onup>
+							<ondown>350</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<top>20</top>
+										<left>20</left>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<description>Overlay Background</description>
+										<left>20</left>
+										<width>240</width>
+										<bottom>130</bottom>
+										<height>50</height>
+										<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+										<visible>!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<width>235</width>
+										<bottom>120</bottom>
+										<height>50</height>
+										<align>right</align>
+										<aligny>center</aligny>
+										<font>font20_title</font>
+										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<bottom>130</bottom>
+										<width>32</width>
+										<height>32</height>
+										<texture>icons/extendedinfo/media.png</texture>
+										<visible>!String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>240</width>
+										<height>110</height>
+										<top>360</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label][CR][COLOR white8]$INFO[ListItem.Property(Job)][/COLOR]</label>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<top>20</top>
+										<left>20</left>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<description>Overlay Background</description>
+										<left>20</left>
+										<width>240</width>
+										<bottom>130</bottom>
+										<height>50</height>
+										<texture colordiffuse="bg_image">overlays/overlayfade.png</texture>
+										<visible>!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<width>235</width>
+										<bottom>120</bottom>
+										<height>50</height>
+										<align>right</align>
+										<aligny>center</aligny>
+										<font>font20_title</font>
+										<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]</label>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<bottom>130</bottom>
+										<width>32</width>
+										<height>32</height>
+										<texture>icons/extendedinfo/media.png</texture>
+										<visible>!String.IsEmpty(ListItem.dbid)</visible>
+									</control>
+									<control type="image">
+										<left>16</left>
+										<top>16</top>
+										<width>248</width>
+										<height>348</height>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>240</width>
+										<height>110</height>
+										<top>360</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label][CR][COLOR white8]$INFO[ListItem.Property(Job)][/COLOR]</label>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<control type="group">
+						<description>YouTube List</description>
+						<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
+						<height>460</height>
+						<control type="label">
+							<top>6</top>
+							<left>25</left>
+							<width>1000</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$ADDON[script.extendedinfo 32118]$INFO[Container(350).NumItems, (,)]</label>
+						</control>
+						<control type="image">
+							<left>-10</left>
+							<top>160</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(350).HasPrevious + Control.HasFocus(350)</visible>
+						</control>
+						<control type="image">
+							<left>1875</left>
+							<top>160</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(350).HasNext + Control.HasFocus(350)</visible>
+						</control>
+						<control type="panel" id="350">
+							<left>-45</left>
+							<top>30</top>
+							<width>1940</width>
+							<height>700</height>
+							<onleft>350</onleft>
+							<onright>350</onright>
+							<onup>650</onup>
+							<ondown>450</ondown>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
+							<itemlayout height="410" width="380">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>373</width>
+										<height>260</height>
+										<texture>dialogs/dialog-bg-nobo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<top>20</top>
+										<width>333</width>
+										<height>220</height>
+										<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>333</width>
+										<height>140</height>
+										<top>245</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="410" width="380">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>373</width>
+										<height>260</height>
+										<texture>dialogs/dialog-bg-nobo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<left>16</left>
+										<top>16</top>
+										<width>341</width>
+										<height>228</height>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<top>20</top>
+										<width>333</width>
+										<height>220</height>
+										<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="textbox">
+										<left>20</left>
+										<width>333</width>
+										<height>140</height>
+										<top>245</top>
+										<align>center</align>
+										<font>font12</font>
+										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<control type="group" id="4500">
+						<description>Artwork List</description>
+						<height>450</height>
+						<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
+						<control type="label">
+							<top>6</top>
+							<left>25</left>
+							<width>1000</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$ADDON[script.extendedinfo 32119]$INFO[Container(450).NumItems, (,)]</label>
+						</control>
+						<control type="image">
+							<left>-10</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(450).HasPrevious + Control.HasFocus(450)</visible>
+						</control>
+						<control type="image">
+							<left>1882</left>
+							<top>220</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(450).HasNext + Control.HasFocus(450)</visible>
+						</control>
+						<control type="panel" id="450">
+							<top>30</top>
+							<left>-45</left>
+							<width>1950</width>
+							<height>500</height>
+							<onleft>450</onleft>
+							<onright>450</onright>
+							<onup>350</onup>
+							<ondown>750</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<top>20</top>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="500" width="270">
+								<control type="group">
+									<top>10</top>
+									<left>45</left>
+									<control type="image">
+										<width>280</width>
+										<height>380</height>
+										<texture>DefaultVideo.png</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<top>20</top>
+										<width>240</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<left>16</left>
+										<top>16</top>
+										<width>248</width>
+										<height>348</height>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<control type="group" id="7500">
+						<description>Fanart List</description>
+						<height>550</height>
+						<visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
+						<control type="label">
+							<left>25</left>
+							<top>6</top>
+							<width>1000</width>
+							<height>25</height>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$LOCALIZE[20445]$INFO[Container(750).NumItems, (,)]</label>
+						</control>
+						<control type="image">
+							<left>-10</left>
+							<top>200</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]" flipx="true">overlays/arrowright.png</texture>
+							<animation effect="slide" start="30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(750).HasPrevious + Control.HasFocus(750)</visible>
+						</control>
+						<control type="image">
+							<left>1874</left>
+							<top>200</top>
+							<width>28</width>
+							<height>28</height>
+							<texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+							<animation effect="slide" start="-30,0" end="0,0" time="200">VisibleChange</animation>
+							<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+							<visible>Container(750).HasNext + Control.HasFocus(750)</visible>
+						</control>
+						<control type="panel" id="750">
+							<top>30</top>
+							<left>-45</left>
+							<width>1950</width>
+							<height>600</height>
+							<onleft>750</onleft>
+							<onright>750</onright>
+							<onup>450</onup>
+							<ondown>SetFocus(20001)</ondown>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<itemlayout height="600" width="666">
+								<control type="group">
+									<left>45</left>
+									<control type="image">
+										<width>560</width>
+										<height>380</height>
+										<texture>dialogs/dialog-bg-nobo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<top>20</top>
+										<width>520</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<top>350</top>
+										<height>60</height>
+										<width>520</width>
+										<label>$INFO[ListItem.Label]</label>
+										<font>font12_title</font>
+										<align>center</align>
+										<aligny>center</aligny>
+										<scroll>true</scroll>
+									</control>
+								</control>
+							</itemlayout>
+							<focusedlayout height="600" width="666">
+								<control type="group">
+									<left>45</left>
+									<control type="image">
+										<width>560</width>
+										<height>380</height>
+										<texture>dialogs/dialog-bg-nobo.png</texture>
+										<bordertexture border="21">overlays/shadow.png</bordertexture>
+										<bordersize>20</bordersize>
+									</control>
+									<control type="image">
+										<left>20</left>
+										<top>20</top>
+										<width>520</width>
+										<height>340</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio aligny="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<left>16</left>
+										<top>16</top>
+										<width>528</width>
+										<height>348</height>
+										<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+									</control>
+									<control type="label">
+										<left>20</left>
+										<top>350</top>
+										<height>60</height>
+										<width>520</width>
+										<label>$INFO[ListItem.Label]</label>
+										<font>font12_title</font>
+										<align>center</align>
+										<aligny>center</aligny>
+										<scroll>true</scroll>
+									</control>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+				</control>
+				<control type="group" id="33000">
+					<description>Clearlogo</description>
+					<left>825</left>
+					<top>22</top>
+					<visible>!Control.HasFocus(132)</visible>
+					<animation effect="fade" time="250">VisibleChange</animation>
+					<control type="image">
+						<left>1020</left>
+						<top>-20</top>
+						<width>830</width>
+						<height>190</height>
+						<aspectratio align="right">keep</aspectratio>
+						<texture  background="true">icons/extendedinfo/moviedb.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<description>Info</description>
+					<left>825</left>
+					<top>70</top>
+					<animation effect="fade" time="250">VisibleChange</animation>
+					<control type="group">
+						<control type="grouplist">
+							<left>0</left>
+							<width>1018</width>
+							<height>200</height>
+							<aligny>top</aligny>
+							<itemgap>0</itemgap>
+							<orientation>vertical</orientation>
+							<control type="label">
+								<width>1018</width>
+								<height>50</height>
+								<label>$INFO[Window.Property(label)]</label>
+								<font>font45_title</font>
+								<scroll>true</scroll>
+							</control>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<description>Poster</description>
+			<animation effect="slide" start="-1500,0" end="0,0" delay="600" time="900" tween="sine">WindowOpen</animation>
+			<animation effect="slide" end="-1500,0" time="900" tween="sine" condition="Control.HasFocus(132) | ControlGroup(5000).HasFocus">WindowClose</animation>
+			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">Conditional</animation>
+			<control type="image">
+				<left>-10</left>
+				<top>-10</top>
+				<width>749</width>
+				<height>1100</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<texture background="true">colors/black.png</texture>
+				<bordertexture colordiffuse="$VAR[MainColorVar]" border="10">overlays/shadow.png</bordertexture>
+				<bordersize>10</bordersize>
+			</control>
+			<control type="image">
+				<width>729</width>
+				<height>1080</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>300</fadetime>
+				<texture>$INFO[Window.Property(thumb)]</texture>
+			</control>
+		</control>
+	</controls>
+</window>

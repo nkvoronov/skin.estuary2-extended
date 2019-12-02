@@ -262,7 +262,7 @@
 				<width>830</width>
 				<bottom>75</bottom>
 				<label>$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
 			<control type="textbox">
 				<top>530</top>
@@ -367,7 +367,7 @@
 					<right>30</right>
 					<height>165</height>
 					<label>$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>!String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<control type="textbox">

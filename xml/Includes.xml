@@ -456,7 +456,7 @@
 					<param name="colordef" value="true" />
 				</include>
 				<include content="TextInfoFlag">
-					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow)) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song)" />
+					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,tvshow) + !String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,song)" />
 					<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Duration]" />
 				</include>
 				<include content="MediaFlag">
