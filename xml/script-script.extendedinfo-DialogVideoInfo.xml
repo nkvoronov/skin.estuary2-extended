@@ -7,12 +7,6 @@
 			<animation effect="slide" end="1242,0" time="450" tween="sine" condition="Control.HasFocus(132) | ControlGroup(5000).HasFocus">WindowClose</animation>
 			<animation effect="slide" end="0,1080" time="450" tween="sine" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">WindowClose</animation>
 			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">Conditional</animation>
-			<control type="group">
-				<left>729</left>
-				<width>1950</width>
-				<height>1080</height>
-				<include>ColoredBackgroundImages</include>
-			</control>
 			<control type="button" id="20000">
 				<height>0</height>
 				<width>0</width>
