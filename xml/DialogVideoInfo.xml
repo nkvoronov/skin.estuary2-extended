@@ -122,7 +122,7 @@
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>20</textoffsety>
 						<aligny>bottom</aligny>
-						<label></label>
+						<label/>
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">SetProperty(TextViewer_Header,$LOCALIZE[207],Home)</onclick>
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">SetProperty(TextViewer_Text,$ESCINFO[ListItem.Plot],Home)</onclick>
 						<onclick condition="!String.IsEmpty(ListItem.Plot)">ActivateWindow(1102)</onclick>
@@ -256,7 +256,7 @@
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="159" />
-						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[126]: [/COLOR]$INFO[ListItem.Status]" />
+						<param name="label" value="$VAR[ListItemStatusLabelVar]" />
 						<param name="altlabel" value="$LOCALIZE[126]: $INFO[ListItem.Status]" />
 						<param name="visible" value="!String.IsEmpty(ListItem.Status)" />
 					</include>

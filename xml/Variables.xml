@@ -689,7 +689,12 @@
 		<value condition="!String.IsEmpty(ListItem.Property(NumEpisodes))">[COLOR $VAR[MainColorVar]]$LOCALIZE[20360]: [/COLOR]$INFO[ListItem.Property(NumEpisodes)][CR]</value>
 	</variable>
 	<variable name="ListItemStatusLabelVar">
-		<value condition="!String.IsEmpty(ListItem.Status)">[COLOR $VAR[MainColorVar]]$LOCALIZE[126]: [/COLOR]$INFO[ListItem.Status]</value>
+		<value condition="!String.IsEmpty(ListItem.Status)">[COLOR $VAR[MainColorVar]]$LOCALIZE[126]: [/COLOR]$VAR[LangStatusLabelVar]</value>
+	</variable>
+	<variable name="LangStatusLabelVar">
+		<value condition="String.IsEqual(ListItem.Status, Ended)">$LOCALIZE[40324]</value>
+		<value condition="String.IsEqual(ListItem.Status, Continuing)">$LOCALIZE[40325]</value>
+		<value>$INFO[ListItem.Status]</value>
 	</variable>
 	<variable name="ListItemStartTimeLabelVar">
 		<value condition="!String.IsEmpty(ListItem.StartTime)">[COLOR $VAR[MainColorVar]]$LOCALIZE[555]: [/COLOR][COLOR $VAR[GreyColorVar]]$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime][/COLOR] ([COLOR $VAR[MainColorVar]]$INFO[ListItem.Duration][/COLOR])[CR]</value>

@@ -1095,3 +1095,11 @@ msgstr ""
 msgctxt "#40323"
 msgid "Watch It Later"
 msgstr ""
+
+msgctxt "#40324"
+msgid "Ended"
+msgstr ""
+
+msgctxt "#40325"
+msgid "Continuing"
+msgstr ""

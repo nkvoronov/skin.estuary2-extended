@@ -446,14 +446,13 @@
 					<font>font13</font>
 					<label>$LOCALIZE[137]</label>
 				</control>
-				<control type="radiobutton" id="7000">
+				<control type="button" id="7000">
 					<top>170</top>
 					<include>MediaMenuItemsCommon</include>
 					<ondown>9000</ondown>
 					<onup>6000</onup>
 					<onright>54</onright>
 					<onleft>54</onleft>
-					<textwidth>370</textwidth>
 					<label>$ADDON[script.extendedinfo 32024]</label>
 				</control>
 				<control type="grouplist" id="9000">
