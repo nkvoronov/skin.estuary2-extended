@@ -4,15 +4,16 @@
 	<controls>
 		<control type="group">
 			<animation effect="slide" start="5042,0" end="0,0" time="1500" tween="sine">WindowOpen</animation>
-			<animation effect="slide" end="1242,0" time="450" tween="sine" condition="Control.HasFocus(132) | ControlGroup(5000).HasFocus">WindowClose</animation>
-			<animation effect="slide" end="0,1080" time="450" tween="sine" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">WindowClose</animation>
-			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">Conditional</animation>
+			<animation effect="slide" end="1242,0" time="450" tween="sine" condition="Control.HasFocus(132) | Control.HasFocus(133) | ControlGroup(5000).HasFocus">WindowClose</animation>
+			<animation effect="slide" end="0,1080" time="450" tween="sine" condition="!Control.HasFocus(132) + !Control.HasFocus(133) + !ControlGroup(5000).HasFocus">WindowClose</animation>
+			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !Control.HasFocus(133) + !ControlGroup(5000).HasFocus">Conditional</animation>
 			<control type="button" id="20000">
 				<height>0</height>
 				<width>0</width>
 				<texturefocus/>
 				<left>-5000</left>
-				<onfocus>SetFocus(132)</onfocus>
+				<onfocus condition="!String.IsEmpty(Window.Property(Plot))">SetFocus(132)</onfocus>
+				<onfocus condition="String.IsEmpty(Window.Property(Plot))">SetFocus(133)</onfocus>
 				<onclick/>
 				<visible allowhiddenfocus="true">Control.HasFocus(20000)</visible>
 			</control>
@@ -53,6 +54,18 @@
 							<onup>SetFocus(20000)</onup>
 							<label/>
 							<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
+							<visible>!String.IsEmpty(Window.Property(Plot))</visible>
+						</control>
+						<control type="button" id="133">
+							<top>0</top>
+							<left>0</left>
+							<width>1085</width>
+							<height>255</height>
+							<ondown>5000</ondown>
+							<onup>SetFocus(20000)</onup>
+							<label/>
+							<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
+							<visible>String.IsEmpty(Window.Property(Plot))</visible>
 						</control>
 						<control type="textbox" id="800">
 							<left>55</left>
@@ -109,7 +122,8 @@
 							<top>0</top>
 							<width>1090</width>
 							<height>140</height>
-							<onup>132</onup>
+							<onup condition="!String.IsEmpty(Window.Property(Plot))">132</onup>
+							<onup condition="String.IsEmpty(Window.Property(Plot))">133</onup>
 							<ondown>1000</ondown>
 							<itemgap>-10</itemgap>
 							<orientation>horizontal</orientation>
@@ -2121,7 +2135,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>font13</font>
-							<label>$LOCALIZE[20445]$INFO[Container(1350).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32171]$INFO[Container(1350).NumItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>-10</left>
@@ -2473,7 +2487,7 @@
 					<description>Clearlogo</description>
 					<left>825</left>
 					<top>22</top>
-					<visible>!Control.HasFocus(132) + !ControlGroup(5000).HasFocus</visible>
+					<visible>!Control.HasFocus(132) + !Control.HasFocus(133) + !ControlGroup(5000).HasFocus</visible>
 					<animation effect="fade" time="250">VisibleChange</animation>
 					<control type="image">
 						<left>1020</left>
@@ -2692,8 +2706,8 @@
 		<control type="group">
 			<description>Poster</description>
 			<animation effect="slide" start="-1500,0" end="0,0" delay="600" time="900" tween="sine">WindowOpen</animation>
-			<animation effect="slide" end="-1500,0" time="900" tween="sine" condition="Control.HasFocus(132) | ControlGroup(5000).HasFocus">WindowClose</animation>
-			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">Conditional</animation>
+			<animation effect="slide" end="-1500,0" time="900" tween="sine" condition="Control.HasFocus(132) | Control.HasFocus(133) | ControlGroup(5000).HasFocus">WindowClose</animation>
+			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !Control.HasFocus(133) + !ControlGroup(5000).HasFocus">Conditional</animation>
 			<control type="image">
 				<left>-10</left>
 				<top>-10</top>

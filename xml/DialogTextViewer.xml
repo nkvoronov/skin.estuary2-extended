@@ -20,8 +20,7 @@
 				<height>647</height>
 				<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 				<pagecontrol>3000</pagecontrol>
-				<font>font14</font>
-				<monofont>Mono26</monofont>
+				<font>font37</font>
 			</control>
 			<control type="scrollbar" id="3000">
 				<include>HiddenObject</include>

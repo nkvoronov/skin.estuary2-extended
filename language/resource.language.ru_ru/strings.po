@@ -1257,3 +1257,11 @@ msgstr "Список альбомов как текст"
 msgctxt "#40323"
 msgid "Watch It Later"
 msgstr "Посмотреть позже"
+
+msgctxt "#40324"
+msgid "Ended"
+msgstr "Закрыт"
+
+msgctxt "#40325"
+msgid "Continuing"
+msgstr "Продолжается"

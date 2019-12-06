@@ -85,7 +85,7 @@
 				<visible>Control.IsVisible(500)</visible>
 			</control>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="Youtube $INFO[Window.Property(Filter_Label)]" />
+				<param name="breadcrumbs_label" value="YouTube $INFO[Window.Property(Filter_Label)]" />
 				<param name="sublabel" value="$INFO[Window.Property(Sort_Label),$LOCALIZE[31022]: ,  ∙  ]$INFO[Window.Property(CurrentPage),, / ]$INFO[Window.Property(TotalPages)]" />
 				<param name="width" value="100%" />
 			</include>
