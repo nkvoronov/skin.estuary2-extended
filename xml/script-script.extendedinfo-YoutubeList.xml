@@ -85,9 +85,10 @@
 				<visible>Control.IsVisible(500)</visible>
 			</control>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="YouTube $INFO[Window.Property(Filter_Label)]" />
-				<param name="sublabel" value="$INFO[Window.Property(Sort_Label),$LOCALIZE[31022]: ,  ∙  ]$INFO[Window.Property(CurrentPage),, / ]$INFO[Window.Property(TotalPages)]" />
+				<param name="breadcrumbs_label" value="YouTube$INFO[Window.Property(Filter_Label), / ,]" />
+				<param name="sublabel" value="$INFO[Window.Property(Sort_Label),$LOCALIZE[31022]: ,  ∙  ]$INFO[Window.Property(TotalItems),$ADDON[script.extendedinfo 32124]: ]$INFO[Window.Property(CurrentPage),  ∙  $ADDON[script.extendedinfo 32125]: ]$INFO[Window.Property(TotalPages), / ]" />
 				<param name="width" value="100%" />
+				<param name="slide" value="False" />
 			</include>
 			<control type="group">
 				<depth>DepthBars</depth>
@@ -126,7 +127,7 @@
 						<texturenofocus />
 					</control>
 				</control>
-				<include>TouchButtons</include>
+				<include condition="Skin.HasSetting(touchmode)">TouchButtons</include>
 			</control>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
