@@ -1906,8 +1906,7 @@
 										<left>40</left>
 										<top>40</top>
 										<width>550</width>
-										<height>320</height>
-										<align>center</align>
+										<height>315</height>
 										<font>font12</font>
 										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Property(Author),[B],[/B][CR]]$INFO[ListItem.Property(Content)]</label>
@@ -1936,8 +1935,7 @@
 										<left>40</left>
 										<top>40</top>
 										<width>550</width>
-										<height>320</height>
-										<align>center</align>
+										<height>315</height>
 										<font>font12</font>
 										<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 										<label>$INFO[ListItem.Property(Author),[B],[/B][CR]]$INFO[ListItem.Property(Content)]</label>
