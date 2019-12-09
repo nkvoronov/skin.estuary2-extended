@@ -41,7 +41,7 @@
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">50</onup>
 				<onup condition="!Integer.IsGreater(Container.NumPages,1)">9000</onup>
 				<ondown>50</ondown>
-				<viewtype label="535">list</viewtype>
+				<viewtype label="                         [B]$LOCALIZE[535][/B]">list</viewtype>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<focusedlayout height="list_item_height">
@@ -137,7 +137,7 @@
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">54</onup>
 				<onup condition="!Integer.IsGreater(Container.NumPages,1)">9000</onup>
 				<ondown>54</ondown>
-				<viewtype label="31101">icon</viewtype>
+				<viewtype label="  [B]$LOCALIZE[31101][/B]">icon</viewtype>
 				<preloaditems>2</preloaditems>
 				<pagecontrol>54600</pagecontrol>
 				<animation effect="fade" time="200">VisibleChange</animation>
