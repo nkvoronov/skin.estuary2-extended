@@ -472,7 +472,6 @@
 					<control type="button" id="2">
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[31023]</label>
-						<label2>[B]$INFO[Container.Viewmode][/B]</label2>
 						<onclick>Container.NextViewMode</onclick>
 					</control>
 					<control type="button" id="5001">

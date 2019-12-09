@@ -2530,7 +2530,7 @@
 							<control type="label">
 								<width>1018</width>
 								<height>50</height>
-								<label>$INFO[Window.Property(season),,x]$INFO[Window.Property(episode),, ]$INFO[Window.Property(Title)]</label>
+								<label>$VAR[DialogVideoInfoLabelVar]</label>
 								<font>font45_title</font>
 								<scroll>true</scroll>
 							</control>
@@ -2551,7 +2551,7 @@
 								<top>5</top>
 								<width>135</width>
 								<height>67</height>
-								<visible>!String.IsEqual(Window.Property(type),Season) + !String.IsEqual(Window.Property(type),episode)</visible>
+								<visible>!String.IsEqual(Window.Property(type),season) + !String.IsEqual(Window.Property(type),episode)</visible>
 								<aspectratio align="center">keep</aspectratio>
 								<texture fallback="icons/extendedinfo/flags/rating/MPAA_NR_Certificate_US.png">$INFO[Window.Property(mpaa),icons/extendedinfo/flags/rating/,.png]</texture>
 							</control>
@@ -2677,7 +2677,7 @@
 							<control type="group">
 								<left>0</left>
 								<width>180</width>
-								<visible>String.IsEqual(Window.Property(type),Season)</visible>
+								<visible>String.IsEqual(Window.Property(type),season)</visible>
 								<control type="label">
 									<left>0</left>
 									<top>8</top>

@@ -371,6 +371,18 @@
 		<value condition="player.passthrough">dialogs/volume/volume.png</value>
 		<value>dialogs/volume/volume1.png</value>
 	</variable>
+	<variable name="DialogVideoInfoLabelVar">
+		<value condition="String.IsEqual(Window.Property(type),movie) | String.IsEqual(Window.Property(type),tvshow)">$INFO[Window.Property(Title)]$VAR[DialogVideoInfoYearLabelVar]</value>
+		<value condition="String.IsEqual(Window.Property(type),season)">$INFO[Window.Property(Title)]</value>
+		<value condition="String.IsEqual(Window.Property(type),episode)">$VAR[DialogVideoInfoSeasonXEpisodeLabelVar]$INFO[Window.Property(Title)]</value>
+	</variable>
+	<variable name="DialogVideoInfoYearLabelVar">
+		<value condition="!String.IsEmpty(Window.Property(Year))"> ([COLOR $VAR[MainColorVar]]$INFO[Window.Property(Year)][/COLOR])</value>
+	</variable>
+	<variable name="DialogVideoInfoSeasonXEpisodeLabelVar">
+		<value condition="![String.IsEmpty(Window.Property(season)) + String.IsEmpty(Window.Property(episode))]">$INFO[Window.Property(season)][COLOR $VAR[MainColorVar]]x[/COLOR]$INFO[Window.Property(episode),, ]</value>
+		<value condition="String.IsEmpty(Window.Property(season)) + !String.IsEmpty(Window.Property(episode))">$INFO[Window.Property(episode),, ]</value>
+	</variable>
 	<variable name="VideoInfoMainLabelVar">
 		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]$VAR[ListItemYearLabelVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]$VAR[ListItemYearLabelVar]</value>
