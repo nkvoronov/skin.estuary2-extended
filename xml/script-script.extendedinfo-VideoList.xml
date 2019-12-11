@@ -29,7 +29,7 @@
 					<onright>50600</onright>
 					<onup>700</onup>
 					<ondown>600</ondown>
-					<viewtype label="                           [B]$LOCALIZE[535][/B]">list</viewtype>
+					<viewtype label="[B]$LOCALIZE[535][/B]">list</viewtype>
 					<focusedlayout height="list_item_height">
 						<control type="image">
 							<left>0</left>
@@ -163,7 +163,7 @@
 					<onright>72</onright>
 					<onup>700</onup>
 					<ondown>600</ondown>
-					<viewtype label="      [B]$LOCALIZE[31101][/B]">icon</viewtype>
+					<viewtype label="[B]$LOCALIZE[31101][/B]">icon</viewtype>
 					<preloaditems>2</preloaditems>
 					<pagecontrol>72</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -473,6 +473,7 @@
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[31023]</label>
 						<onclick>Container.NextViewMode</onclick>
+						<align>right</align>
 					</control>
 					<control type="button" id="5001">
 						<include>MediaMenuItemsCommon</include>
