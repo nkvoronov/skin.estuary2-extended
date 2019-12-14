@@ -1455,3 +1455,7 @@ msgstr ""
 msgctxt "#40325"
 msgid "Continuing"
 msgstr ""
+
+msgctxt "#40326"
+msgid "Jump to letter"
+msgstr ""

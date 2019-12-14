@@ -1265,3 +1265,7 @@ msgstr "Закрыт"
 msgctxt "#40325"
 msgid "Continuing"
 msgstr "Продолжается"
+
+msgctxt "#40326"
+msgid "Jump to letter"
+msgstr "Перейти к букве"

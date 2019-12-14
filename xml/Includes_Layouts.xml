@@ -1349,7 +1349,7 @@
 					</control>
 					<control type="group">
 						<description>Movies, Sets, Tvshows and Seasons</description>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season)</visible>
 						<include content="PosterLayout">
 							<param name="top" value="116" />
 							<param name="left" value="96" />
@@ -1366,7 +1366,7 @@
 					</control>
 					<control type="group">
 						<description>Episodes and Musicvideos</description>
-						<visible>Container.Content(episodes) | Container.Content(musicvideos)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo)</visible>
 						<include content="ThumbLayout">
 							<param name="top" value="140" />
 							<param name="left" value="30" />
@@ -1382,7 +1382,7 @@
 					</control>
 					<control type="group">
 						<description>Artists, Albums and Songs</description>
-						<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song)</visible>
 						<include content="SquareLayout">
 							<param name="top" value="100" />
 							<param name="left" value="60" />
@@ -1412,7 +1412,7 @@
 					</control>
 					<control type="group">
 						<description>Other</description>
-						<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(games)]</visible>
+						<visible>![Container.Content(images) | String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | Container.Content(games)]</visible>
 						<include content="IconLayout">
 							<param name="top" value="140" />
 							<param name="left" value="30" />
@@ -1434,13 +1434,13 @@
 						<control type="group">
 							<top>640</top>
 							<visible>!ListItem.IsCollection</visible>
-							<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo)</visible>
 							<control type="textbox" id="15500">
 								<width>537</width>
 								<bottom>112</bottom>
 								<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
-								<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
+								<visible>!String.IsEqual(ListItem.dbtype,episode)</visible>
 								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
 							</control>
 							<control type="textbox" id="15500">
@@ -1448,7 +1448,7 @@
 								<bottom>120</bottom>
 								<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
-								<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
+								<visible>!String.IsEqual(ListItem.dbtype,episode)</visible>
 								<visible>String.IsEqual(Skin.Font, Arial)</visible>
 							</control>
 							<control type="textbox" id="15501">
@@ -1457,7 +1457,7 @@
 								<bottom>130</bottom>
 								<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
-								<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+								<visible>String.IsEqual(ListItem.dbtype,episode)</visible>
 								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
 							</control>
 							<control type="textbox" id="15501">
@@ -1466,7 +1466,7 @@
 								<bottom>130</bottom>
 								<autoscroll delay="10000" time="5000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
-								<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+								<visible>String.IsEqual(ListItem.dbtype,episode)</visible>
 								<visible>String.IsEqual(Skin.Font, Arial)</visible>
 							</control>
 							<control type="textbox">
@@ -1484,7 +1484,7 @@
 						<control type="group">
 							<top>640</top>
 							<visible>ListItem.IsCollection</visible>
-							<visible>Container.Content(movies) | Container.Content(sets)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set)</visible>
 							<control type="textbox" id="15502">
 								<width>537</width>
 								<bottom>310</bottom>
@@ -1527,14 +1527,14 @@
 						</control>
 						<control type="group">
 							<top>570</top>
-							<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song)</visible>
 							<control type="textbox" id="15504">
 								<width>537</width>
 								<bottom>300</bottom>
 								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
 								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-								<visible>Container.Content(artists)</visible>
+								<visible>String.IsEqual(ListItem.dbtype,artist)</visible>
 							</control>
 							<control type="textbox" id="15504">
 								<width>537</width>
@@ -1542,7 +1542,7 @@
 								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
 								<visible>String.IsEqual(Skin.Font, Arial)</visible>
-								<visible>Container.Content(artists)</visible>
+								<visible>String.IsEqual(ListItem.dbtype,artist)</visible>
 							</control>
 							<control type="textbox" id="15505">
 								<width>537</width>
@@ -1550,7 +1550,7 @@
 								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
 								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-								<visible>!Container.Content(artists)</visible>
+								<visible>!String.IsEqual(ListItem.dbtype,artist)</visible>
 							</control>
 							<control type="textbox" id="15505">
 								<width>537</width>
@@ -1558,7 +1558,7 @@
 								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
 								<visible>String.IsEqual(Skin.Font, Arial)</visible>
-								<visible>!Container.Content(artists)</visible>
+								<visible>!String.IsEqual(ListItem.dbtype,artist)</visible>
 							</control>
 							<control type="textbox">
 								<description>No Content</description>
@@ -1738,7 +1738,7 @@
 						</control>
 						<control type="group">
 							<top>640</top>
-							<visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(images) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+							<visible>![String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | Container.Content(images) | String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo)]</visible>
 							<control type="textbox" id="15506">
 								<width>537</width>
 								<bottom>110</bottom>
@@ -1770,7 +1770,7 @@
 						<description>List Albums in Artist</description>
 						<top>800</top>
 						<visible>!String.IsEmpty(ListItem.DBID)</visible>
-						<visible>String.IsEqual(ListItem.DBType,artist)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,artist)</visible>
 						<control type="group">
 							<description>List Albums in Artist Text</description>
 							<visible>!Skin.HasSetting(hide_albums_text)</visible>
@@ -1803,7 +1803,7 @@
 						<description>List Songs in Albums</description>
 						<top>560</top>
 						<visible>!String.IsEmpty(ListItem.DBID)</visible>
-						<visible>String.IsEqual(ListItem.DBType,album)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,album)</visible>
 						<visible>String.IsEmpty(Control.GetLabel(15505)) + Control.IsVisible(15505)</visible>
 						<include content="InfoList">
 							<param name="list_id" value="43000" />
@@ -1846,7 +1846,7 @@
 					<control type="group">
 						<description>Genre</description>
 						<width>537</width>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album)</visible>
 						<visible>!ListItem.IsParentFolder</visible>
 						<control type="label">
 							<description>Genre</description>
@@ -1900,7 +1900,7 @@
 							<height>100</height>
 							<font>font36_title</font>
 							<label>$VAR[TitleAndYearVar]</label>
-							<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo)</visible>
 							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
 						<control type="textbox">
@@ -1909,7 +1909,7 @@
 							<height>100</height>
 							<font>font36_title</font>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(albums)]</visible>
+							<visible>![String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo) | String.IsEqual(ListItem.dbtype,album)]</visible>
 							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
 						<control type="textbox">
@@ -1918,7 +1918,7 @@
 							<height>100</height>
 							<font>font36_title</font>
 							<label>$INFO[ListItem.Label] $VAR[ListItemYearLabelVar]</label>
-							<visible>Container.Content(albums)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,album)</visible>
 							<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
 					</control>
@@ -1928,7 +1928,7 @@
 						<visible>!ListItem.IsParentFolder</visible>
 						<control type="group">
 							<visible>!ListItem.IsCollection</visible>
-							<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo)</visible>
 							<control type="textbox" id="16500">
 								<width>537</width>
 								<bottom>100</bottom>
@@ -1975,7 +1975,7 @@
 						</control>
 						<control type="group">
 							<visible>ListItem.IsCollection</visible>
-							<visible>Container.Content(movies) | Container.Content(sets)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set)</visible>
 							<control type="textbox" id="16502">
 								<width>537</width>
 								<bottom>424</bottom>
@@ -2017,14 +2017,14 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Container.Content(artists) | Container.Content(albums)</visible>
+							<visible>String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album)</visible>
 							<control type="textbox" id="16504">
 								<width>537</width>
 								<bottom>422</bottom>
 								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
 								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-								<visible>Container.Content(artists)</visible>
+								<visible>String.IsEqual(ListItem.dbtype,artist)</visible>
 							</control>
 							<control type="textbox" id="16504">
 								<width>537</width>
@@ -2032,7 +2032,7 @@
 								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
 								<visible>String.IsEqual(Skin.Font, Arial)</visible>
-								<visible>Container.Content(artists)</visible>
+								<visible>String.IsEqual(ListItem.dbtype,artist)</visible>
 							</control>
 							<control type="textbox" id="16505">
 								<width>537</width>
@@ -2040,7 +2040,7 @@
 								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
 								<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-								<visible>Container.Content(albums)</visible>
+								<visible>String.IsEqual(ListItem.dbtype,album)</visible>
 							</control>
 							<control type="textbox" id="16505">
 								<width>537</width>
@@ -2048,7 +2048,7 @@
 								<autoscroll time="5000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(autoscroll)</autoscroll>
 								<label>$VAR[ListBoxInfoVar]</label>
 								<visible>String.IsEqual(Skin.Font, Arial)</visible>
-								<visible>Container.Content(albums)</visible>
+								<visible>String.IsEqual(ListItem.dbtype,album)</visible>
 							</control>
 							<control type="textbox">
 								<description>No Content</description>
@@ -2230,7 +2230,7 @@
 						<description>List Albums in Artist</description>
 						<top>690</top>
 						<visible>!String.IsEmpty(ListItem.DBID)</visible>
-						<visible>String.IsEqual(ListItem.DBType,artist)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,artist)</visible>
 						<control type="group">
 							<description>List Albums in Artist Text</description>
 							<visible>!Skin.HasSetting(hide_albums_text)</visible>
@@ -2263,7 +2263,7 @@
 						<description>List Songs in Albums</description>
 						<top>240</top>
 						<visible>!String.IsEmpty(ListItem.DBID)</visible>
-						<visible>String.IsEqual(ListItem.DBType,album)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,album)</visible>
 						<visible>String.IsEmpty(Control.GetLabel(16505)) + Control.IsVisible(16505)</visible>
 						<include content="InfoList">
 							<param name="list_id" value="43000" />
@@ -2278,7 +2278,7 @@
 						<description>List Movies in Set</description>
 						<top>690</top>
 						<visible>ListItem.IsCollection</visible>
-						<visible>Container.Content(movies) | Container.Content(sets)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set)</visible>
 						<visible>!ListItem.IsParentFolder</visible>
 						<control type="group">
 							<description>List Movies in Set Text</description>
@@ -2313,13 +2313,13 @@
 						<texture background="true">$VAR[LibraryBannerVar]</texture>
 						<bordertexture>colors/white.png</bordertexture>
 						<bordersize>1</bordersize>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album)</visible>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="group">
 						<description>Genre</description>
 						<width>537</width>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)</visible>
+						<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album)</visible>
 						<visible>!ListItem.IsParentFolder</visible>
 						<control type="label">
 							<description>Genre</description>

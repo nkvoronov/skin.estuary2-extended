@@ -92,6 +92,102 @@
 			</control>
 		</control>
 	</include>
+	<include name="CommonAlphabet">
+		<control type="button" id="8000">
+			<left>-10000</left>
+			<width>10</width>
+			<height>1</height>
+			<onfocus>SetFocus(8001,0)</onfocus>
+			<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)</visible>
+		</control>
+		<control type="group">
+			<animation type="Conditional" reversible="false" condition="[Control.HasFocus(8001) | Control.HasFocus(8101)]">
+				<effect type="zoom" start="80" end="100" center="50%,50%" delay="160" tween="back" time="240" />
+				<effect type="fade" delay="160" end="100" time="240" />
+				<effect type="slide" start="0,-48" end="0" center="auto" time="0" />
+			</animation>
+			<animation type="Conditional" reversible="false" condition="![Control.HasFocus(8001) | Control.HasFocus(8101)]">
+				<effect type="zoom" start="100" end="80" center="50%,50%" easing="in" tween="back" time="240" />
+				<effect type="fade" start="100" end="0" time="240" />
+				<effect type="slide" start="0" end="-5000" time="0" />
+			</animation>
+			<control type="group">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<height>480</height>
+				<width>905</width>
+				<include content="DialogBackgroundCommons">
+					<param name="width" value="905" />
+					<param name="height" value="480" />
+					<param name="header_label" value="$LOCALIZE[40326]" />
+					<param name="header_id" value="1" />
+				</include>
+				<control type="panel" id="8001">
+					<orientation>vertical</orientation>
+					<left>30</left>
+					<right>0</right>
+					<top>100</top>
+					<bottom>100</bottom>
+					<onright>8001</onright>
+					<onleft>8001</onleft>
+					<onup>8101</onup>
+					<ondown>8101</ondown>
+					<onback>50</onback>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemlayout width="95" height="95">
+						<control type="group">
+							<bottom>10</bottom>
+							<right>10</right>
+							<control type="label">
+								<aligny>center</aligny>
+								<align>center</align>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font45</font>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="95" height="95">
+						<control type="group">
+							<bottom>10</bottom>
+							<right>10</right>
+							<control type="image">
+								<left>-20</left>
+								<top>-20</top>
+								<width>125</width>
+								<height>125</height>
+								<texture colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texture>
+							</control>
+							<control type="label">
+								<aligny>center</aligny>
+								<align>center</align>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font45</font>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>plugin://script.skin.helper.service/?action=alphabet2&amp;reload=$INFO[Container.NumItems]</content>
+				</control>
+				<control type="group">
+					<left>295</left>
+					<control type="button" id="8101">
+						<bottom>0</bottom>
+						<width>315</width>
+						<height>100</height>
+						<onup>8001</onup>
+						<ondown>8001</ondown>
+						<onback>50</onback>
+						<label>$LOCALIZE[15067]</label>
+						<font>font25_title</font>
+						<align>center</align>
+						<textoffsetx>30</textoffsetx>
+						<onclick>SetFocus(50)</onclick>
+						<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+						<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
 	<include name="HiddenObject">
 		<left>-3000</left>
 		<top>-3000</top>
