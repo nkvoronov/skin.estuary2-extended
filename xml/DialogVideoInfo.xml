@@ -30,7 +30,7 @@
 					<param name="cd_art_size_overlay" value="302" />
 				</include>
 				<control type="group">
-					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
+					<visible>String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,video)</visible>
 					<visible>!String.IsEmpty(ListItem.Thumb) + !String.IsEqual(ListItem.Thumb,ListItem.Art(poster))</visible>
 					<control type="image">
 						<left>4</left>
@@ -52,7 +52,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
+					<visible>String.IsEqual(ListItem.dbtype,musicvideo)</visible>
 					<control type="image">
 						<left>4</left>
 						<top>4</top>
@@ -210,7 +210,7 @@
 						<param name="control_id" value="150" />
 						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]" />
 						<param name="altlabel" value="$LOCALIZE[515]: $INFO[ListItem.Genre]" />
-						<param name="visible" value="!String.IsEmpty(ListItem.Genre) + String.IsEqual(ListItem.DBType,movie)" />
+						<param name="visible" value="!String.IsEmpty(ListItem.Genre) + String.IsEqual(ListItem.dbtype,movie)" />
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="152" />
@@ -234,7 +234,7 @@
 						<param name="control_id" value="155" />
 						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[31048]: [/COLOR]$INFO[ListItem.Season,, $LOCALIZE[36905]]$INFO[ListItem.Episode, (, $LOCALIZE[20453])]" />
 						<param name="altlabel" value="$LOCALIZE[31048]: $INFO[ListItem.Season,, $LOCALIZE[36905]]$INFO[ListItem.Episode, (, $LOCALIZE[20453])]" />
-						<param name="visible" value="!String.IsEmpty(ListItem.Season) + !String.IsEqual(ListItem.DBType,episode)" />
+						<param name="visible" value="!String.IsEmpty(ListItem.Season) + !String.IsEqual(ListItem.dbtype,episode)" />
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="156" />
@@ -433,7 +433,7 @@
 						<param name="id" value="8" />
 						<param name="icon_on" value="icons/filemanager.png" />
 						<param name="icon_off" value="icons/infodialogs/play.png" />
-						<param name="selected" value="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)" />
+						<param name="selected" value="String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season)" />
 						<param name="label" value="$VAR[VideoInfoPlayButtonLabelVar]" />
 					</include>
 					<include content="InfoDialogButton">
@@ -448,7 +448,7 @@
 						<param name="label" value="$LOCALIZE[31090]" />
 						<param name="onclick_1" value="Action(close)" />
 						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + String.IsEqual(ListItem.dbtype,movie) + !Control.IsVisible(11)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="441" />
@@ -456,7 +456,7 @@
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 						<param name="onclick_2" value="RunScript(script.cinemavision,experience)" />
 						<param name="label" value="$LOCALIZE[31003]" />
-						<param name="visible" value="System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]" />
+						<param name="visible" value="System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode)]" />
 					</include>
 					<control type="group" id="400">
 						<width>262</width>
@@ -499,7 +499,7 @@
 						<param name="icon" value="icons/infodialogs/info.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
 						<param name="onclick_1" value="RunScript(script.extendedinfo,info=openinfodialog)" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]" />
+						<param name="visible" value="System.hasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode)]" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="102" />
@@ -533,28 +533,28 @@
 						<param name="icon" value="icons/infodialogs/install.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader.ex, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])" />
-						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + Container.Content(movies)" />
+						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + String.IsEqual(ListItem.dbtype,movie)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="105" />
 						<param name="icon" value="icons/infodialogs/install.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader.ex, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])" />
-						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + Container.Content(tvshows)" />
+						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + String.IsEqual(ListItem.dbtype,tvshow)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="106" />
 						<param name="icon" value="icons/infodialogs/install.png" />
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader.ex, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])" />
-						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + Container.Content(musicvideos)" />
+						<param name="visible" value="System.HasAddon(script.artwork.downloader.ex) + String.IsEqual(ListItem.dbtype,musicvideo)" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="107" />
 						<param name="icon" value="icons/infodialogs/cinema.png" />
 						<param name="label" value="$LOCALIZE[44121]" />
 						<param name="onclick_1" value="RunScript(script.tvtunes.ex,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])" />
-						<param name="visible" value="System.HasAddon(script.tvtunes.ex) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)] + String.IsEmpty(Window(movieinformation).Property(TvTunes_HideVideoInfoButton))" />
+						<param name="visible" value="System.HasAddon(script.tvtunes.ex) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo)] + String.IsEmpty(Window(movieinformation).Property(TvTunes_HideVideoInfoButton))" />
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="6" />

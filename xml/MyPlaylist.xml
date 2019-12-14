@@ -6,7 +6,9 @@
 	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundVideosVar],Home)</onload>
 	<views>50</views>
 	<controls>
-		<include>DefaultBackground</include>
+		<include content="DefaultBackground">
+			<param name="fanart_media" value="$VAR[MediaFanartVar]" />
+		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group">
@@ -30,7 +32,7 @@
 					<focusedlayout height="list_item_height">
 						<control type="image">
 							<left>0</left>
-							<right>0</right>
+							<right>27</right>
 							<bottom>0</bottom>
 							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(50)</visible>
@@ -73,7 +75,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$VAR[PlaylistLabel2Var]</label>
-							<textcolor>$VAR[GreyColorVar]</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 							<shadowcolor>$VAR[TextShadowColorVar]</shadowcolor>
 						</control>
 					</itemlayout>
@@ -152,6 +154,17 @@
 			<param name="breadcrumbs_label" value="$LOCALIZE[31066]" />
 			<param name="sublabel">$INFO[Container.TotalTime,, - ] $INFO[Playlist.Position(music),, / ]$INFO[Playlist.Length(music)]</param>
 		</include>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<visible>!Skin.HasSetting(hide_logo_library)</visible>
+			<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
+			<control type="image">
+				<top>0</top>
+				<height>140</height>
+				<texture>$VAR[LibraryClearLogoVar]</texture>
+				<aspectratio aligny="center" align="center">keep</aspectratio>
+			</control>
+		</control>
 		<include>BottomBar</include>
 		<control type="group">
 			<depth>DepthBars</depth>
