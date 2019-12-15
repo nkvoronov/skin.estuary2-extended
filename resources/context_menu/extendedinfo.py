@@ -4,7 +4,6 @@ import xbmc
 import xbmcgui
 import sys
 
-
 def main():
     info = sys.listitem.getVideoInfoTag()
     dbid = info.getDbId()
