@@ -454,6 +454,7 @@
 	</include>
 	<include name="Widget-CategoryLabel">
 		<param name="visible">true</param>
+		<param name="small_cat">false</param>
 		<param name="label_focus"></param>
 		<definition>
 			<control type="group" id="$PARAM[list_id]2">
@@ -477,27 +478,53 @@
 					<label>$PARAM[label]</label>
 					<font>font25_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
-					<visible>Skin.HasSetting(hide_widget_labels)</visible>
+					<visible>Skin.HasSetting(hide_widget_labels) | $PARAM[small_cat]</visible>
 				</control>
-				<control type="label">
-					<left>22</left>
-					<top>0</top>
-					<right>2</right>
-					<height>90</height>
-					<label>$PARAM[label]</label>
-					<font>font25_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
-					<visible>!Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(hide_widget_labels)</visible>
+				<control type="group">
+					<visible>!Skin.HasSetting(hide_widget_labels)</visible>
+					<control type="label">
+						<left>22</left>
+						<top>0</top>
+						<right>2</right>
+						<height>90</height>
+						<label>$PARAM[label]$PARAM[label_focus]</label>
+						<font>font25_title</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+					<control type="label">
+						<left>22</left>
+						<top>0</top>
+						<right>2</right>
+						<height>90</height>
+						<label>$PARAM[label]</label>
+						<font>font25_title</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>!Control.HasFocus($PARAM[list_id])</visible>
+					</control>
 				</control>
-				<control type="label">
-					<left>22</left>
-					<top>0</top>
-					<right>2</right>
-					<height>90</height>
-					<label>$PARAM[label]$PARAM[label_focus]</label>
-					<font>font25_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
-					<visible>Control.HasFocus($PARAM[list_id]) + !Skin.HasSetting(hide_widget_labels)</visible>
+				<control type="group">
+					<visible>$PARAM[small_cat]</visible>
+					<control type="label">
+						<left>22</left>
+						<top>0</top>
+						<right>2</right>
+						<height>90</height>
+						<label>$PARAM[label]$PARAM[label_focus]</label>
+						<font>font25_title</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+					<control type="label">
+						<left>22</left>
+						<top>0</top>
+						<right>2</right>
+						<height>90</height>
+						<label>$PARAM[label]</label>
+						<font>font25_title</font>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>!Control.HasFocus($PARAM[list_id])</visible>
+					</control>
 				</control>
 			</control>
 		</definition>
@@ -566,6 +593,7 @@
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="label_focus">$PARAM[widget_header_focus]</param>
+				<param name="small_cat">Skin.HasSetting(use_smaller_categories)</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
