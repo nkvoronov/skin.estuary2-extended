@@ -34,7 +34,7 @@
 						<control type="group">
 							<top>110</top>
 							<include content="ThumbLayout">
-								<param name="main_label" value="$INFO[ListItem.Property(viewcount),, $ADDON[script.extendedinfo 32061]]" />
+								<param name="main_label" value="$VAR[YoutubeLabelsVar]" />
 								<param name="sub_label" value="$INFO[ListItem.label]" />
 								<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Premiered][/COLOR]" />
 							</include>
@@ -48,7 +48,7 @@
 							<top>110</top>
 							<include content="ThumbLayout">
 								<param name="focused" value="true" />
-								<param name="main_label" value="$INFO[ListItem.Property(viewcount),, $ADDON[script.extendedinfo 32061]]" />
+								<param name="main_label" value="$VAR[YoutubeLabelsVar]" />
 								<param name="sub_label" value="$INFO[ListItem.label]" />
 								<param name="thumb_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Premiered][/COLOR]" />
 							</include>
@@ -85,6 +85,7 @@
 				<visible>Control.IsVisible(500)</visible>
 			</control>
 			<include content="TopBar">
+				<param name="show_container" value="False" />
 				<param name="breadcrumbs_label" value="YouTube$INFO[Window.Property(Filter_Label), / ,]" />
 				<param name="sublabel" value="$INFO[Window.Property(Sort_Label),$LOCALIZE[31022]: ,  ∙  ]$INFO[Window.Property(TotalItems),$ADDON[script.extendedinfo 32124]: ]$INFO[Window.Property(CurrentPage),  ∙  $ADDON[script.extendedinfo 32125]: ]$INFO[Window.Property(TotalPages), / ]" />
 				<param name="width" value="100%" />
