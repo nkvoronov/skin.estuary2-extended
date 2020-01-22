@@ -309,6 +309,7 @@
 				<visible>Control.IsVisible(54)</visible>
 			</control>
 			<include content="TopBar">
+				<param name="show_container" value="False" />
 				<param name="breadcrumbs_label" value="TheMovieDB$INFO[Window.Property(Filter_Label), / ,]" />
 				<param name="sublabel" value="$INFO[Window.Property(Sort_Label),$LOCALIZE[31022]: ,  ∙  ]$INFO[Window.Property(TotalItems),$ADDON[script.extendedinfo 32124]: ]$INFO[Window.Property(CurrentPage),  ∙  $ADDON[script.extendedinfo 32125]: ]$INFO[Window.Property(TotalPages), / ]" />
 				<param name="width" value="100%" />

@@ -70,9 +70,13 @@
 	</variable>
 	<variable name="SearchYoutubeFanartVar">
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$INFO[Window(Home).Property(infobackground)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEqual(Window.Property(type),channel)">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(thumb)) + !String.IsEqual(Window.Property(type),channel)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + String.IsEqual(Window.Property(Type),$LOCALIZE[19029])">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Thumb) + !String.IsEqual(Window.Property(Type),$LOCALIZE[19029])">$INFO[ListItem.Thumb]</value>
 		<value></value>
+	</variable>
+	<variable name="YoutubeLabelsVar">
+		<value condition="String.IsEqual(Window.Property(Type),$LOCALIZE[19029])">$INFO[ListItem.Property(itemcount),, $LOCALIZE[36913]]</value>
+		<value condition="!String.IsEqual(Window.Property(Type),$LOCALIZE[19029])">$INFO[ListItem.Property(viewcount),$ADDON[script.extendedinfo 32061] ,]$INFO[ListItem.Property(duration), - ,]</value>
 	</variable>
 	<variable name="AddonsFanartVar">
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Window(Home).Property(infobackground)]</value>
