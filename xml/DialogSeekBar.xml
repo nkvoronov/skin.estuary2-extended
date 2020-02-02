@@ -364,9 +364,21 @@
 						<top>-207</top>
 						<right>80</right>
 						<height>290</height>
-						<label fallback="10005">$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
+						<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
 						<align>left</align>
 						<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
+					</control>
+					<control type="textbox">
+						<left>443</left>
+						<top>-207</top>
+						<right>80</right>
+						<height>290</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<textcolor>white8</textcolor>
+						<label>$LOCALIZE[19055]</label>
+						<visible>String.IsEmpty(VideoPlayer.Plot)</visible>
 					</control>
 				</control>
 			</control>

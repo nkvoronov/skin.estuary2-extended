@@ -2472,6 +2472,7 @@
 				<width>640</width>
 				<height>365</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<font>font24_title</font>
 				<textcolor>white8</textcolor>
 				<label>$LOCALIZE[19055]</label>
