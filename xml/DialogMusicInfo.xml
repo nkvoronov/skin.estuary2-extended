@@ -415,6 +415,15 @@
 						<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
 					</control>
+					<control type="radiobutton" id="441">
+						<label>$LOCALIZE[21888]</label>
+						<include content="VideoInfoButtonsCommon">
+							<param name="icon" value="icons/infodialogs/info.png" />
+						</include>
+						<onclick>SetProperty(artist_discography,$INFO[ListItem.Artist],Home)</onclick>
+						<onclick>ActivateWindow(1300)</onclick>
+						<visible>System.hasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + String.IsEqual(ListItem.DBType,artist)</visible>
+					</control>
 					<include content="InfoDialogButton">
 						<param name="id" value="6" />
 						<param name="icon" value="icons/infodialogs/update.png" />

@@ -114,7 +114,7 @@
 	<variable name="MusicInfoTextboxVar">
 		<value condition="String.IsEqual(ListItem.DbType,song) + !String.IsEmpty(ListItem.Comment)">[COLOR $VAR[MainColorVar]][B]$LOCALIZE[569][/B][/COLOR][CR]$INFO[ListItem.Comment]</value>
 		<value condition="String.IsEqual(ListItem.DbType,album) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="String.IsEqual(ListItem.DbType,artist)">$VAR[MusicInfoTextArtistVar]</value>
+		<value condition="String.IsEqual(ListItem.DbType,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 	</variable>
 	<variable name="NowPlayingSublabelVar">
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
@@ -194,17 +194,14 @@
 		<value>$VAR[ListItemGenreLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDurationLabelVar]$VAR[ListItemPremieredLabelVar]</value>
 	</variable>
 	<variable name="ShiftRightTextBoxVar">
+		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="Window.IsActive(pictures)">$VAR[ListItemSizeLabelVar]$VAR[ListItemPictureApertureLabelVar]$VAR[ListItemPictureFocalLenLabelVar]$VAR[ListItemPictureExpTimeLabelVar]$VAR[ListItemDateLabelVar]</value>
-		<value condition="String.IsEqual(ListItem.DBType,artist)">$VAR[MusicInfoTextArtistVar]</value>
-		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="!ListItem.IsParentFolder">$VAR[PlotAndTagVar]</value>
 	</variable>
 	<variable name="PlotAndTagVar">
 		<value condition="!String.IsEmpty(ListItem.Plot)">[COLOR $VAR[MainColorVar]]$INFO[ListItem.Tagline,[I],[/I][CR]][/COLOR]$INFO[ListItem.Plot]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Plot))">$INFO[ListItem.Property(Plot)]</value>
-	</variable>
-	<variable name="MusicInfoTextArtistVar">
-		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 	</variable>
 	<variable name="FileBrowserSelectLabelVar">
 		<value condition="Control.IsVisible(450)">[COLOR $VAR[MainColorVar]]$INFO[Container(450).NumItems][/COLOR] $LOCALIZE[31036] - [COLOR $VAR[MainColorVar]]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR]</value>
@@ -225,8 +222,8 @@
 		<value condition="String.IsEqual(Container.FolderPath,addons://outdated/) + !String.IsEmpty(ListItem.Addonnews)">$INFO[ListItem.Addonnews]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonDescription]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="String.IsEqual(ListItem.DbType,artist) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,video)">$VAR[ListItemGenreLabelVar]$INFO[ListItem.Plot]</value>
-		<value condition="String.IsEqual(ListItem.DBType,artist)">$VAR[MusicInfoTextArtistVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$VAR[PlotAndTagVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Plot))">$INFO[ListItem.Property(Plot)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song)">$VAR[MusicTrackInfoVar]$VAR[ListItemArtistLabelVar]$VAR[ListItemAlbumLabelVar]$VAR[ListItemDiscNumberLabelVar]$VAR[ListItemYearLabel4Var]$VAR[ListItemGenreLabelVar]$VAR[ListItemDurationLabelVar]$VAR[ListItemPlaycountLabelVar]</value>

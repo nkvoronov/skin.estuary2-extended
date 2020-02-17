@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1300">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<depth>DepthOSD</depth>
+	<onunload>ClearProperty(artist_discography,Home)</onunload>
+	<controls>
+		<control type="group">
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<width>1540</width>
+			<height>858</height>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="1540" />
+				<param name="height" value="858" />
+				<param name="header_label" value="$LOCALIZE[21888] TheAudioDB" />
+				<param name="header_id" value="2" />
+			</include>
+			<include content="UpDownArrows">
+				<param name="container_id" value="450" />
+				<param name="posx" value="746" />
+				<param name="up_posy" value="-40" />
+				<param name="down_posy" value="876" />
+			</include>
+			<control type="scrollbar" id="60">
+				<right>0</right>
+				<top>70</top>
+				<width>12</width>
+				<bottom>0</bottom>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="panel" id="450">
+				<left>10</left>
+				<top>70</top>
+				<width>1600</width>
+				<bottom>0</bottom>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<preloaditems>2</preloaditems>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>vertical</orientation>
+				<visible>Integer.IsGreater(Container(450).NumItems,0) | Container(450).IsUpdating</visible>
+				<itemlayout width="300" height="380">
+					<control type="group">
+						<top>10</top>
+						<include content="SquareLayout">
+							<param name="img_fallback" value="DefaultAudio.png" />
+							<param name="img_ratio" value="keep" />
+							<param name="istwolabel" value="True" />
+							<param name="main_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.Year][/COLOR]" />
+							<param name="sub_label" value="$INFO[ListItem.Label]" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="300">
+					<control type="group">
+						<top>10</top>
+						<include content="SquareLayout">
+							<param name="focused" value="true" />
+							<param name="img_fallback" value="DefaultAudio.png" />
+							<param name="img_ratio" value="keep" />
+							<param name="istwolabel" value="True" />
+							<param name="main_label" value="$INFO[ListItem.Year]" />
+							<param name="sub_label" value="$INFO[ListItem.Label]" />
+						</include>
+					</control>
+				</focusedlayout>
+				<include content="Widget-Content">
+					<param name="content_target" value=""/>
+					<param name="content_path" value="plugin://script.extendedinfo?info=discography&amp;&amp;artistname=$INFO[Window(Home).Property(artist_discography)]"/>
+					<param name="content_sortby" value="year"/>
+					<param name="content_sortorder" value="ascending"/>
+					<param name="item_limit" value=""/>
+				</include>
+			</control>
+		</control>
+	</controls>
+</window>
+

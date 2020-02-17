@@ -37,12 +37,34 @@
 				<texture colordiffuse="$VAR[DialogTintColorVar]">colors/white.png</texture>
 			</control>
 			<control type="grouplist" id="996">
-				<description>grouplist for context buttons</description>
+				<description>Grouplist For Context Buttons</description>
 				<left>0</left>
 				<top>0</top>
 				<width>450</width>
 				<height max="780">auto</height>
 				<usecontrolcoords>true</usecontrolcoords>
+				<control type="button" id="3000">
+					<description>Watch It Later</description>
+					<left>0</left>
+					<height>65</height>
+					<align>center</align>
+					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+					<texturenofocus />
+					<label>$LOCALIZE[40323]</label>
+					<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
+					<visible>Skin.HasSetting(enable_watchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="button" id="3001">
+					<description>Extended Info</description>
+					<left>0</left>
+					<height>65</height>
+					<align>center</align>
+					<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
+					<texturenofocus />
+					<label>$LOCALIZE[31034]</label>
+					<onclick>RunScript(script.extendedinfo,info=openinfodialogmenu)</onclick>
+					<visible>System.HasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + !System.HasAddon(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)]</visible>
+				</control>
 			</control>
 			<include content="UpDownArrows">
 				<param name="container_id" value="996" />
@@ -54,7 +76,7 @@
 		<control type="button" id="1000">
 			<description>button template</description>
 			<left>0</left>
-			<top></top>
+			<top />
 			<width>450</width>
 			<height>65</height>
 			<align>center</align>
