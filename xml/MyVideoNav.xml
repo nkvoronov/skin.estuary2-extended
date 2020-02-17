@@ -46,6 +46,7 @@
 			</include>
 			<control type="group">
 				<centerleft>50%</centerleft>
+				<visible>!Container.Scrolling</visible>
 				<visible>!Skin.HasSetting(hide_logo_library)</visible>
 				<visible>!Player.HasMedia + !Window.IsVisible(extendedprogressdialog) + !ListItem.IsParentFolder + [!Window.IsActive(volumebar) | Player.Muted]</visible>
 				<control type="image">

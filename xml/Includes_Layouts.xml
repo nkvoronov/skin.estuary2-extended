@@ -1471,6 +1471,7 @@
 							</control>
 							<control type="textbox">
 								<description>No Content</description>
+								<top>-145</top>
 								<width>537</width>
 								<bottom>115</bottom>
 								<align>center</align>

@@ -23,22 +23,6 @@
 		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
 		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
 	</extension>
-	<extension point="kodi.context.item">
-		<menu id="kodi.core.main">
-			<item library="resources\context_menu\jumptoletter.py">
-				<label>$LOCALIZE[40326]</label>
-				<visible>String.IsEqual(Window(Home).Property(CurrentSkin),skin.estuary2-extended-s) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)] + !Window.IsVisible(Home)</visible>
-			</item>
-			<item library="resources\context_menu\watchitlater.py">
-				<label>$LOCALIZE[40323]</label>
-				<visible>String.IsEqual(Window(Home).Property(CurrentSkin),skin.estuary2-extended-s) + Skin.HasSetting(enable_watchitlater) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,song)]</visible>
-			</item>
-			<item library="resources\context_menu\extendedinfo.py">
-				<label>$LOCALIZE[31034]</label>
-				<visible>String.IsEqual(Window(Home).Property(CurrentSkin),skin.estuary2-extended-s) + System.HasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + !System.HasAddon(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)]</visible>
-			</item>
-		</menu>
-	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Estuary v2 Extended Shortcuts skin by phil65, Piers, YLLOW_DRAGON, Guilouz.</summary>
 		<summary lang="ru_RU">Обложка Estuary v2 Extended Shortcuts. Авторы: phil65, Piers, YLLOW_DRAGON, Guilouz.</summary>

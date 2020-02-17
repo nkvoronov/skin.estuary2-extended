@@ -593,7 +593,7 @@
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="label_focus">$PARAM[widget_header_focus]</param>
-				<param name="small_cat">Skin.HasSetting(use_smaller_categories)</param>
+				<param name="small_cat">$PARAM[small]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
