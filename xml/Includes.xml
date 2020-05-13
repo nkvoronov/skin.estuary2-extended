@@ -1815,6 +1815,7 @@
 		<param name="header">$LOCALIZE[33069]</param>
 		<param name="content">BackgroundsSelVal</param>
 		<param name="enable">true</param>
+		<param name="reload">false</param>
 		<definition>
 			<control type="button" id="$PARAM[control_id]">
 				<description>Select Background</description>
@@ -1825,6 +1826,7 @@
 				<onclick>SetProperty(dlg_content,$PARAM[content],Home)</onclick>
 				<onclick>SetProperty(dlg_property,$PARAM[property],Home)</onclick>
 				<onclick>ActivateWindow(1200)</onclick>
+				<onclick condition="$PARAM[reload]">SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onclick>
 				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
