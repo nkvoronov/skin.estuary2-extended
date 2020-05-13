@@ -727,8 +727,9 @@
 					<param name="control_id" value="513" />
 					<param name="label" value="$LOCALIZE[21417]" />
 					<param name="label2" value="$VAR[BackgroundSettingsNameVar]" />
-					<param name="property" value="$VAR[BackgroundSettingsVar]" />
+					<param name="property" value="background_settings" />
 					<param name="enable" value="Skin.HasSetting(separate_background)" />
+					<param name="reload" value="true" />
 				</include>
 				<include content="CustomSelectDialog">
 					<param name="control_id" value="514" />
