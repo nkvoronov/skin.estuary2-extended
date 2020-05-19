@@ -5,23 +5,13 @@
 		<param name="top">10</param>
 		<param name="width">50</param>
 		<param name="height">50</param>
-		<param name="focused">false</param>
-		<param name="focused2">false</param>
+		<param name="show_fallback">false</param>
 		<param name="img_fallback"></param>
 		<param name="img_source">$INFO[ListItem.Icon]</param>
 		<param name="img_ratio">keep</param>
 		<definition>
 			<control type="group">
 				<description>Picture Layout</description>
-				<control type="image">
-					<description>File Focus</description>
-					<left>0</left>
-					<top>0</top>
-					<right>0</right>
-					<bottom>0</bottom>
-					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
-					<visible>$PARAM[focused2]</visible>
-				</control>
 				<control type="image">
 					<description>File Icon Fallback</description>
 					<left>$PARAM[left]</left>
@@ -30,16 +20,7 @@
 					<height>$PARAM[height]</height>
 					<texture>$PARAM[img_fallback]</texture>
 					<aspectratio>$PARAM[img_ratio]</aspectratio>
-					<visible>$PARAM[focused]</visible>
-				</control>
-				<control type="image">
-					<description>File Icon 1</description>
-					<left>$PARAM[left]</left>
-					<top>$PARAM[top]</top>
-					<width>$PARAM[width]</width>
-					<height>$PARAM[height]</height>
-					<texture>$PARAM[img_source]</texture>
-					<aspectratio>$PARAM[img_ratio]</aspectratio>
+					<visible>$PARAM[show_fallback]</visible>
 				</control>
 				<control type="image">
 					<description>File Icon Focus</description>
@@ -47,9 +28,8 @@
 					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture>$PARAM[img_source]</texture>
+					<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
 					<aspectratio>$PARAM[img_ratio]</aspectratio>
-					<visible>$PARAM[focused]</visible>
 				</control>
 			</control>
 		</definition>
