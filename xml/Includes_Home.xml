@@ -177,7 +177,6 @@
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
 			<param name="content_sortorder" value="$PARAM[content_sortorder]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-			<param name="img_source" value="DefaultTVShows.png"/>
 			<param name="label" value="$INFO[ListItem.ChannelName]"/>
 			<param name="label2" value="$INFO[ListItem.Title]$INFO[ListItem.EpisodeName, (,)]"/>
 			<param name="visible" value="System.HasPVRAddon"/>
@@ -553,7 +552,6 @@
 			<param name="height" value="140" />
 			<param name="img_fallback" value="DefaultTVShows.png" />
 			<param name="img_source" value="$PARAM[icon]" />
-			<param name="focused" value="true" />
 		</include>
 		<control type="label">
 			<left>225</left>
@@ -592,7 +590,7 @@
 			<include content="Widget-CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="label_focus">$PARAM[widget_header_focus]</param>
-				<param name="small_cat">Skin.HasSetting(use_smaller_categories)</param>
+				<param name="small_cat">$PARAM[small]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
@@ -1213,10 +1211,19 @@
 						</include>
 						<control type="image">
 							<left>260</left>
-							<top>30</top>
+							<top>20</top>
 							<width>32</width>
 							<height>32</height>
 							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<visible>!ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>260</left>
+							<top>20</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>windows/pvr/record.png</texture>
+							<visible>ListItem.IsRecording</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -1247,10 +1254,19 @@
 						</include>
 						<control type="image">
 							<left>260</left>
-							<top>30</top>
+							<top>20</top>
 							<width>32</width>
 							<height>32</height>
 							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<visible>!ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>260</left>
+							<top>20</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>windows/pvr/record.png</texture>
+							<visible>ListItem.IsRecording</visible>
 						</control>
 					</control>
 				</focusedlayout>
@@ -1273,10 +1289,19 @@
 						</include>
 						<control type="image">
 							<left>260</left>
-							<top>32</top>
+							<top>20</top>
 							<width>32</width>
 							<height>32</height>
 							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<visible>!ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>260</left>
+							<top>20</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>windows/pvr/record.png</texture>
+							<visible>ListItem.IsRecording</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -1307,10 +1332,19 @@
 						</include>
 						<control type="image">
 							<left>260</left>
-							<top>32</top>
+							<top>20</top>
 							<width>32</width>
 							<height>32</height>
 							<texture colordiffuse="$VAR[MainColorVar]">$VAR[WallWatchedIconVar]</texture>
+							<visible>!ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>260</left>
+							<top>20</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>windows/pvr/record.png</texture>
+							<visible>ListItem.IsRecording</visible>
 						</control>
 					</control>
 				</focusedlayout>

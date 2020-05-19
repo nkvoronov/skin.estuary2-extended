@@ -5,7 +5,7 @@
 		<value condition="!String.IsEmpty(Container.ListItem.Property(FanartCode))">$VAR[WeatherFanartValueVar]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Property(AddonFanart))">$INFO[Container.ListItem.Property(AddonFanart)]</value>
-		<value condition="Container.Content(genres) + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
+		<!-- <value condition="Container.Content(genres) + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(MovieGenreFanart.ext)]</value> -->
 		<value></value>
 	</variable>
 	<variable name="HomeMenuTypeVar">
@@ -205,8 +205,6 @@
 		<value condition="String.IsEqual(ListItem.Label,телевизионный фильм) | String.IsEqual(ListItem.Label,Телевизионный фильм)">resource://resource.images.moviegenreicons.arctic.zephyr/mini-series.png</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.arctic.zephyr/western.png</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.arctic.zephyr/documentary.png</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.arctic.zephyr/adventure.png</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.arctic.zephyr/fantasy.png</value>
 		<value condition="String.IsEqual(ListItem.Label,science fiction) | String.IsEqual(ListItem.Label,Science Fiction)">resource://resource.images.moviegenreicons.arctic.zephyr/sci-fi.png</value>
 		<value>$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
 	</variable>
@@ -229,8 +227,6 @@
 		<value condition="String.IsEqual(ListItem.Label,телевизионный фильм) | String.IsEqual(ListItem.Label,Телевизионный фильм)">resource://resource.images.moviegenreicons.coloured/mini-series.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.coloured/western.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.coloured/documentary.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.coloured/adventure.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.coloured/fantasy.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,suspense) | String.IsEqual(ListItem.Label,Suspense)">resource://resource.images.moviegenreicons.coloured/thriller.jpg</value>
 		<value>$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.jpg]</value>
 	</variable>
@@ -253,8 +249,6 @@
 		<value condition="String.IsEqual(ListItem.Label,телевизионный фильм) | String.IsEqual(ListItem.Label,Телевизионный фильм)">resource://resource.images.moviegenreicons.coloured/mini-series.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.coloured/western.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.coloured/documentary.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.coloured/adventure.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.coloured/fantasy.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,suspense) | String.IsEqual(ListItem.Label,Suspense)">resource://resource.images.moviegenreicons.coloured/thriller.jpg</value>
 		<value>$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.jpg]</value>
 	</variable>
@@ -277,8 +271,6 @@
 		<value condition="String.IsEqual(ListItem.Label,телевизионный фильм) | String.IsEqual(ListItem.Label,Телевизионный фильм)">resource://resource.images.moviegenreicons.filmstrip/tv movie.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.filmstrip/western.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.filmstrip/documentary.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.filmstrip/adventure.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.filmstrip/fantasy.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,science fiction) | String.IsEqual(ListItem.Label,Science Fiction)">resource://resource.images.moviegenreicons.filmstrip/sci-fi.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,science-fiction) | String.IsEqual(ListItem.Label,Science-Fiction)">resource://resource.images.moviegenreicons.filmstrip/sci-fi.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,suspense) | String.IsEqual(ListItem.Label,Suspense)">resource://resource.images.moviegenreicons.filmstrip/thriller.jpg</value>
@@ -304,8 +296,6 @@
 		<value condition="String.IsEqual(ListItem.Label,телевизионный фильм) | String.IsEqual(ListItem.Label,Телевизионный фильм)">resource://resource.images.moviegenreicons.grey/tv movie.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.grey/western.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.grey/documentary.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.grey/adventure.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.grey/fantasy.jpg</value>
 		<value>$INFO[ListItem.Label,resource://resource.images.moviegenreicons.grey/,.jpg]</value>
 	</variable>
 	<variable name="IconGenrePosterRuVar">
@@ -325,8 +315,6 @@
 		<value condition="String.IsEqual(ListItem.Label,мультфильм) | String.IsEqual(ListItem.Label,Мультфильм)">resource://resource.images.moviegenreicons.poster/animation.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.poster/western.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.poster/documentary.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.poster/adventure.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.poster/fantasy.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,science fiction) | String.IsEqual(ListItem.Label,Science Fiction)">resource://resource.images.moviegenreicons.poster/sci-fi.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,science-fiction) | String.IsEqual(ListItem.Label,Science-Fiction)">resource://resource.images.moviegenreicons.poster/sci-fi.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,suspense) | String.IsEqual(ListItem.Label,Suspense)">resource://resource.images.moviegenreicons.poster/thriller.jpg</value>
@@ -351,8 +339,6 @@
 		<value condition="String.IsEqual(ListItem.Label,телевизионный фильм) | String.IsEqual(ListItem.Label,Телевизионный фильм)">resource://resource.images.moviegenreicons.white/default.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.white/western.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.white/documentary.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.white/abenteuer.jpg</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.white/fantasy.jpg</value>
 		<value condition="String.IsEqual(ListItem.Label,suspense) | String.IsEqual(ListItem.Label,Suspense)">resource://resource.images.moviegenreicons.white/thriller.jpg</value>
 		<value>$INFO[ListItem.Label,resource://resource.images.moviegenreicons.white/,.jpg]</value>
 	</variable>
@@ -374,8 +360,6 @@
 		<value condition="String.IsEqual(ListItem.Label,мультфильм) | String.IsEqual(ListItem.Label,Мультфильм)">resource://resource.images.moviegenreicons.transparent/disney.png</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.transparent/western.png</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.transparent/documentary.png</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.transparent/adventure.png</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.transparent/fantasy.png</value>
 		<value>$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
 	</variable>
 	<variable name="IconGenreXzenerFlatRuVar">
@@ -397,8 +381,6 @@
 		<value condition="String.IsEqual(ListItem.Label,телевизионный фильм) | String.IsEqual(ListItem.Label,Телевизионный фильм)">resource://resource.images.moviegenreicons.xzener-flat/television.png</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.xzener-flat/western.png</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.xzener-flat/documentary.png</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.xzener-flat/adventure.png</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.xzener-flat/fantasy.png</value>
 		<value condition="String.IsEqual(ListItem.Label,suspense) | String.IsEqual(ListItem.Label,Suspense)">resource://resource.images.moviegenreicons.xzener-flat/suspence.png</value>
 		<value>$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-flat/,.png]</value>
 	</variable>
@@ -421,8 +403,6 @@
 		<value condition="String.IsEqual(ListItem.Label,телевизионный фильм) | String.IsEqual(ListItem.Label,Телевизионный фильм)">resource://resource.images.moviegenreicons.xzener-reflection/tv movies.png</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.xzener-reflection/western.png</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.xzener-reflection/documentary.png</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.xzener-reflection/adventure.png</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.xzener-reflection/fantasy.png</value>
 		<value condition="String.IsEqual(ListItem.Label,suspense) | String.IsEqual(ListItem.Label,Suspense)">resource://resource.images.moviegenreicons.xzener-reflection/suspence.png</value>
 		<value>$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-reflection/,.png]</value>
 	</variable>
@@ -445,8 +425,6 @@
 		<value condition="String.IsEqual(ListItem.Label,телевизионный фильм) | String.IsEqual(ListItem.Label,Телевизионный фильм)">resource://resource.images.moviegenreicons.users/television.png</value>
 		<value condition="String.IsEqual(ListItem.Label,вестерн) | String.IsEqual(ListItem.Label,Вестерн)">resource://resource.images.moviegenreicons.users/western.png</value>
 		<value condition="String.IsEqual(ListItem.Label,документальный) | String.IsEqual(ListItem.Label,Документальный)">resource://resource.images.moviegenreicons.users/documentary.png</value>
-		<value condition="String.IsEqual(ListItem.Label,боевик и приключения) | String.IsEqual(ListItem.Label,Боевик и Приключения)">resource://resource.images.moviegenreicons.users/adventure.png</value>
-		<value condition="String.IsEqual(ListItem.Label,нф и фэнтези) | String.IsEqual(ListItem.Label,НФ и Фэнтези)">resource://resource.images.moviegenreicons.users/fantasy.png</value>
 		<value>$INFO[ListItem.Label,resource://resource.images.moviegenreicons.users/,.png]</value>
 	</variable>
 	<variable name="IconMusicGenreVar">
