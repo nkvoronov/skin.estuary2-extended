@@ -280,6 +280,7 @@
 				<include condition="!Skin.HasSetting(hide_mediaflags_home)" content="MediaFlags">
 					<param name="infolabel_prefix" value="Container." />
 					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
+					<param name="visible" value="String.StartsWith(Container.ListItem.FolderPath,videodb) | String.StartsWith(Container.ListItem.FolderPath,musicdb)" />
 				</include>
 				<control type="rss">
 					<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
