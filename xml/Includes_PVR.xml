@@ -191,7 +191,7 @@
 	<include name="PVRInfoPanel">
 		<control type="group">
 			<visible>!ListItem.IsFolder</visible>
-			<include content="IconLayout2">
+			<include content="IconLayoutTV">
 				<param name="top" value="135" />
 				<param name="left" value="630" />
 				<param name="width" value="200" />
@@ -327,7 +327,7 @@
 				<bottom>30</bottom>
 				<height>300</height>
 				<visible>$PARAM[visible]</visible>
-				<include content="IconLayout2">
+				<include content="IconLayoutTV">
 					<param name="top" value="10" />
 					<param name="left" value="30" />
 					<param name="width" value="290" />

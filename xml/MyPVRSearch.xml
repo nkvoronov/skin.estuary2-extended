@@ -42,7 +42,7 @@
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
 							<control type="group">
 								<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
-								<include content="IconLayout2">
+								<include content="IconLayoutTV">
 									<param name="top" value="10" />
 									<param name="left" value="25" />
 									<param name="width" value="80" />
@@ -93,7 +93,7 @@
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
 							<control type="group">
 								<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
-								<include content="IconLayout2">
+								<include content="IconLayoutTV">
 									<param name="top" value="10" />
 									<param name="left" value="25" />
 									<param name="width" value="80" />

@@ -332,8 +332,8 @@
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
 			<param name="content_sortorder" value="$PARAM[content_sortorder]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-			<param name="img_fallback" value="DefaultGenre.png"/>
 			<param name="img_source" value="$VAR[IconGenreVar]"/>
+			<param name="img_fallback" value="DefaultGenre.png"/>
 		</include>
 	</include>
 	<include name="Widget-MusicGenres">
@@ -345,8 +345,8 @@
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
 			<param name="content_sortorder" value="$PARAM[content_sortorder]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-			<param name="img_fallback" value="DefaultMusicGenres.png"/>
 			<param name="img_source" value="$VAR[IconMusicGenreVar]"/>
+			<param name="img_fallback" value="DefaultMusicGenres.png"/>
 		</include>
 	</include>
 	<include name="Widget-Studios">
@@ -358,8 +358,8 @@
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
 			<param name="content_sortorder" value="$PARAM[content_sortorder]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-			<param name="img_fallback" value="DefaultStudios.png"/>
 			<param name="img_source" value="$VAR[IconStudiosVar]"/>
+			<param name="img_fallback" value="DefaultStudios.png"/>
 		</include>
 	</include>
 	<include name="Widget-Country">
@@ -371,8 +371,8 @@
 			<param name="content_sortby" value="$PARAM[content_sortby]"/>
 			<param name="content_sortorder" value="$PARAM[content_sortorder]"/>
 			<param name="list_id" value="$PARAM[list_id]"/>
-			<param name="img_fallback" value="DefaultCountry.png"/>
 			<param name="img_source" value="$VAR[IconCountriesVar]"/>
+			<param name="img_fallback" value="DefaultCountry.png"/>
 		</include>
 	</include>
 	<include name="Widget-Other">
@@ -481,15 +481,27 @@
 				</control>
 				<control type="group">
 					<visible>!Skin.HasSetting(hide_widget_labels)</visible>
-					<control type="label">
+					<control type="grouplist">
+						<description>Double label</description>
+						<orientation>horizontal</orientation>
 						<left>22</left>
 						<top>0</top>
-						<right>2</right>
 						<height>90</height>
-						<label>$PARAM[label]$PARAM[label_focus]</label>
+						<width>1000</width>
+						<align>left</align>
+						<visible>Control.HasFocus($PARAM[list_id])</visible>
+						<control type="label">
+							<label>$PARAM[label]</label>
+							<font>font25_title</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<width>auto</width>
+						</control>
+						<control type="label">
+							<label>$PARAM[label_focus]</label>
 						<font>font25_title</font>
 						<shadowcolor>text_shadow</shadowcolor>
-						<visible>Control.HasFocus($PARAM[list_id])</visible>
+							<width>800</width>
+						</control>
 					</control>
 					<control type="label">
 						<left>22</left>
@@ -546,7 +558,7 @@
 			<height>225</height>
 			<texture border="21">dialogs/dialog-bg.png</texture>
 		</control>
-		<include content="IconLayout2">
+		<include content="IconLayoutTV">
 			<param name="top" value="122" />
 			<param name="left" value="55" />
 			<param name="width" value="140" />
@@ -614,10 +626,9 @@
 				<itemlayout width="310" height="340" condition="!$PARAM[small] + Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<left>70</left>
-						<include content="IconLayout">
+						<include content="IconLayoutCategories">
 							<param name="width" value="316" />
 							<param name="height" value="200" />
-							<param name="widget" value="true" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_height" value="70%" />
@@ -638,11 +649,10 @@
 						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
-						<include content="IconLayout">
+						<include content="IconLayoutCategories">
 							<param name="width" value="316" />
 							<param name="height" value="200" />
 							<param name="focused" value="true" />
-							<param name="widget" value="true" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_height" value="70%" />
@@ -656,10 +666,9 @@
 				<itemlayout width="310" height="320" condition="!$PARAM[small] + !Skin.HasSetting(hide_widget_labels)">
 					<control type="group">
 						<left>70</left>
-						<include content="IconLayout">
+						<include content="IconLayoutCategories">
 							<param name="width" value="316" />
 							<param name="height" value="180" />
-							<param name="widget" value="true" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_height" value="90%" />
@@ -679,11 +688,10 @@
 						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
-						<include content="IconLayout">
+						<include content="IconLayoutCategories">
 							<param name="width" value="316" />
 							<param name="height" value="180" />
 							<param name="focused" value="true" />
-							<param name="widget" value="true" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_height" value="90%" />
@@ -696,10 +704,9 @@
 				<itemlayout width="122" height="220" condition="$PARAM[small]">
 					<control type="group">
 						<left>70</left>
-						<include content="IconLayout">
+						<include content="IconLayoutCategories">
 							<param name="width" value="140" />
 							<param name="height" value="120" />
-							<param name="widget" value="true" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_height" value="90%" />
@@ -719,11 +726,10 @@
 						<animation type="Unfocus" condition="!Skin.HasSetting(no_animations)" reversible="false">
 							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="140,70" />
 						</animation>
-						<include content="IconLayout">
+						<include content="IconLayoutCategories">
 							<param name="width" value="140" />
 							<param name="height" value="120" />
 							<param name="focused" value="true" />
-							<param name="widget" value="true" />
 							<param name="img_fallback" value="$PARAM[img_fallback]" />
 							<param name="img_source" value="$PARAM[img_source]" />
 							<param name="img_height" value="90%" />

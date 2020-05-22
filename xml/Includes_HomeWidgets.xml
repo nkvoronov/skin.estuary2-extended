@@ -33,6 +33,8 @@
 			<param name="widget_header" value="$LOCALIZE[135]"/>
 			<param name="content_target" value="videos"/>
 			<param name="content_path" value="videodb://movies/genres/"/>
+			<param name="content_sortby" value="lastplayed"/>
+			<param name="content_sortorder" value="ascending"/>
 			<param name="list_id" value="$PARAM[control_id]600"/>
 		</include>
 		<include content="Widget-Movies" condition="Library.HasContent(movies)">
@@ -72,12 +74,16 @@
 			<param name="widget_header" value="$LOCALIZE[135]"/>
 			<param name="content_target" value="videos"/>
 			<param name="content_path" value="videodb://tvshows/genres/"/>
+			<param name="content_sortby" value="lastplayed"/>
+			<param name="content_sortorder" value="ascending"/>
 			<param name="list_id" value="$PARAM[control_id]500"/>
 		</include>
 		<include content="Widget-Studios" condition="Library.HasContent(tvshows)">
 			<param name="widget_header" value="$LOCALIZE[20388]"/>
 			<param name="content_target" value="videos"/>
 			<param name="content_path" value="videodb://tvshows/studios/"/>
+			<param name="content_sortby" value="lastplayed"/>
+			<param name="content_sortorder" value="ascending"/>
 			<param name="list_id" value="$PARAM[control_id]600"/>
 		</include>
 	</include>

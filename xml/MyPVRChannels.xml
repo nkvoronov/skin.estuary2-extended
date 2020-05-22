@@ -42,7 +42,7 @@
 							<top>10</top>
 							<width>80</width>
 							<height>70</height>
-							<include content="IconLayout2">
+							<include content="IconLayoutTV">
 								<param name="top" value="0" />
 								<param name="left" value="0" />
 								<param name="width" value="80" />
@@ -105,7 +105,7 @@
 							<top>10</top>
 							<width>80</width>
 							<height>70</height>
-							<include content="IconLayout2">
+							<include content="IconLayoutTV">
 								<param name="top" value="0" />
 								<param name="left" value="0" />
 								<param name="width" value="80" />
@@ -339,7 +339,7 @@
 								<top>25</top>
 								<width>80</width>
 								<height>70</height>
-								<include content="IconLayout2">
+								<include content="IconLayoutTV">
 									<param name="top" value="0" />
 									<param name="left" value="0" />
 									<param name="width" value="80" />
@@ -437,7 +437,7 @@
 									<top>25</top>
 									<width>80</width>
 									<height>70</height>
-									<include content="IconLayout2">
+									<include content="IconLayoutTV">
 										<param name="top" value="0" />
 										<param name="left" value="0" />
 										<param name="width" value="80" />
