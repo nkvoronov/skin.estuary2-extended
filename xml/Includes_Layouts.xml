@@ -79,20 +79,6 @@
 					<visible>$PARAM[focused]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-				<control type="group">
-					<description>File Other</description>
-					<control type="image">
-						<description>File Icon Std</description>
-						<centerleft>50%</centerleft>
-						<centertop>50%</centertop>
-						<left>8</left>
-						<right>8</right>
-						<top>8</top>
-						<height>$PARAM[img_height]</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>$PARAM[img_ratio]</aspectratio>
-						<bordersize>20</bordersize>
-					</control>
 					<control type="image">
 						<description>File Icon</description>
 						<centerleft>50%</centerleft>
@@ -104,20 +90,7 @@
 						<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
 						<aspectratio>$PARAM[img_ratio]</aspectratio>
 						<bordersize>20</bordersize>
-					</control>
-					<control type="image">
-						<description>File Icon Def</description>
-						<centerleft>50%</centerleft>
-						<centertop>50%</centertop>
-						<left>8</left>
-						<right>8</right>
-						<top>8</top>
-						<height>$PARAM[img_height]</height>
-						<texture background="true">$PARAM[img_source]</texture>
-						<aspectratio>$PARAM[img_ratio]</aspectratio>
-						<bordersize>20</bordersize>
-					</control>
-				</control>					
+				</control>
 				<control type="image">
 					<description>Background Name Item</description>
 					<centerleft>50%</centerleft>
@@ -207,157 +180,70 @@
 				<control type="group">
 					<description>File</description>
 					<visible>!ListItem.IsParentFolder</visible>
-					<control type="group">
-						<description>File Studios</description>
-						<visible>Container.Content(studios)</visible>
-						<control type="image">
-							<description>File Icon Studios 1</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="DefaultStudios.png">$VAR[IconStudiosVar]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<description>File Icon Studios 2</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true">$VAR[IconStudiosVar]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
+					<control type="image">
+						<description>File Icon Studios</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" fallback="DefaultStudios.png">$VAR[IconStudiosVar]</texture>
+						<aspectratio>$PARAM[img_ratio]</aspectratio>
+						<bordersize>20</bordersize>
+					<visible>Container.Content(studios)</visible>
 					</control>
-					<control type="group">
-						<description>File Countries</description>
+					<control type="image">
+						<description>File Icon Countries</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" fallback="DefaultCountry.png">$VAR[IconCountriesVar]</texture>
+						<aspectratio>$PARAM[img_ratio]</aspectratio>
+						<bordersize>20</bordersize>
 						<visible>Container.Content(countries)</visible>
-						<control type="image">
-							<description>File Icon Countries 1</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="DefaultCountry.png">$VAR[IconCountriesVar]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<description>File Icon Countries 2</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true">$VAR[IconCountriesVar]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
 					</control>
-					<control type="group">
-						<description>File Genres Video</description>
+					<control type="image">
+						<description>File Icon Genres Video</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" fallback="DefaultGenre.png">$VAR[IconGenreVar]</texture>
+						<aspectratio>$PARAM[img_ratio]</aspectratio>
+						<bordersize>20</bordersize>
 						<visible>Container.Content(genres) + Window.IsActive(videos)</visible>
-						<control type="image">
-							<description>File Icon Genres Video 1</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="DefaultGenre.png">$VAR[IconGenreVar]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<description>File Icon Genres Video 2</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true">$VAR[IconGenreVar]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
 					</control>
-					<control type="group">
-						<description>File Genres Music</description>
+					<control type="image">
+						<description>File Icon Genres Music</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" fallback="DefaultMusicGenres.png">$VAR[IconMusicGenreVar]</texture>
+						<aspectratio>$PARAM[img_ratio]</aspectratio>
+						<bordersize>20</bordersize>
 						<visible>Container.Content(genres) + !Window.IsActive(videos)</visible>
-						<control type="image">
-							<description>File Icon Genres Music 1</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="DefaultMusicGenres.png">$VAR[IconMusicGenreVar]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<description>File Icon Genres Music 2</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true">$VAR[IconMusicGenreVar]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
 					</control>
-					<control type="group">
+					<control type="image">
 						<description>File Other</description>
+						<centerleft>50%</centerleft>
+						<centertop>50%</centertop>
+						<left>8</left>
+						<right>8</right>
+						<top>8</top>
+						<height>$PARAM[img_height]</height>
+						<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
+						<aspectratio>$PARAM[img_ratio]</aspectratio>
+						<bordersize>20</bordersize>
 						<visible>![Container.Content(studios) | Container.Content(countries) | Container.Content(genres)]</visible>
-						<control type="image">
-							<description>File Icon Std</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<description>File Icon</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							<description>File Icon Def</description>
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<left>8</left>
-							<right>8</right>
-							<top>8</top>
-							<height>$PARAM[img_height]</height>
-							<texture background="true">$PARAM[img_source]</texture>
-							<aspectratio>$PARAM[img_ratio]</aspectratio>
-							<bordersize>20</bordersize>
-						</control>
 					</control>
 				</control>
 				<control type="image">
