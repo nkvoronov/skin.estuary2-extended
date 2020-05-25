@@ -6,7 +6,7 @@
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Property(AddonFanart))">$INFO[Container.ListItem.Property(AddonFanart)]</value>
 		<!-- MovieGenreFanart !!! -->
-		<!-- <value condition="Container.Content(genres) + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(MovieGenreFanart.ext)]</value> -->
+		<value condition="[ String.StartsWith(Container.ListItem.FolderPath,videodb://movies/genres/) | String.StartsWith(Container.ListItem.FolderPath,videodb://tvshows/genres/) ] + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$VAR[GenreFanartLabelRuVar]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
 		<value></value>
 	</variable>
 	<variable name="HomeMenuTypeVar">
