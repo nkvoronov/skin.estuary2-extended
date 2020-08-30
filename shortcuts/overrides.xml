@@ -302,12 +302,12 @@
 		</node>
 		<node label="19020" condition="PVR.HasTVChannels">
 			<shortcut label="19020" type="19020" icon="icons/sidemenu/livetv.png">ActivateWindow(tvchannels)</shortcut>
-			<shortcut label="19019" type="19020" icon="DefaultAddonPeripheral.png">ActivateWindow(tvchannels)</shortcut>
-			<shortcut label="19069" type="19020" icon="extras/pvr/epg.png">ActivateWindow(tvguide)</shortcut>
-			<shortcut label="19017" type="19020" icon="extras/pvr/recording.png">ActivateWindow(tvrecordings)</shortcut>
-			<shortcut label="19040" type="19020" icon="extras/pvr/timer.png">ActivateWindow(tvtimers)</shortcut>
-			<shortcut label="19138" type="19020" icon="extras/pvr/timer-rule.png">ActivateWindow(tvtimerrules)</shortcut>
-			<shortcut label="137" type="19020" icon="DefaultAddonsSearch.png">ActivateWindow(tvsearch)</shortcut>
+			<shortcut label="19019" type="19020" icon="DefaultPVRChannels.png">ActivateWindow(tvchannels)</shortcut>
+			<shortcut label="19069" type="19020" icon="DefaultPVRGuide.png">ActivateWindow(tvguide)</shortcut>
+			<shortcut label="19017" type="19020" icon="DefaultPVRRecordings.png">ActivateWindow(tvrecordings)</shortcut>
+			<shortcut label="19040" type="19020" icon="DefaultPVRTimers.png">ActivateWindow(tvtimers)</shortcut>
+			<shortcut label="19138" type="19020" icon="DefaultPVRTimerRules.png">ActivateWindow(tvtimerrules)</shortcut>
+			<shortcut label="137" type="19020" icon="DefaultPVRSearch.png">ActivateWindow(tvsearch)</shortcut>
 			<shortcut label="32066" type="19020" icon="icons/sidemenu/livetv.png">PlayPvrTV</shortcut>
 			<shortcut label="32068" type="19020" icon="icons/sidemenu/livetv.png">PlayPvr</shortcut>
 			<shortcut label="19020" type="10004" icon="icons/settings/livetv.png">ActivateWindow(pvrsettings)</shortcut>
@@ -317,12 +317,12 @@
 		</node>
 		<node label="19021" condition="PVR.HasRadioChannels">
 			<shortcut label="19021" type="19021" icon="icons/sidemenu/radio.png">ActivateWindow(radiochannels)</shortcut>
-			<shortcut label="19019" type="19021" icon="DefaultAddonPeripheral.png">ActivateWindow(radiochannels)</shortcut>
-			<shortcut label="19069" type="19021" icon="extras/pvr/epg.png">ActivateWindow(radioguide)</shortcut>
-			<shortcut label="19017" type="19021" icon="extras/pvr/recording.png">ActivateWindow(radiorecordings)</shortcut>
-			<shortcut label="19040" type="19021" icon="extras/pvr/timer.png">ActivateWindow(radiotimers)</shortcut>
-			<shortcut label="19138" type="19021" icon="extras/pvr/timer-rule.png">ActivateWindow(radiotimersrules)</shortcut>
-			<shortcut label="137" type="19021" icon="DefaultAddonsSearch.png">ActivateWindow(radiosearch)</shortcut>
+			<shortcut label="19019" type="19021" icon="DefaultPVRChannels.png">ActivateWindow(radiochannels)</shortcut>
+			<shortcut label="19069" type="19021" icon="DefaultPVRGuide.png">ActivateWindow(radioguide)</shortcut>
+			<shortcut label="19017" type="19021" icon="DefaultPVRRecordings.png">ActivateWindow(radiorecordings)</shortcut>
+			<shortcut label="19040" type="19021" icon="DefaultPVRTimers.png">ActivateWindow(radiotimers)</shortcut>
+			<shortcut label="19138" type="19021" icon="DefaultPVRTimerRules.png">ActivateWindow(radiotimersrules)</shortcut>
+			<shortcut label="137" type="19021" icon="DefaultPVRSearch.png">ActivateWindow(radiosearch)</shortcut>
 			<shortcut label="32067" type="19021" icon="icons/sidemenu/radio.png">PlayPvrRadio</shortcut>
 			<shortcut label="32068" type="19021" icon="icons/sidemenu/radio.png">PlayPvr</shortcut>
 			<shortcut label="19020" type="10004" icon="icons/settings/livetv.png">ActivateWindow(pvrsettings)</shortcut>
@@ -527,16 +527,16 @@
 			<shortcut label="20459" type="20389" icon="DefaultTags.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://musicvideos/tags/</shortcut>
 		</node>
 		<node label="19020" condition="PVR.HasTVChannels + String.IsEmpty(Window(home).Property(WidgetVisibility))">
-			<shortcut label="31016" type="19020" icon="DefaultAddonPeripheral.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
-			<shortcut label="31015" type="19020" icon="icons/pvr/recording.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
-			<shortcut label="19040" type="19020" icon="icons/pvr/timer.png" widget="Library" widgetType="tvtimer" widgetTarget="pvr">TVTimers</shortcut>
-			<shortcut label="43241" type="19020" icon="DefaultAddonPeripheral.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">CustomChannelsTV</shortcut>
+			<shortcut label="31016" type="19020" icon="DefaultPVRChannels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
+			<shortcut label="31015" type="19020" icon="DefaultPVRRecordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
+			<shortcut label="19040" type="19020" icon="DefaultPVRTimers.png" widget="Library" widgetType="tvtimer" widgetTarget="pvr">TVTimers</shortcut>
+			<shortcut label="43241" type="19020" icon="DefaultPVRChannels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">CustomChannelsTV</shortcut>
 		</node>
 		<node label="19021" condition="PVR.HasRadioChannels + String.IsEmpty(Window(home).Property(WidgetVisibility))">
-			<shortcut label="31018" type="19021" icon="DefaultAddonPeripheral.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
-			<shortcut label="31015" type="19021" icon="icons/pvr/recording.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
-			<shortcut label="19040" type="19021" icon="icons/pvr/timer.png" widget="Library" widgetType="radiotimer" widgetTarget="pvr">RadioTimers</shortcut>
-			<shortcut label="43242" type="19021" icon="DefaultAddonPeripheral.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
+			<shortcut label="31018" type="19021" icon="DefaultPVRChannels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
+			<shortcut label="31015" type="19021" icon="DefaultPVRRecordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
+			<shortcut label="19040" type="19021" icon="DefaultPVRTimers.png" widget="Library" widgetType="radiotimer" widgetTarget="pvr">RadioTimers</shortcut>
+			<shortcut label="43242" type="19021" icon="DefaultPVRChannels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
 		</node>
 		<node label="15016" condition="System.GetBool(gamesgeneral.enable) + String.IsEmpty(Window(home).Property(WidgetVisibility))">
 			<shortcut label="35049" type="15016" icon="DefaultAddonGame.png" widget="Library" widgetType="addon" widgetTarget="games">addons://sources/game/</shortcut>

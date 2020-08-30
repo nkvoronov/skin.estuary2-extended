@@ -3,37 +3,37 @@
 	<shortcut>
 		<label>19019</label>
 		<label2>19021</label2>
-		<icon>DefaultAddonPeripheral.png</icon>
+		<icon>DefaultPVRChannels.png</icon>
 		<action>ActivateWindow(radiochannels)</action>
 	</shortcut>
 	<shortcut>
 		<label>19069</label>
 		<label2>19021</label2>
-		<icon>extras/pvr/epg.png</icon>
+		<icon>DefaultPVRGuide.png</icon>
 		<action>ActivateWindow(radioguide)</action>
 	</shortcut>
 	<shortcut>
 		<label>19017</label>
 		<label2>19021</label2>
-		<icon>extras/pvr/recording.png</icon>
+		<icon>DefaultPVRRecordings.png</icon>
 		<action>ActivateWindow(radiorecordings)</action>
 	</shortcut>
 	<shortcut>
 		<label>19040</label>
 		<label2>19021</label2>
-		<icon>extras/pvr/timer.png</icon>
+		<icon>DefaultPVRTimers.png</icon>
 		<action>ActivateWindow(radiotimers)</action>
 	</shortcut>
 	<shortcut>
 		<label>19138</label>
 		<label2>19021</label2>
-		<icon>extras/pvr/timer-rule.png</icon>
+		<icon>DefaultPVRTimerRules.png</icon>
 		<action>ActivateWindow(radiotimerrules)</action>
 	</shortcut>
 	<shortcut>
 		<label>137</label>
 		<label2>19021</label2>
-		<icon>DefaultAddonsSearch.png</icon>
+		<icon>DefaultPVRSearch.png</icon>
 		<action>ActivateWindow(radiosearch)</action>
 	</shortcut>
 </shortcuts>

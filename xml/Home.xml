@@ -333,34 +333,18 @@
 					<visible>!Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)</visible>
 					<control type="image">
 						<aspectratio>keep</aspectratio>
-						<width>56</width>
 						<height>56</height>
-						<texture colordiffuse="$VAR[MainColorVar]">extras/kodi/logo.png</texture>
-					</control>
-					<control type="image">
-						<left>40</left>
-						<top>10</top>
-						<aspectratio>keep</aspectratio>
 						<width>192</width>
-						<height>36</height>
-						<texture>extras/kodi/logo-text.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">special://xbmc/media/vendor_logo.png</texture>
 					</control>
 				</control>
 				<control type="group">
 					<visible>Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu) + [ Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
 					<control type="image">
 						<aspectratio>keep</aspectratio>
-						<width>56</width>
 						<height>56</height>
-						<texture colordiffuse="$VAR[MainColorVar]">extras/kodi/logo.png</texture>
-					</control>
-					<control type="image">
-						<left>40</left>
-						<top>10</top>
-						<aspectratio>keep</aspectratio>
 						<width>192</width>
-						<height>36</height>
-						<texture>extras/kodi/logo-text.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">special://xbmc/media/vendor_logo.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -370,7 +354,7 @@
 						<aspectratio>keep</aspectratio>
 						<width>56</width>
 						<height>56</height>
-						<texture colordiffuse="$VAR[MainColorVar]">extras/kodi/logo.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">special://xbmc/media/vendor_icon.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -380,7 +364,7 @@
 						<aspectratio>keep</aspectratio>
 						<width>56</width>
 						<height>56</height>
-						<texture colordiffuse="$VAR[MainColorVar]">extras/kodi/logo.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">special://xbmc/media/vendor_icon.png</texture>
 					</control>
 				</control>
 			</control>

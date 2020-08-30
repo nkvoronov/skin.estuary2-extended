@@ -1174,9 +1174,9 @@
 				<texturenofocus />
 				<label />
 				<textureradioofffocus colordiffuse="white7">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="white7">extras/kodi/logo.png</textureradiooffnofocus>
+				<textureradiooffnofocus colordiffuse="white7">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
 				<textureradioonfocus colordiffuse="white7">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="white7">extras/kodi/logo.png</textureradioonnofocus>
+				<textureradioonnofocus colordiffuse="white7">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
 				<onclick>Action(close)</onclick>
 				<visible>!Skin.HasSetting(touchmode)</visible>
 			</control>

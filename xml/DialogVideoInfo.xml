@@ -445,7 +445,7 @@
 					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="440" />
-						<param name="icon" value="icons/infodialogs/trailer_search.png" />
+						<param name="icon" value="extras/infodialogs/trailer_search.png" />
 						<param name="label" value="$LOCALIZE[31090]" />
 						<param name="onclick_1" value="Action(close)" />
 						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title] $INFO[ListItem.Year])" />
