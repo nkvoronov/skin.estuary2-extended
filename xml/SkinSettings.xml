@@ -208,7 +208,7 @@
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40318]</label>
 					<onclick>Skin.ToggleSetting(use_smaller_categories)</onclick>
-					<selected>Skin.HasSetting(use_smaller_categories)</selected>
+					<selected>!Skin.HasSetting(use_smaller_categories)</selected>
 				</control>
 				<control type="image" id="208">
 					<description>Separator Image</description>
@@ -367,6 +367,7 @@
 					<label>$LOCALIZE[44141]</label>
 					<onclick>Skin.ToggleSetting(hide_logo_search)</onclick>
 					<selected>!Skin.HasSetting(hide_logo_search)</selected>
+					<enable>Skin.HasSetting(enable_globalsearch)</enable>
 				</control>
 				<control type="image" id="232">
 					<description>Separator Image</description>
@@ -1336,7 +1337,7 @@
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">
-						<label>$LOCALIZE[31061]</label>
+						<label>$LOCALIZE[41999]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="4">

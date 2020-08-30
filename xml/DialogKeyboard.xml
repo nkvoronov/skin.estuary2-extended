@@ -67,6 +67,7 @@
 				<width>1920</width>
 				<animation effect="slide" end="-60,0" time="200" tween="sine" easing="inout" condition="Control.IsVisible(110) | Control.IsVisible(130) | Control.IsVisible(150) | Control.IsVisible(170)">conditional</animation>
 				<animation effect="slide" end="-110,0" time="200" tween="sine" easing="inout" condition="Control.IsVisible(111) | Control.IsVisible(131) | Control.IsVisible(151) | Control.IsVisible(171)">conditional</animation>
+				<!-- 1st row -->
 				<control type="grouplist">
 					<left>320</left>
 					<itemgap>-30</itemgap>
@@ -164,6 +165,7 @@
 						<include>KeyboardButton</include>
 					</control>
 				</control>
+				<!-- 2nd row -->
 				<control type="grouplist">
 					<left>320</left>
 					<top>90</top>
@@ -249,6 +251,7 @@
 						<include>KeyboardButton</include>
 					</control>
 				</control>
+				<!-- 3rd row -->
 				<control type="grouplist">
 					<left>320</left>
 					<top>180</top>
@@ -334,6 +337,7 @@
 						<include>KeyboardButton</include>
 					</control>
 				</control>
+				<!-- 4th row -->
 				<control type="grouplist">
 					<left>320</left>
 					<top>270</top>
@@ -419,6 +423,7 @@
 						<include>KeyboardButton</include>
 					</control>
 				</control>
+				<!-- 5th row -->
 				<control type="grouplist">
 					<left>320</left>
 					<top>360</top>

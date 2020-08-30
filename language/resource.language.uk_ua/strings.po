@@ -240,7 +240,7 @@ msgctxt "#31060"
 msgid "Select + Start"
 msgstr ""
 msgctxt "#31061"
-msgid "Main menu"
+msgid "Main menu items"
 msgstr "Головне меню"
 
 msgctxt "#31062"
@@ -607,6 +607,10 @@ msgid "Animate background"
 msgstr "Анімований фон"
 
 # EXTENDED ADDED VALUE
+
+msgctxt "#41999"
+msgid "Main menu"
+msgstr "Главне меню"
 
 msgctxt "#42000"
 msgid "Use custom global background"
