@@ -335,7 +335,7 @@
 						<aspectratio>keep</aspectratio>
 						<width>56</width>
 						<height>56</height>
-						<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">extras/kodi/logo.png</texture>
 					</control>
 					<control type="image">
 						<left>40</left>
@@ -343,7 +343,7 @@
 						<aspectratio>keep</aspectratio>
 						<width>192</width>
 						<height>36</height>
-						<texture>icons/logo-text.png</texture>
+						<texture>extras/kodi/logo-text.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -352,7 +352,7 @@
 						<aspectratio>keep</aspectratio>
 						<width>56</width>
 						<height>56</height>
-						<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">extras/kodi/logo.png</texture>
 					</control>
 					<control type="image">
 						<left>40</left>
@@ -360,7 +360,7 @@
 						<aspectratio>keep</aspectratio>
 						<width>192</width>
 						<height>36</height>
-						<texture>icons/logo-text.png</texture>
+						<texture>extras/kodi/logo-text.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -370,7 +370,7 @@
 						<aspectratio>keep</aspectratio>
 						<width>56</width>
 						<height>56</height>
-						<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">extras/kodi/logo.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -380,7 +380,7 @@
 						<aspectratio>keep</aspectratio>
 						<width>56</width>
 						<height>56</height>
-						<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">extras/kodi/logo.png</texture>
 					</control>
 				</control>
 			</control>

@@ -40,7 +40,7 @@
 							<top>0</top>
 							<width>860</width>
 							<height>238</height>
-							<texture colordiffuse="$VAR[BorderMediaColorVar]">dialogs/border-banner.png</texture>
+							<texture colordiffuse="$VAR[BorderMediaColorVar]">extras/border/banner.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -176,7 +176,7 @@
 							<top>0</top>
 							<width>860</width>
 							<height>238</height>
-							<texture colordiffuse="$VAR[BorderMediaColorVar]">dialogs/border-banner.png</texture>
+							<texture colordiffuse="$VAR[BorderMediaColorVar]">extras/border/banner.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>

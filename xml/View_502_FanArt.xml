@@ -66,7 +66,7 @@
 							<top>0</top>
 							<width>302</width>
 							<height>302</height>
-							<texture background="true" colordiffuse="$VAR[MainColorVar]">overlays/circle-302.png</texture>
+							<texture background="true" colordiffuse="$VAR[MainColorVar]">extras/disk/circle-302.png</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>!Skin.HasSetting(library_disc_art_overlay)</visible>
 						</control>

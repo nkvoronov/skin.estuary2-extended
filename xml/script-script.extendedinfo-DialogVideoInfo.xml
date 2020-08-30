@@ -171,7 +171,7 @@
 								<control type="image">
 									<left>100</left>
 									<top>10</top>
-									<texture>icons/extendedinfo/circle/$INFO[Window.Property(PercentPlayed)].png</texture>
+									<texture>extras/extendedinfo/circle/$INFO[Window.Property(PercentPlayed)].png</texture>
 									<width>80</width>
 									<height>80</height>
 								</control>
@@ -223,8 +223,8 @@
 							</control>
 							<include content="InfoDialogToggleButton">
 								<param name="id" value="6003" />
-								<param name="icon_on" value="icons/extendedinfo/starminus.png" />
-								<param name="icon_off" value="icons/extendedinfo/star.png" />
+								<param name="icon_on" value="extras/extendedinfo/starminus.png" />
+								<param name="icon_off" value="extras/extendedinfo/star.png" />
 								<param name="label" value="$INFO[Window.Property(FavButton_Label)]" />
 								<param name="selected" value="!String.IsEmpty(Window.Property(favorite))" />
 								<param name="visible" value="!String.IsEmpty(Window.Property(tmdb_logged_in)) + !String.IsEqual(Window.Property(type),season) + !String.IsEqual(Window.Property(type),episode)" />
@@ -232,32 +232,32 @@
 							</include>
 							<include content="InfoDialogToggleButton">
 								<param name="id" value="6005" />
-								<param name="icon_on" value="icons/extendedinfo/checkmark.png" />
-								<param name="icon_off" value="icons/extendedinfo/checkmark.png" />
+								<param name="icon_on" value="extras/extendedinfo/checkmark.png" />
+								<param name="icon_off" value="extras/extendedinfo/checkmark.png" />
 								<param name="label" value="$ADDON[script.extendedinfo 32107]" />
 								<param name="visible" value="!String.IsEmpty(Window.Property(tmdb_logged_in)) + !String.IsEqual(Window.Property(type),season) + !String.IsEqual(Window.Property(type),episode)" />
 								<param name="width" value="280" />
 							</include>
 							<include content="InfoDialogToggleButton">
 								<param name="id" value="6002" />
-								<param name="icon_on" value="icons/extendedinfo/list2.png" />
-								<param name="icon_off" value="icons/extendedinfo/list2.png" />
+								<param name="icon_on" value="extras/extendedinfo/list2.png" />
+								<param name="icon_off" value="extras/extendedinfo/list2.png" />
 								<param name="label" value="$ADDON[script.extendedinfo 32130]" />
 								<param name="visible" value="!String.IsEmpty(Window.Property(tmdb_logged_in)) + !String.IsEqual(Window.Property(type),season) + !String.IsEqual(Window.Property(type),episode)" />
 								<param name="width" value="280" />
 							</include>
 							<include content="InfoDialogToggleButton">
 								<param name="id" value="6006" />
-								<param name="icon_on" value="icons/extendedinfo/list2.png" />
-								<param name="icon_off" value="icons/extendedinfo/list2.png" />
+								<param name="icon_on" value="extras/extendedinfo/list2.png" />
+								<param name="icon_off" value="extras/extendedinfo/list2.png" />
 								<param name="label" value="$ADDON[script.extendedinfo 32131]" />
 								<param name="visible" value="String.IsEmpty(Window.Property(tmdb_logged_in)) + !String.IsEqual(Window.Property(type),season) + !String.IsEqual(Window.Property(type),tvshow)" />
 								<param name="width" value="280" />
 							</include>
 							<include content="InfoDialogToggleButton">
 								<param name="id" value="100" />
-								<param name="icon_on" value="icons/extendedinfo/plus2.png" />
-								<param name="icon_off" value="icons/extendedinfo/plus2.png" />
+								<param name="icon_on" value="extras/extendedinfo/plus2.png" />
+								<param name="icon_off" value="extras/extendedinfo/plus2.png" />
 								<param name="label" value="$ADDON[script.extendedinfo 32132]" />
 								<param name="visible" value="System.HasAddon(script.videoextras) + String.IsEmpty(Window(movieinformation).Property(HideVideoExtrasButton)) + !String.IsEmpty(Window.Property(FilenameAndPath))" />
 								<param name="width" value="280" />
@@ -265,8 +265,8 @@
 							</include>
 							<include content="InfoDialogToggleButton">
 								<param name="id" value="445" />
-								<param name="icon_on" value="icons/extendedinfo/tool2.png" />
-								<param name="icon_off" value="icons/extendedinfo/tool2.png" />
+								<param name="icon_on" value="extras/extendedinfo/tool2.png" />
+								<param name="icon_off" value="extras/extendedinfo/tool2.png" />
 								<param name="label" value="$ADDON[script.extendedinfo 32133]" />
 								<param name="visible" value="!Skin.HasSetting(kioskmode)" />
 								<param name="width" value="280" />
@@ -333,74 +333,74 @@
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.1),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.1),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(AudioLanguage.1))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.2),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.2),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.3),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.3),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.4),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.4),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.5),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.5),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.6),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.6),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.7),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.7),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.8),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.8),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.9),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.9),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.10),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.10),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.11),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.11),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(AudioLanguage.12),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(AudioLanguage.12),extras/extendedinfo/flags/language/,.png]</texture>
 									</control>
 								</control>
 								<control type="grouplist" id="12000">
@@ -427,48 +427,48 @@
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.1),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.1),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.1))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.2),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.2),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.2))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.3),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.3),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.3))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.4),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.4),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.4))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.5),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.5),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.5))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.6),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.6),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.6))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
-										<texture>$INFO[Window.Property(SubtitleLanguage.7),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.7),extras/extendedinfo/flags/language/,.png]</texture>
 										<aspectratio>keep</aspectratio>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.7))</visible>
 									</control>
@@ -476,35 +476,35 @@
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.8),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.8),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.8))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.9),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.9),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.9))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.10),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.10),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.10))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.11),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.11),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.11))</visible>
 									</control>
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$INFO[Window.Property(SubtitleLanguage.12),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[Window.Property(SubtitleLanguage.12),extras/extendedinfo/flags/language/,.png]</texture>
 										<visible>!String.IsEmpty(Window.Property(SubtitleLanguage.12))</visible>
 									</control>
 								</control>
@@ -772,7 +772,7 @@
 							<top>0</top>
 							<width>70</width>
 							<height>70</height>
-							<texture>icons/extendedinfo/info.png</texture>
+							<texture>extras/extendedinfo/info.png</texture>
 						</control>
 						<control type="label" id="800">
 							<left>130</left>
@@ -873,7 +873,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="textbox">
@@ -931,7 +931,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="image">
@@ -1116,7 +1116,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="textbox">
@@ -1174,7 +1174,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="image">
@@ -1607,7 +1607,7 @@
 										<left>30</left>
 										<width>313</width>
 										<height>100</height>
-										<texture fallback="icons/extendedinfo/flags/default.png">$INFO[ListItem.Thumb]</texture>
+										<texture fallback="extras/extendedinfo/flags/default.png">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
 									</control>
 									<control type="textbox">
@@ -1644,7 +1644,7 @@
 										<left>30</left>
 										<width>313</width>
 										<height>100</height>
-										<texture fallback="icons/extendedinfo/flags/default.png">$INFO[ListItem.Thumb]</texture>
+										<texture fallback="extras/extendedinfo/flags/default.png">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
 									</control>
 									<control type="textbox">
@@ -1729,7 +1729,7 @@
 										<top>28</top>
 										<width>200</width>
 										<height>70</height>
-										<texture>$INFO[ListItem.Property(iso_3166_1),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[ListItem.Property(iso_3166_1),extras/extendedinfo/flags/language/,.png]</texture>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
 									</control>
 									<control type="textbox">
@@ -1765,7 +1765,7 @@
 										<top>28</top>
 										<width>200</width>
 										<height>70</height>
-										<texture>$INFO[ListItem.Property(iso_3166_1),icons/extendedinfo/flags/language/,.png]</texture>
+										<texture>$INFO[ListItem.Property(iso_3166_1),extras/extendedinfo/flags/language/,.png]</texture>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
 									</control>
 									<control type="textbox">
@@ -2295,7 +2295,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.Property(account))</visible>
 									</control>
 									<control type="label">
@@ -2352,7 +2352,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.Property(account))</visible>
 									</control>
 									<control type="image">
@@ -2493,7 +2493,7 @@
 						<width>830</width>
 						<height>190</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture background="true" fallback="icons/extendedinfo/moviedb.png">$INFO[Window.Property(clearlogo)]</texture>
+						<texture background="true" fallback="extras/extendedinfo/moviedb.png">$INFO[Window.Property(clearlogo)]</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -2551,7 +2551,7 @@
 								<height>67</height>
 								<visible>!String.IsEqual(Window.Property(type),season) + !String.IsEqual(Window.Property(type),episode)</visible>
 								<aspectratio align="center">keep</aspectratio>
-								<texture fallback="icons/extendedinfo/flags/rating/MPAA_NR_Certificate_US.png">$INFO[Window.Property(mpaa),icons/extendedinfo/flags/rating/,.png]</texture>
+								<texture fallback="extras/extendedinfo/flags/rating/MPAA_NR_Certificate_US.png">$INFO[Window.Property(mpaa),extras/extendedinfo/flags/rating/,.png]</texture>
 							</control>
 							<control type="group">
 								<left>0</left>

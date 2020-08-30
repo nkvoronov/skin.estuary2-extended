@@ -154,7 +154,9 @@ msgctxt "#31026"
 msgid "Timeshift"
 msgstr ""
 
-#empty string with id 31027
+msgctxt "#31027"
+msgid "Next aired"
+msgstr ""
 
 #: /xml/DialogAlbumInfo.xml /xml/DialogVideoInfo.xml
 msgctxt "#31028"
@@ -201,7 +203,10 @@ msgctxt "#31036"
 msgid "items"
 msgstr ""
 
-#empty string with id 31037
+#: /xml/Includes.xml
+msgctxt "#31037"
+msgid "Selected track"
+msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#31038"
@@ -293,7 +298,15 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr ""
 
-#empty strings from id 31059 to 31060
+#: /xml/GameOSD.xml
+msgctxt "#31059"
+msgid "Select + X"
+msgstr ""
+
+#: /xml/GameOSD.xml
+msgctxt "#31060"
+msgid "Select + Start"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#31061"
@@ -349,7 +362,15 @@ msgctxt "#31072"
 msgid "Power Options"
 msgstr ""
 
-#empty strings from id 31073 to 31074
+#: /xml/MyPlaylist.xml
+msgctxt "#31073"
+msgid "Total length"
+msgstr ""
+
+#: /xml/MyPlaylist.xml
+msgctxt "#31074"
+msgid "Total duration"
+msgstr ""
 
 #: /xml/Home.xml
 msgctxt "#31075"
@@ -660,7 +681,13 @@ msgctxt "#31145"
 msgid "Search add-ons"
 msgstr ""
 
-#empty strings from id 31146 to 31147
+msgctxt "#31146"
+msgid "In cinemas"
+msgstr ""
+
+msgctxt "#31147"
+msgid "In cinemas soon"
+msgstr ""
 
 #: /xml/Home.xml
 msgctxt "#31148"

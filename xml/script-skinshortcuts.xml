@@ -316,19 +316,19 @@
 				<align>justify</align>
 				<include content="IconButton">
 					<param name="control_id" value="301" />
-					<param name="icon" value="shortcuts/add.png" />
+					<param name="icon" value="extras/shortcuts/add.png" />
 				</include>
 				<include content="IconButton">
 					<param name="control_id" value="302" />
-					<param name="icon" value="shortcuts/delete.png" />
+					<param name="icon" value="extras/shortcuts/delete.png" />
 				</include>
 				<include content="IconButton">
 					<param name="control_id" value="303" />
-					<param name="icon" value="shortcuts/up.png" />
+					<param name="icon" value="extras/shortcuts/up.png" />
 				</include>
 				<include content="IconButton">
 					<param name="control_id" value="304" />
-					<param name="icon" value="shortcuts/down.png" />
+					<param name="icon" value="extras/shortcuts/down.png" />
 				</include>
 			</control>
 		</control>

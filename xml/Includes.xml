@@ -6,6 +6,7 @@
 	<include file="Includes_MediaMenu.xml" />
 	<include file="Includes_Buttons.xml" />
 	<include file="Includes_DialogSelect.xml" />
+	<include file="Includes_MusicInfo.xml" />
 	<include file="Includes_PVR.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_Poster.xml" />
@@ -13,6 +14,7 @@
 	<include file="View_53_Shift.xml" />
 	<include file="View_54_InfoWall.xml" />
 	<include file="View_55_WideList.xml" />
+	<include file="View_503_NowPlaying.xml" />
 	<include file="View_500_Wall.xml" />
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
@@ -57,8 +59,10 @@
 					<top>0</top>
 					<bottom>0</bottom>
 					<width>13</width>
-					<onleft>50</onleft>
-					<onright>50</onright>
+					<onleft condition="![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)]">50</onleft>
+					<onleft condition="Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)">55</onleft>
+					<onright condition="![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)]">50</onright>
+					<onright condition="Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)">55</onright>
 					<orientation>vertical</orientation>
 					<texturesliderbackground />
 					<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
@@ -1170,9 +1174,9 @@
 				<texturenofocus />
 				<label />
 				<textureradioofffocus colordiffuse="white7">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="white7">icons/logo.png</textureradiooffnofocus>
+				<textureradiooffnofocus colordiffuse="white7">extras/kodi/logo.png</textureradiooffnofocus>
 				<textureradioonfocus colordiffuse="white7">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="white7">icons/logo.png</textureradioonnofocus>
+				<textureradioonnofocus colordiffuse="white7">extras/kodi/logo.png</textureradioonnofocus>
 				<onclick>Action(close)</onclick>
 				<visible>!Skin.HasSetting(touchmode)</visible>
 			</control>

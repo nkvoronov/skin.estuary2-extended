@@ -303,10 +303,10 @@
 		<node label="19020" condition="PVR.HasTVChannels">
 			<shortcut label="19020" type="19020" icon="icons/sidemenu/livetv.png">ActivateWindow(tvchannels)</shortcut>
 			<shortcut label="19019" type="19020" icon="DefaultAddonPeripheral.png">ActivateWindow(tvchannels)</shortcut>
-			<shortcut label="19069" type="19020" icon="icons/pvr/epg.png">ActivateWindow(tvguide)</shortcut>
-			<shortcut label="19017" type="19020" icon="icons/pvr/recording.png">ActivateWindow(tvrecordings)</shortcut>
-			<shortcut label="19040" type="19020" icon="icons/pvr/timer.png">ActivateWindow(tvtimers)</shortcut>
-			<shortcut label="19138" type="19020" icon="icons/pvr/timer-rule.png">ActivateWindow(tvtimerrules)</shortcut>
+			<shortcut label="19069" type="19020" icon="extras/pvr/epg.png">ActivateWindow(tvguide)</shortcut>
+			<shortcut label="19017" type="19020" icon="extras/pvr/recording.png">ActivateWindow(tvrecordings)</shortcut>
+			<shortcut label="19040" type="19020" icon="extras/pvr/timer.png">ActivateWindow(tvtimers)</shortcut>
+			<shortcut label="19138" type="19020" icon="extras/pvr/timer-rule.png">ActivateWindow(tvtimerrules)</shortcut>
 			<shortcut label="137" type="19020" icon="DefaultAddonsSearch.png">ActivateWindow(tvsearch)</shortcut>
 			<shortcut label="32066" type="19020" icon="icons/sidemenu/livetv.png">PlayPvrTV</shortcut>
 			<shortcut label="32068" type="19020" icon="icons/sidemenu/livetv.png">PlayPvr</shortcut>
@@ -318,10 +318,10 @@
 		<node label="19021" condition="PVR.HasRadioChannels">
 			<shortcut label="19021" type="19021" icon="icons/sidemenu/radio.png">ActivateWindow(radiochannels)</shortcut>
 			<shortcut label="19019" type="19021" icon="DefaultAddonPeripheral.png">ActivateWindow(radiochannels)</shortcut>
-			<shortcut label="19069" type="19021" icon="icons/pvr/epg.png">ActivateWindow(radioguide)</shortcut>
-			<shortcut label="19017" type="19021" icon="icons/pvr/recording.png">ActivateWindow(radiorecordings)</shortcut>
-			<shortcut label="19040" type="19021" icon="icons/pvr/timer.png">ActivateWindow(radiotimers)</shortcut>
-			<shortcut label="19138" type="19021" icon="icons/pvr/timer-rule.png">ActivateWindow(radiotimersrules)</shortcut>
+			<shortcut label="19069" type="19021" icon="extras/pvr/epg.png">ActivateWindow(radioguide)</shortcut>
+			<shortcut label="19017" type="19021" icon="extras/pvr/recording.png">ActivateWindow(radiorecordings)</shortcut>
+			<shortcut label="19040" type="19021" icon="extras/pvr/timer.png">ActivateWindow(radiotimers)</shortcut>
+			<shortcut label="19138" type="19021" icon="extras/pvr/timer-rule.png">ActivateWindow(radiotimersrules)</shortcut>
 			<shortcut label="137" type="19021" icon="DefaultAddonsSearch.png">ActivateWindow(radiosearch)</shortcut>
 			<shortcut label="32067" type="19021" icon="icons/sidemenu/radio.png">PlayPvrRadio</shortcut>
 			<shortcut label="32068" type="19021" icon="icons/sidemenu/radio.png">PlayPvr</shortcut>

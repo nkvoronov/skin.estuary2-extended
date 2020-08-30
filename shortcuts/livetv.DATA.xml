@@ -9,25 +9,25 @@
 	<shortcut>
 		<label>19069</label>
 		<label2>19020</label2>
-		<icon>icons/pvr/epg.png</icon>
+		<icon>extras/pvr/epg.png</icon>
 		<action>ActivateWindow(tvguide)</action>
 	</shortcut>
 	<shortcut>
 		<label>19017</label>
 		<label2>19020</label2>
-		<icon>icons/pvr/recording.png</icon>
+		<icon>extras/pvr/recording.png</icon>
 		<action>ActivateWindow(tvrecordings)</action>
 	</shortcut>
 	<shortcut>
 		<label>19040</label>
 		<label2>19020</label2>
-		<icon>icons/pvr/timer.png</icon>
+		<icon>extras/pvr/timer.png</icon>
 		<action>ActivateWindow(tvtimers)</action>
 	</shortcut>
 	<shortcut>
 		<label>19138</label>
 		<label2>19020</label2>
-		<icon>icons/pvr/timer-rule.png</icon>
+		<icon>extras/pvr/timer-rule.png</icon>
 		<action>ActivateWindow(tvtimerrules)</action>
 	</shortcut>
 	<shortcut>

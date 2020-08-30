@@ -261,7 +261,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="textbox">
@@ -319,7 +319,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="image">
@@ -430,7 +430,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="textbox">
@@ -488,7 +488,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="image">
@@ -599,7 +599,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="textbox">
@@ -657,7 +657,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="image">
@@ -768,7 +768,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="textbox">
@@ -826,7 +826,7 @@
 										<bottom>130</bottom>
 										<width>32</width>
 										<height>32</height>
-										<texture>icons/extendedinfo/media.png</texture>
+										<texture>extras/extendedinfo/media.png</texture>
 										<visible>!String.IsEmpty(ListItem.dbid)</visible>
 									</control>
 									<control type="image">
@@ -1192,7 +1192,7 @@
 						<width>830</width>
 						<height>190</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture  background="true">icons/extendedinfo/moviedb.png</texture>
+						<texture  background="true">extras/extendedinfo/moviedb.png</texture>
 					</control>
 				</control>
 				<control type="group">
