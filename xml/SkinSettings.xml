@@ -208,7 +208,7 @@
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40318]</label>
 					<onclick>Skin.ToggleSetting(use_smaller_categories)</onclick>
-					<selected>!Skin.HasSetting(use_smaller_categories)</selected>
+					<selected>Skin.HasSetting(use_smaller_categories)</selected>
 				</control>
 				<control type="image" id="208">
 					<description>Separator Image</description>
