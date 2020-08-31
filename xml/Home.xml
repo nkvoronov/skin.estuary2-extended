@@ -337,6 +337,14 @@
 						<width>192</width>
 						<texture colordiffuse="$VAR[MainColorVar]">special://xbmc/media/vendor_logo.png</texture>
 					</control>
+					<control type="image">
+						<aspectratio>keep</aspectratio>
+						<top>0</top>
+						<left>-1</left>
+						<width>56</width>
+						<height>56</height>
+						<texture colordiffuse="$VAR[MainColorVar]">special://xbmc/media/vendor_icon.png</texture>
+					</control>
 				</control>
 				<control type="group">
 					<visible>Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu) + [ Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801) | Control.HasFocus(803)]</visible>
@@ -345,6 +353,14 @@
 						<height>56</height>
 						<width>192</width>
 						<texture colordiffuse="$VAR[MainColorVar]">special://xbmc/media/vendor_logo.png</texture>
+					</control>
+					<control type="image">
+						<aspectratio>keep</aspectratio>
+						<top>0</top>
+						<left>-1</left>
+						<width>56</width>
+						<height>56</height>
+						<texture colordiffuse="$VAR[MainColorVar]">special://xbmc/media/vendor_icon.png</texture>
 					</control>
 				</control>
 				<control type="group">
