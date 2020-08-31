@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary2-extended-s" version="3.0.2.278" name="Estuary v2 Extended Shortcuts" provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON, Guilouz">
+<addon id="skin.estuary2-extended-s" version="3.0.2.279" name="Estuary v2 Extended Shortcuts" provider-name="phil65, Ichabod Fletchman, YLLOW_DRAGON, Guilouz">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.pvr.favourites" version="2.0.0"/>
-		<import addon="script.image.resource.select" version="1.1.0"/>
-		<import addon="script.skinshortcuts" version="1.0.10"/>
-		<import addon="script.skin.helper.service" version="1.0.10"/>
-		<import addon="script.skin.helper.skinbackup" version="1.0.10"/>
-		<import addon="script.skin.helper.widgets" version="1.0.10"/>
-		<import addon="script.skin.helper.backgrounds" version="1.0.10"/>
-		<import addon="script.skin.helper.colorpicker" version="1.0.0"/>
+		<import addon="script.image.resource.select" version="3.0.2"/>
+		<import addon="script.skinshortcuts" version="1.0.20"/>
+		<import addon="script.skin.helper.service" version="1.1.26"/>
+		<import addon="script.skin.helper.skinbackup" version="1.0.20"/>
+		<import addon="script.skin.helper.widgets" version="1.0.39"/>
+		<import addon="script.skin.helper.backgrounds" version="1.0.34"/>
+		<import addon="script.skin.helper.colorpicker" version="1.0.13"/>
 		<import addon="resource.images.skinicons.estuary" version="1.0.0"/>
 		<import addon="resource.images.busyspinners.estuary" version="1.0.0"/>
 	</requires>
