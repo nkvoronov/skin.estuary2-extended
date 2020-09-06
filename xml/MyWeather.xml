@@ -85,6 +85,24 @@
 					<onclick>Weather.LocationNext</onclick>
 					<label />
 				</control>
+				<control type="label">
+					<right>100</right>
+					<top>194</top>
+					<aligny>center</aligny>
+					<height>24</height>
+					<width>500</width>
+					<align>right</align>
+					<font>WeatherTemp</font>
+					<label>$INFO[Weather.Temperature]</label>
+				</control>
+				<control type="label">
+					<right>400</right>
+					<top>164</top>
+					<align>right</align>
+					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I][CR]$INFO[Weather.Conditions]</label>
+					<font>font14</font>
+					<width>630</width>
+				</control>
 				<control type="grouplist">
 					<top>154</top>
 					<left>90</left>

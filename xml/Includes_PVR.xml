@@ -256,8 +256,14 @@
 				<label>$INFO[ListItem.EpgEventTitle]</label>
 				<visible>PVR.HasEpg</visible>
 			</control>
-			<control type="textbox">
+			<control type="label">
 				<top>435</top>
+				<width>830</width>
+				<height>70</height>
+				<label>[I]$VAR[SeasonEpisodeLabel]$INFO[ListItem.EpisodeName][/I]</label>
+			</control>
+			<control type="textbox">
+				<top>490</top>
 				<width>830</width>
 				<bottom>75</bottom>
 				<label>$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
@@ -319,71 +325,6 @@
 				</control>
 			</control>
 		</control>
-	</include>
-	<include name="PVRInfo2Panel">
-		<param name="visible">true</param>
-		<definition>
-			<control type="group">
-				<bottom>30</bottom>
-				<height>300</height>
-				<visible>$PARAM[visible]</visible>
-				<include content="IconLayoutTV">
-					<param name="top" value="10" />
-					<param name="left" value="30" />
-					<param name="width" value="290" />
-					<param name="height" value="250" />
-					<param name="img_fallback" value="DefaultTVShows.png" />
-				</include>
-				<control type="group">
-					<top>0</top>
-					<left>350</left>
-					<control type="label">
-						<width>70%</width>
-						<height>30</height>
-						<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
-					</control>
-					<control type="label">
-						<top>0</top>
-						<right>30</right>
-						<width>30%</width>
-						<height>30</height>
-						<align>right</align>
-						<label>$VAR[ListItemStartTimeLabel2Var]</label>
-					</control>
-					<control type="label">
-						<top>35</top>
-						<right>30</right>
-						<width>40%</width>
-						<height>30</height>
-						<align>right</align>
-						<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
-						<visible>!String.IsEmpty(ListItem.Genre)</visible>
-					</control>
-				</control>
-				<control type="textbox">
-					<left>350</left>
-					<top>85</top>
-					<right>30</right>
-					<height>165</height>
-					<label>$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					<visible>!String.IsEmpty(ListItem.Plot)</visible>
-				</control>
-				<control type="textbox">
-					<description>No Content</description>
-					<left>350</left>
-					<top>85</top>
-					<right>30</right>
-					<height>165</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font27</font>
-					<textcolor>white8</textcolor>
-					<label>$LOCALIZE[19055]</label>
-					<visible>String.IsEmpty(ListItem.Plot)</visible>
-				</control>
-			</control>
-		</definition>
 	</include>
 	<include name="RDSInfoLine">
 		<control type="grouplist">
@@ -518,11 +459,21 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
+						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
 						<left>6</left>
 						<top>35</top>
-						<width>20</width>
-						<height>20</height>
+						<width>16</width>
+						<height>16</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="$VAR[MainColorVar]">icons/pvr/premiere.png</texture>
+					</control>
+					<control type="image">
+						<left>6</left>
+						<top>35</top>
+						<width>16</width>
+						<height>16</height>
 						<texture>$VAR[PVRTimerIconVar]</texture>
+						<animation effect="slide" start="0,0" end="19,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout height="62" width="60">
@@ -555,11 +506,21 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
+						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
 						<left>6</left>
 						<top>35</top>
-						<width>20</width>
-						<height>20</height>
+						<width>16</width>
+						<height>16</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="$VAR[MainColorVar]">icons/pvr/premiere.png</texture>
+					</control>
+					<control type="image">
+						<left>6</left>
+						<top>35</top>
+						<width>16</width>
+						<height>16</height>
 						<texture>$VAR[PVRTimerIconVar]</texture>
+						<animation effect="slide" start="0,0" end="19,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
 					</control>
 				</focusedlayout>
 			</control>

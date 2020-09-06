@@ -724,15 +724,6 @@
 		<value condition="!Integer.IsEqual(ListItem.Property(percentplayed),0)">overlays/watched/resume.png</value>
 		<value condition="Integer.IsGreater(ListItem.Property(playcount),0)">OverlayWatched.png</value>
 	</variable>
-	<variable name="AudioCodecFlagPlayerVar">
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,mp3float)">flags/audiocodec/mp3.png</value>
-		<value>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</value>
-	</variable>
-	<variable name="ResolutionFlagPlayerVar">
-		<value condition="VideoPlayer.IsStereoscopic">flags/videoresolution/3D.png</value>
-		<value condition="Integer.IsGreater(VideoPlayer.VideoResolution,1080)">flags/videoresolution/4K.png</value>
-		<value>$INFO[VideoPlayer.VideoResolution,flags/videoresolution/,.png]</value>
-	</variable>
 	<variable name="MediaFlagsSearchStudioIconVar">
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">resource://resource.images.studios.white/</value>
 		<value condition="String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">resource://resource.images.studios.coloured/</value>

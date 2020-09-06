@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<controls>
+		<include condition="Skin.HasSetting(touchmode)">TouchBackSlideshowButton</include>
 		<control type="label">
 			<description>SlideShow Info</description>
 			<left>25</left>
@@ -33,10 +34,11 @@
 		<control type="image">
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<width>150</width>
-			<height>150</height>
-			<texture>icons/now-playing/pause.png</texture>
-			<visible>SlideShow.IsPaused</visible>
+			<width>256</width>
+			<height>256</height>
+			<texture>icons/settings/player.png</texture>
+			<visible>SlideShow.IsVideo</visible>
+			<visible>![Player.Playing + Player.HasVideo] | SlideShow.IsPaused</visible>
 		</control>
 	</controls>
 </window>

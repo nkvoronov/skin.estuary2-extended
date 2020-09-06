@@ -20,7 +20,7 @@
 				<top>80</top>
 				<width>400</width>
 				<height>596</height>
-				<itemgap>-25</itemgap>
+				<itemgap>-20</itemgap>
 				<orientation>vertical</orientation>
 				<onleft>9000</onleft>
 				<onright>5</onright>
