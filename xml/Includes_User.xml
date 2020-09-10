@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="NormalMainMenu">
+		<left>462</left>
+	</include>
+	<include name="HideMainMenu">
+		<left>-40</left>
+	</include>
+	<include name="MinimizeMainMenu">
+		<left>95</left>
+	</include>
+	<include name="Right_50">
+		<right>594</right>
+	</include>
+	<include name="Right_55">
+		<right>0</right>
+	</include>
+	<include name="WeatherIcons">
+		<param name="left">50</param>
+		<param name="top">232</param>
+		<param name="width">300</param>
+		<param name="height">300</param>
+		<param name="image_1">$VAR[CurrentWeatherIconVar]</param>
+		<param name="image_multi">$VAR[CurrentWeatherIconVar]</param>
+		<definition>
+			<control type="image">
+				<description>Weather icon 1</description>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture>$PARAM[image_1]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
+			</control>
+			<control type="multiimage">
+				<description>Weather multiimage</description>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<imagepath>$PARAM[image_multi]</imagepath>
+				<aspectratio>keep</aspectratio>
+				<timeperimage>100</timeperimage>
+				<randomize>false</randomize>
+				<fadetime>300</fadetime>
+				<pauseatend>1000</pauseatend>
+				<animation effect="fade" time="225">Visible</animation>
+				<animation effect="fade" time="225">Hidden</animation>
+				<animation effect="fade" time="150">WindowClose</animation>
+				<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="PVRInfo2Panel">
+		<param name="visible">true</param>
+		<definition>
+			<control type="group">
+				<bottom>30</bottom>
+				<height>300</height>
+				<visible>$PARAM[visible]</visible>
+				<include content="IconLayoutTV">
+					<param name="top" value="10" />
+					<param name="left" value="30" />
+					<param name="width" value="290" />
+					<param name="height" value="250" />
+					<param name="img_fallback" value="DefaultTVShows.png" />
+				</include>
+				<control type="group">
+					<top>0</top>
+					<left>350</left>
+					<control type="label">
+						<width>70%</width>
+						<height>30</height>
+						<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<right>30</right>
+						<width>30%</width>
+						<height>30</height>
+						<align>right</align>
+						<label>$VAR[ListItemStartTimeLabel2Var]</label>
+					</control>
+					<control type="label">
+						<top>35</top>
+						<right>30</right>
+						<width>40%</width>
+						<height>30</height>
+						<align>right</align>
+						<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
+						<visible>!String.IsEmpty(ListItem.Genre)</visible>
+					</control>
+				</control>
+				<control type="textbox">
+					<left>350</left>
+					<top>85</top>
+					<right>30</right>
+					<height>165</height>
+					<label>$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+					<visible>!String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+				<control type="textbox">
+					<description>No Content</description>
+					<left>350</left>
+					<top>85</top>
+					<right>30</right>
+					<height>165</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font27</font>
+					<textcolor>white8</textcolor>
+					<label>$LOCALIZE[19055]</label>
+					<visible>String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="MediaFlagsSearch">
+		<param name="visible_pemiered">false</param>
+		<param name="istvshows">false</param>
+		<definition>
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<right>20</right>
+				<top>0</top>
+				<height>70</height>
+				<align>right</align>
+				<itemgap>28</itemgap>
+				<width>1900</width>
+				<usecontrolcoords>true</usecontrolcoords>
+				<animation effect="slide" start="0,0" end="140,0" time="0" condition="$PARAM[istvshows]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="100,0" time="0" condition="![String.IsEqual(Container($PARAM[container_id]).ListItem.DBType,artist) | String.IsEqual(Container($PARAM[container_id]).ListItem.DBType,album)]">Conditional</animation>				
+				<control type="group">
+					<width>150</width>
+					<top>-5</top>
+					<visible>$PARAM[istvshows]</visible>
+					<include content="MediaFlag">
+						<param name="texture" value="$VAR[MediaFlagsSearchStudioIconVar]$INFO[Container($PARAM[container_id]).ListItem.Property(studio)].png" />
+					</include>
+				</control>
+				<control type="group">
+					<top>10</top>
+					<width>200</width>
+					<visible>$PARAM[visible_pemiered]</visible>
+					<include content="InfoFlag">
+						<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Premiered))" />
+						<param name="icon" value="lists/year.png" />
+						<param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Premiered)]" />
+					</include>
+				</control>
+				<control type="group">
+					<top>10</top>
+					<width>100</width>
+					<include content="InfoFlag">
+						<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Rating))" />
+						<param name="icon" value="lists/rating.png" />
+						<param name="label" value="$INFO[Container($PARAM[container_id]).ListItem.Property(Rating)]" />
+					</include>
+				</control>
+				<control type="group">
+					<width>115</width>
+					<visible>!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(Duration))</visible>
+					<control type="label">
+						<width>115</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Container($PARAM[container_id]).ListItem.Property(Duration),, $LOCALIZE[31132]]</label>
+						<font>font_flag</font>
+					</control>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/flag.png" />
+					</include>
+				</control>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioChannels),flags/audiochannel/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioChannels))" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(AudioCodec),flags/audiocodec/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(AudioCodec))" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoResolution),flags/videoresolution/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoResolution))" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoAspect),flags/aspectratio/,.png]" />
+				</include>
+				<include content="MediaFlag">
+					<param name="texture" value="$INFO[Container($PARAM[container_id]).ListItem.Property(VideoCodec),flags/videocodec/,.png]" />
+					<param name="visible" value="!String.IsEmpty(Container($PARAM[container_id]).ListItem.Property(VideoCodec))" />
+				</include>
+				<control type="group">
+					<top>10</top>
+					<width>100</width>
+					<visible>String.IsEqual($INFO[Container($PARAM[container_id]).ListItem.DBtype,artist) | String.IsEqual($INFO[Container($PARAM[container_id]).ListItem.DBtype,album)</visible>
+					<include content="InfoList">
+						<param name="width" value="1" />
+						<param name="item_height" value="1" />
+						<param name="list_id" value="5700" />
+					</include>
+					<include content="InfoFlag">
+						<param name="visible" value="String.IsEqual($INFO[Container($PARAM[container_id]).ListItem.DBType,artist)" />
+						<param name="icon" value="DefaultMusicTop100Albums.png" />
+						<param name="size_img" value="45" />
+						<param name="left_txt" value="45" />
+						<param name="label" value="$INFO[Container(5700).NumItems]" />
+					</include>
+					<include content="InfoFlag">
+						<param name="visible" value="String.IsEqual($INFO[Container($PARAM[container_id]).ListItem.DBType,album)" />
+						<param name="icon" value="DefaultMusicTop100Songs.png" />
+						<param name="size_img" value="45" />
+						<param name="left_txt" value="45" />
+						<param name="label" value="$INFO[Container(5700).NumItems]" />
+					</include>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="TextInfoFlag">
+		<param name="top">0</param>
+		<param name="left">0</param>
+		<param name="width">115</param>
+		<param name="height">60</param>
+		<param name="visible">true</param>
+		<param name="label">flag</param>
+		<definition>
+			<control type="group">
+				<top>$PARAM[top]</top>
+				<left>$PARAM[left]</left>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<visible>$PARAM[visible]</visible>
+				<control type="label">
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$PARAM[label]</label>
+					<font>font_flag</font>
+					<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
+				</control>
+				<include content="MediaFlag">
+					<param name="texture" value="flags/flag.png" />
+				</include>
+			</control>
+		</definition>
+	</include>
+	<include name="InfoListPics">
+		<param name="img_source">$INFO[ListItem.Art(poster)]</param>
+		<param name="img_fallback">DefaultVideoCover.png</param>
+		<param name="path">$VAR[InfoListPathVar]</param>
+		<param name="item_height">170</param>
+		<param name="item_width">129</param>
+		<param name="bottom">100</param>
+		<param name="width">516</param>
+		<param name="list_id">6000</param>
+		<param name="sortby"></param>
+		<param name="sortorder">ascending</param>
+		<param name="orientation">horizontal</param>
+		<param name="slide">false</param>
+		<param name="slide2">false</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="list" id="$PARAM[list_id]">
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<bottom>$PARAM[bottom]</bottom>
+				<orientation>$PARAM[orientation]</orientation>
+				<visible>$PARAM[visible]</visible>
+				<autoscroll time="1500">true</autoscroll>
+				<itemgap>5</itemgap>
+				<animation effect="slide" end="193.5,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,1) + $PARAM[slide]">conditional</animation>
+				<animation effect="slide" end="129,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,2) + $PARAM[slide]">conditional</animation>
+				<animation effect="slide" end="64.5,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,3) + $PARAM[slide]">conditional</animation>
+				<animation effect="slide" end="180,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,1) + $PARAM[slide2]">conditional</animation>
+				<animation effect="slide" end="90,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,2) + $PARAM[slide2]">conditional</animation>
+				<focusedlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
+					<control type="image">
+						<left>5</left>
+						<top>0</top>
+						<right>5</right>
+						<bottom>0</bottom>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
+						<bordertexture>colors/white.png</bordertexture>
+						<bordersize>1</bordersize>
+					</control>
+				</focusedlayout>
+				<itemlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
+					<control type="image">
+						<left>5</left>
+						<top>0</top>
+						<right>5</right>
+						<bottom>0</bottom>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" fallback="$PARAM[img_fallback]">$PARAM[img_source]</texture>
+						<bordertexture>colors/white.png</bordertexture>
+						<bordersize>1</bordersize>
+					</control>
+				</itemlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
+			</control>
+		</definition>
+	</include>
+	<include name="CommonAlphabet">
+		<control type="button" id="8000">
+			<left>-10000</left>
+			<width>10</width>
+			<height>1</height>
+			<onfocus>SetFocus(8001,0)</onfocus>
+			<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)</visible>
+		</control>
+		<control type="group">
+			<animation type="Conditional" reversible="false" condition="[Control.HasFocus(8001) | Control.HasFocus(8101)]">
+				<effect type="zoom" start="80" end="100" center="50%,50%" delay="160" tween="back" time="240" />
+				<effect type="fade" delay="160" end="100" time="240" />
+				<effect type="slide" start="0,-48" end="0" center="auto" time="0" />
+			</animation>
+			<animation type="Conditional" reversible="false" condition="![Control.HasFocus(8001) | Control.HasFocus(8101)]">
+				<effect type="zoom" start="100" end="80" center="50%,50%" easing="in" tween="back" time="240" />
+				<effect type="fade" start="100" end="0" time="240" />
+				<effect type="slide" start="0" end="-5000" time="0" />
+			</animation>
+			<control type="group">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<height>480</height>
+				<width>905</width>
+				<include content="DialogBackgroundCommons">
+					<param name="width" value="905" />
+					<param name="height" value="480" />
+					<param name="header_label" value="$LOCALIZE[40326]" />
+					<param name="header_id" value="1" />
+				</include>
+				<control type="panel" id="8001">
+					<orientation>vertical</orientation>
+					<left>30</left>
+					<right>0</right>
+					<top>100</top>
+					<bottom>100</bottom>
+					<onright>8001</onright>
+					<onleft>8001</onleft>
+					<onup>8101</onup>
+					<ondown>8101</ondown>
+					<onback>50</onback>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemlayout width="95" height="95">
+						<control type="group">
+							<bottom>10</bottom>
+							<right>10</right>
+							<control type="label">
+								<aligny>center</aligny>
+								<align>center</align>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font45</font>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="95" height="95">
+						<control type="group">
+							<bottom>10</bottom>
+							<right>10</right>
+							<control type="image">
+								<left>-20</left>
+								<top>-20</top>
+								<width>125</width>
+								<height>125</height>
+								<texture colordiffuse="$VAR[MainColorVar]">buttons/roundbutton-fo.png</texture>
+							</control>
+							<control type="label">
+								<aligny>center</aligny>
+								<align>center</align>
+								<label>$INFO[ListItem.Label]</label>
+								<font>font45</font>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>plugin://script.skin.helper.service/?action=alphabet2&amp;reload=$INFO[Container.NumItems]</content>
+				</control>
+				<control type="group">
+					<left>295</left>
+					<control type="button" id="8101">
+						<bottom>0</bottom>
+						<width>315</width>
+						<height>100</height>
+						<onup>8001</onup>
+						<ondown>8001</ondown>
+						<onback>50</onback>
+						<label>$LOCALIZE[15067]</label>
+						<font>font25_title</font>
+						<align>center</align>
+						<textoffsetx>30</textoffsetx>
+						<onclick>SetFocus(50)</onclick>
+						<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texturefocus>
+						<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="CustomSelectDialog">
+		<param name="header">$LOCALIZE[33069]</param>
+		<param name="content">BackgroundsSelVal</param>
+		<param name="enable">true</param>
+		<param name="reload">false</param>
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Select Background</description>
+				<include>DefaultSettingButton</include>
+				<label>- $PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick>SetProperty(dlg_title,$PARAM[header],Home)</onclick>
+				<onclick>SetProperty(dlg_content,$PARAM[content],Home)</onclick>
+				<onclick>SetProperty(dlg_property,$PARAM[property],Home)</onclick>
+				<onclick>ActivateWindow(1200)</onclick>
+				<onclick condition="$PARAM[reload]">SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onclick>
+				<enable>$PARAM[enable]</enable>
+			</control>
+		</definition>
+	</include>
+	<include name="ResetSkinSettingsParams">
+		<param name="header">$LOCALIZE[13007]</param>
+		<param name="text">$LOCALIZE[10042]</param>
+		<param name="action"></param>
+		<definition>
+			<control type="image" id="$PARAM[control_id1]">
+				<description>Separator Image</description>
+				<height>3</height>
+				<texture colordiffuse="$VAR[SeparatorColorVar]" border="3">dialogs/separator-grey.png</texture>
+			</control>
+			<control type="button" id="$PARAM[control_id2]">
+				<description>Reset Section</description>
+				<include>DefaultSettingButton</include>
+				<label>$LOCALIZE[10041]</label>
+				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=dialogyesno,header=$PARAM[header],message=$PARAM[text],yesaction=$PARAM[action])</onclick>
+			</control>
+		</definition>
+	</include>
+	<include name="ResourceSelect">
+		<param name="enable">true</param>
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Resource Select</description>
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+				<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=$PARAM[property]&amp;type=$PARAM[type])</onclick>
+				<enable>$PARAM[enable]</enable>
+			</control>
+		</definition>
+	</include>
+	<include name="Lrclyrics_Dialog">
+		<include>Animation_DialogPopupOpenClose</include>
+		<depth>DepthOSD</depth>
+	</include>
+	<include name="SelectDialog">
+		<definition>
+			<control type="group">
+				<centertop>50%</centertop>
+				<centerleft>50%</centerleft>
+				<height>742</height>
+				<width>1220</width>
+				<include content="DialogBackgroundCommons">
+					<param name="width" value="1220" />
+					<param name="height" value="742" />
+					<param name="header_label" value="$PARAM[dialogheaderlab]" />
+					<param name="header_id" value="1" />
+				</include>
+				<control type="image">
+					<left>0</left>
+					<top>80</top>
+					<width>920</width>
+					<height>665</height>
+					<texture border="40">buttons/dialogbutton-nofo.png</texture>
+				</control>
+				<control type="list" id="6">
+					<left>20</left>
+					<top>100</top>
+					<width>880</width>
+					<height>625</height>
+					<onup>6</onup>
+					<ondown>6</ondown>
+					<onleft>9001</onleft>
+					<onright>61</onright>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="125" width="880">
+						<control type="image">
+							<left>12</left>
+							<top>7</top>
+							<width>110</width>
+							<height>110</height>
+							<texture colordiffuse="$VAR[GreyColorVar]">$INFO[Listitem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>0</top>
+							<right>20</right>
+							<height>60</height>
+							<font>font14</font>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="textbox">
+							<left>135</left>
+							<top>52</top>
+							<right>20</right>
+							<height>65</height>
+							<font>font12</font>
+							<textcolor>$VAR[GreyColorVar]</textcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="125" width="880">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<right>0</right>
+							<bottom>0</bottom>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+							<visible>Control.HasFocus(6)</visible>
+						</control>
+						<control type="image">
+							<left>12</left>
+							<top>7</top>
+							<width>110</width>
+							<height>110</height>
+							<texture>$INFO[Listitem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>0</top>
+							<right>20</right>
+							<height>60</height>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<font>font14</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="textbox">
+							<left>135</left>
+							<top>52</top>
+							<right>20</right>
+							<height>65</height>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="BackgroundsSelVal" condition="String.IsEqual(Window(Home).Property(dlg_content),BackgroundsSelVal)">
+							<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
+						</include>
+					</content>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>910</left>
+					<top>100</top>
+					<width>12</width>
+					<height>625</height>
+					<onleft>6</onleft>
+					<onright>9001</onright>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="label">
+					<left>925</left>
+					<top>695</top>
+					<width>275</width>
+					<height>35</height>
+					<font>font12</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[GreyColorVar]</textcolor>
+					<label>$VAR[SelectLabelVar]</label>
+				</control>
+				<control type="grouplist" id="9001">
+					<left>920</left>
+					<top>80</top>
+					<onleft>61</onleft>
+					<itemgap>dialogbuttons_itemgap</itemgap>
+					<onright>6</onright>
+					<include content="DefaultDialogButton">
+						<param name="id" value="7" />
+						<param name="label" value="$LOCALIZE[222]" />
+						<param name="onclick" value="PreviousMenu" />
+					</include>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="BackgroundsSelVal">
+		<item id="1">
+			<description>Reset Background</description>
+			<icon>DefaultAddon.png</icon>
+			<label>$LOCALIZE[15109]</label>
+			<label2></label2>
+			<onclick>Skin.Reset($PARAM[dialogsettingval])</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="2">
+			<description>Own Background</description>
+			<icon>DefaultFile.png</icon>
+			<label>$LOCALIZE[44111]</label>
+			<label2></label2>
+			<onclick>Skin.SetImage($PARAM[dialogsettingval])</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+		<item id="3">
+			<description>Multi Background</description>
+			<icon>DefaultFolder.png</icon>
+			<label>$LOCALIZE[44112]</label>
+			<label2></label2>
+			<onclick>Skin.SetPath($PARAM[dialogsettingval])</onclick>
+			<onclick>PreviousMenu</onclick>
+		</item>
+	</include>
+	<include name="ColorSkinSetting">
+		<definition>
+			<control type="button" id="$PARAM[control_id1]">
+				<description>Color Value</description>
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=$PARAM[property])</onclick>
+			</control>
+			<control type="button" id="$PARAM[control_id2]">
+				<description>Reset Color</description>
+				<include>DefaultSettingButton</include>
+				<label>- $LOCALIZE[13007]</label>
+				<onclick>Skin.Reset($PARAM[property])</onclick>
+				<visible>!String.IsEmpty(Skin.String($PARAM[property]))</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="SetSkinSetting">
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Set Skin Setting</description>
+				<include>DefaultSettingButton</include>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=$PARAM[property],header=$PARAM[header])</onclick>
+			</control>
+		</definition>
+	</include>
+	<include name="SkinshortcutsWidget">
+		<param name="id">1</param>
+		<param name="num">1</param>
+		<param name="label2"></param>
+		<param name="label2view"></param>
+		<param name="label2sort"></param>
+		<param name="label2sortdir"></param>
+		<definition>
+			<control type="button" id="$PARAM[id]">
+				<description>Widget Num</description>
+				<include>DefaultSettingButton</include>
+				<label>$ADDON[script.skinshortcuts 32044] $PARAM[num]</label>
+				<label2>$PARAM[label2]</label2>
+				<onclick>ClearProperty(WidgetVisibility,home)</onclick>
+				<onclick>SetProperty(widgetID, $PARAM[num])</onclick>
+				<onclick>SendClick(312)</onclick>
+				<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+				<visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+			</control>
+			<!-- <control type="button" id="$PARAM[id]1">
+				<description>Widget Num View</description>
+				<include>DefaultSettingButton</include>
+				<label>- $LOCALIZE[44200] $PARAM[num]</label>
+				<label2>$PARAM[label2view]</label2>
+				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.$PARAM[num]))]</visible>
+			</control> -->
+			<control type="button" id="$PARAM[id]2">
+				<description>Widget Num Sort</description>
+				<include>DefaultSettingButton</include>
+				<label>- $LOCALIZE[44210] $PARAM[num]</label>
+				<label2>$PARAM[label2sort]</label2>
+				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.$PARAM[num]))]</visible>
+			</control>
+			<control type="button" id="$PARAM[id]3">
+				<description>Widget Num Sort Direction</description>
+				<include>DefaultSettingButton</include>
+				<label>- $LOCALIZE[44220] $PARAM[num]</label>
+				<label2>$PARAM[label2sortdir]</label2>
+				<visible>[String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget) + !String.IsEmpty(Container(211).ListItem.Property(widgetPath.$PARAM[num]))]</visible>
+			</control>
+		</definition>
+	</include>
+</includes>
