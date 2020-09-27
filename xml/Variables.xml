@@ -463,7 +463,7 @@
 		<value condition="Window.IsActive(visualisation) + Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)">$LOCALIZE[554] $INFO[Playlist.Position] / $INFO[Playlist.Length]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</value>
 		<value condition="VideoPlayer.Content(episodes)">$VAR[VideoPlayerSeasonXEpisodeLabelVar]$INFO[VideoPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$VAR[VideoPlayerChannelNumberLabelVar]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.EpisodeName, (,)]</value>
+		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$VAR[VideoPlayerChannelNumberLabelVar] $INFO[VideoPlayer.ChannelName] $INFO[VideoPlayer.EpisodeName, (,)]</value>
 		<value>[COLOR $VAR[MainColorVar]]$INFO[VideoPlayer.Genre][/COLOR]</value>
 	</variable>
 	<variable name="PlayerInfoClearLogoVar">
