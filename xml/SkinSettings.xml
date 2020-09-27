@@ -367,6 +367,7 @@
 					<label>$LOCALIZE[44141]</label>
 					<onclick>Skin.ToggleSetting(hide_logo_search)</onclick>
 					<selected>!Skin.HasSetting(hide_logo_search)</selected>
+					<enable>Skin.HasSetting(enable_globalsearch)</enable>
 				</control>
 				<control type="image" id="232">
 					<description>Separator Image</description>
