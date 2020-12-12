@@ -34,7 +34,7 @@
 				<top>30</top>
 				<width>100%</width>
 				<height>135</height>
-				<itemgap>20</itemgap>
+				<itemgap>10</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
 				<onup>87</onup>
