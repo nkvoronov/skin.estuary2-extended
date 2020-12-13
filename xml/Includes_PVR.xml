@@ -107,6 +107,7 @@
 			<visible>!Player.ChannelPreviewActive</visible>
 			<control type="group">
 				<visible>Player.SeekEnabled | VideoPlayer.HasEPG</visible>
+				<visible>Player.ShowInfo | Window.IsActive(fullscreeninfo) | Player.ShowTime | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide)</visible>
 				<control type="label">
 					<top>22</top>
 					<right>20</right>
@@ -202,7 +203,7 @@
 			<control type="group">
 				<top>120</top>
 				<left>0</left>
-				<width>590</width>
+				<width>600</width>
 				<control type="label">
 					<height>262</height>
 					<font>font45</font>
@@ -260,7 +261,7 @@
 				<top>435</top>
 				<width>830</width>
 				<height>70</height>
-				<label>[I]$VAR[SeasonEpisodeLabel]$INFO[ListItem.EpisodeName][/I]</label>
+				<label>[I]$VAR[SeasonEpisodeLabelVar]$INFO[ListItem.EpisodeName][/I]</label>
 			</control>
 			<control type="textbox">
 				<top>490</top>
@@ -274,7 +275,6 @@
 				<width>830</width>
 				<height>340</height>
 				<align>center</align>
-				<aligny>center</aligny>
 				<font>font27</font>
 				<textcolor>white8</textcolor>
 				<label>$LOCALIZE[19055]</label>

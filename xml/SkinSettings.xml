@@ -667,7 +667,7 @@
 					<description>Background Overlay Type</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[31156]</label>
-					<label2>$VAR[BackgroundOverlayTypeNameVar]</label2>
+					<label2>$VAR[BackgroundOverlayTypeVar]</label2>
 					<onclick condition="String.IsEqual(Skin.String(background_overlay),7)">Skin.SetString(background_overlay,0)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(background_overlay),6)">Skin.SetString(background_overlay,7)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(background_overlay),5)">Skin.SetString(background_overlay,6)</onclick>

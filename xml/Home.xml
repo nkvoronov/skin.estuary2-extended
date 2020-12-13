@@ -41,7 +41,7 @@
 			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
 		</control>
 		<include content="DefaultBackground">
-			<param name="fanart_media" value="$VAR[HomeFanartMediaVar]" />
+			<param name="fanart_media" value="$VAR[HomeFanartVar]" />
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>

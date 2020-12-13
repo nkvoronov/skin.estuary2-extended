@@ -53,7 +53,7 @@
 				<control type="image">
 					<left>2.5%</left>
 					<top>100</top>
-					<width>94%</width>
+					<width>95%</width>
 					<height>220</height>
 					<texture border="21">dialogs/dialog-bg.png</texture>
 				</control>
@@ -71,7 +71,7 @@
 				<control type="button" id="20">
 					<left>2.5%</left>
 					<top>100</top>
-					<width>94%</width>
+					<width>95%</width>
 					<height>220</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -191,7 +191,7 @@
 			</include>
 			<include content="Widget-WeatherMapItem">
 				<param name="item_id" value="1" />
-				<param name="onup_id" value="15100" />
+				<param name="onup_id" value="15200" />
 				<param name="ondown_id" value="70020" />
 			</include>
 			<include content="Widget-WeatherMapItem">

@@ -10,7 +10,7 @@
 			<include>OpenClose_Right</include>
 			<control type="grouplist" id="5">
 				<description>Control Area</description>
-				<top>163</top>
+				<top>133</top>
 				<left>470</left>
 				<pagecontrol>60</pagecontrol>
 				<right>0</right>
@@ -22,7 +22,7 @@
 			</control>
 			<control type="image">
 				<left>470</left>
-				<top>160</top>
+				<top>130</top>
 				<right>0</right>
 				<height>2</height>
 				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
@@ -80,9 +80,9 @@
 			<control type="grouplist" id="3">
 				<description>button area</description>
 				<left>0</left>
-				<top>160</top>
+				<top>130</top>
 				<width>470</width>
-				<height>720</height>
+				<height>810</height>
 				<usecontrolcoords>true</usecontrolcoords>
 				<onleft>5</onleft>
 				<onright>5</onright>
@@ -92,7 +92,7 @@
 			<control type="button" id="10">
 				<description>Default Category Button</description>
 				<left>0</left>
-				<height>90</height>
+				<height>85</height>
 				<width>470</width>
 				<textoffsetx>40</textoffsetx>
 				<aligny>center</aligny>
@@ -127,7 +127,7 @@
 		</control>
 		<control type="group">
 			<right>0</right>
-			<top>163</top>
+			<top>133</top>
 			<bottom>137</bottom>
 			<width>60</width>
 			<control type="scrollbar" id="60">

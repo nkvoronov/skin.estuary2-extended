@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk_UA\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 msgctxt "#31000"
 msgid "Now playing"
@@ -155,7 +155,6 @@ msgstr "Ваш рейтинг"
 msgctxt "#31034"
 msgid "Extended info"
 msgstr "Додаткові відомості"
-
 msgctxt "#31035"
 msgid "Pages"
 msgstr "Стор."
@@ -166,7 +165,7 @@ msgstr "об'єктів"
 
 msgctxt "#31037"
 msgid "Selected track"
-msgstr ""
+msgstr "Вибраний трек"
 
 msgctxt "#31038"
 msgid "Rewind"
@@ -204,10 +203,6 @@ msgctxt "#31048"
 msgid "Available"
 msgstr "Доступно"
 
-msgctxt "#31050"
-msgid "Press [B]OK[/B] to stop"
-msgstr "Натисніть [B]OK[/B] для зупинки"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "відібрано"
@@ -217,8 +212,12 @@ msgid "Arial based"
 msgstr "Стиль Arial"
 
 msgctxt "#31054"
-msgid "Press [B]Left[/B] to rewind, or [B]Right[/B] to fast-forward"
+msgid "Press [B]Left[/B] to step back, or [B]Right[/B] to step forward"
 msgstr "Натисніть стрілку [B]ліворуч[/B] для перемотування назад або [B]праворуч[/B] для перемотування вперед"
+
+msgctxt "#31055"
+msgid "Press [B]Right[/B] to frame advance"
+msgstr "Натисніть [B]Вправо[/B], щоб перейти до кадру"
 
 msgctxt "#31056"
 msgid "Go to playlist"
@@ -239,13 +238,15 @@ msgstr ""
 msgctxt "#31060"
 msgid "Select + Start"
 msgstr ""
+
+
 msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Головне меню"
 
 msgctxt "#31062"
-msgid "Choose weather backgrounds pack"
-msgstr "Вибрати пакет фонів для погоди"
+msgid "Choose weather fanart pack"
+msgstr "Вибрати набір фанартів погоди"
 
 msgctxt "#31063"
 msgid "Sections"
@@ -281,11 +282,12 @@ msgstr "Налаштування живлення"
 
 msgctxt "#31073"
 msgid "Total length"
-msgstr ""
+msgstr "Загальна тривалість"
 
 msgctxt "#31074"
 msgid "Total duration"
-msgstr ""
+msgstr "Загальна тривалість"
+
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Кіноцикли"
@@ -313,10 +315,6 @@ msgstr "Налаштування візуалізації"
 msgctxt "#31089"
 msgid "Available groups"
 msgstr "Доступні групи"
-
-msgctxt "#31090"
-msgid "Search trailer"
-msgstr "Шукати трейлер"
 
 msgctxt "#31092"
 msgid "Video menu"
@@ -360,7 +358,7 @@ msgstr "Стіна"
 
 msgctxt "#31103"
 msgid "Enter text here..."
-msgstr "Уведіть текст..."
+msgstr "Уведіть текст"
 
 msgctxt "#31104"
 msgid "Your library is currently empty. In order to populate it with your personal media, enter \"Files\" section, add a media source and configure it. After the source has been added and indexed you will be able to browse your library."
@@ -398,10 +396,6 @@ msgctxt "#31114"
 msgid "Search YouTube"
 msgstr "Пошук на YouTube"
 
-msgctxt "#31115"
-msgid "Search TheMovieDB"
-msgstr "Пошук на TheMovieDB"
-
 msgctxt "#31116"
 msgid "Remove this main menu item"
 msgstr "Видалити цей елемент головного меню"
@@ -434,10 +428,6 @@ msgctxt "#31123"
 msgid "Same director"
 msgstr "Той же режисер"
 
-msgctxt "#31124"
-msgid "Show images on map"
-msgstr "Показувати зображення на карті"
-
 msgctxt "#31125"
 msgid "Press up for actor info"
 msgstr "Натисніть стрілку вгору для перегляду відомостей про актора"
@@ -463,8 +453,8 @@ msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Налаштування головного меню: налаштуйте головне меню згідно зі своїми уподобаннями."
 
 msgctxt "#31131"
-msgid "Choose home backgrounds pack"
-msgstr "Вибрати пакет фонів для головного екрану"
+msgid "Choose skin fanart pack"
+msgstr "Вибрати набір фанартів обкладинки"
 
 msgctxt "#31132"
 msgid "Select Program"
@@ -472,11 +462,15 @@ msgstr "Вибрати програму"
 
 msgctxt "#31133"
 msgid "Select Resolution"
-msgstr "Выберите разрешение"
+msgstr "Виберіть роздільна здатність"
 
 msgctxt "#31134"
 msgid "Remaining"
 msgstr "Залишилося"
+
+msgctxt "#31135"
+msgid "Binary"
+msgstr ""
 
 msgctxt "#31136"
 msgid "Click here to see latest changes..."
@@ -531,8 +525,8 @@ msgid "Categories"
 msgstr "Категорії"
 
 msgctxt "#31149"
-msgid "Choose genre backgrounds pack"
-msgstr "Вибрати пакет фонів для жанрів"
+msgid "Select genre fanart pack"
+msgstr "Вибрати набір фанартів жанрів"
 
 msgctxt "#31150"
 msgid "Repository"
@@ -605,6 +599,14 @@ msgstr "Аватар профілю"
 msgctxt "#31167"
 msgid "Animate background"
 msgstr "Анімований фон"
+
+msgctxt "#31168"
+msgid "Show posters instead of thumbs for musicvideos"
+msgstr "Показувати постери замість іконки для музичних кліпів"
+
+msgctxt "#31169"
+msgid "Artwork related settings."
+msgstr "Налаштування ілюстрацій."
 
 # EXTENDED ADDED VALUE
 
@@ -1303,3 +1305,11 @@ msgstr "Продовжується"
 msgctxt "#40326"
 msgid "Jump to letter"
 msgstr "Перейти до букви"
+
+msgctxt "#40327"
+msgid "Search TheMovieDB"
+msgstr "Пошук на TheMovieDB"
+
+msgctxt "#40328"
+msgid "Search trailer"
+msgstr "Шукати трейлер"

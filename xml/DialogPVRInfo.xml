@@ -46,7 +46,7 @@
 					<left>660</left>
 					<top>20</top>
 					<width>1050</width>
-					<height>420</height>
+					<height>425</height>
 					<align>left</align>
 					<label>$VAR[ListItemDateLabelVar]$VAR[ListItemStartTimeLabelVar]$VAR[ListItemExpirationDateTimeLabelVar]$VAR[ListItemGenreLabelVar]$VAR[ListItemWriterLabelVar]$VAR[ListItemDirectorLabelVar]$VAR[ListItemCastLabelVar][CR]$VAR[ListItemSeasonXEpisodeLabelVar] $INFO[ListItem.EpisodeName] $INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -125,7 +125,7 @@
 			</control>
 			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.Title] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]" />
-				<param name="sub_label" value="$VAR[FlagDashLabel][COLOR grey]$VAR[SeasonEpisodeLabel][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white][B],[/B][/COLOR]]" />
+				<param name="sub_label" value="$VAR[FlagDashLabelVar][COLOR grey]$VAR[SeasonEpisodeLabelVar][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white][B],[/B][/COLOR]]" />
 				<param name="posy" value="40" />
 			</include>
 		</control>
