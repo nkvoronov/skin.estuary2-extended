@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<onload>SetProperty(fanarthometype,settings,Home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
@@ -111,13 +111,13 @@
 						<label>LibreELEC</label>
 						<onclick>RunAddon(service.libreelec.settings)</onclick>
 						<icon>icons/settings/libreelec.png</icon>
-						<visible>System.HasAddon(service.libreelec.settings)</visible>
+						<visible>System.AddonIsEnabled(service.libreelec.settings)</visible>
 					</item>
 					<item>
 						<label>CoreELEC</label>
 						<onclick>RunAddon(service.coreelec.settings)</onclick>
 						<icon>extras/coreelec/coreelec.png</icon>
-						<visible>System.HasAddon(service.coreelec.settings)</visible>
+						<visible>System.AddonIsEnabled(service.coreelec.settings)</visible>
 					</item>
 				</content>
 			</control>

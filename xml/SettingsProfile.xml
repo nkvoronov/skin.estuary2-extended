@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>	
 	<onload>SetProperty(fanarthometype,settings,Home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group" id="9100">
