@@ -75,9 +75,10 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="ListLabel2Var">
-		<value condition="String.IsEmpty(Container.PluginName) + Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[556]) + !String.IsEmpty(ListItem.Property(TotalEpisodes))">[COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(WatchedEpisodes)][/COLOR] / [COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Property(TotalEpisodes)][/COLOR]</value>
-		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
-		<value condition="!String.IsEmpty(ListItem.Appearances)">$LOCALIZE[38026]: [COLOR $VAR[WhiteColorVar]]$INFO[ListItem.Appearances][/COLOR]</value>
+		<value condition="String.IsEmpty(Container.PluginName) + Container.Content(tvshows) + Container.SortMethod(7)">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
+		<value condition="Container.SortMethod(7)">$INFO[ListItem.Year]</value>
+		<value condition="!String.isempty(ListItem.Appearances)">$LOCALIZE[38026]: $INFO[ListItem.Appearances]</value>
+		<value condition="Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)">$INFO[ListItem.Duration]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 	<variable name="PlotTextBoxVar">
@@ -303,7 +304,7 @@
 	<variable name="ListSubLabelVar">
 		<value condition="ListItem.IsCollection"></value>
 		<value>[COLOR grey]$INFO[ListItem.Year, (,)][/COLOR]</value>
-	</variable>
+		</variable>
 	<variable name="VideoInfoMainLabelVar">
 		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]$VAR[ListItemYearLabelVar]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]$VAR[ListItemYearLabelVar]</value>

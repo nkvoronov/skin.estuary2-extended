@@ -89,7 +89,7 @@
 					<top>154</top>
 					<left>90</left>
 					<align>left</align>
-					<itemgap>-65</itemgap>
+					<itemgap>-90</itemgap>
 					<orientation>horizontal</orientation>
 					<include content="WeatherIcon">
 						<param name="label" value="Window(weather).Property(Current.Wind)" />
@@ -124,36 +124,40 @@
 						<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
 						<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
 					</include>
-					<control type="group">
-						<width>350</width>
-						<visible>Weather.IsFetched</visible>
-						<control type="label">
-							<top>10</top>
-							<align>right</align>
-							<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
-							<font>font14</font>
-							<scroll>true</scroll>
-						</control>
-						<control type="label">
-							<top>50</top>
-							<align>right</align>
-							<label>$INFO[Weather.Conditions]</label>
-							<font>font14</font>
-							<scroll>true</scroll>
-						</control>
+				</control>
+				<control type="group">
+					<top>160</top>
+					<left>1150</left>
+					<width>430</width>
+					<visible>Weather.IsFetched</visible>
+					<control type="label">
+						<top>10</top>
+						<align>left</align>
+						<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
+						<font>font14</font>
+						<scroll>true</scroll>
 					</control>
-					<control type="group">
-						<width>350</width>
-						<visible>Weather.IsFetched</visible>
-						<control type="label">
-							<top>40</top>
-							<aligny>center</aligny>
-							<height>24</height>
-							<align>right</align>
-							<font>WeatherTemp</font>
-							<label>$INFO[Weather.Temperature]</label>
-							<scroll>true</scroll>
-						</control>
+					<control type="label">
+						<top>50</top>
+						<align>left</align>
+						<label>$INFO[Weather.Conditions]</label>
+						<font>font14</font>
+						<scroll>true</scroll>
+					</control>
+				</control>
+				<control type="group">
+					<top>160</top>
+					<width>450</width>
+					<right>105</right>
+					<visible>Weather.IsFetched</visible>
+					<control type="label">
+						<top>40</top>
+						<aligny>center</aligny>
+						<height>24</height>
+						<align>right</align>
+						<font>WeatherTemp</font>
+						<label>$INFO[Weather.Temperature]</label>
+						<scroll>true</scroll>
 					</control>
 				</control>
 			</control>

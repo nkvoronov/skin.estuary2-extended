@@ -6,6 +6,7 @@
 			<include>HiddenObject</include>
 			<animation effect="fade" delay="500" time="0" start="100" end="0">Visible</animation>
 			<animation effect="fade" delay="500" time="0" start="100" end="0">WindowOpen</animation>
+			<onclick>noop</onclick>
 			<visible>Control.IsVisible(51)</visible>
 		</control>
 		<control type="group">
@@ -144,10 +145,10 @@
 			</control>
 		</control>
 		<control type="group">
-			<depth>DepthContentPopout</depth>
 			<top>200</top>
 			<height>670</height>
 			<left>70</left>
+			<depth>DepthContentPopout</depth>
 			<visible>Control.IsVisible(51)</visible>
 			<include>OpenClose_Left</include>
 			<include>Visible_Left</include>

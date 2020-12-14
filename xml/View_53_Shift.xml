@@ -98,6 +98,7 @@
 							</include>
 						</control>
 						<control type="image">
+							<depth>DepthContentPopout</depth>
 							<left>20</left>
 							<top>605</top>
 							<width>330</width>

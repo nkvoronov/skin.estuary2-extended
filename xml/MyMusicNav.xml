@@ -3,9 +3,9 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<menucontrol>9000</menucontrol>
+	<views>50,52,53,54,55,58,500</views>	
 	<onload>SetProperty(fanarthometype,music,Home)</onload>
 	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundMusicVar],Home)</onload>
-	<views>50,52,53,54,55,58,500</views>
 	<controls>
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[MediaFanartVar]" />

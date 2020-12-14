@@ -419,7 +419,6 @@
 			<control type="group" id="$PYTHON[22+int($SKINSHORTCUTS[id])]000">
 				<skinshortcuts>visibility</skinshortcuts>
 				<include content="Visible_Right_Delayed">
-					<param name="home" value="true"/>
 					<param name="id" value="$SKINSHORTCUTS[id]"/>
 				</include>
 				<control type="grouplist" id="$PYTHON[22+int($SKINSHORTCUTS[id])]001">
