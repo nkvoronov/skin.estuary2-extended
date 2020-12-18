@@ -71,10 +71,10 @@
 				<texturefocus />
 				<texturenofocus />
 				<label></label>
-				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="EEFFFFFF">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
-				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="EEFFFFFF">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="white7">dialogs/close.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="white7">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="white7">dialogs/close.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="white7">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
 				<onclick>Action(close)</onclick>
 			</control>
 		</control>

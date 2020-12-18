@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">52</defaultcontrol>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<views>50,52,55,500</views>
-	<menucontrol>9000</menucontrol>	
+	<menucontrol>9000</menucontrol>
 	<onload>SetProperty(fanarthometype,addons,Home)</onload>
 	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundAddonsVar],Home)</onload>
 	<controls>

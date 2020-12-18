@@ -72,7 +72,7 @@
 				<width>100%</width>
 				<height>16</height>
 				<info>Player.Progress</info>
-				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="border_alpha">colors/white50.png</texturebg>
 				<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
@@ -81,7 +81,7 @@
 				<top>50</top>
 				<width>100%</width>
 				<height>26</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
+				<texturesliderbar colordiffuse="white6">osd/progress/nub_bar.png</texturesliderbar>
 				<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
 				<info>Player.Seekbar</info>
@@ -118,7 +118,7 @@
 				<top>50</top>
 				<width>100%</width>
 				<height>26</height>
-				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
+				<texturesliderbar colordiffuse="white6">osd/progress/nub_bar.png</texturesliderbar>
 				<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
 				<info>PVR.TimeShiftSeekbar</info>
@@ -129,9 +129,9 @@
 				<top>55</top>
 				<width>100%</width>
 				<height>8</height>
-				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="white6">colors/white50.png</texturebg>
 				<lefttexture>colors/white.png</lefttexture>
-				<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
+				<midtexture colordiffuse="invalid">colors/white.png</midtexture>
 				<righttexture>colors/white.png</righttexture>
 				<info>Player.Cutlist</info>
 			</control>
@@ -140,7 +140,7 @@
 				<top>67</top>
 				<width>100%</width>
 				<height>4</height>
-				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+				<texturebg border="3" colordiffuse="white6">colors/white50.png</texturebg>
 				<righttexture>colors/white.png</righttexture>
 				<info>Player.Chapters</info>
 			</control>

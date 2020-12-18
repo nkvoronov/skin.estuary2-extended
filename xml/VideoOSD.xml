@@ -252,7 +252,7 @@
 					<left>0</left>
 					<width>100%</width>
 					<height>26</height>
-					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<texturesliderbar colordiffuse="white6">osd/progress/nub_leftright.png</texturesliderbar>
 					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>Player.Progress</info>

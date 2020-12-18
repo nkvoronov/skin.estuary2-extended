@@ -218,6 +218,12 @@
 			<param name="content_sortorder" value="descending"/>
 			<param name="list_id" value="$PARAM[control_id]400"/>
 		</include>
+		<include content="Widget-PVRGroups" condition="System.HasPVRAddon">
+			<param name="widget_header" value="$LOCALIZE[19173]"/>
+			<param name="content_target" value="tvguide"/>
+			<param name="content_path" value="pvr://channels/tv"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
+		</include>
 	</include>
 	<include name="include-RadioWidget">
 		<include content="Widget-RadioTimers">
@@ -239,6 +245,12 @@
 			<param name="content_sortby" value="date"/>
 			<param name="content_sortorder" value="descending"/>
 			<param name="list_id" value="$PARAM[control_id]400"/>
+		</include>
+		<include content="Widget-PVRGroups" condition="System.HasPVRAddon">
+			<param name="widget_header" value="$LOCALIZE[19174]"/>
+			<param name="content_target" value="radioguide"/>
+			<param name="content_path" value="pvr://channels/radio"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
 		</include>
 	</include>
 	<include name="include-FavouritesWidget">

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
+	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
 	<onload>SetProperty(fanarthometype,settings,Home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
-	<onload condition="String.IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,1)</onload>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onunload>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group" id="10000">
@@ -286,8 +286,9 @@
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43016]</label>
 					<label2>$VAR[SkinSettingSpinnerVar]</label2>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-					<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=busytexture)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.skin.helper.service)">RunScript(script.skin.helper.service,action=busytexture)</onclick>
+					<onclick condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">EnableAddon(script.skinshortcuts)</onclick>
+					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 				</control>
 				<control type="image" id="220">
 					<description>Separator Image</description>
@@ -503,22 +504,25 @@
 					<description>Manage Main Menu</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40313]</label>
+					<onclick condition="System.AddonIsEnabled(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+					<onclick condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">EnableAddon(script.skinshortcuts)</onclick>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
-					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
 				</control>
 				<control type="button" id="307">
 					<description>Manage Power Menu</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40315]</label>
+					<onclick condition="System.AddonIsEnabled(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+					<onclick condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">EnableAddon(script.skinshortcuts)</onclick>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
-					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
 				</control>
 				<control type="button" id="308">
 					<description>Reset Main Menu</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[40314]</label>
+					<onclick condition="System.AddonIsEnabled(script.skinshortcuts)">RunScript(script.skinshortcuts,type=resetall)</onclick>
+					<onclick condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">EnableAddon(script.skinshortcuts)</onclick>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
-					<onclick condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=resetall)</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
 					<param name="control_id1" value="309" />
@@ -975,7 +979,6 @@
 					<description>Enable Global Search</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43072]</label>
-					<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 					<onclick>Skin.ToggleSetting(enable_globalsearch)</onclick>
 					<selected>Skin.HasSetting(enable_globalsearch)</selected>
 				</control>
@@ -983,7 +986,9 @@
 					<description>Settings Global Search</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
-					<onclick>Addon.OpenSettings(script.globalsearch)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
+					<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
+					<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 					<enable>Skin.HasSetting(enable_globalsearch)</enable>
 				</control>
 				<control type="image" id="704">
@@ -1000,7 +1005,6 @@
 					<description>Enable ExtendedInfo Search</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43072]</label>
-					<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 					<onclick>Skin.ToggleSetting(enable_extendedinfo)</onclick>
 					<selected>Skin.HasSetting(enable_extendedinfo)</selected>
 				</control>
@@ -1008,7 +1012,9 @@
 					<description>Settings ExtendedInfo</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
-					<onclick>Addon.OpenSettings(script.extendedinfo)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
+					<onclick condition="System.HasAddon(script.extendedinfo) + !System.AddonIsEnabled(script.extendedinfo)">EnableAddon(script.extendedinfo)</onclick>
+					<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 					<enable>Skin.HasSetting(enable_extendedinfo)</enable>
 				</control>
 				<control type="image" id="708">
@@ -1025,7 +1031,6 @@
 					<description>Enable Simple Playlists</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43072]</label>
-					<onclick condition="!System.HasAddon(script.simpleplaylists)">InstallAddon(script.simpleplaylists)</onclick>
 					<onclick>Skin.ToggleSetting(enable_watchitlater)</onclick>
 					<selected>Skin.HasSetting(enable_watchitlater)</selected>
 				</control>
@@ -1033,7 +1038,9 @@
 					<description>Settings Simple Playlists</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
-					<onclick>Addon.OpenSettings(script.simpleplaylists)</onclick>
+					<onclick condition="System.AddonIsEnabled(script.simpleplaylists)">Addon.OpenSettings(script.simpleplaylists)</onclick>
+					<onclick condition="System.HasAddon(script.simpleplaylists) + !System.AddonIsEnabled(script.simpleplaylists)">EnableAddon(script.simpleplaylists)</onclick>
+					<onclick condition="!System.HasAddon(script.simpleplaylists)">InstallAddon(script.simpleplaylists)</onclick>
 					<enable>Skin.HasSetting(enable_watchitlater)</enable>
 				</control>
 				<control type="image" id="712">
@@ -1052,14 +1059,15 @@
 					<label>$LOCALIZE[44113]</label>
 					<onclick>Skin.ToggleSetting(lrclyrics_alternative_view)</onclick>
 					<selected>Skin.HasSetting(lrclyrics_alternative_view)</selected>
-					<enable>System.HasAddon(script.cu.lrclyrics)</enable>
+					<enable>System.AddonIsEnabled(script.cu.lrclyrics)</enable>
 				</control>
 				<control type="button" id="715">
 					<description>Settings CU LRC Lyrics</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
+					<onclick condition="System.AddonIsEnabled(script.cu.lrclyrics)">Addon.OpenSettings(script.cu.lrclyrics)</onclick>
+					<onclick condition="System.HasAddon(script.cu.lrclyrics) + !System.AddonIsEnabled(script.cu.lrclyrics)">EnableAddon(script.cu.lrclyrics)</onclick>
 					<onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
-					<onclick>Addon.OpenSettings(script.cu.lrclyrics)</onclick>
 				</control>
 				<control type="image" id="716">
 					<description>Separator Image</description>
@@ -1075,8 +1083,9 @@
 					<description>Settings Skin Shortcuts</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[24020]</label>
+					<onclick condition="System.AddonIsEnabled(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
+					<onclick condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">EnableAddon(script.skinshortcuts)</onclick>
 					<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
-					<onclick>Addon.OpenSettings(script.skinshortcuts)</onclick>
 				</control>
 				<control type="image" id="719">
 					<description>Separator Image</description>
@@ -1092,7 +1101,6 @@
 					<description>Enable SmartShortcuts Playlists</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43006]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick>Skin.ToggleSetting(smartshortcuts_playlists)</onclick>
 					<selected>Skin.HasSetting(smartshortcuts_playlists)</selected>
 				</control>
@@ -1100,7 +1108,6 @@
 					<description>Enable SmartShortcuts Favourites</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43007]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick>Skin.ToggleSetting(smartshortcuts_favourites)</onclick>
 					<selected>Skin.HasSetting(smartshortcuts_favourites)</selected>
 				</control>
@@ -1109,7 +1116,6 @@
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44126]</label>
 					<label2>$VAR[ShowInfoAtPlaybackStartVar]</label2>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick>Skin.SetNumeric(SkinHelper.ShowInfoAtPlaybackStart)</onclick>
 				</control>
 				<control type="button" id="724">
@@ -1117,7 +1123,6 @@
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44127]</label>
 					<label2>$VAR[AutoCloseVideoOSDVar]</label2>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick>Skin.SetNumeric(SkinHelper.AutoCloseVideoOSD)</onclick>
 				</control>
 				<control type="button" id="725">
@@ -1125,21 +1130,20 @@
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44128]</label>
 					<label2>$VAR[AutoCloseMusicOSDVar]</label2>
-					<onclick condition="!System.HasAddon(script.skin.helper.backgrounds)">InstallAddon(script.skin.helper.backgrounds)</onclick>
 					<onclick>Skin.SetNumeric(SkinHelper.AutoCloseMusicOSD)</onclick>
 				</control>
 				<control type="button" id="726">
 					<description>Settings Skin Helper Service Art Utils</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[44134]</label>
+					<onclick condition="System.AddonIsEnabled(script.module.metadatautils)">Addon.OpenSettings(script.module.metadatautils)</onclick>
+					<onclick condition="System.HasAddon(script.module.metadatautils) + !System.AddonIsEnabled(script.module.metadatautils)">EnableAddon(script.module.metadatautils)</onclick>
 					<onclick condition="!System.HasAddon(script.module.metadatautils)">InstallAddon(script.module.metadatautils)</onclick>
-					<onclick>Addon.OpenSettings(script.module.metadatautils)</onclick>
 				</control>
 				<control type="radiobutton" id="727">
 					<description>Enable Animated Posters</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43008]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick>Skin.ToggleSetting(animated_posters)</onclick>
 					<selected>Skin.HasSetting(animated_posters)</selected>
 				</control>
@@ -1147,7 +1151,6 @@
 					<description>Enable Animated Fanarts</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44116]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick>Skin.ToggleSetting(animated_fanarts)</onclick>
 					<selected>Skin.HasSetting(animated_fanarts)</selected>
 				</control>
@@ -1155,7 +1158,6 @@
 					<description>Enable PVR Thumbs</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44131]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick>Skin.ToggleSetting(enable_pvr_thumbs)</onclick>
 					<selected>Skin.HasSetting(enable_pvr_thumbs)</selected>
 				</control>
@@ -1163,7 +1165,6 @@
 					<description>Enable Music Art</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44132]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick>Skin.ToggleSetting(enable_music_art)</onclick>
 					<selected>Skin.HasSetting(enable_music_art)</selected>
 				</control>
@@ -1171,7 +1172,6 @@
 					<description>Enable Extended Art</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44133]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 					<onclick>Skin.ToggleSetting(enable_extended_art)</onclick>
 					<selected>Skin.HasSetting(enable_extended_art)</selected>
 				</control>
@@ -1179,14 +1179,14 @@
 					<description>Settings Skin Helper Service Backgrounds</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[44135]</label>
+					<onclick condition="System.AddonIsEnabled(script.skin.helper.backgrounds)">Addon.OpenSettings(script.skin.helper.backgrounds)</onclick>
+					<onclick condition="System.HasAddon(script.skin.helper.backgrounds) + !System.AddonIsEnabled(script.skin.helper.backgrounds)">EnableAddon(script.skin.helper.backgrounds)</onclick>
 					<onclick condition="!System.HasAddon(script.skin.helper.backgrounds)">InstallAddon(script.skin.helper.backgrounds)</onclick>
-					<onclick>Addon.OpenSettings(script.skin.helper.backgrounds)</onclick>
 				</control>
 				<control type="radiobutton" id="733">
 					<description>Enable Wall Backgrounds</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[44114]</label>
-					<onclick condition="!System.HasAddon(script.skin.helper.backgrounds)">InstallAddon(script.skin.helper.backgrounds)</onclick>
 					<onclick>Skin.ToggleSetting(wall_backgrounds)</onclick>
 					<selected>Skin.HasSetting(wall_backgrounds)</selected>
 				</control>
@@ -1202,15 +1202,17 @@
 					<description>Settings Skin Helper Service Widgets</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[44136]</label>
+					<onclick condition="System.HasAddon(script.skin.helper.widgets)">Addon.OpenSettings(script.skin.helper.widgets)</onclick>
+					<onclick condition="System.HasAddon(script.skin.helper.widgets) + !System.AddonIsEnabled(script.skin.helper.widgets)">EnableAddon(script.skin.helper.widgets)</onclick>
 					<onclick condition="!System.HasAddon(script.skin.helper.widgets)">InstallAddon(script.skin.helper.widgets)</onclick>
-					<onclick>Addon.OpenSettings(script.skin.helper.widgets)</onclick>
 				</control>
 				<control type="button" id="736">
 					<description>Settings Skin Helper Service Skin Backup</description>
 					<include>DefaultSettingButton</include>
 					<label>- $LOCALIZE[44137]</label>
+					<onclick condition="System.AddonIsEnabled(script.skin.helper.skinbackup)">Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
+					<onclick condition="System.HasAddon(script.skin.helper.skinbackup) + !System.AddonIsEnabled(script.skin.helper.skinbackup)">EnableAddon(script.skin.helper.skinbackup)</onclick>
 					<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
-					<onclick>Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
 				</control>
 				<include content="ResetSkinSettingsParams">
 					<param name="control_id1" value="737" />
@@ -1239,8 +1241,9 @@
 					<description>Reset Skin</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[10045]</label>
+					<onclick condition="System.AddonIsEnabled(script.skin.helper.service)">RunScript(script.skin.helper.service,action=reset)</onclick>
+					<onclick condition="System.HasAddon(script.skin.helper.service) + !System.AddonIsEnabled(script.skin.helper.service)">EnableAddon(script.skin.helper.service)</onclick>
 					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-					<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=reset)</onclick>
 				</control>
 				<control type="image" id="803">
 					<description>Separator Image</description>
@@ -1256,15 +1259,17 @@
 					<description>Create Backup</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43030]</label>
+					<onclick condition="System.AddonIsEnabled(script.skin.helper.service)">RunScript(script.skin.helper.service,action=backup)</onclick>
+					<onclick condition="System.HasAddon(script.skin.helper.service) + !System.AddonIsEnabled(script.skin.helper.service)">EnableAddon(script.skin.helper.service)</onclick>
 					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-					<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=backup)</onclick>
 				</control>
 				<control type="button" id="806">
 					<description>Restore Backup</description>
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[43031]</label>
+					<onclick condition="System.AddonIsEnabled(script.skin.helper.service)">RunScript(script.skin.helper.service,action=restore)</onclick>
+					<onclick condition="System.HasAddon(script.skin.helper.service) + !System.AddonIsEnabled(script.skin.helper.service)">EnableAddon(script.skin.helper.service)</onclick>
 					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-					<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=restore)</onclick>
 				</control>
 			</control>
 			<control type="image">

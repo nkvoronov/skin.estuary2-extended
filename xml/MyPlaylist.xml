@@ -2,10 +2,10 @@
 <window>
 	<defaultcontrol always="true">55</defaultcontrol>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
-	<onload>SetProperty(fanarthometype,video,Home)</onload>
-	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundVideosVar],Home)</onload>
 	<menucontrol>9000</menucontrol>
 	<views>55,503</views>
+	<onload>SetProperty(fanarthometype,video,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(homebackground))">SetProperty(homebackground,$VAR[BackgroundVideosVar],Home)</onload>
 	<controls>
 		<include content="DefaultBackground">
 			<param name="fanart_media" value="$VAR[MediaFanartVar]" />

@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<views>50,51,52,53,54,55,56,57,58,500,501,502</views>
-	<menucontrol>9000</menucontrol>	
+	<menucontrol>9000</menucontrol>
 	<onload condition="String.IsEmpty(Window(Home).Property(fanarthometype)) | ![String.IsEqual(window(Home).Property(fanarthometype),movies) | String.IsEqual(window(Home).Property(fanarthometype),tvshows) | String.IsEqual(window(Home).Property(fanarthometype),musicvideos)]">SetProperty(fanarthometype,video,Home)</onload>
 	<onload condition="String.IsEmpty(Window(Home).Property(homebackground)) | ![String.IsEqual(window(Home).Property(fanarthometype),movies) | String.IsEqual(window(Home).Property(fanarthometype),tvshows) | String.IsEqual(window(Home).Property(fanarthometype),musicvideos)]">SetProperty(homebackground,$VAR[BackgroundVideosVar],Home)</onload>
 	<controls>

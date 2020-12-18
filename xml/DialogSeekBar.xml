@@ -116,32 +116,6 @@
 						<param name="label" value="$INFO[MusicPlayer.BitsPerSample, ,bit]" />
 					</include>
 				</control>
-				<control type="label">
-					<centertop>145</centertop>
-					<right>20</right>
-					<width>400</width>
-					<height>100</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13</font>
-					<wrapmultiline>true</wrapmultiline>
-					<animation effect="fade" time="200">VisibleChange</animation>
-					<label>$VAR[PlayerTimeRemainingLabelVar]</label>
-					<visible>![Player.ShowInfo | Window.IsVisible(playerprocessinfo) | VideoPlayer.HasEpg] + !Window.IsActive(fullscreeninfo)</visible>
-				</control>
-				<control type="label">
-					<centertop>125</centertop>
-					<right>20</right>
-					<width>400</width>
-					<height>100</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13</font>
-					<wrapmultiline>true</wrapmultiline>
-					<animation effect="fade" time="200">VisibleChange</animation>
-					<label>$VAR[PVREpgEventRemainingTimeLabelVar]</label>
-					<visible>![Player.ShowInfo | Window.IsVisible(playerprocessinfo)] + VideoPlayer.HasEpg + !Window.IsActive(fullscreeninfo)</visible>
-				</control>
 			</control>
 			<control type="label">
 				<centerleft>50%</centerleft>

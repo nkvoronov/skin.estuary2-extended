@@ -157,6 +157,18 @@
 			<param name="visible" value="System.HasPVRAddon"/>
 		</include>
 	</include>
+	<include name="Widget-PVRGroups">
+		<include content="Widget-Channels">
+			<param name="widget_header" value="$PARAM[widget_header]"/>
+			<param name="widget_header_focus" value="$PARAM[widget_header_focus]"/>
+			<param name="content_target" value="$PARAM[content_target]"/>
+			<param name="content_path" value="$PARAM[content_path]"/>
+			<param name="content_sortby" value="$PARAM[content_sortby]"/>
+			<param name="content_sortorder" value="$PARAM[content_sortorder]"/>
+			<param name="list_id" value="$PARAM[list_id]"/>
+			<param name="visible" value="System.HasPVRAddon"/>
+		</include>
+	</include>
 	<include name="Widget-PVRChannelsCustom">
 		<include content="Widget-Channels">
 			<param name="widget_header" value="$PARAM[widget_header]"/>

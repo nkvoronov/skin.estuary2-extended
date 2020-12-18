@@ -203,7 +203,7 @@
 						<texture colordiffuse="$VAR[WhiteColorVar]">$VAR[PlayerControlsRepeatImageVar]</texture>
 					</control>
 				</control>
-				<control type="radiobutton" id="607">
+				<control type="radiobutton" id="70054">
 					<textureradioonfocus colordiffuse="$VAR[WhiteColorVar]">osd/fullscreen/buttons/random-on.png</textureradioonfocus>
 					<textureradioonnofocus>osd/fullscreen/buttons/random-on.png</textureradioonnofocus>
 					<textureradioofffocus colordiffuse="$VAR[WhiteColorVar]">osd/fullscreen/buttons/random-off.png</textureradioofffocus>

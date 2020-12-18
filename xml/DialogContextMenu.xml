@@ -52,7 +52,7 @@
 					<texturenofocus />
 					<label>$LOCALIZE[40323]</label>
 					<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
-					<visible>Skin.HasSetting(enable_watchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
+					<visible>System.AddonIsEnabled(script.simpleplaylists) + Skin.HasSetting(enable_watchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
 				</control>
 				<control type="button" id="3001">
 					<description>Jump To Letter</description>
@@ -74,7 +74,7 @@
 					<texturenofocus />
 					<label>$LOCALIZE[31034]</label>
 					<onclick>RunScript(script.extendedinfo,info=openinfodialogmenu)</onclick>
-					<visible>System.HasAddon(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + !System.HasAddon(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)]</visible>
+					<visible>System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo) + !System.AddonIsEnabled(context.extendedinfo.dialog) + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,actor) | String.IsEqual(ListItem.dbtype,director)]</visible>
 				</control>
 			</control>
 			<include content="UpDownArrows">

@@ -119,7 +119,7 @@
 						<param name="label" value="$LOCALIZE[31114]" />
 						<param name="onclick_1" value="Action(close)" />
 						<param name="onclick_2" value="RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Title])" />
-						<param name="visible" value="System.hasAddon(script.extendedinfo)" />
+						<param name="visible" value="System.AddonIsEnabled(script.extendedinfo) + Skin.HasSetting(enable_extendedinfo)" />
 					</include>
 				</control>
 			</control>

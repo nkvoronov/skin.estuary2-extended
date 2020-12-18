@@ -2284,7 +2284,7 @@
 						<width max="537">auto</width>
 						<height>99</height>
 						<aspectratio align="bottom" aligny="center">keep</aspectratio>
-						<texture background="true">$VAR[LibraryBannerVar]</texture>
+						<texture background="true">$VAR[BannerVar]</texture>
 						<bordertexture>colors/white.png</bordertexture>
 						<bordersize>1</bordersize>
 						<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album)</visible>
