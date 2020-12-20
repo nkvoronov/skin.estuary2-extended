@@ -52,7 +52,7 @@
 						<top>7</top>
 						<width>110</width>
 						<height>110</height>
-						<texture>$VAR[InfoWallThumbVar]</texture>
+						<texture fallback="DefaultAddSource.png">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -88,7 +88,7 @@
 						<top>7</top>
 						<width>110</width>
 						<height>110</height>
-						<texture>$VAR[InfoWallThumbVar]</texture>
+						<texture fallback="DefaultAddSource.png">$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -141,10 +141,10 @@
 					<param name="id" value="5" />
 					<param name="label" value="" />
 				</include>
-				<include content="DefaultDialogButton">
+				<!-- <include content="DefaultDialogButton">
 					<param name="id" value="8" />
 					<param name="label" value="" />
-				</include>
+				</include> -->
 				<include content="DefaultDialogButton">
 					<param name="id" value="7" />
 					<param name="label" value="$LOCALIZE[222]" />
