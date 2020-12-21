@@ -129,21 +129,24 @@
 					</control>
 					<control type="group">
 						<animation effect="slide" start="0,0" end="0,-295" time="0" condition="Integer.IsEqual(Container(50).NumItems,0)">Conditional</animation>
-						<visible>[Integer.IsEqual(Container(50).NumItems,0) + !String.IsEmpty(Control.GetLabel(400))]</visible>
-						<control type="image">
-							<left>-18</left>
-							<top>20</top>
-							<width>1154</width>
-							<height>277</height>
-							<aspectratio aligny="top">scale</aspectratio>
-							<texture>$INFO[ListItem.Art(fanart)]</texture>
-						</control>
-						<control type="image">
-							<left>-18</left>
-							<top>20</top>
-							<width>1154</width>
-							<height>277</height>
-							<texture>$VAR[BannerVar]</texture>
+						<visible>Integer.IsEqual(Container(50).NumItems,0)</visible>
+						<control type="group">
+							<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
+							<control type="image">
+								<left>-18</left>
+								<top>20</top>
+								<width>1154</width>
+								<height>277</height>
+								<aspectratio aligny="top">scale</aspectratio>
+								<texture>$INFO[ListItem.Art(fanart)]</texture>
+							</control>
+							<control type="image">
+								<left>-18</left>
+								<top>20</top>
+								<width>1154</width>
+								<height>277</height>
+								<texture>$VAR[BannerVar]</texture>
+							</control>
 						</control>
 						<control type="group">
 							<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
@@ -583,6 +586,16 @@
 					<param name="id" value="33335" />
 				</include>
 			</control>
+		</control>
+		<control type="group">
+			<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
+			<centerleft>50%</centerleft>
+			<width>1920</width>
+			<bottom>0</bottom>
+			<height>70</height>
+			<include condition="!Skin.HasSetting(hide_mediaflags_info)">MediaFlags</include>
 		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
 	</controls>
