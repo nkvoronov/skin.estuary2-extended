@@ -280,7 +280,7 @@
 				<top>10</top>
 				<right>240</right>
 				<height>160</height>
-				<label fallback="19055">$INFO[VideoPlayer.Plot]</label>
+				<label>$INFO[VideoPlayer.Plot]</label>
 				<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 				<visible>!String.IsEmpty(PVR.EpgEventIcon)</visible>
 			</control>
@@ -358,8 +358,9 @@
 				<itemgap>10</itemgap>
 				<control type="textbox">
 					<height>250</height>
-					<label fallback="10005">$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
+					<label>$INFO[VideoPlayer.Tagline,[B],[/B][CR]]$INFO[VideoPlayer.Plot]</label>
 					<align>left</align>
+					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
 					<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
 				</control>
 				<control type="textbox">
@@ -368,7 +369,7 @@
 					<aligny>center</aligny>
 					<font>font27</font>
 					<textcolor>white8</textcolor>
-					<label>$LOCALIZE[10005]</label>
+					<label>$LOCALIZE[19055]</label>
 					<visible>String.IsEmpty(VideoPlayer.Plot)</visible>
 				</control>
 				<control type="label">

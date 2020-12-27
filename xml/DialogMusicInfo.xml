@@ -73,6 +73,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font45_title</font>
+							<textcolor>white8</textcolor>
 							<label>$LOCALIZE[19055]</label>
 						</control>
 					</control>
@@ -123,6 +124,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font45_title</font>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 							</control>
 						</control>
@@ -166,6 +168,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<font>font45_title</font>
+								<textcolor>white8</textcolor>
 								<label>$LOCALIZE[19055]</label>
 							</control>
 						</control>
