@@ -1310,7 +1310,7 @@ msgstr "Перейти к букве"
 
 msgctxt "#40327"
 msgid "Search TheMovieDB"
-msgstr "Поиск TheMovieDB"
+msgstr "Искать в TheMovieDB"
 
 msgctxt "#40328"
 msgid "Search trailer"

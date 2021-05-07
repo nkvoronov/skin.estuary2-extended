@@ -43,7 +43,7 @@
 	<constant name="list_y_offset">0</constant>
 	<constant name="list_item_height">80</constant>
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</expression>
-	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131) | Window.IsActive(MyPlaylist.xml)</expression>
+	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131)</expression>
 	<expression name="fanart_visible">Window.IsActive(skinsettings) | Window.IsActive(Custom_1100_AddonLauncher.xml)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
@@ -325,11 +325,12 @@
 				<top>0</top>
 				<height>70</height>
 				<align>right</align>
-				<itemgap>10</itemgap>
+				<itemgap>28</itemgap>
 				<width>1900</width>
+				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<visible>$PARAM[visible]</visible>
-				<animation effect="slide" start="0,0" end="140,0" time="0" condition="![String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,set) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,artist) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,album)]">Conditional</animation>				
+				<!--<animation effect="slide" start="0,0" end="20,0" time="0" condition="![String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,set) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,artist) | String.IsEqual($PARAM[infolabel_prefix]ListItem.DBtype,album)]">Conditional</animation> -->				
 				<include content="InfoFlag">
 					<param name="top" value="10" />
 					<param name="width" value="170" />
@@ -546,7 +547,7 @@
 				<include content="Visible_Right_Delayed">
 					<param name="id" value="$PARAM[id]"/>
 				</include>
-				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),$PARAM[id])</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),$PARAM[id])</visible>
 				<control type="group">
 					<visible>Integer.IsGreater(Container($PARAM[group_id]50).NumItems,0) | Container($PARAM[group_id]50).IsUpdating</visible>
 					<control type="panel" id="$PARAM[group_id]50">
@@ -873,49 +874,18 @@
 					<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 				</control>
 				<control type="grouplist">
-					<left>35</left>
-					<description>Left Side Of Top Bar</description>
-					<width>1400</width>
-					<top>-7</top>
-					<height>100</height>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-					<animation effect="slide" end="0,16" time="200" reversible="true" condition="String.IsEmpty(Control.GetLabel(18900))">Conditional</animation>
-					<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
-					<control type="label">
-						<label>$PARAM[breadcrumbs_label]</label>
-						<include>BreadcrumbsLabel</include>
-					</control>
-					<control type="label">
-						<label>$INFO[Container.ShowTitle, / ]</label>
-						<include>BreadcrumbsLabel</include>
-						<visible>!String.IsEmpty(Container.ShowTitle) + !String.IsEqual(Container.ShowTitle,Container.FolderName)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Container.FolderName, / ]</label>
-						<include>BreadcrumbsLabel</include>
-						<visible>![Container.Content() + Window.IsActive(videos)]</visible>
-						<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
-						<visible>$PARAM[show_container]</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Container.PluginCategory, / ]</label>
-						<include>BreadcrumbsLabel</include>
-						<visible>!String.IsEmpty(Container.PluginCategory)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Control.GetLabel(10),: ]</label>
-						<include>BreadcrumbsLabel</include>
-						<visible>!String.IsEqual(Control.GetLabel(10),$LOCALIZE[16100]) + Window.IsActive(videos)</visible>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<label>($LOCALIZE[31052])</label>
-						<include>BreadcrumbsLabel</include>
-						<visible>Container.Filtered</visible>
-					</control>
+					<width>900</width>
+					<include content="TopBarLabels">
+						<param name="breadcrumbs_label" value="$PARAM[breadcrumbs_label]" />
+					</include>
+					<visible>Player.HasMedia</visible>
+				</control>
+				<control type="grouplist">
+					<width>1800</width>
+					<include content="TopBarLabels">
+						<param name="breadcrumbs_label" value="$PARAM[breadcrumbs_label]" />
+					</include>
+					<visible>!Player.HasMedia</visible>
 				</control>
 				<control type="button">
 					<top>0</top>
@@ -978,7 +948,7 @@
 						</control>
 						<control type="label" id="7700">
 							<label>$VAR[NowPlayingSublabelVar]</label>
-							<left>-45</left>
+							<left>-44</left>
 							<top>44</top>
 							<font>font12</font>
 							<textcolor>$VAR[GreyColorVar]</textcolor>
@@ -986,6 +956,7 @@
 							<height>25</height>
 							<width>630</width>
 							<align>right</align>
+							<scroll>true</scroll>
 						</control>
 					</control>
 					<control type="group">
@@ -1095,6 +1066,49 @@
 			</control>
 			<include condition="Skin.HasSetting(touchmode) + !Window.IsActive(Home)">TouchBackButton</include>
 		</definition>
+	</include>
+	<include name="TopBarLabels">
+		<left>35</left>
+		<description>Left side of top bar</description>
+		<top>-7</top>
+		<height>100</height>
+		<orientation>horizontal</orientation>
+		<usecontrolcoords>true</usecontrolcoords>
+		<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		<animation effect="slide" end="0,16" time="200" reversible="true" condition="String.IsEmpty(Control.GetLabel(18900))">Conditional</animation>
+		<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
+		<control type="label">
+			<label>$PARAM[breadcrumbs_label]</label>
+			<include>BreadcrumbsLabel</include>
+		</control>
+		<control type="label">
+			<label>$INFO[Container.ShowTitle, / ]</label>
+			<include>BreadcrumbsLabel</include>
+			<visible>!String.IsEmpty(Container.ShowTitle) + !String.IsEqual(Container.ShowTitle,Container.FolderName)</visible>
+		</control>
+		<control type="label">
+			<label>$INFO[Container.FolderName, / ]</label>
+			<include>BreadcrumbsLabel</include>
+			<visible>![Container.Content() + Window.IsActive(videos)]</visible>
+			<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
+		</control>
+		<control type="label">
+			<label>$INFO[Container.PluginCategory, / ]</label>
+			<include>BreadcrumbsLabel</include>
+			<visible>!String.isempty(Container.PluginCategory)</visible>
+		</control>
+		<control type="label">
+			<label>$INFO[Control.GetLabel(10),: ]</label>
+			<include>BreadcrumbsLabel</include>
+			<visible>!String.IsEqual(Control.GetLabel(10),$LOCALIZE[16100]) + Window.IsActive(videos)</visible>
+		</control>
+		<control type="label">
+			<left>10</left>
+			<label>($LOCALIZE[31052])</label>
+			<include>BreadcrumbsLabel</include>
+			<visible>Container.Filtered</visible>
+		</control>
 	</include>
 	<include name="BreadcrumbsLabel">
 		<font>font45</font>
@@ -1282,7 +1296,7 @@
 						<texturenofocus />
 					</control>
 				</control>
-				<include>TouchButtons</include>
+				<include condition="Skin.HasSetting(touchmode)">TouchButtons</include>
 			</control>
 		</definition>
 	</include>
@@ -1620,5 +1634,4 @@
 			</control>
 		</focusedlayout>
 	</include>
-
 </includes>

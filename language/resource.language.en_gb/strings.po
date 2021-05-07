@@ -257,7 +257,7 @@ msgctxt "#31048"
 msgid "Available"
 msgstr ""
 
-#empty strings with id 31049 to 31051
+#empty strings from id 31049 to 31051
 
 #: /xml/Includes.xml
 msgctxt "#31052"
@@ -515,7 +515,7 @@ msgctxt "#31113"
 msgid "Search local library"
 msgstr ""
 
-#: /xml/Custom_1107_SearchDialog.xml /xml/DialogMusicInfo.xml
+#: /xml/Custom_1107_SearchDialog.xml
 msgctxt "#31114"
 msgid "Search YouTube"
 msgstr ""

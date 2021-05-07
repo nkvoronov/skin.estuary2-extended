@@ -28,7 +28,7 @@
 				<height>300</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>99FFFFFF</textcolor>
+				<textcolor>videoinfopatch</textcolor>
 				<font>font14</font>
 				<label>$LOCALIZE[31098]</label>
 			</control>
@@ -65,7 +65,7 @@
 						<font>font27</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>99FFFFFF</textcolor>
+						<textcolor>videoinfopatch</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout width="384" height="300">

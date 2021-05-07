@@ -528,12 +528,14 @@
 		</node>
 		<node label="19020" condition="PVR.HasTVChannels + String.IsEmpty(Window(home).Property(WidgetVisibility))">
 			<shortcut label="31016" type="19020" icon="DefaultPVRChannels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
+			<shortcut label="19173" type="19020" icon="DefaultPVRGuide.png" widget="Library" widgetType="pvrgroup" widgetTarget="tvguide">pvr://channels/tv</shortcut>
 			<shortcut label="31015" type="19020" icon="DefaultPVRRecordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
 			<shortcut label="19040" type="19020" icon="DefaultPVRTimers.png" widget="Library" widgetType="tvtimer" widgetTarget="pvr">TVTimers</shortcut>
 			<shortcut label="43241" type="19020" icon="DefaultPVRChannels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">CustomChannelsTV</shortcut>
 		</node>
 		<node label="19021" condition="PVR.HasRadioChannels + String.IsEmpty(Window(home).Property(WidgetVisibility))">
 			<shortcut label="31018" type="19021" icon="DefaultPVRChannels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
+			<shortcut label="19174" type="19020" icon="DefaultPVRGuide.png" widget="Library" widgetType="pvrgroup" widgetTarget="radioguide">pvr://channels/radio</shortcut>
 			<shortcut label="31015" type="19021" icon="DefaultPVRRecordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
 			<shortcut label="19040" type="19021" icon="DefaultPVRTimers.png" widget="Library" widgetType="radiotimer" widgetTarget="pvr">RadioTimers</shortcut>
 			<shortcut label="43242" type="19021" icon="DefaultPVRChannels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>

@@ -436,8 +436,9 @@
 				<description>Reset Section</description>
 				<include>DefaultSettingButton</include>
 				<label>$LOCALIZE[10041]</label>
+				<onclick condition="System.AddonIsEnabled(script.skin.helper.service)">RunScript(script.skin.helper.service,action=dialogyesno,header=$PARAM[header],message=$PARAM[text],yesaction=$PARAM[action])</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.service) + !System.AddonIsEnabled(script.skin.helper.service)">EnableAddon(script.skin.helper.service)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=dialogyesno,header=$PARAM[header],message=$PARAM[text],yesaction=$PARAM[action])</onclick>
 			</control>
 		</definition>
 	</include>
@@ -449,8 +450,9 @@
 				<include>DefaultSettingButton</include>
 				<label>$PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
+				<onclick condition="System.AddonIsEnabled(script.image.resource.select)">RunScript(script.image.resource.select,property=$PARAM[property]&amp;type=$PARAM[type])</onclick>
+				<onclick condition="System.HasAddon(script.image.resource.select) + !System.AddonIsEnabled(script.image.resource.select)">EnableAddon(script.image.resource.select)</onclick>
 				<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-				<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=$PARAM[property]&amp;type=$PARAM[type])</onclick>
 				<enable>$PARAM[enable]</enable>
 			</control>
 		</definition>
@@ -628,8 +630,9 @@
 				<include>DefaultSettingButton</include>
 				<label>$PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
+				<onclick condition="System.AddonIsEnabled(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=$PARAM[property])</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.colorpicker) + !System.AddonIsEnabled(script.skin.helper.colorpicker)">EnableAddon(script.skin.helper.colorpicker)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
-				<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=$PARAM[property])</onclick>
 			</control>
 			<control type="button" id="$PARAM[control_id2]">
 				<description>Reset Color</description>
@@ -647,8 +650,9 @@
 				<include>DefaultSettingButton</include>
 				<label>$PARAM[label]</label>
 				<label2>$PARAM[label2]</label2>
+				<onclick condition="System.AddonIsEnabled(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=$PARAM[property],header=$PARAM[header])</onclick>
+				<onclick condition="System.HasAddon(script.skin.helper.service) + !System.AddonIsEnabled(script.skin.helper.service)">EnableAddon(script.skin.helper.service)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=$PARAM[property],header=$PARAM[header])</onclick>
 			</control>
 		</definition>
 	</include>

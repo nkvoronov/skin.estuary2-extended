@@ -21,7 +21,7 @@
 	<onload condition="Skin.HasSetting(smartshortcuts_favourites)">Skin.SetBool(SmartShortcuts.favorites)</onload>
 	<onload condition="!Skin.HasSetting(smartshortcuts_favourites)">Skin.Reset(SmartShortcuts.favorites)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay, $VAR[RandomFanartDelayVar])</onload>
-	<onload condition="System.HasAddon(script.pvr.favourites) + Skin.HasSetting(enable_custom_list_channels) + [Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
+	<onload condition="System.AddonIsEnabled(script.pvr.favourites) + Skin.HasSetting(enable_custom_list_channels) + [Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<onload condition="Window.Previous(Startup)">Control.Move(9000,$VAR[CustomFocusVar])</onload>
 	<onunload>ClearProperty(SkinHelper.WidgetContainer,Home)</onunload>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
@@ -41,7 +41,7 @@
 			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
 		</control>
 		<include content="DefaultBackground">
-			<param name="fanart_media" value="$VAR[HomeFanartMediaVar]" />
+			<param name="fanart_media" value="$VAR[HomeFanartVar]" />
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>

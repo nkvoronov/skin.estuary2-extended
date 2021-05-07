@@ -218,6 +218,12 @@
 			<param name="content_sortorder" value="descending"/>
 			<param name="list_id" value="$PARAM[control_id]400"/>
 		</include>
+		<include content="Widget-PVRGroups" condition="System.HasPVRAddon">
+			<param name="widget_header" value="$LOCALIZE[19173]"/>
+			<param name="content_target" value="tvguide"/>
+			<param name="content_path" value="pvr://channels/tv"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
+		</include>
 	</include>
 	<include name="include-RadioWidget">
 		<include content="Widget-RadioTimers">
@@ -240,6 +246,12 @@
 			<param name="content_sortorder" value="descending"/>
 			<param name="list_id" value="$PARAM[control_id]400"/>
 		</include>
+		<include content="Widget-PVRGroups" condition="System.HasPVRAddon">
+			<param name="widget_header" value="$LOCALIZE[19174]"/>
+			<param name="content_target" value="radioguide"/>
+			<param name="content_path" value="pvr://channels/radio"/>
+			<param name="list_id" value="$PARAM[control_id]500"/>
+		</include>
 	</include>
 	<include name="include-FavouritesWidget">
 		<include content="Widget-FavouritesFull">
@@ -258,8 +270,8 @@
 				<bottom>90</bottom>
 				<width>100%</width>
 				<texture border="21">dialogs/dialog-bg.png</texture>
-				<animation effect="zoom" start="100,100" end="72.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">Conditional</animation>
-				<animation effect="zoom" start="100,100" end="92.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">Conditional</animation>
+				<animation effect="zoom" start="100,100" end="75.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">Conditional</animation>
+				<animation effect="zoom" start="100,100" end="95.5,100" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">Conditional</animation>
 			</control>
 			<control type="grouplist">
 				<top>50</top>
@@ -267,7 +279,7 @@
 				<right>20</right>
 				<orientation>horizontal</orientation>
 				<align>left</align>
-				<itemgap>-110</itemgap>
+				<itemgap>-90</itemgap>
 				<include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
 					<param name="label" value="Window(weather).Property(Current.Wind)" />
 					<param name="texture" value="icons/weather/wind.png" />
@@ -301,40 +313,84 @@
 					<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
 					<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
 				</include>
-				<control type="group">
-					<width>350</width>
-					<visible>Weather.IsFetched</visible>
-					<control type="label">
-						<top>10</top>
-						<aligny>center</aligny>
-						<height>24</height>
-						<align>right</align>
-						<font>font30_title</font>
-						<label>$INFO[Weather.Location]</label>
-						<scroll>true</scroll>
-					</control>
-					<control type="label">
-						<top>80</top>
-						<aligny>center</aligny>
-						<height>24</height>
-						<align>right</align>
-						<font>font14</font>
-						<label>$INFO[Weather.Conditions,, ∙ ]$INFO[Weather.Temperature]</label>
-						<scroll>true</scroll>
-					</control>
+			</control>
+			<control type="group">
+				<left>1150</left>
+				<width>430</width>
+				<top>-110</top>
+				<visible>Weather.IsFetched</visible>
+				<visible>![Control.HasFocus(9000) | ControlGroup(700).HasFocus] | Skin.HasSetting(minimize_main_menu)</visible>
+				<control type="label">
+					<top>-70</top>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>font30_title</font>
+					<label>[B]$INFO[Weather.Location][/B]</label>
+					<scroll>true</scroll>
 				</control>
-				<control type="group">
-					<width>450</width>
-					<visible>Weather.IsFetched</visible>
-					<control type="label">
-						<top>40</top>
-						<aligny>center</aligny>
-						<height>24</height>
-						<align>right</align>
-						<font>WeatherTemp</font>
-						<label>$INFO[Weather.Temperature]</label>
-						<visible>Skin.HasSetting(minimize_main_menu) | ![Control.HasFocus(9000) | ControlGroup(700).HasFocus]</visible>
-					</control>
+				<control type="label">
+					<top>20</top>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>font14</font>
+					<label>$INFO[Weather.Conditions]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<top>100</top>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>font14</font>
+					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
+					<scroll>true</scroll>
+				</control>
+			</control>
+			<control type="group">
+				<left>1150</left>
+				<width>270</width>
+				<top>-110</top>
+				<visible>Weather.IsFetched</visible>
+				<visible>[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + !Skin.HasSetting(minimize_main_menu)</visible>
+				<control type="label">
+					<top>-70</top>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>font30_title</font>
+					<label>[B]$INFO[Weather.Location][/B]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<top>20</top>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>font14</font>
+					<label>$INFO[Weather.Conditions]</label>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<top>100</top>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>font14</font>
+					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I]</label>
+					<scroll>true</scroll>
+				</control>
+			</control>
+			<control type="group">
+				<top>55</top>
+				<width>450</width>
+				<right>120</right>
+				<visible>Weather.IsFetched</visible>
+				<animation effect="slide" start="85,0" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + !Skin.HasSetting(minimize_main_menu)">Conditional</animation>
+				<animation effect="slide" start="85,0" time="300" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(hide_main_menu_with_widgets) + Skin.HasSetting(minimize_main_menu)">Conditional</animation>
+				<control type="label">
+					<top>40</top>
+					<aligny>center</aligny>
+					<height>24</height>
+					<align>right</align>
+					<font>WeatherTemp</font>
+					<label>$INFO[Weather.Temperature]</label>
+					<visible>Skin.HasSetting(minimize_main_menu) | ![Control.HasFocus(9000) | ControlGroup(700).HasFocus]</visible>
 				</control>
 			</control>
 		</control>

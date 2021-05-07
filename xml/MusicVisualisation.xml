@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol></defaultcontrol>
 	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
-	<onload condition="System.HasAddon(script.artistslideshow) + !Skin.HasSetting(hide_background_fanart)">RunScript(script.artistslideshow)</onload>
+	<onload condition="System.AddonIsEnabled(script.artistslideshow) + !Skin.HasSetting(hide_background_fanart)">RunScript(script.artistslideshow)</onload>
 	<controls>
 		<control type="visualisation" id="2">
 			<include>FullScreenDimensions</include>
@@ -57,12 +57,13 @@
 			<visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !MusicPlayer.Content(livetv)</visible>
 			<height>460</height>
 			<include>OpenClose_Left</include>
+			<include>Visible_Left</include>
 			<bottom>0</bottom>
 			<control type="image">
 				<left>0</left>
-				<width>100%</width>
+				<width>120%</width>
 				<height>280</height>
-				<texture colordiffuse="80FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="white8">dialogs/dialog-bg-nobo.png</texture>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -78,11 +79,11 @@
 				<bordersize>4</bordersize>
 			</control>
 			<control type="image">
-				<left>33</left>
-				<top>100</top>
-				<width>500</width>
+				<left>20</left>
+				<top>-240</top>
+				<width>400</width>
 				<height>100</height>
-				<texture>$VAR[PlayerClearLogoVar]</texture>
+				<texture>$VAR[PlayerInfoClearLogoVar]</texture>
 				<aspectratio aligny="top" align="left">keep</aspectratio>
 				<visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !MusicPlayer.Content(livetv) + !Skin.HasSetting(hide_logo_play)</visible>
 			</control>
@@ -110,9 +111,9 @@
 					<width>1450</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<label>[B]$INFO[MusicPlayer.TrackNumber,,. ]$INFO[Player.Title][/B]</label>
+					<label>[B][COLOR $VAR[MainColorVar]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.Title][/B]</label>
 					<font>font45</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -122,7 +123,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<font>font45</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="grouplist">
@@ -133,11 +134,11 @@
 					<orientation>horizontal</orientation>
 					<itemgap>20</itemgap>
 					<control type="label">
-						<width>90</width>
+						<width>100</width>
 						<height>40</height>
-						<label>$INFO[MusicPlayer.Year]</label>
+						<label>[COLOR $VAR[MainColorVar]]$INFO[MusicPlayer.Year][/COLOR]</label>
 						<font>font37</font>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<visible>!String.IsEmpty(MusicPlayer.Year)</visible>
@@ -147,19 +148,11 @@
 						<height>40</height>
 						<label>$INFO[MusicPlayer.Genre]</label>
 						<font>font37</font>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<scroll>true</scroll>
 						<visible>!String.IsEmpty(MusicPlayer.Genre)</visible>
-					</control>
-					<control type="image">
-						<width>190</width>
-						<height>40</height>
-						<texture fallback="flags/starrating/0.png">$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
-						<aspectratio>keep</aspectratio>
-						<aligny>center</aligny>
-						<align>left</align>
 					</control>
 				</control>
 				<control type="label">
@@ -167,9 +160,9 @@
 					<width>1450</width>
 					<height>40</height>
 					<aligny>center</aligny>
-					<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427] ]</label>
+					<label>$INFO[MusicPlayer.Album]$VAR[MultiDiscVar]</label>
 					<font>font37</font>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -177,9 +170,10 @@
 					<width>1450</width>
 					<height>40</height>
 					<aligny>center</aligny>
-					<label>$INFO[MusicPlayer.offset(1).Title,[COLOR button_focus]$LOCALIZE[19031]:[/COLOR] ]$INFO[MusicPlayer.offset(1).Artist, - ]</label>
-					<shadowcolor>black</shadowcolor>
+					<label>$VAR[OSDNextLabelVar]</label>
+					<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 					<scroll>true</scroll>
+					<visible>Integer.IsGreater(Playlist.Length(music),1)</visible>
 				</control>
 			</control>
 		</control>

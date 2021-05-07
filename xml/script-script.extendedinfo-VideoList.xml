@@ -276,7 +276,7 @@
 						<width max="537">auto</width>
 						<height>99</height>
 						<aspectratio align="bottom" aligny="center">keep</aspectratio>
-						<texture background="true">$VAR[LibraryBannerVar]</texture>
+						<texture background="true">$VAR[BannerVar]</texture>
 						<bordertexture>colors/white.png</bordertexture>
 						<bordersize>1</bordersize>
 					</control>

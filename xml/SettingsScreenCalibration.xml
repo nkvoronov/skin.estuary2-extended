@@ -49,7 +49,7 @@
 			<align>center</align>
 			<label></label>
 			<font>font37</font>
-			<shadowcolor>FF000000</shadowcolor>
+			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 		</control>
 		<control type="label" id="3">
 			<description>help information</description>
@@ -59,7 +59,7 @@
 			<align>center</align>
 			<label></label>
 			<font>font37</font>
-			<shadowcolor>FF000000</shadowcolor>
+			<shadowcolor>$VAR[BlackColorVar]</shadowcolor>
 		</control>
 	</controls>
 </window>

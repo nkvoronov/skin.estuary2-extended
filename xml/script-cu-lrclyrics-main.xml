@@ -15,7 +15,7 @@
 				<param name="header_label" value="$ADDON[script.cu.lrclyrics 32199]" />
 				<param name="header_id" value="2" />
 			</include>
-			<animation effect="slide" end="310,0" time="0" condition="[Player.ShowInfo | Window.IsActive(musicosd)] + Skin.HasSetting(lrclyrics_alternative_view)">conditional</animation>
+			<animation effect="slide" end="0,-180" time="0" condition="[Player.ShowInfo | Window.IsActive(musicosd)] + Skin.HasSetting(lrclyrics_alternative_view)">conditional</animation>
 			<control type="list" id="110">
 				<left>10</left>
 				<top>110</top>

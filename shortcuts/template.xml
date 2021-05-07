@@ -40,6 +40,7 @@
 		<property name="widget1_type" tag="property" attribute="name|widgetType.1" value="tvtimer">TVTimers</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.1" value="radiotimer">RadioTimers</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.1" value="pvrchannel">PVRChannels</property>
+		<property name="widget1_type" tag="property" attribute="name|widgetType.1" value="pvrgroup">PVRGroups</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.1" value="custpvrchannel">PVRChannelsCustom</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.1" value="pvrrecording">PVRRecordings</property>
 		<property name="widget1_type" tag="property" attribute="name|widgetType.1" value="playlist">Playlists</property>
@@ -70,6 +71,7 @@
 		<property name="widget2_type" tag="property" attribute="name|widgetType.2" value="tvtimer">TVTimers</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.2" value="radiotimer">RadioTimers</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.2" value="pvrchannel">PVRChannels</property>
+		<property name="widget2_type" tag="property" attribute="name|widgetType.2" value="pvrgroup">PVRGroups</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.2" value="custpvrchannel">PVRChannelsCustom</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.2" value="pvrrecording">PVRRecordings</property>
 		<property name="widget2_type" tag="property" attribute="name|widgetType.2" value="playlist">Playlists</property>
@@ -100,6 +102,7 @@
 		<property name="widget3_type" tag="property" attribute="name|widgetType.3" value="tvtimer">TVTimers</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.3" value="radiotimer">RadioTimers</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.3" value="pvrchannel">PVRChannels</property>
+		<property name="widget3_type" tag="property" attribute="name|widgetType.3" value="pvrgroup">PVRGroups</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.3" value="custpvrchannel">PVRChannelsCustom</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.3" value="pvrrecording">PVRRecordings</property>
 		<property name="widget3_type" tag="property" attribute="name|widgetType.3" value="playlist">Playlists</property>
@@ -130,6 +133,7 @@
 		<property name="widget4_type" tag="property" attribute="name|widgetType.4" value="tvtimer">TVTimers</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.4" value="radiotimer">RadioTimers</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.4" value="pvrchannel">PVRChannels</property>
+		<property name="widget4_type" tag="property" attribute="name|widgetType.4" value="pvrgroup">PVRGroups</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.4" value="custpvrchannel">PVRChannelsCustom</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.4" value="pvrrecording">PVRRecordings</property>
 		<property name="widget4_type" tag="property" attribute="name|widgetType.4" value="playlist">Playlists</property>
@@ -160,6 +164,7 @@
 		<property name="widget5_type" tag="property" attribute="name|widgetType.5" value="tvtimer">TVTimers</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.5" value="radiotimer">RadioTimers</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.5" value="pvrchannel">PVRChannels</property>
+		<property name="widget5_type" tag="property" attribute="name|widgetType.5" value="pvrgroup">PVRGroups</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.5" value="custpvrchannel">PVRChannelsCustom</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.5" value="pvrrecording">PVRRecordings</property>
 		<property name="widget5_type" tag="property" attribute="name|widgetType.5" value="playlist">Playlists</property>
@@ -190,6 +195,7 @@
 		<property name="widget6_type" tag="property" attribute="name|widgetType.6" value="tvtimer">TVTimers</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.6" value="radiotimer">RadioTimers</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.6" value="pvrchannel">PVRChannels</property>
+		<property name="widget6_type" tag="property" attribute="name|widgetType.6" value="pvrgroup">PVRGroups</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.6" value="custpvrchannel">PVRChannelsCustom</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.6" value="pvrrecording">PVRRecordings</property>
 		<property name="widget6_type" tag="property" attribute="name|widgetType.6" value="playlist">Playlists</property>
@@ -220,6 +226,7 @@
 		<property name="widget7_type" tag="property" attribute="name|widgetType.7" value="tvtimer">TVTimers</property>
 		<property name="widget7_type" tag="property" attribute="name|widgetType.7" value="radiotimer">RadioTimers</property>
 		<property name="widget7_type" tag="property" attribute="name|widgetType.7" value="pvrchannel">PVRChannels</property>
+		<property name="widget7_type" tag="property" attribute="name|widgetType.7" value="pvrgroup">PVRGroups</property>
 		<property name="widget7_type" tag="property" attribute="name|widgetType.7" value="custpvrchannel">PVRChannelsCustom</property>
 		<property name="widget7_type" tag="property" attribute="name|widgetType.7" value="pvrrecording">PVRRecordings</property>
 		<property name="widget7_type" tag="property" attribute="name|widgetType.7" value="playlist">Playlists</property>
@@ -250,6 +257,7 @@
 		<property name="widget8_type" tag="property" attribute="name|widgetType.8" value="tvtimer">TVTimers</property>
 		<property name="widget8_type" tag="property" attribute="name|widgetType.8" value="radiotimer">RadioTimers</property>
 		<property name="widget8_type" tag="property" attribute="name|widgetType.8" value="pvrchannel">PVRChannels</property>
+		<property name="widget8_type" tag="property" attribute="name|widgetType.8" value="pvrgroup">PVRGroups</property>
 		<property name="widget8_type" tag="property" attribute="name|widgetType.8" value="custpvrchannel">PVRChannelsCustom</property>
 		<property name="widget8_type" tag="property" attribute="name|widgetType.8" value="pvrrecording">PVRRecordings</property>
 		<property name="widget8_type" tag="property" attribute="name|widgetType.8" value="playlist">Playlists</property>
@@ -419,7 +427,6 @@
 			<control type="group" id="$PYTHON[22+int($SKINSHORTCUTS[id])]000">
 				<skinshortcuts>visibility</skinshortcuts>
 				<include content="Visible_Right_Delayed">
-					<param name="home" value="true"/>
 					<param name="id" value="$SKINSHORTCUTS[id]"/>
 				</include>
 				<control type="grouplist" id="$PYTHON[22+int($SKINSHORTCUTS[id])]001">

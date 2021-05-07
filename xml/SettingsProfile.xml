@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>	
 	<onload>SetProperty(fanarthometype,settings,Home)</onload>
 	<onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],Home)</onload>
-	<backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group" id="9100">
 			<include>OpenClose_Right</include>
 			<left>472</left>
 			<control type="image">
-				<top>160</top>
+				<top>130</top>
 				<right>0</right>
 				<height>3</height>
 				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
@@ -22,7 +22,7 @@
 				<texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="panel" id="2">
-				<top>163</top>
+				<top>148</top>
 				<left>30</left>
 				<visible>Container(9000).Hasfocus(2)</visible>
 				<right>0</right>
@@ -172,7 +172,7 @@
 			</include>
 			<control type="list" id="9000">
 				<left>0</left>
-				<top>160</top>
+				<top>130</top>
 				<width>470</width>
 				<height>567</height>
 				<onleft>9100</onleft>
@@ -180,7 +180,7 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="90" width="470">
+				<itemlayout height="85" width="470">
 					<control type="label">
 						<left>30</left>
 						<right>30</right>
@@ -190,7 +190,7 @@
 						<aligny>center</aligny>
 					</control>
 				</itemlayout>
-				<focusedlayout height="90" width="470">
+				<focusedlayout height="85" width="470">
 					<control type="image">
 						<right>0</right>
 						<bottom>0</bottom>
